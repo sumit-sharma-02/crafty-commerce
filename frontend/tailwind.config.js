@@ -46,8 +46,16 @@ module.exports = {
       // },
       colors: {
         primary: "rgb(224,39,70,1)",
+        primaryDarkShade: "rgb(177,5,34,1)",
         secondary: "rgb(14,205,224,1)",
         ternary: "rgb(255,165,0,1)",
+        backdropBlur: "rgb(119 119 119 / 27%)",
+        facebook: "#1877f2",
+        twitter: "rgb(29, 155, 240)",
+        instagram:
+          "linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%)",
+        pinterest: "#c00",
+        youtube: "rgb(255, 0, 0)",
       },
     },
   },

@@ -15,7 +15,7 @@
 
 html,
 body {
-scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 
 @tailwind base;
@@ -26,44 +26,55 @@ scroll-behavior: smooth;
   html {
     scroll-behavior: smooth;
   }
-  }
-  .group:hover .hover\:w-full{
-    width: 100%;
-  }
-  .cursor-zoomin{
-    cursor: zoom-in;
-  }
-  /*------scroll bar---------------------*/
-  ::-webkit-scrollbar {
-  width: 5px;
-  height: 7px;
-  }
-  ::-webkit-scrollbar-button {
+}
+
+.group:hover .hover\:w-full {
+  width: 100%;
+}
+
+.cursor-zoomin {
+  cursor: zoom-in;
+}
+
+/*------scroll bar---------------------*/
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-button {
   width: 0px;
   height: 0px;
-  }
-  ::-webkit-scrollbar-thumb {
+}
+
+::-webkit-scrollbar-thumb {
   background: #525965;
   border: 0px none #ffffff;
-  border-radius: 0px;
-  }
-  ::-webkit-scrollbar-thumb:hover {
+  border-radius: 50px;
+}
+
+::-webkit-scrollbar-thumb:hover {
   background: #525965;
-  }
-  ::-webkit-scrollbar-thumb:active {
+}
+
+::-webkit-scrollbar-thumb:active {
   background: #525965;
-  }
-  ::-webkit-scrollbar-track {
+}
+
+::-webkit-scrollbar-track {
   background: transparent;
   border: 0px none #ffffff;
   border-radius: 50px;
-  }
-  ::-webkit-scrollbar-track:hover {
+}
+
+::-webkit-scrollbar-track:hover {
   background: transparent;
-  }
-  ::-webkit-scrollbar-track:active {
+}
+
+::-webkit-scrollbar-track:active {
   background: transparent;
-  }
-  ::-webkit-scrollbar-corner {
+}
+
+::-webkit-scrollbar-corner {
   background: transparent;
-  }
+}

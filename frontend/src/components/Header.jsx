@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Logo from "../images/logo.png";
 import { VscChromeClose } from "react-icons/vsc";
 import { motion } from "framer-motion";
+// import { IoBagCheckOutline } from "react-icons/io5";
 // import { GiShoppingCart } from "react-icons/gi";
 // import { VscAccount } from "react-icons/vsc";
 // import { IoIosArrowDropdown } from "react-icons/io";
@@ -34,18 +35,18 @@ const Header = () => {
         <div className=" sm:block hidden">
           <p className="text-sm text-gray-600">
             Welcome to Crafty Commerce!{" "}
-            <a className=" text-primary ml-1" href="login.html">
-              Sign in
+            <a className=" text-primary ml-1" href="#">
+              Login
             </a>{" "}
             or{" "}
-            <a className=" text-primary" href="registration.html">
+            <a className=" text-primary" href="#">
               Register
             </a>
           </p>
         </div>
 
         <div className="flex items-center sm:justify-end justify-between text-sm md:divide-x-2 divide-gray-300  text-gray-600 md:w-auto w-full">
-          <div
+          <motion.div
             className="relative cursor-pointer"
             onClick={toggleAccountDropdown}
           >
@@ -68,7 +69,7 @@ const Header = () => {
                   d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"
                 />
               </svg>
-              My Account
+              Hi! Sumit
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="currentColor"
@@ -78,33 +79,69 @@ const Header = () => {
                 <path d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z" />
               </svg>
             </a>
-            <div
-              className={`absolute rounded bg-white border w-full shadow mt-2 text-base overflow-hidden 
-            transition-opacity duration-500 ease-in-out ${
-              isAccountDropdownOpen ? "visible" : "invisible"
-            }`}
-            >
-              <a
-                className="hover:bg-gray-100 transition-colors duration-300 ease-in-out p-2 rounded-t text-xs block"
-                href="#"
-              >
-                {" "}
-                Check out{" "}
-              </a>
-              <a
-                className="hover:bg-gray-100 transition-colors duration-300 ease-in-out p-2 text-xs block"
-                href="login.html"
-              >
-                Sign in
-              </a>
-              <a
-                className="hover:bg-gray-100 transition-colors duration-300 ease-in-out p-2 rounded-b text-xs block"
-                href="registration.html"
-              >
-                Register
-              </a>
-            </div>
-          </div>
+            {isAccountDropdownOpen && (
+              <>
+                <motion.div
+                  initial={{ y: -10, opacity: 0 }}
+                  animate={{ y: 0, opacity: 1 }}
+                  exit={{ y: 10, opacity: 0 }}
+                  transition={{
+                    type: "slide",
+                    bounce: 0.4,
+                    duration: 0.5,
+                    ease: "easeInOut",
+                  }}
+                  className={`absolute rounded bg-white border w-full shadow mt-2 text-base overflow-hidden z-40`}
+                >
+                  <a
+                    className="hover:bg-gray-100 transition-colors duration-300 ease-in-out p-2 rounded-t text-sm block"
+                    href="#"
+                  >
+                    Your Profile
+                  </a>
+                  <a
+                    className="hover:bg-gray-100 transition-colors duration-300 ease-in-out p-2 rounded-t text-sm block"
+                    href="#"
+                  >
+                    Login
+                  </a>
+                  <a
+                    className="hover:bg-gray-100 transition-colors duration-300 ease-in-out p-2 text-sm block"
+                    href="#"
+                  >
+                    Register
+                  </a>
+                  <a
+                    className="hover:bg-gray-100 transition-colors duration-300 ease-in-out p-2 rounded-b text-sm block"
+                    href="#"
+                  >
+                    Your Orders
+                  </a>
+                  <a
+                    className="hover:bg-gray-100 transition-colors duration-300 ease-in-out p-2 rounded-b text-sm block"
+                    href="#"
+                  >
+                    Logout
+                  </a>
+                </motion.div>
+                <motion.div
+                  initial={{ opacity: 0 }}
+                  animate={{
+                    opacity: 1,
+                  }}
+                  exit={{
+                    opacity: 0,
+                  }}
+                  transition={{
+                    ease: "easeInOut",
+                    duration: 0.3,
+                  }}
+                  onClick={toggleAccountDropdown}
+                  className="cursor-default bg-backdropBlur z-20 px-5 fixed h-full w-full flex items-center justify-center top-0 left-0"
+                />
+              </>
+            )}
+          </motion.div>
 
           <div className="sm:px-4 flex items-center space-x-6">
             <a className=" text-gray-600" href="#">
@@ -174,12 +211,12 @@ const Header = () => {
 
         <div className="w-full sm:px-8 px-2 flex items-center">
           <input
-            className=" w-full p-2 rounded-l border-r-0 px-4 text-sm border text-gray-600 outline-none focus:ring focus:ring-blue-200"
+            className=" w-full p-2 rounded-l border-r-0 px-4 text-sm border text-gray-600 outline-none focus:border-b-[3px] focus:border-b-secondary"
             type="text"
             placeholder="Search the store"
           />
           <button
-            className="sm:px-6 p-2 bg-primary hover:bg-secondary text-white font-bold rounded-r
+            className="sm:px-6 p-2 bg-primary hover:bg-primaryDarkShade text-white font-bold rounded-r
           transition-all duration-500 ease-in-out"
           >
             <svg
@@ -196,34 +233,12 @@ const Header = () => {
             </svg>
           </button>
         </div>
-
-        <div className="md:pl-2 flex items-center">
-          <a className=" flex items-center text-gray-500 " href="#">
-            <div className="p-2 border rounded-full sm:mr-2">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="h-5 w-5"
-                viewBox="0 0 20 20"
-                fill="currentColor"
-              >
-                <path
-                  fillRule="evenodd"
-                  d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z"
-                  clipRule="evenodd"
-                />
-              </svg>
-            </div>
-            <span className="hidden md:inline-block whitespace-nowrap">
-              Wish Lists
-            </span>
-          </a>
-        </div>
       </div>
 
       <div className="h-25 bg-primary flex items-center justify-between xl:px-24 sm:px-10 px-4">
         <div className="h-full">
           <button
-            className="h-full p-2 rounded bg-secondary lg:hidden inline-block"
+            className="h-full p-2 rounded bg-primaryDarkShade lg:hidden inline-block"
             onClick={toggleSideBar}
           >
             <span className="h-full text-white">
@@ -251,27 +266,28 @@ const Header = () => {
                   x: 0,
                 }}
                 exit={{
-                  x: "-100%",
+                  x: "100%",
                 }}
                 transition={{ type: "spring", bounce: 0.3, duration: 0.4 }}
                 className={`fixed z-50 top-0 left-0 bg-white shadow-2xl w-72 h-screen uppercase overflow-y-auto}`}
               >
                 <div className="p-2 my-4 mx-0 flex items-center justify-end">
-                  <span
-                    className="w-8 h-8 text-primary cursor-pointer hover:text-gray-600
-                hover:w-9 hover:h-9 transition-all duration-300 ease-in-out"
+                  <motion.span
+                    whileHover={{ rotate: 90 }}
+                    transition={{ duration: 0.25, ease: "easeInOut" }}
+                    className="w-7 h-7 text-primary cursor-pointer hover:text-gray-600"
                     onClick={toggleSideBar}
                   >
                     <VscChromeClose className="w-full h-full" />
-                  </span>
+                  </motion.span>
                 </div>
                 <div className={`space-x-6 text-xs font-semibold w-full`}>
                   <ul className="w-full tracking-wider">
                     <li className="duration-300 hover:shadow border-b border-t py-4 px-10 cursor-pointer">
-                      <a href="index.html">HOME</a>
+                      <a href="#">HOME</a>
                     </li>
                     <li className="duration-300 hover:tracking-widest hover:shadow border-b py-4 px-10 relative cursor-pointer">
-                      <a href="shop.html">
+                      <a href="#">
                         New products
                         <span className="absolute z-20 top-3 right-2 mr-1 p-1 rounded bg-purple-700 text-xs capitalize px-4 text-white hover:text-white">
                           New
@@ -280,7 +296,7 @@ const Header = () => {
                       </a>
                     </li>
                     <li className="duration-300 hover:tracking-widest hover:shadow border-b py-4 px-10 relative cursor-pointer">
-                      <a href="shop.html">
+                      <a href="#">
                         Best sales
                         <span className="absolute z-20 top-3 right-2 mr-1 p-1 rounded bg-ternary text-xs capitalize px-5 text-white hover:text-white">
                           Hot
@@ -289,25 +305,25 @@ const Header = () => {
                       </a>
                     </li>
                     <li className="duration-300 hover:tracking-widest hover:shadow border-b py-4 px-10 cursor-pointer">
-                      <a href="shop.html">Shop</a>
+                      <a href="#">Shop</a>
                     </li>
                     <li className="duration-300 hover:tracking-widest hover:shadow border-b py-4 px-10 cursor-pointer">
-                      <a href="contact-us.html">CONTACT</a>
+                      <a href="#">CONTACT</a>
                     </li>
                     <li className="duration-300 hover:tracking-widest hover:shadow border-b py-4 px-10 cursor-pointer">
-                      <a href="faq.html">FAQ</a>
+                      <a href="#">FAQ</a>
                     </li>
                     <li className="duration-300 hover:tracking-widest hover:shadow border-b py-4 px-10 cursor-pointer">
-                      <a href="terms-and-condition.html">Terms & condition</a>
+                      <a href="#">Terms & condition</a>
                     </li>
                     <li className="duration-300 hover:tracking-widest hover:shadow border-b py-4 px-10 cursor-pointer">
-                      <a href="privacy-policy.html">Privacy & policy</a>
+                      <a href="#">Privacy & policy</a>
                     </li>
                     <li className="duration-300 hover:tracking-widest hover:shadow border-b py-4 px-10 cursor-pointer">
-                      <a href="login.html">LogIn</a>
+                      <a href="#">LogIn</a>
                     </li>
                     <li className="duration-300 hover:tracking-widest hover:shadow border-b py-4 px-10 cursor-pointer">
-                      <a href="registration.html">Register</a>
+                      <a href="#">Register</a>
                     </li>
                   </ul>
                 </div>
@@ -320,25 +336,34 @@ const Header = () => {
                 exit={{
                   opacity: 0,
                 }}
-                transition={{ type: "spring", bounce: 0, duration: 0.2 }}
+                transition={{
+                  ease: "easeInOut",
+                  duration: 0.3,
+                }}
                 onClick={toggleSideBar}
-                className="bg-transparent z-40 px-5 fixed h-full w-full flex items-center justify-center top-0 left-0"
+                className="bg-backdropBlur z-40 px-5 fixed h-full w-full flex items-center justify-center top-0 left-0"
               />
             </>
           )}
           <ul className="h-full hidden text-white font-bold lg:flex items-center text-sm">
             <li className="h-full">
               <a
-                className="p-[11px] hover:bg-secondary transition-all duration-500 ease-in-out"
-                href="index.html"
+                className="p-[11px] relative after:content-[''] after:absolute after:w-full after:scale-x-0 
+                after:h-[4px] after:bottom-0 after:left-0 after:bg-secondary after:origin-bottom-right
+                after:transition-transform after:duration-200 after:ease-out hover:after:scale-x-100
+                hover:after:origin-bottom-left"
+                href="#"
               >
                 HOME
               </a>
             </li>
             <li className=" relative">
               <a
-                className="p-[11px] hover:bg-secondary transition-all duration-500 ease-in-out"
-                href="shop.html"
+                className="p-[11px] relative after:content-[''] after:absolute after:w-full after:scale-x-0 
+                after:h-[4px] after:bottom-0 after:left-0 after:bg-secondary after:origin-bottom-right
+                after:transition-transform after:duration-200 after:ease-out hover:after:scale-x-100
+                hover:after:origin-bottom-left"
+                href="#"
               >
                 NEW PRODUCTS
                 <span className=" absolute z-20 -top-7 right-0 p-1 rounded bg-purple-700 text-xs capitalize px-4">
@@ -349,8 +374,11 @@ const Header = () => {
             </li>
             <li className=" relative">
               <a
-                className="p-[11px] hover:bg-secondary transition-all duration-500 ease-in-out"
-                href="shop.html"
+                className="p-[11px] relative after:content-[''] after:absolute after:w-full after:scale-x-0 
+                after:h-[4px] after:bottom-0 after:left-0 after:bg-secondary after:origin-bottom-right
+                after:transition-transform after:duration-200 after:ease-out hover:after:scale-x-100
+                hover:after:origin-bottom-left"
+                href="#"
               >
                 BEST SALES
                 <span className=" absolute z-20 -top-7 right-0 p-1 rounded bg-ternary text-xs capitalize px-4 ">
@@ -361,14 +389,20 @@ const Header = () => {
             </li>
             <li>
               <a
-                className="p-[11px] hover:bg-secondary transition-all duration-500 ease-in-out"
-                href="shop.html"
+                className="p-[11px] relative after:content-[''] after:absolute after:w-full after:scale-x-0 
+                after:h-[4px] after:bottom-0 after:left-0 after:bg-secondary after:origin-bottom-right
+                after:transition-transform after:duration-200 after:ease-out hover:after:scale-x-100
+                hover:after:origin-bottom-left"
+                href="#"
               >
                 SHOP
               </a>
             </li>
-            <li
-              className="relative hover:bg-secondary transition-all duration-500 ease-in-out"
+            <motion.li
+              className="relative after:content-[''] after:absolute after:w-full after:scale-x-0 
+                after:h-[4px] after:bottom-0 after:left-0 after:bg-secondary after:origin-bottom-right
+                after:transition-transform after:duration-200 after:ease-out hover:after:scale-x-100
+                hover:after:origin-bottom-left"
               onMouseEnter={toggleAboutUsDropdown}
               onMouseLeave={toggleAboutUsDropdown}
             >
@@ -389,34 +423,46 @@ const Header = () => {
                   </svg>
                 </span>
               </button>
-              <div
-                className={`absolute bg-white border w-52 rounded shadow text-sm text-black overflow-hidden font-normal z-50
-              ${isAboutUsDropdownOpen ? "visible" : "invisible"} `}
-              >
-                <a
-                  className=" block hover:bg-gray-100 text-xs px-4 p-3 border-b tracking-widest"
-                  href="faq.html"
+              {isAboutUsDropdownOpen && (
+                <motion.div
+                  initial={{ y: -10, opacity: 0 }}
+                  animate={{ y: 0, opacity: 1 }}
+                  exit={{ y: 200, opacity: 0 }}
+                  transition={{
+                    type: "spring",
+                    bounce: 0.5,
+                    duration: 0.7,
+                  }}
+                  className={`absolute bg-white border w-52 rounded shadow text-sm text-black overflow-hidden font-normal z-50`}
                 >
-                  Frequently Asked Questions (FAQ)
-                </a>
-                <a
-                  className=" block hover:bg-gray-100 text-xs px-4 p-3 border-b tracking-widest"
-                  href="terms-and-condition.html"
-                >
-                  Terms & conditions
-                </a>
-                <a
-                  className=" block hover:bg-gray-100 text-xs px-4 p-3 tracking-widest"
-                  href="privacy-policy.html"
-                >
-                  Privacy & policy
-                </a>
-              </div>
-            </li>
+                  <a
+                    className=" block hover:bg-gray-100 text-sm px-4 p-3 border-b tracking-widest"
+                    href="#"
+                  >
+                    Frequently Asked Questions (FAQ)
+                  </a>
+                  <a
+                    className=" block hover:bg-gray-100 text-sm px-4 p-3 border-b tracking-widest"
+                    href="#"
+                  >
+                    Terms & conditions
+                  </a>
+                  <a
+                    className=" block hover:bg-gray-100 text-sm px-4 p-3 tracking-widest"
+                    href="#"
+                  >
+                    Privacy & policy
+                  </a>
+                </motion.div>
+              )}
+            </motion.li>
             <li>
               <a
-                className="p-[11px] hover:bg-secondary transition-all duration-500 ease-in-out"
-                href="contact-us.html"
+                className="p-[11px] relative after:content-[''] after:absolute after:w-full after:scale-x-0 
+                after:h-[4px] after:bottom-0 after:left-0 after:bg-secondary after:origin-bottom-right
+                after:transition-transform after:duration-200 after:ease-out hover:after:scale-x-100
+                hover:after:origin-bottom-left"
+                href="#"
               >
                 CONTACT US
               </a>
@@ -424,12 +470,12 @@ const Header = () => {
           </ul>
         </div>
 
-        <div
+        <motion.div
           className="relative h-full"
           onMouseEnter={toggleCartDropdown}
           onMouseLeave={toggleCartDropdown}
         >
-          <button className="h-full text-white flex items-center space-x-2 font-bold relative uppercase p-[11px] px-4 bg-secondary">
+          <button className="h-full text-white flex items-center space-x-2 font-bold relative uppercase p-2.5 lg:p-2 bg-primaryDarkShade">
             <span className="h-full">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -444,20 +490,30 @@ const Header = () => {
               </span>
             </span>
             <div className="lg:flex hidden items-center space-x-2">
-              <span>My cart -</span>
+              <span>My Cart -</span>
               <span className=" font-normal">$0.00</span>
             </div>
           </button>
 
-          <div
-            className={`bg-white shadow-2xl absolute -left-56 lg:-left-8 right-0 top-12 border p-5 rounded z-50 flex items-center justify-center h-40 w-72
-          ${isCartDropdownOpen ? "visible" : "invisible"}`}
-          >
-            <ul>
-              <li>Your cart is empty</li>
-            </ul>
-          </div>
-        </div>
+          {isCartDropdownOpen && (
+            <motion.div
+              initial={{ y: -10, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              exit={{ y: 200, opacity: 0 }}
+              transition={{
+                type: "spring",
+                bounce: 0.5,
+                duration: 0.7,
+              }}
+              className={`bg-white shadow-xl absolute -left-56 lg:-left-8 right-0 top-10 border p-5 rounded z-50 flex items-center justify-center h-40 w-72 cursor-pointer
+         `}
+            >
+              <ul>
+                <li>Your cart is empty</li>
+              </ul>
+            </motion.div>
+          )}
+        </motion.div>
       </div>
     </header>
   );
