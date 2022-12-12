@@ -149,14 +149,14 @@ const Register = () => {
                     className="mx-1 text-xs italic font-bold underline"
                     href="#"
                   >
-                    User Agreement
+                    user agreement
                   </a>
                   and
                   <a
                     className="mx-1 text-xs italic font-bold underline"
                     href="#"
                   >
-                    Privacy Policy.
+                    privacy policy.
                   </a>
                 </label>
               </div>

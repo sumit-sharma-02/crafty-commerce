@@ -44,3 +44,15 @@
     margin: 0px 3px;
     transition: all 0.2s ease 0s;
   }
+
+  .swiper-pagination-bullet {
+    width: 30px !important;
+    border-radius: 5px !important;
+    background: black !important;
+    opacity: 1 !important;
+    height: 6px !important;
+  }
+
+  .swiper-pagination-bullet-active {
+    background: rgb(224,39,70,1) !important;
+  }

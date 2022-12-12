@@ -1,0 +1,8 @@
+export const productsConstant = {
+  ALL_PRODUCTS_REQUEST: "ALL_PRODUCTS_REQUEST",
+  ALL_PRODUCTS_SUCCESS: "ALL_PRODUCTS_SUCCESS",
+  ALL_PRODUCTS_FAIL: "ALL_PRODUCTS_FAIL",
+  CLEAR_ERRORS: "CLEAR_ERRORS",
+};
+
+export default productsConstant;

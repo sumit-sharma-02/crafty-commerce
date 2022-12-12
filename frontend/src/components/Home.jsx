@@ -1,9 +1,14 @@
 import React, { Fragment, useEffect, useState } from "react";
 import Footer from "./Footer";
 import Header from "./Header";
+import MetaData from "./MetaData";
 import { motion } from "framer-motion";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Autoplay } from "swiper";
+import { useDispatch, useSelector } from "react-redux";
+import { getProducts } from "../actions/product";
+
+// CSS Imports
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
@@ -33,8 +38,18 @@ import Boot1 from "../images/boot1.jpg";
 import Camera1 from "../images/camera1.jpg";
 import Shoe1 from "../images/shoe1.jpg";
 import Chair1 from "../images/chair1.jpg";
+import Clock1 from "../images/clock1.webp";
+import Shirt1 from "../images/shirt1.webp";
+import Toy1 from "../images/toy1.webp";
+import Banner2 from "../images/banner2.webp";
+import Banner3 from "../images/banner3.webp";
 
 const Home = () => {
+  const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(getProducts());
+  }, [dispatch]);
+
   const [isGadgetCategoryOpen, setIsGadgetCategoryOpen] = useState(false);
   const toggleGadgetCategory = () => {
     setIsGadgetCategoryOpen(!isGadgetCategoryOpen);
@@ -75,16 +90,9 @@ const Home = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
-  const pagination = {
-    clickable: true,
-    renderBullet: function (index, className) {
-      return `<span className="swiper-custom-pagination">Hi</span>`;
-      // return `<span className="swiper-custom-pagination">Hi</span>`;
-    },
-  };
-
   return (
     <Fragment>
+      <MetaData title={`Buy Best Products Online`} />
       <Header />
       <main>
         <section className="xl:px-24 sm:px-10 px-4 pt-10">
@@ -1403,14 +1411,27 @@ const Home = () => {
               </div>
 
               <div className=" border border-gray-200 rounded sm:p-5 p-2">
-                <div className="owl-carousel owl-carousel-02">
+                <div>
                   {/* Best Selling Category */}
                   {popularCategory[0] && (
-                    <motion.div className=" grid grid-cols-2 sm:gap-6 gap-2 divide-y">
-                      <div className="md:flex xl:items-center py-2">
+                    <motion.div
+                      initial={{ y: -50 }}
+                      animate={{ y: 0 }}
+                      exit={{ y: 50 }}
+                      transition={{
+                        type: "spring",
+                        bounce: 0.3,
+                        duration: 0.4,
+                      }}
+                      className=" grid grid-cols-2 sm:gap-6 gap-2"
+                    >
+                      <div className="md:flex xl:items-center py-2 border-t-[1px]">
                         <div href="#" className="md:w-2/5 w-full mr-4 relative">
                           <img className=" mx-auto" src={Boot1} alt="" />
-                          <div className=" absolute top-1 right-1 text-xs text-white bg-red-500 h-10 w-10 flex items-center justify-center rounded-full">
+                          <div
+                            className=" absolute top-1 right-1 text-xs text-white bg-red-500 h-10 w-10 
+                          flex items-center justify-center rounded-full"
+                          >
                             <span>-53%</span>
                           </div>
                         </div>
@@ -1441,7 +1462,12 @@ const Home = () => {
                           </div>
 
                           <div className="xl:flex md:block flex items-center space-x-1">
-                            <button className="flex items-center uppercase text-white hover:bg-primary duration-100 bg-black bg-opacity-60 text-xs font-medium p-2 rounded whitespace-nowrap">
+                            <button
+                              className="flex items-center uppercase text-white hover:bg-primary
+                            bg-black bg-opacity-60 text-xs font-medium p-2 rounded whitespace-nowrap
+                            transition-all duration-300 ease-in-out
+                            "
+                            >
                               <span className="mr-1">
                                 <AiOutlineShoppingCart className="h-4 w-4" />
                               </span>
@@ -1450,10 +1476,13 @@ const Home = () => {
                           </div>
                         </div>
                       </div>
-                      <div className="md:flex xl:items-center py-2">
+                      <div className="md:flex xl:items-center py-2 border-t-[1px]">
                         <div href="#" className="md:w-2/5 w-full mr-4 relative">
                           <img className=" mx-auto" src={Boot1} alt="" />
-                          <div className=" absolute top-1 right-1 text-xs text-white bg-red-500 h-10 w-10 flex items-center justify-center rounded-full">
+                          <div
+                            className=" absolute top-1 right-1 text-xs text-white bg-red-500 h-10 w-10 
+                          flex items-center justify-center rounded-full"
+                          >
                             <span>-53%</span>
                           </div>
                         </div>
@@ -1484,7 +1513,11 @@ const Home = () => {
                           </div>
 
                           <div className="xl:flex md:block flex items-center space-x-1">
-                            <button className="flex items-center uppercase text-white hover:bg-primary duration-100 bg-black bg-opacity-60 text-xs font-medium p-2 rounded whitespace-nowrap">
+                            <button
+                              className="flex items-center uppercase text-white hover:bg-primary 
+                            bg-black bg-opacity-60 text-xs font-medium p-2 rounded whitespace-nowrap
+                            transition-all duration-300 ease-in-out"
+                            >
                               <span className="mr-1">
                                 <AiOutlineShoppingCart className="h-4 w-4" />
                               </span>
@@ -1493,10 +1526,13 @@ const Home = () => {
                           </div>
                         </div>
                       </div>
-                      <div className="md:flex xl:items-center py-2">
+                      <div className="md:flex xl:items-center py-2 border-t-[1px]">
                         <div href="#" className="md:w-2/5 w-full mr-4 relative">
                           <img className=" mx-auto" src={Boot1} alt="" />
-                          <div className=" absolute top-1 right-1 text-xs text-white bg-red-500 h-10 w-10 flex items-center justify-center rounded-full">
+                          <div
+                            className=" absolute top-1 right-1 text-xs text-white bg-red-500 h-10 w-10 
+                          flex items-center justify-center rounded-full"
+                          >
                             <span>-53%</span>
                           </div>
                         </div>
@@ -1527,7 +1563,11 @@ const Home = () => {
                           </div>
 
                           <div className="xl:flex md:block flex items-center space-x-1">
-                            <button className="flex items-center uppercase text-white hover:bg-primary duration-100 bg-black bg-opacity-60 text-xs font-medium p-2 rounded whitespace-nowrap">
+                            <button
+                              className="flex items-center uppercase text-white hover:bg-primary
+                             bg-black bg-opacity-60 text-xs font-medium p-2 rounded whitespace-nowrap
+                             transition-all duration-300 ease-in-out"
+                            >
                               <span className="mr-1">
                                 <AiOutlineShoppingCart className="h-4 w-4" />
                               </span>
@@ -1536,10 +1576,13 @@ const Home = () => {
                           </div>
                         </div>
                       </div>
-                      <div className="md:flex xl:items-center py-2">
+                      <div className="md:flex xl:items-center py-2 border-t-[1px]">
                         <div href="#" className="md:w-2/5 w-full mr-4 relative">
                           <img className=" mx-auto" src={Boot1} alt="" />
-                          <div className=" absolute top-1 right-1 text-xs text-white bg-red-500 h-10 w-10 flex items-center justify-center rounded-full">
+                          <div
+                            className=" absolute top-1 right-1 text-xs text-white bg-red-500 h-10 w-10 
+                          flex items-center justify-center rounded-full"
+                          >
                             <span>-53%</span>
                           </div>
                         </div>
@@ -1570,7 +1613,11 @@ const Home = () => {
                           </div>
 
                           <div className="xl:flex md:block flex items-center space-x-1">
-                            <button className="flex items-center uppercase text-white hover:bg-primary duration-100 bg-black bg-opacity-60 text-xs font-medium p-2 rounded whitespace-nowrap">
+                            <button
+                              className="flex items-center uppercase text-white hover:bg-primary
+                             bg-black bg-opacity-60 text-xs font-medium p-2 rounded whitespace-nowrap
+                             transition-all duration-300 ease-in-out"
+                            >
                               <span className="mr-1">
                                 <AiOutlineShoppingCart className="h-4 w-4" />
                               </span>
@@ -1584,16 +1631,29 @@ const Home = () => {
 
                   {/* Featured */}
                   {popularCategory[1] && (
-                    <motion.div className=" grid grid-cols-2 sm:gap-6 gap-2 divide-y">
-                      <div className="md:flex xl:items-center py-2">
+                    <motion.div
+                      initial={{ y: -50 }}
+                      animate={{ y: 0 }}
+                      exit={{ y: 50 }}
+                      transition={{
+                        type: "spring",
+                        bounce: 0.3,
+                        duration: 0.4,
+                      }}
+                      className=" grid grid-cols-2 sm:gap-6 gap-2 divide-y"
+                    >
+                      <div className="md:flex xl:items-center py-2 border-t-[1px]">
                         <div href="#" className="md:w-2/5 w-full mr-4 relative">
                           <img className=" mx-auto" src={Camera1} alt="" />
-                          <div className=" absolute top-1 right-1 text-xs text-white bg-red-500 h-10 w-10 flex items-center justify-center rounded-full">
+                          <div
+                            className=" absolute top-1 right-1 text-xs text-white bg-red-500 h-10 w-10
+                          flex items-center justify-center rounded-full"
+                          >
                             <span>-53%</span>
                           </div>
                         </div>
 
-                        <div className="py-2">
+                        <div className="py-2 ">
                           <div
                             className=" text-gray-800 cursor-pointer"
                             href="#"
@@ -1619,7 +1679,11 @@ const Home = () => {
                           </div>
 
                           <div className="xl:flex md:block flex items-center space-x-1">
-                            <button className="flex items-center uppercase text-white hover:bg-primary duration-100 bg-black bg-opacity-60 text-xs font-medium p-2 rounded whitespace-nowrap">
+                            <button
+                              className="flex items-center uppercase text-white hover:bg-primary
+                             bg-black bg-opacity-60 text-xs font-medium p-2 rounded whitespace-nowrap
+                             transition-all duration-300 ease-in-out"
+                            >
                               <span className="mr-1">
                                 <AiOutlineShoppingCart className="h-4 w-4" />
                               </span>
@@ -1628,10 +1692,13 @@ const Home = () => {
                           </div>
                         </div>
                       </div>
-                      <div className="md:flex xl:items-center py-2">
+                      <div className="md:flex xl:items-center py-2 border-t-[1px]">
                         <div href="#" className="md:w-2/5 w-full mr-4 relative">
                           <img className=" mx-auto" src={Camera1} alt="" />
-                          <div className=" absolute top-1 right-1 text-xs text-white bg-red-500 h-10 w-10 flex items-center justify-center rounded-full">
+                          <div
+                            className=" absolute top-1 right-1 text-xs text-white bg-red-500 h-10 w-10 
+                          flex items-center justify-center rounded-full"
+                          >
                             <span>-53%</span>
                           </div>
                         </div>
@@ -1662,7 +1729,11 @@ const Home = () => {
                           </div>
 
                           <div className="xl:flex md:block flex items-center space-x-1">
-                            <button className="flex items-center uppercase text-white hover:bg-primary duration-100 bg-black bg-opacity-60 text-xs font-medium p-2 rounded whitespace-nowrap">
+                            <button
+                              className="flex items-center uppercase text-white hover:bg-primary
+                            bg-black bg-opacity-60 text-xs font-medium p-2 rounded whitespace-nowrap
+                            transition-all duration-300 ease-in-out"
+                            >
                               <span className="mr-1">
                                 <AiOutlineShoppingCart className="h-4 w-4" />
                               </span>
@@ -1671,10 +1742,13 @@ const Home = () => {
                           </div>
                         </div>
                       </div>
-                      <div className="md:flex xl:items-center py-2">
+                      <div className="md:flex xl:items-center py-2 border-t-[1px]">
                         <div href="#" className="md:w-2/5 w-full mr-4 relative">
                           <img className=" mx-auto" src={Camera1} alt="" />
-                          <div className=" absolute top-1 right-1 text-xs text-white bg-red-500 h-10 w-10 flex items-center justify-center rounded-full">
+                          <div
+                            className=" absolute top-1 right-1 text-xs text-white bg-red-500 h-10 w-10
+                          flex items-center justify-center rounded-full"
+                          >
                             <span>-53%</span>
                           </div>
                         </div>
@@ -1705,7 +1779,11 @@ const Home = () => {
                           </div>
 
                           <div className="xl:flex md:block flex items-center space-x-1">
-                            <button className="flex items-center uppercase text-white hover:bg-primary duration-100 bg-black bg-opacity-60 text-xs font-medium p-2 rounded whitespace-nowrap">
+                            <button
+                              className="flex items-center uppercase text-white hover:bg-primary 
+                            bg-black bg-opacity-60 text-xs font-medium p-2 rounded whitespace-nowrap
+                            transition-all duration-300 ease-in-out"
+                            >
                               <span className="mr-1">
                                 <AiOutlineShoppingCart className="h-4 w-4" />
                               </span>
@@ -1714,10 +1792,13 @@ const Home = () => {
                           </div>
                         </div>
                       </div>
-                      <div className="md:flex xl:items-center py-2">
+                      <div className="md:flex xl:items-center py-2 border-t-[1px]">
                         <div href="#" className="md:w-2/5 w-full mr-4 relative">
                           <img className=" mx-auto" src={Camera1} alt="" />
-                          <div className=" absolute top-1 right-1 text-xs text-white bg-red-500 h-10 w-10 flex items-center justify-center rounded-full">
+                          <div
+                            className=" absolute top-1 right-1 text-xs text-white bg-red-500 h-10 w-10 
+                          flex items-center justify-center rounded-full"
+                          >
                             <span>-53%</span>
                           </div>
                         </div>
@@ -1748,7 +1829,11 @@ const Home = () => {
                           </div>
 
                           <div className="xl:flex md:block flex items-center space-x-1">
-                            <button className="flex items-center uppercase text-white hover:bg-primary duration-100 bg-black bg-opacity-60 text-xs font-medium p-2 rounded whitespace-nowrap">
+                            <button
+                              className="flex items-center uppercase text-white hover:bg-primary 
+                            bg-black bg-opacity-60 text-xs font-medium p-2 rounded whitespace-nowrap
+                            transition-all duration-300 ease-in-out"
+                            >
                               <span className="mr-1">
                                 <AiOutlineShoppingCart className="h-4 w-4" />
                               </span>
@@ -1762,11 +1847,24 @@ const Home = () => {
 
                   {/* New Arrivals */}
                   {popularCategory[2] && (
-                    <motion.div className=" grid grid-cols-2 sm:gap-6 gap-2 divide-y">
-                      <div className="md:flex xl:items-center py-2">
+                    <motion.div
+                      initial={{ y: -50 }}
+                      animate={{ y: 0 }}
+                      exit={{ y: 50 }}
+                      transition={{
+                        type: "spring",
+                        bounce: 0.3,
+                        duration: 0.4,
+                      }}
+                      className=" grid grid-cols-2 sm:gap-6 gap-2 divide-y"
+                    >
+                      <div className="md:flex xl:items-center py-2 border-t-[1px]">
                         <div href="#" className="md:w-2/5 w-full mr-4 relative">
                           <img className=" mx-auto" src={Shoe1} alt="" />
-                          <div className=" absolute top-1 right-1 text-xs text-white bg-red-500 h-10 w-10 flex items-center justify-center rounded-full">
+                          <div
+                            className=" absolute top-1 right-1 text-xs text-white bg-red-500 h-10 w-10 
+                          flex items-center justify-center rounded-full"
+                          >
                             <span>-53%</span>
                           </div>
                         </div>
@@ -1797,7 +1895,11 @@ const Home = () => {
                           </div>
 
                           <div className="xl:flex md:block flex items-center space-x-1">
-                            <button className="flex items-center uppercase text-white hover:bg-primary duration-100 bg-black bg-opacity-60 text-xs font-medium p-2 rounded whitespace-nowrap">
+                            <button
+                              className="flex items-center uppercase text-white hover:bg-primary
+                            bg-black bg-opacity-60 text-xs font-medium p-2 rounded whitespace-nowrap
+                            transition-all duration-300 ease-in-out"
+                            >
                               <span className="mr-1">
                                 <AiOutlineShoppingCart className="h-4 w-4" />
                               </span>
@@ -1806,10 +1908,13 @@ const Home = () => {
                           </div>
                         </div>
                       </div>
-                      <div className="md:flex xl:items-center py-2">
+                      <div className="md:flex xl:items-center py-2 border-t-[1px]">
                         <div href="#" className="md:w-2/5 w-full mr-4 relative">
                           <img className=" mx-auto" src={Shoe1} alt="" />
-                          <div className=" absolute top-1 right-1 text-xs text-white bg-red-500 h-10 w-10 flex items-center justify-center rounded-full">
+                          <div
+                            className=" absolute top-1 right-1 text-xs text-white bg-red-500 h-10 w-10 
+                          flex items-center justify-center rounded-full"
+                          >
                             <span>-53%</span>
                           </div>
                         </div>
@@ -1840,7 +1945,11 @@ const Home = () => {
                           </div>
 
                           <div className="xl:flex md:block flex items-center space-x-1">
-                            <button className="flex items-center uppercase text-white hover:bg-primary duration-100 bg-black bg-opacity-60 text-xs font-medium p-2 rounded whitespace-nowrap">
+                            <button
+                              className="flex items-center uppercase text-white hover:bg-primary 
+                            bg-black bg-opacity-60 text-xs font-medium p-2 rounded whitespace-nowrap
+                            transition-all duration-300 ease-in-out"
+                            >
                               <span className="mr-1">
                                 <AiOutlineShoppingCart className="h-4 w-4" />
                               </span>
@@ -1849,10 +1958,13 @@ const Home = () => {
                           </div>
                         </div>
                       </div>
-                      <div className="md:flex xl:items-center py-2">
+                      <div className="md:flex xl:items-center py-2 border-t-[1px]">
                         <div href="#" className="md:w-2/5 w-full mr-4 relative">
                           <img className=" mx-auto" src={Shoe1} alt="" />
-                          <div className=" absolute top-1 right-1 text-xs text-white bg-red-500 h-10 w-10 flex items-center justify-center rounded-full">
+                          <div
+                            className=" absolute top-1 right-1 text-xs text-white bg-red-500 h-10 w-10 
+                          flex items-center justify-center rounded-full"
+                          >
                             <span>-53%</span>
                           </div>
                         </div>
@@ -1883,7 +1995,11 @@ const Home = () => {
                           </div>
 
                           <div className="xl:flex md:block flex items-center space-x-1">
-                            <button className="flex items-center uppercase text-white hover:bg-primary duration-100 bg-black bg-opacity-60 text-xs font-medium p-2 rounded whitespace-nowrap">
+                            <button
+                              className="flex items-center uppercase text-white hover:bg-primary
+                            bg-black bg-opacity-60 text-xs font-medium p-2 rounded whitespace-nowrap
+                            transition-all duration-300 ease-in-out"
+                            >
                               <span className="mr-1">
                                 <AiOutlineShoppingCart className="h-4 w-4" />
                               </span>
@@ -1892,10 +2008,13 @@ const Home = () => {
                           </div>
                         </div>
                       </div>
-                      <div className="md:flex xl:items-center py-2">
+                      <div className="md:flex xl:items-center py-2 border-t-[1px]">
                         <div href="#" className="md:w-2/5 w-full mr-4 relative">
                           <img className=" mx-auto" src={Shoe1} alt="" />
-                          <div className=" absolute top-1 right-1 text-xs text-white bg-red-500 h-10 w-10 flex items-center justify-center rounded-full">
+                          <div
+                            className=" absolute top-1 right-1 text-xs text-white bg-red-500 h-10 w-10 
+                          flex items-center justify-center rounded-full"
+                          >
                             <span>-53%</span>
                           </div>
                         </div>
@@ -1926,7 +2045,11 @@ const Home = () => {
                           </div>
 
                           <div className="xl:flex md:block flex items-center space-x-1">
-                            <button className="flex items-center uppercase text-white hover:bg-primary duration-100 bg-black bg-opacity-60 text-xs font-medium p-2 rounded whitespace-nowrap">
+                            <button
+                              className="flex items-center uppercase text-white hover:bg-primary 
+                            bg-black bg-opacity-60 text-xs font-medium p-2 rounded whitespace-nowrap
+                            transition-all duration-300 ease-in-out"
+                            >
                               <span className="mr-1">
                                 <AiOutlineShoppingCart className="h-4 w-4" />
                               </span>
@@ -1940,11 +2063,24 @@ const Home = () => {
 
                   {/* Top Reviewed */}
                   {popularCategory[3] && (
-                    <motion.div className=" grid grid-cols-2 sm:gap-6 gap-2 divide-y">
-                      <div className="md:flex xl:items-center py-2">
+                    <motion.div
+                      initial={{ y: -50 }}
+                      animate={{ y: 0 }}
+                      exit={{ y: 50 }}
+                      transition={{
+                        type: "spring",
+                        bounce: 0.3,
+                        duration: 0.4,
+                      }}
+                      className=" grid grid-cols-2 sm:gap-6 gap-2 divide-y"
+                    >
+                      <div className="md:flex xl:items-center py-2 border-t-[1px]">
                         <div href="#" className="md:w-2/5 w-full mr-4 relative">
                           <img className=" mx-auto" src={Chair1} alt="" />
-                          <div className=" absolute top-1 right-1 text-xs text-white bg-red-500 h-10 w-10 flex items-center justify-center rounded-full">
+                          <div
+                            className=" absolute top-1 right-1 text-xs text-white bg-red-500 h-10 w-10 
+                          flex items-center justify-center rounded-full"
+                          >
                             <span>-53%</span>
                           </div>
                         </div>
@@ -1975,7 +2111,11 @@ const Home = () => {
                           </div>
 
                           <div className="xl:flex md:block flex items-center space-x-1">
-                            <button className="flex items-center uppercase text-white hover:bg-primary duration-100 bg-black bg-opacity-60 text-xs font-medium p-2 rounded whitespace-nowrap">
+                            <button
+                              className="flex items-center uppercase text-white hover:bg-primary
+                            bg-black bg-opacity-60 text-xs font-medium p-2 rounded whitespace-nowrap
+                            transition-all duration-300 ease-in-out"
+                            >
                               <span className="mr-1">
                                 <AiOutlineShoppingCart className="h-4 w-4" />
                               </span>
@@ -1984,10 +2124,13 @@ const Home = () => {
                           </div>
                         </div>
                       </div>
-                      <div className="md:flex xl:items-center py-2">
+                      <div className="md:flex xl:items-center py-2 border-t-[1px]">
                         <div href="#" className="md:w-2/5 w-full mr-4 relative">
                           <img className=" mx-auto" src={Chair1} alt="" />
-                          <div className=" absolute top-1 right-1 text-xs text-white bg-red-500 h-10 w-10 flex items-center justify-center rounded-full">
+                          <div
+                            className=" absolute top-1 right-1 text-xs text-white bg-red-500 h-10 w-10 
+                          flex items-center justify-center rounded-full"
+                          >
                             <span>-53%</span>
                           </div>
                         </div>
@@ -2018,7 +2161,11 @@ const Home = () => {
                           </div>
 
                           <div className="xl:flex md:block flex items-center space-x-1">
-                            <button className="flex items-center uppercase text-white hover:bg-primary duration-100 bg-black bg-opacity-60 text-xs font-medium p-2 rounded whitespace-nowrap">
+                            <button
+                              className="flex items-center uppercase text-white hover:bg-primary
+                            bg-black bg-opacity-60 text-xs font-medium p-2 rounded whitespace-nowrap
+                            transition-all duration-300 ease-in-out"
+                            >
                               <span className="mr-1">
                                 <AiOutlineShoppingCart className="h-4 w-4" />
                               </span>
@@ -2027,10 +2174,13 @@ const Home = () => {
                           </div>
                         </div>
                       </div>
-                      <div className="md:flex xl:items-center py-2">
+                      <div className="md:flex xl:items-center py-2 border-t-[1px]">
                         <div href="#" className="md:w-2/5 w-full mr-4 relative">
                           <img className=" mx-auto" src={Chair1} alt="" />
-                          <div className=" absolute top-1 right-1 text-xs text-white bg-red-500 h-10 w-10 flex items-center justify-center rounded-full">
+                          <div
+                            className=" absolute top-1 right-1 text-xs text-white bg-red-500 h-10 w-10 
+                          flex items-center justify-center rounded-full"
+                          >
                             <span>-53%</span>
                           </div>
                         </div>
@@ -2061,7 +2211,11 @@ const Home = () => {
                           </div>
 
                           <div className="xl:flex md:block flex items-center space-x-1">
-                            <button className="flex items-center uppercase text-white hover:bg-primary duration-100 bg-black bg-opacity-60 text-xs font-medium p-2 rounded whitespace-nowrap">
+                            <button
+                              className="flex items-center uppercase text-white hover:bg-primary
+                            bg-black bg-opacity-60 text-xs font-medium p-2 rounded whitespace-nowrap
+                            transition-all duration-300 ease-in-out"
+                            >
                               <span className="mr-1">
                                 <AiOutlineShoppingCart className="h-4 w-4" />
                               </span>
@@ -2070,10 +2224,13 @@ const Home = () => {
                           </div>
                         </div>
                       </div>
-                      <div className="md:flex xl:items-center py-2">
+                      <div className="md:flex xl:items-center py-2 border-t-[1px]">
                         <div href="#" className="md:w-2/5 w-full mr-4 relative">
                           <img className=" mx-auto" src={Chair1} alt="" />
-                          <div className=" absolute top-1 right-1 text-xs text-white bg-red-500 h-10 w-10 flex items-center justify-center rounded-full">
+                          <div
+                            className=" absolute top-1 right-1 text-xs text-white bg-red-500 h-10 w-10 
+                          flex items-center justify-center rounded-full"
+                          >
                             <span>-53%</span>
                           </div>
                         </div>
@@ -2104,7 +2261,11 @@ const Home = () => {
                           </div>
 
                           <div className="xl:flex md:block flex items-center space-x-1">
-                            <button className="flex items-center uppercase text-white hover:bg-primary duration-100 bg-black bg-opacity-60 text-xs font-medium p-2 rounded whitespace-nowrap">
+                            <button
+                              className="flex items-center uppercase text-white hover:bg-primary
+                            bg-black bg-opacity-60 text-xs font-medium p-2 rounded whitespace-nowrap
+                            transition-all duration-300 ease-in-out"
+                            >
                               <span className="mr-1">
                                 <AiOutlineShoppingCart className="h-4 w-4" />
                               </span>
@@ -2128,6 +2289,335 @@ const Home = () => {
                 alt=""
               />
             </a>
+          </div>
+        </section>
+        <section className="xl:px-24 sm:px-10 px-4 pt-10">
+          <div>
+            <div className=" font-bold border-b-2 border-primary inline-block pb-1">
+              DEALS OF THE WEEK
+            </div>
+          </div>
+          <div className=" md:grid md:grid-cols-3 border rounded">
+            <div className="p-5 md:border-r border-r-0 border-b md:border-b-0 border-gray-200">
+              <div className=" relative">
+                <img className=" mx-auto h-full w-full" src={Shirt1} alt="" />
+
+                <div className="space-y-3 absolute top-0">
+                  <div>
+                    <button
+                      className="text-white hover:bg-primary bg-black bg-opacity-60 
+                      text-xs font-medium p-2 rounded  flex items-center transition-all
+                      duration-300 ease-in-out"
+                    >
+                      <AiOutlineShoppingCart className="h-4 w-4" />
+                      <span className="duration-300 ml-2">Add to Cart</span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              <div className="lg:p-5 p-0 py-5">
+                <a
+                  className=" text-gray-800 text-xl hover:text-primary font-bold"
+                  href="#"
+                >
+                  Cillum Ham Hock
+                </a>
+
+                <div className=" flex items-center my-2">
+                  <span className=" text-primary text-2xl font-bold mr-4">
+                    £360.00
+                  </span>
+                </div>
+
+                <div>
+                  <span className=" text-gray-500 text-sm leading-loose">
+                    Nam tempus turpis at metus scelerisque placerat nulla
+                    deumantos sollicitudin felis. Pellentesque diam dolor,
+                    elementum et lobortis at, mollis ut risus. Sedcus faucibus
+                    cosmo sullamcorper mattis...
+                  </span>
+                </div>
+
+                <div className="flex items-center justify-between xl:-ml-7">
+                  <div className=" hidden xl:block mr-4">
+                    <h4 className="text-2xl tracking-tighter font-bold whitespace-nowrap">
+                      Hurry Up!
+                    </h4>
+                    <h5 className="text-sm whitespace-nowrap">
+                      {" "}
+                      Offer ends in:
+                    </h5>
+                  </div>
+
+                  <div className=" mt-5" id="countdown">
+                    <ul className="flex items-center">
+                      <li className=" mr-4 text-center">
+                        <span
+                          className="text-base font-bold rounded-full h-10 w-10 flex items-center justify-center bg-gray-200 text-gray-600"
+                          id="days"
+                        ></span>
+                        <h5 className=" text-gray-400 uppercase my-2 text-xs">
+                          days
+                        </h5>
+                      </li>
+
+                      <li className=" mr-4 text-center">
+                        <span
+                          className="text-base font-bold rounded-full h-10 w-10 flex items-center justify-center bg-gray-200 text-gray-600"
+                          id="hours"
+                        ></span>
+                        <h5 className=" text-gray-400 uppercase my-2 text-xs">
+                          hours
+                        </h5>
+                      </li>
+
+                      <li className=" mr-4 text-center">
+                        <span
+                          className="text-base font-bold rounded-full h-10 w-10 flex items-center justify-center bg-gray-200 text-gray-600"
+                          id="minutes"
+                        ></span>
+                        <h5 className=" text-gray-400 uppercase my-2 text-xs">
+                          minutes
+                        </h5>
+                      </li>
+
+                      <li className=" mr-4 text-center">
+                        <span
+                          className="text-base font-bold rounded-full h-10 w-10 flex items-center justify-center bg-gray-200 text-gray-600"
+                          id="seconds"
+                        ></span>
+                        <h5 className=" text-gray-400 uppercase my-2 text-xs">
+                          seconds
+                        </h5>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/*  */}
+            <div className="col-span-2">
+              <div className="md:grid md:grid-cols-5 gap-4 border-b p-5">
+                <div className="col-span-2 relative">
+                  <img className=" mx-auto h-full w-full" src={Toy1} alt="" />
+
+                  <div className=" absolute top-4 right-10 text-xs text-white bg-red-500 h-10 w-10 flex items-center justify-center rounded-full">
+                    <span>-27%</span>
+                  </div>
+
+                  <div className="space-y-3 absolute top-0">
+                    <div>
+                      <button
+                        className="text-white hover:bg-primary bg-black bg-opacity-60 
+                      text-xs font-medium p-2 rounded  flex items-center transition-all
+                      duration-300 ease-in-out"
+                      >
+                        <AiOutlineShoppingCart className="h-4 w-4" />
+                        <span className="duration-300 ml-2">Add to Cart</span>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <div className=" col-span-3 md:py-0 py-5">
+                  <a
+                    className=" text-gray-800 text-xl hover:text-yellow-500 font-bold"
+                    href="catlyn-snake-pilit.html"
+                  >
+                    Denouncing pleasure
+                  </a>
+
+                  <div className=" flex items-center my-2">
+                    <span className=" text-yellow-500 text-2xl font-bold mr-4">
+                      £350.00
+                    </span>
+                    <span className=" text-gray-500 text-xl">
+                      <del>£450.00</del>
+                    </span>
+                  </div>
+
+                  <div>
+                    <span className=" text-gray-500 text-sm leading-loose">
+                      Nam tempus turpis at metus scelerisque placerat nulla
+                      deumantos sollicitudin felis. Pellentesque diam dolor,
+                      elementum et lobortis at, mollis ut risus. Sedcus faucibus
+                      cosmo sullamcorper mattis...
+                    </span>
+                  </div>
+
+                  <div className="flex items-center ">
+                    <div className="hidden xl:block mr-10">
+                      <h4 className="text-2xl tracking-tighter font-bold">
+                        Hurry Up!
+                      </h4>
+                      <h5 className="text-sm"> Offer ends in:</h5>
+                    </div>
+
+                    <div className=" mt-5" id="countdown">
+                      <ul className="flex items-center">
+                        <li className=" mr-4 text-center">
+                          <span
+                            className="text-xl font-bold rounded-full h-12 w-12 flex items-center justify-center bg-gray-200 text-gray-600"
+                            id="days1"
+                          ></span>
+                          <h5 className=" text-gray-400 uppercase my-2 text-xs">
+                            days
+                          </h5>
+                        </li>
+
+                        <li className=" mr-4 text-center">
+                          <span
+                            className="text-xl font-bold rounded-full h-12 w-12 flex items-center justify-center bg-gray-200 text-gray-600"
+                            id="hours1"
+                          ></span>
+                          <h5 className=" text-gray-400 uppercase my-2 text-xs">
+                            hours
+                          </h5>
+                        </li>
+
+                        <li className=" mr-4 text-center">
+                          <span
+                            className="text-xl font-bold rounded-full h-12 w-12 flex items-center justify-center bg-gray-200 text-gray-600"
+                            id="minutes1"
+                          ></span>
+                          <h5 className=" text-gray-400 uppercase my-2 text-xs">
+                            minutes
+                          </h5>
+                        </li>
+
+                        <li className=" mr-4 text-center">
+                          <span
+                            className="text-xl font-bold rounded-full h-12 w-12 flex items-center justify-center bg-gray-200 text-gray-600"
+                            id="seconds1"
+                          ></span>
+                          <h5 className=" text-gray-400 uppercase my-2 text-xs">
+                            seconds
+                          </h5>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              {/*  */}
+              <div className="md:grid md:grid-cols-5 gap-4 p-5 pb-0">
+                <div className="col-span-2 relative">
+                  <img className=" mx-auto h-full w-full" src={Clock1} alt="" />
+
+                  <div className="space-y-3 absolute top-0">
+                    <div>
+                      <button
+                        className="text-white hover:bg-primary bg-black bg-opacity-60 
+                      text-xs font-medium p-2 rounded  flex items-center transition-all
+                      duration-300 ease-in-out"
+                      >
+                        <AiOutlineShoppingCart className="h-4 w-4" />
+                        <span className="duration-300 ml-2">Add to Cart</span>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+
+                <div className=" col-span-3 md:py-0 py-5">
+                  <a
+                    className=" text-gray-800 text-xl hover:text-yellow-500 font-bold"
+                    href="#"
+                  >
+                    Cow pastrami jowl
+                  </a>
+
+                  <div className=" flex items-center my-2">
+                    <span className=" text-yellow-500 text-2xl font-bold mr-4">
+                      £350.00
+                    </span>
+                  </div>
+
+                  <div>
+                    <span className=" text-gray-500 text-sm leading-loose">
+                      Nam tempus turpis at metus scelerisque placerat nulla
+                      deumantos sollicitudin felis. Pellentesque diam dolor,
+                      elementum et lobortis at, mollis ut risus. Sedcus faucibus
+                      cosmo sullamcorper mattis...
+                    </span>
+                  </div>
+
+                  <div className="flex items-center ">
+                    <div className="hidden xl:block mr-10">
+                      <h4 className="text-2xl tracking-tighter font-bold">
+                        Hurry Up!
+                      </h4>
+                      <h5 className="text-sm"> Offer ends in:</h5>
+                    </div>
+
+                    <div className=" mt-5" id="countdown">
+                      <ul className="flex items-center">
+                        <li className=" mr-4 text-center">
+                          <span
+                            className="text-xl font-bold rounded-full h-12 w-12 flex items-center justify-center bg-gray-200 text-gray-600"
+                            id="days2"
+                          ></span>
+                          <h5 className=" text-gray-400 uppercase my-2 text-xs">
+                            days
+                          </h5>
+                        </li>
+
+                        <li className=" mr-4 text-center">
+                          <span
+                            className="text-xl font-bold rounded-full h-12 w-12 flex items-center justify-center bg-gray-200 text-gray-600"
+                            id="hours2"
+                          ></span>
+                          <h5 className=" text-gray-400 uppercase my-2 text-xs">
+                            hours
+                          </h5>
+                        </li>
+
+                        <li className=" mr-4 text-center">
+                          <span
+                            className="text-xl font-bold rounded-full h-12 w-12 flex items-center justify-center bg-gray-200 text-gray-600"
+                            id="minutes2"
+                          ></span>
+                          <h5 className=" text-gray-400 uppercase my-2 text-xs">
+                            minutes
+                          </h5>
+                        </li>
+
+                        <li className=" mr-4 text-center">
+                          <span
+                            className="text-xl font-bold rounded-full h-12 w-12 flex items-center justify-center bg-gray-200 text-gray-600"
+                            id="seconds2"
+                          ></span>
+                          <h5 className=" text-gray-400 uppercase my-2 text-xs">
+                            seconds
+                          </h5>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className=" md:grid md:grid-cols-2 gap-8 pt-10">
+            <div className="mb-6 md:mb-0">
+              <a href="#">
+                <img
+                  className="w-full duration-300 hover:opacity-80"
+                  src={Banner2}
+                  alt=""
+                />
+              </a>
+            </div>
+
+            <div>
+              <a href="#">
+                <img
+                  className="w-full duration-300 hover:opacity-80"
+                  src={Banner3}
+                  alt=""
+                />
+              </a>
+            </div>
           </div>
         </section>
       </main>
