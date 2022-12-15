@@ -1,12 +1,12 @@
 import { AnimatePresence } from "framer-motion";
-import "./App.css";
 import { Routes, Route } from "react-router-dom";
-import Header from "./components/Header";
-import Home from "./components/Home";
-import Product from "./components/Product";
-import Footer from "./components/Footer";
-// import Login from "./components/Login";
-// import Register from "./components/Register";
+import Header from "./components/layout/Header";
+import Home from "./components/layout/Home/Home";
+import Product from "./components/product/Product";
+import Footer from "./components/layout/Footer";
+import Login from "./components/user/Login";
+import Register from "./components/user/Register";
+import "./App.css";
 
 function App() {
   return (
@@ -16,10 +16,12 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/product/:id" element={<Product />} />
-          {/* <Route path="/login" element={<Login />} />
-          <Route path="/register" element={<Register />} /> */}
         </Routes>
         <Footer />
+        {/* <Routes>
+          <Route path="/login" element={<Login />} />
+          <Route path="/register" element={<Register />} />
+        </Routes> */}
       </div>
     </AnimatePresence>
   );

@@ -7,7 +7,7 @@ import { Pagination, Autoplay } from "swiper";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
-import "../App.css";
+import "./Categories.css";
 
 // Icons used
 import { GiClothes } from "react-icons/gi";
@@ -18,11 +18,11 @@ import { BsChevronDown } from "react-icons/bs";
 import { BsChevronUp } from "react-icons/bs";
 
 // Images used
-import GadgetsCover from "../images/gadgets-cover.jpg";
-import ClothingCover from "../images/clothing-cover.jpg";
-import CarouselCover1 from "../images/carousel-cover-1.webp";
-import CarouselCover2 from "../images/carousel-cover-2.webp";
-import CarouselCover3 from "../images/carousel-cover-3.webp";
+import GadgetsCover from "../../../images/gadgets-cover.jpg";
+import ClothingCover from "../../../images/clothing-cover.jpg";
+import CarouselCover1 from "../../../images/carousel-cover-1.webp";
+import CarouselCover2 from "../../../images/carousel-cover-2.webp";
+import CarouselCover3 from "../../../images/carousel-cover-3.webp";
 
 const Categories = () => {
   const [isGadgetCategoryOpen, setIsGadgetCategoryOpen] = useState(false);

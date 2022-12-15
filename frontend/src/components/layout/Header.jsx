@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Logo from "../images/logo.png";
+import Logo from "../../images/logo.png";
 import { VscChromeClose } from "react-icons/vsc";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
@@ -36,13 +36,13 @@ const Header = () => {
         <div className=" sm:block hidden">
           <p className="text-sm text-gray-600">
             Welcome to Crafty Commerce!{" "}
-            <a className=" text-primary ml-1" href="#">
+            <Link className=" text-primary ml-1" to={"/login"}>
               Login
-            </a>{" "}
+            </Link>{" "}
             or{" "}
-            <a className=" text-primary" href="#">
+            <Link className=" text-primary" to={"/register"}>
               Register
-            </a>
+            </Link>
           </p>
         </div>
 
@@ -94,36 +94,36 @@ const Header = () => {
                   }}
                   className={`absolute rounded bg-white border w-full shadow mt-2 text-base overflow-hidden z-40`}
                 >
-                  <a
+                  <Link
                     className="hover:bg-gray-100 transition-colors duration-300 ease-in-out p-2 rounded-t text-sm block"
-                    href="#"
+                    to={"/"}
                   >
                     Your Profile
-                  </a>
-                  <a
+                  </Link>
+                  <Link
                     className="hover:bg-gray-100 transition-colors duration-300 ease-in-out p-2 rounded-t text-sm block"
-                    href="#"
+                    to={"/login"}
                   >
                     Login
-                  </a>
-                  <a
+                  </Link>
+                  <Link
                     className="hover:bg-gray-100 transition-colors duration-300 ease-in-out p-2 text-sm block"
-                    href="#"
+                    to={"/register"}
                   >
                     Register
-                  </a>
-                  <a
+                  </Link>
+                  <Link
                     className="hover:bg-gray-100 transition-colors duration-300 ease-in-out p-2 rounded-b text-sm block"
-                    href="#"
+                    to={"/"}
                   >
                     Your Orders
-                  </a>
-                  <a
+                  </Link>
+                  <Link
                     className="hover:bg-gray-100 transition-colors duration-300 ease-in-out p-2 rounded-b text-sm block"
-                    href="#"
+                    href={"/"}
                   >
                     Logout
-                  </a>
+                  </Link>
                 </motion.div>
                 <motion.div
                   initial={{ opacity: 0 }}
@@ -145,7 +145,11 @@ const Header = () => {
           </motion.div>
 
           <div className="sm:px-4 flex items-center space-x-6">
-            <a className=" text-gray-600" href="#">
+            <a
+              className=" text-gray-600"
+              href="https://twitter.com/"
+              target="_blank"
+            >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="currentColor"
@@ -156,7 +160,11 @@ const Header = () => {
               </svg>
             </a>
 
-            <a className=" text-gray-600" href="#">
+            <a
+              className=" text-gray-600"
+              href="https://facebook.com/"
+              target="_blank"
+            >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="currentColor"
@@ -167,7 +175,11 @@ const Header = () => {
               </svg>
             </a>
 
-            <a className=" text-gray-600" href="#">
+            <a
+              className=" text-gray-600"
+              href="https://google.com/"
+              target="_blank"
+            >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="currentColor"
@@ -178,7 +190,11 @@ const Header = () => {
               </svg>
             </a>
 
-            <a className=" text-gray-600" href="#">
+            <a
+              className=" text-gray-600"
+              href="https://instagram.com/"
+              target="_blank"
+            >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="currentColor"
@@ -189,7 +205,11 @@ const Header = () => {
               </svg>
             </a>
 
-            <a className=" text-gray-600" href="#">
+            <a
+              className=" text-gray-600"
+              href="https://youtube.com/"
+              target="_blank"
+            >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="currentColor"

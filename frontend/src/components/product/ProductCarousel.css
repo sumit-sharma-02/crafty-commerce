@@ -1,0 +1,21 @@
+.swiper {
+    width: 100%;
+    height: max-content !important;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+    color: rgb(224, 39, 70, 1) !important;
+}
+
+.productImage .swiper-slide {
+    width: 25%;
+    height: 100%;
+    opacity: 0.4;
+    cursor: pointer;
+}
+
+.productImage .swiper-slide-thumb-active {
+    opacity: 1;
+    cursor: pointer;
+}

@@ -2,22 +2,22 @@ import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { toast } from "react-toastify";
-import { getProducts } from "../actions/product";
+import { getProducts } from "../../../actions/product";
 import { useDispatch, useSelector } from "react-redux";
+import Loader from "../Loader";
 
 // CSS Imports
-import "../App.css";
+import "../../../App.css";
 
 // Icons used
 import { TbListDetails } from "react-icons/tb";
 
 // Images used
-import Boot1 from "../images/boot1.jpg";
-import Camera1 from "../images/camera1.jpg";
-import Shoe1 from "../images/shoe1.jpg";
-import Chair1 from "../images/chair1.jpg";
-import SomethingWentWrong from "../images/something_went_wrong-2.png";
-import Loader from "./Loader";
+import Boot1 from "../../../images/boot1.jpg";
+import Camera1 from "../../../images/camera1.jpg";
+import Shoe1 from "../../../images/shoe1.jpg";
+import Chair1 from "../../../images/chair1.jpg";
+import SomethingWentWrong from "../../../images/something_went_wrong-2.png";
 
 const PopularItems = () => {
   const [popularCategory, setPopularCategory] = useState([
@@ -26,6 +26,26 @@ const PopularItems = () => {
     false,
     false,
   ]);
+
+  const calculateNumOfReviews = (product) => {
+    if (product.numOfReviews === 0) {
+      return (
+        <span className="text-gray-500 xsm:text-xs ml-0">(No Reviews Yet)</span>
+      );
+    } else if (product.numOfReviews === 1) {
+      return (
+        <span className="text-gray-500 xsm:text-xs ml-0">
+          ({product.numOfReviews} Review)
+        </span>
+      );
+    } else {
+      return (
+        <span className="text-gray-500 xsm:text-xs ml-0">
+          ({product.numOfReviews} Reviews)
+        </span>
+      );
+    }
+  };
 
   const dispatch = useDispatch();
   const { loading, error, products, productsCount } = useSelector(
@@ -200,8 +220,7 @@ const PopularItems = () => {
                           ></div>
                         </div>
                         <span className="text-gray-500 xsm:text-xs ml-2">
-                          ({product.numOfReviews}{" "}
-                          {product.numOfReviews < 2 ? "Review" : "Reviews"})
+                          {calculateNumOfReviews(product)}
                         </span>
                       </div>
 

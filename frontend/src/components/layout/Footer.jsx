@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 // Images used
-import Logo from "../images/logo-b&w.png";
-import MasterCard from "../images/pay-1.webp";
-import VisaCard from "../images/pay-2.webp";
-import Paypal from "../images/pay-4.webp";
+import Logo from "../../images/logo-b&w.png";
+import MasterCard from "../../images/pay-1.webp";
+import VisaCard from "../../images/pay-2.webp";
+import Paypal from "../../images/pay-4.webp";
 // Icons used
 // import { IoLocationSharp } from "react-icons/io5";
 // import { BsTelephoneFill } from "react-icons/bs";
