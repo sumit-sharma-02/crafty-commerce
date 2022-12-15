@@ -21,16 +21,16 @@ import { VscChromeClose } from "react-icons/vsc";
 // Images used
 import Ad1 from "../../images/ad1.jpg";
 import Ad2 from "../../images/ad2.jpg";
-import Boot1 from "../../images/boot1.jpg";
+// import Boot1 from "../../images/boot1.jpg";
 import Reason1 from "../../images/reasons-1.png";
 import Reason2 from "../../images/reasons-2.png";
 import Reason3 from "../../images/reasons-3.png";
 import Reason4 from "../../images/reasons-4.png";
 import Suitcase1 from "../../images/suitcase1.jpg";
-import Bag1 from "../../images/bag1.jpg";
-import Bag2 from "../../images/bag2.jpg";
-import Shirt1 from "../../images/shirt1.jpg";
-import Shoe2 from "../../images/shoe2.jpg";
+// import Bag1 from "../../images/bag1.jpg";
+// import Bag2 from "../../images/bag2.jpg";
+// import Shirt1 from "../../images/shirt1.jpg";
+// import Shoe2 from "../../images/shoe2.jpg";
 import Pay1 from "../../images/pay-1.webp";
 import Pay2 from "../../images/pay-2.webp";
 import Pay4 from "../../images/pay-4.webp";
@@ -153,9 +153,9 @@ const Product = () => {
             <>
               <MetaData title={product.name} />
               {/* -------------- */}
-              <a className=" hover:text-primary" href="#">
+              <Link className=" hover:text-primary" to={"/"}>
                 {product.category}
-              </a>
+              </Link>
               {/* -------------- */}
               <span className=" mx-1 mt-0.5">
                 <svg
@@ -316,33 +316,33 @@ const Product = () => {
                           {/* -- Catagory start-- */}
                           <li className="p-4 hover:bg-gray-100">
                             {/* --------Mega menu button----------- */}
-                            <a
+                            <Link
                               className="w-full  flex items-center justify-between text-gray-500 text-sm hover:text-primary"
-                              href="#"
+                              to={"/"}
                             >
                               <span>
                                 <GiClothes className="w-4 h-4 mb-1 inline-block mr-1" />{" "}
                                 Clothing
                               </span>
-                            </a>
+                            </Link>
                           </li>
                           {/* ---- */}
                           <li className="p-4 hover:bg-gray-100">
-                            <a
+                            <Link
                               className="w-full  flex items-center justify-between text-gray-500 text-sm hover:text-primary"
-                              href="#"
+                              to={"/"}
                             >
                               <span>
                                 <CgToolbox className="w-4 h-4 mb-1 inline-block mr-1" />{" "}
                                 Gadgets{" "}
                               </span>
-                            </a>
+                            </Link>
                           </li>
                           {/* ---- */}
                           <li className="p-4 hover:bg-gray-100">
-                            <a
+                            <Link
                               className="w-full  flex items-center justify-between text-gray-500 text-sm hover:text-primary"
-                              href="#"
+                              to={"/"}
                             >
                               <span>
                                 <svg
@@ -358,38 +358,38 @@ const Product = () => {
                                 </svg>{" "}
                                 Kitchen Utensils{" "}
                               </span>
-                            </a>
+                            </Link>
                           </li>
                           {/* ---- */}
                           <li className="p-4 hover:bg-gray-100">
-                            <a
+                            <Link
                               className="w-full  flex items-center justify-between text-gray-500 text-sm hover:text-primary"
-                              href="#"
+                              to={"/"}
                             >
                               <span>
                                 <FiSmartphone className="w-4 h-4 mb-1 inline-block mr-1" />{" "}
                                 Smartphones{" "}
                               </span>
-                            </a>
+                            </Link>
                           </li>
                           {/* ---- */}
                           <li className="p-4 hover:bg-gray-100">
                             {/* --------Mega menu button----------- */}
-                            <a
+                            <Link
                               className="w-full   flex items-center justify-between text-gray-500 text-sm"
-                              href="#"
+                              to={"/"}
                             >
                               <span>
                                 <MdLaptopMac className="w-4 h-4 mb-1 inline-block mr-1" />{" "}
                                 Laptops
                               </span>
-                            </a>
+                            </Link>
                           </li>
                           {/* ---- */}
                           <li className="p-4 hover:bg-gray-100">
-                            <a
+                            <Link
                               className="w-full  flex items-center justify-between text-gray-500 text-sm hover:text-primary"
-                              href="#"
+                              to={"/"}
                             >
                               <span>
                                 <svg
@@ -405,13 +405,13 @@ const Product = () => {
                                 </svg>{" "}
                                 Watches{" "}
                               </span>
-                            </a>
+                            </Link>
                           </li>
                           {/* ---- */}
                           <li className="p-4 hover:bg-gray-100">
-                            <a
+                            <Link
                               className="w-full  flex items-center justify-between text-gray-500 text-sm hover:text-primary"
-                              href="#"
+                              to={"/"}
                             >
                               <span>
                                 <svg
@@ -427,13 +427,13 @@ const Product = () => {
                                 </svg>{" "}
                                 Accessories{" "}
                               </span>
-                            </a>
+                            </Link>
                           </li>
                           {/* ---- */}
                           <li className="p-4 hover:bg-gray-100">
-                            <a
+                            <Link
                               className="w-full  flex items-center justify-between text-gray-500 text-sm hover:text-primary"
-                              href="#"
+                              to={"/"}
                             >
                               <span>
                                 <svg
@@ -449,13 +449,13 @@ const Product = () => {
                                 </svg>
                                 Gifts, Sports & Toys
                               </span>
-                            </a>
+                            </Link>
                           </li>
                           {/* ---- */}
                           <li className="p-4 hover:bg-gray-100">
-                            <a
+                            <Link
                               className="w-full  flex items-center justify-between text-gray-500 text-sm hover:text-primary"
-                              href="#"
+                              to={"/"}
                             >
                               <span>
                                 <svg
@@ -471,7 +471,7 @@ const Product = () => {
                                 </svg>
                                 Home & Furniture
                               </span>
-                            </a>
+                            </Link>
                           </li>
                         </ul>
                         {/* ------------ */}
@@ -559,33 +559,33 @@ const Product = () => {
                 {/* -- Catagory start-- */}
                 <li className="p-4 hover:bg-gray-100">
                   {/* --------Mega menu button----------- */}
-                  <a
+                  <Link
                     className="w-full  flex items-center justify-between text-gray-500 text-sm hover:text-primary"
-                    href="#"
+                    to={"/"}
                   >
                     <span>
                       <GiClothes className="w-4 h-4 mb-1 inline-block mr-1" />{" "}
                       Clothing
                     </span>
-                  </a>
+                  </Link>
                 </li>
                 {/* ---- */}
                 <li className="p-4 hover:bg-gray-100">
-                  <a
+                  <Link
                     className="w-full  flex items-center justify-between text-gray-500 text-sm hover:text-primary"
-                    href="#"
+                    to={"/"}
                   >
                     <span>
                       <CgToolbox className="w-4 h-4 mb-1 inline-block mr-1" />{" "}
                       Gadgets{" "}
                     </span>
-                  </a>
+                  </Link>
                 </li>
                 {/* ---- */}
                 <li className="p-4 hover:bg-gray-100">
-                  <a
+                  <Link
                     className="w-full  flex items-center justify-between text-gray-500 text-sm hover:text-primary"
-                    href="#"
+                    to={"/"}
                   >
                     <span>
                       <svg
@@ -601,38 +601,38 @@ const Product = () => {
                       </svg>{" "}
                       Kitchen Utensils{" "}
                     </span>
-                  </a>
+                  </Link>
                 </li>
                 {/* ---- */}
                 <li className="p-4 hover:bg-gray-100">
-                  <a
+                  <Link
                     className="w-full  flex items-center justify-between text-gray-500 text-sm hover:text-primary"
-                    href="#"
+                    to={"/"}
                   >
                     <span>
                       <FiSmartphone className="w-4 h-4 mb-1 inline-block mr-1" />{" "}
                       Smartphones{" "}
                     </span>
-                  </a>
+                  </Link>
                 </li>
                 {/* ---- */}
                 <li className="p-4 hover:bg-gray-100">
                   {/* --------Mega menu button----------- */}
-                  <a
+                  <Link
                     className="w-full   flex items-center justify-between text-gray-500 text-sm"
-                    href="#"
+                    to={"/"}
                   >
                     <span>
                       <MdLaptopMac className="w-4 h-4 mb-1 inline-block mr-1" />{" "}
                       Laptops
                     </span>
-                  </a>
+                  </Link>
                 </li>
                 {/* ---- */}
                 <li className="p-4 hover:bg-gray-100">
-                  <a
+                  <Link
                     className="w-full  flex items-center justify-between text-gray-500 text-sm hover:text-primary"
-                    href="#"
+                    to={"/"}
                   >
                     <span>
                       <svg
@@ -648,13 +648,13 @@ const Product = () => {
                       </svg>{" "}
                       Watches{" "}
                     </span>
-                  </a>
+                  </Link>
                 </li>
                 {/* ---- */}
                 <li className="p-4 hover:bg-gray-100">
-                  <a
+                  <Link
                     className="w-full  flex items-center justify-between text-gray-500 text-sm hover:text-primary"
-                    href="#"
+                    to={"/"}
                   >
                     <span>
                       <svg
@@ -670,13 +670,13 @@ const Product = () => {
                       </svg>{" "}
                       Accessories{" "}
                     </span>
-                  </a>
+                  </Link>
                 </li>
                 {/* ---- */}
                 <li className="p-4 hover:bg-gray-100">
-                  <a
+                  <Link
                     className="w-full  flex items-center justify-between text-gray-500 text-sm hover:text-primary"
-                    href="#"
+                    to={"/"}
                   >
                     <span>
                       <svg
@@ -692,13 +692,13 @@ const Product = () => {
                       </svg>
                       Gifts, Sports & Toys
                     </span>
-                  </a>
+                  </Link>
                 </li>
                 {/* ---- */}
                 <li className="p-4 hover:bg-gray-100">
-                  <a
+                  <Link
                     className="w-full  flex items-center justify-between text-gray-500 text-sm hover:text-primary"
-                    href="#"
+                    to={"/"}
                   >
                     <span>
                       <svg
@@ -714,7 +714,7 @@ const Product = () => {
                       </svg>
                       Home & Furniture
                     </span>
-                  </a>
+                  </Link>
                 </li>
               </ul>
               {/* ------------ */}

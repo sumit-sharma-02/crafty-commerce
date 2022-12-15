@@ -4,8 +4,8 @@ import Header from "./components/layout/Header";
 import Home from "./components/layout/Home/Home";
 import Product from "./components/product/Product";
 import Footer from "./components/layout/Footer";
-import Login from "./components/user/Login";
-import Register from "./components/user/Register";
+// import Login from "./components/user/Login";
+// import Register from "./components/user/Register";
 import "./App.css";
 
 function App() {

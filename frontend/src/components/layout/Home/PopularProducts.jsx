@@ -48,9 +48,12 @@ const PopularItems = () => {
   };
 
   const dispatch = useDispatch();
-  const { loading, error, products, productsCount } = useSelector(
-    (state) => state.products
-  );
+  const {
+    loading,
+    error,
+    products,
+    // productsCount
+  } = useSelector((state) => state.products);
 
   const showErrorToast = (message) => {
     toast.error(message, {

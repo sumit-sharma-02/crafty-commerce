@@ -51,10 +51,10 @@ const Header = () => {
             className="relative cursor-pointer"
             onClick={toggleAccountDropdown}
           >
-            <a
+            <button
               className={`flex items-center sm:px-4 whitespace-nowrap ${
                 isAccountDropdownOpen ? "text-primary" : "text-gray-600"
-              }`}
+              } hover:text-primary`}
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -79,7 +79,7 @@ const Header = () => {
               >
                 <path d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z" />
               </svg>
-            </a>
+            </button>
             {isAccountDropdownOpen && (
               <>
                 <motion.div
@@ -146,9 +146,10 @@ const Header = () => {
 
           <div className="sm:px-4 flex items-center space-x-6">
             <a
-              className=" text-gray-600"
+              className=" text-gray-600 hover:text-twitter"
               href="https://twitter.com/"
               target="_blank"
+              rel="noopener noreferrer"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -161,9 +162,10 @@ const Header = () => {
             </a>
 
             <a
-              className=" text-gray-600"
+              className=" text-gray-600 hover:text-facebook"
               href="https://facebook.com/"
               target="_blank"
+              rel="noopener noreferrer"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -176,9 +178,10 @@ const Header = () => {
             </a>
 
             <a
-              className=" text-gray-600"
+              className=" text-gray-600 hover:text-gray-400"
               href="https://google.com/"
               target="_blank"
+              rel="noopener noreferrer"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -191,9 +194,10 @@ const Header = () => {
             </a>
 
             <a
-              className=" text-gray-600"
+              className=" text-gray-600 hover:text-primary"
               href="https://instagram.com/"
               target="_blank"
+              rel="noopener noreferrer"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -206,9 +210,10 @@ const Header = () => {
             </a>
 
             <a
-              className=" text-gray-600"
+              className=" text-gray-600 hover:text-youtube"
               href="https://youtube.com/"
               target="_blank"
+              rel="noopener noreferrer"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -305,46 +310,46 @@ const Header = () => {
                 <div className={`space-x-6 text-xs font-semibold w-full`}>
                   <ul className="w-full tracking-wider">
                     <li className="duration-300 hover:shadow border-b border-t py-4 px-10 cursor-pointer">
-                      <a href="#">HOME</a>
+                      <Link to={"/"}>HOME</Link>
                     </li>
                     <li className="duration-300 hover:tracking-widest hover:shadow border-b py-4 px-10 relative cursor-pointer">
-                      <a href="#">
+                      <Link to={"/"}>
                         New products
                         <span className="absolute z-20 top-3 right-2 mr-1 p-1 rounded bg-purple-700 text-xs capitalize px-4 text-white hover:text-white">
                           New
                         </span>
                         <span className="absolute top-5 right-16 p-1 bg-purple-700 h-2 w-2 transform rotate-45"></span>
-                      </a>
+                      </Link>
                     </li>
                     <li className="duration-300 hover:tracking-widest hover:shadow border-b py-4 px-10 relative cursor-pointer">
-                      <a href="#">
+                      <Link to={"/"}>
                         Best sales
                         <span className="absolute z-20 top-3 right-2 mr-1 p-1 rounded bg-ternary text-xs capitalize px-5 text-white hover:text-white">
                           Hot
                         </span>
                         <span className="absolute top-5 right-16 p-1 bg-ternary h-2 w-2 mr-1 transform rotate-45"></span>
-                      </a>
+                      </Link>
                     </li>
                     <li className="duration-300 hover:tracking-widest hover:shadow border-b py-4 px-10 cursor-pointer">
-                      <a href="#">Shop</a>
+                      <Link to={"/"}>Shop</Link>
                     </li>
                     <li className="duration-300 hover:tracking-widest hover:shadow border-b py-4 px-10 cursor-pointer">
-                      <a href="#">CONTACT</a>
+                      <Link to={"/"}>CONTACT</Link>
                     </li>
                     <li className="duration-300 hover:tracking-widest hover:shadow border-b py-4 px-10 cursor-pointer">
-                      <a href="#">FAQ</a>
+                      <Link to={"/"}>FAQ</Link>
                     </li>
                     <li className="duration-300 hover:tracking-widest hover:shadow border-b py-4 px-10 cursor-pointer">
-                      <a href="#">Terms & condition</a>
+                      <Link to={"/"}>Terms & condition</Link>
                     </li>
                     <li className="duration-300 hover:tracking-widest hover:shadow border-b py-4 px-10 cursor-pointer">
-                      <a href="#">Privacy & policy</a>
+                      <Link to={"/"}>Privacy & policy</Link>
                     </li>
                     <li className="duration-300 hover:tracking-widest hover:shadow border-b py-4 px-10 cursor-pointer">
-                      <a href="#">LogIn</a>
+                      <Link to={"/login"}>Login</Link>
                     </li>
                     <li className="duration-300 hover:tracking-widest hover:shadow border-b py-4 px-10 cursor-pointer">
-                      <a href="#">Register</a>
+                      <Link to={"/register"}>Register</Link>
                     </li>
                   </ul>
                 </div>
@@ -368,56 +373,56 @@ const Header = () => {
           )}
           <ul className="h-full hidden text-white font-bold lg:flex items-center text-sm">
             <li className="h-full">
-              <a
+              <Link
                 className="p-[11px] relative after:content-[''] after:absolute after:w-full after:scale-x-0 
                 after:h-[4px] after:bottom-0 after:left-0 after:bg-secondary after:origin-bottom-right
                 after:transition-transform after:duration-200 after:ease-out hover:after:scale-x-100
                 hover:after:origin-bottom-left"
-                href="#"
+                to={"/"}
               >
                 HOME
-              </a>
+              </Link>
             </li>
             <li className=" relative">
-              <a
+              <Link
                 className="p-[11px] relative after:content-[''] after:absolute after:w-full after:scale-x-0 
                 after:h-[4px] after:bottom-0 after:left-0 after:bg-secondary after:origin-bottom-right
                 after:transition-transform after:duration-200 after:ease-out hover:after:scale-x-100
                 hover:after:origin-bottom-left"
-                href="#"
+                to={"/"}
               >
                 NEW PRODUCTS
                 <span className=" absolute z-20 -top-7 right-0 p-1 rounded bg-purple-700 text-xs capitalize px-4">
                   New
                 </span>
                 <span className="absolute -top-3 right-6 p-1 bg-purple-700 h-3 w-3 transform rotate-45"></span>
-              </a>
+              </Link>
             </li>
             <li className=" relative">
-              <a
+              <Link
                 className="p-[11px] relative after:content-[''] after:absolute after:w-full after:scale-x-0 
                 after:h-[4px] after:bottom-0 after:left-0 after:bg-secondary after:origin-bottom-right
                 after:transition-transform after:duration-200 after:ease-out hover:after:scale-x-100
                 hover:after:origin-bottom-left"
-                href="#"
+                to={"/"}
               >
                 BEST SALES
                 <span className=" absolute z-20 -top-7 right-0 p-1 rounded bg-ternary text-xs capitalize px-4 ">
                   Hot
                 </span>
                 <span className="absolute -top-3 right-6 p-1 bg-ternary h-3 w-3 transform rotate-45"></span>
-              </a>
+              </Link>
             </li>
             <li>
-              <a
+              <Link
                 className="p-[11px] relative after:content-[''] after:absolute after:w-full after:scale-x-0 
                 after:h-[4px] after:bottom-0 after:left-0 after:bg-secondary after:origin-bottom-right
                 after:transition-transform after:duration-200 after:ease-out hover:after:scale-x-100
                 hover:after:origin-bottom-left"
-                href="#"
+                to={"/"}
               >
                 SHOP
-              </a>
+              </Link>
             </li>
             <motion.li
               className="relative after:content-[''] after:absolute after:w-full after:scale-x-0 
@@ -456,37 +461,37 @@ const Header = () => {
                   }}
                   className={`absolute bg-white border w-52 rounded shadow text-sm text-black overflow-hidden font-normal z-50`}
                 >
-                  <a
+                  <Link
                     className=" block hover:bg-gray-100 text-sm px-4 p-3 border-b tracking-widest"
-                    href="#"
+                    to={"/"}
                   >
                     Frequently Asked Questions (FAQ)
-                  </a>
-                  <a
+                  </Link>
+                  <Link
                     className=" block hover:bg-gray-100 text-sm px-4 p-3 border-b tracking-widest"
-                    href="#"
+                    to={"/"}
                   >
                     Terms & conditions
-                  </a>
-                  <a
+                  </Link>
+                  <Link
                     className=" block hover:bg-gray-100 text-sm px-4 p-3 tracking-widest"
-                    href="#"
+                    to={"/"}
                   >
                     Privacy & policy
-                  </a>
+                  </Link>
                 </motion.div>
               )}
             </motion.li>
             <li>
-              <a
+              <Link
                 className="p-[11px] relative after:content-[''] after:absolute after:w-full after:scale-x-0 
                 after:h-[4px] after:bottom-0 after:left-0 after:bg-secondary after:origin-bottom-right
                 after:transition-transform after:duration-200 after:ease-out hover:after:scale-x-100
                 hover:after:origin-bottom-left"
-                href="#"
+                to={"/"}
               >
                 CONTACT US
-              </a>
+              </Link>
             </li>
           </ul>
         </div>

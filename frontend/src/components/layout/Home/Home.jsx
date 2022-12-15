@@ -6,6 +6,7 @@ import LimitedOffers from "./LimitedOffers";
 import PopularTags from "./PopularTags";
 import TopScroll from "../TopScroll";
 import Banner1 from "../../../images/banner1.png";
+import { Link } from "react-router-dom";
 
 const Home = () => {
   return (
@@ -19,13 +20,13 @@ const Home = () => {
             <PopularProducts />
           </div>
           <div className="pt-10">
-            <a href="#">
+            <Link to={"/"}>
               <img
                 className="w-full hover:opacity-90 duration-200"
                 src={Banner1}
                 alt=""
               />
-            </a>
+            </Link>
           </div>
         </section>
         <LimitedOffers />

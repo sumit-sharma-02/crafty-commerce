@@ -1,17 +1,17 @@
-import React, { useState } from "react";
+import React from "react";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { FaLongArrowAltRight } from "react-icons/fa";
-import { useDispatch, useSelector } from "react-redux";
+// import { useDispatch, useSelector } from "react-redux";
 
 const Login = () => {
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
+  // const [email, setEmail] = useState("");
+  // const [password, setPassword] = useState("");
 
-  const dispatch = useDispatch();
-  const { isAuthenticated, error, loading } = useSelector(
-    (state) => state.auth
-  );
+  // const dispatch = useDispatch();
+  // const { isAuthenticated, error, loading } = useSelector(
+  //   (state) => state.auth
+  // );
 
   return (
     <main className="h-screen w-screen">
@@ -80,7 +80,7 @@ const Login = () => {
               </div>
 
               <div className=" text-right text-gray-400 hover:text-gray-600 transition-all duration-300 ease-in-out">
-                <a href="#">Forget password?</a>
+                <Link to={"/password/forgot"}>Forget password?</Link>
               </div>
 
               <motion.div

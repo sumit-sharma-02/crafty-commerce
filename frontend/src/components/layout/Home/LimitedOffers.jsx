@@ -2,9 +2,9 @@ import React from "react";
 
 // Icons used
 import {
-  AiFillStar,
+  // AiFillStar,
+  // AiOutlineStar,
   AiOutlineShoppingCart,
-  AiOutlineStar,
 } from "react-icons/ai";
 
 // Images used
@@ -13,6 +13,7 @@ import Shirt1 from "../../../images/shirt1.webp";
 import Toy1 from "../../../images/toy1.webp";
 import Banner2 from "../../../images/banner2.webp";
 import Banner3 from "../../../images/banner3.webp";
+import { Link } from "react-router-dom";
 
 const LimitedOffers = () => {
   return (
@@ -42,12 +43,12 @@ const LimitedOffers = () => {
           </div>
 
           <div className="lg:p-5 p-0 py-5">
-            <a
+            <Link
               className=" text-gray-800 text-xl hover:text-primary font-bold"
-              href="#"
+              to={"/"}
             >
               Cillum Ham Hock
-            </a>
+            </Link>
 
             <div className=" flex items-center my-2">
               <span className=" text-primary text-2xl font-bold mr-4">
@@ -143,12 +144,12 @@ const LimitedOffers = () => {
               </div>
             </div>
             <div className=" col-span-3 md:py-0 py-5">
-              <a
+              <Link
                 className=" text-gray-800 text-xl hover:text-primary font-bold"
                 href="catlyn-snake-pilit.html"
               >
                 Denouncing pleasure
-              </a>
+              </Link>
 
               <div className=" flex items-center my-2">
                 <span className=" text-primary text-2xl font-bold mr-4">
@@ -242,12 +243,12 @@ const LimitedOffers = () => {
             </div>
 
             <div className=" col-span-3 md:py-0 py-5">
-              <a
+              <Link
                 className=" text-gray-800 text-xl hover:text-primary font-bold"
-                href="#"
+                to={"/"}
               >
                 Cow pastrami jowl
-              </a>
+              </Link>
 
               <div className=" flex items-center my-2">
                 <span className=" text-primary text-2xl font-bold mr-4">
@@ -322,23 +323,23 @@ const LimitedOffers = () => {
       </div>
       <div className=" md:grid md:grid-cols-2 gap-8 pt-10">
         <div className="mb-6 md:mb-0">
-          <a href="#">
+          <Link to={"/"}>
             <img
               className="w-full duration-300 hover:opacity-80"
               src={Banner2}
               alt=""
             />
-          </a>
+          </Link>
         </div>
 
         <div>
-          <a href="#">
+          <Link to={"/"}>
             <img
               className="w-full duration-300 hover:opacity-80"
               src={Banner3}
               alt=""
             />
-          </a>
+          </Link>
         </div>
       </div>
     </section>

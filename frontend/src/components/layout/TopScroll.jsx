@@ -22,7 +22,7 @@ const TopScroll = () => {
   return (
     <Fragment>
       {showScrollToTopButton && (
-        <a
+        <button
           onClick={scrollToTop}
           className="focus:outline-none p-2 duration-300 bg-black bg-opacity-40 rounded-full text-white
             hover:bg-primary fixed xl:right-10 lg:right-3 right-2 lg:bottom-44 bottom-8 z-10 cursor-pointer"
@@ -43,7 +43,7 @@ const TopScroll = () => {
               />
             </svg>
           </div>
-        </a>
+        </button>
       )}
     </Fragment>
   );

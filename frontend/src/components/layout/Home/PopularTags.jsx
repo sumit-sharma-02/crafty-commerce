@@ -1,178 +1,179 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const PopularTags = () => {
   return (
     <div className=" hidden lg:block">
       <div>
-        <a
-          href="#"
+        <Link
+          to={"/"}
           className=" font-bold border-b-2 border-primary inline-block pb-1"
         >
           POPULAR TAGS
-        </a>
+        </Link>
       </div>
       <div className=" border border-gray-200 rounded p-5">
         <ul>
           <li className="inline-block px-1 py-2">
-            <a
+            <Link
               className="duration-200 mr-2 mb-5 px-5 text-sm text-gray-500 p-1 hover:bg-primary hover:text-white bg-gray-200  rounded-full"
-              href="#"
+              to={"/"}
             >
               Apple
-            </a>
+            </Link>
           </li>
 
           <li className="inline-block px-1 py-2">
-            <a
+            <Link
               className="duration-200 mr-2 mb-5 px-5 text-sm text-gray-500 p-1 hover:bg-primary hover:text-white bg-gray-200  rounded-full"
-              href="#"
+              to={"/"}
             >
               Lego
-            </a>
+            </Link>
           </li>
 
           <li className="inline-block px-1 py-2">
-            <a
+            <Link
               className="duration-200 mr-2 mb-5 px-5 text-sm text-gray-500 p-1 hover:bg-primary hover:text-white bg-gray-200  rounded-full"
-              href="#"
+              to={"/"}
             >
               Lego
-            </a>
+            </Link>
           </li>
 
           <li className="inline-block px-1 py-2">
-            <a
+            <Link
               className="duration-200 mr-2 mb-5 px-5 text-sm text-gray-500 p-1 hover:bg-primary hover:text-white bg-gray-200  rounded-full"
-              href="#"
+              to={"/"}
             >
               Pilit
-            </a>
+            </Link>
           </li>
 
           <li className="inline-block px-1 py-2">
-            <a
+            <Link
               className="duration-200 mr-2 mb-5 px-5 text-sm text-gray-500 p-1 hover:bg-primary hover:text-white bg-gray-200  rounded-full"
-              href="#"
+              to={"/"}
             >
               Hock
-            </a>
+            </Link>
           </li>
 
           <li className="inline-block px-1 py-2">
-            <a
+            <Link
               className="duration-200 mr-2 mb-5 px-5 text-sm text-gray-500 p-1 hover:bg-primary hover:text-white bg-gray-200  rounded-full"
-              href="#"
+              to={"/"}
             >
               Patheon
-            </a>
+            </Link>
           </li>
 
           <li className="inline-block px-1 py-2">
-            <a
+            <Link
               className="duration-200 mr-2 mb-5 px-5 text-sm text-gray-500 p-1 hover:bg-primary hover:text-white bg-gray-200  rounded-full"
-              href="#"
+              to={"/"}
             >
               Pleasure
-            </a>
+            </Link>
           </li>
 
           <li className="inline-block px-1 py-2">
-            <a
+            <Link
               className="duration-200 mr-2 mb-5 px-5 text-sm text-gray-500 p-1 hover:bg-primary hover:text-white bg-gray-200  rounded-full"
-              href="#"
+              to={"/"}
             >
               Justo
-            </a>
+            </Link>
           </li>
 
           <li className="inline-block px-1 py-2">
-            <a
+            <Link
               className="duration-200 mr-2 mb-5 px-5 text-sm text-gray-500 p-1 hover:bg-primary hover:text-white bg-gray-200  rounded-full"
-              href="#"
+              to={"/"}
             >
               SamSung
-            </a>
+            </Link>
           </li>
 
           <li className="inline-block px-1 py-2">
-            <a
+            <Link
               className="duration-200 mr-2 mb-5 px-5 text-sm text-gray-500 p-1 hover:bg-primary hover:text-white bg-gray-200  rounded-full"
-              href="#"
+              to={"/"}
             >
               Nami
-            </a>
+            </Link>
           </li>
 
           <li className="inline-block px-1 py-2">
-            <a
+            <Link
               className="duration-200 mr-2 mb-5 px-5 text-sm text-gray-500 p-1 hover:bg-primary hover:text-white bg-gray-200  rounded-full"
-              href="#"
+              to={"/"}
             >
               Donec
-            </a>
+            </Link>
           </li>
 
           <li className="inline-block px-1 py-2">
-            <a
+            <Link
               className="duration-200 mr-2 mb-5 px-5 text-sm text-gray-500 p-1 hover:bg-primary hover:text-white bg-gray-200  rounded-full"
-              href="#"
+              to={"/"}
             >
               Praesent
-            </a>
+            </Link>
           </li>
 
           <li className="inline-block px-1 py-2">
-            <a
+            <Link
               className="duration-200 mr-2 mb-5 px-5 text-sm text-gray-500 p-1 hover:bg-primary hover:text-white bg-gray-200  rounded-full"
-              href="#"
+              to={"/"}
             >
               Cillum
-            </a>
+            </Link>
           </li>
 
           <li className="inline-block px-1 py-2">
-            <a
+            <Link
               className="duration-200 mr-2 mb-5 px-5 text-sm text-gray-500 p-1 hover:bg-primary hover:text-white bg-gray-200  rounded-full"
-              href="#"
+              to={"/"}
             >
               Densinteu
-            </a>
+            </Link>
           </li>
 
           <li className="inline-block px-1 py-2">
-            <a
+            <Link
               className="duration-200 mr-2 mb-5 px-5 text-sm text-gray-500 p-1 hover:bg-primary hover:text-white bg-gray-200  rounded-full"
-              href="#"
+              to={"/"}
             >
               Ostana
-            </a>
+            </Link>
           </li>
 
           <li className="inline-block px-1 py-2">
-            <a
+            <Link
               className="duration-200 mr-2 mb-5 px-5 text-sm text-gray-500 p-1 hover:bg-primary hover:text-white bg-gray-200  rounded-full"
-              href="#"
+              to={"/"}
             >
               FHD
-            </a>
+            </Link>
           </li>
 
           <li className="inline-block px-1 py-2">
-            <a
+            <Link
               className="duration-200 mr-2 mb-5 px-5 text-sm text-gray-500 p-1 hover:bg-primary hover:text-white bg-gray-200  rounded-full"
-              href="#"
+              to={"/"}
             >
               Nam
-            </a>
+            </Link>
           </li>
 
           <li className="inline-block px-1 py-2">
-            <a
+            <Link
               className="duration-200 mr-2 mb-5 px-5 text-sm text-gray-500 p-1 hover:bg-primary hover:text-white bg-gray-200  rounded-full"
-              href="#"
+              to={"/"}
             >
               Turpis
-            </a>
+            </Link>
           </li>
         </ul>
       </div>

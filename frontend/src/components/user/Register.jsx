@@ -145,19 +145,19 @@ const Register = () => {
                   className="text-[13px] text-gray-500"
                 >
                   I have read and agree to Crafty Commerce's
-                  <a
+                  <Link
                     className="mx-1 text-xs italic font-bold underline"
-                    href="#"
+                    to={"/"}
                   >
                     user agreement
-                  </a>
+                  </Link>
                   and
-                  <a
+                  <Link
                     className="mx-1 text-xs italic font-bold underline"
-                    href="#"
+                    to={"/"}
                   >
                     privacy policy.
-                  </a>
+                  </Link>
                 </label>
               </div>
 
