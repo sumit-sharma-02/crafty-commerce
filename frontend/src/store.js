@@ -5,10 +5,13 @@ import {
 } from "@reduxjs/toolkit";
 import thunk from "redux-thunk";
 import { composeWithDevTools } from "redux-devtools-extension";
-import { productsReducer } from "./reducers/product";
+import { productsReducer, productDetailsReducer } from "./reducers/product";
+import { userAuthReducer } from "./reducers/user";
 
 const reducers = combineReducers({
   products: productsReducer,
+  productDetails: productDetailsReducer,
+  auth: userAuthReducer,
 });
 
 let initialState = {};

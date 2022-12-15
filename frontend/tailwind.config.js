@@ -3,6 +3,21 @@ module.exports = {
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
     extend: {
+      keyframes: {
+        bounce: {
+          "0%, 100%": {
+            transform: "translateY(-25%)",
+            "animation-timing-function": "cubic-bezier(0.8, 0, 1, 1)",
+          },
+          "50%": {
+            transform: "translateY(0)",
+            "animation-timing-function": "cubic-bezier(0, 0, 0.2, 1)",
+          },
+        },
+      },
+      animation: {
+        bounce: "bounce 1s ease-in-out infinite",
+      },
       width: {
         150: "150px",
         190: "190px",
@@ -37,13 +52,14 @@ module.exports = {
         350: "350px",
         620: "620px",
       },
-      // screens: {
-      //   sm: "425px",
-      //   md: "768px",
-      //   lg: "1024px",
-      //   xl: "1440px",
-      //   "2xl": "2560px",
-      // },
+      screens: {
+        xsm: "375px",
+        "2xs": "320px",
+        // md: "768px",
+        // lg: "1024px",
+        // xl: "1440px",
+        // "2xl": "2560px",
+      },
       colors: {
         primary: "rgb(224,39,70,1)",
         primaryDarkShade: "rgb(177,5,34,1)",

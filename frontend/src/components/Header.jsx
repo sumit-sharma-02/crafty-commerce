@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Logo from "../images/logo.png";
 import { VscChromeClose } from "react-icons/vsc";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 // import { IoBagCheckOutline } from "react-icons/io5";
 // import { GiShoppingCart } from "react-icons/gi";
 // import { VscAccount } from "react-icons/vsc";
@@ -204,9 +205,9 @@ const Header = () => {
 
       <div className="flex justify-between items-center py-6 xl:px-24 sm:px-10 px-4">
         <div className="w-[250px] h-max">
-          <a href="">
+          <Link to={"/"}>
             <img src={Logo} alt="Crafty Commerce Logo" />
-          </a>
+          </Link>
         </div>
 
         <div className="w-full sm:px-8 px-2 flex items-center">

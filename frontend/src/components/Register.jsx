@@ -163,6 +163,7 @@ const Register = () => {
 
               <motion.div
                 whileTap={{ scale: 0.9 }}
+                transition={{ duration: 0.3, ease: "easeInOut" }}
                 className=" flex space-x-4 pt-5"
               >
                 <button

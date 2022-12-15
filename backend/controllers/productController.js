@@ -23,6 +23,7 @@ exports.getProducts = catchAsyncErrors(async (req, res, next) => {
     .pagination(resPerPage);
 
   const products = await apiFeatures.query;
+
   res.status(200).json({
     success: true,
     count: products.length,
@@ -37,6 +38,7 @@ exports.getProduct = catchAsyncErrors(async (req, res, next) => {
   if (!product) {
     return next(new ErrorHandler("Product not found", 404));
   }
+
   res.status(200).json({
     success: true,
     product,

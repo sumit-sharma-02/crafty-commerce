@@ -1,9 +1,18 @@
-import React from "react";
+import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { FaLongArrowAltRight } from "react-icons/fa";
+import { useDispatch, useSelector } from "react-redux";
 
 const Login = () => {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+
+  const dispatch = useDispatch();
+  const { isAuthenticated, error, loading } = useSelector(
+    (state) => state.auth
+  );
+
   return (
     <main className="h-screen w-screen">
       <section className="h-full w-full">
@@ -74,7 +83,11 @@ const Login = () => {
                 <a href="#">Forget password?</a>
               </div>
 
-              <motion.div whileTap={{ scale: 0.9 }} className=" flex space-x-4">
+              <motion.div
+                whileTap={{ scale: 0.9 }}
+                transition={{ duration: 0.3, ease: "easeInOut" }}
+                className=" flex space-x-4"
+              >
                 <button
                   type="submit"
                   className="text-center p-2 rounded-full w-full bg-gradient-to-l to-blue-500 via-purple-500 from-red-500
