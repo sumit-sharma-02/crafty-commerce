@@ -146,7 +146,7 @@ const Header = () => {
 
           <div className="sm:px-4 flex items-center space-x-6">
             <a
-              className=" text-gray-600 hover:text-twitter"
+              className="duration-300 text-gray-600 hover:text-twitter"
               href="https://twitter.com/"
               target="_blank"
               rel="noopener noreferrer"
@@ -162,7 +162,7 @@ const Header = () => {
             </a>
 
             <a
-              className=" text-gray-600 hover:text-facebook"
+              className="duration-300 text-gray-600 hover:text-facebook"
               href="https://facebook.com/"
               target="_blank"
               rel="noopener noreferrer"
@@ -178,7 +178,7 @@ const Header = () => {
             </a>
 
             <a
-              className=" text-gray-600 hover:text-gray-400"
+              className="duration-300 text-gray-600 hover:text-gray-400"
               href="https://google.com/"
               target="_blank"
               rel="noopener noreferrer"
@@ -194,7 +194,7 @@ const Header = () => {
             </a>
 
             <a
-              className=" text-gray-600 hover:text-primary"
+              className="duration-300 text-gray-600 hover:text-primary"
               href="https://instagram.com/"
               target="_blank"
               rel="noopener noreferrer"
@@ -210,7 +210,7 @@ const Header = () => {
             </a>
 
             <a
-              className=" text-gray-600 hover:text-youtube"
+              className="duration-300 text-gray-600 hover:text-youtube"
               href="https://youtube.com/"
               target="_blank"
               rel="noopener noreferrer"
@@ -309,11 +309,19 @@ const Header = () => {
                 </div>
                 <div className={`space-x-6 text-xs font-semibold w-full`}>
                   <ul className="w-full tracking-wider">
-                    <li className="duration-300 hover:shadow border-b border-t py-4 px-10 cursor-pointer">
-                      <Link to={"/"}>HOME</Link>
+                    <li className="flex w-full h-max">
+                      <Link
+                        className="flex w-full duration-300 hover:shadow border-b border-t py-4 px-10 cursor-pointer"
+                        to={"/"}
+                      >
+                        HOME
+                      </Link>
                     </li>
-                    <li className="duration-300 hover:tracking-widest hover:shadow border-b py-4 px-10 relative cursor-pointer">
-                      <Link to={"/"}>
+                    <li className="flex w-full h-max">
+                      <Link
+                        className="flex w-full duration-300 hover:tracking-widest hover:shadow border-b py-4 px-10 relative cursor-pointer"
+                        to={"/"}
+                      >
                         New products
                         <span className="absolute z-20 top-3 right-2 mr-1 p-1 rounded bg-purple-700 text-xs capitalize px-4 text-white hover:text-white">
                           New
@@ -321,8 +329,11 @@ const Header = () => {
                         <span className="absolute top-5 right-16 p-1 bg-purple-700 h-2 w-2 transform rotate-45"></span>
                       </Link>
                     </li>
-                    <li className="duration-300 hover:tracking-widest hover:shadow border-b py-4 px-10 relative cursor-pointer">
-                      <Link to={"/"}>
+                    <li className="flex w-full h-max">
+                      <Link
+                        className="flex w-full duration-300 hover:tracking-widest hover:shadow border-b py-4 px-10 relative cursor-pointer"
+                        to={"/"}
+                      >
                         Best sales
                         <span className="absolute z-20 top-3 right-2 mr-1 p-1 rounded bg-ternary text-xs capitalize px-5 text-white hover:text-white">
                           Hot
@@ -330,26 +341,61 @@ const Header = () => {
                         <span className="absolute top-5 right-16 p-1 bg-ternary h-2 w-2 mr-1 transform rotate-45"></span>
                       </Link>
                     </li>
-                    <li className="duration-300 hover:tracking-widest hover:shadow border-b py-4 px-10 cursor-pointer">
-                      <Link to={"/"}>Shop</Link>
+                    <li className="flex w-full h-max">
+                      <Link
+                        className="flex w-full duration-300 hover:tracking-widest hover:shadow border-b py-4 px-10 cursor-pointer"
+                        to={"/products"}
+                      >
+                        Shop
+                      </Link>
                     </li>
-                    <li className="duration-300 hover:tracking-widest hover:shadow border-b py-4 px-10 cursor-pointer">
-                      <Link to={"/"}>CONTACT</Link>
+                    <li className="flex w-full h-max">
+                      <Link
+                        className="flex w-full duration-300 hover:tracking-widest hover:shadow border-b py-4 px-10 cursor-pointer"
+                        to={"/"}
+                      >
+                        CONTACT
+                      </Link>
                     </li>
-                    <li className="duration-300 hover:tracking-widest hover:shadow border-b py-4 px-10 cursor-pointer">
-                      <Link to={"/"}>FAQ</Link>
+                    <li className="flex w-full h-max">
+                      <Link
+                        className="flex w-full duration-300 hover:tracking-widest hover:shadow border-b py-4 px-10 cursor-pointer"
+                        to={"/"}
+                      >
+                        FAQ
+                      </Link>
                     </li>
-                    <li className="duration-300 hover:tracking-widest hover:shadow border-b py-4 px-10 cursor-pointer">
-                      <Link to={"/"}>Terms & condition</Link>
+                    <li className="flex w-full h-max">
+                      <Link
+                        className="flex w-full duration-300 hover:tracking-widest hover:shadow border-b py-4 px-10 cursor-pointer"
+                        to={"/"}
+                      >
+                        Terms & condition
+                      </Link>
                     </li>
-                    <li className="duration-300 hover:tracking-widest hover:shadow border-b py-4 px-10 cursor-pointer">
-                      <Link to={"/"}>Privacy & policy</Link>
+                    <li className="flex w-full h-max">
+                      <Link
+                        className="flex w-full duration-300 hover:tracking-widest hover:shadow border-b py-4 px-10 cursor-pointer"
+                        to={"/"}
+                      >
+                        Privacy & policy
+                      </Link>
                     </li>
-                    <li className="duration-300 hover:tracking-widest hover:shadow border-b py-4 px-10 cursor-pointer">
-                      <Link to={"/login"}>Login</Link>
+                    <li className="flex w-full h-max">
+                      <Link
+                        className="flex w-full duration-300 hover:tracking-widest hover:shadow border-b py-4 px-10 cursor-pointer"
+                        to={"/login"}
+                      >
+                        Login
+                      </Link>
                     </li>
-                    <li className="duration-300 hover:tracking-widest hover:shadow border-b py-4 px-10 cursor-pointer">
-                      <Link to={"/register"}>Register</Link>
+                    <li className="flex w-full h-max">
+                      <Link
+                        className="flex w-full duration-300 hover:tracking-widest hover:shadow border-b py-4 px-10 cursor-pointer"
+                        to={"/register"}
+                      >
+                        Register
+                      </Link>
                     </li>
                   </ul>
                 </div>
@@ -392,10 +438,10 @@ const Header = () => {
                 to={"/"}
               >
                 NEW PRODUCTS
-                <span className=" absolute z-20 -top-7 right-0 p-1 rounded bg-purple-700 text-xs capitalize px-4">
+                <span className=" absolute z-20 -top-4 right-0 p-1 rounded bg-purple-700 text-xs capitalize px-4">
                   New
                 </span>
-                <span className="absolute -top-3 right-6 p-1 bg-purple-700 h-3 w-3 transform rotate-45"></span>
+                <span className="absolute -top-0 right-6 p-1 bg-purple-700 h-3 w-3 transform rotate-45"></span>
               </Link>
             </li>
             <li className=" relative">
@@ -407,10 +453,10 @@ const Header = () => {
                 to={"/"}
               >
                 BEST SALES
-                <span className=" absolute z-20 -top-7 right-0 p-1 rounded bg-ternary text-xs capitalize px-4 ">
+                <span className=" absolute z-20 -top-4 right-0 p-1 rounded bg-ternary text-xs capitalize px-4 ">
                   Hot
                 </span>
-                <span className="absolute -top-3 right-6 p-1 bg-ternary h-3 w-3 transform rotate-45"></span>
+                <span className="absolute -top-0 right-6 p-1 bg-ternary h-3 w-3 transform rotate-45"></span>
               </Link>
             </li>
             <li>
@@ -419,7 +465,7 @@ const Header = () => {
                 after:h-[4px] after:bottom-0 after:left-0 after:bg-secondary after:origin-bottom-right
                 after:transition-transform after:duration-200 after:ease-out hover:after:scale-x-100
                 hover:after:origin-bottom-left"
-                to={"/"}
+                to={"/products"}
               >
                 SHOP
               </Link>

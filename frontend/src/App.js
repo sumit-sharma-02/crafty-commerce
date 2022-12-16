@@ -7,6 +7,7 @@ import Footer from "./components/layout/Footer";
 // import Login from "./components/user/Login";
 // import Register from "./components/user/Register";
 import "./App.css";
+import AllProducts from "./components/product/AllProducts";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/product/:id" element={<Product />} />
+          <Route path="/products" element={<AllProducts />} />
         </Routes>
         <Footer />
         {/* <Routes>

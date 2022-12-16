@@ -5,6 +5,7 @@ export { default as PopularTags } from "./layout/Home/PopularTags";
 export { default as PopularProducts } from "./layout/Home/PopularProducts";
 export { default as LimitedOffers } from "./layout/Home/LimitedOffers";
 export { default as Product } from "./product/Product";
+export { default as AllProducts } from "./product/AllProducts";
 export { default as Login } from "./user/Login";
 export { default as Register } from "./user/Register";
 export { default as Footer } from "./layout/Footer";

@@ -168,7 +168,7 @@ const PopularItems = () => {
         {popularCategory[0] &&
           !error &&
           (loading ? (
-            <Loader />
+            <Loader sizeType="big" />
           ) : (
             <motion.div
               initial={{ y: -50 }}
@@ -288,7 +288,7 @@ const PopularItems = () => {
         {popularCategory[1] &&
           !error &&
           (loading ? (
-            <Loader />
+            <Loader sizeType="big" />
           ) : (
             <motion.div
               initial={{ y: -50 }}
@@ -409,7 +409,7 @@ const PopularItems = () => {
         {popularCategory[2] &&
           !error &&
           (loading ? (
-            <Loader />
+            <Loader sizeType="big" />
           ) : (
             <motion.div
               initial={{ y: -50 }}
@@ -530,7 +530,7 @@ const PopularItems = () => {
         {popularCategory[3] &&
           !error &&
           (loading ? (
-            <Loader />
+            <Loader sizeType="big" />
           ) : (
             <motion.div
               initial={{ y: -50 }}

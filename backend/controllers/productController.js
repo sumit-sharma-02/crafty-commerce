@@ -24,12 +24,14 @@ exports.getProducts = catchAsyncErrors(async (req, res, next) => {
 
   const products = await apiFeatures.query;
 
-  res.status(200).json({
-    success: true,
-    count: products.length,
-    productsCount,
-    products,
-  });
+  setTimeout(() => {
+    res.status(200).json({
+      success: true,
+      count: products.length,
+      productsCount,
+      products,
+    });
+  }, 2000);
 });
 
 // Get a Product => /api/v1/product/:id
@@ -39,10 +41,12 @@ exports.getProduct = catchAsyncErrors(async (req, res, next) => {
     return next(new ErrorHandler("Product not found", 404));
   }
 
-  res.status(200).json({
-    success: true,
-    product,
-  });
+  setTimeout(() => {
+    res.status(200).json({
+      success: true,
+      product,
+    });
+  }, 2000);
 });
 
 // Update a Product => /api/v1/product/:id

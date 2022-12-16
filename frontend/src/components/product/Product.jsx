@@ -34,6 +34,7 @@ import Suitcase1 from "../../images/suitcase1.jpg";
 import Pay1 from "../../images/pay-1.webp";
 import Pay2 from "../../images/pay-2.webp";
 import Pay4 from "../../images/pay-4.webp";
+import Breadcrumb from "./Breadcrumb";
 
 const Product = () => {
   const [isCategorySideBarOpen, setIsCategorySideBarOpen] = useState(false);
@@ -97,89 +98,7 @@ const Product = () => {
   return (
     <>
       <main>
-        {/* --------------Breadcrumb----------------------- */}
-        <div className="flex items-center text-gray-500 uppercase font-medium text-sm pt-6 xl:px-24 sm:px-10 px-4">
-          {/* -------------- */}
-          <Link to={"/"} className=" hover:text-primary flex items-center">
-            <span>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="h-4 w-4 mr-1"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"
-                />
-              </svg>
-            </span>
-            <span>Home</span>
-          </Link>
-          {/* -------------- */}
-          <span className=" mx-1 mt-0.5">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              className="h-4 w-4"
-              viewBox="0 0 20 20"
-              fill="currentColor"
-            >
-              <path
-                fillRule="evenodd"
-                d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
-                clipRule="evenodd"
-              />
-            </svg>
-          </span>
-          {loading ? (
-            <div className="flex w-full h-auto space-x-1 items-center justify-start">
-              <div
-                className="bg-primary/90 w-1 h-1 rounded-full animate-bounce"
-                style={{ animationDelay: "0.2s" }}
-              ></div>
-              <div
-                className="bg-primary/90 w-1 h-1 rounded-full animate-bounce"
-                style={{ animationDelay: "0.4s" }}
-              ></div>
-              <div
-                className="bg-primary/90 w-1 h-1 rounded-full animate-bounce"
-                style={{ animationDelay: "0.6s" }}
-              ></div>
-            </div>
-          ) : (
-            <>
-              <MetaData title={product.name} />
-              {/* -------------- */}
-              <Link className=" hover:text-primary" to={"/"}>
-                {product.category}
-              </Link>
-              {/* -------------- */}
-              <span className=" mx-1 mt-0.5">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="h-4 w-4"
-                  viewBox="0 0 20 20"
-                  fill="currentColor"
-                >
-                  <path
-                    fillRule="evenodd"
-                    d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
-                    clipRule="evenodd"
-                  />
-                </svg>
-              </span>
-              {/* -------------- */}
-              <div className="text-gray-400 whitespace-nowrap overflow-hidden text-ellipsis">
-                {" "}
-                {product.name}
-              </div>
-            </>
-          )}
-        </div>
-        {/* --------------Breadcrumb End-----------> */}
+        <Breadcrumb product={product} loading={loading} />
         {/* -- == Product > Product Name == -- */}
         <section className="xl:px-24 sm:px-10 px-4 pt-5">
           {/* ---------------- */}
@@ -757,54 +676,58 @@ const Product = () => {
             {loading ? (
               <div className="col-span-3">
                 <div className="w-full h-72 flex flex-col justify-center items-center">
-                  <Loader />
+                  <Loader sizeType="big" />
                 </div>
               </div>
             ) : (
-              <div className="col-span-3">
-                {/* ----001---- */}
-                <div className="sm:grid sm:grid-cols-2 gap-8">
+              <>
+                <MetaData title={product.name} />
+                <div className="col-span-3">
                   {/* ----001---- */}
-                  {product.images && generateProductImageCarousel(product)}
+                  <div className="sm:grid sm:grid-cols-2 gap-8">
+                    {/* ----001---- */}
+                    {product.images && generateProductImageCarousel(product)}
 
-                  <div>
-                    {/* ---Title Review and Price--- */}
                     <div>
-                      {/* ---Title--- */}
-                      <h3 className=" text-2xl font-bold tracking-tighter text-gray-700">
-                        {product.name}
-                      </h3>
-                      {/* ---Review--- */}
-                      <div className=" flex items-center space-x-1 py-1 ">
-                        {/* --Rating-- */}
-                        <div className="rating-outer">
-                          <div
-                            className="rating-inner"
-                            style={{ width: `${(product.ratings / 5) * 100}%` }}
-                          ></div>
+                      {/* ---Title Review and Price--- */}
+                      <div>
+                        {/* ---Title--- */}
+                        <h3 className=" text-2xl font-bold tracking-tighter text-gray-700">
+                          {product.name}
+                        </h3>
+                        {/* ---Review--- */}
+                        <div className=" flex items-center space-x-1 py-1 ">
+                          {/* --Rating-- */}
+                          <div className="rating-outer">
+                            <div
+                              className="rating-inner"
+                              style={{
+                                width: `${(product.ratings / 5) * 100}%`,
+                              }}
+                            ></div>
+                          </div>
+                          {/* ---- */}
+                          <span className="px-0 flex items-center justify-center text-gray-500 text-sm">
+                            {calculateNumOfReviews(product)}
+                          </span>
                         </div>
-                        {/* ---- */}
-                        <span className="px-0 flex items-center justify-center text-gray-500 text-sm">
-                          {calculateNumOfReviews(product)}
-                        </span>
+                        {/* --Price-- */}
+                        <div className="flex items-center h-max">
+                          <span className="flex items-center justify-center text-primary text-2xl font-bold mr-2">
+                            ${parseFloat(product.price).toFixed(2)}
+                          </span>
+                          <span className="h-full flex items-center justify-center text-gray-400 text-sm">
+                            <del>
+                              $
+                              {parseFloat(
+                                product.price + product.price * 0.53
+                              ).toFixed(2)}
+                            </del>
+                          </span>
+                        </div>
                       </div>
-                      {/* --Price-- */}
-                      <div className="flex items-center h-max">
-                        <span className="flex items-center justify-center text-primary text-2xl font-bold mr-2">
-                          ${parseFloat(product.price).toFixed(2)}
-                        </span>
-                        <span className="h-full flex items-center justify-center text-gray-400 text-sm">
-                          <del>
-                            $
-                            {parseFloat(
-                              product.price + product.price * 0.53
-                            ).toFixed(2)}
-                          </del>
-                        </span>
-                      </div>
-                    </div>
-                    {/* --------Brand Details---------- */}
-                    {/* <div className=" grid grid-cols-2 text-sm font-medium tracking-tighter text-gray-500 gap-2 border-b pb-5">
+                      {/* --------Brand Details---------- */}
+                      {/* <div className=" grid grid-cols-2 text-sm font-medium tracking-tighter text-gray-500 gap-2 border-b pb-5">
                   <span>Brand</span>
                   <span>sport 1</span>
                   <span>SKU:</span>
@@ -812,8 +735,8 @@ const Product = () => {
                   <span>Condition:</span>
                   <span>New</span>
                 </div> */}
-                    {/* -------Size--------- */}
-                    {/* <div className="text-gray-500 my-4">
+                      {/* -------Size--------- */}
+                      {/* <div className="text-gray-500 my-4">
                   <label className="">
                     Size:
                     <small className=" ml-3  text-gray-400">Required</small>
@@ -830,163 +753,166 @@ const Product = () => {
                     <option>XL</option>
                   </select>
                 </div> */}
-                    {/* -------Color--------- */}
-                    <div className="text-gray-500 my-4">
-                      <label>
-                        Color:
-                        <small className=" ml-3  text-gray-400">Required</small>
-                      </label>
-                      <div className=" pt-3 ">
-                        {/* ----- */}
-                        <button className="cursor-pointer h-6 w-6 bg-gray-400 border border-white inline-block ring-1 ring-gray-200 mr-2"></button>
-                        {/* ----- */}
-                        <button className="cursor-pointer h-6 w-6 bg-black border border-white inline-block ring-1 ring-gray-200 mr-2"></button>
-                        {/* ----- */}
-                        <button className="cursor-pointer h-6 w-6 bg-white border border-white inline-block ring-1 ring-gray-200 mr-2"></button>
-                        {/* ----- */}
-                        <button className="cursor-pointer h-6 w-6 bg-red-500 border border-white inline-block ring-1 ring-gray-200 mr-2"></button>
-                        {/* ----- */}
-                        <button className="cursor-pointer h-6 w-6 bg-yellow-500 border border-white inline-block ring-1 ring-gray-200 mr-2"></button>
-                        {/* ----- */}
-                        <button className="cursor-pointer h-6 w-6 bg-green-500 border border-white inline-block ring-1 ring-gray-200 mr-2"></button>
-                        {/* ----- */}
-                        <button className="cursor-pointer h-6 w-6 bg-blue-500 border border-white inline-block ring-1 ring-gray-200 mr-2"></button>
-                        {/* ----- */}
-                        <button className="cursor-pointer h-6 w-6 bg-purple-500 border border-white inline-block ring-1 ring-gray-200 mr-2"></button>
-                        {/* ----- */}
-                        <button className="cursor-pointer h-6 w-6 bg-pink-500 border border-white inline-block ring-1 ring-gray-200 mr-2"></button>
-                        {/* ----- */}
-                      </div>
-                    </div>
-                    {/* -------Quantity--------- */}
-                    <div className="my-4">
-                      <label className="text-gray-500 block">Quantity:</label>
-                      <div className=" border rounded inline-block mt-4">
-                        <div className=" flex items-center divide-x">
-                          <div className=" px-6 py-1">
-                            <p className="font-bold text-center"></p>
-                          </div>
-                          {/* ------- */}
-                          <div className=" px-4 py-1">
-                            {/* ------- */}
-                            <button className="block">
-                              <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                className="h-4 w-4 text-gray-500"
-                                viewBox="0 0 20 20"
-                                fill="currentColor"
-                              >
-                                <path
-                                  fillRule="evenodd"
-                                  d="M14.707 12.707a1 1 0 01-1.414 0L10 9.414l-3.293 3.293a1 1 0 01-1.414-1.414l4-4a1 1 0 011.414 0l4 4a1 1 0 010 1.414z"
-                                  clipRule="evenodd"
-                                />
-                              </svg>
-                            </button>
-                            {/* ------- */}
-                            <button className="block">
-                              <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                className="h-4 w-4 text-gray-500"
-                                viewBox="0 0 20 20"
-                                fill="currentColor"
-                              >
-                                <path
-                                  fillRule="evenodd"
-                                  d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
-                                  clipRule="evenodd"
-                                />
-                              </svg>
-                            </button>
-                          </div>
+                      {/* -------Color--------- */}
+                      <div className="text-gray-500 my-4">
+                        <label>
+                          Color:
+                          <small className=" ml-3  text-gray-400">
+                            Required
+                          </small>
+                        </label>
+                        <div className=" pt-3 ">
+                          {/* ----- */}
+                          <button className="cursor-pointer h-6 w-6 bg-gray-400 border border-white inline-block ring-1 ring-gray-200 mr-2"></button>
+                          {/* ----- */}
+                          <button className="cursor-pointer h-6 w-6 bg-black border border-white inline-block ring-1 ring-gray-200 mr-2"></button>
+                          {/* ----- */}
+                          <button className="cursor-pointer h-6 w-6 bg-white border border-white inline-block ring-1 ring-gray-200 mr-2"></button>
+                          {/* ----- */}
+                          <button className="cursor-pointer h-6 w-6 bg-red-500 border border-white inline-block ring-1 ring-gray-200 mr-2"></button>
+                          {/* ----- */}
+                          <button className="cursor-pointer h-6 w-6 bg-yellow-500 border border-white inline-block ring-1 ring-gray-200 mr-2"></button>
+                          {/* ----- */}
+                          <button className="cursor-pointer h-6 w-6 bg-green-500 border border-white inline-block ring-1 ring-gray-200 mr-2"></button>
+                          {/* ----- */}
+                          <button className="cursor-pointer h-6 w-6 bg-blue-500 border border-white inline-block ring-1 ring-gray-200 mr-2"></button>
+                          {/* ----- */}
+                          <button className="cursor-pointer h-6 w-6 bg-purple-500 border border-white inline-block ring-1 ring-gray-200 mr-2"></button>
+                          {/* ----- */}
+                          <button className="cursor-pointer h-6 w-6 bg-pink-500 border border-white inline-block ring-1 ring-gray-200 mr-2"></button>
+                          {/* ----- */}
                         </div>
                       </div>
-                      <div className="flex flex-col text-sm mt-1 pl-[2px]">
-                        {product.stock > 0 ? (
-                          <span className="font-bold text-green-600">
-                            In Stocks
-                          </span>
-                        ) : (
-                          <span className="font-bold text-red-600">
-                            Out of Stocks
-                          </span>
-                        )}
+                      {/* -------Quantity--------- */}
+                      <div className="my-4">
+                        <label className="text-gray-500 block">Quantity:</label>
+                        <div className=" border rounded inline-block mt-4">
+                          <div className=" flex items-center divide-x">
+                            <div className=" px-6 py-1">
+                              <p className="font-bold text-center"></p>
+                            </div>
+                            {/* ------- */}
+                            <div className=" px-4 py-1">
+                              {/* ------- */}
+                              <button className="block">
+                                <svg
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  className="h-4 w-4 text-gray-500"
+                                  viewBox="0 0 20 20"
+                                  fill="currentColor"
+                                >
+                                  <path
+                                    fillRule="evenodd"
+                                    d="M14.707 12.707a1 1 0 01-1.414 0L10 9.414l-3.293 3.293a1 1 0 01-1.414-1.414l4-4a1 1 0 011.414 0l4 4a1 1 0 010 1.414z"
+                                    clipRule="evenodd"
+                                  />
+                                </svg>
+                              </button>
+                              {/* ------- */}
+                              <button className="block">
+                                <svg
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  className="h-4 w-4 text-gray-500"
+                                  viewBox="0 0 20 20"
+                                  fill="currentColor"
+                                >
+                                  <path
+                                    fillRule="evenodd"
+                                    d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                                    clipRule="evenodd"
+                                  />
+                                </svg>
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+                        <div className="flex flex-col text-sm mt-1 pl-[2px]">
+                          {product.stock > 0 ? (
+                            <span className="font-bold text-green-600">
+                              In Stocks
+                            </span>
+                          ) : (
+                            <span className="font-bold text-red-600">
+                              Out of Stocks
+                            </span>
+                          )}
+                        </div>
                       </div>
-                    </div>
-                    {/* -------Button and Add to whitelist--------- */}
-                    <div className=" flex items-center space-x-2 my-6">
-                      {/* ----------- */}
-                      <button
-                        className="p-2 px-6 border-2 border-primary hover:border-primaryDarkShade duration-300 rounded-md text-sm
+                      {/* -------Button and Add to whitelist--------- */}
+                      <div className=" flex items-center space-x-2 my-6">
+                        {/* ----------- */}
+                        <button
+                          className="p-2 px-6 border-2 border-primary hover:border-primaryDarkShade duration-300 rounded-md text-sm
                        bg-primary text-white hover:bg-primaryDarkShade"
-                      >
-                        Add to Cart
-                      </button>
-                      {/* ----------- */}
-                    </div>
-                    <label className="flex items-center mt-4">
-                      <span className="font-bold tracking-tighter text-gray-700">
-                        SELLER:
-                      </span>
-                      <span className="text-gray-600 text-sm ml-2">
-                        {product.seller}
-                      </span>
-                    </label>
-                    {/* -------4 GREAT REASONS TO BUY FROM US:----------- */}
-                    <div className=" mt-4">
-                      <h4 className="font-bold tracking-tighter text-gray-700">
-                        4 GREAT REASONS TO BUY FROM US:
-                      </h4>
-                      {/* ------ */}
-                      <div className=" my-5">
-                        {/* ------- */}
-                        <img
-                          className=" w-12 inline-block mr-4 hover:opacity-70 duration-300"
-                          src={Reason1}
-                          alt=""
-                        />
-                        {/* ------- */}
-                        <img
-                          className=" w-12 inline-block mr-4 hover:opacity-70 duration-300"
-                          src={Reason2}
-                          alt=""
-                        />
-                        {/* ------- */}
-                        <img
-                          className=" w-12 inline-block mr-4 hover:opacity-70 duration-300"
-                          src={Reason3}
-                          alt=""
-                        />
-                        {/* ------- */}
-                        <img
-                          className=" w-12 inline-block mr-4 hover:opacity-70 duration-300"
-                          src={Reason4}
-                          alt=""
-                        />
+                        >
+                          Add to Cart
+                        </button>
+                        {/* ----------- */}
                       </div>
-                      {/* ------ */}
-                      <div className="pt-4">
-                        <img
-                          className="inline-block mb-4 md:mr-2 mr-4"
-                          src={Pay1}
-                          alt=""
-                        />
-                        <img
-                          className="inline-block mb-4 md:mr-2 mr-4"
-                          src={Pay2}
-                          alt=""
-                        />
-                        <img
-                          className="inline-block mb-4 md:mr-2 mr-4"
-                          src={Pay4}
-                          alt=""
-                        />
+                      <label className="flex items-center mt-4">
+                        <span className="font-bold tracking-tighter text-gray-700">
+                          SELLER:
+                        </span>
+                        <span className="text-gray-600 text-sm ml-2">
+                          {product.seller}
+                        </span>
+                      </label>
+                      {/* -------4 GREAT REASONS TO BUY FROM US:----------- */}
+                      <div className=" mt-4">
+                        <h4 className="font-bold tracking-tighter text-gray-700">
+                          4 GREAT REASONS TO BUY FROM US:
+                        </h4>
+                        {/* ------ */}
+                        <div className=" my-5">
+                          {/* ------- */}
+                          <img
+                            className=" w-12 inline-block mr-4 hover:opacity-70 duration-300"
+                            src={Reason1}
+                            alt=""
+                          />
+                          {/* ------- */}
+                          <img
+                            className=" w-12 inline-block mr-4 hover:opacity-70 duration-300"
+                            src={Reason2}
+                            alt=""
+                          />
+                          {/* ------- */}
+                          <img
+                            className=" w-12 inline-block mr-4 hover:opacity-70 duration-300"
+                            src={Reason3}
+                            alt=""
+                          />
+                          {/* ------- */}
+                          <img
+                            className=" w-12 inline-block mr-4 hover:opacity-70 duration-300"
+                            src={Reason4}
+                            alt=""
+                          />
+                        </div>
+                        {/* ------ */}
+                        <div className="pt-4">
+                          <img
+                            className="inline-block mb-4 md:mr-2 mr-4"
+                            src={Pay1}
+                            alt=""
+                          />
+                          <img
+                            className="inline-block mb-4 md:mr-2 mr-4"
+                            src={Pay2}
+                            alt=""
+                          />
+                          <img
+                            className="inline-block mb-4 md:mr-2 mr-4"
+                            src={Pay4}
+                            alt=""
+                          />
+                        </div>
                       </div>
                     </div>
                   </div>
+                  <ProductInsights product={product} />
                 </div>
-                <ProductInsights product={product} />
-              </div>
+              </>
             )}
           </div>
         </section>
