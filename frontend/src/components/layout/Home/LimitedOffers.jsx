@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 // Icons used
 import {
@@ -13,7 +14,6 @@ import Shirt1 from "../../../images/shirt1.webp";
 import Toy1 from "../../../images/toy1.webp";
 import Banner2 from "../../../images/banner2.webp";
 import Banner3 from "../../../images/banner3.webp";
-import { Link } from "react-router-dom";
 
 const LimitedOffers = () => {
   return (

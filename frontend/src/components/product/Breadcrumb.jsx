@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import Loader from "../layout/Loader";
+import { Loader } from "../../components";
 
 // Icons used
 import { BsShop } from "react-icons/bs";

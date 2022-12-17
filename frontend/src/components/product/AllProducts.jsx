@@ -4,10 +4,10 @@ import { toast } from "react-toastify";
 import { getProducts } from "../../actions/product";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
+import { Breadcrumb } from "../../components";
+import { Loader } from "../../components";
+import { TopScroll } from "../../components";
 import Pagination from "react-js-pagination";
-import Breadcrumb from "./Breadcrumb";
-import Loader from "../layout/Loader";
-import TopScroll from "../layout/TopScroll";
 
 // Icons used
 import { GiClothes } from "react-icons/gi";

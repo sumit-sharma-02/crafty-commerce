@@ -1,12 +1,14 @@
 import React, { Fragment } from "react";
-import MetaData from "../MetaData";
-import PopularProducts from "./PopularProducts";
-import Categories from "./Categories";
-import LimitedOffers from "./LimitedOffers";
-import PopularTags from "./PopularTags";
-import TopScroll from "../TopScroll";
-import Banner1 from "../../../images/banner1.png";
 import { Link } from "react-router-dom";
+import { MetaData } from "../../../components/";
+import { PopularProducts } from "../../../components/";
+import { Categories } from "../../../components/";
+import { LimitedOffers } from "../../../components/";
+import { PopularTags } from "../../../components/";
+import { TopScroll } from "../../../components/";
+
+// Image used
+import Banner1 from "../../../images/banner1.png";
 
 const Home = () => {
   return (

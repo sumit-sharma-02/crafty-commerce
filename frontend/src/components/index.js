@@ -1,3 +1,4 @@
+export { default as Search } from "./layout/Search";
 export { default as Header } from "./layout/Header";
 export { default as Home } from "./layout/Home/Home";
 export { default as Categories } from "./layout/Home/Categories";
@@ -6,6 +7,10 @@ export { default as PopularProducts } from "./layout/Home/PopularProducts";
 export { default as LimitedOffers } from "./layout/Home/LimitedOffers";
 export { default as Product } from "./product/Product";
 export { default as AllProducts } from "./product/AllProducts";
+export { default as Breadcrumb } from "./product/Breadcrumb";
+export { default as Filters } from "./product/Filters";
+export { default as ProductCarousel } from "./product/ProductCarousel";
+export { default as ProductInsights } from "./product/ProductInsights";
 export { default as Login } from "./user/Login";
 export { default as Register } from "./user/Register";
 export { default as Footer } from "./layout/Footer";

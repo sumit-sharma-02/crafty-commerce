@@ -1,13 +1,17 @@
 import React, { useState } from "react";
-import Logo from "../../images/logo.png";
-import { VscChromeClose } from "react-icons/vsc";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
+
+// Icons used
+import { VscChromeClose } from "react-icons/vsc";
 // import { IoBagCheckOutline } from "react-icons/io5";
 // import { GiShoppingCart } from "react-icons/gi";
 // import { VscAccount } from "react-icons/vsc";
 // import { IoIosArrowDropdown } from "react-icons/io";
 // import { BsSearch } from "react-icons/bs";
+
+// Image used
+import Logo from "../../images/logo.png";
 
 const Header = () => {
   const [isAccountDropdownOpen, setIsAccountDropdownOpen] = useState(false);

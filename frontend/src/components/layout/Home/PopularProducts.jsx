@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import { toast } from "react-toastify";
 import { getProducts } from "../../../actions/product";
 import { useDispatch, useSelector } from "react-redux";
-import Loader from "../Loader";
+import { Loader } from "../../../components/";
 
 // CSS Imports
 import "../../../App.css";

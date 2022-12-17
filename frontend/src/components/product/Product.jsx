@@ -5,12 +5,12 @@ import { clearErrors, getProductDetails } from "../../actions/product";
 import { useParams } from "react-router-dom";
 import { toast } from "react-toastify";
 import { motion } from "framer-motion";
-import Breadcrumb from "./Breadcrumb";
-import Loader from "../layout/Loader";
-import TopScroll from "../layout/TopScroll";
-import MetaData from "../layout/MetaData";
-import ProductCarousel from "./ProductCarousel";
-import ProductInsights from "./ProductInsights";
+import { Breadcrumb } from "../../components";
+import { Loader } from "../../components";
+import { TopScroll } from "../../components";
+import { MetaData } from "../../components";
+import { ProductCarousel } from "../../components";
+import { ProductInsights } from "../../components";
 
 // Icons used
 import { GiClothes } from "react-icons/gi";
