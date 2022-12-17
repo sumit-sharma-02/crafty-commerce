@@ -35,6 +35,7 @@ import Suitcase1 from "../../images/suitcase1.jpg";
 import Pay1 from "../../images/pay-1.webp";
 import Pay2 from "../../images/pay-2.webp";
 import Pay4 from "../../images/pay-4.webp";
+import NotFound from "../../images/404.gif";
 
 const Product = () => {
   const [isCategorySideBarOpen, setIsCategorySideBarOpen] = useState(false);
@@ -98,16 +99,16 @@ const Product = () => {
   return (
     <>
       <main>
-        <Breadcrumb product={product} loading={loading} />
+        <Breadcrumb product={product} loading={loading} error={error} />
         {/* -- == Product > Product Name == -- */}
-        <section className="xl:px-24 sm:px-10 px-4 pt-5">
+        <section className="px-4 pt-5 sm:px-10 xl:px-24">
           {/* ---------------- */}
-          <div className="lg:grid lg:grid-cols-4 gap-8">
+          <div className="gap-8 lg:grid lg:grid-cols-4">
             {/* --------- For Mobile device----------- */}
-            <div className="lg:hidden block mb-10">
+            <div className="mb-10 block lg:hidden">
               <button
                 onClick={toggleCategorySidebar}
-                className=" p-2 rounded w-full flex justify-between bg-gray-100"
+                className=" flex w-full justify-between rounded bg-gray-100 p-2"
               >
                 <span>
                   {isCategorySideBarOpen ? (
@@ -128,7 +129,7 @@ const Product = () => {
                   ) : (
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
-                      className="h-6 w-6 transform duration-300 rotate-180"
+                      className="h-6 w-6 rotate-180 transform duration-300"
                       fill="none"
                       viewBox="0 0 24 24"
                       stroke="currentColor"
@@ -164,7 +165,7 @@ const Product = () => {
                   ) : (
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
-                      className="h-6 w-6 transform duration-300 rotate-180"
+                      className="h-6 w-6 rotate-180 transform duration-300"
                       fill="none"
                       viewBox="0 0 24 24"
                       stroke="currentColor"
@@ -196,26 +197,26 @@ const Product = () => {
                         bounce: 0.3,
                         duration: 0.4,
                       }}
-                      className="fixed top-0 left-0 bg-white shadow-2xl w-72 h-screen overflow-y-auto z-50"
+                      className="fixed top-0 left-0 z-50 h-screen w-72 overflow-y-auto bg-white shadow-2xl"
                     >
-                      <div className="p-2 my-4 mx-0 flex items-center justify-end">
+                      <div className="my-4 mx-0 flex items-center justify-end p-2">
                         <motion.span
                           whileHover={{ rotate: 90 }}
                           transition={{ duration: 0.25, ease: "easeInOut" }}
-                          className="w-7 h-7 text-primary cursor-pointer hover:text-gray-600"
+                          className="h-7 w-7 cursor-pointer text-primary hover:text-gray-600"
                           onClick={toggleCategorySidebar}
                         >
-                          <VscChromeClose className="w-full h-full" />
+                          <VscChromeClose className="h-full w-full" />
                         </motion.span>
                       </div>
-                      <div className=" font-semibold w-full">
-                        <ul className=" border rounded divide-y">
+                      <div className=" w-full font-semibold">
+                        <ul className=" divide-y rounded border">
                           {/* ---- */}
-                          <li className=" p-4 flex items-center bg-gray-100">
+                          <li className=" flex items-center bg-gray-100 p-4">
                             <span>
                               <svg
                                 xmlns="http://www.w3.org/2000/svg"
-                                className="h-6 w-6 transform rotate-180"
+                                className="h-6 w-6 rotate-180 transform"
                                 fill="none"
                                 viewBox="0 0 24 24"
                                 stroke="currentColor"
@@ -233,39 +234,39 @@ const Product = () => {
                             </span>
                           </li>
                           {/* -- Catagory start-- */}
-                          <li className="w-full h-max hover:bg-gray-100">
+                          <li className="h-max w-full hover:bg-gray-100">
                             {/* --------Mega menu button----------- */}
                             <Link
-                              className="w-full p-4 flex items-center justify-between text-gray-500 text-sm hover:text-primary"
+                              className="flex w-full items-center justify-between p-4 text-sm text-gray-500 hover:text-primary"
                               to={"/"}
                             >
                               <span>
-                                <GiClothes className="w-4 h-4 mb-1 inline-block mr-1" />{" "}
+                                <GiClothes className="mb-1 mr-1 inline-block h-4 w-4" />{" "}
                                 Clothing
                               </span>
                             </Link>
                           </li>
                           {/* ---- */}
-                          <li className="w-full h-max hover:bg-gray-100">
+                          <li className="h-max w-full hover:bg-gray-100">
                             <Link
-                              className="w-full p-4 flex items-center justify-between text-gray-500 text-sm hover:text-primary"
+                              className="flex w-full items-center justify-between p-4 text-sm text-gray-500 hover:text-primary"
                               to={"/"}
                             >
                               <span>
-                                <CgToolbox className="w-4 h-4 mb-1 inline-block mr-1" />{" "}
+                                <CgToolbox className="mb-1 mr-1 inline-block h-4 w-4" />{" "}
                                 Gadgets{" "}
                               </span>
                             </Link>
                           </li>
                           {/* ---- */}
-                          <li className="w-full h-max hover:bg-gray-100">
+                          <li className="h-max w-full hover:bg-gray-100">
                             <Link
-                              className="w-full p-4 flex items-center justify-between text-gray-500 text-sm hover:text-primary"
+                              className="flex w-full items-center justify-between p-4 text-sm text-gray-500 hover:text-primary"
                               to={"/"}
                             >
                               <span>
                                 <svg
-                                  className="svg-inline--fa fa-desktop fa-w-18 w-4 h-4 mb-1 inline-block mr-1"
+                                  className="svg-inline--fa fa-desktop fa-w-18 mb-1 mr-1 inline-block h-4 w-4"
                                   role="img"
                                   xmlns="http://www.w3.org/2000/svg"
                                   viewBox="0 0 576 512"
@@ -280,39 +281,39 @@ const Product = () => {
                             </Link>
                           </li>
                           {/* ---- */}
-                          <li className="w-full h-max hover:bg-gray-100">
+                          <li className="h-max w-full hover:bg-gray-100">
                             <Link
-                              className="w-full p-4 flex items-center justify-between text-gray-500 text-sm hover:text-primary"
+                              className="flex w-full items-center justify-between p-4 text-sm text-gray-500 hover:text-primary"
                               to={"/"}
                             >
                               <span>
-                                <FiSmartphone className="w-4 h-4 mb-1 inline-block mr-1" />{" "}
+                                <FiSmartphone className="mb-1 mr-1 inline-block h-4 w-4" />{" "}
                                 Smartphones{" "}
                               </span>
                             </Link>
                           </li>
                           {/* ---- */}
-                          <li className="w-full h-max hover:bg-gray-100">
+                          <li className="h-max w-full hover:bg-gray-100">
                             {/* --------Mega menu button----------- */}
                             <Link
-                              className="w-full p-4 flex items-center justify-between text-gray-500 text-sm hover:text-primary"
+                              className="flex w-full items-center justify-between p-4 text-sm text-gray-500 hover:text-primary"
                               to={"/"}
                             >
                               <span>
-                                <MdLaptopMac className="w-4 h-4 mb-1 inline-block mr-1" />{" "}
+                                <MdLaptopMac className="mb-1 mr-1 inline-block h-4 w-4" />{" "}
                                 Laptops
                               </span>
                             </Link>
                           </li>
                           {/* ---- */}
-                          <li className="w-full h-max hover:bg-gray-100">
+                          <li className="h-max w-full hover:bg-gray-100">
                             <Link
-                              className="w-full p-4 flex items-center justify-between text-gray-500 text-sm hover:text-primary"
+                              className="flex w-full items-center justify-between p-4 text-sm text-gray-500 hover:text-primary"
                               to={"/"}
                             >
                               <span>
                                 <svg
-                                  className="svg-inline--fa fa-gitlab fa-w-16 w-4 h-4 mb-1 inline-block mr-1"
+                                  className="svg-inline--fa fa-gitlab fa-w-16 mb-1 mr-1 inline-block h-4 w-4"
                                   role="img"
                                   xmlns="http://www.w3.org/2000/svg"
                                   viewBox="0 0 512 512"
@@ -327,14 +328,14 @@ const Product = () => {
                             </Link>
                           </li>
                           {/* ---- */}
-                          <li className="w-full h-max hover:bg-gray-100">
+                          <li className="h-max w-full hover:bg-gray-100">
                             <Link
-                              className="w-full p-4 flex items-center justify-between text-gray-500 text-sm hover:text-primary"
+                              className="flex w-full items-center justify-between p-4 text-sm text-gray-500 hover:text-primary"
                               to={"/"}
                             >
                               <span>
                                 <svg
-                                  className="svg-inline--fa fa-gitlab fa-w-16 w-4 h-4 mb-1 inline-block mr-1"
+                                  className="svg-inline--fa fa-gitlab fa-w-16 mb-1 mr-1 inline-block h-4 w-4"
                                   role="img"
                                   xmlns="http://www.w3.org/2000/svg"
                                   viewBox="0 0 512 512"
@@ -349,14 +350,14 @@ const Product = () => {
                             </Link>
                           </li>
                           {/* ---- */}
-                          <li className="w-full h-max hover:bg-gray-100">
+                          <li className="h-max w-full hover:bg-gray-100">
                             <Link
-                              className="w-full p-4 flex items-center justify-between text-gray-500 text-sm hover:text-primary"
+                              className="flex w-full items-center justify-between p-4 text-sm text-gray-500 hover:text-primary"
                               to={"/"}
                             >
                               <span>
                                 <svg
-                                  className="svg-inline--fa fa-desktop fa-w-18 w-3.5 h-3.5 mb-1 inline-block mr-2"
+                                  className="svg-inline--fa fa-desktop fa-w-18 mb-1 mr-2 inline-block h-3.5 w-3.5"
                                   role="img"
                                   xmlns="http://www.w3.org/2000/svg"
                                   viewBox="0 0 576 512"
@@ -371,14 +372,14 @@ const Product = () => {
                             </Link>
                           </li>
                           {/* ---- */}
-                          <li className="w-full h-max hover:bg-gray-100">
+                          <li className="h-max w-full hover:bg-gray-100">
                             <Link
-                              className="w-full p-4 flex items-center justify-between text-gray-500 text-sm hover:text-primary"
+                              className="flex w-full items-center justify-between p-4 text-sm text-gray-500 hover:text-primary"
                               to={"/"}
                             >
                               <span>
                                 <svg
-                                  className="svg-inline--fa fa-desktop fa-w-18 w-[15px] h-[15px] mb-1 inline-block mr-2"
+                                  className="svg-inline--fa fa-desktop fa-w-18 mb-1 mr-2 inline-block h-[15px] w-[15px]"
                                   role="img"
                                   xmlns="http://www.w3.org/2000/svg"
                                   viewBox="0 0 576 512"
@@ -394,36 +395,36 @@ const Product = () => {
                           </li>
                         </ul>
                         {/* ------------ */}
-                        <div className=" mt-5 border rounded">
+                        <div className=" mt-5 rounded border">
                           {/* ---- */}
-                          <div className=" font-bold p-3 flex items-center bg-gray-200 bg-opacity-80 rounded">
+                          <div className=" flex items-center rounded bg-gray-200 bg-opacity-80 p-3 font-bold">
                             <span>CUSTOM CMS BLOCK</span>
                           </div>
                           {/* ---- */}
                           <div className=" p-4">
                             {/* ------- */}
                             <img
-                              className="w-full hover:opacity-80 duration-300"
+                              className="w-full duration-300 hover:opacity-80"
                               src={Ad1}
                               alt=""
                             />
                             {/* ------- */}
-                            <p className=" text-gray-500 text-sm py-6">
+                            <p className=" py-6 text-sm text-gray-500">
                               Custom CMS block displayed at the left sidebar on
                               the Catalog Page. Put your own content here: text,
                               html, images, media... whatever you like.
                             </p>
                             {/* -------- */}
-                            <button className=" p-3 bg-gray-800 hover:bg-opacity-80 px-7 rounded text-sm text-white font-medium duration-300">
+                            <button className=" rounded bg-gray-800 p-3 px-7 text-sm font-medium text-white duration-300 hover:bg-opacity-80">
                               Read More
                             </button>
                           </div>
                         </div>
                         {/* ------------ */}
-                        <div className=" mt-5 border rounded">
+                        <div className=" mt-5 rounded border">
                           {/* ------- */}
                           <img
-                            className="w-full hover:opacity-80 duration-300"
+                            className="w-full duration-300 hover:opacity-80"
                             src={Ad2}
                             alt=""
                           />
@@ -443,7 +444,7 @@ const Product = () => {
                         duration: 0.3,
                       }}
                       onClick={toggleCategorySidebar}
-                      className="bg-backdropBlur z-40 px-5 fixed h-full w-full flex items-center justify-center top-0 left-0"
+                      className="fixed top-0 left-0 z-40 flex h-full w-full items-center justify-center bg-backdropBlur px-5"
                     />
                   </>
                 )}
@@ -452,13 +453,13 @@ const Product = () => {
             {/* ---------For desktop---------- */}
             <div className="hidden lg:block">
               {/* ------------ */}
-              <ul className=" border rounded divide-y">
+              <ul className=" divide-y rounded border">
                 {/* ---- */}
-                <li className="p-3 flex items-center bg-gray-200 bg-opacity-80 rounded">
+                <li className="flex items-center rounded bg-gray-200 bg-opacity-80 p-3">
                   <span>
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
-                      className="h-6 w-6 transform rotate-180"
+                      className="h-6 w-6 rotate-180 transform"
                       fill="none"
                       viewBox="0 0 24 24"
                       stroke="currentColor"
@@ -476,39 +477,39 @@ const Product = () => {
                   </span>
                 </li>
                 {/* -- Catagory start-- */}
-                <li className="w-full h-max hover:bg-gray-100">
+                <li className="h-max w-full hover:bg-gray-100">
                   {/* --------Mega menu button----------- */}
                   <Link
-                    className="w-full p-4 flex items-center justify-between text-gray-500 text-sm hover:text-primary"
+                    className="flex w-full items-center justify-between p-4 text-sm text-gray-500 hover:text-primary"
                     to={"/"}
                   >
                     <span>
-                      <GiClothes className="w-4 h-4 mb-1 inline-block mr-1" />{" "}
+                      <GiClothes className="mb-1 mr-1 inline-block h-4 w-4" />{" "}
                       Clothing
                     </span>
                   </Link>
                 </li>
                 {/* ---- */}
-                <li className="w-full h-max hover:bg-gray-100">
+                <li className="h-max w-full hover:bg-gray-100">
                   <Link
-                    className="w-full p-4 flex items-center justify-between text-gray-500 text-sm hover:text-primary"
+                    className="flex w-full items-center justify-between p-4 text-sm text-gray-500 hover:text-primary"
                     to={"/"}
                   >
                     <span>
-                      <CgToolbox className="w-4 h-4 mb-1 inline-block mr-1" />{" "}
+                      <CgToolbox className="mb-1 mr-1 inline-block h-4 w-4" />{" "}
                       Gadgets{" "}
                     </span>
                   </Link>
                 </li>
                 {/* ---- */}
-                <li className="w-full h-max hover:bg-gray-100">
+                <li className="h-max w-full hover:bg-gray-100">
                   <Link
-                    className="w-full p-4 flex items-center justify-between text-gray-500 text-sm hover:text-primary"
+                    className="flex w-full items-center justify-between p-4 text-sm text-gray-500 hover:text-primary"
                     to={"/"}
                   >
                     <span>
                       <svg
-                        className="svg-inline--fa fa-desktop fa-w-18 w-4 h-4 mb-1 inline-block mr-1"
+                        className="svg-inline--fa fa-desktop fa-w-18 mb-1 mr-1 inline-block h-4 w-4"
                         role="img"
                         xmlns="http://www.w3.org/2000/svg"
                         viewBox="0 0 576 512"
@@ -523,39 +524,39 @@ const Product = () => {
                   </Link>
                 </li>
                 {/* ---- */}
-                <li className="w-full h-max hover:bg-gray-100">
+                <li className="h-max w-full hover:bg-gray-100">
                   <Link
-                    className="w-full p-4 flex items-center justify-between text-gray-500 text-sm hover:text-primary"
+                    className="flex w-full items-center justify-between p-4 text-sm text-gray-500 hover:text-primary"
                     to={"/"}
                   >
                     <span>
-                      <FiSmartphone className="w-4 h-4 mb-1 inline-block mr-1" />{" "}
+                      <FiSmartphone className="mb-1 mr-1 inline-block h-4 w-4" />{" "}
                       Smartphones{" "}
                     </span>
                   </Link>
                 </li>
                 {/* ---- */}
-                <li className="w-full h-max hover:bg-gray-100">
+                <li className="h-max w-full hover:bg-gray-100">
                   {/* --------Mega menu button----------- */}
                   <Link
-                    className="w-full p-4 flex items-center justify-between text-gray-500 text-sm hover:text-primary"
+                    className="flex w-full items-center justify-between p-4 text-sm text-gray-500 hover:text-primary"
                     to={"/"}
                   >
                     <span>
-                      <MdLaptopMac className="w-4 h-4 mb-1 inline-block mr-1" />{" "}
+                      <MdLaptopMac className="mb-1 mr-1 inline-block h-4 w-4" />{" "}
                       Laptops
                     </span>
                   </Link>
                 </li>
                 {/* ---- */}
-                <li className="w-full h-max hover:bg-gray-100">
+                <li className="h-max w-full hover:bg-gray-100">
                   <Link
-                    className="w-full p-4 flex items-center justify-between text-gray-500 text-sm hover:text-primary"
+                    className="flex w-full items-center justify-between p-4 text-sm text-gray-500 hover:text-primary"
                     to={"/"}
                   >
                     <span>
                       <svg
-                        className="svg-inline--fa fa-gitlab fa-w-16 w-4 h-4 mb-1 inline-block mr-1"
+                        className="svg-inline--fa fa-gitlab fa-w-16 mb-1 mr-1 inline-block h-4 w-4"
                         role="img"
                         xmlns="http://www.w3.org/2000/svg"
                         viewBox="0 0 512 512"
@@ -570,14 +571,14 @@ const Product = () => {
                   </Link>
                 </li>
                 {/* ---- */}
-                <li className="w-full h-max hover:bg-gray-100">
+                <li className="h-max w-full hover:bg-gray-100">
                   <Link
-                    className="w-full p-4 flex items-center justify-between text-gray-500 text-sm hover:text-primary"
+                    className="flex w-full items-center justify-between p-4 text-sm text-gray-500 hover:text-primary"
                     to={"/"}
                   >
                     <span>
                       <svg
-                        className="svg-inline--fa fa-gitlab fa-w-16 w-4 h-4 mb-1 inline-block mr-1"
+                        className="svg-inline--fa fa-gitlab fa-w-16 mb-1 mr-1 inline-block h-4 w-4"
                         role="img"
                         xmlns="http://www.w3.org/2000/svg"
                         viewBox="0 0 512 512"
@@ -592,14 +593,14 @@ const Product = () => {
                   </Link>
                 </li>
                 {/* ---- */}
-                <li className="w-full h-max hover:bg-gray-100">
+                <li className="h-max w-full hover:bg-gray-100">
                   <Link
-                    className="w-full p-4 flex items-center justify-between text-gray-500 text-sm hover:text-primary"
+                    className="flex w-full items-center justify-between p-4 text-sm text-gray-500 hover:text-primary"
                     to={"/"}
                   >
                     <span>
                       <svg
-                        className="svg-inline--fa fa-desktop fa-w-18 w-3.5 h-3.5 mb-1 inline-block mr-2"
+                        className="svg-inline--fa fa-desktop fa-w-18 mb-1 mr-2 inline-block h-3.5 w-3.5"
                         role="img"
                         xmlns="http://www.w3.org/2000/svg"
                         viewBox="0 0 576 512"
@@ -614,14 +615,14 @@ const Product = () => {
                   </Link>
                 </li>
                 {/* ---- */}
-                <li className="w-full h-max hover:bg-gray-100">
+                <li className="h-max w-full hover:bg-gray-100">
                   <Link
-                    className="w-full p-4 flex items-center justify-between text-gray-500 text-sm hover:text-primary"
+                    className="flex w-full items-center justify-between p-4 text-sm text-gray-500 hover:text-primary"
                     to={"/"}
                   >
                     <span>
                       <svg
-                        className="svg-inline--fa fa-desktop fa-w-18 w-[15px] h-[15px] mb-1 inline-block mr-2"
+                        className="svg-inline--fa fa-desktop fa-w-18 mb-1 mr-2 inline-block h-[15px] w-[15px]"
                         role="img"
                         xmlns="http://www.w3.org/2000/svg"
                         viewBox="0 0 576 512"
@@ -637,283 +638,314 @@ const Product = () => {
                 </li>
               </ul>
               {/* ------------ */}
-              <div className=" mt-5 border rounded">
+              <div className=" mt-5 rounded border">
                 {/* ---- */}
-                <div className=" font-bold p-3 flex items-center bg-gray-200 bg-opacity-80 rounded">
+                <div className=" flex items-center rounded bg-gray-200 bg-opacity-80 p-3 font-bold">
                   <span>CUSTOM CMS BLOCK</span>
                 </div>
                 {/* ---- */}
                 <div className=" p-4">
                   {/* ------- */}
                   <img
-                    className="w-full hover:opacity-80 duration-300"
+                    className="w-full duration-300 hover:opacity-80"
                     src={Ad1}
                     alt=""
                   />
                   {/* ------- */}
-                  <p className=" text-gray-500 text-sm py-6">
+                  <p className=" py-6 text-sm text-gray-500">
                     Custom CMS block displayed at the left sidebar on the
                     Catalog Page. Put your own content here: text, html, images,
                     media... whatever you like.
                   </p>
                   {/* -------- */}
-                  <button className=" p-3 bg-gray-800 hover:bg-opacity-80 px-7 rounded text-sm text-white font-medium duration-300">
+                  <button className=" rounded bg-gray-800 p-3 px-7 text-sm font-medium text-white duration-300 hover:bg-opacity-80">
                     Read More
                   </button>
                 </div>
               </div>
               {/* ------------ */}
-              <div className=" mt-5 border rounded">
+              <div className=" mt-5 rounded border">
                 {/* ------- */}
                 <img
-                  className="w-full hover:opacity-80 duration-300"
+                  className="w-full duration-300 hover:opacity-80"
                   src={Ad2}
                   alt=""
                 />
               </div>
             </div>
-            {/* ---------003---------- */}
-            {loading ? (
-              <div className="col-span-3">
-                <div className="w-full h-72 flex flex-col justify-center items-center">
-                  <Loader sizeType="big" />
+            {/* Error Illustrator */}
+            {error && (
+              <motion.div
+                initial={{ y: -50 }}
+                animate={{ y: 0 }}
+                exit={{ y: 50 }}
+                transition={{
+                  type: "spring",
+                  bounce: 0.3,
+                  duration: 0.4,
+                }}
+                className="col-span-3"
+              >
+                <div className="flex h-auto w-full flex-col items-center justify-center">
+                  <img
+                    src={NotFound}
+                    alt=""
+                    className="h-auto w-[35rem] border-none"
+                  />
+                  <span className="flex w-full items-center justify-center font-semibold text-gray-500 xsm:text-base lg:text-lg">
+                    This product isn't available. Sorry about that.
+                  </span>
+                  <span className="flex w-full items-center justify-center text-gray-500 xsm:text-sm lg:text-base">
+                    Try searching for something else.
+                  </span>
                 </div>
-              </div>
-            ) : (
-              <>
-                <MetaData title={product.name} />
+              </motion.div>
+            )}
+            {/* ---------003---------- */}
+            {!error &&
+              (loading ? (
                 <div className="col-span-3">
-                  {/* ----001---- */}
-                  <div className="sm:grid sm:grid-cols-2 gap-8">
+                  <div className="flex h-72 w-full flex-col items-center justify-center">
+                    <Loader sizeType="big" />
+                  </div>
+                </div>
+              ) : (
+                <>
+                  <MetaData title={product.name} />
+                  <div className="col-span-3">
                     {/* ----001---- */}
-                    {product.images && generateProductImageCarousel(product)}
+                    <div className="gap-8 sm:grid sm:grid-cols-2">
+                      {/* ----001---- */}
+                      {product.images && generateProductImageCarousel(product)}
 
-                    <div>
-                      {/* ---Title Review and Price--- */}
                       <div>
-                        {/* ---Title--- */}
-                        <h3 className=" text-2xl font-bold tracking-tighter text-gray-700">
-                          {product.name}
-                        </h3>
-                        {/* ---Review--- */}
-                        <div className=" flex items-center space-x-1 py-1 ">
-                          {/* --Rating-- */}
-                          <div className="rating-outer">
-                            <div
-                              className="rating-inner"
-                              style={{
-                                width: `${(product.ratings / 5) * 100}%`,
-                              }}
-                            ></div>
+                        {/* ---Title Review and Price--- */}
+                        <div>
+                          {/* ---Title--- */}
+                          <h3 className=" text-2xl font-bold tracking-tighter text-gray-700">
+                            {product.name}
+                          </h3>
+                          {/* ---Review--- */}
+                          <div className=" flex items-center space-x-1 py-1 ">
+                            {/* --Rating-- */}
+                            <div className="rating-outer">
+                              <div
+                                className="rating-inner"
+                                style={{
+                                  width: `${(product.ratings / 5) * 100}%`,
+                                }}
+                              ></div>
+                            </div>
+                            {/* ---- */}
+                            <span className="flex items-center justify-center px-0 text-sm text-gray-500">
+                              {calculateNumOfReviews(product)}
+                            </span>
                           </div>
-                          {/* ---- */}
-                          <span className="px-0 flex items-center justify-center text-gray-500 text-sm">
-                            {calculateNumOfReviews(product)}
-                          </span>
+                          {/* --Price-- */}
+                          <div className="flex h-max items-center">
+                            <span className="mr-2 flex items-center justify-center text-2xl font-bold text-primary">
+                              ${parseFloat(product.price).toFixed(2)}
+                            </span>
+                            <span className="flex h-full items-center justify-center text-sm text-gray-400">
+                              <del>
+                                $
+                                {parseFloat(
+                                  product.price + product.price * 0.53
+                                ).toFixed(2)}
+                              </del>
+                            </span>
+                          </div>
                         </div>
-                        {/* --Price-- */}
-                        <div className="flex items-center h-max">
-                          <span className="flex items-center justify-center text-primary text-2xl font-bold mr-2">
-                            ${parseFloat(product.price).toFixed(2)}
-                          </span>
-                          <span className="h-full flex items-center justify-center text-gray-400 text-sm">
-                            <del>
-                              $
-                              {parseFloat(
-                                product.price + product.price * 0.53
-                              ).toFixed(2)}
-                            </del>
-                          </span>
+                        {/* --------Brand Details---------- */}
+                        {/* <div className=" grid grid-cols-2 text-sm font-medium tracking-tighter text-gray-500 gap-2 border-b pb-5">
+                                <span>Brand</span>
+                                <span>sport 1</span>
+                                <span>SKU:</span>
+                                <span>sport 1</span>
+                                <span>Condition:</span>
+                                <span>New</span>
+                              </div> */}
+                        {/* -------Size--------- */}
+                        {/* <div className="text-gray-500 my-4">
+                                <label className="">
+                                  Size:
+                                  <small className=" ml-3  text-gray-400">Required</small>
+                                </label>
+                                <select
+                                  className=" block w-full my-2 border focus:outline-none p-1 focus:border-gray-500 rounded text-sm font-medium"
+                                  required
+                                >
+                                  <option>Choose Options</option>
+                                  <option>XS</option>
+                                  <option>S</option>
+                                  <option selected>M</option>
+                                  <option>L</option>
+                                  <option>XL</option>
+                                </select>
+                              </div> */}
+                        {/* -------Color--------- */}
+                        <div className="my-4 text-gray-500">
+                          <label>
+                            Color:
+                            <small className=" ml-3  text-gray-400">
+                              Required
+                            </small>
+                          </label>
+                          <div className=" pt-3 ">
+                            {/* ----- */}
+                            <button className="mr-2 inline-block h-6 w-6 cursor-pointer border border-white bg-gray-400 ring-1 ring-gray-200"></button>
+                            {/* ----- */}
+                            <button className="mr-2 inline-block h-6 w-6 cursor-pointer border border-white bg-black ring-1 ring-gray-200"></button>
+                            {/* ----- */}
+                            <button className="mr-2 inline-block h-6 w-6 cursor-pointer border border-white bg-white ring-1 ring-gray-200"></button>
+                            {/* ----- */}
+                            <button className="mr-2 inline-block h-6 w-6 cursor-pointer border border-white bg-red-500 ring-1 ring-gray-200"></button>
+                            {/* ----- */}
+                            <button className="mr-2 inline-block h-6 w-6 cursor-pointer border border-white bg-yellow-500 ring-1 ring-gray-200"></button>
+                            {/* ----- */}
+                            <button className="mr-2 inline-block h-6 w-6 cursor-pointer border border-white bg-green-500 ring-1 ring-gray-200"></button>
+                            {/* ----- */}
+                            <button className="mr-2 inline-block h-6 w-6 cursor-pointer border border-white bg-blue-500 ring-1 ring-gray-200"></button>
+                            {/* ----- */}
+                            <button className="mr-2 inline-block h-6 w-6 cursor-pointer border border-white bg-purple-500 ring-1 ring-gray-200"></button>
+                            {/* ----- */}
+                            <button className="mr-2 inline-block h-6 w-6 cursor-pointer border border-white bg-pink-500 ring-1 ring-gray-200"></button>
+                            {/* ----- */}
+                          </div>
                         </div>
-                      </div>
-                      {/* --------Brand Details---------- */}
-                      {/* <div className=" grid grid-cols-2 text-sm font-medium tracking-tighter text-gray-500 gap-2 border-b pb-5">
-                  <span>Brand</span>
-                  <span>sport 1</span>
-                  <span>SKU:</span>
-                  <span>sport 1</span>
-                  <span>Condition:</span>
-                  <span>New</span>
-                </div> */}
-                      {/* -------Size--------- */}
-                      {/* <div className="text-gray-500 my-4">
-                  <label className="">
-                    Size:
-                    <small className=" ml-3  text-gray-400">Required</small>
-                  </label>
-                  <select
-                    className=" block w-full my-2 border focus:outline-none p-1 focus:border-gray-500 rounded text-sm font-medium"
-                    required
-                  >
-                    <option>Choose Options</option>
-                    <option>XS</option>
-                    <option>S</option>
-                    <option selected>M</option>
-                    <option>L</option>
-                    <option>XL</option>
-                  </select>
-                </div> */}
-                      {/* -------Color--------- */}
-                      <div className="text-gray-500 my-4">
-                        <label>
-                          Color:
-                          <small className=" ml-3  text-gray-400">
-                            Required
-                          </small>
+                        {/* -------Quantity--------- */}
+                        <div className="my-4">
+                          <label className="block text-gray-500">
+                            Quantity:
+                          </label>
+                          <div className=" mt-4 inline-block rounded border">
+                            <div className=" flex items-center divide-x">
+                              <div className=" px-6 py-1">
+                                <p className="text-center font-bold"></p>
+                              </div>
+                              {/* ------- */}
+                              <div className=" px-4 py-1">
+                                {/* ------- */}
+                                <button className="block">
+                                  <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    className="h-4 w-4 text-gray-500"
+                                    viewBox="0 0 20 20"
+                                    fill="currentColor"
+                                  >
+                                    <path
+                                      fillRule="evenodd"
+                                      d="M14.707 12.707a1 1 0 01-1.414 0L10 9.414l-3.293 3.293a1 1 0 01-1.414-1.414l4-4a1 1 0 011.414 0l4 4a1 1 0 010 1.414z"
+                                      clipRule="evenodd"
+                                    />
+                                  </svg>
+                                </button>
+                                {/* ------- */}
+                                <button className="block">
+                                  <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    className="h-4 w-4 text-gray-500"
+                                    viewBox="0 0 20 20"
+                                    fill="currentColor"
+                                  >
+                                    <path
+                                      fillRule="evenodd"
+                                      d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                                      clipRule="evenodd"
+                                    />
+                                  </svg>
+                                </button>
+                              </div>
+                            </div>
+                          </div>
+                          <div className="mt-1 flex flex-col pl-[2px] text-sm">
+                            {product.stock > 0 ? (
+                              <span className="font-bold text-green-600">
+                                In Stocks
+                              </span>
+                            ) : (
+                              <span className="font-bold text-red-600">
+                                Out of Stocks
+                              </span>
+                            )}
+                          </div>
+                        </div>
+                        {/* -------Button and Add to whitelist--------- */}
+                        <div className=" my-6 flex items-center space-x-2">
+                          {/* ----------- */}
+                          <button
+                            className="rounded-md border-2 border-primary bg-primary p-2 px-6 text-sm text-white
+                                     duration-300 hover:border-primaryDarkShade hover:bg-primaryDarkShade"
+                          >
+                            Add to Cart
+                          </button>
+                          {/* ----------- */}
+                        </div>
+                        <label className="mt-4 flex items-center">
+                          <span className="font-bold tracking-tighter text-gray-700">
+                            SELLER:
+                          </span>
+                          <span className="ml-2 text-sm text-gray-600">
+                            {product.seller}
+                          </span>
                         </label>
-                        <div className=" pt-3 ">
-                          {/* ----- */}
-                          <button className="cursor-pointer h-6 w-6 bg-gray-400 border border-white inline-block ring-1 ring-gray-200 mr-2"></button>
-                          {/* ----- */}
-                          <button className="cursor-pointer h-6 w-6 bg-black border border-white inline-block ring-1 ring-gray-200 mr-2"></button>
-                          {/* ----- */}
-                          <button className="cursor-pointer h-6 w-6 bg-white border border-white inline-block ring-1 ring-gray-200 mr-2"></button>
-                          {/* ----- */}
-                          <button className="cursor-pointer h-6 w-6 bg-red-500 border border-white inline-block ring-1 ring-gray-200 mr-2"></button>
-                          {/* ----- */}
-                          <button className="cursor-pointer h-6 w-6 bg-yellow-500 border border-white inline-block ring-1 ring-gray-200 mr-2"></button>
-                          {/* ----- */}
-                          <button className="cursor-pointer h-6 w-6 bg-green-500 border border-white inline-block ring-1 ring-gray-200 mr-2"></button>
-                          {/* ----- */}
-                          <button className="cursor-pointer h-6 w-6 bg-blue-500 border border-white inline-block ring-1 ring-gray-200 mr-2"></button>
-                          {/* ----- */}
-                          <button className="cursor-pointer h-6 w-6 bg-purple-500 border border-white inline-block ring-1 ring-gray-200 mr-2"></button>
-                          {/* ----- */}
-                          <button className="cursor-pointer h-6 w-6 bg-pink-500 border border-white inline-block ring-1 ring-gray-200 mr-2"></button>
-                          {/* ----- */}
-                        </div>
-                      </div>
-                      {/* -------Quantity--------- */}
-                      <div className="my-4">
-                        <label className="text-gray-500 block">Quantity:</label>
-                        <div className=" border rounded inline-block mt-4">
-                          <div className=" flex items-center divide-x">
-                            <div className=" px-6 py-1">
-                              <p className="font-bold text-center"></p>
-                            </div>
+                        {/* -------4 GREAT REASONS TO BUY FROM US:----------- */}
+                        <div className=" mt-4">
+                          <h4 className="font-bold tracking-tighter text-gray-700">
+                            4 GREAT REASONS TO BUY FROM US:
+                          </h4>
+                          {/* ------ */}
+                          <div className=" my-5">
                             {/* ------- */}
-                            <div className=" px-4 py-1">
-                              {/* ------- */}
-                              <button className="block">
-                                <svg
-                                  xmlns="http://www.w3.org/2000/svg"
-                                  className="h-4 w-4 text-gray-500"
-                                  viewBox="0 0 20 20"
-                                  fill="currentColor"
-                                >
-                                  <path
-                                    fillRule="evenodd"
-                                    d="M14.707 12.707a1 1 0 01-1.414 0L10 9.414l-3.293 3.293a1 1 0 01-1.414-1.414l4-4a1 1 0 011.414 0l4 4a1 1 0 010 1.414z"
-                                    clipRule="evenodd"
-                                  />
-                                </svg>
-                              </button>
-                              {/* ------- */}
-                              <button className="block">
-                                <svg
-                                  xmlns="http://www.w3.org/2000/svg"
-                                  className="h-4 w-4 text-gray-500"
-                                  viewBox="0 0 20 20"
-                                  fill="currentColor"
-                                >
-                                  <path
-                                    fillRule="evenodd"
-                                    d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
-                                    clipRule="evenodd"
-                                  />
-                                </svg>
-                              </button>
-                            </div>
+                            <img
+                              className=" mr-4 inline-block w-12 duration-300 hover:opacity-70"
+                              src={Reason1}
+                              alt=""
+                            />
+                            {/* ------- */}
+                            <img
+                              className=" mr-4 inline-block w-12 duration-300 hover:opacity-70"
+                              src={Reason2}
+                              alt=""
+                            />
+                            {/* ------- */}
+                            <img
+                              className=" mr-4 inline-block w-12 duration-300 hover:opacity-70"
+                              src={Reason3}
+                              alt=""
+                            />
+                            {/* ------- */}
+                            <img
+                              className=" mr-4 inline-block w-12 duration-300 hover:opacity-70"
+                              src={Reason4}
+                              alt=""
+                            />
                           </div>
-                        </div>
-                        <div className="flex flex-col text-sm mt-1 pl-[2px]">
-                          {product.stock > 0 ? (
-                            <span className="font-bold text-green-600">
-                              In Stocks
-                            </span>
-                          ) : (
-                            <span className="font-bold text-red-600">
-                              Out of Stocks
-                            </span>
-                          )}
-                        </div>
-                      </div>
-                      {/* -------Button and Add to whitelist--------- */}
-                      <div className=" flex items-center space-x-2 my-6">
-                        {/* ----------- */}
-                        <button
-                          className="p-2 px-6 border-2 border-primary hover:border-primaryDarkShade duration-300 rounded-md text-sm
-                       bg-primary text-white hover:bg-primaryDarkShade"
-                        >
-                          Add to Cart
-                        </button>
-                        {/* ----------- */}
-                      </div>
-                      <label className="flex items-center mt-4">
-                        <span className="font-bold tracking-tighter text-gray-700">
-                          SELLER:
-                        </span>
-                        <span className="text-gray-600 text-sm ml-2">
-                          {product.seller}
-                        </span>
-                      </label>
-                      {/* -------4 GREAT REASONS TO BUY FROM US:----------- */}
-                      <div className=" mt-4">
-                        <h4 className="font-bold tracking-tighter text-gray-700">
-                          4 GREAT REASONS TO BUY FROM US:
-                        </h4>
-                        {/* ------ */}
-                        <div className=" my-5">
-                          {/* ------- */}
-                          <img
-                            className=" w-12 inline-block mr-4 hover:opacity-70 duration-300"
-                            src={Reason1}
-                            alt=""
-                          />
-                          {/* ------- */}
-                          <img
-                            className=" w-12 inline-block mr-4 hover:opacity-70 duration-300"
-                            src={Reason2}
-                            alt=""
-                          />
-                          {/* ------- */}
-                          <img
-                            className=" w-12 inline-block mr-4 hover:opacity-70 duration-300"
-                            src={Reason3}
-                            alt=""
-                          />
-                          {/* ------- */}
-                          <img
-                            className=" w-12 inline-block mr-4 hover:opacity-70 duration-300"
-                            src={Reason4}
-                            alt=""
-                          />
-                        </div>
-                        {/* ------ */}
-                        <div className="pt-4">
-                          <img
-                            className="inline-block mb-4 md:mr-2 mr-4"
-                            src={Pay1}
-                            alt=""
-                          />
-                          <img
-                            className="inline-block mb-4 md:mr-2 mr-4"
-                            src={Pay2}
-                            alt=""
-                          />
-                          <img
-                            className="inline-block mb-4 md:mr-2 mr-4"
-                            src={Pay4}
-                            alt=""
-                          />
+                          {/* ------ */}
+                          <div className="pt-4">
+                            <img
+                              className="mb-4 mr-4 inline-block md:mr-2"
+                              src={Pay1}
+                              alt=""
+                            />
+                            <img
+                              className="mb-4 mr-4 inline-block md:mr-2"
+                              src={Pay2}
+                              alt=""
+                            />
+                            <img
+                              className="mb-4 mr-4 inline-block md:mr-2"
+                              src={Pay4}
+                              alt=""
+                            />
+                          </div>
                         </div>
                       </div>
                     </div>
+                    <ProductInsights product={product} />
                   </div>
-                  <ProductInsights product={product} />
-                </div>
-              </>
-            )}
+                </>
+              ))}
           </div>
         </section>
       </main>

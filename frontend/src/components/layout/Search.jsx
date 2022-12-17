@@ -15,14 +15,14 @@ const Search = () => {
   useEffect(() => {
     function onKeyDown(event) {
       if (event.key === "k" && (event.metaKey || event.altKey)) {
-        setIsOpen(!isOpen);
+        setIsOpen((value) => !value);
       }
     }
     window.addEventListener("keydown", onKeyDown);
     return () => {
       window.removeEventListener("keydown", onKeyDown);
     };
-  }, [isOpen]);
+  }, []);
 
   const filteredProducts = query
     ? productsConstant.products.filter((product) =>
@@ -34,12 +34,12 @@ const Search = () => {
     <Transition.Root
       show={isOpen}
       as={Fragment}
-      afterLeave={() => setQuery("")}
+      // afterLeave={() => setQuery("")}
     >
       <Dialog
         open={isOpen}
         onClose={setIsOpen}
-        className="fixed inset-0 z-[90] overflow-y-auto p-4 pt-[25vh]"
+        className="fixed inset-0 z-[90] overflow-y-auto p-4 pt-[11vh]"
       >
         <Transition.Child
           enter="duration-300 ease-out"
@@ -62,10 +62,11 @@ const Search = () => {
           <Combobox
             onChange={(project) => {
               setIsOpen(false);
+              setQuery("");
               navigate(`/product/${project.id}`);
             }}
             as="div"
-            className="relative mx-auto max-w-xl divide-y divide-gray-100 overflow-hidden rounded-xl bg-white shadow-2xl ring-1
+            className="relative mx-auto min-w-[85%] max-w-xl divide-y divide-gray-100 overflow-hidden rounded-xl bg-white shadow-2xl ring-1
         ring-black/5"
           >
             <div className="flex items-center px-4">
@@ -88,7 +89,7 @@ const Search = () => {
                     {({ active }) => (
                       <div
                         className={`cursor-pointer space-x-1 px-4 py-2 ${
-                          active ? "bg-indigo-600" : "bg-white"
+                          active ? "bg-primary" : "bg-white"
                         }`}
                       >
                         <span
@@ -100,7 +101,7 @@ const Search = () => {
                         </span>
                         <span
                           className={`${
-                            active ? "text-indigo-200" : "text-gray-400"
+                            active ? "text-pink-100" : "text-gray-400"
                           }`}
                         >
                           in {product.category}
