@@ -584,10 +584,7 @@ const PopularItems = () => {
                             style={{ width: `${(product.ratings / 5) * 100}%` }}
                           ></div>
                         </div>
-                        <span className="text-gray-500 xsm:text-xs ml-2">
-                          ({product.numOfReviews}{" "}
-                          {product.numOfReviews < 2 ? "Review" : "Reviews"})
-                        </span>
+                        {calculateNumOfReviews(product)}
                       </div>
 
                       <div className=" flex items-center">

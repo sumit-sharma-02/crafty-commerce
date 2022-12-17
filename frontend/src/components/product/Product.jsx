@@ -5,6 +5,7 @@ import { clearErrors, getProductDetails } from "../../actions/product";
 import { useParams } from "react-router-dom";
 import { toast } from "react-toastify";
 import { motion } from "framer-motion";
+import Breadcrumb from "./Breadcrumb";
 import Loader from "../layout/Loader";
 import TopScroll from "../layout/TopScroll";
 import MetaData from "../layout/MetaData";
@@ -34,7 +35,6 @@ import Suitcase1 from "../../images/suitcase1.jpg";
 import Pay1 from "../../images/pay-1.webp";
 import Pay2 from "../../images/pay-2.webp";
 import Pay4 from "../../images/pay-4.webp";
-import Breadcrumb from "./Breadcrumb";
 
 const Product = () => {
   const [isCategorySideBarOpen, setIsCategorySideBarOpen] = useState(false);
@@ -233,10 +233,10 @@ const Product = () => {
                             </span>
                           </li>
                           {/* -- Catagory start-- */}
-                          <li className="p-4 hover:bg-gray-100">
+                          <li className="w-full h-max hover:bg-gray-100">
                             {/* --------Mega menu button----------- */}
                             <Link
-                              className="w-full  flex items-center justify-between text-gray-500 text-sm hover:text-primary"
+                              className="w-full p-4 flex items-center justify-between text-gray-500 text-sm hover:text-primary"
                               to={"/"}
                             >
                               <span>
@@ -246,9 +246,9 @@ const Product = () => {
                             </Link>
                           </li>
                           {/* ---- */}
-                          <li className="p-4 hover:bg-gray-100">
+                          <li className="w-full h-max hover:bg-gray-100">
                             <Link
-                              className="w-full  flex items-center justify-between text-gray-500 text-sm hover:text-primary"
+                              className="w-full p-4 flex items-center justify-between text-gray-500 text-sm hover:text-primary"
                               to={"/"}
                             >
                               <span>
@@ -258,9 +258,9 @@ const Product = () => {
                             </Link>
                           </li>
                           {/* ---- */}
-                          <li className="p-4 hover:bg-gray-100">
+                          <li className="w-full h-max hover:bg-gray-100">
                             <Link
-                              className="w-full  flex items-center justify-between text-gray-500 text-sm hover:text-primary"
+                              className="w-full p-4 flex items-center justify-between text-gray-500 text-sm hover:text-primary"
                               to={"/"}
                             >
                               <span>
@@ -280,9 +280,9 @@ const Product = () => {
                             </Link>
                           </li>
                           {/* ---- */}
-                          <li className="p-4 hover:bg-gray-100">
+                          <li className="w-full h-max hover:bg-gray-100">
                             <Link
-                              className="w-full  flex items-center justify-between text-gray-500 text-sm hover:text-primary"
+                              className="w-full p-4 flex items-center justify-between text-gray-500 text-sm hover:text-primary"
                               to={"/"}
                             >
                               <span>
@@ -292,10 +292,10 @@ const Product = () => {
                             </Link>
                           </li>
                           {/* ---- */}
-                          <li className="p-4 hover:bg-gray-100">
+                          <li className="w-full h-max hover:bg-gray-100">
                             {/* --------Mega menu button----------- */}
                             <Link
-                              className="w-full   flex items-center justify-between text-gray-500 text-sm"
+                              className="w-full p-4 flex items-center justify-between text-gray-500 text-sm hover:text-primary"
                               to={"/"}
                             >
                               <span>
@@ -305,9 +305,9 @@ const Product = () => {
                             </Link>
                           </li>
                           {/* ---- */}
-                          <li className="p-4 hover:bg-gray-100">
+                          <li className="w-full h-max hover:bg-gray-100">
                             <Link
-                              className="w-full  flex items-center justify-between text-gray-500 text-sm hover:text-primary"
+                              className="w-full p-4 flex items-center justify-between text-gray-500 text-sm hover:text-primary"
                               to={"/"}
                             >
                               <span>
@@ -327,9 +327,9 @@ const Product = () => {
                             </Link>
                           </li>
                           {/* ---- */}
-                          <li className="p-4 hover:bg-gray-100">
+                          <li className="w-full h-max hover:bg-gray-100">
                             <Link
-                              className="w-full  flex items-center justify-between text-gray-500 text-sm hover:text-primary"
+                              className="w-full p-4 flex items-center justify-between text-gray-500 text-sm hover:text-primary"
                               to={"/"}
                             >
                               <span>
@@ -349,9 +349,9 @@ const Product = () => {
                             </Link>
                           </li>
                           {/* ---- */}
-                          <li className="p-4 hover:bg-gray-100">
+                          <li className="w-full h-max hover:bg-gray-100">
                             <Link
-                              className="w-full  flex items-center justify-between text-gray-500 text-sm hover:text-primary"
+                              className="w-full p-4 flex items-center justify-between text-gray-500 text-sm hover:text-primary"
                               to={"/"}
                             >
                               <span>
@@ -371,9 +371,9 @@ const Product = () => {
                             </Link>
                           </li>
                           {/* ---- */}
-                          <li className="p-4 hover:bg-gray-100">
+                          <li className="w-full h-max hover:bg-gray-100">
                             <Link
-                              className="w-full  flex items-center justify-between text-gray-500 text-sm hover:text-primary"
+                              className="w-full p-4 flex items-center justify-between text-gray-500 text-sm hover:text-primary"
                               to={"/"}
                             >
                               <span>
@@ -454,7 +454,7 @@ const Product = () => {
               {/* ------------ */}
               <ul className=" border rounded divide-y">
                 {/* ---- */}
-                <li className="  p-3 flex items-center bg-gray-200 bg-opacity-80 rounded">
+                <li className="p-3 flex items-center bg-gray-200 bg-opacity-80 rounded">
                   <span>
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -476,10 +476,10 @@ const Product = () => {
                   </span>
                 </li>
                 {/* -- Catagory start-- */}
-                <li className="p-4 hover:bg-gray-100">
+                <li className="w-full h-max hover:bg-gray-100">
                   {/* --------Mega menu button----------- */}
                   <Link
-                    className="w-full  flex items-center justify-between text-gray-500 text-sm hover:text-primary"
+                    className="w-full p-4 flex items-center justify-between text-gray-500 text-sm hover:text-primary"
                     to={"/"}
                   >
                     <span>
@@ -489,9 +489,9 @@ const Product = () => {
                   </Link>
                 </li>
                 {/* ---- */}
-                <li className="p-4 hover:bg-gray-100">
+                <li className="w-full h-max hover:bg-gray-100">
                   <Link
-                    className="w-full  flex items-center justify-between text-gray-500 text-sm hover:text-primary"
+                    className="w-full p-4 flex items-center justify-between text-gray-500 text-sm hover:text-primary"
                     to={"/"}
                   >
                     <span>
@@ -501,9 +501,9 @@ const Product = () => {
                   </Link>
                 </li>
                 {/* ---- */}
-                <li className="p-4 hover:bg-gray-100">
+                <li className="w-full h-max hover:bg-gray-100">
                   <Link
-                    className="w-full  flex items-center justify-between text-gray-500 text-sm hover:text-primary"
+                    className="w-full p-4 flex items-center justify-between text-gray-500 text-sm hover:text-primary"
                     to={"/"}
                   >
                     <span>
@@ -523,9 +523,9 @@ const Product = () => {
                   </Link>
                 </li>
                 {/* ---- */}
-                <li className="p-4 hover:bg-gray-100">
+                <li className="w-full h-max hover:bg-gray-100">
                   <Link
-                    className="w-full  flex items-center justify-between text-gray-500 text-sm hover:text-primary"
+                    className="w-full p-4 flex items-center justify-between text-gray-500 text-sm hover:text-primary"
                     to={"/"}
                   >
                     <span>
@@ -535,10 +535,10 @@ const Product = () => {
                   </Link>
                 </li>
                 {/* ---- */}
-                <li className="p-4 hover:bg-gray-100">
+                <li className="w-full h-max hover:bg-gray-100">
                   {/* --------Mega menu button----------- */}
                   <Link
-                    className="w-full   flex items-center justify-between text-gray-500 text-sm"
+                    className="w-full p-4 flex items-center justify-between text-gray-500 text-sm hover:text-primary"
                     to={"/"}
                   >
                     <span>
@@ -548,9 +548,9 @@ const Product = () => {
                   </Link>
                 </li>
                 {/* ---- */}
-                <li className="p-4 hover:bg-gray-100">
+                <li className="w-full h-max hover:bg-gray-100">
                   <Link
-                    className="w-full  flex items-center justify-between text-gray-500 text-sm hover:text-primary"
+                    className="w-full p-4 flex items-center justify-between text-gray-500 text-sm hover:text-primary"
                     to={"/"}
                   >
                     <span>
@@ -570,9 +570,9 @@ const Product = () => {
                   </Link>
                 </li>
                 {/* ---- */}
-                <li className="p-4 hover:bg-gray-100">
+                <li className="w-full h-max hover:bg-gray-100">
                   <Link
-                    className="w-full  flex items-center justify-between text-gray-500 text-sm hover:text-primary"
+                    className="w-full p-4 flex items-center justify-between text-gray-500 text-sm hover:text-primary"
                     to={"/"}
                   >
                     <span>
@@ -592,9 +592,9 @@ const Product = () => {
                   </Link>
                 </li>
                 {/* ---- */}
-                <li className="p-4 hover:bg-gray-100">
+                <li className="w-full h-max hover:bg-gray-100">
                   <Link
-                    className="w-full  flex items-center justify-between text-gray-500 text-sm hover:text-primary"
+                    className="w-full p-4 flex items-center justify-between text-gray-500 text-sm hover:text-primary"
                     to={"/"}
                   >
                     <span>
@@ -614,9 +614,9 @@ const Product = () => {
                   </Link>
                 </li>
                 {/* ---- */}
-                <li className="p-4 hover:bg-gray-100">
+                <li className="w-full h-max hover:bg-gray-100">
                   <Link
-                    className="w-full  flex items-center justify-between text-gray-500 text-sm hover:text-primary"
+                    className="w-full p-4 flex items-center justify-between text-gray-500 text-sm hover:text-primary"
                     to={"/"}
                   >
                     <span>

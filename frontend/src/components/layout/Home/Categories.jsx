@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Autoplay } from "swiper";
 
@@ -23,7 +24,6 @@ import ClothingCover from "../../../images/clothing-cover.jpg";
 import CarouselCover1 from "../../../images/carousel-cover-1.webp";
 import CarouselCover2 from "../../../images/carousel-cover-2.webp";
 import CarouselCover3 from "../../../images/carousel-cover-3.webp";
-import { Link } from "react-router-dom";
 
 const Categories = () => {
   const [isGadgetCategoryOpen, setIsGadgetCategoryOpen] = useState(false);
