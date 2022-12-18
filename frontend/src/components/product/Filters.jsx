@@ -177,60 +177,6 @@ const Filters = (data) => {
                   123 (1)
                 </Link>
               </li>
-              <li className=" mb-3 flex items-center">
-                <input
-                  type="checkbox"
-                  className="roundedfocus:outline-none h-4 w-4 border border-gray-300 text-gray-500"
-                />
-                <Link className=" ml-2 hover:text-primary" to={"/products"}>
-                  Best (1)
-                </Link>
-              </li>
-              <li className=" mb-3 flex items-center">
-                <input
-                  type="checkbox"
-                  className="roundedfocus:outline-none h-4 w-4 border border-gray-300 text-gray-500"
-                />
-                <Link className=" ml-2 hover:text-primary" to={"/products"}>
-                  Catlyn (1)
-                </Link>
-              </li>
-              <li className=" mb-3 flex items-center">
-                <input
-                  type="checkbox"
-                  className="roundedfocus:outline-none h-4 w-4 border border-gray-300 text-gray-500"
-                />
-                <Link className=" ml-2 hover:text-primary" to={"/products"}>
-                  Cillum (1)
-                </Link>
-              </li>
-              <li className=" mb-3 flex items-center">
-                <input
-                  type="checkbox"
-                  className="roundedfocus:outline-none h-4 w-4 border border-gray-300 text-gray-500"
-                />
-                <Link className=" ml-2 hover:text-primary" to={"/products"}>
-                  Densinteu (1)
-                </Link>
-              </li>
-              <li className=" mb-3 flex items-center">
-                <input
-                  type="checkbox"
-                  className="roundedfocus:outline-none h-4 w-4 border border-gray-300 text-gray-500"
-                />
-                <Link className=" ml-2 hover:text-primary" to={"/products"}>
-                  Donec (1)
-                </Link>
-              </li>
-              <li className=" mb-3 flex items-center">
-                <input
-                  type="checkbox"
-                  className="roundedfocus:outline-none h-4 w-4 border border-gray-300 text-gray-500"
-                />
-                <Link className=" ml-2 hover:text-primary" to={"/products"}>
-                  FHD (1)
-                </Link>
-              </li>
             </ul>
           </div>
           {/* ------ */}

@@ -9,8 +9,12 @@ export const getProducts =
       dispatch({
         type: productsConstant.ALL_PRODUCTS_REQUEST,
       });
-      const path = `/api/v1/products?keyword=${keyword}&page=${currentPage}&price[lte]=${price[1]}&price[gte]=${price[0]}`;
-      const data = await axios.get(path);
+      let path = `/api/v1/products?keyword=${keyword}&page=${currentPage}&price[lte]=${price[1]}&price[gte]=${price[0]}`;
+      // if (category) {
+      //   path = `/api/v1/products?keyword=${keyword}&page=${currentPage}&price[lte]=${price[1]}&price[gte]=${price[0]}&category=${category}`;
+      // }
+
+      const { data } = await axios.get(path);
       dispatch({
         type: productsConstant.ALL_PRODUCTS_SUCCESS,
         payload: data,
