@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 
 // Images used
@@ -7,6 +6,7 @@ import Logo from "../../images/logo-b&w.png";
 import MasterCard from "../../images/pay-1.webp";
 import VisaCard from "../../images/pay-2.webp";
 import Paypal from "../../images/pay-4.webp";
+import FooterAccordion from "./FooterAccordion";
 
 // Icons used
 // import { IoLocationSharp } from "react-icons/io5";
@@ -24,10 +24,10 @@ const Footer = () => {
 
   return (
     <footer>
-      <div className="mt-10 sm:flex items-center justify-center sm:justify-between bg-primary py-5 xl:px-24 sm:px-10 px-4">
+      <div className="mt-10 items-center justify-center bg-primary py-5 px-4 sm:flex sm:justify-between sm:px-10 xl:px-24">
         <div className="cursor-pointer">
           <img
-            className="h-[90px] sm:mb-0 mb-6 sm:mx-0 mx-auto"
+            className="mx-auto mb-6 h-[90px] sm:mx-0 sm:mb-0"
             src={Logo}
             alt="Crafty Commerce Logo"
           />
@@ -60,24 +60,24 @@ const Footer = () => {
 
         <div className="flex items-center justify-center">
           <Link
-            className="mr-3 p-3 text-white duration-300 bg-black bg-opacity-25 rounded-full hover:bg-white hover:text-twitter"
+            className="mr-3 rounded-full bg-black bg-opacity-25 p-3 text-white duration-300 hover:bg-white hover:text-twitter"
             to={"/"}
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="currentColor"
-              className="bi bi-twitter w-4 h-4"
+              className="bi bi-twitter h-4 w-4"
               viewBox="0 0 16 16"
             >
               <path d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z" />
             </svg>
           </Link>
           <Link
-            className="mr-3 p-3 text-white duration-300 bg-black bg-opacity-25 rounded-full hover:bg-white hover:text-facebook"
+            className="mr-3 rounded-full bg-black bg-opacity-25 p-3 text-white duration-300 hover:bg-white hover:text-facebook"
             to={"/"}
           >
             <svg
-              className="svg-inline--fa fa-facebook-f fa-w-10 w-4 h-4"
+              className="svg-inline--fa fa-facebook-f fa-w-10 h-4 w-4"
               role="img"
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 320 512"
@@ -89,37 +89,37 @@ const Footer = () => {
             </svg>
           </Link>
           <Link
-            className="mr-3 p-3 text-white duration-300 bg-black bg-opacity-25 rounded-full hover:bg-white hover:text-primary"
+            className="mr-3 rounded-full bg-black bg-opacity-25 p-3 text-white duration-300 hover:bg-white hover:text-primary"
             to={"/"}
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="currentColor"
-              className="bi bi-instagram w-4 h-4 "
+              className="bi bi-instagram h-4 w-4 "
               viewBox="0 0 16 16"
             >
               <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z" />
             </svg>
           </Link>
           <Link
-            className="mr-3 p-3 text-white duration-300 bg-black bg-opacity-25 rounded-full hover:bg-white hover:text-youtube"
+            className="mr-3 rounded-full bg-black bg-opacity-25 p-3 text-white duration-300 hover:bg-white hover:text-youtube"
             to={"/"}
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="currentColor"
-              className="bi bi-youtube w-4 h-4"
+              className="bi bi-youtube h-4 w-4"
               viewBox="0 0 16 16"
             >
               <path d="M8.051 1.999h.089c.822.003 4.987.033 6.11.335a2.01 2.01 0 0 1 1.415 1.42c.101.38.172.883.22 1.402l.01.104.022.26.008.104c.065.914.073 1.77.074 1.957v.075c-.001.194-.01 1.108-.082 2.06l-.008.105-.009.104c-.05.572-.124 1.14-.235 1.558a2.007 2.007 0 0 1-1.415 1.42c-1.16.312-5.569.334-6.18.335h-.142c-.309 0-1.587-.006-2.927-.052l-.17-.006-.087-.004-.171-.007-.171-.007c-1.11-.049-2.167-.128-2.654-.26a2.007 2.007 0 0 1-1.415-1.419c-.111-.417-.185-.986-.235-1.558L.09 9.82l-.008-.104A31.4 31.4 0 0 1 0 7.68v-.123c.002-.215.01-.958.064-1.778l.007-.103.003-.052.008-.104.022-.26.01-.104c.048-.519.119-1.023.22-1.402a2.007 2.007 0 0 1 1.415-1.42c.487-.13 1.544-.21 2.654-.26l.17-.007.172-.006.086-.003.171-.007A99.788 99.788 0 0 1 7.858 2h.193zM6.4 5.209v4.818l4.157-2.408L6.4 5.209z" />
             </svg>
           </Link>
           <Link
-            className="mr-3 p-3 text-white duration-300 bg-black bg-opacity-25 rounded-full hover:bg-white hover:text-pinterest"
+            className="mr-3 rounded-full bg-black bg-opacity-25 p-3 text-white duration-300 hover:bg-white hover:text-pinterest"
             to={"/"}
           >
             <svg
-              className="svg-inline--fa fa-pinterest-p fa-w-12 w-4 h-4"
+              className="svg-inline--fa fa-pinterest-p fa-w-12 h-4 w-4"
               role="img"
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 384 512"
@@ -133,614 +133,21 @@ const Footer = () => {
         </div>
       </div>
 
-      <div className=" flex lg:hidden items-center justify-center py-5">
-        <div className="w-11/12">
-          <div className="mb-3">
-            <button
-              onClick={() =>
-                setIsFooterAccordionOpen([
-                  !isFooterAccordionOpen[0],
-                  false,
-                  false,
-                  false,
-                ])
-              }
-              className="bg-gray-200 bg-opacity-90 p-2 px-4 rounded border  focus:outline-none flex items-center justify-between w-full font-bold text-sm"
-            >
-              <span>CONTACT US</span>
-              <span className="p-1 bg-gray-400 rounded-full text-white">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="h-4 w-4"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                  transform={
-                    isFooterAccordionOpen[0] ? "rotate(180)" : "rotate(0)"
-                  }
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="4"
-                    d="M19 9l-7 7-7-7"
-                  />
-                </svg>
-              </span>
-            </button>
-            {isFooterAccordionOpen[0] && (
-              <motion.div
-                initial={{ opacity: 0, y: -20 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: 20 }}
-                transition={{
-                  type: "slide",
-                  bounce: 0.4,
-                  duration: 0.05,
-                  ease: "easeInOut",
-                }}
-                className="relative overflow-hidden transition-all duration-700"
-              >
-                <ul className=" p-5 pb-0">
-                  <li className="flex items-center text-gray-500 mb-4">
-                    <span className=" inline-block">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        fill="currentColor"
-                        className="bi bi-geo-alt-fill h-4 w-4"
-                        viewBox="0 0 16 16"
-                      >
-                        <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z" />
-                      </svg>
-                    </span>
-                    <span className=" ml-3">
-                      Shivpuri, West Sagarpur, New Delhi, India
-                    </span>
-                  </li>
-                  <li className="flex items-center text-gray-500 mb-4">
-                    <Link to={"/"}>
-                      <span className=" inline-block">
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          fill="currentColor"
-                          className="bi bi-telephone-fill w-4 h-4"
-                          viewBox="0 0 16 16"
-                        >
-                          <path
-                            fillRule="evenodd"
-                            d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z"
-                          />
-                        </svg>
-                      </span>
-                      <span className=" ml-3">(+91)1234567890</span>
-                    </Link>
-                  </li>
-                  <li className="flex items-center text-gray-500 mb-4">
-                    <a href="mailto:sumitsharma9968@gmail.com">
-                      <span className=" inline-block">
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          fill="currentColor"
-                          className="bi bi-envelope w-4 h-4"
-                          viewBox="0 0 16 16"
-                        >
-                          <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2zm13 2.383-4.758 2.855L15 11.114v-5.73zm-.034 6.878L9.271 8.82 8 9.583 6.728 8.82l-5.694 3.44A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.739zM1 11.114l4.758-2.876L1 5.383v5.73z" />
-                        </svg>
-                      </span>
-                      <span className=" ml-3">sumitsharma9968@gmail.com</span>
-                    </a>
-                  </li>
-                  <li className="flex items-center text-gray-500 mb-4">
-                    <span className=" inline-block">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        fill="currentColor"
-                        className="bi bi-clock w-4 h-4"
-                        viewBox="0 0 16 16"
-                      >
-                        <path d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71V3.5z" />
-                        <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0z" />
-                      </svg>
-                    </span>
-                    <span className=" ml-3">Open Time: 8:00AM - 8:00PM</span>
-                  </li>
-                </ul>
-              </motion.div>
-            )}
-          </div>
+      <FooterAccordion
+        isFooterAccordionOpen={isFooterAccordionOpen}
+        setIsFooterAccordionOpen={setIsFooterAccordionOpen}
+      />
 
-          <div className="mb-3">
-            <button
-              onClick={() =>
-                setIsFooterAccordionOpen([
-                  false,
-                  !isFooterAccordionOpen[1],
-                  false,
-                  false,
-                ])
-              }
-              className="bg-gray-200 bg-opacity-90 p-2 px-4 rounded border  focus:outline-none flex items-center justify-between w-full font-bold text-sm"
-            >
-              <span>OUR SHOPS</span>
-              <span className="transform duration-500 p-1 bg-gray-400 rounded-full text-white">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="h-4 w-4"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                  transform={
-                    isFooterAccordionOpen[1] ? "rotate(180)" : "rotate(0)"
-                  }
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="4"
-                    d="M19 9l-7 7-7-7"
-                  />
-                </svg>
-              </span>
-            </button>
-            {isFooterAccordionOpen[1] && (
-              <motion.div
-                initial={{ opacity: 0, y: -20 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: 20 }}
-                transition={{
-                  type: "slide",
-                  bounce: 0.4,
-                  duration: 0.05,
-                  ease: "easeInOut",
-                }}
-                className="relative overflow-hidden transition-all duration-700"
-              >
-                <ul className="p-5 pb-0">
-                  <li className=" text-gray-600 mb-2">
-                    <Link to={"/"}>
-                      <span className=" inline-block">
-                        <svg
-                          className="svg-inline--fa fa-dot-circle fa-w-16 w-2 h-2"
-                          role="img"
-                          xmlns="http://www.w3.org/2000/svg"
-                          viewBox="0 0 512 512"
-                        >
-                          <path
-                            fill="currentColor"
-                            d="M256 56c110.532 0 200 89.451 200 200 0 110.532-89.451 200-200 200-110.532 0-200-89.451-200-200 0-110.532 89.451-200 200-200m0-48C119.033 8 8 119.033 8 256s111.033 248 248 248 248-111.033 248-248S392.967 8 256 8zm0 168c-44.183 0-80 35.817-80 80s35.817 80 80 80 80-35.817 80-80-35.817-80-80-80z"
-                          ></path>
-                        </svg>
-                      </span>
-                      <span className=" ml-2">Product Support</span>
-                    </Link>
-                  </li>
-                  <li className=" text-gray-600 mb-2">
-                    <Link to={"/"}>
-                      <span className=" inline-block">
-                        <svg
-                          className="svg-inline--fa fa-dot-circle fa-w-16 w-2 h-2"
-                          role="img"
-                          xmlns="http://www.w3.org/2000/svg"
-                          viewBox="0 0 512 512"
-                        >
-                          <path
-                            fill="currentColor"
-                            d="M256 56c110.532 0 200 89.451 200 200 0 110.532-89.451 200-200 200-110.532 0-200-89.451-200-200 0-110.532 89.451-200 200-200m0-48C119.033 8 8 119.033 8 256s111.033 248 248 248 248-111.033 248-248S392.967 8 256 8zm0 168c-44.183 0-80 35.817-80 80s35.817 80 80 80 80-35.817 80-80-35.817-80-80-80z"
-                          ></path>
-                        </svg>
-                      </span>
-                      <span className=" ml-2">Shipping Policy</span>
-                    </Link>
-                  </li>
-                  <li className=" text-gray-600 mb-2">
-                    <Link to={"/"}>
-                      <span className=" inline-block">
-                        <svg
-                          className="svg-inline--fa fa-dot-circle fa-w-16 w-2 h-2"
-                          role="img"
-                          xmlns="http://www.w3.org/2000/svg"
-                          viewBox="0 0 512 512"
-                        >
-                          <path
-                            fill="currentColor"
-                            d="M256 56c110.532 0 200 89.451 200 200 0 110.532-89.451 200-200 200-110.532 0-200-89.451-200-200 0-110.532 89.451-200 200-200m0-48C119.033 8 8 119.033 8 256s111.033 248 248 248 248-111.033 248-248S392.967 8 256 8zm0 168c-44.183 0-80 35.817-80 80s35.817 80 80 80 80-35.817 80-80-35.817-80-80-80z"
-                          ></path>
-                        </svg>
-                      </span>
-                      <span className=" ml-2">Services</span>
-                    </Link>
-                  </li>
-                  <li className=" text-gray-600 mb-2">
-                    <Link to={"/"}>
-                      <span className=" inline-block">
-                        <svg
-                          className="svg-inline--fa fa-dot-circle fa-w-16 w-2 h-2"
-                          role="img"
-                          xmlns="http://www.w3.org/2000/svg"
-                          viewBox="0 0 512 512"
-                        >
-                          <path
-                            fill="currentColor"
-                            d="M256 56c110.532 0 200 89.451 200 200 0 110.532-89.451 200-200 200-110.532 0-200-89.451-200-200 0-110.532 89.451-200 200-200m0-48C119.033 8 8 119.033 8 256s111.033 248 248 248 248-111.033 248-248S392.967 8 256 8zm0 168c-44.183 0-80 35.817-80 80s35.817 80 80 80 80-35.817 80-80-35.817-80-80-80z"
-                          ></path>
-                        </svg>
-                      </span>
-                      <span className=" ml-2">Conditions</span>
-                    </Link>
-                  </li>
-                  <li className=" text-gray-600 mb-2">
-                    <Link to={"/"}>
-                      <span className=" inline-block">
-                        <svg
-                          className="svg-inline--fa fa-dot-circle fa-w-16 w-2 h-2"
-                          role="img"
-                          xmlns="http://www.w3.org/2000/svg"
-                          viewBox="0 0 512 512"
-                        >
-                          <path
-                            fill="currentColor"
-                            d="M256 56c110.532 0 200 89.451 200 200 0 110.532-89.451 200-200 200-110.532 0-200-89.451-200-200 0-110.532 89.451-200 200-200m0-48C119.033 8 8 119.033 8 256s111.033 248 248 248 248-111.033 248-248S392.967 8 256 8zm0 168c-44.183 0-80 35.817-80 80s35.817 80 80 80 80-35.817 80-80-35.817-80-80-80z"
-                          ></path>
-                        </svg>
-                      </span>
-                      <span className=" ml-2">Privacy Policy</span>
-                    </Link>
-                  </li>
-                  <li className=" text-gray-600 mb-2">
-                    <Link to={"/"}>
-                      <span className=" inline-block">
-                        <svg
-                          className="svg-inline--fa fa-dot-circle fa-w-16 w-2 h-2"
-                          role="img"
-                          xmlns="http://www.w3.org/2000/svg"
-                          viewBox="0 0 512 512"
-                        >
-                          <path
-                            fill="currentColor"
-                            d="M256 56c110.532 0 200 89.451 200 200 0 110.532-89.451 200-200 200-110.532 0-200-89.451-200-200 0-110.532 89.451-200 200-200m0-48C119.033 8 8 119.033 8 256s111.033 248 248 248 248-111.033 248-248S392.967 8 256 8zm0 168c-44.183 0-80 35.817-80 80s35.817 80 80 80 80-35.817 80-80-35.817-80-80-80z"
-                          ></path>
-                        </svg>
-                      </span>
-                      <span className=" ml-2">Return Exchange</span>
-                    </Link>
-                  </li>
-                </ul>
-              </motion.div>
-            )}
-          </div>
-
-          <div className="mb-3">
-            <button
-              onClick={() =>
-                setIsFooterAccordionOpen([
-                  false,
-                  false,
-                  !isFooterAccordionOpen[2],
-                  false,
-                ])
-              }
-              className="bg-gray-200 bg-opacity-90 p-2 px-4 rounded border  focus:outline-none flex items-center justify-between w-full font-bold text-sm"
-            >
-              <span>INFORMATION</span>
-              <span className="transform duration-500 p-1 bg-gray-400 rounded-full text-white">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="h-4 w-4"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                  transform={
-                    isFooterAccordionOpen[2] ? "rotate(180)" : "rotate(0)"
-                  }
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="4"
-                    d="M19 9l-7 7-7-7"
-                  />
-                </svg>
-              </span>
-            </button>
-            {isFooterAccordionOpen[2] && (
-              <motion.div
-                initial={{ opacity: 0, y: -20 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: 20 }}
-                transition={{
-                  type: "slide",
-                  bounce: 0.4,
-                  duration: 0.05,
-                  ease: "easeInOut",
-                }}
-                className="relative overflow-hidden transition-all duration-700"
-              >
-                <ul className=" p-5 pb-0">
-                  <li className=" text-gray-600 mb-2">
-                    <Link to={"/"}>
-                      <span className=" inline-block">
-                        <svg
-                          className="svg-inline--fa fa-dot-circle fa-w-16 w-2 h-2"
-                          role="img"
-                          xmlns="http://www.w3.org/2000/svg"
-                          viewBox="0 0 512 512"
-                        >
-                          <path
-                            fill="currentColor"
-                            d="M256 56c110.532 0 200 89.451 200 200 0 110.532-89.451 200-200 200-110.532 0-200-89.451-200-200 0-110.532 89.451-200 200-200m0-48C119.033 8 8 119.033 8 256s111.033 248 248 248 248-111.033 248-248S392.967 8 256 8zm0 168c-44.183 0-80 35.817-80 80s35.817 80 80 80 80-35.817 80-80-35.817-80-80-80z"
-                          ></path>
-                        </svg>
-                      </span>
-                      <span className=" ml-2">Layout</span>
-                    </Link>
-                  </li>
-                  <li className=" text-gray-600 mb-2">
-                    <Link to={"/"}>
-                      <span className=" inline-block">
-                        <svg
-                          className="svg-inline--fa fa-dot-circle fa-w-16 w-2 h-2"
-                          role="img"
-                          xmlns="http://www.w3.org/2000/svg"
-                          viewBox="0 0 512 512"
-                        >
-                          <path
-                            fill="currentColor"
-                            d="M256 56c110.532 0 200 89.451 200 200 0 110.532-89.451 200-200 200-110.532 0-200-89.451-200-200 0-110.532 89.451-200 200-200m0-48C119.033 8 8 119.033 8 256s111.033 248 248 248 248-111.033 248-248S392.967 8 256 8zm0 168c-44.183 0-80 35.817-80 80s35.817 80 80 80 80-35.817 80-80-35.817-80-80-80z"
-                          ></path>
-                        </svg>
-                      </span>
-                      <span className=" ml-2">Features</span>
-                    </Link>
-                  </li>
-                  <li className=" text-gray-600 mb-2">
-                    <Link to={"/"}>
-                      <span className=" inline-block">
-                        <svg
-                          className="svg-inline--fa fa-dot-circle fa-w-16 w-2 h-2"
-                          role="img"
-                          xmlns="http://www.w3.org/2000/svg"
-                          viewBox="0 0 512 512"
-                        >
-                          <path
-                            fill="currentColor"
-                            d="M256 56c110.532 0 200 89.451 200 200 0 110.532-89.451 200-200 200-110.532 0-200-89.451-200-200 0-110.532 89.451-200 200-200m0-48C119.033 8 8 119.033 8 256s111.033 248 248 248 248-111.033 248-248S392.967 8 256 8zm0 168c-44.183 0-80 35.817-80 80s35.817 80 80 80 80-35.817 80-80-35.817-80-80-80z"
-                          ></path>
-                        </svg>
-                      </span>
-                      <span className=" ml-2">Shop</span>
-                    </Link>
-                  </li>
-                  <li className=" text-gray-600 mb-2">
-                    <Link to={"/"}>
-                      <span className=" inline-block">
-                        <svg
-                          className="svg-inline--fa fa-dot-circle fa-w-16 w-2 h-2"
-                          role="img"
-                          xmlns="http://www.w3.org/2000/svg"
-                          viewBox="0 0 512 512"
-                        >
-                          <path
-                            fill="currentColor"
-                            d="M256 56c110.532 0 200 89.451 200 200 0 110.532-89.451 200-200 200-110.532 0-200-89.451-200-200 0-110.532 89.451-200 200-200m0-48C119.033 8 8 119.033 8 256s111.033 248 248 248 248-111.033 248-248S392.967 8 256 8zm0 168c-44.183 0-80 35.817-80 80s35.817 80 80 80 80-35.817 80-80-35.817-80-80-80z"
-                          ></path>
-                        </svg>
-                      </span>
-                      <span className=" ml-2">Bonus page</span>
-                    </Link>
-                  </li>
-                  <li className=" text-gray-600 mb-2">
-                    <Link to={"/"}>
-                      <span className=" inline-block">
-                        <svg
-                          className="svg-inline--fa fa-dot-circle fa-w-16 w-2 h-2"
-                          role="img"
-                          xmlns="http://www.w3.org/2000/svg"
-                          viewBox="0 0 512 512"
-                        >
-                          <path
-                            fill="currentColor"
-                            d="M256 56c110.532 0 200 89.451 200 200 0 110.532-89.451 200-200 200-110.532 0-200-89.451-200-200 0-110.532 89.451-200 200-200m0-48C119.033 8 8 119.033 8 256s111.033 248 248 248 248-111.033 248-248S392.967 8 256 8zm0 168c-44.183 0-80 35.817-80 80s35.817 80 80 80 80-35.817 80-80-35.817-80-80-80z"
-                          ></path>
-                        </svg>
-                      </span>
-                      <span className=" ml-2">Blog</span>
-                    </Link>
-                  </li>
-                  <li className=" text-gray-600 mb-2">
-                    <Link to={"/"}>
-                      <span className=" inline-block">
-                        <svg
-                          className="svg-inline--fa fa-dot-circle fa-w-16 w-2 h-2"
-                          role="img"
-                          xmlns="http://www.w3.org/2000/svg"
-                          viewBox="0 0 512 512"
-                        >
-                          <path
-                            fill="currentColor"
-                            d="M256 56c110.532 0 200 89.451 200 200 0 110.532-89.451 200-200 200-110.532 0-200-89.451-200-200 0-110.532 89.451-200 200-200m0-48C119.033 8 8 119.033 8 256s111.033 248 248 248 248-111.033 248-248S392.967 8 256 8zm0 168c-44.183 0-80 35.817-80 80s35.817 80 80 80 80-35.817 80-80-35.817-80-80-80z"
-                          ></path>
-                        </svg>
-                      </span>
-                      <span className=" ml-2">Contact Us</span>
-                    </Link>
-                  </li>
-                </ul>
-              </motion.div>
-            )}
-          </div>
-
-          <div className="mb-3">
-            <button
-              onClick={() =>
-                setIsFooterAccordionOpen([
-                  false,
-                  false,
-                  false,
-                  !isFooterAccordionOpen[3],
-                ])
-              }
-              className="bg-gray-200 bg-opacity-90 p-2 px-4 rounded border  focus:outline-none flex items-center justify-between w-full font-bold text-sm"
-            >
-              <span>ALL CATEGORIES</span>
-              <span className="transform duration-500 p-1 bg-gray-400 rounded-full text-white">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="h-4 w-4"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                  transform={
-                    isFooterAccordionOpen[3] ? "rotate(180)" : "rotate(0)"
-                  }
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="4"
-                    d="M19 9l-7 7-7-7"
-                  />
-                </svg>
-              </span>
-            </button>
-            {isFooterAccordionOpen[3] && (
-              <motion.div
-                initial={{ opacity: 0, y: -20 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: 20 }}
-                transition={{
-                  type: "slide",
-                  bounce: 0.4,
-                  duration: 0.05,
-                  ease: "easeInOut",
-                }}
-                className="relative overflow-hidden transition-all duration-700"
-              >
-                <ul className=" p-5 pb-0">
-                  <li className=" text-gray-600 mb-2">
-                    <Link to={"/"}>
-                      <span className=" inline-block">
-                        <svg
-                          className="svg-inline--fa fa-dot-circle fa-w-16 w-2 h-2"
-                          role="img"
-                          xmlns="http://www.w3.org/2000/svg"
-                          viewBox="0 0 512 512"
-                        >
-                          <path
-                            fill="currentColor"
-                            d="M256 56c110.532 0 200 89.451 200 200 0 110.532-89.451 200-200 200-110.532 0-200-89.451-200-200 0-110.532 89.451-200 200-200m0-48C119.033 8 8 119.033 8 256s111.033 248 248 248 248-111.033 248-248S392.967 8 256 8zm0 168c-44.183 0-80 35.817-80 80s35.817 80 80 80 80-35.817 80-80-35.817-80-80-80z"
-                          ></path>
-                        </svg>
-                      </span>
-                      <span className=" ml-2">Accessories</span>
-                    </Link>
-                  </li>
-                  <li className=" text-gray-600 mb-2">
-                    <Link to={"/"}>
-                      <span className=" inline-block">
-                        <svg
-                          className="svg-inline--fa fa-dot-circle fa-w-16 w-2 h-2"
-                          role="img"
-                          xmlns="http://www.w3.org/2000/svg"
-                          viewBox="0 0 512 512"
-                        >
-                          <path
-                            fill="currentColor"
-                            d="M256 56c110.532 0 200 89.451 200 200 0 110.532-89.451 200-200 200-110.532 0-200-89.451-200-200 0-110.532 89.451-200 200-200m0-48C119.033 8 8 119.033 8 256s111.033 248 248 248 248-111.033 248-248S392.967 8 256 8zm0 168c-44.183 0-80 35.817-80 80s35.817 80 80 80 80-35.817 80-80-35.817-80-80-80z"
-                          ></path>
-                        </svg>
-                      </span>
-                      <span className=" ml-2">Computer</span>
-                    </Link>
-                  </li>
-                  <li className=" text-gray-600 mb-2">
-                    <Link to={"/"}>
-                      <span className=" inline-block">
-                        <svg
-                          className="svg-inline--fa fa-dot-circle fa-w-16 w-2 h-2"
-                          role="img"
-                          xmlns="http://www.w3.org/2000/svg"
-                          viewBox="0 0 512 512"
-                        >
-                          <path
-                            fill="currentColor"
-                            d="M256 56c110.532 0 200 89.451 200 200 0 110.532-89.451 200-200 200-110.532 0-200-89.451-200-200 0-110.532 89.451-200 200-200m0-48C119.033 8 8 119.033 8 256s111.033 248 248 248 248-111.033 248-248S392.967 8 256 8zm0 168c-44.183 0-80 35.817-80 80s35.817 80 80 80 80-35.817 80-80-35.817-80-80-80z"
-                          ></path>
-                        </svg>
-                      </span>
-                      <span className=" ml-2">Maternity</span>
-                    </Link>
-                  </li>
-                  <li className=" text-gray-600 mb-2">
-                    <Link to={"/"}>
-                      <span className=" inline-block">
-                        <svg
-                          className="svg-inline--fa fa-dot-circle fa-w-16 w-2 h-2"
-                          role="img"
-                          xmlns="http://www.w3.org/2000/svg"
-                          viewBox="0 0 512 512"
-                        >
-                          <path
-                            fill="currentColor"
-                            d="M256 56c110.532 0 200 89.451 200 200 0 110.532-89.451 200-200 200-110.532 0-200-89.451-200-200 0-110.532 89.451-200 200-200m0-48C119.033 8 8 119.033 8 256s111.033 248 248 248 248-111.033 248-248S392.967 8 256 8zm0 168c-44.183 0-80 35.817-80 80s35.817 80 80 80 80-35.817 80-80-35.817-80-80-80z"
-                          ></path>
-                        </svg>
-                      </span>
-                      <span className=" ml-2">Smartphone</span>
-                    </Link>
-                  </li>
-                  <li className=" text-gray-600 mb-2">
-                    <Link to={"/"}>
-                      <span className=" inline-block">
-                        <svg
-                          className="svg-inline--fa fa-dot-circle fa-w-16 w-2 h-2"
-                          role="img"
-                          xmlns="http://www.w3.org/2000/svg"
-                          viewBox="0 0 512 512"
-                        >
-                          <path
-                            fill="currentColor"
-                            d="M256 56c110.532 0 200 89.451 200 200 0 110.532-89.451 200-200 200-110.532 0-200-89.451-200-200 0-110.532 89.451-200 200-200m0-48C119.033 8 8 119.033 8 256s111.033 248 248 248 248-111.033 248-248S392.967 8 256 8zm0 168c-44.183 0-80 35.817-80 80s35.817 80 80 80 80-35.817 80-80-35.817-80-80-80z"
-                          ></path>
-                        </svg>
-                      </span>
-                      <span className=" ml-2">Jewelry & Watches</span>
-                    </Link>
-                  </li>
-                  <li className=" text-gray-600 mb-2">
-                    <Link to={"/"}>
-                      <span className=" inline-block">
-                        <svg
-                          className="svg-inline--fa fa-dot-circle fa-w-16 w-2 h-2"
-                          role="img"
-                          xmlns="http://www.w3.org/2000/svg"
-                          viewBox="0 0 512 512"
-                        >
-                          <path
-                            fill="currentColor"
-                            d="M256 56c110.532 0 200 89.451 200 200 0 110.532-89.451 200-200 200-110.532 0-200-89.451-200-200 0-110.532 89.451-200 200-200m0-48C119.033 8 8 119.033 8 256s111.033 248 248 248 248-111.033 248-248S392.967 8 256 8zm0 168c-44.183 0-80 35.817-80 80s35.817 80 80 80 80-35.817 80-80-35.817-80-80-80z"
-                          ></path>
-                        </svg>
-                      </span>
-                      <span className=" ml-2">View All</span>
-                    </Link>
-                  </li>
-                </ul>
-              </motion.div>
-            )}
-          </div>
-        </div>
-      </div>
-
-      <div className="lg:grid hidden md:grid-cols-6  xl:gap-6 border-t py-5 xl:px-24 sm:px-10 px-4">
+      <div className="hidden border-t py-5  px-4 sm:px-10 md:grid-cols-6 lg:grid xl:gap-6 xl:px-24">
         <div className=" col-span-2">
           <div className=" mb-8">
-            <h3 className=" font-bold leading-loose text-sm">CONTACT US</h3>
+            <h3 className=" text-sm font-bold leading-loose">CONTACT US</h3>
             <div className="h-0.5 w-20 bg-primary"></div>
           </div>
 
           <div>
             <ul>
-              <li className="flex items-center text-gray-500 mb-4">
+              <li className="mb-4 flex items-center text-gray-500">
                 <span className=" inline-block">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -756,13 +163,13 @@ const Footer = () => {
                   Shivpuri, West Sagarpur, New Delhi, India
                 </span>
               </li>
-              <li className="flex items-center text-gray-500 mb-4">
+              <li className="mb-4 flex items-center text-gray-500">
                 <Link to={"/"}>
                   <span className=" inline-block">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       fill="currentColor"
-                      className="bi bi-telephone-fill w-4 h-4"
+                      className="bi bi-telephone-fill h-4 w-4"
                       viewBox="0 0 16 16"
                     >
                       <path
@@ -774,13 +181,13 @@ const Footer = () => {
                   <span className=" ml-3">(+91)1234567890</span>
                 </Link>
               </li>
-              <li className="flex items-center text-gray-500 mb-4">
+              <li className="mb-4 flex items-center text-gray-500">
                 <a href="mailto:sumitsharma9968@gmail.com">
                   <span className=" inline-block">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       fill="currentColor"
-                      className="bi bi-envelope w-4 h-4"
+                      className="bi bi-envelope h-4 w-4"
                       viewBox="0 0 16 16"
                     >
                       <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2zm13 2.383-4.758 2.855L15 11.114v-5.73zm-.034 6.878L9.271 8.82 8 9.583 6.728 8.82l-5.694 3.44A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.739zM1 11.114l4.758-2.876L1 5.383v5.73z" />
@@ -789,12 +196,12 @@ const Footer = () => {
                   <span className=" ml-3">sumitsharma9968@gmail.com</span>
                 </a>
               </li>
-              <li className="flex items-center text-gray-500 mb-4">
+              <li className="mb-4 flex items-center text-gray-500">
                 <span className=" inline-block">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     fill="currentColor"
-                    className="bi bi-clock w-4 h-4"
+                    className="bi bi-clock h-4 w-4"
                     viewBox="0 0 16 16"
                   >
                     <path d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71V3.5z" />
@@ -809,17 +216,17 @@ const Footer = () => {
 
         <div>
           <div className=" mb-8">
-            <h3 className=" font-bold leading-loose text-sm">OUR SHOPS</h3>
+            <h3 className=" text-sm font-bold leading-loose">OUR SHOPS</h3>
             <div className="h-0.5 w-20 bg-primary"></div>
           </div>
 
           <div>
             <ul>
-              <li className=" text-gray-600 mb-2">
+              <li className=" mb-2 text-gray-600">
                 <Link to={"/"}>
                   <span className=" inline-block">
                     <svg
-                      className="svg-inline--fa fa-dot-circle fa-w-16 w-2 h-2"
+                      className="svg-inline--fa fa-dot-circle fa-w-16 h-2 w-2"
                       role="img"
                       xmlns="http://www.w3.org/2000/svg"
                       viewBox="0 0 512 512"
@@ -833,11 +240,11 @@ const Footer = () => {
                   <span className=" ml-2">Product Support</span>
                 </Link>
               </li>
-              <li className=" text-gray-600 mb-2">
+              <li className=" mb-2 text-gray-600">
                 <Link to={"/"}>
                   <span className=" inline-block">
                     <svg
-                      className="svg-inline--fa fa-dot-circle fa-w-16 w-2 h-2"
+                      className="svg-inline--fa fa-dot-circle fa-w-16 h-2 w-2"
                       role="img"
                       xmlns="http://www.w3.org/2000/svg"
                       viewBox="0 0 512 512"
@@ -851,11 +258,11 @@ const Footer = () => {
                   <span className=" ml-2">Shipping Policy</span>
                 </Link>
               </li>
-              <li className=" text-gray-600 mb-2">
+              <li className=" mb-2 text-gray-600">
                 <Link to={"/"}>
                   <span className=" inline-block">
                     <svg
-                      className="svg-inline--fa fa-dot-circle fa-w-16 w-2 h-2"
+                      className="svg-inline--fa fa-dot-circle fa-w-16 h-2 w-2"
                       role="img"
                       xmlns="http://www.w3.org/2000/svg"
                       viewBox="0 0 512 512"
@@ -869,11 +276,11 @@ const Footer = () => {
                   <span className=" ml-2">Services</span>
                 </Link>
               </li>
-              <li className=" text-gray-600 mb-2">
+              <li className=" mb-2 text-gray-600">
                 <Link to={"/"}>
                   <span className=" inline-block">
                     <svg
-                      className="svg-inline--fa fa-dot-circle fa-w-16 w-2 h-2"
+                      className="svg-inline--fa fa-dot-circle fa-w-16 h-2 w-2"
                       role="img"
                       xmlns="http://www.w3.org/2000/svg"
                       viewBox="0 0 512 512"
@@ -887,11 +294,11 @@ const Footer = () => {
                   <span className=" ml-2">Conditions</span>
                 </Link>
               </li>
-              <li className=" text-gray-600 mb-2">
+              <li className=" mb-2 text-gray-600">
                 <Link to={"/"}>
                   <span className=" inline-block">
                     <svg
-                      className="svg-inline--fa fa-dot-circle fa-w-16 w-2 h-2"
+                      className="svg-inline--fa fa-dot-circle fa-w-16 h-2 w-2"
                       role="img"
                       xmlns="http://www.w3.org/2000/svg"
                       viewBox="0 0 512 512"
@@ -905,11 +312,11 @@ const Footer = () => {
                   <span className=" ml-2">Privacy Policy</span>
                 </Link>
               </li>
-              <li className=" text-gray-600 mb-2">
+              <li className=" mb-2 text-gray-600">
                 <Link to={"/"}>
                   <span className=" inline-block">
                     <svg
-                      className="svg-inline--fa fa-dot-circle fa-w-16 w-2 h-2"
+                      className="svg-inline--fa fa-dot-circle fa-w-16 h-2 w-2"
                       role="img"
                       xmlns="http://www.w3.org/2000/svg"
                       viewBox="0 0 512 512"
@@ -929,17 +336,17 @@ const Footer = () => {
 
         <div>
           <div className=" mb-8">
-            <h3 className=" font-bold leading-loose text-sm">INFORMATION</h3>
+            <h3 className=" text-sm font-bold leading-loose">INFORMATION</h3>
             <div className="h-0.5 w-24 bg-primary"></div>
           </div>
 
           <div>
             <ul>
-              <li className=" text-gray-600 mb-2">
+              <li className=" mb-2 text-gray-600">
                 <Link to={"/"}>
                   <span className=" inline-block">
                     <svg
-                      className="svg-inline--fa fa-dot-circle fa-w-16 w-2 h-2"
+                      className="svg-inline--fa fa-dot-circle fa-w-16 h-2 w-2"
                       role="img"
                       xmlns="http://www.w3.org/2000/svg"
                       viewBox="0 0 512 512"
@@ -953,11 +360,11 @@ const Footer = () => {
                   <span className=" ml-2">Layout</span>
                 </Link>
               </li>
-              <li className=" text-gray-600 mb-2">
+              <li className=" mb-2 text-gray-600">
                 <Link to={"/"}>
                   <span className=" inline-block">
                     <svg
-                      className="svg-inline--fa fa-dot-circle fa-w-16 w-2 h-2"
+                      className="svg-inline--fa fa-dot-circle fa-w-16 h-2 w-2"
                       role="img"
                       xmlns="http://www.w3.org/2000/svg"
                       viewBox="0 0 512 512"
@@ -971,11 +378,11 @@ const Footer = () => {
                   <span className=" ml-2">Features</span>
                 </Link>
               </li>
-              <li className=" text-gray-600 mb-2">
+              <li className=" mb-2 text-gray-600">
                 <Link to={"/"}>
                   <span className=" inline-block">
                     <svg
-                      className="svg-inline--fa fa-dot-circle fa-w-16 w-2 h-2"
+                      className="svg-inline--fa fa-dot-circle fa-w-16 h-2 w-2"
                       role="img"
                       xmlns="http://www.w3.org/2000/svg"
                       viewBox="0 0 512 512"
@@ -989,11 +396,11 @@ const Footer = () => {
                   <span className=" ml-2">Shop</span>
                 </Link>
               </li>
-              <li className=" text-gray-600 mb-2">
+              <li className=" mb-2 text-gray-600">
                 <Link to={"/"}>
                   <span className=" inline-block">
                     <svg
-                      className="svg-inline--fa fa-dot-circle fa-w-16 w-2 h-2"
+                      className="svg-inline--fa fa-dot-circle fa-w-16 h-2 w-2"
                       role="img"
                       xmlns="http://www.w3.org/2000/svg"
                       viewBox="0 0 512 512"
@@ -1007,11 +414,11 @@ const Footer = () => {
                   <span className=" ml-2">Bonus page</span>
                 </Link>
               </li>
-              <li className=" text-gray-600 mb-2">
+              <li className=" mb-2 text-gray-600">
                 <Link to={"/"}>
                   <span className=" inline-block">
                     <svg
-                      className="svg-inline--fa fa-dot-circle fa-w-16 w-2 h-2"
+                      className="svg-inline--fa fa-dot-circle fa-w-16 h-2 w-2"
                       role="img"
                       xmlns="http://www.w3.org/2000/svg"
                       viewBox="0 0 512 512"
@@ -1025,11 +432,11 @@ const Footer = () => {
                   <span className=" ml-2">Blog</span>
                 </Link>
               </li>
-              <li className=" text-gray-600 mb-2">
+              <li className=" mb-2 text-gray-600">
                 <Link to={"/"}>
                   <span className=" inline-block">
                     <svg
-                      className="svg-inline--fa fa-dot-circle fa-w-16 w-2 h-2"
+                      className="svg-inline--fa fa-dot-circle fa-w-16 h-2 w-2"
                       role="img"
                       xmlns="http://www.w3.org/2000/svg"
                       viewBox="0 0 512 512"
@@ -1049,17 +456,17 @@ const Footer = () => {
 
         <div>
           <div className=" mb-8">
-            <h3 className=" font-bold leading-loose text-sm">ALL CATEGORIES</h3>
+            <h3 className=" text-sm font-bold leading-loose">ALL CATEGORIES</h3>
             <div className="h-0.5 w-28 bg-primary"></div>
           </div>
 
           <div>
             <ul>
-              <li className=" text-gray-600 mb-2">
+              <li className=" mb-2 text-gray-600">
                 <Link to={"/"}>
                   <span className=" inline-block">
                     <svg
-                      className="svg-inline--fa fa-dot-circle fa-w-16 w-2 h-2"
+                      className="svg-inline--fa fa-dot-circle fa-w-16 h-2 w-2"
                       role="img"
                       xmlns="http://www.w3.org/2000/svg"
                       viewBox="0 0 512 512"
@@ -1073,11 +480,11 @@ const Footer = () => {
                   <span className=" ml-2">Accessories</span>
                 </Link>
               </li>
-              <li className=" text-gray-600 mb-2">
+              <li className=" mb-2 text-gray-600">
                 <Link to={"/"}>
                   <span className=" inline-block">
                     <svg
-                      className="svg-inline--fa fa-dot-circle fa-w-16 w-2 h-2"
+                      className="svg-inline--fa fa-dot-circle fa-w-16 h-2 w-2"
                       role="img"
                       xmlns="http://www.w3.org/2000/svg"
                       viewBox="0 0 512 512"
@@ -1091,11 +498,11 @@ const Footer = () => {
                   <span className=" ml-2">Computer</span>
                 </Link>
               </li>
-              <li className=" text-gray-600 mb-2">
+              <li className=" mb-2 text-gray-600">
                 <Link to={"/"}>
                   <span className=" inline-block">
                     <svg
-                      className="svg-inline--fa fa-dot-circle fa-w-16 w-2 h-2"
+                      className="svg-inline--fa fa-dot-circle fa-w-16 h-2 w-2"
                       role="img"
                       xmlns="http://www.w3.org/2000/svg"
                       viewBox="0 0 512 512"
@@ -1109,11 +516,11 @@ const Footer = () => {
                   <span className=" ml-2">Maternity</span>
                 </Link>
               </li>
-              <li className=" text-gray-600 mb-2">
+              <li className=" mb-2 text-gray-600">
                 <Link to={"/"}>
                   <span className=" inline-block">
                     <svg
-                      className="svg-inline--fa fa-dot-circle fa-w-16 w-2 h-2"
+                      className="svg-inline--fa fa-dot-circle fa-w-16 h-2 w-2"
                       role="img"
                       xmlns="http://www.w3.org/2000/svg"
                       viewBox="0 0 512 512"
@@ -1127,11 +534,11 @@ const Footer = () => {
                   <span className=" ml-2">Smartphone</span>
                 </Link>
               </li>
-              <li className=" text-gray-600 mb-2">
+              <li className=" mb-2 text-gray-600">
                 <Link to={"/"}>
                   <span className=" inline-block">
                     <svg
-                      className="svg-inline--fa fa-dot-circle fa-w-16 w-2 h-2"
+                      className="svg-inline--fa fa-dot-circle fa-w-16 h-2 w-2"
                       role="img"
                       xmlns="http://www.w3.org/2000/svg"
                       viewBox="0 0 512 512"
@@ -1145,11 +552,11 @@ const Footer = () => {
                   <span className=" ml-2">Jewelry & Watches</span>
                 </Link>
               </li>
-              <li className=" text-gray-600 mb-2">
+              <li className=" mb-2 text-gray-600">
                 <Link to={"/"}>
                   <span className=" inline-block">
                     <svg
-                      className="svg-inline--fa fa-dot-circle fa-w-16 w-2 h-2"
+                      className="svg-inline--fa fa-dot-circle fa-w-16 h-2 w-2"
                       role="img"
                       xmlns="http://www.w3.org/2000/svg"
                       viewBox="0 0 512 512"
@@ -1168,9 +575,9 @@ const Footer = () => {
         </div>
       </div>
 
-      <div className="grid md:grid-cols-2 md:gap-0 gap-6 border-t py-5 xl:px-24 sm:px-10 px-4">
+      <div className="grid gap-6 border-t py-5 px-4 sm:px-10 md:grid-cols-2 md:gap-0 xl:px-24">
         <div className=" flex items-center justify-center md:justify-start">
-          <span className=" lg:block md:hidden block  mr-6">
+          <span className=" mr-6 block md:hidden  lg:block">
             <svg
               className="svg-inline--fa fa-paper-plane fa-w-16 h-10 w-10"
               role="img"
@@ -1185,28 +592,28 @@ const Footer = () => {
           </span>
           <div>
             <h4 className=" text-2xl font-bold">Signup For Newsletter</h4>
-            <p className=" text-gray-400 text-sm">
+            <p className=" text-sm text-gray-400">
               We’ll never share your email address with a third-party.
             </p>
           </div>
         </div>
 
-        <div className=" px-2 flex items-center">
+        <div className=" flex items-center px-2">
           <input
-            className=" w-full p-3 rounded-l border-r-0 px-4 text-sm border text-gray-600 outline-none focus:border-b-[3px] focus:border-b-secondary"
+            className=" w-full rounded-l border border-r-0 p-3 px-4 text-sm text-gray-600 outline-none focus:border-b-[3px] focus:border-b-secondary"
             type="text"
             placeholder="Your email address"
           />
           <button
-            className="px-6 p-3 uppercase bg-primary hover:bg-primaryDarkShade text-white font-bold rounded-r
-          transition-all duration-300 ease-in-out"
+            className="rounded-r bg-primary p-3 px-6 font-bold uppercase text-white transition-all
+          duration-300 ease-in-out hover:bg-primaryDarkShade"
           >
             Subscribe
           </button>
         </div>
       </div>
 
-      <div className=" lg:flex items-center justify-center lg:justify-between text-gray-500 border-t py-4 xl:px-24 sm:px-10 px-4">
+      <div className=" items-center justify-center border-t py-4 px-4 text-gray-500 sm:px-10 lg:flex lg:justify-between xl:px-24">
         <div className="flex items-center justify-center text-center">
           <p>
             © 2022 Crafty Commerce Powered by{" "}
@@ -1232,17 +639,17 @@ const Footer = () => {
         </div>
         <div className="pt-4 text-center">
           <img
-            className="inline-block mb-4 md:mr-2 mr-4"
+            className="mb-4 mr-4 inline-block md:mr-2"
             src={MasterCard}
             alt="MasterCard Logo"
           />
           <img
-            className="inline-block mb-4 md:mr-2 mr-4"
+            className="mb-4 mr-4 inline-block md:mr-2"
             src={VisaCard}
             alt="VisaCard Logo"
           />
           <img
-            className="inline-block mb-4 md:mr-2 mr-4"
+            className="mb-4 mr-4 inline-block md:mr-2"
             src={Paypal}
             alt="Paypal Logo"
           />

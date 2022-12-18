@@ -42,12 +42,12 @@ exports.getProduct = catchAsyncErrors(async (req, res, next) => {
     return next(new ErrorHandler("Product not found", 404));
   }
 
-  setTimeout(() => {
-    res.status(200).json({
-      success: true,
-      product,
-    });
-  }, 2000);
+  // setTimeout(() => {
+  res.status(200).json({
+    success: true,
+    product,
+  });
+  // }, 2000);
 });
 
 // Update a Product => /api/v1/product/:id
