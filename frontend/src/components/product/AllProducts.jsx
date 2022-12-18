@@ -39,6 +39,7 @@ import Hoodie from "../../images/hoodie.webp";
 const AllProducts = () => {
   const [isCategorySideBarOpen, setIsCategorySideBarOpen] = useState(false);
   const [currentPage, setcurrentPage] = useState(1);
+  const [price, setPrice] = useState([1, 2000]);
 
   const params = useParams();
   const keyword = params.keyword;
@@ -52,8 +53,8 @@ const AllProducts = () => {
     if (error) {
       return showErrorToast(error);
     }
-    dispatch(getProducts(keyword, currentPage));
-  }, [dispatch, error, keyword, currentPage]);
+    dispatch(getProducts(keyword, currentPage, price));
+  }, [dispatch, error, keyword, currentPage, price]);
 
   const toggleCategorySidebar = () => {
     setIsCategorySideBarOpen(!isCategorySideBarOpen);
@@ -395,7 +396,7 @@ const AllProducts = () => {
                           </li>
                         </ul>
                         {/* ------------ */}
-                        <Filters />
+                        <Filters price={price} setPrice={setPrice} />
                         {/* ------------ */}
                         <div className=" mt-5 rounded border">
                           {/* ---- */}
@@ -640,7 +641,7 @@ const AllProducts = () => {
                 </li>
               </ul>
               {/* ------------ */}
-              <Filters />
+              <Filters price={price} setPrice={setPrice} />
               {/* ------------ */}
               <div className=" mt-5 rounded border">
                 {/* ---- */}

@@ -1,0 +1,13 @@
+/* .rc-slider-mark {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+} */
+
+.rc-slider-mark span:nth-of-type(2) {
+    left: 98% !important;
+} 
+
+.rc-slider-track {
+    background-color: rgb(224,39,70,1);
+}

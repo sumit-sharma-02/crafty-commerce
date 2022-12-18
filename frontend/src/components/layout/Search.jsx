@@ -7,7 +7,6 @@ import { HiOutlineSearch } from "react-icons/hi";
 import { productsConstant } from "../../constants/product";
 
 const Search = (data) => {
-  // const data.navigate = useNavigate();
   // const [isOpen, setIsOpen] = useState(data.openSearch);
   const [query, setQuery] = useState("");
 
