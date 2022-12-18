@@ -17,3 +17,5 @@ export { default as Footer } from "./layout/Footer";
 export { default as MetaData } from "./layout/MetaData";
 export { default as Loader } from "./layout/Loader";
 export { default as TopScroll } from "./layout/TopScroll";
+export { default as Error } from "./Illustrators/Error";
+export { default as NotFound } from "./Illustrators/NotFound";

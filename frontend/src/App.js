@@ -5,7 +5,7 @@ import { Home } from "./components";
 import { Product } from "./components";
 import { Footer } from "./components";
 import { AllProducts } from "./components";
-import { Search } from "./components";
+// import { Search } from "./components";
 // import Login from "./components/user/Login";
 // import Register from "./components/user/Register";
 
@@ -15,13 +15,14 @@ import "./App.css";
 function App() {
   return (
     <AnimatePresence mode="wait">
-      <div className="min-h-screen flex flex-col">
-        <Search />
+      <div className="flex min-h-screen flex-col">
+        {/* <Search /> */}
         <Header />
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/product/:id" element={<Product />} />
           <Route path="/products" element={<AllProducts />} />
+          <Route path="/search/:keyword" element={<AllProducts />} />
+          <Route path="/product/:id" element={<Product />} />
         </Routes>
         <Footer />
         {/* <Routes>

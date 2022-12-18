@@ -1,28 +1,29 @@
-import React, { useState, useEffect, Fragment } from "react";
+import React, { useState, Fragment, useEffect } from "react";
 import { Dialog, Combobox, Transition } from "@headlessui/react";
-import { useNavigate } from "react-router-dom";
 
 // Icons used
 import { HiOutlineSearch } from "react-icons/hi";
 
 import { productsConstant } from "../../constants/product";
 
-const Search = () => {
-  const navigate = useNavigate();
-  const [isOpen, setIsOpen] = useState(false);
+const Search = (data) => {
+  // const data.navigate = useNavigate();
+  // const [isOpen, setIsOpen] = useState(data.openSearch);
   const [query, setQuery] = useState("");
 
   useEffect(() => {
-    function onKeyDown(event) {
-      if (event.key === "k" && (event.metaKey || event.altKey)) {
-        setIsOpen((value) => !value);
+    function searchOnEnter(event) {
+      if (event.key === "Enter" && query.trim()) {
+        data.navigate(`/search/${query}`);
+        data.setOpenSearchPalette(false);
+        setQuery("");
       }
     }
-    window.addEventListener("keydown", onKeyDown);
+    window.addEventListener("keyup", searchOnEnter);
     return () => {
-      window.removeEventListener("keydown", onKeyDown);
+      window.removeEventListener("keyup", searchOnEnter);
     };
-  }, []);
+  }, [query, data]);
 
   const filteredProducts = query
     ? productsConstant.products.filter((product) =>
@@ -32,13 +33,16 @@ const Search = () => {
 
   return (
     <Transition.Root
-      show={isOpen}
+      show={data.openSearchPalette}
       as={Fragment}
       // afterLeave={() => setQuery("")}
     >
       <Dialog
-        open={isOpen}
-        onClose={setIsOpen}
+        open={data.openSearchPalette}
+        onClose={() => {
+          data.setOpenSearchPalette(!data.openSearchPalette);
+          setQuery("");
+        }}
         className="fixed inset-0 z-[90] overflow-y-auto p-4 pt-[11vh]"
       >
         <Transition.Child
@@ -60,10 +64,10 @@ const Search = () => {
           leaveTo="opacity-0 scale-95"
         >
           <Combobox
-            onChange={(project) => {
-              setIsOpen(false);
+            onChange={(product) => {
+              data.setOpenSearchPalette(false);
+              data.navigate(`/product/${product.id}`);
               setQuery("");
-              navigate(`/product/${project.id}`);
             }}
             as="div"
             className="relative mx-auto min-w-[85%] max-w-xl divide-y divide-gray-100 overflow-hidden rounded-xl bg-white shadow-2xl ring-1
@@ -71,12 +75,12 @@ const Search = () => {
           >
             <div className="flex items-center px-4">
               <HiOutlineSearch className="mr-2 h-6 w-6 text-gray-500" />
-              <Combobox.Input
+              <input
                 onChange={(event) => {
                   setQuery(event.target.value);
                 }}
                 className="h-12 w-full border-0 bg-transparent text-sm text-gray-800 placeholder-gray-400 outline-none focus:ring-0"
-                placeholder="Search..."
+                placeholder="Search the store..."
               />
             </div>
             {filteredProducts.length > 0 && (

@@ -5,12 +5,15 @@ import { clearErrors, getProductDetails } from "../../actions/product";
 import { useParams } from "react-router-dom";
 import { toast } from "react-toastify";
 import { motion } from "framer-motion";
-import { Breadcrumb } from "../../components";
-import { Loader } from "../../components";
-import { TopScroll } from "../../components";
-import { MetaData } from "../../components";
-import { ProductCarousel } from "../../components";
-import { ProductInsights } from "../../components";
+import {
+  Breadcrumb,
+  Loader,
+  TopScroll,
+  MetaData,
+  ProductCarousel,
+  ProductInsights,
+  Error,
+} from "../../components";
 
 // Icons used
 import { GiClothes } from "react-icons/gi";
@@ -35,7 +38,6 @@ import Suitcase1 from "../../images/suitcase1.jpg";
 import Pay1 from "../../images/pay-1.webp";
 import Pay2 from "../../images/pay-2.webp";
 import Pay4 from "../../images/pay-4.webp";
-import NotFound from "../../images/404.gif";
 
 const Product = () => {
   const [isCategorySideBarOpen, setIsCategorySideBarOpen] = useState(false);
@@ -51,7 +53,7 @@ const Product = () => {
       showErrorToast(error);
       dispatch(clearErrors);
     }
-  }, [dispatch, error, params.id]);
+  }, [dispatch, error, params]);
 
   const toggleCategorySidebar = () => {
     setIsCategorySideBarOpen(!isCategorySideBarOpen);
@@ -673,91 +675,71 @@ const Product = () => {
                 />
               </div>
             </div>
-            {/* Error Illustrator */}
-            {error && (
-              <motion.div
-                initial={{ y: -50 }}
-                animate={{ y: 0 }}
-                exit={{ y: 50 }}
-                transition={{
-                  type: "spring",
-                  bounce: 0.3,
-                  duration: 0.4,
-                }}
-                className="col-span-3"
-              >
-                <div className="flex h-auto w-full flex-col items-center justify-center">
-                  <img
-                    src={NotFound}
-                    alt=""
-                    className="h-auto w-[35rem] border-none"
-                  />
-                  <span className="flex w-full items-center justify-center font-semibold text-gray-500 xsm:text-base lg:text-lg">
-                    This product isn't available. Sorry about that.
-                  </span>
-                  <span className="flex w-full items-center justify-center text-gray-500 xsm:text-sm lg:text-base">
-                    Try searching for something else.
-                  </span>
-                </div>
-              </motion.div>
-            )}
-            {/* ---------003---------- */}
-            {!error &&
-              (loading ? (
-                <div className="col-span-3">
-                  <div className="flex h-72 w-full flex-col items-center justify-center">
-                    <Loader sizeType="big" />
-                  </div>
-                </div>
-              ) : (
-                <>
-                  <MetaData title={product.name} />
-                  <div className="col-span-3">
-                    {/* ----001---- */}
-                    <div className="gap-8 sm:grid sm:grid-cols-2">
-                      {/* ----001---- */}
-                      {product.images && generateProductImageCarousel(product)}
 
-                      <div>
-                        {/* ---Title Review and Price--- */}
+            {loading ? (
+              <div className="col-span-3">
+                <div className="flex h-72 w-full flex-col items-center justify-center">
+                  <Loader sizeType="big" />
+                </div>
+              </div>
+            ) : (
+              <>
+                {/* Error Illustrator */}
+                {error && (
+                  <div className="col-span-3">
+                    <Error />
+                  </div>
+                )}
+                {!error && (
+                  <>
+                    <MetaData title={product.name} />
+                    <div className="col-span-3">
+                      {/* ----001---- */}
+                      <div className="gap-8 sm:grid sm:grid-cols-2">
+                        {/* ----001---- */}
+                        {product.images &&
+                          generateProductImageCarousel(product)}
+
                         <div>
-                          {/* ---Title--- */}
-                          <h3 className=" text-2xl font-bold tracking-tighter text-gray-700">
-                            {product.name}
-                          </h3>
-                          {/* ---Review--- */}
-                          <div className=" flex items-center space-x-1 py-1 ">
-                            {/* --Rating-- */}
-                            <div className="rating-outer">
-                              <div
-                                className="rating-inner"
-                                style={{
-                                  width: `${(product.ratings / 5) * 100}%`,
-                                }}
-                              ></div>
+                          {/* ---Title Review and Price--- */}
+                          <div>
+                            {/* ---Title--- */}
+                            <h3 className=" text-2xl font-bold tracking-tighter text-gray-700">
+                              {product.name}
+                            </h3>
+                            {/* ---Review--- */}
+                            <div className=" flex items-center space-x-1 py-1 ">
+                              {/* --Rating-- */}
+                              <div className="rating-outer">
+                                <div
+                                  className="rating-inner"
+                                  style={{
+                                    width: `${(product.ratings / 5) * 100}%`,
+                                  }}
+                                ></div>
+                              </div>
+                              {/* ---- */}
+                              <span className="flex items-center justify-center px-0 text-sm text-gray-500">
+                                {calculateNumOfReviews(product)}
+                              </span>
                             </div>
-                            {/* ---- */}
-                            <span className="flex items-center justify-center px-0 text-sm text-gray-500">
-                              {calculateNumOfReviews(product)}
-                            </span>
+                            {/* --Price-- */}
+                            <div className="flex h-max items-center">
+                              <span className="mr-2 flex items-center justify-center text-2xl font-bold text-primary">
+                                ${parseFloat(product.price).toFixed(2)}
+                              </span>
+                              <span className="flex h-full items-center justify-center text-sm text-gray-400">
+                                <del>
+                                  $
+                                  {parseFloat(
+                                    product.price + product.price * 0.53
+                                  ).toFixed(2)}
+                                </del>
+                              </span>
+                            </div>
                           </div>
-                          {/* --Price-- */}
-                          <div className="flex h-max items-center">
-                            <span className="mr-2 flex items-center justify-center text-2xl font-bold text-primary">
-                              ${parseFloat(product.price).toFixed(2)}
-                            </span>
-                            <span className="flex h-full items-center justify-center text-sm text-gray-400">
-                              <del>
-                                $
-                                {parseFloat(
-                                  product.price + product.price * 0.53
-                                ).toFixed(2)}
-                              </del>
-                            </span>
-                          </div>
-                        </div>
-                        {/* --------Brand Details---------- */}
-                        {/* <div className=" grid grid-cols-2 text-sm font-medium tracking-tighter text-gray-500 gap-2 border-b pb-5">
+                          {/* --------Brand Details---------- */}
+                          {/* <div className=" grid grid-cols-2 text-sm font-medium tracking-tighter text-gray-500 gap-2 border-b pb-5">
                                 <span>Brand</span>
                                 <span>sport 1</span>
                                 <span>SKU:</span>
@@ -765,8 +747,8 @@ const Product = () => {
                                 <span>Condition:</span>
                                 <span>New</span>
                               </div> */}
-                        {/* -------Size--------- */}
-                        {/* <div className="text-gray-500 my-4">
+                          {/* -------Size--------- */}
+                          {/* <div className="text-gray-500 my-4">
                                 <label className="">
                                   Size:
                                   <small className=" ml-3  text-gray-400">Required</small>
@@ -783,169 +765,171 @@ const Product = () => {
                                   <option>XL</option>
                                 </select>
                               </div> */}
-                        {/* -------Color--------- */}
-                        <div className="my-4 text-gray-500">
-                          <label>
-                            Color:
-                            <small className=" ml-3  text-gray-400">
-                              Required
-                            </small>
-                          </label>
-                          <div className=" pt-3 ">
-                            {/* ----- */}
-                            <button className="mr-2 inline-block h-6 w-6 cursor-pointer border border-white bg-gray-400 ring-1 ring-gray-200"></button>
-                            {/* ----- */}
-                            <button className="mr-2 inline-block h-6 w-6 cursor-pointer border border-white bg-black ring-1 ring-gray-200"></button>
-                            {/* ----- */}
-                            <button className="mr-2 inline-block h-6 w-6 cursor-pointer border border-white bg-white ring-1 ring-gray-200"></button>
-                            {/* ----- */}
-                            <button className="mr-2 inline-block h-6 w-6 cursor-pointer border border-white bg-red-500 ring-1 ring-gray-200"></button>
-                            {/* ----- */}
-                            <button className="mr-2 inline-block h-6 w-6 cursor-pointer border border-white bg-yellow-500 ring-1 ring-gray-200"></button>
-                            {/* ----- */}
-                            <button className="mr-2 inline-block h-6 w-6 cursor-pointer border border-white bg-green-500 ring-1 ring-gray-200"></button>
-                            {/* ----- */}
-                            <button className="mr-2 inline-block h-6 w-6 cursor-pointer border border-white bg-blue-500 ring-1 ring-gray-200"></button>
-                            {/* ----- */}
-                            <button className="mr-2 inline-block h-6 w-6 cursor-pointer border border-white bg-purple-500 ring-1 ring-gray-200"></button>
-                            {/* ----- */}
-                            <button className="mr-2 inline-block h-6 w-6 cursor-pointer border border-white bg-pink-500 ring-1 ring-gray-200"></button>
-                            {/* ----- */}
-                          </div>
-                        </div>
-                        {/* -------Quantity--------- */}
-                        <div className="my-4">
-                          <label className="block text-gray-500">
-                            Quantity:
-                          </label>
-                          <div className=" mt-4 inline-block rounded border">
-                            <div className=" flex items-center divide-x">
-                              <div className=" px-6 py-1">
-                                <p className="text-center font-bold"></p>
-                              </div>
-                              {/* ------- */}
-                              <div className=" px-4 py-1">
-                                {/* ------- */}
-                                <button className="block">
-                                  <svg
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    className="h-4 w-4 text-gray-500"
-                                    viewBox="0 0 20 20"
-                                    fill="currentColor"
-                                  >
-                                    <path
-                                      fillRule="evenodd"
-                                      d="M14.707 12.707a1 1 0 01-1.414 0L10 9.414l-3.293 3.293a1 1 0 01-1.414-1.414l4-4a1 1 0 011.414 0l4 4a1 1 0 010 1.414z"
-                                      clipRule="evenodd"
-                                    />
-                                  </svg>
-                                </button>
-                                {/* ------- */}
-                                <button className="block">
-                                  <svg
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    className="h-4 w-4 text-gray-500"
-                                    viewBox="0 0 20 20"
-                                    fill="currentColor"
-                                  >
-                                    <path
-                                      fillRule="evenodd"
-                                      d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
-                                      clipRule="evenodd"
-                                    />
-                                  </svg>
-                                </button>
-                              </div>
+                          {/* -------Color--------- */}
+                          <div className="my-4 text-gray-500">
+                            <label>
+                              Color:
+                              <small className=" ml-3  text-gray-400">
+                                Required
+                              </small>
+                            </label>
+                            <div className=" pt-3 ">
+                              {/* ----- */}
+                              <button className="mr-2 inline-block h-6 w-6 cursor-pointer border border-white bg-gray-400 ring-1 ring-gray-200"></button>
+                              {/* ----- */}
+                              <button className="mr-2 inline-block h-6 w-6 cursor-pointer border border-white bg-black ring-1 ring-gray-200"></button>
+                              {/* ----- */}
+                              <button className="mr-2 inline-block h-6 w-6 cursor-pointer border border-white bg-white ring-1 ring-gray-200"></button>
+                              {/* ----- */}
+                              <button className="mr-2 inline-block h-6 w-6 cursor-pointer border border-white bg-red-500 ring-1 ring-gray-200"></button>
+                              {/* ----- */}
+                              <button className="mr-2 inline-block h-6 w-6 cursor-pointer border border-white bg-yellow-500 ring-1 ring-gray-200"></button>
+                              {/* ----- */}
+                              <button className="mr-2 inline-block h-6 w-6 cursor-pointer border border-white bg-green-500 ring-1 ring-gray-200"></button>
+                              {/* ----- */}
+                              <button className="mr-2 inline-block h-6 w-6 cursor-pointer border border-white bg-blue-500 ring-1 ring-gray-200"></button>
+                              {/* ----- */}
+                              <button className="mr-2 inline-block h-6 w-6 cursor-pointer border border-white bg-purple-500 ring-1 ring-gray-200"></button>
+                              {/* ----- */}
+                              <button className="mr-2 inline-block h-6 w-6 cursor-pointer border border-white bg-pink-500 ring-1 ring-gray-200"></button>
+                              {/* ----- */}
                             </div>
                           </div>
-                          <div className="mt-1 flex flex-col pl-[2px] text-sm">
-                            {product.stock > 0 ? (
-                              <span className="font-bold text-green-600">
-                                In Stocks
-                              </span>
-                            ) : (
-                              <span className="font-bold text-red-600">
-                                Out of Stocks
-                              </span>
-                            )}
+                          {/* -------Quantity--------- */}
+                          <div className="my-4">
+                            <label className="block text-gray-500">
+                              Quantity:
+                            </label>
+                            <div className=" mt-4 inline-block rounded border">
+                              <div className=" flex items-center divide-x">
+                                <div className=" px-6 py-1">
+                                  <p className="text-center font-bold"></p>
+                                </div>
+                                {/* ------- */}
+                                <div className=" px-4 py-1">
+                                  {/* ------- */}
+                                  <button className="block">
+                                    <svg
+                                      xmlns="http://www.w3.org/2000/svg"
+                                      className="h-4 w-4 text-gray-500"
+                                      viewBox="0 0 20 20"
+                                      fill="currentColor"
+                                    >
+                                      <path
+                                        fillRule="evenodd"
+                                        d="M14.707 12.707a1 1 0 01-1.414 0L10 9.414l-3.293 3.293a1 1 0 01-1.414-1.414l4-4a1 1 0 011.414 0l4 4a1 1 0 010 1.414z"
+                                        clipRule="evenodd"
+                                      />
+                                    </svg>
+                                  </button>
+                                  {/* ------- */}
+                                  <button className="block">
+                                    <svg
+                                      xmlns="http://www.w3.org/2000/svg"
+                                      className="h-4 w-4 text-gray-500"
+                                      viewBox="0 0 20 20"
+                                      fill="currentColor"
+                                    >
+                                      <path
+                                        fillRule="evenodd"
+                                        d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                                        clipRule="evenodd"
+                                      />
+                                    </svg>
+                                  </button>
+                                </div>
+                              </div>
+                            </div>
+                            <div className="mt-1 flex flex-col pl-[2px] text-sm">
+                              {product.stock > 0 ? (
+                                <span className="font-bold text-green-600">
+                                  In Stocks
+                                </span>
+                              ) : (
+                                <span className="font-bold text-red-600">
+                                  Out of Stocks
+                                </span>
+                              )}
+                            </div>
                           </div>
-                        </div>
-                        {/* -------Button and Add to whitelist--------- */}
-                        <div className=" my-6 flex items-center space-x-2">
-                          {/* ----------- */}
-                          <button
-                            className="rounded-md border-2 border-primary bg-primary p-2 px-6 text-sm text-white
+                          {/* -------Button and Add to whitelist--------- */}
+                          <div className=" my-6 flex items-center space-x-2">
+                            {/* ----------- */}
+                            <button
+                              className="rounded-md border-2 border-primary bg-primary p-2 px-6 text-sm text-white
                                      duration-300 hover:border-primaryDarkShade hover:bg-primaryDarkShade"
-                          >
-                            Add to Cart
-                          </button>
-                          {/* ----------- */}
-                        </div>
-                        <label className="mt-4 flex items-center">
-                          <span className="font-bold tracking-tighter text-gray-700">
-                            SELLER:
-                          </span>
-                          <span className="ml-2 text-sm text-gray-600">
-                            {product.seller}
-                          </span>
-                        </label>
-                        {/* -------4 GREAT REASONS TO BUY FROM US:----------- */}
-                        <div className=" mt-4">
-                          <h4 className="font-bold tracking-tighter text-gray-700">
-                            4 GREAT REASONS TO BUY FROM US:
-                          </h4>
-                          {/* ------ */}
-                          <div className=" my-5">
-                            {/* ------- */}
-                            <img
-                              className=" mr-4 inline-block w-12 duration-300 hover:opacity-70"
-                              src={Reason1}
-                              alt=""
-                            />
-                            {/* ------- */}
-                            <img
-                              className=" mr-4 inline-block w-12 duration-300 hover:opacity-70"
-                              src={Reason2}
-                              alt=""
-                            />
-                            {/* ------- */}
-                            <img
-                              className=" mr-4 inline-block w-12 duration-300 hover:opacity-70"
-                              src={Reason3}
-                              alt=""
-                            />
-                            {/* ------- */}
-                            <img
-                              className=" mr-4 inline-block w-12 duration-300 hover:opacity-70"
-                              src={Reason4}
-                              alt=""
-                            />
+                            >
+                              Add to Cart
+                            </button>
+                            {/* ----------- */}
                           </div>
-                          {/* ------ */}
-                          <div className="pt-4">
-                            <img
-                              className="mb-4 mr-4 inline-block md:mr-2"
-                              src={Pay1}
-                              alt=""
-                            />
-                            <img
-                              className="mb-4 mr-4 inline-block md:mr-2"
-                              src={Pay2}
-                              alt=""
-                            />
-                            <img
-                              className="mb-4 mr-4 inline-block md:mr-2"
-                              src={Pay4}
-                              alt=""
-                            />
+                          <label className="mt-4 flex items-center">
+                            <span className="font-bold tracking-tighter text-gray-700">
+                              SELLER:
+                            </span>
+                            <span className="ml-2 text-sm text-gray-600">
+                              {product.seller}
+                            </span>
+                          </label>
+                          {/* -------4 GREAT REASONS TO BUY FROM US:----------- */}
+                          <div className=" mt-4">
+                            <h4 className="font-bold tracking-tighter text-gray-700">
+                              4 GREAT REASONS TO BUY FROM US:
+                            </h4>
+                            {/* ------ */}
+                            <div className=" my-5">
+                              {/* ------- */}
+                              <img
+                                className=" mr-4 inline-block w-12 duration-300 hover:opacity-70"
+                                src={Reason1}
+                                alt=""
+                              />
+                              {/* ------- */}
+                              <img
+                                className=" mr-4 inline-block w-12 duration-300 hover:opacity-70"
+                                src={Reason2}
+                                alt=""
+                              />
+                              {/* ------- */}
+                              <img
+                                className=" mr-4 inline-block w-12 duration-300 hover:opacity-70"
+                                src={Reason3}
+                                alt=""
+                              />
+                              {/* ------- */}
+                              <img
+                                className=" mr-4 inline-block w-12 duration-300 hover:opacity-70"
+                                src={Reason4}
+                                alt=""
+                              />
+                            </div>
+                            {/* ------ */}
+                            <div className="pt-4">
+                              <img
+                                className="mb-4 mr-4 inline-block md:mr-2"
+                                src={Pay1}
+                                alt=""
+                              />
+                              <img
+                                className="mb-4 mr-4 inline-block md:mr-2"
+                                src={Pay2}
+                                alt=""
+                              />
+                              <img
+                                className="mb-4 mr-4 inline-block md:mr-2"
+                                src={Pay4}
+                                alt=""
+                              />
+                            </div>
                           </div>
                         </div>
                       </div>
+                      <ProductInsights product={product} />
                     </div>
-                    <ProductInsights product={product} />
-                  </div>
-                </>
-              ))}
+                  </>
+                )}
+              </>
+            )}
           </div>
         </section>
       </main>
