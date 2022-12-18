@@ -42,9 +42,35 @@ const AllProducts = () => {
   const [isCategorySideBarOpen, setIsCategorySideBarOpen] = useState(false);
   const [currentPage, setcurrentPage] = useState(1);
   const [price, setPrice] = useState([1, 2000]);
+  const [category, setCategory] = useState("");
 
   const params = useParams();
   const keyword = params.keyword;
+  const categories = [
+    "Accessories",
+    "Clothes",
+    "Shoes",
+    "Furniture",
+    "Games",
+    "Toys",
+    "Grocery",
+    "Healthcare",
+    "Jewellery",
+    "Stationery",
+    "Tupperware",
+    "Pet",
+    "Electronics",
+    "Cameras",
+    "Laptops",
+    "Accessories",
+    "Headphones",
+    "Food",
+    "Books",
+    "Cosmetics",
+    "Sports",
+    "Outdoor",
+    "Home",
+  ];
 
   const dispatch = useDispatch();
   const { loading, error, products, productsCount, resPerPage } = useSelector(
@@ -55,8 +81,8 @@ const AllProducts = () => {
     if (error) {
       return showErrorToast(error);
     }
-    dispatch(getProducts(keyword, currentPage, price));
-  }, [dispatch, error, keyword, currentPage, price]);
+    dispatch(getProducts(keyword, currentPage, price, category));
+  }, [dispatch, error, keyword, currentPage, price, category]);
 
   const toggleCategorySidebar = () => {
     setIsCategorySideBarOpen(!isCategorySideBarOpen);
@@ -219,6 +245,9 @@ const AllProducts = () => {
                           setPrice={setPrice}
                           filterAccordion={filterAccordion}
                           setFilterAccordion={setFilterAccordion}
+                          category={category}
+                          setCategory={setCategory}
+                          categories={categories}
                         />
                         {/* ------------ */}
                         <ul className=" divide-y rounded border">
