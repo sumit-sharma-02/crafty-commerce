@@ -8,7 +8,7 @@ import NotFoundError from "../../images/404.gif";
 const NotFound = (error) => {
   return (
     <>
-      <MetaData title={`Error 404`} />
+      <MetaData title={`Product Not Found`} />
       <motion.div
         initial={{ y: -50 }}
         animate={{ y: 0 }}

@@ -7,6 +7,7 @@ export { default as PopularProducts } from "./layout/Home/PopularProducts";
 export { default as LimitedOffers } from "./layout/Home/LimitedOffers";
 export { default as Product } from "./product/Product";
 export { default as AllProducts } from "./product/AllProducts";
+export { default as ProductCategories } from "./product/ProductCategories";
 export { default as Breadcrumb } from "./product/Breadcrumb";
 export { default as Filters } from "./product/Filters";
 export { default as ProductCarousel } from "./product/ProductCarousel";

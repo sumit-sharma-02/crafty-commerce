@@ -3,18 +3,18 @@ import productsConstant from "../constants/product";
 
 // Get All Products
 export const getProducts =
-  (keyword = "", currentPage = 1, price) =>
+  (keyword = "", currentPage = 1, price = [1, 2000], category) =>
   async (dispatch) => {
     try {
       dispatch({
         type: productsConstant.ALL_PRODUCTS_REQUEST,
       });
       let path = `/api/v1/products?keyword=${keyword}&page=${currentPage}&price[lte]=${price[1]}&price[gte]=${price[0]}`;
-      // if (category) {
-      //   path = `/api/v1/products?keyword=${keyword}&page=${currentPage}&price[lte]=${price[1]}&price[gte]=${price[0]}&category=${category}`;
-      // }
+      if (category) {
+        path = `/api/v1/products?keyword=${keyword}&page=${currentPage}&price[lte]=${price[1]}&price[gte]=${price[0]}&category=${category}`;
+      }
 
-      const { data } = await axios.get(path);
+      const data = await axios.get(path);
       dispatch({
         type: productsConstant.ALL_PRODUCTS_SUCCESS,
         payload: data,

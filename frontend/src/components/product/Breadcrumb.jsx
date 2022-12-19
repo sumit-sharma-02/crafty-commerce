@@ -42,7 +42,10 @@ const Breadcrumb = (products) => {
             ) : (
               <>
                 {/* -------------- */}
-                <Link className=" hover:text-primary" to={"/"}>
+                <Link
+                  className="cursor-pointer capitalize hover:text-primary"
+                  to={`/products/${products.product.category}`}
+                >
                   {products.product.category}
                 </Link>
                 {/* -------------- */}
@@ -61,7 +64,7 @@ const Breadcrumb = (products) => {
                   </svg>
                 </span>
                 {/* -------------- */}
-                <div className="overflow-hidden text-ellipsis whitespace-nowrap text-gray-400">
+                <div className="overflow-hidden text-ellipsis whitespace-nowrap capitalize text-gray-400">
                   {" "}
                   {products.product.name}
                 </div>
@@ -101,6 +104,36 @@ const Breadcrumb = (products) => {
               />
             </svg>
           </span>
+          {!products.error &&
+            products.category &&
+            (products.loading ? (
+              <Loader sizeType="small" />
+            ) : (
+              <>
+                {/* -------------- */}
+                <Link
+                  to={`/products/${products.category}`}
+                  className="cursor-pointer capitalize hover:text-primary"
+                >
+                  {products.category}
+                </Link>
+                {/* -------------- */}
+                <span className=" mx-1 mt-0.5">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="h-4 w-4"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                  >
+                    <path
+                      fillRule="evenodd"
+                      d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
+                      clipRule="evenodd"
+                    />
+                  </svg>
+                </span>
+              </>
+            ))}
         </div>
         {/* --------------Breadcrumb End-----------> */}
       </>
