@@ -37,7 +37,7 @@ import { BsChevronDown, BsChevronUp } from "react-icons/bs";
 const AllProducts = () => {
   const [filterAccordion, setFilterAccordion] = useState([false, true]);
   const [isCategorySideBarOpen, setIsCategorySideBarOpen] = useState(false);
-  const [currentPage, setcurrentPage] = useState(1);
+  const [currentPage, setCurrentPage] = useState(1);
   const [price, setPrice] = useState([1, 2000]);
 
   const params = useParams();
@@ -45,9 +45,8 @@ const AllProducts = () => {
   const keyword = params.keyword;
 
   const dispatch = useDispatch();
-  const { loading, error, products, productsCount, resPerPage } = useSelector(
-    (state) => state.products
-  );
+  const { loading, error, products, productsCount, resPerPage, count } =
+    useSelector((state) => state.products);
 
   useEffect(() => {
     if (error) {
@@ -61,7 +60,7 @@ const AllProducts = () => {
   };
 
   const setCurrentPageNumber = (pageNumber) => {
-    setcurrentPage(pageNumber);
+    setCurrentPage(pageNumber);
   };
 
   const calculateNumOfReviews = (product) => {
@@ -259,7 +258,11 @@ const AllProducts = () => {
                               }}
                             >
                               {/* -- Category start-- */}
-                              <ProductCategories setCategory={setCategory} />
+                              <ProductCategories
+                                setCategory={setCategory}
+                                currentPage={currentPage}
+                                setCurrentPage={setCurrentPage}
+                              />
                             </motion.div>
                           )}
                         </ul>
@@ -361,7 +364,11 @@ const AllProducts = () => {
                       ease: "easeInOut",
                     }}
                   >
-                    <ProductCategories setCategory={setCategory} />
+                    <ProductCategories
+                      setCategory={setCategory}
+                      currentPage={currentPage}
+                      setCurrentPage={setCurrentPage}
+                    />
                   </motion.div>
                 )}
               </ul>
@@ -579,12 +586,12 @@ const AllProducts = () => {
                         </div>
                       </div>
                       {/* ----Pagination---- */}
-                      {productsCount && resPerPage <= productsCount && (
+                      {resPerPage < productsCount && count > resPerPage && (
                         <div className="my-4 flex w-full items-center justify-center space-x-1">
                           <Pagination
                             activePage={currentPage}
                             itemsCountPerPage={resPerPage}
-                            totalItemsCount={productsCount}
+                            totalItemsCount={count}
                             onChange={setCurrentPageNumber}
                             firstPageText={<MdFirstPage className="h-5 w-5" />}
                             prevPageText={

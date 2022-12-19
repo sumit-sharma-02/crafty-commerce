@@ -82,6 +82,7 @@ const Breadcrumb = (products) => {
           {/* -------------- */}
           <Link
             to={"/products"}
+            onClick={() => products.setCategory("")}
             className=" flex items-center hover:text-primary"
           >
             <span>

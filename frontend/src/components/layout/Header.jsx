@@ -490,9 +490,9 @@ const Header = () => {
               <li>
                 <Link
                   className="relative p-[11px] after:absolute after:bottom-0 after:left-0 after:h-[4px] 
-                after:w-full after:origin-bottom-right after:scale-x-0 after:bg-secondary after:transition-transform
-                after:duration-200 after:ease-out after:content-[''] hover:after:origin-bottom-left
-                hover:after:scale-x-100"
+                after:w-full after:origin-bottom-right after:scale-x-0 after:bg-secondary
+                after:transition-transform after:duration-200 after:ease-out after:content-['']
+                hover:after:origin-bottom-left hover:after:scale-x-100"
                   to={"/products"}
                 >
                   SHOP

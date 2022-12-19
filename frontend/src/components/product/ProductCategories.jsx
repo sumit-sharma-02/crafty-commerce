@@ -14,7 +14,10 @@ const ProductCategories = (props) => {
         <Link
           className="flex w-full items-center justify-between p-4 text-sm text-gray-500 hover:text-primary"
           to={"/products/Accessories"}
-          onClick={() => props.setCategory("Accessories")}
+          onClick={() => {
+            props.setCategory("Accessories");
+            props.setCurrentPage(1);
+          }}
         >
           <span>
             <GiClothes className="mb-1 mr-1 inline-block h-4 w-4" /> Clothing
@@ -25,7 +28,10 @@ const ProductCategories = (props) => {
         <Link
           className="flex w-full items-center justify-between p-4 text-sm text-gray-500 hover:text-primary"
           to={"/products/Clothes"}
-          onClick={() => props.setCategory("Clothes")}
+          onClick={() => {
+            props.setCategory("Clothes");
+            props.setCurrentPage(1);
+          }}
         >
           <span>
             <CgToolbox className="mb-1 mr-1 inline-block h-4 w-4" /> Gadgets{" "}
@@ -37,7 +43,10 @@ const ProductCategories = (props) => {
         <Link
           className="flex w-full items-center justify-between p-4 text-sm text-gray-500 hover:text-primary"
           to={"/products/Grocery"}
-          onClick={() => props.setCategory("Grocery")}
+          onClick={() => {
+            props.setCategory("Grocery");
+            props.setCurrentPage(1);
+          }}
         >
           <span>
             <svg
@@ -60,7 +69,10 @@ const ProductCategories = (props) => {
         <Link
           className="flex w-full items-center justify-between p-4 text-sm text-gray-500 hover:text-primary"
           to={"/products/Electronics"}
-          onClick={() => props.setCategory("Electronics")}
+          onClick={() => {
+            props.setCategory("Electronics");
+            props.setCurrentPage(1);
+          }}
         >
           <span>
             <FiSmartphone className="mb-1 mr-1 inline-block h-4 w-4" />{" "}
@@ -74,7 +86,10 @@ const ProductCategories = (props) => {
         <div
           className="flex w-full items-center justify-between p-4 text-sm text-gray-500 hover:text-primary"
           to={"/products/Laptops"}
-          onClick={() => props.setCategory("Laptops")}
+          onClick={() => {
+            props.setCategory("Laptops");
+            props.setCurrentPage(1);
+          }}
         >
           <span>
             <MdLaptopMac className="mb-1 mr-1 inline-block h-4 w-4" /> Laptops
@@ -86,7 +101,10 @@ const ProductCategories = (props) => {
         <Link
           className="flex w-full items-center justify-between p-4 text-sm text-gray-500 hover:text-primary"
           to={"/products/Headphones"}
-          onClick={() => props.setCategory("Headphones")}
+          onClick={() => {
+            props.setCategory("Headphones");
+            props.setCurrentPage(1);
+          }}
         >
           <span>
             <svg
@@ -109,7 +127,10 @@ const ProductCategories = (props) => {
         <Link
           className="flex w-full items-center justify-between p-4 text-sm text-gray-500 hover:text-primary"
           to={"/products/Food"}
-          onClick={() => props.setCategory("Food")}
+          onClick={() => {
+            props.setCategory("Food");
+            props.setCurrentPage(1);
+          }}
         >
           <span>
             <svg
@@ -132,7 +153,10 @@ const ProductCategories = (props) => {
         <Link
           className="flex w-full items-center justify-between p-4 text-sm text-gray-500 hover:text-primary"
           to={"/products/Sports"}
-          onClick={() => props.setCategory("Sports")}
+          onClick={() => {
+            props.setCategory("Sports");
+            props.setCurrentPage(1);
+          }}
         >
           <span>
             <svg
@@ -155,7 +179,10 @@ const ProductCategories = (props) => {
         <Link
           className="flex w-full items-center justify-between p-4 text-sm text-gray-500 hover:text-primary"
           to={"/products/Home"}
-          onClick={() => props.setCategory("Home")}
+          onClick={() => {
+            props.setCategory("Home");
+            props.setCurrentPage(1);
+          }}
         >
           <span>
             <svg

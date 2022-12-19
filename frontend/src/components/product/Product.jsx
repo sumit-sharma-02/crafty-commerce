@@ -1,10 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import {
-  clearErrors,
-  getProductDetails,
-  getProducts,
-} from "../../actions/product";
+import { clearErrors, getProductDetails } from "../../actions/product";
 import { useParams } from "react-router-dom";
 import { toast } from "react-toastify";
 import { motion } from "framer-motion";
