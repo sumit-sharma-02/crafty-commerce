@@ -39,6 +39,7 @@ const AllProducts = () => {
   const [isCategorySideBarOpen, setIsCategorySideBarOpen] = useState(false);
   const [currentPage, setCurrentPage] = useState(1);
   const [price, setPrice] = useState([1, 2000]);
+  const [rating, setRating] = useState(0);
 
   const params = useParams();
   const [category, setCategory] = useState(params.category);
@@ -58,8 +59,8 @@ const AllProducts = () => {
     if (error) {
       return showErrorToast(error);
     }
-    dispatch(getProducts(keyword, currentPage, price, category));
-  }, [dispatch, error, keyword, currentPage, price, category]);
+    dispatch(getProducts(keyword, currentPage, price, category, rating));
+  }, [dispatch, error, keyword, currentPage, price, category, rating]);
 
   const toggleCategorySidebar = () => {
     setIsCategorySideBarOpen(!isCategorySideBarOpen);
@@ -227,6 +228,11 @@ const AllProducts = () => {
                           setPrice={setPrice}
                           filterAccordion={filterAccordion}
                           setFilterAccordion={setFilterAccordion}
+                          rating={rating}
+                          setRating={setRating}
+                          currentPage={currentPage}
+                          setCurrentPage={setCurrentPage}
+                          view="mobile"
                         />
                         {/* ------------ */}
                         <ul className=" divide-y rounded border">
@@ -336,6 +342,11 @@ const AllProducts = () => {
                 setPrice={setPrice}
                 filterAccordion={filterAccordion}
                 setFilterAccordion={setFilterAccordion}
+                rating={rating}
+                setRating={setRating}
+                currentPage={currentPage}
+                setCurrentPage={setCurrentPage}
+                view="desktop"
               />
               {/* ------------ */}
               <ul className=" divide-y rounded border">
