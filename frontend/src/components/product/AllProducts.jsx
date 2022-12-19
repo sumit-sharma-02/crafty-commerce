@@ -45,8 +45,14 @@ const AllProducts = () => {
   const keyword = params.keyword;
 
   const dispatch = useDispatch();
-  const { loading, error, products, productsCount, resPerPage, count } =
-    useSelector((state) => state.products);
+  const {
+    loading,
+    error,
+    products,
+    productsCount,
+    resPerPage,
+    filteredProductsCount,
+  } = useSelector((state) => state.products);
 
   useEffect(() => {
     if (error) {
@@ -586,30 +592,33 @@ const AllProducts = () => {
                         </div>
                       </div>
                       {/* ----Pagination---- */}
-                      {resPerPage < productsCount && count > resPerPage && (
-                        <div className="my-4 flex w-full items-center justify-center space-x-1">
-                          <Pagination
-                            activePage={currentPage}
-                            itemsCountPerPage={resPerPage}
-                            totalItemsCount={count}
-                            onChange={setCurrentPageNumber}
-                            firstPageText={<MdFirstPage className="h-5 w-5" />}
-                            prevPageText={
-                              <IoIosArrowBack className="h-4 w-4" />
-                            }
-                            nextPageText={
-                              <IoIosArrowForward className="h-4 w-4" />
-                            }
-                            lastPageText={<BiLastPage className="h-5 w-5" />}
-                            hideDisabled={true}
-                            innerClass="w-full flex justify-center space-x-1"
-                            itemClass="w-10 h-8 flex justify-center items-center bg-gray-600 border rounded font-medium text-white hover:bg-primary hover:text-white duration-300"
-                            linkClass="w-full h-full flex justify-center items-center"
-                            activeClass="bg-primary"
-                            activeLinkClass="bg-primary text-white border-primary rounded-sm font-medium hover:bg-primaryDarkShade duration-300"
-                          />
-                        </div>
-                      )}
+                      {resPerPage < productsCount &&
+                        filteredProductsCount > resPerPage && (
+                          <div className="my-4 flex w-full items-center justify-center space-x-1">
+                            <Pagination
+                              activePage={currentPage}
+                              itemsCountPerPage={resPerPage}
+                              totalItemsCount={filteredProductsCount}
+                              onChange={setCurrentPageNumber}
+                              firstPageText={
+                                <MdFirstPage className="h-5 w-5" />
+                              }
+                              prevPageText={
+                                <IoIosArrowBack className="h-4 w-4" />
+                              }
+                              nextPageText={
+                                <IoIosArrowForward className="h-4 w-4" />
+                              }
+                              lastPageText={<BiLastPage className="h-5 w-5" />}
+                              hideDisabled={true}
+                              innerClass="w-full flex justify-center space-x-1"
+                              itemClass="w-10 h-8 flex justify-center items-center bg-gray-600 border rounded font-medium text-white hover:bg-primary hover:text-white duration-300"
+                              linkClass="w-full h-full flex justify-center items-center"
+                              activeClass="bg-primary"
+                              activeLinkClass="bg-primary text-white border-primary rounded-sm font-medium hover:bg-primaryDarkShade duration-300"
+                            />
+                          </div>
+                        )}
                     </div>
                   </>
                 )}
