@@ -14,53 +14,6 @@ const { createSliderWithTooltip } = Slider;
 const Range = createSliderWithTooltip(Slider.Range);
 
 const Filters = (data) => {
-  const ratingStars = {
-    mobile: [
-      {
-        key: "jTtAWx",
-        value: 5,
-      },
-      {
-        key: "nzUUrQ",
-        value: 4,
-      },
-      {
-        key: "PEib3e",
-        value: 3,
-      },
-      {
-        key: "HYVi4x",
-        value: 2,
-      },
-      {
-        key: "YA5CYW",
-        value: 1,
-      },
-    ],
-    desktop: [
-      {
-        key: "ZkEmTl",
-        value: 5,
-      },
-      {
-        key: "K1meie",
-        value: 4,
-      },
-      {
-        key: "HRMI4R",
-        value: 3,
-      },
-      {
-        key: "Vh8YxW",
-        value: 2,
-      },
-      {
-        key: "GcvSx6",
-        value: 1,
-      },
-    ],
-  };
-
   return (
     <div className=" mt-5 rounded border">
       {/* ---- */}
@@ -128,52 +81,26 @@ const Filters = (data) => {
             </ul>
           </div>
           {/* ------ */}
-          <div className="mt-8 flex items-start ">
+          <div className="mt-8 flex items-start justify-between">
             {/* ----- */}
-            <div className=" flex w-max">
+            <div className=" flex w-max items-start justify-center py-[2px]">
               <span>Ratings: </span>
             </div>
             {/* ----- */}
-            <ul className="ml-4 mt-[1px] pb-4">
-              {data.view === "mobile"
-                ? ratingStars.mobile.map((star) => (
-                    <li
-                      className="mb-1 flex cursor-pointer items-center"
-                      key={star.key}
-                      onClick={() => {
-                        data.setRating(star.value);
-                        data.setCurrentPage(1);
-                      }}
-                    >
-                      <div className="ml-2 gap-3">
-                        <div className="rating-outer before:tracking-[5px]">
-                          <div
-                            className="rating-inner before:tracking-[5px]"
-                            style={{ width: `${star.value * 20}%` }}
-                          ></div>
-                        </div>
-                      </div>
-                    </li>
-                  ))
-                : ratingStars.desktop.map((star) => (
-                    <li
-                      className="mb-1 flex cursor-pointer items-center"
-                      key={star.key}
-                      onClick={() => {
-                        data.setRating(star.value);
-                        data.setCurrentPage(1);
-                      }}
-                    >
-                      <div className="ml-2 gap-3">
-                        <div className="rating-outer before:tracking-[5px]">
-                          <div
-                            className="rating-inner before:tracking-[5px]"
-                            style={{ width: `${star.value * 20}%` }}
-                          ></div>
-                        </div>
-                      </div>
-                    </li>
-                  ))}
+            <ul className="flex w-full items-center">
+              <select
+                className="fa ml-2 w-full rounded border border-gray-400 p-1 px-2
+                focus:border-gray-600 focus:outline-none"
+                defaultValue={"0"}
+                onChange={(event) => data.setRating(event.target.value)}
+              >
+                <option value="0">Select Ratings</option>
+                <option value="5">5 &#xf005;</option>
+                <option value="4">4 &#xf005; & Above</option>
+                <option value="3">3 &#xf005; & Above</option>
+                <option value="2">2 &#xf005; & Above</option>
+                <option value="0">1 &#xf005; & Above</option>
+              </select>
             </ul>
           </div>
           {/* ------ */}
