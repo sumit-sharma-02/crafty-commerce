@@ -4,7 +4,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { register, clearErrors } from "../../actions/user";
 import { toast } from "react-toastify";
-import { Loader, MetaData } from "../../components";
+import { MetaData } from "../../components";
 
 // Icons used
 import { MdOutlineMail } from "react-icons/md";
@@ -53,7 +53,7 @@ const Register = () => {
     formData.set("password", password);
     formData.set("avatar", avatar);
 
-    // dispatch(login(email, password));
+    dispatch(register(formData));
   };
 
   const onChange = (event) => {
@@ -91,14 +91,18 @@ const Register = () => {
         bg-gradient-to-br from-red-500 via-purple-500 to-blue-500 px-4 py-24 sm:p-10"
         >
           <div
-            className=" h-full overflow-auto rounded-xl rounded-tr-md rounded-br-md
+            className="h-full overflow-auto rounded-xl rounded-tr-md rounded-br-md
           bg-white p-5 shadow-2xl md:w-1/2 xl:w-2/5"
           >
             <div className=" text-center">
               <h1 className=" text-4xl font-extrabold">Registration</h1>
             </div>
 
-            <form action="login" className="space-y-4 p-2">
+            <form
+              onSubmit={submitHandler}
+              encType="multipart/form-data"
+              className="space-y-4 p-2"
+            >
               <div className="mx-auto flex items-center justify-center">
                 <div className="w-full rounded-lg bg-white px-4 text-center">
                   <div className="mb-4">
@@ -249,8 +253,8 @@ const Register = () => {
                 whileTap={{ scale: 0.9 }}
                 transition={{ duration: 0.3, ease: "easeInOut" }}
                 disabled={loading ? true : false}
-                className="flex w-full items-center justify-center rounded-full bg-gradient-to-l from-red-500 via-purple-500
-                  to-blue-500 p-2 text-center font-semibold uppercase tracking-widest text-white shadow-lg"
+                className="flex w-full items-center justify-center space-x-2 rounded-full bg-gradient-to-l from-red-500
+                  via-purple-500 to-blue-500 p-2 text-center font-semibold uppercase tracking-widest text-white shadow-lg"
               >
                 Register
               </motion.button>

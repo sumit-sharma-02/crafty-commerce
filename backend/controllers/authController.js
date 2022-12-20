@@ -43,7 +43,7 @@ exports.loginUser = catchAsyncErrors(async (req, res, next) => {
   if (!user) {
     return next(
       new ErrorHandler(
-        "Invalid email or password. Try again or click Forgot password to reset it",
+        "Invalid email or password. Try again or click on 'Forgot password' to reset it",
         401
       )
     );
@@ -54,7 +54,7 @@ exports.loginUser = catchAsyncErrors(async (req, res, next) => {
   if (!isPasswordMatched) {
     return next(
       new ErrorHandler(
-        "Invalid email or password. Try again or click Forgot password to reset it",
+        "Invalid email or password. Try again or click on 'Forgot password' to reset it",
         401
       )
     );
