@@ -3,12 +3,14 @@ import userConstants from "../constants/user";
 export const userAuthReducer = (state = { user: {} }, action) => {
   switch (action.type) {
     case userConstants.LOGIN_REQUEST:
+    case userConstants.REGISTER_USER_REQUEST:
       return {
         loading: true,
         isAuthenticated: false,
       };
 
     case userConstants.LOGIN_SUCCESS:
+    case userConstants.REGISTER_USER_SUCCESS:
       return {
         ...state,
         loading: false,
@@ -17,6 +19,7 @@ export const userAuthReducer = (state = { user: {} }, action) => {
       };
 
     case userConstants.LOGIN_FAIL:
+    case userConstants.REGISTER_USER_FAIL:
       return {
         ...state,
         loading: false,
