@@ -115,9 +115,9 @@ const Search = (data) => {
                 ))}
               </Combobox.Options>
             )}
-            {query && filteredProducts.length === 0 && (
+            {/* {query && filteredProducts.length === 0 && (
               <p className="p-4 text-sm text-gray-500">No results found.</p>
-            )}
+            )} */}
           </Combobox>
         </Transition.Child>
       </Dialog>

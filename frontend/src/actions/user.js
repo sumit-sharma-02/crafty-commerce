@@ -1,6 +1,7 @@
 import axios from "axios";
 import userConstants from "../constants/user";
 
+// Login
 export const login = (email, password) => async (dispatch) => {
   try {
     dispatch({
@@ -26,7 +27,14 @@ export const login = (email, password) => async (dispatch) => {
   } catch (error) {
     dispatch({
       type: userConstants.LOGIN_FAIL,
-      payload: error.response.data.message,
+      payload: error.response.data.error,
     });
   }
+};
+
+// Clear Errors
+export const clearErrors = () => async (dispatch) => {
+  dispatch({
+    type: userConstants.CLEAR_ERRORS,
+  });
 };
