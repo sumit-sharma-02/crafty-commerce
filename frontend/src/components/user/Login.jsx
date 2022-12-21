@@ -17,8 +17,8 @@ const Login = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
-  const showErrorToast = (message) => {
-    toast.error(message, {
+  const showSuccessToast = (message) => {
+    toast.success(message, {
       position: "bottom-center",
       autoClose: 5000,
       hideProgressBar: false,
@@ -30,8 +30,21 @@ const Login = () => {
     });
   };
 
-  const showSuccessToast = (message) => {
-    toast.success(message, {
+  const showInfoToast = (message) => {
+    toast.info(message, {
+      position: "bottom-center",
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "colored",
+    });
+  };
+
+  const showErrorToast = (message) => {
+    toast.error(message, {
       position: "bottom-center",
       autoClose: 5000,
       hideProgressBar: false,
@@ -50,12 +63,17 @@ const Login = () => {
   const submitHandler = (event) => {
     event.preventDefault();
     dispatch(login(email, password));
+    if (!error) {
+      showSuccessToast("Logged in successfully!");
+    }
   };
 
   useEffect(() => {
     if (isAuthenticated) {
       navigate("/");
-      showSuccessToast("Logged in successfully!");
+      showInfoToast(
+        "You are already logged in. You can logout if you want to login to a different account."
+      );
     }
 
     if (error) {

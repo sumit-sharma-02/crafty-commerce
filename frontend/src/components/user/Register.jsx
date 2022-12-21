@@ -36,7 +36,19 @@ const Register = () => {
 
   const dispatch = useDispatch();
   const navigate = useNavigate();
-  // const showSuccessToast = (message)
+
+  const showInfoToast = (message) => {
+    toast.info(message, {
+      position: "bottom-center",
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "colored",
+    });
+  };
 
   const showErrorToast = (message) => {
     toast.error(message, {
@@ -93,6 +105,9 @@ const Register = () => {
     formData.set("avatar", avatar);
 
     dispatch(register(formData));
+    if (!error) {
+      showSuccessToast("Your account have been registered successfully!");
+    }
   };
 
   const onChange = (event) => {
@@ -113,7 +128,7 @@ const Register = () => {
   useEffect(() => {
     if (isAuthenticated) {
       navigate("/");
-      showSuccessToast("Your account have been registered successfully!");
+      showInfoToast("Please logout before registering a new account.");
     }
 
     if (error) {
