@@ -80,6 +80,19 @@ export const loadUser = () => async (dispatch) => {
   }
 };
 
+//Logout user
+export const logout = () => async (dispatch) => {
+  try {
+    await axios.get("/api/v1/logout");
+    dispatch({ type: userConstants.LOGOUT_SUCCESS });
+  } catch (error) {
+    dispatch({
+      type: userConstants.LOGOUT_FAIL,
+      payload: error.response.data.error,
+    });
+  }
+};
+
 // Clear Errors
 export const clearErrors = () => async (dispatch) => {
   dispatch({

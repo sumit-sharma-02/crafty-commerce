@@ -4,25 +4,25 @@ import { Link, useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { toast } from "react-toastify";
 import { Search } from "../../components";
+import { logout } from "../../actions/user";
 
 // Icons used
 import { VscChromeClose } from "react-icons/vsc";
 import { FiLogIn, FiLogOut } from "react-icons/fi";
 import { TbListDetails } from "react-icons/tb";
 import { TfiReceipt } from "react-icons/tfi";
-import { SiGnuprivacyguard } from "react-icons/si";
+import { MdSpaceDashboard } from "react-icons/md";
 
 // Image used
 import Logo from "../../images/logo.png";
 import Avatar from "../../images/avatar-default-icon.png";
-import { MdSpaceDashboard } from "react-icons/md";
 
 const Header = () => {
   const dispatch = useDispatch();
-  const { user, loading } = useSelector((state) => state.auth);
+  const navigate = useNavigate();
 
-  const showErrorToast = (message) => {
-    toast.error(message, {
+  const showSuccessToast = (message) => {
+    toast.success(message, {
       position: "bottom-center",
       autoClose: 5000,
       hideProgressBar: false,
@@ -55,7 +55,12 @@ const Header = () => {
   };
 
   const [openSearchPalette, setOpenSearchPalette] = useState(false);
-  const navigate = useNavigate();
+
+  const { user, loading } = useSelector((state) => state.auth);
+  const logoutHandler = () => {
+    dispatch(logout());
+    showSuccessToast("Logged out successfully.");
+  };
 
   useEffect(() => {
     function onKeyDown(event) {
@@ -172,7 +177,7 @@ const Header = () => {
                             </Link>
                             <Link
                               className="flex items-center justify-start p-2 text-sm transition-colors duration-300 ease-in-out hover:bg-gray-100"
-                              to={"/orders/me"}
+                              to={"/orders"}
                             >
                               <span className="h-4 w-max pr-2">
                                 <TfiReceipt className="h-4 w-4" />
@@ -186,6 +191,7 @@ const Header = () => {
                         <Link
                           className="flex items-center justify-start rounded-b p-2 text-sm transition-colors duration-300 ease-in-out hover:bg-gray-100"
                           href={"/"}
+                          onClick={logoutHandler}
                         >
                           <span className="h-4 w-max pr-2">
                             <FiLogOut className="h-4 w-4" />
@@ -199,6 +205,32 @@ const Header = () => {
                     {!user && !loading && (
                       <>
                         <Link
+                          className="flex items-center justify-start rounded-b p-2 text-sm transition-colors duration-300 ease-in-out hover:bg-gray-100"
+                          to={"/register"}
+                        >
+                          <span className="h-4 w-max pr-2">
+                            <svg
+                              stroke="rgb(75 85 99)"
+                              fill="rgb(75 85 99)"
+                              strokeWidth="0"
+                              viewBox="0 0 24 24"
+                              height="1em"
+                              width="1em"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <path
+                                fill="none"
+                                stroke="rgb(75 85 99)"
+                                strokeWidth="2"
+                                d="M18,24 L18,12 M23,22 L13,15 M23,15 L13,22 M8,11 C10.7614237,11 13,8.76142375 13,6 C13,3.23857625 10.7614237,1 8,1 C5.23857625,1 3,3.23857625 3,6 C3,8.76142375 5.23857625,11 8,11 Z M13.0233822,13.0234994 C11.7718684,11.7594056 10.0125018,11 8,11 C4,11 1,14 1,18 L1,23 L11,23"
+                              ></path>
+                            </svg>
+                          </span>
+                          <span className="flex h-4 w-max items-center justify-center pb-[3px]">
+                            Register
+                          </span>
+                        </Link>
+                        <Link
                           className="flex items-center justify-start rounded-t p-2 text-sm transition-colors duration-300 ease-in-out hover:bg-gray-100"
                           to={"/login"}
                         >
@@ -207,17 +239,6 @@ const Header = () => {
                           </span>
                           <span className="flex h-4 w-max items-center justify-center pb-[3px]">
                             Log in
-                          </span>
-                        </Link>
-                        <Link
-                          className="flex items-center justify-start rounded-b p-2 text-sm transition-colors duration-300 ease-in-out hover:bg-gray-100"
-                          to={"/register"}
-                        >
-                          <span className="h-4 w-max pr-2">
-                            <SiGnuprivacyguard className="h-4 w-4" />
-                          </span>
-                          <span className="flex h-4 w-max items-center justify-center pb-[3px]">
-                            Register
                           </span>
                         </Link>
                       </>

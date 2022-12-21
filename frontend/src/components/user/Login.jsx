@@ -30,19 +30,6 @@ const Login = () => {
     });
   };
 
-  const showInfoToast = (message) => {
-    toast.info(message, {
-      position: "bottom-center",
-      autoClose: 5000,
-      hideProgressBar: false,
-      closeOnClick: true,
-      pauseOnHover: true,
-      draggable: true,
-      progress: undefined,
-      theme: "colored",
-    });
-  };
-
   const showErrorToast = (message) => {
     toast.error(message, {
       position: "bottom-center",
@@ -71,9 +58,6 @@ const Login = () => {
   useEffect(() => {
     if (isAuthenticated) {
       navigate("/");
-      showInfoToast(
-        "You are already logged in. You can logout if you want to login to a different account."
-      );
     }
 
     if (error) {
