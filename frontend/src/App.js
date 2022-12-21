@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { AnimatePresence } from "framer-motion";
 import { Routes, Route, useLocation } from "react-router-dom";
 import {
@@ -9,12 +10,19 @@ import {
   Login,
   Register,
 } from "./components";
+import { loadUser } from "./actions/user";
+import store from "./store";
 
 // CSS Imports
 import "./App.css";
 
 function App() {
   const { pathname } = useLocation();
+
+  useEffect(() => {
+    store.dispatch(loadUser());
+  }, []);
+
   return (
     <AnimatePresence mode="wait">
       <div className="flex min-h-screen flex-col">
