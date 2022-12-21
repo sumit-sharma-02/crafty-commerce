@@ -1,21 +1,39 @@
 import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { Link, useNavigate } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
+import { toast } from "react-toastify";
 import { Search } from "../../components";
 
 // Icons used
 import { VscChromeClose } from "react-icons/vsc";
-// import { IoBagCheckOutline } from "react-icons/io5";
-// import { GiShoppingCart } from "react-icons/gi";
-// import { VscAccount } from "react-icons/vsc";
-// import { IoIosArrowDropdown } from "react-icons/io";
-// import { BsSearch } from "react-icons/bs";
+import { FiLogIn, FiLogOut } from "react-icons/fi";
+import { TbListDetails } from "react-icons/tb";
+import { TfiReceipt } from "react-icons/tfi";
+import { SiGnuprivacyguard } from "react-icons/si";
 
 // Image used
 import Logo from "../../images/logo.png";
 import Avatar from "../../images/avatar-default-icon.png";
+import { MdSpaceDashboard } from "react-icons/md";
 
 const Header = () => {
+  const dispatch = useDispatch();
+  const { user, loading } = useSelector((state) => state.auth);
+
+  const showErrorToast = (message) => {
+    toast.error(message, {
+      position: "bottom-center",
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "colored",
+    });
+  };
+
   const [isAccountDropdownOpen, setIsAccountDropdownOpen] = useState(false);
   const toggleAccountDropdown = () => {
     setIsAccountDropdownOpen(!isAccountDropdownOpen);
@@ -59,34 +77,49 @@ const Header = () => {
         navigate={navigate}
       />
       <header>
-        <div className="flex justify-between bg-gray-100 py-1 px-4 sm:px-10 xl:px-24">
+        <div className="flex justify-between bg-gray-100 py-2 px-4 sm:px-10 xl:px-24">
           <div className=" hidden sm:flex sm:items-center">
             <p className="text-sm text-gray-600">
               Welcome to Crafty Commerce!{" "}
-              <Link className=" ml-1 text-primary" to={"/login"}>
-                Login
-              </Link>{" "}
-              or{" "}
-              <Link className=" text-primary" to={"/register"}>
-                Register
-              </Link>
+              {!user && !loading && (
+                <>
+                  <Link className="mx-1 text-primary" to={"/login"}>
+                    Login
+                  </Link>
+                  <span>or</span>
+                  <Link className="ml-1 text-primary" to={"/register"}>
+                    Register
+                  </Link>
+                </>
+              )}
             </p>
           </div>
 
-          <div className="flex w-full items-center justify-between divide-gray-300 text-sm text-gray-600  sm:justify-end md:w-auto">
+          <div className="flex w-full items-center justify-between divide-gray-300 text-sm text-gray-600 sm:justify-end md:w-auto">
             <motion.div
               className="relative cursor-pointer"
               onClick={toggleAccountDropdown}
             >
-              <button
+              <motion.button
+                whileTap={{ scale: 0.9 }}
+                transition={{ duration: 0.3 }}
                 className={`flex items-center whitespace-nowrap sm:pr-4 ${
                   isAccountDropdownOpen ? "text-primary" : "text-gray-600"
                 } tracking-wider hover:text-primary `}
               >
                 <div className="mr-1 w-max">
-                  <img className="h-10 w-10" src={Avatar} alt="avatar" />
+                  <img
+                    className="h-8 w-8 rounded-full shadow-md"
+                    src={user?.avatar ? user?.avatar.url : Avatar}
+                    alt={`${user?.name ? user.name : "Avatar"}`}
+                  />
                 </div>
-                Hi! Sumit
+                <p className="ml-1">Hi!</p>
+                {user && (
+                  <p className="ml-1">
+                    {user.name?.split(" ").slice(0, 1).join(" ")}
+                  </p>
+                )}
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   fill="currentColor"
@@ -95,7 +128,7 @@ const Header = () => {
                 >
                   <path d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z" />
                 </svg>
-              </button>
+              </motion.button>
               {isAccountDropdownOpen && (
                 <>
                   <motion.div
@@ -110,36 +143,85 @@ const Header = () => {
                     }}
                     className={`absolute z-40 mt-2 w-full overflow-hidden rounded border bg-white text-base shadow`}
                   >
-                    <Link
-                      className="block rounded-t p-2 text-sm transition-colors duration-300 ease-in-out hover:bg-gray-100"
-                      to={"/"}
-                    >
-                      Your Profile
-                    </Link>
-                    <Link
-                      className="block rounded-t p-2 text-sm transition-colors duration-300 ease-in-out hover:bg-gray-100"
-                      to={"/login"}
-                    >
-                      Login
-                    </Link>
-                    <Link
-                      className="block p-2 text-sm transition-colors duration-300 ease-in-out hover:bg-gray-100"
-                      to={"/register"}
-                    >
-                      Register
-                    </Link>
-                    <Link
-                      className="block rounded-b p-2 text-sm transition-colors duration-300 ease-in-out hover:bg-gray-100"
-                      to={"/"}
-                    >
-                      Your Orders
-                    </Link>
-                    <Link
-                      className="block rounded-b p-2 text-sm transition-colors duration-300 ease-in-out hover:bg-gray-100"
-                      href={"/"}
-                    >
-                      Logout
-                    </Link>
+                    {user && (
+                      <>
+                        {user?.role === "admin" ? (
+                          <Link
+                            className="flex items-center justify-start rounded-t p-2 text-sm transition-colors duration-300 ease-in-out hover:bg-gray-100"
+                            to={"/dashboard"}
+                          >
+                            <span className="h-4 w-max pr-2">
+                              <MdSpaceDashboard className="h-4 w-4" />
+                            </span>
+                            <span className="flex h-4 w-max items-center justify-center pb-[3px]">
+                              Dashboard
+                            </span>
+                          </Link>
+                        ) : (
+                          <>
+                            <Link
+                              className="flex items-center justify-start rounded-t p-2 text-sm transition-colors duration-300 ease-in-out hover:bg-gray-100"
+                              to={"/profile"}
+                            >
+                              <span className="h-4 w-max pr-2">
+                                <TbListDetails className="h-4 w-4" />
+                              </span>
+                              <span className="flex h-4 w-max items-center justify-center pb-[3px]">
+                                Profile
+                              </span>
+                            </Link>
+                            <Link
+                              className="flex items-center justify-start p-2 text-sm transition-colors duration-300 ease-in-out hover:bg-gray-100"
+                              to={"/orders/me"}
+                            >
+                              <span className="h-4 w-max pr-2">
+                                <TfiReceipt className="h-4 w-4" />
+                              </span>
+                              <span className="flex h-4 w-max items-center justify-center pb-[3px]">
+                                Orders
+                              </span>
+                            </Link>
+                          </>
+                        )}
+                        <Link
+                          className="flex items-center justify-start rounded-b p-2 text-sm transition-colors duration-300 ease-in-out hover:bg-gray-100"
+                          href={"/"}
+                        >
+                          <span className="h-4 w-max pr-2">
+                            <FiLogOut className="h-4 w-4" />
+                          </span>
+                          <span className="flex h-4 w-max items-center justify-center pb-[3px]">
+                            Log out
+                          </span>
+                        </Link>
+                      </>
+                    )}
+                    {!user && !loading && (
+                      <>
+                        <Link
+                          className="flex items-center justify-start rounded-t p-2 text-sm transition-colors duration-300 ease-in-out hover:bg-gray-100"
+                          to={"/login"}
+                        >
+                          <span className="h-4 w-max pr-2">
+                            <FiLogIn className="h-4 w-4" />
+                          </span>
+                          <span className="flex h-4 w-max items-center justify-center pb-[3px]">
+                            Log in
+                          </span>
+                        </Link>
+                        <Link
+                          className="flex items-center justify-start rounded-b p-2 text-sm transition-colors duration-300 ease-in-out hover:bg-gray-100"
+                          to={"/register"}
+                        >
+                          <span className="h-4 w-max pr-2">
+                            <SiGnuprivacyguard className="h-4 w-4" />
+                          </span>
+                          <span className="flex h-4 w-max items-center justify-center pb-[3px]">
+                            Register
+                          </span>
+                        </Link>
+                      </>
+                    )}
                   </motion.div>
                   <motion.div
                     initial={{ opacity: 0 }}
@@ -483,8 +565,8 @@ const Header = () => {
             onMouseEnter={toggleCartDropdown}
             onMouseLeave={toggleCartDropdown}
           >
-            <button className="relative flex h-full items-center space-x-2 bg-primaryDarkShade p-2.5 font-bold uppercase text-white lg:p-2">
-              <span className="h-full">
+            <button className="relative flex h-full items-center bg-primaryDarkShade p-2.5 font-bold uppercase text-white lg:p-2">
+              <span className="h-full lg:absolute lg:flex lg:items-center ">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   className="h-6 w-6"
@@ -493,11 +575,11 @@ const Header = () => {
                 >
                   <path d="M3 1a1 1 0 000 2h1.22l.305 1.222a.997.997 0 00.01.042l1.358 5.43-.893.892C3.74 11.846 4.632 14 6.414 14H15a1 1 0 000-2H6.414l1-1H14a1 1 0 00.894-.553l3-6A1 1 0 0017 3H6.28l-.31-1.243A1 1 0 005 1H3zM16 16.5a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM6.5 18a1.5 1.5 0 100-3 1.5 1.5 0 000 3z" />
                 </svg>
-                <span className="absolute top-0 left-9 z-20 box-border flex h-5 w-5 items-center justify-center rounded-full bg-black text-xs text-white lg:hidden">
+                <span className="absolute top-0 left-9 z-20 box-border flex h-5 w-5 items-center justify-center rounded-full bg-black text-xs text-white lg:left-4 lg:h-4 lg:w-4">
                   0
                 </span>
               </span>
-              <div className="hidden items-center space-x-2 lg:flex">
+              <div className="ml-[32px] hidden items-center space-x-2 lg:flex">
                 <span>My Cart -</span>
                 <span className=" font-normal">$0.00</span>
               </div>
