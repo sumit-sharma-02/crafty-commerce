@@ -150,9 +150,9 @@ const Header = () => {
                   >
                     {user && (
                       <>
-                        {user?.role === "admin" ? (
+                        {user?.role === "admin" && (
                           <Link
-                            className="flex items-center justify-start rounded-t p-2 text-sm transition-colors duration-300 ease-in-out hover:bg-gray-100"
+                            className="flex items-center justify-start rounded-t p-2 text-sm transition-colors duration-300 ease-in-out hover:bg-gray-200"
                             to={"/dashboard"}
                           >
                             <span className="h-4 w-max pr-2">
@@ -162,34 +162,37 @@ const Header = () => {
                               Dashboard
                             </span>
                           </Link>
-                        ) : (
-                          <>
-                            <Link
-                              className="flex items-center justify-start rounded-t p-2 text-sm transition-colors duration-300 ease-in-out hover:bg-gray-100"
-                              to={"/profile"}
-                            >
-                              <span className="h-4 w-max pr-2">
-                                <TbListDetails className="h-4 w-4" />
-                              </span>
-                              <span className="flex h-4 w-max items-center justify-center pb-[3px]">
-                                Profile
-                              </span>
-                            </Link>
-                            <Link
-                              className="flex items-center justify-start p-2 text-sm transition-colors duration-300 ease-in-out hover:bg-gray-100"
-                              to={"/orders"}
-                            >
-                              <span className="h-4 w-max pr-2">
-                                <TfiReceipt className="h-4 w-4" />
-                              </span>
-                              <span className="flex h-4 w-max items-center justify-center pb-[3px]">
-                                Orders
-                              </span>
-                            </Link>
-                          </>
                         )}
+
                         <Link
-                          className="flex items-center justify-start rounded-b p-2 text-sm transition-colors duration-300 ease-in-out hover:bg-gray-100"
+                          className={`flex items-center justify-start p-2 text-sm transition-colors ${
+                            user?.role === "admin"
+                              ? "rounded-none"
+                              : "rounded-t"
+                          } duration-300 ease-in-out hover:bg-gray-200`}
+                          to={"/profile"}
+                        >
+                          <span className="h-4 w-max pr-2">
+                            <TbListDetails className="h-4 w-4" />
+                          </span>
+                          <span className="flex h-4 w-max items-center justify-center pb-[3px]">
+                            Profile
+                          </span>
+                        </Link>
+                        <Link
+                          className="flex items-center justify-start p-2 text-sm transition-colors duration-300 ease-in-out hover:bg-gray-200"
+                          to={"/orders"}
+                        >
+                          <span className="h-4 w-max pr-2">
+                            <TfiReceipt className="h-4 w-4" />
+                          </span>
+                          <span className="flex h-4 w-max items-center justify-center pb-[3px]">
+                            Orders
+                          </span>
+                        </Link>
+
+                        <Link
+                          className="flex items-center justify-start rounded-b p-2 text-sm transition-colors duration-300 ease-in-out hover:bg-gray-200"
                           href={"/"}
                           onClick={logoutHandler}
                         >
@@ -205,7 +208,7 @@ const Header = () => {
                     {!user && !loading && (
                       <>
                         <Link
-                          className="flex items-center justify-start rounded-b p-2 text-sm transition-colors duration-300 ease-in-out hover:bg-gray-100"
+                          className="flex items-center justify-start rounded-b p-2 text-sm transition-colors duration-300 ease-in-out hover:bg-gray-200"
                           to={"/register"}
                         >
                           <span className="h-4 w-max pr-2">
@@ -231,7 +234,7 @@ const Header = () => {
                           </span>
                         </Link>
                         <Link
-                          className="flex items-center justify-start rounded-t p-2 text-sm transition-colors duration-300 ease-in-out hover:bg-gray-100"
+                          className="flex items-center justify-start rounded-t p-2 text-sm transition-colors duration-300 ease-in-out hover:bg-gray-200"
                           to={"/login"}
                         >
                           <span className="h-4 w-max pr-2">
@@ -265,23 +268,24 @@ const Header = () => {
           </div>
         </div>
 
-        <div className="flex items-center justify-between py-6 px-4 sm:px-10 xl:px-24">
+        <div className="flex w-full items-center justify-between py-6 px-4 sm:px-10 xl:px-24">
           <div className="h-max w-[250px]">
             <Link to={"/"}>
               <img src={Logo} alt="Crafty Commerce Logo" />
             </Link>
           </div>
 
-          <div className="flex w-full items-center px-2 sm:px-8">
+          <div className="flex w-full items-center justify-end px-2 sm:px-8">
             <div
               onClick={() => setOpenSearchPalette(!openSearchPalette)}
-              className=" w-full cursor-pointer rounded-l border-2 border-r-0 border-gray-200 p-2 px-4 text-sm text-gray-400 outline-none"
+              className="flex w-full cursor-pointer rounded-l border-2 border-r-0 border-gray-200 
+              p-2 px-4 text-sm text-gray-400 outline-none 2xs:hidden sm:flex"
             >
               Search the store...
             </div>
             <button
-              className="rounded-r bg-primary p-2 font-bold text-white transition-all duration-500
-          ease-in-out hover:bg-primaryDarkShade sm:px-6"
+              className="rounded-r bg-primary p-2 font-bold text-white transition-all duration-500 
+              ease-in-out hover:bg-primaryDarkShade 2xs:rounded-md sm:rounded-l-none sm:rounded-r sm:px-6"
               onClick={() => setOpenSearchPalette(!openSearchPalette)}
             >
               <svg
@@ -547,19 +551,19 @@ const Header = () => {
                     className={`absolute z-50 w-52 overflow-hidden rounded border bg-white text-sm font-normal text-black shadow`}
                   >
                     <Link
-                      className=" block border-b p-3 px-4 text-sm tracking-widest hover:bg-gray-100"
+                      className=" block border-b p-3 px-4 text-sm tracking-widest hover:bg-gray-200"
                       to={"/"}
                     >
                       Frequently Asked Questions (FAQ)
                     </Link>
                     <Link
-                      className=" block border-b p-3 px-4 text-sm tracking-widest hover:bg-gray-100"
+                      className=" block border-b p-3 px-4 text-sm tracking-widest hover:bg-gray-200"
                       to={"/"}
                     >
                       Terms & conditions
                     </Link>
                     <Link
-                      className=" block p-3 px-4 text-sm tracking-widest hover:bg-gray-100"
+                      className=" block p-3 px-4 text-sm tracking-widest hover:bg-gray-200"
                       to={"/"}
                     >
                       Privacy & policy
