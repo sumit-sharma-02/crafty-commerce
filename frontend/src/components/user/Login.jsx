@@ -17,10 +17,21 @@ const Login = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
-  // const showSuccessToast = (message)
-
   const showErrorToast = (message) => {
     toast.error(message, {
+      position: "bottom-center",
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "colored",
+    });
+  };
+
+  const showSuccessToast = (message) => {
+    toast.success(message, {
       position: "bottom-center",
       autoClose: 5000,
       hideProgressBar: false,
@@ -44,6 +55,7 @@ const Login = () => {
   useEffect(() => {
     if (isAuthenticated) {
       navigate("/");
+      showSuccessToast("Logged in successfully!");
     }
 
     if (error) {
@@ -124,7 +136,7 @@ const Login = () => {
                       </svg>
                     </span>
                     <input
-                      className=" w-full border-b-2 border-gray-300 py-2 pl-6 text-gray-600 placeholder-gray-400 focus:border-blue-300 focus:outline-none"
+                      className=" w-full border-b-2 border-gray-300 py-2 pl-6 pr-8 text-gray-600 placeholder-gray-400 focus:border-blue-300 focus:outline-none"
                       type={`${passwordHide ? "password" : "text"}`}
                       placeholder="Enter your Password"
                       value={password}

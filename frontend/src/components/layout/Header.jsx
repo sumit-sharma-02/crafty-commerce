@@ -59,7 +59,7 @@ const Header = () => {
         navigate={navigate}
       />
       <header>
-        <div className="flex justify-between bg-gray-100 py-3 px-4 sm:px-10 xl:px-24">
+        <div className="flex justify-between bg-gray-100 py-1 px-4 sm:px-10 xl:px-24">
           <div className=" hidden sm:flex sm:items-center">
             <p className="text-sm text-gray-600">
               Welcome to Crafty Commerce!{" "}
