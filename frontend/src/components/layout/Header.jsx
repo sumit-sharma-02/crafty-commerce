@@ -83,7 +83,7 @@ const Header = () => {
       />
       <header>
         <div className="flex justify-between bg-gray-100 py-2 px-4 sm:px-10 xl:px-24">
-          <div className=" hidden sm:flex sm:items-center">
+          <div className="hidden sm:flex sm:items-center">
             <p className="text-sm text-gray-600">
               Welcome to Crafty Commerce!{" "}
               {!user && !loading && (
@@ -146,7 +146,7 @@ const Header = () => {
                       duration: 0.5,
                       ease: "easeInOut",
                     }}
-                    className={`absolute z-40 mt-2 w-full overflow-hidden rounded border bg-white text-base shadow`}
+                    className={`absolute z-40 mt-2 w-max overflow-hidden rounded border bg-white text-base shadow`}
                   >
                     {user && (
                       <>
@@ -278,7 +278,7 @@ const Header = () => {
           <div className="flex w-full items-center justify-end px-2 sm:px-8">
             <div
               onClick={() => setOpenSearchPalette(!openSearchPalette)}
-              className="flex w-full cursor-pointer rounded-l border-2 border-r-0 border-gray-200 
+              className="flex w-full cursor-pointer rounded-l border-2 border-r-0 border-gray-100 
               p-2 px-4 text-sm text-gray-400 outline-none 2xs:hidden sm:flex"
             >
               Search the store...

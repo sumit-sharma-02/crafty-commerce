@@ -9,6 +9,7 @@ import { Loader, MetaData } from "../../components";
 // Icons used
 import { MdOutlineMail } from "react-icons/md";
 import { AiOutlineEye, AiOutlineEyeInvisible } from "react-icons/ai";
+import { BsCameraFill } from "react-icons/bs";
 
 // Images used
 import Avatar from "../../images/avatar-default-icon.png";
@@ -151,7 +152,7 @@ const Register = () => {
               >
                 <div className="mx-auto flex items-center justify-center">
                   <div className="w-full rounded-lg bg-white px-4 text-center">
-                    <div className="mb-4">
+                    <div>
                       <img
                         className="mx-auto h-28 w-28 rounded-full object-cover object-center"
                         src={avatarPreview}
@@ -161,13 +162,13 @@ const Register = () => {
                     <motion.label
                       whileTap={{ scale: 0.9 }}
                       transition={{ duration: 0.3, ease: "easeInOut" }}
-                      className="mt-6 cursor-pointer"
+                      className="flex cursor-pointer items-center justify-center"
                     >
                       <span
-                        className="mt-2 rounded-full bg-blue-500 p-2 px-4 py-2 text-sm 
-                      font-semibold leading-normal tracking-widest text-white shadow-lg"
+                        className="flex w-max items-center justify-center rounded-full bg-blue-500 p-2 px-4 py-2 
+                        text-base font-semibold leading-normal tracking-wide text-white shadow-lg"
                       >
-                        UPLOAD AVATAR
+                        <BsCameraFill className="mx-2 h-5 w-5" /> Browse Photo
                       </span>
                       <input
                         type="file"
