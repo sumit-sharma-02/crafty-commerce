@@ -321,7 +321,7 @@ const LimitedOffers = () => {
           </div>
         </div>
       </div>
-      <div className=" gap-8 pt-10 md:grid md:grid-cols-2">
+      <div className="mb-10 gap-8 pt-10 md:grid md:grid-cols-2">
         <div className="mb-6 md:mb-0">
           <Link to={"/"}>
             <img

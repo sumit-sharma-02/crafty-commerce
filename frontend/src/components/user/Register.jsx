@@ -93,7 +93,7 @@ const Register = () => {
     formData.set("avatar", avatar);
 
     dispatch(register(formData));
-    if (!error) {
+    if (!error && !loading) {
       showSuccessToast("Your account have been registered successfully!");
     }
   };
@@ -119,14 +119,16 @@ const Register = () => {
     }
 
     if (error) {
-      showErrorToast(error);
+      if (error !== "Login required for accessing the resources.") {
+        showErrorToast(error);
+      }
       dispatch(clearErrors);
     }
   }, [dispatch, isAuthenticated, error, navigate]);
 
   return (
-    <main className="h-screen w-screen">
-      <section className="h-full w-full">
+    <main>
+      <section>
         {loading ? (
           <div className="flex h-full w-full items-center justify-center px-4 py-24 sm:p-10">
             <Loader sizeType="big" />
@@ -134,7 +136,7 @@ const Register = () => {
         ) : (
           <div
             className="flex h-full w-full items-center justify-center overflow-auto 
-            bg-gradient-to-br from-red-500 via-purple-500 to-blue-500 px-4 py-24 sm:p-10"
+            bg-gradient-to-br from-red-500 via-purple-500 to-blue-500 py-24 sm:p-10"
           >
             <MetaData title={"Register User"} />
             <div

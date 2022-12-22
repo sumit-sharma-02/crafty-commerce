@@ -26,7 +26,7 @@ function App() {
   return (
     <AnimatePresence mode="wait">
       <div className="flex min-h-screen flex-col">
-        {!["/login", "/register"].includes(pathname) && <Header />}
+        <Header />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/products" element={<AllProducts />} />
@@ -36,7 +36,7 @@ function App() {
           <Route path="/register" element={<Register />} />
           <Route path="/product/:id" element={<Product />} />
         </Routes>
-        {!["/login", "/register"].includes(pathname) && <Footer />}
+        <Footer />
       </div>
     </AnimatePresence>
   );

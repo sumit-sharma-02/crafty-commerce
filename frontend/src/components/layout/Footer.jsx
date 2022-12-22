@@ -24,7 +24,7 @@ const Footer = () => {
 
   return (
     <footer>
-      <div className="mt-10 items-center justify-center bg-primary py-5 px-4 sm:flex sm:justify-between sm:px-10 xl:px-24">
+      <div className="items-center justify-center bg-primary py-5 px-4 sm:flex sm:justify-between sm:px-10 xl:px-24">
         <div className="cursor-pointer">
           <img
             className="mx-auto mb-6 h-[90px] sm:mx-0 sm:mb-0"

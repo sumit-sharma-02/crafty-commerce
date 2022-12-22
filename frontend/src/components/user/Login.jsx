@@ -17,6 +17,19 @@ const Login = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
+  const showSuccessToast = (message) => {
+    toast.success(message, {
+      position: "bottom-center",
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "colored",
+    });
+  };
+
   const showErrorToast = (message) => {
     toast.error(message, {
       position: "bottom-center",
@@ -37,6 +50,9 @@ const Login = () => {
   const submitHandler = (event) => {
     event.preventDefault();
     dispatch(login(email, password));
+    if (!error && !loading) {
+      showSuccessToast("You have successfully logged in.");
+    }
   };
 
   useEffect(() => {
@@ -45,14 +61,16 @@ const Login = () => {
     }
 
     if (error) {
-      showErrorToast(error);
+      if (error !== "Login required for accessing the resources.") {
+        showErrorToast(error);
+      }
       dispatch(clearErrors);
     }
   }, [dispatch, isAuthenticated, error, navigate]);
 
   return (
-    <main className="h-screen w-screen">
-      <section className="h-full w-full">
+    <main>
+      <section>
         {loading ? (
           <div className="flex h-full w-full items-center justify-center p-10 py-24">
             <Loader sizeType="big" />
@@ -60,7 +78,7 @@ const Login = () => {
         ) : (
           <div
             className="flex h-full w-full items-center justify-center overflow-auto 
-          bg-gradient-to-br from-red-500  via-purple-500 to-blue-500 px-4 py-24 sm:p-10"
+          bg-gradient-to-br from-red-500  via-purple-500 to-blue-500 py-24 sm:p-10"
           >
             <MetaData title={`Login`} />
             <div
