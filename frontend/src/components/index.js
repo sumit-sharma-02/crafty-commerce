@@ -17,6 +17,7 @@ export { default as Footer } from "./layout/Footer";
 export { default as Login } from "./user/Login";
 export { default as Register } from "./user/Register";
 export { default as Profile } from "./user/Profile";
+export { default as UpdateProfile } from "./user/UpdateProfile";
 export { default as Loader } from "./layout/Loader";
 export { default as TopScroll } from "./layout/TopScroll";
 export { default as Error } from "./Illustrators/Error";

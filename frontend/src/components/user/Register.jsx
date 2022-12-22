@@ -21,7 +21,7 @@ const Register = () => {
     password: "",
   });
   const { name, email, password } = user;
-  const [avatar, setAvatar] = useState(Avatar);
+  const [avatar, setAvatar] = useState("");
   const [avatarPreview, setAvatarPreview] = useState(Avatar);
   const [passwordHide, setPasswordHide] = useState(true);
   const [confirmPassword, setConfirmPassword] = useState("");
@@ -82,7 +82,7 @@ const Register = () => {
       return showErrorToast(
         "Confirm password isn't matching. Please make sure the password and confirm password are same."
       );
-    } else if (avatar === Avatar) {
+    } else if (avatar === "") {
       return showErrorToast("Please choose an Avatar for your profile.");
     }
 
@@ -93,7 +93,7 @@ const Register = () => {
     formData.set("avatar", avatar);
 
     dispatch(register(formData));
-    if (!error && !loading) {
+    if (!error && !loading && isAuthenticated) {
       showSuccessToast("Your account have been registered successfully!");
     }
   };
@@ -161,25 +161,27 @@ const Register = () => {
                         alt="Avatar Upload"
                       />
                     </div>
-                    <motion.label
-                      whileTap={{ scale: 0.9 }}
-                      transition={{ duration: 0.3, ease: "easeInOut" }}
-                      className="flex cursor-pointer items-center justify-center"
-                    >
-                      <span
-                        className="flex w-max items-center justify-center rounded-full bg-blue-500 p-2 px-4 py-2 
-                        text-base font-semibold leading-normal tracking-wide text-white shadow-lg"
+                    <div className="mt-2 flex w-full items-center justify-center">
+                      <motion.label
+                        whileTap={{ scale: 0.9 }}
+                        transition={{ duration: 0.3, ease: "easeInOut" }}
+                        className="flex w-max cursor-pointer items-center justify-center"
                       >
-                        <BsCameraFill className="mx-2 h-5 w-5" /> Browse Photo
-                      </span>
-                      <input
-                        type="file"
-                        name="avatar"
-                        className="hidden"
-                        accept="images/*"
-                        onChange={onChange}
-                      />
-                    </motion.label>
+                        <span
+                          className="flex w-max items-center justify-center rounded-full bg-blue-500 p-2 px-4 py-2 
+                        text-base font-semibold leading-normal tracking-wide text-white shadow-lg"
+                        >
+                          <BsCameraFill className="mx-2 h-5 w-5" /> Browse Photo
+                        </span>
+                        <input
+                          type="file"
+                          name="avatar"
+                          className="hidden"
+                          accept="image/*"
+                          onChange={onChange}
+                        />
+                      </motion.label>
+                    </div>
                   </div>
                 </div>
 

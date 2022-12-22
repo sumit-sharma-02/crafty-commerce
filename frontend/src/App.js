@@ -11,6 +11,7 @@ import {
   Register,
   Profile,
   ProtectedRoute,
+  UpdateProfile,
 } from "./components";
 import { loadUser } from "./actions/user";
 import store from "./store";
@@ -36,6 +37,14 @@ function App() {
             element={
               <ProtectedRoute>
                 <Profile />
+              </ProtectedRoute>
+            }
+          ></Route>
+          <Route
+            path="/profile/update"
+            element={
+              <ProtectedRoute>
+                <UpdateProfile />
               </ProtectedRoute>
             }
           ></Route>

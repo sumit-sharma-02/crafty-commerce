@@ -41,6 +41,7 @@ const ProtectedRoute = ({ children }) => {
 
   if (!loading && isAuthenticated) {
     if (user?.role !== "admin") {
+      showErrorToast("Only Admins can access the resource.");
       return <Navigate to="/" />;
     }
     return children;
