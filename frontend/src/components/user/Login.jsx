@@ -60,13 +60,13 @@ const Login = () => {
       navigate("/");
     }
 
-    if (error) {
+    if (error && !loading) {
       if (error !== "Login required for accessing the resources.") {
         showErrorToast(error);
       }
       dispatch(clearErrors);
     }
-  }, [dispatch, isAuthenticated, error, navigate]);
+  }, [dispatch, isAuthenticated, error, navigate, loading]);
 
   return (
     <main>

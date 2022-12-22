@@ -60,6 +60,7 @@ const Header = () => {
   const logoutHandler = () => {
     dispatch(logout());
     showSuccessToast("Logged out successfully.");
+    navigate("/");
   };
 
   useEffect(() => {

@@ -10,6 +10,7 @@ import {
   Login,
   Register,
   Profile,
+  ProtectedRoute,
 } from "./components";
 import { loadUser } from "./actions/user";
 import store from "./store";
@@ -30,7 +31,14 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
-          <Route path="/profile" element={<Profile />}></Route>
+          <Route
+            path="/profile"
+            element={
+              <ProtectedRoute>
+                <Profile />
+              </ProtectedRoute>
+            }
+          ></Route>
           <Route path="/products" element={<AllProducts />} />
           <Route path="/products/:category" element={<AllProducts />} />
           <Route path="/search/:keyword" element={<AllProducts />} />
