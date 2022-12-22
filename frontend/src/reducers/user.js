@@ -65,12 +65,14 @@ export const userAuthReducer = (state = { user: {} }, action) => {
 export const userReducer = (state = {}, action) => {
   switch (action.type) {
     case userConstants.UPDATE_PROFILE_REQUEST:
+    case userConstants.UPDATE_PASSWORD_REQUEST:
       return {
         ...state,
         loading: true,
       };
 
     case userConstants.UPDATE_PROFILE_SUCCESS:
+    case userConstants.UPDATE_PASSWORD_SUCCESS:
       return {
         ...state,
         loading: false,
@@ -78,12 +80,14 @@ export const userReducer = (state = {}, action) => {
       };
 
     case userConstants.UPDATE_PROFILE_RESET:
+    case userConstants.UPDATE_PASSWORD_RESET:
       return {
         ...state,
         isUpdated: false,
       };
 
     case userConstants.UPDATE_PROFILE_FAIL:
+    case userConstants.UPDATE_PASSWORD_FAIL:
       return {
         ...state,
         loading: false,

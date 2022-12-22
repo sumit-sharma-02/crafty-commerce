@@ -124,6 +124,37 @@ export const updateProfile = (userData) => async (dispatch) => {
   }
 };
 
+// Update password
+export const updatePassword = (passwords) => async (dispatch) => {
+  try {
+    dispatch({
+      type: userConstants.UPDATE_PASSWORD_REQUEST,
+    });
+
+    const config = {
+      headers: {
+        "Content-Type": "application/json",
+      },
+    };
+
+    const { data } = await axios.put(
+      "/api/v1/password/update",
+      passwords,
+      config
+    );
+
+    dispatch({
+      type: userConstants.UPDATE_PASSWORD_SUCCESS,
+      payload: data.success,
+    });
+  } catch (error) {
+    dispatch({
+      type: userConstants.UPDATE_PASSWORD_FAIL,
+      error: error.response.data.error,
+    });
+  }
+};
+
 // Clear Errors
 export const clearErrors = () => async (dispatch) => {
   dispatch({
