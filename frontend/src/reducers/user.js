@@ -61,3 +61,36 @@ export const userAuthReducer = (state = { user: {} }, action) => {
       return state;
   }
 };
+
+export const userReducer = (state = {}, action) => {
+  switch (action.type) {
+    case userConstants.UPDATE_PROFILE_REQUEST:
+      return {
+        ...state,
+        loading: true,
+      };
+
+    case userConstants.UPDATE_PROFILE_SUCCESS:
+      return {
+        ...state,
+        loading: false,
+        isUpdated: action.payload,
+      };
+
+    case userConstants.UPDATE_PROFILE_RESET:
+      return {
+        ...state,
+        isUpdated: false,
+      };
+
+    case userConstants.UPDATE_PROFILE_FAIL:
+      return {
+        ...state,
+        loading: false,
+        error: action.payload,
+      };
+
+    default:
+      return state;
+  }
+};
