@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { AnimatePresence } from "framer-motion";
-import { Routes, Route, useLocation } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import {
   Header,
   Home,
@@ -9,6 +9,7 @@ import {
   AllProducts,
   Login,
   Register,
+  Profile,
 } from "./components";
 import { loadUser } from "./actions/user";
 import store from "./store";
@@ -17,8 +18,6 @@ import store from "./store";
 import "./App.css";
 
 function App() {
-  const { pathname } = useLocation();
-
   useEffect(() => {
     store.dispatch(loadUser());
   }, []);
@@ -29,11 +28,12 @@ function App() {
         <Header />
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/register" element={<Register />} />
+          <Route path="/profile" element={<Profile />}></Route>
           <Route path="/products" element={<AllProducts />} />
           <Route path="/products/:category" element={<AllProducts />} />
           <Route path="/search/:keyword" element={<AllProducts />} />
-          <Route path="/login" element={<Login />} />
-          <Route path="/register" element={<Register />} />
           <Route path="/product/:id" element={<Product />} />
         </Routes>
         <Footer />
