@@ -14,6 +14,7 @@ import {
   UpdateProfile,
   UpdatePassword,
   ForgotPassword,
+  ResetPassword,
 } from "./components";
 import { loadUser } from "./actions/user";
 import store from "./store";
@@ -59,6 +60,7 @@ function App() {
             }
           ></Route>
           <Route path="/password/forgot" element={<ForgotPassword />} />
+          <Route path="/password/reset/:token" element={<ResetPassword />} />
           <Route path="/products" element={<AllProducts />} />
           <Route path="/products/:category" element={<AllProducts />} />
           <Route path="/search/:keyword" element={<AllProducts />} />

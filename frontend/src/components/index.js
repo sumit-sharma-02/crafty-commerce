@@ -20,6 +20,7 @@ export { default as Profile } from "./user/Profile";
 export { default as UpdateProfile } from "./user/UpdateProfile";
 export { default as UpdatePassword } from "./user/UpdatePassword";
 export { default as ForgotPassword } from "./user/ForgotPassword";
+export { default as ResetPassword } from "./user/ResetPassword";
 export { default as Loader } from "./layout/Loader";
 export { default as TopScroll } from "./layout/TopScroll";
 export { default as Error } from "./Illustrators/Error";
