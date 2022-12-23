@@ -13,6 +13,7 @@ import {
   ProtectedRoute,
   UpdateProfile,
   UpdatePassword,
+  ForgotPassword,
 } from "./components";
 import { loadUser } from "./actions/user";
 import store from "./store";
@@ -57,6 +58,7 @@ function App() {
               </ProtectedRoute>
             }
           ></Route>
+          <Route path="/password/forgot" element={<ForgotPassword />} />
           <Route path="/products" element={<AllProducts />} />
           <Route path="/products/:category" element={<AllProducts />} />
           <Route path="/search/:keyword" element={<AllProducts />} />

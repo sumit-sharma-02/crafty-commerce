@@ -79,7 +79,7 @@ const Login = () => {
         ) : (
           <div
             className="flex h-full w-full items-center justify-center overflow-auto 
-          bg-gradient-to-br from-red-500  via-purple-500 to-blue-500 py-36 sm:p-10"
+          bg-gradient-to-br from-red-500  via-purple-500 to-blue-500 p-10 py-36"
           >
             <MetaData title={`Login`} />
             <div

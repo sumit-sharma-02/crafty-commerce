@@ -119,7 +119,7 @@ export const updateProfile = (userData) => async (dispatch) => {
   } catch (error) {
     dispatch({
       type: userConstants.UPDATE_PROFILE_FAIL,
-      error: error.response.data.error,
+      payload: error.response.data.error,
     });
   }
 };
@@ -150,13 +150,14 @@ export const updatePassword = (passwords) => async (dispatch) => {
   } catch (error) {
     dispatch({
       type: userConstants.UPDATE_PASSWORD_FAIL,
-      error: error.response.data.error,
+      payload: error.response.data.error,
     });
   }
 };
 
 // Forgot password
 export const forgotPassword = (email) => async (dispatch) => {
+  console.log(email);
   try {
     dispatch({
       type: userConstants.FORGOT_PASSWORD_REQUEST,
@@ -177,7 +178,7 @@ export const forgotPassword = (email) => async (dispatch) => {
   } catch (error) {
     dispatch({
       type: userConstants.FORGOT_PASSWORD_FAIL,
-      error: error.response.data.error,
+      payload: error.response.data.error,
     });
   }
 };

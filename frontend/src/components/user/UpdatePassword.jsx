@@ -75,11 +75,9 @@ const UpdatePassword = () => {
   };
 
   useEffect(() => {
-    console.log(error);
     if (error) {
-      console.log(error);
       showErrorToast(error);
-      dispatch(clearErrors);
+      dispatch(clearErrors());
     }
 
     if (isUpdated) {
