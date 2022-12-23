@@ -279,7 +279,7 @@ const Header = () => {
           <div className="flex w-full items-center justify-end px-2 sm:px-8">
             <div
               onClick={() => setOpenSearchPalette(!openSearchPalette)}
-              className="flex w-full cursor-pointer rounded-l border-2 border-r-0 border-gray-100 
+              className="flex w-full cursor-pointer rounded-l border-2 border-r-0 border-gray-200 
               p-2 px-4 text-sm text-gray-400 outline-none 2xs:hidden sm:flex"
             >
               Search the store...

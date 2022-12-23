@@ -108,13 +108,13 @@ const UpdateProfile = () => {
     <main>
       <section>
         {loading ? (
-          <div className="flex h-full w-full items-center justify-center px-4 py-24 sm:p-10">
+          <div className="flex h-full w-full items-center justify-center p-10 py-36">
             <Loader sizeType="big" />
           </div>
         ) : (
           <div
             className="flex h-full w-full items-center justify-center overflow-auto 
-            bg-gradient-to-br from-red-500 via-purple-500 to-blue-500 py-24 sm:p-10"
+            bg-gradient-to-br from-red-500 via-purple-500 to-blue-500 p-10 py-36"
           >
             <MetaData title={"Update Profile"} />
             <div
@@ -128,7 +128,7 @@ const UpdateProfile = () => {
               <form
                 onSubmit={submitHandler}
                 encType="multipart/form-data"
-                className="space-y-4 p-2"
+                className="mb-4 space-y-4 p-2"
               >
                 <div className="mx-auto flex items-center justify-center">
                   <div className="w-full rounded-lg bg-white px-4 text-center">
@@ -223,7 +223,7 @@ const UpdateProfile = () => {
                   whileTap={{ scale: 0.9 }}
                   transition={{ duration: 0.3, ease: "easeInOut" }}
                   disabled={loading ? true : false}
-                  className="flex w-full items-center justify-center space-x-2 rounded-full bg-gradient-to-l from-red-500
+                  className="!mt-8 flex w-full items-center justify-center space-x-2 rounded-full bg-gradient-to-l from-red-500
                   via-purple-500 to-blue-500 p-2 text-center font-semibold uppercase tracking-widest text-white shadow-lg"
                 >
                   Update Profile

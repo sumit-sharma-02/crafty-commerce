@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { register, clearErrors } from "../../actions/user";
 import { toast } from "react-toastify";
@@ -37,6 +37,7 @@ const Register = () => {
 
   const dispatch = useDispatch();
   const navigate = useNavigate();
+  const { pathname } = useLocation();
 
   const showErrorToast = (message) => {
     toast.error(message, {
@@ -76,7 +77,7 @@ const Register = () => {
       );
     } else if (!isCorrectPassword(user.password)) {
       return showErrorToast(
-        "Incorrect password format. The password must contain 6 characters with at least 1 lowercase, 1 uppercase, 1 numeric and 1 special character"
+        "Incorrect password format. The password must contain 6 characters with at least 1 lowercase, 1 uppercase, 1 numeric and 1 special character."
       );
     } else if (user.password !== confirmPassword) {
       return showErrorToast(
@@ -93,7 +94,7 @@ const Register = () => {
     formData.set("avatar", avatar);
 
     dispatch(register(formData));
-    if (!error && !loading && isAuthenticated) {
+    if (!error && !loading) {
       showSuccessToast("Your account have been registered successfully!");
     }
   };
@@ -118,25 +119,25 @@ const Register = () => {
       navigate("/");
     }
 
-    if (error) {
-      if (error !== "Login required for accessing the resources.") {
-        showErrorToast(error);
-      }
+    if (error && !loading && !["/login", "/register"].includes(pathname)) {
+      // if (error !== "Login required for accessing the resources.") {
+      showErrorToast(error);
+      // }
       dispatch(clearErrors);
     }
-  }, [dispatch, isAuthenticated, error, navigate]);
+  }, [dispatch, loading, isAuthenticated, error, navigate, pathname]);
 
   return (
     <main>
       <section>
         {loading ? (
-          <div className="flex h-full w-full items-center justify-center px-4 py-24 sm:p-10">
+          <div className="flex h-full w-full items-center justify-center p-10 py-36">
             <Loader sizeType="big" />
           </div>
         ) : (
           <div
             className="flex h-full w-full items-center justify-center overflow-auto 
-            bg-gradient-to-br from-red-500 via-purple-500 to-blue-500 py-24 sm:p-10"
+            bg-gradient-to-br from-red-500 via-purple-500 to-blue-500 p-10 py-36"
           >
             <MetaData title={"Register User"} />
             <div
@@ -260,7 +261,7 @@ const Register = () => {
                       </svg>
                     </span>
                     <input
-                      className=" w-full border-b-2 border-gray-300 py-2 pl-6 text-gray-600 placeholder-gray-400 focus:border-blue-300 focus:outline-none"
+                      className=" w-full border-b-2 border-gray-300 py-2 pl-6 pr-8 text-gray-600 placeholder-gray-400 focus:border-blue-300 focus:outline-none"
                       type={`${passwordHide ? "password" : "text"}`}
                       placeholder="Enter your Password"
                       name="password"
@@ -305,7 +306,7 @@ const Register = () => {
                       </svg>
                     </span>
                     <input
-                      className=" w-full border-b-2 border-gray-300 py-2 pl-6 text-gray-600 placeholder-gray-400 focus:border-blue-300 focus:outline-none"
+                      className=" w-full border-b-2 border-gray-300 py-2 pl-6 pr-8 text-gray-600 placeholder-gray-400 focus:border-blue-300 focus:outline-none"
                       type={`${confirmPasswordHide ? "password" : "text"}`}
                       placeholder="Confirm your Password"
                       value={confirmPassword}

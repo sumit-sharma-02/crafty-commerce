@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useNavigate, useLocation } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { login, clearErrors } from "../../actions/user";
 import { toast } from "react-toastify";
@@ -16,6 +16,7 @@ const Login = () => {
   const [passwordHide, setPasswordHide] = useState(true);
   const dispatch = useDispatch();
   const navigate = useNavigate();
+  const { pathname } = useLocation();
 
   const showSuccessToast = (message) => {
     toast.success(message, {
@@ -60,25 +61,25 @@ const Login = () => {
       navigate("/");
     }
 
-    if (error && !loading) {
-      if (error !== "Login required for accessing the resources.") {
-        showErrorToast(error);
-      }
+    if (error && !loading && !["/login", "/register"].includes(pathname)) {
+      // if (error !== "Login required for accessing the resources.") {
+      showErrorToast(error);
+      // }
       dispatch(clearErrors);
     }
-  }, [dispatch, isAuthenticated, error, navigate, loading]);
+  }, [dispatch, isAuthenticated, error, navigate, loading, pathname]);
 
   return (
     <main>
       <section>
         {loading ? (
-          <div className="flex h-full w-full items-center justify-center p-10 py-24">
+          <div className="flex h-full w-full items-center justify-center p-10 py-36">
             <Loader sizeType="big" />
           </div>
         ) : (
           <div
             className="flex h-full w-full items-center justify-center overflow-auto 
-          bg-gradient-to-br from-red-500  via-purple-500 to-blue-500 py-24 sm:p-10"
+          bg-gradient-to-br from-red-500  via-purple-500 to-blue-500 py-36 sm:p-10"
           >
             <MetaData title={`Login`} />
             <div

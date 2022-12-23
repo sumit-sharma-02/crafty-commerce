@@ -17,13 +17,13 @@ const Profile = () => {
     <main>
       <section>
         {loading ? (
-          <div className="flex h-full w-full items-center justify-center px-4 py-24 sm:p-10">
+          <div className="flex h-full w-full items-center justify-center p-10 py-36">
             <Loader sizeType="big" />
           </div>
         ) : (
           <div
             className="flex h-full w-full items-center justify-center overflow-auto 
-          bg-gradient-to-br from-red-500 via-purple-500 to-blue-500 p-10 py-24 2xs:px-5 md:px-16"
+          bg-gradient-to-br from-red-500 via-purple-500 to-blue-500 p-10 py-36 2xs:px-5 md:px-16"
           >
             <MetaData title={"Profile"} />
             <div

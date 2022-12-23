@@ -94,6 +94,12 @@ export const userReducer = (state = {}, action) => {
         error: action.payload,
       };
 
+    case userConstants.CLEAR_ERRORS:
+      return {
+        ...state,
+        error: null,
+      };
+
     default:
       return state;
   }
