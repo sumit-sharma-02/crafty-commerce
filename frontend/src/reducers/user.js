@@ -108,6 +108,7 @@ export const userReducer = (state = {}, action) => {
 export const forgotPasswordReducer = (state = {}, action) => {
   switch (action.type) {
     case userConstants.FORGOT_PASSWORD_REQUEST:
+    case userConstants.NEW_PASSWORD_REQUEST:
       return {
         ...state,
         loading: true,
@@ -121,7 +122,14 @@ export const forgotPasswordReducer = (state = {}, action) => {
         message: action.payload,
       };
 
+    case userConstants.NEW_PASSWORD_SUCCESS:
+      return {
+        ...state,
+        success: action.payload,
+      };
+
     case userConstants.FORGOT_PASSWORD_FAIL:
+    case userConstants.NEW_PASSWORD_FAIL:
       return {
         ...state,
         loading: false,
