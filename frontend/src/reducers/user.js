@@ -104,3 +104,37 @@ export const userReducer = (state = {}, action) => {
       return state;
   }
 };
+
+export const forgotPasswordReducer = (state = {}, action) => {
+  switch (action.type) {
+    case userConstants.FORGOT_PASSWORD_REQUEST:
+      return {
+        ...state,
+        loading: true,
+        error: null,
+      };
+
+    case userConstants.FORGOT_PASSWORD_SUCCESS:
+      return {
+        ...state,
+        loading: false,
+        message: action.payload,
+      };
+
+    case userConstants.FORGOT_PASSWORD_FAIL:
+      return {
+        ...state,
+        loading: false,
+        error: action.payload,
+      };
+
+    case userConstants.CLEAR_ERRORS:
+      return {
+        ...state,
+        error: null,
+      };
+
+    default:
+      return state;
+  }
+};
