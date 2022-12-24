@@ -14,6 +14,7 @@ import {
   Error,
   ProductCategories,
 } from "../../components";
+import { addItemsToCart } from "../../actions/cart";
 
 // Icons used
 import { VscChromeClose } from "react-icons/vsc";
@@ -37,7 +38,7 @@ import Pay4 from "../../images/pay-4.webp";
 
 const Product = () => {
   const [isCategorySideBarOpen, setIsCategorySideBarOpen] = useState(false);
-  const [stockCount, setStockCount] = useState(1);
+  const [quantity, setQuantity] = useState(1);
 
   // let currentPage = 1;
   // let price = [1, 2000];
@@ -59,18 +60,18 @@ const Product = () => {
   }, [dispatch, error, params, category]);
 
   const increaseQty = () => {
-    if (stockCount >= product.stock) {
+    if (quantity >= product.stock) {
       showInfoToast(
         "Sorry, We don't have enough stock to increase the quantity."
       );
       return;
     }
-    setStockCount(stockCount + 1);
+    setQuantity(quantity + 1);
   };
 
   const decreaseQty = () => {
-    if (stockCount <= 1) return;
-    setStockCount(stockCount - 1);
+    if (quantity <= 1) return;
+    setQuantity(quantity - 1);
   };
 
   const toggleCategorySidebar = () => {
@@ -128,6 +129,19 @@ const Product = () => {
     }
   };
 
+  const showSuccessToast = (message) => {
+    toast.success(message, {
+      position: "bottom-center",
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "colored",
+    });
+  };
+
   const showInfoToast = (message) => {
     toast.info(message, {
       position: "bottom-center",
@@ -139,6 +153,15 @@ const Product = () => {
       progress: undefined,
       theme: "colored",
     });
+  };
+
+  const addToCart = () => {
+    dispatch(addItemsToCart(params.id, quantity));
+    if (quantity > 1) {
+      showSuccessToast("Items added to the cart.");
+    } else if (quantity === 1) {
+      showSuccessToast("Item added to the cart.");
+    }
   };
 
   return (
@@ -548,7 +571,7 @@ const Product = () => {
                               >
                                 <div className=" px-4 py-1">
                                   <p className="text-center font-semibold text-gray-500">
-                                    {stockCount}
+                                    {quantity}
                                   </p>
                                 </div>
                                 {/* ------- */}
@@ -614,12 +637,14 @@ const Product = () => {
                               {calculateOutOfStock(product)}
                             </div>
                           </div>
-                          {/* -------Button and Add to whitelist--------- */}
+                          {/* -------Button and Add to cart--------- */}
                           <div className=" my-6 flex items-center space-x-2">
                             {/* ----------- */}
                             <button
                               className="rounded-md border-2 border-primary bg-primary p-2 px-6 text-sm text-white
-                                     duration-300 hover:border-primaryDarkShade hover:bg-primaryDarkShade"
+                              duration-300 hover:border-primaryDarkShade hover:bg-primaryDarkShade"
+                              disabled={product.stock === 0}
+                              onClick={addToCart}
                             >
                               Add to Cart
                             </button>
