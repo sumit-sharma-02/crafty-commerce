@@ -460,16 +460,15 @@ const Product = () => {
                         {/* ----001---- */}
                         {product.images &&
                           generateProductImageCarousel(product)}
-
                         <div>
                           {/* ---Title Review and Price--- */}
                           <div>
                             {/* ---Title--- */}
-                            <h3 className=" text-2xl font-bold tracking-tighter text-gray-700">
+                            <h3 className="text-2xl font-bold tracking-tighter text-gray-700">
                               {product.name}
                             </h3>
                             {/* ---Review--- */}
-                            <div className=" flex items-center space-x-1 py-1 ">
+                            <div className="flex items-center space-x-1 py-1 ">
                               {/* --Rating-- */}
                               <div className="rating-outer">
                                 <div
@@ -641,8 +640,12 @@ const Product = () => {
                           <div className=" my-6 flex items-center space-x-2">
                             {/* ----------- */}
                             <button
-                              className="rounded-md border-2 border-primary bg-primary p-2 px-6 text-sm text-white
-                              duration-300 hover:border-primaryDarkShade hover:bg-primaryDarkShade"
+                              className={`rounded border-2 border-primary bg-primary p-2 px-6 text-sm text-white
+                              duration-300 hover:border-primaryDarkShade hover:bg-primaryDarkShade ${
+                                product.stock === 0
+                                  ? "opacity-50"
+                                  : "opacity-100"
+                              }`}
                               disabled={product.stock === 0}
                               onClick={addToCart}
                             >

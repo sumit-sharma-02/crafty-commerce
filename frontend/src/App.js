@@ -15,6 +15,7 @@ import {
   UpdatePassword,
   ForgotPassword,
   ResetPassword,
+  Cart,
 } from "./components";
 import { loadUser } from "./actions/user";
 import store from "./store";
@@ -65,6 +66,7 @@ function App() {
           <Route path="/products/:category" element={<AllProducts />} />
           <Route path="/search/:keyword" element={<AllProducts />} />
           <Route path="/product/:id" element={<Product />} />
+          <Route path="/cart" element={<Cart />} />
         </Routes>
         <Footer />
       </div>

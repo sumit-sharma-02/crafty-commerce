@@ -86,8 +86,8 @@ const Login = () => {
               className="rounded-xl rounded-tr-md rounded-br-md
           bg-white p-5 shadow-2xl md:w-1/2 xl:w-1/3"
             >
-              <div className=" text-center">
-                <h1 className=" text-4xl font-extrabold">Login</h1>
+              <div className="text-center">
+                <h1 className="text-4xl font-extrabold">Login</h1>
               </div>
 
               <form className="space-y-4 p-2 pt-10" onSubmit={submitHandler}>
