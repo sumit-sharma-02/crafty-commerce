@@ -37,6 +37,8 @@ import Pay4 from "../../images/pay-4.webp";
 
 const Product = () => {
   const [isCategorySideBarOpen, setIsCategorySideBarOpen] = useState(false);
+  const [stockCount, setStockCount] = useState(1);
+
   // let currentPage = 1;
   // let price = [1, 2000];
 
@@ -55,6 +57,21 @@ const Product = () => {
       dispatch(clearErrors);
     }
   }, [dispatch, error, params, category]);
+
+  const increaseQty = () => {
+    if (stockCount >= product.stock) {
+      showInfoToast(
+        "Sorry, We don't have enough stock to increase the quantity."
+      );
+      return;
+    }
+    setStockCount(stockCount + 1);
+  };
+
+  const decreaseQty = () => {
+    if (stockCount <= 1) return;
+    setStockCount(stockCount - 1);
+  };
 
   const toggleCategorySidebar = () => {
     setIsCategorySideBarOpen(!isCategorySideBarOpen);
@@ -97,6 +114,31 @@ const Product = () => {
         </div>
       );
     }
+  };
+
+  const calculateOutOfStock = (product) => {
+    if (product.stock > 0 && product.stock <= 5) {
+      return (
+        <span className="font-bold text-ternary">
+          Only {product.stock} left. Hurry up!
+        </span>
+      );
+    } else if (product.stock === 0) {
+      return <span className="font-bold text-red-600">Out of stock.</span>;
+    }
+  };
+
+  const showInfoToast = (message) => {
+    toast.info(message, {
+      position: "bottom-center",
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "colored",
+    });
   };
 
   return (
@@ -496,15 +538,35 @@ const Product = () => {
                             <label className="block text-gray-500">
                               Quantity:
                             </label>
-                            <div className=" mt-4 inline-block rounded border">
-                              <div className=" flex items-center divide-x">
-                                <div className=" px-6 py-1">
-                                  <p className="text-center font-bold"></p>
+                            <div className=" mt-4 inline-block rounded border border-gray-400">
+                              <div
+                                className={`${
+                                  product.stock === 0
+                                    ? "opacity-50"
+                                    : "opacity-100"
+                                } flex items-center divide-x divide-gray-400`}
+                              >
+                                <div className=" px-4 py-1">
+                                  <p className="text-center font-semibold text-gray-500">
+                                    {stockCount}
+                                  </p>
                                 </div>
                                 {/* ------- */}
-                                <div className=" px-4 py-1">
+                                <div className=" px-3 py-1">
                                   {/* ------- */}
-                                  <button className="block">
+                                  <motion.button
+                                    whileTap={{ scale: 0.5 }}
+                                    transition={{
+                                      duration: 0.3,
+                                      ease: "easeInOut",
+                                    }}
+                                    disabled={
+                                      product.stock === 0 ? true : false
+                                    }
+                                    className="block"
+                                    onMouseDown={increaseQty}
+                                    onTouchStart={increaseQty}
+                                  >
                                     <svg
                                       xmlns="http://www.w3.org/2000/svg"
                                       className="h-4 w-4 text-gray-500"
@@ -517,9 +579,21 @@ const Product = () => {
                                         clipRule="evenodd"
                                       />
                                     </svg>
-                                  </button>
+                                  </motion.button>
                                   {/* ------- */}
-                                  <button className="block">
+                                  <motion.button
+                                    whileTap={{ scale: 0.6 }}
+                                    transition={{
+                                      duration: 0.4,
+                                      ease: "easeInOut",
+                                    }}
+                                    disabled={
+                                      product.stock === 0 ? true : false
+                                    }
+                                    className="block"
+                                    onMouseDown={decreaseQty}
+                                    onTouchStart={increaseQty}
+                                  >
                                     <svg
                                       xmlns="http://www.w3.org/2000/svg"
                                       className="h-4 w-4 text-gray-500"
@@ -532,20 +606,12 @@ const Product = () => {
                                         clipRule="evenodd"
                                       />
                                     </svg>
-                                  </button>
+                                  </motion.button>
                                 </div>
                               </div>
                             </div>
                             <div className="mt-1 flex flex-col pl-[2px] text-sm">
-                              {product.stock > 0 ? (
-                                <span className="font-bold text-green-600">
-                                  In Stocks
-                                </span>
-                              ) : (
-                                <span className="font-bold text-red-600">
-                                  Out of Stocks
-                                </span>
-                              )}
+                              {calculateOutOfStock(product)}
                             </div>
                           </div>
                           {/* -------Button and Add to whitelist--------- */}
