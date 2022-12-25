@@ -20,6 +20,7 @@ import Avatar from "../../images/avatar-default-icon.png";
 const Header = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
+  const { cartItems } = useSelector((state) => state.cart);
 
   const showSuccessToast = (message) => {
     toast.success(message, {
@@ -591,7 +592,10 @@ const Header = () => {
             onMouseEnter={toggleCartDropdown}
             onMouseLeave={toggleCartDropdown}
           >
-            <button className="relative flex h-full items-center bg-primaryDarkShade p-2.5 font-bold uppercase text-white lg:p-2">
+            <Link
+              to={"/cart"}
+              className="relative flex h-full items-center bg-primaryDarkShade p-2.5 font-bold uppercase text-white lg:p-2"
+            >
               <span className="h-full lg:absolute lg:flex lg:items-center ">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -602,14 +606,14 @@ const Header = () => {
                   <path d="M3 1a1 1 0 000 2h1.22l.305 1.222a.997.997 0 00.01.042l1.358 5.43-.893.892C3.74 11.846 4.632 14 6.414 14H15a1 1 0 000-2H6.414l1-1H14a1 1 0 00.894-.553l3-6A1 1 0 0017 3H6.28l-.31-1.243A1 1 0 005 1H3zM16 16.5a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM6.5 18a1.5 1.5 0 100-3 1.5 1.5 0 000 3z" />
                 </svg>
                 <span className="absolute top-0 left-9 z-20 box-border flex h-5 w-5 items-center justify-center rounded-full bg-black text-xs text-white lg:left-4 lg:h-4 lg:w-4">
-                  0
+                  {cartItems.length}
                 </span>
               </span>
               <div className="ml-[32px] hidden items-center space-x-2 lg:flex">
                 <span>My Cart -</span>
                 <span className=" font-normal">$0.00</span>
               </div>
-            </button>
+            </Link>
 
             {isCartDropdownOpen && (
               <motion.div

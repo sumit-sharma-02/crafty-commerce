@@ -13,6 +13,14 @@ import {
 } from "./reducers/user";
 import { cartReducer } from "./reducers/cart";
 
+let initialState = {
+  cart: {
+    cartItems: localStorage.getItem("cartItems")
+      ? JSON.parse(localStorage.getItem("cartItems"))
+      : [],
+  },
+};
+
 const reducers = combineReducers({
   products: productsReducer,
   productDetails: productDetailsReducer,
@@ -22,21 +30,13 @@ const reducers = combineReducers({
   cart: cartReducer,
 });
 
-let initialState = {
-  cart: {
-    cartItems: localStorage?.getItem("cartItems")
-      ? JSON.parse(localStorage?.getItem("cartItems"))
-      : [],
-  },
-};
-
 const middleware = [thunk];
 const store = configureStore(
   {
     reducer: reducers,
     middleware: [thunk],
+    preloadedState: initialState,
   },
-  initialState,
   composeWithDevTools(applyMiddleware(...middleware))
 );
 

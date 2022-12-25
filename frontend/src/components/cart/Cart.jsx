@@ -1,8 +1,8 @@
-import React, { useState } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 import { MetaData } from "../../components";
 import { useSelector, useDispatch } from "react-redux";
-import { addItemsToCart } from "../../actions/cart";
+import { addItemsToCart, removeItemsFromCart } from "../../actions/cart";
 import { motion } from "framer-motion";
 import { toast } from "react-toastify";
 
@@ -16,8 +16,45 @@ function Cart() {
   const dispatch = useDispatch();
   const { cartItems } = useSelector((state) => state.cart);
 
+  const removeCartItem = (id) => {
+    dispatch(removeItemsFromCart(id));
+  };
+
+  const increaseQty = (id, quantity, stock) => {
+    const newQty = quantity + 1;
+    if (newQty > stock) {
+      showInfoToast(
+        "Sorry, We don't have enough stock to increase the quantity."
+      );
+      return;
+    }
+    dispatch(addItemsToCart(id, newQty));
+  };
+
+  const decreaseQty = (id, quantity) => {
+    const newQty = quantity - 1;
+    if (newQty <= 0) {
+      return;
+    }
+    dispatch(addItemsToCart(id, newQty));
+  };
+
+  const showInfoToast = (message) => {
+    toast.info(message, {
+      position: "bottom-center",
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "colored",
+    });
+  };
+
   return (
     <>
+      <MetaData title="Your Cart" />
       {cartItems.length === 0 ? (
         <div className="flex flex-col items-center justify-center px-4 pt-16 pb-32 sm:px-10 xl:px-24">
           <img className="w-96" src={emptyCart} alt="" />
@@ -32,11 +69,14 @@ function Cart() {
             <p className="mb-5 pt-3 text-3xl font-extrabold text-gray-800">
               Your Cart: {cartItems.length} items
             </p>
-            {cartItems.map((items) => (
-              <div className="border-t border-gray-200 py-8 md:flex">
+            {cartItems.map((item) => (
+              <div
+                key={item.product}
+                className="border-t border-gray-200 py-8 md:flex"
+              >
                 <div className="flex h-full w-1/4 flex-col justify-start">
                   <img
-                    src={items.image}
+                    src={emptyCart}
                     alt=""
                     className="h-full w-full object-cover object-center"
                   />
@@ -44,24 +84,19 @@ function Cart() {
                 <div className="flex h-full w-1/4 flex-col justify-start md:w-3/4 md:pl-3">
                   <div className="flex w-full items-start justify-between">
                     <Link
-                      to={`/product/${items.product}`}
+                      to={`/product/${item.product}`}
                       className="px-5 text-lg font-bold tracking-tighter text-gray-800"
                     >
-                      {items.name}
+                      {item.name}
                     </Link>
                     <div className="flex h-full flex-col items-end justify-start">
                       <div className="inline-block rounded border border-gray-400">
                         <div
                           className={`flex items-center divide-x divide-gray-400`}
-                          // ${
-                          //   product.stock === 0
-                          //     ? "opacity-50"
-                          //     : "opacity-100"
-                          // }
                         >
                           <div className=" px-4 py-1">
                             <p className="text-center font-semibold text-gray-500">
-                              1
+                              {item.quantity}
                             </p>
                           </div>
                           {/* ------- */}
@@ -73,12 +108,14 @@ function Cart() {
                                 duration: 0.3,
                                 ease: "easeInOut",
                               }}
-                              // disabled={
-                              //   product.stock === 0 ? true : false
-                              // }
                               className="block"
-                              // onMouseDown={increaseQty}
-                              // onTouchStart={increaseQty}
+                              onClick={() =>
+                                increaseQty(
+                                  item.product,
+                                  item.quantity,
+                                  item.stock
+                                )
+                              }
                             >
                               <svg
                                 xmlns="http://www.w3.org/2000/svg"
@@ -100,12 +137,10 @@ function Cart() {
                                 duration: 0.4,
                                 ease: "easeInOut",
                               }}
-                              // disabled={
-                              //   product.stock === 0 ? true : false
-                              // }
                               className="block"
-                              // onMouseDown={decreaseQty}
-                              // onTouchStart={increaseQty}
+                              onClick={() =>
+                                decreaseQty(item.product, item.quantity)
+                              }
                             >
                               <svg
                                 xmlns="http://www.w3.org/2000/svg"
@@ -125,7 +160,7 @@ function Cart() {
                       </div>
                       <div className="flex w-full items-center justify-end pt-5 ">
                         <p className="text-xl font-bold leading-none text-primary">
-                          ${items.price}
+                          ${item.price}
                         </p>
                       </div>
                       <motion.div
@@ -134,6 +169,7 @@ function Cart() {
                           duration: 0.3,
                           ease: "easeInOut",
                         }}
+                        onClick={() => removeCartItem(item.product)}
                         className="mt-5 flex w-max items-center justify-end rounded-full bg-red-600 p-1 shadow-lg"
                       >
                         <p className="cursor-pointer text-white">
