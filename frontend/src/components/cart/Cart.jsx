@@ -195,9 +195,11 @@ function Cart() {
             ))}
           </div>
           <div className="h-full w-full md:w-1/3 xl:w-1/4">
-            <div className="mt-12 flex h-max flex-col bg-gray-100 px-14 py-4">
+            <div className="mt-8 flex h-max flex-col bg-gray-100 px-14 py-4">
               <div>
-                <p className="text-3xl font-extrabold text-gray-800">Summary</p>
+                <p className="pt-4 text-3xl font-extrabold text-gray-800">
+                  Summary
+                </p>
                 <div className="flex items-center justify-between pt-8">
                   <p className="text-base leading-none text-gray-800">
                     Subtotal
