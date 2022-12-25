@@ -64,43 +64,44 @@ function Cart() {
           </p>
         </div>
       ) : (
-        <div className="flex flex-col justify-between px-4 sm:px-10 md:flex-row xl:px-24">
+        <div className="flex flex-col justify-between px-4 pt-2 pb-32 sm:px-10 md:flex-row xl:px-24">
           <div className="h-full w-full bg-white py-8 pr-10 md:py-12 md:pr-4 lg:w-1/2">
-            <p className="mb-5 pt-3 text-3xl font-extrabold text-gray-800">
-              Your Cart: {cartItems.length} items
+            <p className="mb-5 pt-3 text-2xl font-extrabold text-gray-800 sm:text-3xl">
+              Your Cart: {cartItems.length}{" "}
+              {cartItems.length === 1 ? "item" : "items"}
             </p>
             {cartItems.map((item) => (
               <div
                 key={item.product}
                 className="border-t border-gray-200 py-8 md:flex"
               >
-                <div className="flex h-full w-1/4 flex-col justify-start">
+                <div className="flex h-full w-1/3 flex-row items-center justify-center md:w-1/4 md:flex-col md:items-start md:justify-start">
                   <img
                     src={emptyCart}
                     alt=""
-                    className="h-full w-full object-cover object-center"
+                    className="ml-5 h-full  w-full object-cover object-center md:ml-0"
                   />
                 </div>
-                <div className="flex h-full w-1/4 flex-col justify-start md:w-3/4 md:pl-3">
-                  <div className="flex w-full items-start justify-between">
+                <div className="flex h-full w-full flex-col justify-start md:w-3/4 md:pl-3">
+                  <div className="flex w-full flex-col items-start justify-start md:flex-row md:items-start md:justify-between">
                     <Link
                       to={`/product/${item.product}`}
-                      className="px-5 text-lg font-bold tracking-tighter text-gray-800"
+                      className="px-5 pt-4 text-sm font-semibold tracking-tighter text-gray-800 transition-colors duration-500 hover:text-primary md:pt-0 md:text-lg"
                     >
                       {item.name}
                     </Link>
-                    <div className="flex h-full flex-col items-end justify-start">
+                    <div className="mt-4 flex h-full flex-col items-start justify-start px-5 md:mt-0 md:items-end md:px-0">
                       <div className="inline-block rounded border border-gray-400">
                         <div
                           className={`flex items-center divide-x divide-gray-400`}
                         >
-                          <div className=" px-4 py-1">
+                          <div className="px-3 py-0 md:px-4 md:py-1">
                             <p className="text-center font-semibold text-gray-500">
                               {item.quantity}
                             </p>
                           </div>
                           {/* ------- */}
-                          <div className=" px-3 py-1">
+                          <div className="px-1 py-0 md:px-2 md:py-1">
                             {/* ------- */}
                             <motion.button
                               whileTap={{ scale: 0.5 }}
@@ -158,9 +159,20 @@ function Cart() {
                           </div>
                         </div>
                       </div>
-                      <div className="flex w-full items-center justify-end pt-5 ">
-                        <p className="text-xl font-bold leading-none text-primary">
-                          ${item.price}
+                      <div className="flex w-full items-center justify-start pt-5 md:justify-end ">
+                        <p className="mr-2 text-sm font-semibold text-gray-800 md:text-base">
+                          Price:{" "}
+                        </p>
+                        <p className="text-base font-bold leading-none text-primary md:text-xl">
+                          ${item.price.toFixed(2)}
+                        </p>
+                      </div>
+                      <div className="flex w-full items-center justify-start pt-3 md:justify-end ">
+                        <p className="mr-2 text-sm font-semibold text-gray-800 md:text-base">
+                          Total:{" "}
+                        </p>
+                        <p className="text-base font-bold leading-none text-primary md:text-xl">
+                          ${(item.price * item.quantity).toFixed(2)}
                         </p>
                       </div>
                       <motion.div
@@ -190,24 +202,40 @@ function Cart() {
                   <p className="text-base leading-none text-gray-800">
                     Subtotal
                   </p>
-                  <p className="text-base leading-none text-gray-800">$9,000</p>
+                  <p className="text-base leading-none text-gray-800">
+                    $
+                    {cartItems
+                      .reduce(
+                        (acc, item) => acc + item.quantity * item.price,
+                        0
+                      )
+                      .toFixed(2)}
+                  </p>
                 </div>
                 <div className="flex items-center justify-between pt-5">
                   <p className="text-base leading-none text-gray-800">
                     Shipping
                   </p>
-                  <p className="text-base leading-none text-gray-800">$30</p>
+                  <p className="text-base leading-none text-gray-800">$10</p>
                 </div>
                 <div className="flex items-center justify-between pt-5">
                   <p className="text-base leading-none text-gray-800">Tax</p>
-                  <p className="text-base leading-none text-gray-800">$35</p>
+                  <p className="text-base leading-none text-gray-800">$5</p>
                 </div>
               </div>
               <div className="mt-5">
                 <div className="flex items-center justify-between pb-6 pt-20 lg:pt-5">
                   <p className="text-2xl leading-normal text-gray-800">Total</p>
                   <p className="text-right text-2xl font-bold leading-normal text-primary">
-                    $10,240
+                    $
+                    {(
+                      cartItems.reduce(
+                        (acc, item) => acc + item.quantity * item.price,
+                        0
+                      ) +
+                      10 +
+                      5
+                    ).toFixed(2)}
                   </p>
                 </div>
                 <button
