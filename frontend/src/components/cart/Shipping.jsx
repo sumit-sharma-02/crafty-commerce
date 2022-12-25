@@ -52,13 +52,13 @@ const Shipping = () => {
         <section>
           <div
             className="flex h-full w-full items-center justify-center overflow-auto 
-            bg-gradient-to-br from-red-500 via-purple-500 to-blue-500 p-10 py-36"
+            bg-white p-10 py-36"
           >
             <div
               className="h-full overflow-auto rounded-xl rounded-tr-md rounded-br-md
-          bg-white px-5 py-2 shadow-2xl md:w-1/2 xl:w-2/5"
+            bg-white px-5 py-2 md:w-1/2 xl:w-2/5"
             >
-              <div className="mb-4 text-center">
+              <div className="border-b-2 border-gray-300 pb-3 text-center">
                 <h1 className="text-4xl font-extrabold">Shipping Details</h1>
               </div>
 
@@ -67,7 +67,7 @@ const Shipping = () => {
                 encType="multipart/form-data"
                 className="space-y-4 p-2"
               >
-                <div>
+                <div className="mt-6">
                   <h4 className="text-gray-500">
                     Country <span className=" text-red-500">*</span>
                   </h4>
@@ -211,8 +211,9 @@ const Shipping = () => {
                   type="submit"
                   whileTap={{ scale: 0.9 }}
                   transition={{ duration: 0.3, ease: "easeInOut" }}
-                  className="flex w-full items-center justify-center space-x-2 rounded-full bg-gradient-to-l from-red-500
-                  via-purple-500 to-blue-500 p-2 text-center font-semibold uppercase tracking-widest text-white shadow-lg"
+                  className="flex w-full items-center justify-center space-x-2 rounded bg-primary p-2 
+                  text-center font-semibold uppercase tracking-widest text-white shadow-lg 
+                  transition-colors duration-300 hover:bg-primaryDarkShade"
                 >
                   Continue
                 </motion.button>
