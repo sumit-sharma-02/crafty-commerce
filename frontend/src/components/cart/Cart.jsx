@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { MetaData } from "../../components";
 import { useSelector, useDispatch } from "react-redux";
 import { addItemsToCart, removeItemsFromCart } from "../../actions/cart";
@@ -14,6 +14,7 @@ import { MdDelete } from "react-icons/md";
 
 function Cart() {
   const dispatch = useDispatch();
+  const navigate = useNavigate();
   const { cartItems } = useSelector((state) => state.cart);
 
   const removeCartItem = (id) => {
@@ -37,6 +38,10 @@ function Cart() {
       return;
     }
     dispatch(addItemsToCart(id, newQty));
+  };
+
+  const checkoutHandler = () => {
+    navigate("/login?redirect=shipping");
   };
 
   const showInfoToast = (message) => {
@@ -241,8 +246,9 @@ function Cart() {
                   </p>
                 </div>
                 <button
+                  onClick={checkoutHandler}
                   className="mb-4 w-full rounded bg-primary py-3 text-base font-semibold uppercase leading-none
-            tracking-widest text-white transition-all duration-300 ease-in-out hover:bg-primaryDarkShade"
+                  tracking-widest text-white transition-all duration-300 ease-in-out hover:bg-primaryDarkShade"
                 >
                   Checkout
                 </button>

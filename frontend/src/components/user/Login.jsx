@@ -16,6 +16,7 @@ const Login = () => {
   const [passwordHide, setPasswordHide] = useState(true);
   const dispatch = useDispatch();
   const navigate = useNavigate();
+  const location = useLocation();
   const { pathname } = useLocation();
 
   const showSuccessToast = (message) => {
@@ -58,7 +59,11 @@ const Login = () => {
 
   useEffect(() => {
     if (isAuthenticated) {
-      navigate("/");
+      if (location.search) {
+        navigate(`/${location.search.split("=")[1]}`);
+      } else {
+        navigate("/");
+      }
     }
 
     if (error && !loading && !["/login", "/register"].includes(pathname)) {
@@ -67,7 +72,7 @@ const Login = () => {
       // }
       dispatch(clearErrors);
     }
-  }, [dispatch, isAuthenticated, error, navigate, loading, pathname]);
+  }, [dispatch, isAuthenticated, error, navigate, loading, pathname, location]);
 
   return (
     <main>

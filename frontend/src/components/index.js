@@ -27,3 +27,4 @@ export { default as Error } from "./Illustrators/Error";
 export { default as NotFound } from "./Illustrators/NotFound";
 export { default as ProtectedRoute } from "./routes/ProtectedRoute";
 export { default as Cart } from "./cart/Cart";
+export { default as Shipping } from "./cart/Shipping";

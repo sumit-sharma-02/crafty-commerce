@@ -18,6 +18,17 @@ let initialState = {
     cartItems: localStorage.getItem("cartItems")
       ? JSON.parse(localStorage.getItem("cartItems"))
       : [],
+    shippingInfo: localStorage.getItem("shippingInfo")
+      ? JSON.parse(localStorage.getItem("shippingInfo"))
+      : {
+          country: "",
+          fullName: "",
+          phoneNo: "",
+          addressLine1: "",
+          addressLine2: "",
+          city: "",
+          postalCode: "",
+        },
   },
 };
 
