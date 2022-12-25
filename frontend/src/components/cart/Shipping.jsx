@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { saveShippingInfo } from "../../actions/cart";
 import { countries } from "../../constants/countries";
 import { useNavigate } from "react-router-dom";
-import { MetaData } from "../../components";
+import { Checkout, MetaData } from "../../components";
 import { motion } from "framer-motion";
 
 // Icons used
@@ -48,11 +48,12 @@ const Shipping = () => {
   return (
     <>
       <MetaData title="Shipping Details" />
+      <Checkout shipping />
       <main>
         <section>
           <div
             className="flex h-full w-full items-center justify-center overflow-auto 
-            bg-white p-10 py-36"
+            bg-white p-10 py-5"
           >
             <div
               className="h-full overflow-auto rounded-xl rounded-tr-md rounded-br-md

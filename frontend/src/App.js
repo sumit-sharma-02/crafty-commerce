@@ -17,6 +17,7 @@ import {
   ResetPassword,
   Cart,
   Shipping,
+  Checkout,
 } from "./components";
 import { loadUser } from "./actions/user";
 import store from "./store";
@@ -76,6 +77,7 @@ function App() {
           <Route path="/search/:keyword" element={<AllProducts />} />
           <Route path="/product/:id" element={<Product />} />
           <Route path="/cart" element={<Cart />} />
+          {/* <Route path="/checkout" element={<Checkout />} /> */}
         </Routes>
         <Footer />
       </div>
