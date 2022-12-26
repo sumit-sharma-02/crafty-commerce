@@ -2,8 +2,11 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { Checkout, MetaData } from "../../components";
 import { useSelector } from "react-redux";
+import { motion } from "framer-motion";
+import { useNavigate } from "react-router-dom";
 
 const Order = () => {
+  const navigate = useNavigate();
   const { cartItems, shippingInfo } = useSelector((state) => state.cart);
   const { user } = useSelector((state) => state.auth);
 
@@ -16,11 +19,23 @@ const Order = () => {
   const tax = Number((0.01 * subTotal).toFixed(2));
   const total = (subTotal + shippingPrice + tax).toFixed(2);
 
+  const proceedToPayment = () => {
+    const orderData = {
+      subTotal: subTotal.toFixed(2),
+      shippingPrice,
+      tax,
+      total,
+    };
+
+    sessionStorage.setItem("orderInfo", JSON.stringify(orderData));
+    navigate("/payment");
+  };
+
   return (
     <>
       <MetaData title="Confirm Order" />
       <Checkout confirmOrder />
-      <div className="px-4 pt-2 pb-24 sm:px-10 md:px-6 xl:px-24 2xl:container 2xl:mx-auto 2xl:px-20">
+      <div className="px-10 pt-2 pb-24 md:px-6 xl:px-24 2xl:container 2xl:mx-auto 2xl:px-20">
         {/* <div className="item-start flex flex-col justify-start space-y-2 ">
           <h1 className="text-3xl font-semibold leading-7 text-gray-800 lg:text-4xl  lg:leading-9">
             Order #13432
@@ -61,7 +76,7 @@ const Order = () => {
                         </Link>
                       </div>
                       <div className="flex w-full items-center justify-between">
-                        <p className="ml-0 text-sm leading-6 sm:ml-6 xl:text-base">
+                        <p className="text-sm leading-6 xl:text-base">
                           ${item.price}
                         </p>
                         <p className="text-sm leading-6 text-gray-800 xl:text-base">
@@ -131,7 +146,7 @@ const Order = () => {
             </h3>
             <div className="flex h-full w-full flex-col items-stretch justify-start md:flex-row md:space-x-6 lg:space-x-8 xl:flex-col xl:space-x-0 ">
               <div className="flex flex-shrink-0 flex-col items-start justify-start">
-                <div className="flex w-full items-center justify-center space-x-4 py-8 sm:pb-0 sm:pt-5 md:justify-start md:py-5 xl:pt-8 xl:pb-0">
+                <div className="flex w-full items-center justify-center space-x-4 pb-0 pt-5 md:justify-start md:py-5 xl:pt-8 xl:pb-0">
                   {/* <img
                     src="https://i.ibb.co/5TSg7f6/Rectangle-18.png"
                     alt="avatar"
@@ -172,7 +187,7 @@ const Order = () => {
                   </p>
                 </div>
               </div>
-              <div className="mt-6 flex w-full  flex-col items-stretch justify-between sm:mt-2 md:mt-6 xl:mt-2 xl:h-full">
+              <div className="mt-2 flex w-full  flex-col items-stretch justify-between md:mt-6 xl:mt-2 xl:h-full">
                 <div className="flex flex-col items-center justify-center space-y-4 md:flex-row md:items-start md:justify-start md:space-x-6 md:space-y-0 lg:space-x-8 xl:flex-col xl:space-x-0 xl:space-y-6 ">
                   <div className="flex flex-col items-center  justify-center space-y-4 md:items-start md:justify-start xl:mt-0">
                     <p className="text-center text-base font-semibold leading-4 text-gray-800 md:text-left">
@@ -196,9 +211,14 @@ const Order = () => {
                   </div>
                 </div>
                 <div className="flex w-full items-center justify-center md:items-start md:justify-start">
-                  <button className="mt-6 w-96 rounded bg-primary py-5 text-base font-medium leading-4 text-white hover:bg-primaryDarkShade md:mt-4 2xl:w-full">
+                  <motion.button
+                    whileTap={{ scale: 0.9 }}
+                    transition={{ duration: 0.3, ease: "easeInOut" }}
+                    onClick={proceedToPayment}
+                    className="mt-6 w-96 rounded bg-primary py-5 text-base font-medium leading-4 text-white hover:bg-primaryDarkShade md:mt-4 2xl:w-full"
+                  >
                     Proceed to Payment
-                  </button>
+                  </motion.button>
                 </div>
               </div>
             </div>

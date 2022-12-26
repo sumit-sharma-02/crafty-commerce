@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const Checkout = ({ shipping, confirmOrder, payment }) => {
   return (
-    <div className="justify-content-center clear-both my-5 mx-auto mt-10 flex w-auto overflow-auto">
+    <div className="clear-both my-5 mx-auto mt-10 flex w-auto justify-center overflow-auto">
       {shipping ? (
         <Link to="/shipping" className="float-right">
           <div
