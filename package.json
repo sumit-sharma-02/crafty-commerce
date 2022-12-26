@@ -24,6 +24,7 @@
     "jsonwebtoken": "^8.5.1",
     "mongoose": "^6.7.3",
     "nodemailer": "^6.8.0",
+    "stripe": "^11.5.0",
     "tailwind-scrollbar": "^2.0.1",
     "validator": "^13.7.0"
   },
