@@ -17,7 +17,7 @@ import {
   ResetPassword,
   Cart,
   Shipping,
-  Checkout,
+  Order,
 } from "./components";
 import { loadUser } from "./actions/user";
 import store from "./store";
@@ -67,6 +67,14 @@ function App() {
             element={
               <ProtectedRoute>
                 <Shipping />
+              </ProtectedRoute>
+            }
+          ></Route>
+          <Route
+            path="/order/confirm"
+            element={
+              <ProtectedRoute>
+                <Order />
               </ProtectedRoute>
             }
           ></Route>

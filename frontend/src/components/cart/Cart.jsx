@@ -84,7 +84,7 @@ function Cart() {
                   <img
                     src={emptyCart}
                     alt=""
-                    className="ml-5 h-full  w-full object-cover object-center md:ml-0"
+                    className="ml-5 h-full w-full object-cover object-center md:ml-0"
                   />
                 </div>
                 <div className="flex h-full w-full flex-col justify-start md:w-3/4 md:pl-3">

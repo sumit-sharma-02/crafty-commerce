@@ -29,3 +29,4 @@ export { default as ProtectedRoute } from "./routes/ProtectedRoute";
 export { default as Cart } from "./cart/Cart";
 export { default as Shipping } from "./cart/Shipping";
 export { default as Checkout } from "./cart/Checkout";
+export { default as Order } from "./cart/Order";

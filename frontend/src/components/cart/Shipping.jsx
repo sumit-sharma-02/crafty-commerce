@@ -42,7 +42,7 @@ const Shipping = () => {
         postalCode,
       })
     );
-    navigate("/confirm");
+    navigate("/order/confirm");
   };
 
   return (
