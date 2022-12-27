@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import { MetaData, Checkout } from "../../components";
 import { useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
+import { createOrder, clearErrors } from "../../actions/order";
 import { toast } from "react-toastify";
 import { motion } from "framer-motion";
 import {
@@ -30,32 +31,6 @@ const options = {
 };
 
 const Payment = () => {
-  const showSuccessToast = (message) => {
-    toast.success(message, {
-      position: "bottom-center",
-      autoClose: 5000,
-      hideProgressBar: false,
-      closeOnClick: true,
-      pauseOnHover: true,
-      draggable: true,
-      progress: undefined,
-      theme: "colored",
-    });
-  };
-
-  const showInfoToast = (message) => {
-    toast.info(message, {
-      position: "bottom-center",
-      autoClose: 5000,
-      hideProgressBar: false,
-      closeOnClick: true,
-      pauseOnHover: true,
-      draggable: true,
-      progress: undefined,
-      theme: "colored",
-    });
-  };
-
   const showErrorToast = (message) => {
     toast.error(message, {
       position: "bottom-center",
@@ -76,10 +51,34 @@ const Payment = () => {
 
   const { user } = useSelector((state) => state.auth);
   const { cartItems, shippingInfo } = useSelector((state) => state.cart);
+  const { error } = useSelector((state) => state.order);
 
-  useEffect(() => {}, []);
+  useEffect(() => {
+    if (error) {
+      showErrorToast(error);
+      dispatch(clearErrors());
+    }
+  }, [dispatch, error]);
+
+  const order = {
+    orderItem: cartItems,
+    shippingInfo: {
+      address: `${shippingInfo.addressLine1} ${shippingInfo.addressLine2}`,
+      city: `${shippingInfo.city}`,
+      phoneNo: `${shippingInfo.phoneNo}`,
+      postalCode: `${shippingInfo.postalCode}`,
+      country: `${shippingInfo.country}`,
+    },
+  };
 
   const orderInfo = JSON.parse(sessionStorage.getItem("orderInfo"));
+  if (orderInfo) {
+    order.itemsPrice = orderInfo.subTotal;
+    order.shippingPrice = orderInfo.shippingPrice;
+    order.taxPrice = orderInfo.tax;
+    order.totalPrice = orderInfo.total;
+  }
+
   const paymentData = {
     amount: Math.round(orderInfo.total * 100),
     description: "Crafty Commerce Store Payment",
@@ -124,7 +123,11 @@ const Payment = () => {
       } else {
         // The payment is processed or not
         if (result.paymentIntent.status === "succeeded") {
-          // TODO: New Order
+          order.paymentInfo = {
+            id: result.paymentIntent.id,
+            status: result.paymentIntent.status,
+          };
+          dispatch(createOrder(order));
           navigate("/success");
         } else {
           showErrorToast("Some error occurred while processing your payment.");
@@ -176,7 +179,7 @@ const Payment = () => {
                 <img
                   src="https://www.sketchappsources.com/resources/source-image/PayPalCard.png"
                   alt=""
-                  className="ml-[2px] h-8"
+                  className="ml-[2px] h-9"
                 />
               </label>
             </div>
@@ -249,7 +252,10 @@ const Payment = () => {
               <span className="mr-1 w-auto">
                 <RiSecurePaymentLine className="h-6 w-6" />
               </span>{" "}
-              Pay {` - ${orderInfo && orderInfo.total}`}
+              Pay{" "}
+              {shippingInfo && shippingInfo.country.toLowerCase() === "india"
+                ? ` - ₹${orderInfo && (orderInfo.total * 82.76).toFixed(2)}`
+                : ` - $${orderInfo && orderInfo.total}`}
             </motion.button>
           </div>
         </div>

@@ -12,13 +12,36 @@ exports.processPayment = catchAsyncError(async (req, res, next) => {
       city: req.body.customerDetails.city,
       country: req.body.customerDetails.country,
     },
+    shipping: {
+      name: req.body.customerDetails.fullName,
+      address: {
+        line1: req.body.customerDetails.addressLine1,
+        line2: req.body.customerDetails.addressLine2,
+        postal_code: req.body.customerDetails.postalCode,
+        city: req.body.customerDetails.city,
+        country: req.body.customerDetails.country,
+      },
+    },
   });
 
   const paymentIntent = await stripe.paymentIntents.create({
     amount: req.body.amount,
     customer: customer.id,
+    shipping: {
+      name: req.body.customerDetails.fullName,
+      address: {
+        line1: req.body.customerDetails.addressLine1,
+        line2: req.body.customerDetails.addressLine2,
+        postal_code: req.body.customerDetails.postalCode,
+        city: req.body.customerDetails.city,
+        country: req.body.customerDetails.country,
+      },
+    },
     description: req.body.description,
-    currency: "usd",
+    currency:
+      req.body.customerDetails.country.toLowerCase() === "india"
+        ? "inr"
+        : "usd",
     metadata: { intergation_check: "accept_a_payment" },
   });
 

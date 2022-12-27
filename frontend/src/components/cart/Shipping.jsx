@@ -76,7 +76,11 @@ const Shipping = () => {
                     <select
                       className="w-full border-b-2 border-gray-300 py-2 text-gray-600 
                       placeholder-gray-400 focus:border-blue-300 focus:outline-none"
-                      defaultValue={"Afghanistan"}
+                      defaultValue={
+                        shippingInfo.country
+                          ? shippingInfo.country
+                          : "Afghanistan"
+                      }
                       onChange={(event) => setCountry(event.target.value)}
                     >
                       {countries.map((country) => (

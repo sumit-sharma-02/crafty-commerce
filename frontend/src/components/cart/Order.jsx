@@ -36,14 +36,6 @@ const Order = () => {
       <MetaData title="Confirm Order" />
       <Checkout shipping confirmOrder />
       <div className="px-10 pt-2 pb-24 md:px-6 xl:px-24 2xl:container 2xl:mx-auto 2xl:px-20">
-        {/* <div className="item-start flex flex-col justify-start space-y-2 ">
-          <h1 className="text-3xl font-semibold leading-7 text-gray-800 lg:text-4xl  lg:leading-9">
-            Order #13432
-          </h1>
-          <p className="text-base font-medium leading-6 text-gray-600">
-            26th Dec 2022 at 9:34 PM
-          </p>
-        </div> */}
         <div className="jusitfy-center flex w-full flex-col items-stretch space-y-4 md:space-y-6 xl:flex-row xl:space-x-8 xl:space-y-0">
           <div className="flex w-full flex-col items-start justify-start space-y-4 md:space-y-6 xl:space-y-8">
             <div className="flex w-full flex-col items-start justify-start bg-gray-50 px-4 py-4 md:p-6 md:py-6 xl:p-8">
@@ -70,7 +62,7 @@ const Order = () => {
                         <Link
                           to={`/product/${item.product}`}
                           className="text-base font-semibold leading-6 text-gray-800 transition-colors
-                        duration-300 ease-in-out hover:bg-primary xl:text-lg"
+                        duration-300 ease-in-out hover:text-primary xl:text-lg"
                         >
                           {item.name}
                         </Link>
@@ -133,9 +125,17 @@ const Order = () => {
                   <p className="text-lg font-semibold leading-4 text-gray-800">
                     Total
                   </p>
-                  <p className="text-lg font-bold leading-4 text-primary">
-                    ${total}
-                  </p>
+                  <div className="flex flex-col items-end space-y-4">
+                    <p className="text-lg font-bold leading-4 text-primary">
+                      ${total}
+                    </p>
+                    {shippingInfo &&
+                      shippingInfo.country.toLowerCase() === "india" && (
+                        <p className="text-lg font-bold leading-4 text-primary">
+                          ₹{(total * 82.76).toFixed(2)}
+                        </p>
+                      )}
+                  </div>
                 </div>
               </div>
             </div>
