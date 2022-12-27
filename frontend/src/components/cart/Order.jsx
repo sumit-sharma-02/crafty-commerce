@@ -34,7 +34,7 @@ const Order = () => {
   return (
     <>
       <MetaData title="Confirm Order" />
-      <Checkout confirmOrder />
+      <Checkout shipping confirmOrder />
       <div className="px-10 pt-2 pb-24 md:px-6 xl:px-24 2xl:container 2xl:mx-auto 2xl:px-20">
         {/* <div className="item-start flex flex-col justify-start space-y-2 ">
           <h1 className="text-3xl font-semibold leading-7 text-gray-800 lg:text-4xl  lg:leading-9">

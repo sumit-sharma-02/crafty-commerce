@@ -3,15 +3,28 @@ const stripe = require("stripe")(process.env.STRIPE_SECRET_KEY);
 
 // Process stripe payments => /api/v1/payment/process
 exports.processPayment = catchAsyncError(async (req, res, next) => {
-  const paymentIntent = await stripe.paymentIntent.create({
+  const customer = await stripe.customers.create({
+    name: req.body.customerDetails.fullName,
+    address: {
+      line1: req.body.customerDetails.addressLine1,
+      line2: req.body.customerDetails.addressLine2,
+      postal_code: req.body.customerDetails.postalCode,
+      city: req.body.customerDetails.city,
+      country: req.body.customerDetails.country,
+    },
+  });
+
+  const paymentIntent = await stripe.paymentIntents.create({
     amount: req.body.amount,
+    customer: customer.id,
+    description: req.body.description,
     currency: "usd",
     metadata: { intergation_check: "accept_a_payment" },
   });
 
   res.status(200).json({
     success: true,
-    client_Secret: paymentIntent.client_Secret,
+    client_secret: paymentIntent.client_secret,
   });
 });
 

@@ -78,19 +78,6 @@ const Product = () => {
     setIsCategorySideBarOpen(!isCategorySideBarOpen);
   };
 
-  const showErrorToast = (message) => {
-    toast.error(message, {
-      position: "bottom-center",
-      autoClose: 5000,
-      hideProgressBar: false,
-      closeOnClick: true,
-      pauseOnHover: true,
-      draggable: true,
-      progress: undefined,
-      theme: "colored",
-    });
-  };
-
   const calculateNumOfReviews = (product) => {
     if (product.numOfReviews === 0) {
       return <span>(No Reviews Yet)</span>;
@@ -144,6 +131,19 @@ const Product = () => {
 
   const showInfoToast = (message) => {
     toast.info(message, {
+      position: "bottom-center",
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "colored",
+    });
+  };
+
+  const showErrorToast = (message) => {
+    toast.error(message, {
       position: "bottom-center",
       autoClose: 5000,
       hideProgressBar: false,

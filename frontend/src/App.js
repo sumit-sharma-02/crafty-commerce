@@ -1,6 +1,7 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { AnimatePresence } from "framer-motion";
 import { Routes, Route } from "react-router-dom";
+import axios from "axios";
 import {
   Header,
   Home,
@@ -18,16 +19,26 @@ import {
   Cart,
   Shipping,
   Order,
+  Payment,
 } from "./components";
 import { loadUser } from "./actions/user";
 import store from "./store";
+import { Elements } from "@stripe/react-stripe-js";
+import { loadStripe } from "@stripe/stripe-js";
 
 // CSS Imports
 import "./App.css";
 
 function App() {
+  const [stripeApiKey, setStripeApiKey] = useState("");
+
   useEffect(() => {
     store.dispatch(loadUser());
+    async function getStripeApiKey() {
+      const { data } = await axios.get("/api/v1/stripe");
+      setStripeApiKey(data.stripeApiKey);
+    }
+    getStripeApiKey();
   }, []);
 
   return (
@@ -78,6 +89,18 @@ function App() {
               </ProtectedRoute>
             }
           ></Route>
+          {stripeApiKey && (
+            <Route
+              path="/payment"
+              element={
+                <Elements stripe={loadStripe(stripeApiKey)}>
+                  <ProtectedRoute>
+                    <Payment />
+                  </ProtectedRoute>
+                </Elements>
+              }
+            ></Route>
+          )}
           <Route path="/password/forgot" element={<ForgotPassword />} />
           <Route path="/password/reset/:token" element={<ResetPassword />} />
           <Route path="/products" element={<AllProducts />} />
