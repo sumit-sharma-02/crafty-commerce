@@ -247,7 +247,7 @@ const Payment = () => {
               whileTap={{ scale: 0.9 }}
               transition={{ duration: 0.3, ease: "easeInOut" }}
               className="mx-auto flex w-full max-w-xs items-center justify-center rounded-lg bg-primary
-            px-3 py-3 font-bold text-white transition-colors duration-300 ease-in-out hover:bg-primaryDarkShade"
+              px-3 py-3 font-bold text-white transition-colors duration-300 ease-in-out hover:bg-primaryDarkShade"
             >
               <span className="mr-1 w-auto">
                 <RiSecurePaymentLine className="h-6 w-6" />

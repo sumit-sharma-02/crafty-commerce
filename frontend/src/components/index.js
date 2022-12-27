@@ -31,3 +31,4 @@ export { default as Shipping } from "./cart/Shipping";
 export { default as Checkout } from "./cart/Checkout";
 export { default as Order } from "./cart/Order";
 export { default as Payment } from "./cart/Payment";
+export { default as Success } from "./cart/Success";

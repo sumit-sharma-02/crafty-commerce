@@ -215,7 +215,8 @@ const Order = () => {
                     whileTap={{ scale: 0.9 }}
                     transition={{ duration: 0.3, ease: "easeInOut" }}
                     onClick={proceedToPayment}
-                    className="mt-6 w-96 rounded bg-primary py-5 text-base font-medium leading-4 text-white hover:bg-primaryDarkShade md:mt-4 2xl:w-full"
+                    className="mt-6 w-96 rounded bg-primary py-5 text-base font-medium leading-4 text-white
+                    transition-colors duration-300 ease-in-out hover:bg-primaryDarkShade md:mt-4 2xl:w-full"
                   >
                     Proceed to Payment
                   </motion.button>

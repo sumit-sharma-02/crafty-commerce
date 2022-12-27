@@ -218,7 +218,7 @@ const Shipping = () => {
                   transition={{ duration: 0.3, ease: "easeInOut" }}
                   className="flex w-full items-center justify-center space-x-2 rounded bg-primary p-2 
                   text-center font-semibold uppercase tracking-widest text-white shadow-lg 
-                  transition-colors duration-300 hover:bg-primaryDarkShade"
+                  transition-colors duration-300 ease-in-out hover:bg-primaryDarkShade"
                 >
                   Continue
                 </motion.button>
