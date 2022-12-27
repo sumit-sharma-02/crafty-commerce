@@ -119,7 +119,7 @@ const Register = () => {
       navigate("/");
     }
 
-    if (error && !loading && !["/login", "/register"].includes(pathname)) {
+    if (error) {
       // if (error !== "Login required for accessing the resources.") {
       showErrorToast(error);
       // }

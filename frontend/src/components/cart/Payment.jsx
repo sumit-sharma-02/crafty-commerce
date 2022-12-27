@@ -21,11 +21,14 @@ import { RiSecurePaymentLine } from "react-icons/ri";
 const options = {
   style: {
     base: {
-      fontSize: "16px",
-    },
-    invalid: {
-      color: "#FF0000",
-      borderBottom: "#FF0000",
+      fontSize: "14px",
+      color: "#4b5563",
+      "::placeholder": {
+        color: "#9ca3af",
+      },
+      invalid: {
+        color: "#FF0000",
+      },
     },
   },
 };
@@ -186,12 +189,12 @@ const Payment = () => {
           </div>
           <div className="mb-3">
             <label htmlFor="card_name" className="mb-2 ml-1 text-sm font-bold">
-              Name on card
+              Cardholder Name
             </label>
             <div>
               <input
                 className="w-full border-b-2 border-gray-300 py-2 pl-1 text-gray-600 placeholder-gray-400 focus:border-blue-300 focus:outline-none"
-                placeholder=""
+                placeholder="Cardholder Name"
                 type="text"
                 id="card_name"
               />
@@ -246,7 +249,7 @@ const Payment = () => {
               id="pay_btn"
               whileTap={{ scale: 0.9 }}
               transition={{ duration: 0.3, ease: "easeInOut" }}
-              className="mx-auto flex w-full max-w-xs items-center justify-center rounded-lg bg-primary
+              className="mx-auto flex w-full max-w-xs items-center justify-center rounded bg-primary
               px-3 py-3 font-bold text-white transition-colors duration-300 ease-in-out hover:bg-primaryDarkShade"
             >
               <span className="mr-1 w-auto">

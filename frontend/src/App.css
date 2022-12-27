@@ -24,3 +24,11 @@
   content: '\f005 \f005 \f005 \f005 \f005';
   color: rgb(224, 39, 70, 1);
 }
+
+.StripeElement {
+  border-bottom: 2px solid #d1d5db;
+}
+
+.StripeElement--invalid {
+  border-bottom: 2px solid red;
+}

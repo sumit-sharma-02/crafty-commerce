@@ -190,7 +190,7 @@ const Header = () => {
 
                         <Link
                           className="flex items-center justify-start rounded-b p-2 text-sm transition-colors duration-300 ease-in-out hover:bg-gray-200"
-                          href={"/"}
+                          to={"/"}
                           onClick={logoutHandler}
                         >
                           <span className="h-4 w-max pr-2">
