@@ -26,7 +26,8 @@ export const createOrder = (order) => async (dispatch, getState) => {
   }
 };
 
-export const myOrders = (id) => async (dispatch) => {
+// Get currently logged in user orders
+export const myOrders = () => async (dispatch) => {
   try {
     dispatch({
       type: orderConstants.MY_ORDERS_REQUEST,

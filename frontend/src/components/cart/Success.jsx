@@ -18,13 +18,15 @@ const Success = () => {
           ></path>
         </svg>
         <div className="text-center">
-          <h3 className="text-center text-base font-semibold text-gray-900 md:text-2xl">
+          <h3 className="text-center text-lg font-semibold text-gray-900 sm:text-xl md:text-2xl">
             Payment Done!
           </h3>
-          <p className="my-2 text-gray-600">
-            Your Order has been placed successfully. Thank you for ordering.
+          <p className="my-2 font-semibold text-gray-600">
+            Your Order has been placed successfully. Thank you for your order.
           </p>
-          <p>Have a great day! </p>
+          <p className="text-sm font-medium text-gray-500">
+            We hope you enjoyed shopping with us.
+          </p>
           <div className="py-10 text-center">
             <Link to={"/orders/myOrders"}>
               <motion.button
