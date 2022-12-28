@@ -27,25 +27,29 @@ export const createOrder = (order) => async (dispatch, getState) => {
 };
 
 // Get currently logged in user orders
-export const myOrders = () => async (dispatch) => {
-  try {
-    dispatch({
-      type: orderConstants.MY_ORDERS_REQUEST,
-    });
+export const myOrders =
+  (ordersCurrentPage = 1) =>
+  async (dispatch) => {
+    try {
+      dispatch({
+        type: orderConstants.MY_ORDERS_REQUEST,
+      });
 
-    const { data } = await axios.get("/api/v1/orders/myOrders");
+      const data = await axios.get(
+        `/api/v1/orders/myOrders?page=${ordersCurrentPage}`
+      );
 
-    dispatch({
-      type: orderConstants.MY_ORDERS_SUCCESS,
-      payload: data.orders,
-    });
-  } catch (error) {
-    dispatch({
-      type: orderConstants.MY_ORDERS_FAIL,
-      payload: error.response.data.error,
-    });
-  }
-};
+      dispatch({
+        type: orderConstants.MY_ORDERS_SUCCESS,
+        payload: data,
+      });
+    } catch (error) {
+      dispatch({
+        type: orderConstants.MY_ORDERS_FAIL,
+        payload: error.response.data.error,
+      });
+    }
+  };
 
 // Clear Errors
 export const clearErrors = () => async (dispatch) => {
