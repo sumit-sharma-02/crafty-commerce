@@ -64,7 +64,7 @@ const Payment = () => {
   }, [dispatch, error]);
 
   const order = {
-    orderItem: cartItems,
+    orderItems: cartItems,
     shippingInfo: {
       address: `${shippingInfo.addressLine1} ${shippingInfo.addressLine2}`,
       city: `${shippingInfo.city}`,

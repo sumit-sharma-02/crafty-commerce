@@ -68,6 +68,7 @@ module.exports = {
         primaryDarkShade: "rgb(177,5,34,1)",
         secondary: "rgb(14,205,224,1)",
         ternary: "rgb(255,165,0,1)",
+        fournary: "#03a685",
         backdropBlur: "rgb(119 119 119 / 27%)",
         facebook: "#1877f2",
         twitter: "rgb(29, 155, 240)",

@@ -21,6 +21,7 @@ import {
   Order,
   Payment,
   Success,
+  OrdersList,
 } from "./components";
 import { loadUser } from "./actions/user";
 import store from "./store";
@@ -79,6 +80,14 @@ function App() {
             element={
               <ProtectedRoute>
                 <Shipping />
+              </ProtectedRoute>
+            }
+          ></Route>
+          <Route
+            path="/orders/myOrders"
+            element={
+              <ProtectedRoute>
+                <OrdersList />
               </ProtectedRoute>
             }
           ></Route>

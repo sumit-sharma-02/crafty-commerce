@@ -33,7 +33,7 @@ export const myOrders = () => async (dispatch) => {
       type: orderConstants.MY_ORDERS_REQUEST,
     });
 
-    const { data } = axios.get("/api/v1/orders/myOrders");
+    const { data } = await axios.get("/api/v1/orders/myOrders");
 
     dispatch({
       type: orderConstants.MY_ORDERS_SUCCESS,

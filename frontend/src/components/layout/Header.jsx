@@ -178,7 +178,7 @@ const Header = () => {
                         </Link>
                         <Link
                           className="flex items-center justify-start p-2 text-sm transition-colors duration-300 ease-in-out hover:bg-gray-200"
-                          to={"/orders"}
+                          to={"/orders/myOrders"}
                         >
                           <span className="h-4 w-max pr-2">
                             <TfiReceipt className="h-4 w-4" />

@@ -91,7 +91,7 @@ function Cart() {
                   <div className="flex w-full flex-col items-start justify-start md:flex-row md:items-start md:justify-between">
                     <Link
                       to={`/product/${item.product}`}
-                      className="px-5 pt-4 text-sm font-semibold tracking-tighter text-gray-800 transition-colors duration-500 hover:text-primary md:pt-0 md:text-lg"
+                      className="px-5 pt-4 text-sm font-normal tracking-tighter text-gray-800 transition-colors duration-500 hover:text-primary md:pt-0 md:text-base"
                     >
                       {item.name}
                     </Link>
