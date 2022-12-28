@@ -2,6 +2,7 @@ const Order = require("../models/order");
 const Product = require("../models/product");
 const ErrorHandler = require("../utils/errorHandler");
 const catchAsyncErrors = require("../middlewares/catchAsyncErrors");
+const APIFeatures = require("../utils/apiFeatures");
 
 // Create a new Order => /api/v1/order/new
 exports.newOrder = catchAsyncErrors(async (req, res, next) => {
@@ -49,13 +50,29 @@ exports.getSingleOrder = catchAsyncErrors(async (req, res, next) => {
   });
 });
 
-// Get Logged in User Orders => /api/v1/orders/myOrders
+// Get Logged in User Orders => /api/v1/orders/myOrders?page=1
 exports.getMyOrders = catchAsyncErrors(async (req, res, next) => {
+  const ordersPerPage = 3;
   const orders = await Order.find({ user: req.user.id });
+  const ordersCount = await Order.countDocuments();
+  const apiFeatures = new APIFeatures(
+    Order.find({ user: req.user.id }),
+    req.query
+  ).filter();
+
+  let filteredOrder = await apiFeatures.query;
+  let filteredOrderCount = filteredOrder.length;
+
+  apiFeatures.pagination(ordersPerPage);
+  filteredOrder = await apiFeatures.query.clone();
 
   res.status(200).json({
     success: true,
     orders,
+    ordersPerPage,
+    ordersCount,
+    filteredOrder,
+    filteredOrderCount,
   });
 });
 
