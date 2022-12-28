@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { MetaData, Loader } from "../../components";
 import { useDispatch, useSelector } from "react-redux";
-import { addItemsToCart, removeItemsFromCart } from "../../actions/cart";
 import { myOrders, clearErrors } from "../../actions/order";
 import { toast } from "react-toastify";
 import { motion } from "framer-motion";
@@ -21,7 +20,6 @@ const OrdersList = () => {
     setCurrentPage(pageNumber);
   };
   const dispatch = useDispatch();
-  const navigate = useNavigate();
   const showErrorToast = (message) => {
     toast.error(message, {
       position: "bottom-center",
@@ -38,7 +36,6 @@ const OrdersList = () => {
   const {
     loading,
     error,
-    orders,
     ordersCount,
     filteredOrder,
     filteredOrderCount,
