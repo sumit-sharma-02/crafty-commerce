@@ -5,7 +5,11 @@ import {
 } from "@reduxjs/toolkit";
 import thunk from "redux-thunk";
 import { composeWithDevTools } from "redux-devtools-extension";
-import { productsReducer, productDetailsReducer } from "./reducers/product";
+import {
+  productsReducer,
+  productDetailsReducer,
+  newReviewReducer,
+} from "./reducers/product";
 import {
   userAuthReducer,
   userReducer,
@@ -47,6 +51,7 @@ const reducers = combineReducers({
   order: newOrderReducer,
   myOrders: myOrdersReducer,
   orderDetails: orderDetailsReducer,
+  newReview: newReviewReducer,
 });
 
 const middleware = [thunk];

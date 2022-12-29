@@ -57,7 +57,7 @@ const Product = () => {
       showErrorToast(error);
       dispatch(clearErrors);
     }
-  }, [dispatch, error, params, category]);
+  }, [dispatch, error, params.id, category]);
 
   const increaseQty = () => {
     if (quantity >= product.stock) {
@@ -453,7 +453,7 @@ const Product = () => {
                 )}
                 {!error && (
                   <>
-                    <MetaData title={product.name} />
+                    <MetaData title={product?.name} />
                     <div className="col-span-3">
                       {/* ----001---- */}
                       <div className="gap-8 sm:grid sm:grid-cols-2">
