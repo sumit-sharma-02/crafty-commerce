@@ -7,7 +7,7 @@ const Dashboard = () => {
       <Sidebar />
       <div className="flex h-full w-full flex-1 flex-col">
         <main className="">
-          <div className="mx-4 my-4 grid rounded-3xl border-4 border-gray-400 bg-gray-100 px-8 pb-10">
+          <div className="mx-2 my-2 grid rounded-3xl border-4 border-gray-400 bg-gray-100 px-8 pb-10 sm:mx-4 sm:my-4">
             <div className="grid grid-cols-12 gap-6">
               <div className="xxl:col-span-9 col-span-12 grid grid-cols-12 gap-6">
                 <div className="col-span-12 mt-8">

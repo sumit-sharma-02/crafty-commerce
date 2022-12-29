@@ -53,6 +53,17 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
+          {/* Admin Protected Routes */}
+          <Route
+            path="/admin/dashboard"
+            isAdmin={true}
+            element={
+              <ProtectedRoute>
+                <Dashboard />
+              </ProtectedRoute>
+            }
+          ></Route>
+          {/* User Protected Routes */}
           <Route
             path="/profile"
             element={
@@ -136,7 +147,6 @@ function App() {
           <Route path="/search/:keyword" element={<AllProducts />} />
           <Route path="/product/:id" element={<Product />} />
           <Route path="/cart" element={<Cart />} />
-          <Route path="/admin" element={<Dashboard />} />
         </Routes>
         <Footer />
       </div>

@@ -5,7 +5,7 @@ import { Loader } from "../../components";
 import { Navigate } from "react-router-dom";
 import { toast } from "react-toastify";
 
-const ProtectedRoute = ({ children }) => {
+const ProtectedRoute = ({ children, isAdmin }) => {
   const dispatch = useDispatch();
   const showErrorToast = (message) => {
     toast.error(message, {
@@ -40,7 +40,7 @@ const ProtectedRoute = ({ children }) => {
   }
 
   if (!loading && isAuthenticated) {
-    if (user?.role !== "admin") {
+    if (isAdmin && user?.role !== "admin") {
       showErrorToast("Only Admins can access the resource.");
       return <Navigate to="/" />;
     }
