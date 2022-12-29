@@ -117,7 +117,7 @@ const Login = () => {
                     </span>
                     <input
                       className="w-full border-b-2 border-gray-300 py-2 pl-6 text-gray-600 placeholder-gray-400 focus:border-blue-300 focus:outline-none"
-                      type="text"
+                      type="email"
                       placeholder="Enter your email"
                       value={email}
                       onChange={(event) => setEmail(event.target.value)}

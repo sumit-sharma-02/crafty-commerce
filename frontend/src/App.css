@@ -25,6 +25,24 @@
   color: rgb(224, 39, 70, 1);
 }
 
+.stars {
+  height: max-content;
+  display: flex;
+  align-items: center;
+  padding-left: 0;
+}
+
+.star {
+  display: inline;
+  list-style: none;
+  font-size: 1.8rem;
+  padding-left: 0.4rem;
+}
+
+.star:first-child {
+  padding-left: 0;
+}
+
 .StripeElement {
   border-bottom: 2px solid #d1d5db;
 }

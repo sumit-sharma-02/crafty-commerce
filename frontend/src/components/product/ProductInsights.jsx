@@ -1,12 +1,17 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
+import { useSelector } from "react-redux";
+import { Link } from "react-router-dom";
 
 const ProductInsights = (product) => {
   const [productInsightsOptions, setProductInsightsOptions] = useState([
     true,
     false,
+    false,
   ]);
   const [reviewsToggle, setReviewsToggle] = useState(false);
+
+  const { user } = useSelector((state) => state.auth);
 
   const calculateNumOfReviews = (product) => {
     if (product.product.reviews.length === 0) {
@@ -24,7 +29,7 @@ const ProductInsights = (product) => {
           {/* ----------- */}
           {!reviewsToggle && (
             <button
-              className="text-sm flex items-center text-gray-400 hover:text-gray-500"
+              className="flex items-center text-sm text-gray-400 hover:text-gray-500"
               onClick={() => setReviewsToggle(!reviewsToggle)}
             >
               Hide Reviews
@@ -33,7 +38,7 @@ const ProductInsights = (product) => {
           {/* ----------- */}
           {reviewsToggle && (
             <button
-              className="text-sm flex items-center text-gray-400 hover:text-gray-500"
+              className="flex items-center text-sm text-gray-400 hover:text-gray-500"
               onClick={() => setReviewsToggle(!reviewsToggle)}
             >
               Show Reviews
@@ -50,7 +55,7 @@ const ProductInsights = (product) => {
           {/* ----------- */}
           {!reviewsToggle && (
             <button
-              className="text-sm flex items-center text-gray-400 hover:text-gray-500"
+              className="flex items-center text-sm text-gray-400 hover:text-gray-500"
               onClick={() => setReviewsToggle(!reviewsToggle)}
             >
               Hide Reviews
@@ -59,7 +64,7 @@ const ProductInsights = (product) => {
           {/* ----------- */}
           {reviewsToggle && (
             <button
-              className="text-sm flex items-center text-gray-400 hover:text-gray-500"
+              className="flex items-center text-sm text-gray-400 hover:text-gray-500"
               onClick={() => setReviewsToggle(!reviewsToggle)}
             >
               Show Reviews
@@ -74,50 +79,104 @@ const ProductInsights = (product) => {
     return `#${Math.floor(Math.random() * 16777215).toString(16)}`;
   };
 
+  function setUserRatings() {
+    if (user) {
+      const stars = document.querySelectorAll(".star");
+      stars.forEach((star, index) => {
+        star.starValue = index + 1;
+        ["click", "mouseover", "mouseout"].forEach(function (event) {
+          star.addEventListener(event, showRatings);
+        });
+      });
+
+      function showRatings(event) {
+        stars.forEach((star, index) => {
+          if (event.type === "click") {
+            if (index < this.starValue) {
+              star.classList.add("text-primary");
+            } else {
+              star.classList.remove("text-primary");
+            }
+          }
+          if (event.type === "mouseover") {
+            if (index < this.starValue) {
+              star.classList.add("text-primaryDarkShade");
+            } else {
+              star.classList.remove("text-primaryDarkShade");
+            }
+          }
+          if (event.type === "mouseout") {
+            star.classList.remove("text-primaryDarkShade");
+          }
+        });
+      }
+    }
+  }
+
   return (
     <>
       {/* ----002---- */}
-      <div className=" lg:col-span-3 border border-gray-200 rounded divide-y mt-10">
+      <div className=" mt-10 divide-y rounded border border-gray-200 lg:col-span-3">
         {/* ---button---- */}
         <div className=" bg-gray-100">
-          <ul className="sm:flex items-center text-center gap-2">
+          <ul className="items-center gap-2 text-center sm:flex">
             {/* ----- */}
             <li
               className={`${
                 productInsightsOptions[0] ? "text-primary" : "text-gray-700"
-              } cursor-pointer group inline-block duration-300 hover:text-primary`}
-              onClick={() => setProductInsightsOptions([true, false])}
+              } group inline-block cursor-pointer duration-300 hover:text-primary`}
+              onClick={() => setProductInsightsOptions([true, false, false])}
             >
-              <button className=" font-bold uppercase tracking-widest text-sm py-2 px-6 block">
+              <button className=" block py-2 px-6 text-sm font-bold uppercase tracking-widest">
                 Description
               </button>
               <div
                 className={`${
                   productInsightsOptions[0] ? "w-full" : "w-0"
-                } bg-primary duration-300 h-1 hover:w-full mx-auto -mb-0.5 mt-1 flex justify-center`}
+                } mx-auto -mb-0.5 mt-1 flex h-1 justify-center bg-primary duration-300 hover:w-full`}
               ></div>
             </li>
             {/* ----- */}
             <li
               className={`${
                 productInsightsOptions[1] ? "text-primary" : "text-gray-700"
-              } cursor-pointer group inline-block duration-300 hover:text-primary`}
-              onClick={() => setProductInsightsOptions([false, true])}
+              } group inline-block cursor-pointer duration-300 hover:text-primary`}
+              onClick={() => setProductInsightsOptions([false, true, false])}
             >
-              <button className=" font-bold uppercase tracking-widest text-sm py-2 px-6 block">
+              <button className=" block py-2 px-6 text-sm font-bold uppercase tracking-widest">
                 {" "}
                 Show Reviews
               </button>
               <div
                 className={`${
                   productInsightsOptions[1] ? "w-full" : "w-0"
-                } bg-primary duration-300 h-1 hover:w-full mx-auto -mb-0.5 mt-1 flex justify-center`}
+                } mx-auto -mb-0.5 mt-1 flex h-1 justify-center bg-primary duration-300 hover:w-full`}
+              ></div>
+            </li>
+            <li
+              className={`${
+                productInsightsOptions[2] ? "text-primary" : "text-gray-700"
+              } group inline-block cursor-pointer duration-300 hover:text-primary`}
+              onClick={() => setProductInsightsOptions([false, false, true])}
+            >
+              <button
+                className="block py-2 px-6 text-sm font-bold uppercase 
+              tracking-widest"
+                onClick={setUserRatings}
+              >
+                {" "}
+                Submit Review
+              </button>
+              <div
+                className={`${
+                  productInsightsOptions[2] ? "w-full" : "w-0"
+                } mx-auto -mb-0.5 mt-1 flex h-1 justify-center bg-primary duration-300 hover:w-full`}
               ></div>
             </li>
           </ul>
         </div>
         {/* -----001------- */}
-        <div className=" sm:p-5 p-2">
+        <div className=" p-2 sm:p-5">
           {/* -- 001--- */}
           {productInsightsOptions[0] && (
             <motion.div
@@ -130,7 +189,7 @@ const ProductInsights = (product) => {
                 duration: 0.4,
               }}
             >
-              <div className="text-sm text-gray-600 leading-loose">
+              <div className="text-sm leading-loose text-gray-600">
                 {/* ---------- */}
                 <p>
                   {product.product.description}
@@ -156,7 +215,7 @@ const ProductInsights = (product) => {
             >
               {/* -------------- */}
               <div>
-                <div className=" py-3 flex justify-between items-center">
+                <div className=" flex items-center justify-between py-3">
                   {calculateNumOfReviews(product)}
                 </div>
                 {/* -------------- */}
@@ -174,12 +233,12 @@ const ProductInsights = (product) => {
                   >
                     <ul>
                       {product.product.reviews.map((item) => (
-                        <li key={item._id} className="w-full mb-7">
+                        <li key={item._id} className="mb-7 w-full">
                           <div className="mt-2">
-                            <div className="flex justify-between items-center">
+                            <div className="flex items-center justify-between">
                               <div className="flex items-center space-x-4 py-1">
                                 <div
-                                  className={`w-14 h-14 rounded-full flex items-center justify-center font-bold text-white text-xl`}
+                                  className={`flex h-14 w-14 items-center justify-center rounded-full text-xl font-bold text-white`}
                                   style={{
                                     backgroundColor: `${randomColor()}`,
                                   }}
@@ -201,7 +260,7 @@ const ProductInsights = (product) => {
                                 </div>
                               </div>
                             </div>
-                            <p className="mt-1 text-md text-gray-600">
+                            <p className="text-md mt-1 text-gray-600">
                               {item.comment}
                             </p>
                           </div>
@@ -211,81 +270,91 @@ const ProductInsights = (product) => {
                   </motion.div>
                 )}
               </div>
+            </motion.div>
+          )}
+
+          {/* -- 003--- */}
+          {productInsightsOptions[2] && (
+            <motion.div
+              initial={{ y: -50 }}
+              animate={{ y: 0 }}
+              exit={{ y: 50 }}
+              transition={{
+                type: "spring",
+                bounce: 0.3,
+                duration: 0.4,
+              }}
+              className="divide-y"
+            >
               {/* ------Write a review-------- */}
-              <div>
-                {/* --------- */}
-                <div className=" text-xl py-4 uppercase font-bold">
-                  <span>Write a Review :</span>
+              {!user ? (
+                <div className="flex w-full items-center justify-center py-4 text-sm font-normal">
+                  <span className="rounded bg-red-300 py-2 px-4 text-red-600">
+                    Please{" "}
+                    <Link
+                      to={"/login"}
+                      className="font-bold text-primary underline"
+                    >
+                      login
+                    </Link>{" "}
+                    to post a review.
+                  </span>
                 </div>
-                {/* --------- */}
-                <form id="review" className=" text-gray-500 text-sm">
-                  {/* ----- */}
-                  <label className="py-2 font-bold">
-                    <span>Your experience</span>
-                    <span className=" text-red-500">*</span>
-                  </label>
-                  {/* --Rating-- */}
-                  <div className=" flex items-center justify-center space-x-1 py-5">
-                    {/* ---- */}
-                    <svg
-                      className="w-8 h-8 text-gray-300 cursor-pointer"
-                      fill="currentColor"
-                      viewBox="0 0 26 28"
-                    >
-                      <path d="M0 10.109q0-0.578 0.875-0.719l7.844-1.141 3.516-7.109q0.297-0.641 0.766-0.641t0.766 0.641l3.516 7.109 7.844 1.141q0.875 0.141 0.875 0.719 0 0.344-0.406 0.75l-5.672 5.531 1.344 7.812q0.016 0.109 0.016 0.313 0 0.328-0.164 0.555t-0.477 0.227q-0.297 0-0.625-0.187l-7.016-3.687-7.016 3.687q-0.344 0.187-0.625 0.187-0.328 0-0.492-0.227t-0.164-0.555q0-0.094 0.031-0.313l1.344-7.812-5.688-5.531q-0.391-0.422-0.391-0.75z"></path>
-                    </svg>
-                    {/* ---- */}
-                    <svg
-                      className="w-8 h-8 text-gray-300 cursor-pointer"
-                      fill="currentColor"
-                      viewBox="0 0 26 28"
-                    >
-                      <path d="M0 10.109q0-0.578 0.875-0.719l7.844-1.141 3.516-7.109q0.297-0.641 0.766-0.641t0.766 0.641l3.516 7.109 7.844 1.141q0.875 0.141 0.875 0.719 0 0.344-0.406 0.75l-5.672 5.531 1.344 7.812q0.016 0.109 0.016 0.313 0 0.328-0.164 0.555t-0.477 0.227q-0.297 0-0.625-0.187l-7.016-3.687-7.016 3.687q-0.344 0.187-0.625 0.187-0.328 0-0.492-0.227t-0.164-0.555q0-0.094 0.031-0.313l1.344-7.812-5.688-5.531q-0.391-0.422-0.391-0.75z"></path>
-                    </svg>
-                    {/* ---- */}
-                    <svg
-                      className="w-8 h-8 text-gray-300 cursor-pointer"
-                      fill="currentColor"
-                      viewBox="0 0 26 28"
-                    >
-                      <path d="M0 10.109q0-0.578 0.875-0.719l7.844-1.141 3.516-7.109q0.297-0.641 0.766-0.641t0.766 0.641l3.516 7.109 7.844 1.141q0.875 0.141 0.875 0.719 0 0.344-0.406 0.75l-5.672 5.531 1.344 7.812q0.016 0.109 0.016 0.313 0 0.328-0.164 0.555t-0.477 0.227q-0.297 0-0.625-0.187l-7.016-3.687-7.016 3.687q-0.344 0.187-0.625 0.187-0.328 0-0.492-0.227t-0.164-0.555q0-0.094 0.031-0.313l1.344-7.812-5.688-5.531q-0.391-0.422-0.391-0.75z"></path>
-                    </svg>
-                    {/* ---- */}
-                    <svg
-                      className="w-8 h-8 text-gray-300 cursor-pointer"
-                      fill="currentColor"
-                      viewBox="0 0 26 28"
-                    >
-                      <path d="M0 10.109q0-0.578 0.875-0.719l7.844-1.141 3.516-7.109q0.297-0.641 0.766-0.641t0.766 0.641l3.516 7.109 7.844 1.141q0.875 0.141 0.875 0.719 0 0.344-0.406 0.75l-5.672 5.531 1.344 7.812q0.016 0.109 0.016 0.313 0 0.328-0.164 0.555t-0.477 0.227q-0.297 0-0.625-0.187l-7.016-3.687-7.016 3.687q-0.344 0.187-0.625 0.187-0.328 0-0.492-0.227t-0.164-0.555q0-0.094 0.031-0.313l1.344-7.812-5.688-5.531q-0.391-0.422-0.391-0.75z"></path>
-                    </svg>
-                    {/* ---- */}
-                    <svg
-                      className="w-8 h-8 text-gray-300 cursor-pointer"
-                      fill="currentColor"
-                      viewBox="0 0 26 28"
-                    >
-                      <path d="M0 10.109q0-0.578 0.875-0.719l7.844-1.141 3.516-7.109q0.297-0.641 0.766-0.641t0.766 0.641l3.516 7.109 7.844 1.141q0.875 0.141 0.875 0.719 0 0.344-0.406 0.75l-5.672 5.531 1.344 7.812q0.016 0.109 0.016 0.313 0 0.328-0.164 0.555t-0.477 0.227q-0.297 0-0.625-0.187l-7.016-3.687-7.016 3.687q-0.344 0.187-0.625 0.187-0.328 0-0.492-0.227t-0.164-0.555q0-0.094 0.031-0.313l1.344-7.812-5.688-5.531q-0.391-0.422-0.391-0.75z"></path>
-                    </svg>
+              ) : (
+                <div>
+                  {/* --------- */}
+                  <div className=" py-4 text-xl font-bold uppercase">
+                    <span>Write a Review :</span>
                   </div>
-                  {/* ----- */}
-                  <label className="py-2 font-bold">
-                    <span>Your Comment</span>
-                    <span className=" text-red-500">*</span>
-                  </label>
-                  {/* ----- */}
-                  <textarea
-                    className="mt-1 p-4 w-full min-h-[15rem] border border-gray-300 focus:border-primary rounded focus:outline-none resize-y"
-                    required
-                  ></textarea>
-                  {/* -------- */}
-                  <button
-                    type="submit"
-                    className="my-4 p-3 bg-gray-700 hover:bg-opacity-80 px-7 rounded text-sm text-white font-medium duration-300"
-                  >
-                    Submit Review
-                  </button>
-                </form>
-              </div>
+                  {/* --------- */}
+                  <form id="review" className=" text-sm text-gray-500">
+                    {/* ----- */}
+                    <label className="py-2 font-bold">
+                      <span>Your experience</span>
+                      <span className=" text-red-500">*</span>
+                    </label>
+                    {/* --Rating-- */}
+                    <div className=" flex items-center space-x-1 pt-2 pb-5 text-gray-300">
+                      {/* ---- */}
+                      <ul className="stars cursor-pointer">
+                        <li className="star transition-colors duration-300 ease-in-out">
+                          <i className="fa fa-star"></i>
+                        </li>
+                        <li className="star transition-colors duration-300 ease-in-out">
+                          <i className="fa fa-star"></i>
+                        </li>
+                        <li className="star transition-colors duration-300 ease-in-out">
+                          <i className="fa fa-star"></i>
+                        </li>
+                        <li className="star transition-colors duration-300 ease-in-out">
+                          <i className="fa fa-star"></i>
+                        </li>
+                        <li className="star transition-colors duration-300 ease-in-out">
+                          <i className="fa fa-star"></i>
+                        </li>
+                      </ul>
+                    </div>
+                    {/* ----- */}
+                    <label className="py-2 font-bold">
+                      <span>Your Comment</span>
+                      <span className=" text-red-500">*</span>
+                    </label>
+                    {/* ----- */}
+                    <textarea
+                      className="mt-2 min-h-[15rem] w-full resize-y rounded border-2 border-gray-300 p-4 focus:border-primary focus:outline-none"
+                      required
+                    ></textarea>
+                    {/* -------- */}
+                    <button
+                      type="submit"
+                      className="my-4 rounded bg-primary p-2 px-6 text-base font-medium tracking-widest text-white
+                    transition-colors duration-300 ease-in-out hover:bg-primaryDarkShade hover:bg-opacity-80"
+                    >
+                      Submit Review
+                    </button>
+                  </form>
+                </div>
+              )}
             </motion.div>
           )}
         </div>
