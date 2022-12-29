@@ -3,7 +3,11 @@ import { motion } from "framer-motion";
 import { useDispatch, useSelector } from "react-redux";
 import { Link, useParams } from "react-router-dom";
 import { toast } from "react-toastify";
-import { newReview, clearErrors } from "../../actions/product";
+import {
+  newReview,
+  clearErrors,
+  getProductDetails,
+} from "../../actions/product";
 import productsConstant from "../../constants/product";
 
 const ProductInsights = ({ product }) => {
@@ -141,7 +145,6 @@ const ProductInsights = ({ product }) => {
         if (event.type === "click") {
           if (index < this.starValue) {
             star.classList.add("text-primary");
-            console.log(this.starValue);
             setRating(this.starValue);
           } else {
             star.classList.remove("text-primary");
@@ -175,13 +178,15 @@ const ProductInsights = ({ product }) => {
     if (success) {
       showSuccessToast("Thank you! Your review has been posted successfully.");
       dispatch({ type: productsConstant.NEW_REVIEW_RESET });
+      setProductInsightsOptions([false, true, false]);
+      dispatch(getProductDetails(params.id));
     }
 
     if (reviewError) {
       showErrorToast(reviewError);
       dispatch(clearErrors());
     }
-  }, [dispatch, reviewError, success]);
+  }, [dispatch, reviewError, success, params]);
 
   return (
     <>
@@ -425,22 +430,20 @@ const ProductInsights = ({ product }) => {
                     </label>
                     {/* ----- */}
                     <textarea
-                      className="mt-2 min-h-[15rem] w-full resize-y rounded border-2 border-gray-300 p-4
+                      className="mt-2 mb-4 min-h-[15rem] w-full resize-y rounded border-2 border-gray-300 p-4
                       focus:border-primary focus:outline-none"
                       value={comment}
                       onChange={(event) => setComment(event.target.value)}
                     ></textarea>
                     {/* -------- */}
-                    <button
+                    <Link
+                      to={`/product/${product._id}`}
                       onClick={() => reviewHandler()}
-                      disabled={rating === 0 ? true : false}
-                      className={`my-4 rounded bg-primary p-2 px-6 text-base font-medium tracking-widest text-white
-                      transition-colors duration-300 ease-in-out hover:bg-primaryDarkShade hover:bg-opacity-80 ${
-                        rating === 0 ? "cursor-not-allowed" : "cursor-pointer"
-                      }`}
+                      className={`rounded bg-primary p-2 px-6 text-base font-medium tracking-widest text-white
+                      transition-colors duration-300 ease-in-out hover:bg-primaryDarkShade hover:bg-opacity-80`}
                     >
                       Submit Review
-                    </button>
+                    </Link>
                   </form>
                 </div>
               )}
