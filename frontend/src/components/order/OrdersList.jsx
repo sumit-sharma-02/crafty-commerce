@@ -5,14 +5,16 @@ import { useDispatch, useSelector } from "react-redux";
 import { myOrders, clearErrors } from "../../actions/order";
 import { toast } from "react-toastify";
 import { motion } from "framer-motion";
-
-// Images used
-import emptyOrder from "../../images/emptyOrder.jpg";
-import { FaBoxOpen } from "react-icons/fa";
 import Pagination from "react-js-pagination";
+
+// Icons used
+import { FaBoxOpen } from "react-icons/fa";
 import { MdFirstPage } from "react-icons/md";
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 import { BiLastPage } from "react-icons/bi";
+
+// Images used
+import emptyOrder from "../../images/emptyOrder.jpg";
 
 const OrdersList = () => {
   const [currentPage, setCurrentPage] = useState(1);
@@ -67,7 +69,7 @@ const OrdersList = () => {
       "Dec",
     ];
     const newDate = new Date(date);
-    let day = newDate.getDay();
+    let day = newDate.getDate();
     if (day < 10) day = "0" + day;
     const monthIndex = newDate.getMonth();
     const month = monthNames[monthIndex];
@@ -139,23 +141,27 @@ const OrdersList = () => {
                               {items.orderStatus}
                             </span>
                             <span className="text-xs font-normal text-gray-500">
-                              Ordered at {formatDate(items.createdAt)}
+                              {items.deliveredAt
+                                ? `Delivered at ${formatDate(
+                                    items.deliveredAt
+                                  )}`
+                                : `Ordered at ${formatDate(items.createdAt)}`}
                             </span>
                           </div>
                         </div>
                         <Link
                           className="flex w-full cursor-pointer flex-col rounded border-t border-gray-200 
                         px-4 py-2 transition-colors duration-500 ease-in-out hover:bg-gray-200 md:flex-row md:px-8 md:py-4"
-                          to={`/order/${order._id}`}
+                          to={`/order/${items._id}`}
                         >
                           <div
-                            className="flex h-full w-1/4 flex-col items-start justify-start rounded md:w-1/3
+                            className="flex h-full w-full flex-col items-start justify-start rounded md:w-1/3
                         md:flex-row md:items-center md:justify-center"
                           >
                             <img
                               src={emptyOrder}
                               alt=""
-                              className="ml-5 h-full w-full rounded object-cover object-center md:ml-0"
+                              className="h-full w-full rounded object-cover object-center md:ml-0"
                             />
                           </div>
                           <div className="flex h-full w-full flex-col md:w-3/4 md:pl-3">

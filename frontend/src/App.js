@@ -22,6 +22,7 @@ import {
   Payment,
   Success,
   OrdersList,
+  OrderDetails,
 } from "./components";
 import { loadUser } from "./actions/user";
 import store from "./store";
@@ -88,6 +89,14 @@ function App() {
             element={
               <ProtectedRoute>
                 <OrdersList />
+              </ProtectedRoute>
+            }
+          ></Route>
+          <Route
+            path="/order/:id"
+            element={
+              <ProtectedRoute>
+                <OrderDetails />
               </ProtectedRoute>
             }
           ></Route>
