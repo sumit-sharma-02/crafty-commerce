@@ -95,46 +95,55 @@ const OrderDetails = () => {
               </p>
 
               <div className="mt-5 w-full">
-                <h4 className="mb-2 text-lg font-bold text-gray-600 underline">
+                <h4 className="mb-1 text-lg font-bold text-gray-600">
                   Shipping Details
                 </h4>
-                <p className="text-sm font-normal">
-                  <b className="text-primary">Name:</b> {user && user?.name}
-                </p>
-                <p className="text-sm font-normal">
-                  <b className="text-primary">Phone:</b>{" "}
-                  {shippingInfo && shippingInfo?.phoneNo}
-                </p>
-                <p className="text-sm font-normal">
-                  <b className="text-primary">Address: </b>
-                  {shippingDetails}
-                </p>
-                <p className="text-sm font-normal">
-                  <b className="text-primary">Amount:</b> ${totalPrice}{" "}
-                  {shippingInfo &&
-                    shippingInfo.country.toLowerCase() === "india" &&
-                    ` or ₹${totalPrice && (totalPrice * 82.76).toFixed(2)}`}
-                </p>
+                <div className="flex h-max w-full flex-col justify-center border-t border-gray-300 pt-2">
+                  <p className="text-sm font-normal">
+                    <b className="text-primary">Name:</b> {user && user?.name}
+                  </p>
+                  <p className="text-sm font-normal">
+                    <b className="text-primary">Phone:</b>{" "}
+                    {shippingInfo && shippingInfo?.phoneNo}
+                  </p>
+                  <p className="text-sm font-normal">
+                    <b className="text-primary">Address: </b>
+                    {shippingDetails}
+                  </p>
+                  <p className="text-sm font-normal">
+                    <b className="text-primary">Amount:</b> ${totalPrice}{" "}
+                    {shippingInfo &&
+                      shippingInfo.country.toLowerCase() === "india" &&
+                      ` or ₹${totalPrice && (totalPrice * 82.76).toFixed(2)}`}
+                  </p>
+                </div>
               </div>
               <div className="mt-5 w-full">
-                <h4 className="mb-2 text-lg font-bold text-gray-600 underline">
+                <h4 className="mb-1 text-lg font-bold text-gray-600">
                   Payment
                 </h4>
-                <p
-                  className={`w-max rounded py-2 px-3 text-sm font-medium leading-3 ${
-                    isPaid
-                      ? "bg-green-300 text-green-600"
-                      : "bg-red-300 text-red-600"
-                  }`}
-                >
-                  <b>{isPaid ? "PAID" : "NOT PAID"}</b>
-                </p>
+                <div className="flex h-max w-full flex-col justify-center space-y-1 border-t border-gray-300 pt-2">
+                  <p
+                    className={`w-max rounded py-2 px-3 text-sm font-medium leading-3 ${
+                      isPaid
+                        ? "bg-green-300 text-green-600"
+                        : "bg-red-300 text-red-600"
+                    }`}
+                  >
+                    <b>{isPaid ? "PAID" : "NOT PAID"}</b>
+                  </p>
+                  {order.paidAt && (
+                    <span className="text-xs font-normal text-gray-500">
+                      Paid at {formatDate(order.paidAt)}
+                    </span>
+                  )}
+                </div>
               </div>
               <div className="mt-5 w-full">
-                <h4 className="mb-2 text-lg font-bold text-gray-600 underline">
+                <h4 className="mb-1 text-lg font-bold text-gray-600">
                   Order Status
                 </h4>
-                <div className="flex h-max w-max items-center">
+                <div className="flex h-max w-full items-center border-t border-gray-300 pt-2">
                   <span
                     className={`h-max w-max rounded-full p-2 ${
                       order.orderStatus && order.orderStatus === "Processing"
@@ -164,14 +173,14 @@ const OrderDetails = () => {
               </div>
 
               <div className="mt-5 w-full">
-                <h4 className="mb-2 text-lg font-bold text-gray-600 underline">
+                <h4 className="mb-1 text-lg font-bold text-gray-600">
                   Order Items
                 </h4>
                 {orderItems &&
                   orderItems.map((item) => (
                     <div key={item._id} className="mb-6 md:mb-4">
                       <Link
-                        className="flex w-full cursor-pointer flex-col rounded border-t border-gray-200 
+                        className="flex w-full cursor-pointer flex-col rounded border-t border-gray-300 
                         px-4 py-2 transition-colors duration-500 ease-in-out hover:bg-gray-200 md:flex-row md:px-8 md:py-4"
                         to={`/product/${item.product}`}
                       >
