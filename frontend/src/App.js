@@ -23,6 +23,7 @@ import {
   Success,
   OrdersList,
   OrderDetails,
+  Sidebar,
 } from "./components";
 import { loadUser } from "./actions/user";
 import store from "./store";
@@ -135,6 +136,7 @@ function App() {
           <Route path="/search/:keyword" element={<AllProducts />} />
           <Route path="/product/:id" element={<Product />} />
           <Route path="/cart" element={<Cart />} />
+          <Route path="/admin" element={<Sidebar />} />
         </Routes>
         <Footer />
       </div>
