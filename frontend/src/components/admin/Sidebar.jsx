@@ -8,7 +8,7 @@ import { Link } from "react-router-dom";
 
 const Sidebar = () => {
   return (
-    <div className="relative flex h-full">
+    <>
       {/* <!-- Desktop sidebar --> */}
       <aside className="z-10 hidden w-60 flex-shrink-0 overflow-y-auto bg-gray-100 px-2 md:block">
         <div>
@@ -290,7 +290,7 @@ const Sidebar = () => {
           </div>
         </div>
       </aside>
-    </div>
+    </>
   );
 };
 

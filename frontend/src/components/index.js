@@ -35,3 +35,4 @@ export { default as Success } from "./cart/Success";
 export { default as OrdersList } from "./order/OrdersList";
 export { default as OrderDetails } from "./order/OrderDetails";
 export { default as Sidebar } from "./admin/Sidebar";
+export { default as Dashboard } from "./admin/Dashboard";
