@@ -99,6 +99,26 @@ export const newProduct = (productData) => async (dispatch) => {
     });
   }
 };
+// Delete a Product
+export const deleteProduct = (id) => async (dispatch) => {
+  try {
+    dispatch({
+      type: productsConstant.DELETE_PRODUCT_REQUEST,
+    });
+
+    const { data } = await axios.delete(`/api/v1/admin/product/${id}`);
+
+    dispatch({
+      type: productsConstant.DELETE_PRODUCT_SUCCESS,
+      payload: data.success,
+    });
+  } catch (error) {
+    dispatch({
+      type: productsConstant.DELETE_PRODUCT_FAIL,
+      payload: error.response.data.error,
+    });
+  }
+};
 
 // New Review of the Product
 export const newReview = (reviewData) => async (dispatch) => {

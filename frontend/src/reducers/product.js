@@ -113,6 +113,46 @@ export const newProductReducer = (state = { product: {} }, action) => {
   }
 };
 
+export const productManipulationReducer = (state = {}, action) => {
+  switch (action.type) {
+    case productsConstant.DELETE_PRODUCT_REQUEST:
+      return {
+        ...state,
+        loading: true,
+      };
+
+    case productsConstant.DELETE_PRODUCT_SUCCESS:
+      return {
+        ...state,
+        loading: false,
+        isDeleted: action.payload,
+      };
+
+    case productsConstant.DELETE_PRODUCT_RESET:
+      return {
+        ...state,
+        isDeleted: false,
+        loading: false,
+      };
+
+    case productsConstant.DELETE_PRODUCT_FAIL:
+      return {
+        ...state,
+        loading: false,
+        error: action.payload,
+      };
+
+    case productsConstant.CLEAR_ERRORS:
+      return {
+        ...state,
+        error: null,
+      };
+
+    default:
+      return state;
+  }
+};
+
 export const newReviewReducer = (state = {}, action) => {
   switch (action.type) {
     case productsConstant.NEW_REVIEW_REQUEST:
