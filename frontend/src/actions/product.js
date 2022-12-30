@@ -99,6 +99,38 @@ export const newProduct = (productData) => async (dispatch) => {
     });
   }
 };
+
+// Update a Product
+export const updateProduct = (id, productData) => async (dispatch) => {
+  try {
+    dispatch({
+      type: productsConstant.UPDATE_PRODUCT_REQUEST,
+    });
+
+    const config = {
+      headers: {
+        "Content-Type": "application/json",
+      },
+    };
+
+    const { data } = await axios.put(
+      `/api/v1/admin/product/${id}`,
+      productData,
+      config
+    );
+
+    dispatch({
+      type: productsConstant.UPDATE_PRODUCT_SUCCESS,
+      payload: data.success,
+    });
+  } catch (error) {
+    dispatch({
+      type: productsConstant.UPDATE_PRODUCT_FAIL,
+      payload: error.response.data.error,
+    });
+  }
+};
+
 // Delete a Product
 export const deleteProduct = (id) => async (dispatch) => {
   try {

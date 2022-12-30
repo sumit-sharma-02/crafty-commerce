@@ -116,6 +116,7 @@ export const newProductReducer = (state = { product: {} }, action) => {
 export const productManipulationReducer = (state = {}, action) => {
   switch (action.type) {
     case productsConstant.DELETE_PRODUCT_REQUEST:
+    case productsConstant.UPDATE_PRODUCT_REQUEST:
       return {
         ...state,
         loading: true,
@@ -128,6 +129,13 @@ export const productManipulationReducer = (state = {}, action) => {
         isDeleted: action.payload,
       };
 
+    case productsConstant.UPDATE_PRODUCT_SUCCESS:
+      return {
+        ...state,
+        loading: false,
+        isUpdated: action.payload,
+      };
+
     case productsConstant.DELETE_PRODUCT_RESET:
       return {
         ...state,
@@ -135,7 +143,15 @@ export const productManipulationReducer = (state = {}, action) => {
         loading: false,
       };
 
+    case productsConstant.UPDATE_PRODUCT_RESET:
+      return {
+        ...state,
+        isUpdated: false,
+        loading: false,
+      };
+
     case productsConstant.DELETE_PRODUCT_FAIL:
+    case productsConstant.UPDATE_PRODUCT_FAIL:
       return {
         ...state,
         loading: false,
