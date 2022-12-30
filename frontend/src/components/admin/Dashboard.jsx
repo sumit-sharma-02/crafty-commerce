@@ -36,7 +36,7 @@ const Dashboard = () => {
                 <div className="xxl:col-span-9 col-span-12 grid grid-cols-12 gap-6">
                   <div className="col-span-12 mt-8">
                     <div className="intro-y flex h-10 items-center">
-                      <h2 className="mr-5 truncate text-2xl font-extrabold">
+                      <h2 className="mr-5 truncate text-3xl font-extrabold">
                         Dashboard
                       </h2>
                     </div>

@@ -150,7 +150,7 @@ const Header = () => {
                         {user?.role === "admin" && (
                           <Link
                             className="flex items-center justify-start rounded-t p-2 text-sm transition-colors duration-300 ease-in-out hover:bg-gray-200"
-                            to={"/dashboard"}
+                            to={"/admin/dashboard"}
                           >
                             <span className="h-4 w-max pr-2">
                               <MdSpaceDashboard className="h-4 w-4" />
