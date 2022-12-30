@@ -23,7 +23,7 @@ const Sidebar = () => {
   useEffect(() => {
     if (
       pathname.includes("/admin/products/all") ||
-      pathname.includes("/admin/products/single")
+      pathname.includes("/admin/products/create")
     ) {
       setProductsDropdown(true);
     }
@@ -130,11 +130,11 @@ const Sidebar = () => {
                           </Link>
                         </li>
                         <li className="p-1">
-                          <Link to={"/admin/products/single"}>
+                          <Link to={"/admin/products/create"}>
                             <div
                               className={`rounded-md transition-colors duration-300 hover:bg-gray-100 
                             hover:text-primary ${
-                              pathname.includes("/admin/products/single")
+                              pathname.includes("/admin/products/create")
                                 ? "bg-gray-100 text-primary"
                                 : "bg-transparent text-white"
                             }`}
@@ -320,11 +320,11 @@ const Sidebar = () => {
                               </Link>
                             </li>
                             <li className="p-1">
-                              <Link to={"/admin/products/single"}>
+                              <Link to={"/admin/products/create"}>
                                 <div
                                   className={`rounded-md transition-colors duration-300 hover:bg-gray-100 
                             hover:text-primary ${
-                              pathname.includes("/admin/products/single")
+                              pathname.includes("/admin/products/create")
                                 ? "bg-gray-100 text-primary"
                                 : "bg-transparent text-white"
                             }`}

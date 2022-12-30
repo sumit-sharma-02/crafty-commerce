@@ -1,12 +1,29 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { MetaData, Sidebar } from "../../components";
+import { Link } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
+import { getAdminProducts } from "../../actions/product";
+
+// Icon used
 import { TfiReceipt } from "react-icons/tfi";
 import { BsGraphDown } from "react-icons/bs";
-import { Link } from "react-router-dom";
 import { FiChevronRight, FiUsers } from "react-icons/fi";
 import { GiReceiveMoney } from "react-icons/gi";
 
 const Dashboard = () => {
+  const dispatch = useDispatch();
+  const { products } = useSelector((state) => state.products);
+  let outOfStockProductCount = 0;
+  products.forEach((product) => {
+    if (product.stock === 0) {
+      outOfStockProductCount += 1;
+    }
+  });
+
+  useEffect(() => {
+    dispatch(getAdminProducts());
+  }, [dispatch]);
+
   return (
     <>
       <MetaData title="Dashboard" />
@@ -56,7 +73,7 @@ const Dashboard = () => {
                           <div className="ml-2 w-full flex-1">
                             <div>
                               <div className="mt-3 text-3xl font-bold leading-8">
-                                56
+                                {products && products.length}
                               </div>
 
                               <div className="mt-1 text-base text-gray-600">
@@ -144,9 +161,8 @@ const Dashboard = () => {
                           <div className="ml-2 w-full flex-1">
                             <div>
                               <div className="mt-3 text-3xl font-bold leading-8">
-                                4
+                                {outOfStockProductCount}
                               </div>
-
                               <div className="mt-1 text-base text-gray-600">
                                 Out of Stock
                               </div>
