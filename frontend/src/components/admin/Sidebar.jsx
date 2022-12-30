@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { motion } from "framer-motion";
 
@@ -19,12 +19,15 @@ const Sidebar = () => {
   const [productsDropdown, setProductsDropdown] = useState(false);
   const [openSidebar, setOpenSidebar] = useState(false);
   const { pathname } = useLocation();
-  if (
-    pathname.includes("/admin/products") ||
-    pathname.includes("/admin/product")
-  ) {
-    setProductsDropdown(true);
-  }
+
+  useEffect(() => {
+    if (
+      pathname.includes("/admin/products/all") ||
+      pathname.includes("/admin/products/single")
+    ) {
+      setProductsDropdown(true);
+    }
+  }, [pathname]);
 
   return (
     <>
@@ -94,14 +97,14 @@ const Sidebar = () => {
                         className="overflow-hidden rounded-md bg-primary text-sm font-medium 
                       shadow-inner"
                       >
-                        <li className="p-1 text-white">
-                          <Link to={"/admin/products"}>
+                        <li className="p-1">
+                          <Link to={"/admin/products/all"}>
                             <div
                               className={`rounded-md transition-colors duration-300 hover:bg-gray-100
                              hover:text-primary ${
-                               pathname.includes("/admin/products")
-                                 ? "bg-gray-100"
-                                 : "bg-transparent"
+                               pathname.includes("/admin/products/all")
+                                 ? "bg-gray-100 text-primary"
+                                 : "bg-transparent text-white"
                              }`}
                             >
                               <div className="flex items-center py-2 px-2">
@@ -126,14 +129,14 @@ const Sidebar = () => {
                             </div>
                           </Link>
                         </li>
-                        <li className="p-1 text-white">
-                          <Link to={"/admin/product"}>
+                        <li className="p-1">
+                          <Link to={"/admin/products/single"}>
                             <div
                               className={`rounded-md transition-colors duration-300 hover:bg-gray-100 
                             hover:text-primary ${
-                              pathname.includes("/admin/product")
-                                ? "bg-gray-100"
-                                : "bg-transparent"
+                              pathname.includes("/admin/products/single")
+                                ? "bg-gray-100 text-primary"
+                                : "bg-transparent text-white"
                             }`}
                             >
                               <div className="flex items-center py-2 px-2">
@@ -229,12 +232,16 @@ const Sidebar = () => {
                   <ul className="mt-6 leading-10">
                     <li className="relative px-2">
                       <Link
-                        className="inline-flex w-full cursor-pointer items-center text-sm font-semibold 
-                    text-black transition-colors duration-300 hover:text-primary"
-                        to={"/dashboard"}
+                        className={`inline-flex w-full cursor-pointer items-center text-sm font-semibold 
+                    transition-colors duration-300 hover:text-primary ${
+                      pathname.includes("/admin/dashboard")
+                        ? "text-primary"
+                        : "text-black"
+                    }`}
+                        to={"/admin/dashboard"}
                       >
                         <MdSpaceDashboard className="h-6 w-6" />
-                        <span className="ml-2 tracking-wider">DASHBOARD</span>
+                        <span className={`ml-2 tracking-wider`}>DASHBOARD</span>
                       </Link>
                     </li>
                     <li
@@ -250,7 +257,9 @@ const Sidebar = () => {
                       productsDropdown ? "text-primary" : "text-black "
                     }`}
                       >
-                        <span className="inline-flex items-center text-sm font-semibold">
+                        <span
+                          className={`inline-flex items-center text-sm font-semibold`}
+                        >
                           <CgShoppingBag className="h-6 w-6" />
                           <span className="ml-2 tracking-wider">PRODUCTS</span>
                         </span>
@@ -278,11 +287,15 @@ const Sidebar = () => {
                             className="overflow-hidden rounded-md bg-primary text-sm font-medium 
                       shadow-inner"
                           >
-                            <li className="p-1 text-white">
-                              <Link to={"/admin/products"}>
+                            <li className="p-1">
+                              <Link to={"/admin/products/all"}>
                                 <div
-                                  className="rounded-md transition-colors duration-300 hover:bg-gray-100
-                             hover:text-primary"
+                                  className={`rounded-md transition-colors duration-300 hover:bg-gray-100
+                             hover:text-primary ${
+                               pathname.includes("/admin/products/all")
+                                 ? "bg-gray-100 text-primary"
+                                 : "bg-transparent text-white"
+                             }`}
                                 >
                                   <div className="flex items-center py-2 px-2">
                                     <svg
@@ -306,11 +319,15 @@ const Sidebar = () => {
                                 </div>
                               </Link>
                             </li>
-                            <li className="p-1 text-white">
-                              <Link to={"/admin/product"}>
+                            <li className="p-1">
+                              <Link to={"/admin/products/single"}>
                                 <div
-                                  className="rounded-md transition-colors duration-300 hover:bg-gray-100 
-                            hover:text-primary"
+                                  className={`rounded-md transition-colors duration-300 hover:bg-gray-100 
+                            hover:text-primary ${
+                              pathname.includes("/admin/products/single")
+                                ? "bg-gray-100 text-primary"
+                                : "bg-transparent text-white"
+                            }`}
                                 >
                                   <div className="flex items-center py-2 px-2">
                                     <MdOutlineCreateNewFolder className="h-5 w-5" />
@@ -331,8 +348,12 @@ const Sidebar = () => {
                       }`}
                     >
                       <Link
-                        className="inline-flex w-full cursor-pointer items-center text-sm font-semibold 
-                    text-black transition-colors duration-300 hover:text-primary"
+                        className={`inline-flex w-full cursor-pointer items-center text-sm font-semibold 
+                    transition-colors duration-300 hover:text-primary ${
+                      pathname.includes("/admin/orders")
+                        ? "text-primary"
+                        : "text-black"
+                    }`}
                         to={"/admin/orders"}
                       >
                         <TfiReceipt className="h-6 w-6" />
@@ -343,8 +364,12 @@ const Sidebar = () => {
                     </li>
                     <li className="relative px-2">
                       <Link
-                        className="inline-flex w-full cursor-pointer items-center text-sm font-semibold 
-                    text-black transition-colors duration-300 hover:text-primary"
+                        className={`inline-flex w-full cursor-pointer items-center text-sm font-semibold 
+                    transition-colors duration-300 hover:text-primary ${
+                      pathname.includes("/admin/users")
+                        ? "text-primary"
+                        : "text-black"
+                    }`}
                         to={"/admin/users"}
                       >
                         <FiUsers className="h-6 w-6" />
@@ -355,8 +380,12 @@ const Sidebar = () => {
                     </li>
                     <li className="relative px-2">
                       <Link
-                        className="inline-flex w-full cursor-pointer items-center text-sm font-semibold 
-                    text-black transition-colors duration-300 hover:text-primary"
+                        className={`inline-flex w-full cursor-pointer items-center text-sm font-semibold 
+                    text-black transition-colors duration-300 hover:text-primary ${
+                      pathname.includes("/admin/reviews")
+                        ? "text-primary"
+                        : "text-black"
+                    }`}
                         to={"/admin/reviews"}
                       >
                         <VscPreview className="h-6 w-6" />
@@ -385,9 +414,9 @@ const Sidebar = () => {
         >
           <button className="p-2 focus:outline-none">
             {openSidebar ? (
-              <BsBoxArrowRight className="h-6 w-6 text-primary" />
-            ) : (
               <BsBoxArrowLeft className="h-6 w-6 text-primary" />
+            ) : (
+              <BsBoxArrowRight className="h-6 w-6 text-primary" />
             )}
           </button>
         </motion.div>

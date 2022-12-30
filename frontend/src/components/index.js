@@ -36,3 +36,4 @@ export { default as OrdersList } from "./order/OrdersList";
 export { default as OrderDetails } from "./order/OrderDetails";
 export { default as Sidebar } from "./admin/Sidebar";
 export { default as Dashboard } from "./admin/Dashboard";
+export { default as ProductsList } from "./admin/ProductsList";

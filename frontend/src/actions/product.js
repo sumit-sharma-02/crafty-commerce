@@ -33,7 +33,9 @@ export const getProductDetails = (id) => async (dispatch) => {
     dispatch({
       type: productsConstant.PRODUCT_DETAILS_REQUEST,
     });
+
     const { data } = await axios.get(`/api/v1/product/${id}`);
+
     dispatch({
       type: productsConstant.PRODUCT_DETAILS_SUCCESS,
       payload: data.product,
@@ -68,6 +70,27 @@ export const newReview = (reviewData) => async (dispatch) => {
   } catch (error) {
     dispatch({
       type: productsConstant.NEW_REVIEW_FAIL,
+      payload: error.response.data.error,
+    });
+  }
+};
+
+// Get Admin All Products
+export const getAdminProducts = () => async (dispatch) => {
+  try {
+    dispatch({
+      type: productsConstant.ADMIN_PRODUCTS_REQUEST,
+    });
+
+    const { data } = await axios.get(`/api/v1/admin/products`);
+
+    dispatch({
+      type: productsConstant.ADMIN_PRODUCTS_SUCCESS,
+      payload: data.products,
+    });
+  } catch (error) {
+    dispatch({
+      type: productsConstant.ADMIN_PRODUCTS_FAIL,
       payload: error.response.data.error,
     });
   }

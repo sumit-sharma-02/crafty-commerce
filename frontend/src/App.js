@@ -24,6 +24,7 @@ import {
   OrdersList,
   OrderDetails,
   Dashboard,
+  ProductsList,
 } from "./components";
 import { loadUser } from "./actions/user";
 import store from "./store";
@@ -53,6 +54,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
+
           {/* Admin Protected Routes */}
           <Route
             path="/admin/dashboard"
@@ -63,6 +65,16 @@ function App() {
               </ProtectedRoute>
             }
           ></Route>
+          <Route
+            path="/admin/products/all"
+            isAdmin={true}
+            element={
+              <ProtectedRoute>
+                <ProductsList />
+              </ProtectedRoute>
+            }
+          ></Route>
+
           {/* User Protected Routes */}
           <Route
             path="/profile"
