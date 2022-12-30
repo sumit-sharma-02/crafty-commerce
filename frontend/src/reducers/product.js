@@ -74,6 +74,43 @@ export const productDetailsReducer = (state = { product: {} }, action) => {
   }
 };
 
+export const newProductReducer = (state = { product: {} }, action) => {
+  switch (action.type) {
+    case productsConstant.NEW_PRODUCT_REQUEST:
+      return {
+        ...state,
+        loading: true,
+      };
+
+    case productsConstant.NEW_PRODUCT_SUCCESS:
+      return {
+        loading: false,
+        success: action.payload.success,
+      };
+
+    case productsConstant.NEW_PRODUCT_RESET:
+      return {
+        ...state,
+        success: false,
+      };
+
+    case productsConstant.NEW_PRODUCT_FAIL:
+      return {
+        ...state,
+        error: action.payload,
+      };
+
+    case productsConstant.CLEAR_ERRORS:
+      return {
+        ...state,
+        error: null,
+      };
+
+    default:
+      return state;
+  }
+};
+
 export const newReviewReducer = (state = {}, action) => {
   switch (action.type) {
     case productsConstant.NEW_REVIEW_REQUEST:

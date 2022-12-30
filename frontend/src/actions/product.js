@@ -27,6 +27,27 @@ export const getProducts =
     }
   };
 
+// Get Admin All Products
+export const getAdminProducts = () => async (dispatch) => {
+  try {
+    dispatch({
+      type: productsConstant.ADMIN_PRODUCTS_REQUEST,
+    });
+
+    const { data } = await axios.get(`/api/v1/admin/products`);
+
+    dispatch({
+      type: productsConstant.ADMIN_PRODUCTS_SUCCESS,
+      payload: data.products,
+    });
+  } catch (error) {
+    dispatch({
+      type: productsConstant.ADMIN_PRODUCTS_FAIL,
+      payload: error.response.data.error,
+    });
+  }
+};
+
 // Get Details of a Product
 export const getProductDetails = (id) => async (dispatch) => {
   try {
@@ -43,6 +64,37 @@ export const getProductDetails = (id) => async (dispatch) => {
   } catch (error) {
     dispatch({
       type: productsConstant.PRODUCT_DETAILS_FAIL,
+      payload: error.response.data.error,
+    });
+  }
+};
+
+// Create new Product
+export const newProduct = (productData) => async (dispatch) => {
+  try {
+    dispatch({
+      type: productsConstant.NEW_PRODUCT_REQUEST,
+    });
+
+    const config = {
+      headers: {
+        "Content-Type": "application/json",
+      },
+    };
+
+    const { data } = await axios.post(
+      "/api/v1/admin/product/new",
+      productData,
+      config
+    );
+
+    dispatch({
+      type: productsConstant.NEW_PRODUCT_SUCCESS,
+      payload: data,
+    });
+  } catch (error) {
+    dispatch({
+      type: productsConstant.NEW_PRODUCT_FAIL,
       payload: error.response.data.error,
     });
   }
@@ -70,27 +122,6 @@ export const newReview = (reviewData) => async (dispatch) => {
   } catch (error) {
     dispatch({
       type: productsConstant.NEW_REVIEW_FAIL,
-      payload: error.response.data.error,
-    });
-  }
-};
-
-// Get Admin All Products
-export const getAdminProducts = () => async (dispatch) => {
-  try {
-    dispatch({
-      type: productsConstant.ADMIN_PRODUCTS_REQUEST,
-    });
-
-    const { data } = await axios.get(`/api/v1/admin/products`);
-
-    dispatch({
-      type: productsConstant.ADMIN_PRODUCTS_SUCCESS,
-      payload: data.products,
-    });
-  } catch (error) {
-    dispatch({
-      type: productsConstant.ADMIN_PRODUCTS_FAIL,
       payload: error.response.data.error,
     });
   }
