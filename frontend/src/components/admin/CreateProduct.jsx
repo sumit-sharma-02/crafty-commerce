@@ -142,7 +142,7 @@ const CreateProduct = () => {
 
   return (
     <>
-      <MetaData title="All Products" />
+      <MetaData title="Create New Product" />
       <div className="relative flex min-h-screen">
         <Sidebar />
         {loading ? (
