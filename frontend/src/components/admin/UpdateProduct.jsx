@@ -28,6 +28,7 @@ const CreateProduct = () => {
   const [productSeller, setProductSeller] = useState("");
   const [productOldImages, setProductOldImages] = useState([]);
   const [productImages, setProductImages] = useState([]);
+  const [tempCount, setTempCount] = useState(0);
 
   const categories = [
     "Accessories",
@@ -101,9 +102,11 @@ const CreateProduct = () => {
     }
 
     if (productOldImages.length > 0 && productImages.length === 0) {
+      setProductImages(productOldImages);
+      setProductOldImages([]);
     }
 
-    if (productImages.length === 0) {
+    if (productImages.length === 0 && productOldImages.length === 0) {
       return showErrorToast("Please upload atleast one image.");
     }
 
@@ -152,6 +155,10 @@ const CreateProduct = () => {
     if (product && product._id !== productId) {
       dispatch(getProductDetails(productId));
     } else {
+      if (tempCount === 0) {
+        dispatch(getProductDetails(productId));
+        setTempCount(1);
+      }
       setProductName(product.name);
       setProductPrice(product.price);
       setProductDescription(product.description);
@@ -185,6 +192,7 @@ const CreateProduct = () => {
     product,
     productId,
     params,
+    tempCount,
   ]);
 
   return (
