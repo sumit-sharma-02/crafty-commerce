@@ -1,15 +1,40 @@
-import React, { useEffect } from "react";
-import { Link } from "react-router-dom";
+import React, { useState, useEffect, Fragment } from "react";
+import { Dialog, Transition } from "@headlessui/react";
+import { Link, useNavigate } from "react-router-dom";
 import { MetaData, Loader, Sidebar } from "../../components";
 import { useDispatch, useSelector } from "react-redux";
-import { getAdminProducts, clearErrors } from "../../actions/product";
+import {
+  getAdminProducts,
+  clearErrors,
+  deleteProduct,
+} from "../../actions/product";
 import { toast } from "react-toastify";
+import productsConstant from "../../constants/product";
 
 const ProductsList = () => {
+  const [isDeleteWarningOpen, setIsDeleteWarningOpen] = useState(false);
+  let [deletedProductId, setDeletedProductId] = useState("");
+
   const dispatch = useDispatch();
-  // const navigate = useNavigate();
+  const navigate = useNavigate();
 
   const { loading, error, products } = useSelector((state) => state.products);
+  const { error: deleteProductError, isDeleted } = useSelector(
+    (state) => state.manipulateProduct
+  );
+
+  const showSuccessToast = (message) => {
+    toast.success(message, {
+      position: "bottom-center",
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "colored",
+    });
+  };
 
   const showErrorToast = (message) => {
     toast.error(message, {
@@ -91,6 +116,20 @@ const ProductsList = () => {
     }
   };
 
+  const closeDeleteProductWarning = () => {
+    setIsDeleteWarningOpen(false);
+    deleteProductHandler(deletedProductId);
+  };
+
+  const openDeleteProductWarning = (id) => {
+    setIsDeleteWarningOpen(true);
+    setDeletedProductId(id);
+  };
+
+  const deleteProductHandler = (productId) => {
+    dispatch(deleteProduct(productId));
+  };
+
   useEffect(() => {
     dispatch(getAdminProducts());
 
@@ -98,7 +137,18 @@ const ProductsList = () => {
       showErrorToast(error);
       dispatch(clearErrors());
     }
-  }, [error, dispatch]);
+
+    if (deleteProductError) {
+      showErrorToast(error);
+      dispatch(clearErrors());
+    }
+
+    if (isDeleted) {
+      showSuccessToast("Product has been deleted successfully.");
+      navigate("/admin/products/all");
+      dispatch({ type: productsConstant.DELETE_PRODUCT_RESET });
+    }
+  }, [error, deleteProductError, dispatch, isDeleted, navigate]);
 
   return (
     <>
@@ -175,8 +225,10 @@ const ProductsList = () => {
                                       <tbody className="divide-y divide-gray-200 bg-white">
                                         {products.map((product) => (
                                           <tr key={product._id}>
-                                            <td className="whitespace-no-wrap px-6 py-4 text-sm leading-5">
-                                              <p>{product._id}</p>
+                                            <td className="whitespace-no-wrap px-6 py-4 text-xs leading-5">
+                                              <p className="uppercase tracking-wide">
+                                                {product._id}
+                                              </p>
                                             </td>
                                             <td className="whitespace-no-wrap px-6 py-4 text-sm leading-5">
                                               <p>{product.name}</p>
@@ -194,7 +246,7 @@ const ProductsList = () => {
                                               <div className="flex">
                                                 <Link
                                                   to={`/admin/product/${product._id}`}
-                                                  className="text-blue-500 hover:text-blue-600"
+                                                  className="text-blue-500 outline-none hover:text-blue-600"
                                                 >
                                                   <svg
                                                     xmlns="http://www.w3.org/2000/svg"
@@ -211,7 +263,14 @@ const ProductsList = () => {
                                                     />
                                                   </svg>
                                                 </Link>
-                                                <button className="text-red-500 hover:text-red-600">
+                                                <button
+                                                  onClick={() =>
+                                                    openDeleteProductWarning(
+                                                      product._id
+                                                    )
+                                                  }
+                                                  className="text-red-500 outline-none hover:text-red-600"
+                                                >
                                                   <svg
                                                     xmlns="http://www.w3.org/2000/svg"
                                                     className="ml-1 h-5 w-5"
@@ -248,6 +307,79 @@ const ProductsList = () => {
           </div>
         )}
       </div>
+
+      <>
+        <Transition appear show={isDeleteWarningOpen} as={Fragment}>
+          <Dialog
+            as="div"
+            className="relative z-10"
+            onClose={() => setIsDeleteWarningOpen(false)}
+          >
+            <Transition.Child
+              as={Fragment}
+              enter="ease-out duration-300"
+              enterFrom="opacity-0"
+              enterTo="opacity-100"
+              leave="ease-in duration-200"
+              leaveFrom="opacity-100"
+              leaveTo="opacity-0"
+            >
+              <div className="fixed inset-0 bg-black bg-opacity-25" />
+            </Transition.Child>
+
+            <div className="fixed inset-0 overflow-y-auto">
+              <div className="flex min-h-full items-center justify-center p-4 text-center">
+                <Transition.Child
+                  as={Fragment}
+                  enter="ease-out duration-300"
+                  enterFrom="opacity-0 scale-95"
+                  enterTo="opacity-100 scale-100"
+                  leave="ease-in duration-200"
+                  leaveFrom="opacity-100 scale-100"
+                  leaveTo="opacity-0 scale-95"
+                >
+                  <Dialog.Panel className="w-full max-w-md transform overflow-hidden rounded-2xl bg-white p-6 text-left align-middle shadow-xl transition-all">
+                    <Dialog.Title
+                      as="h3"
+                      className="flex w-full justify-center text-lg font-medium capitalize leading-6 tracking-wider text-red-500"
+                    >
+                      Confirm Deletion
+                    </Dialog.Title>
+                    <div className="mt-2">
+                      <p className="text-sm text-gray-700">
+                        Are you sure you want to delete this product? All of the
+                        data will be permanently removed. This action cannot be
+                        undone.
+                      </p>
+                    </div>
+
+                    <div className="mt-4 flex items-center justify-center space-x-4">
+                      <button
+                        type="button"
+                        className="inline-flex w-1/3 justify-center rounded-md border border-transparent bg-red-600 
+                        px-4 py-2 text-sm font-medium text-white outline-none transition-colors duration-300
+                        ease-in-out hover:bg-red-700"
+                        onClick={() => closeDeleteProductWarning()}
+                      >
+                        Delete
+                      </button>
+                      <button
+                        type="button"
+                        className="inline-flex w-1/3 justify-center rounded-md border border-transparent bg-blue-600 
+                        px-4 py-2 text-sm font-medium text-white outline-none transition-colors duration-300
+                        ease-in-out hover:bg-blue-700"
+                        onClick={() => setIsDeleteWarningOpen(false)}
+                      >
+                        Cancel
+                      </button>
+                    </div>
+                  </Dialog.Panel>
+                </Transition.Child>
+              </div>
+            </div>
+          </Dialog>
+        </Transition>
+      </>
     </>
   );
 };
