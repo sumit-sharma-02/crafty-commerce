@@ -106,7 +106,7 @@ const ProductsList = () => {
       <div className="relative flex min-h-screen">
         <Sidebar />
         {loading ? (
-          <div className="flex flex-col items-center justify-center px-4 pt-16 pb-32 sm:px-10 xl:px-24">
+          <div className="flex w-full flex-col items-center justify-start">
             <Loader sizeType="big" />
           </div>
         ) : (

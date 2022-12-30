@@ -45,7 +45,7 @@ let initialState = {
 const reducers = combineReducers({
   products: productsReducer,
   productDetails: productDetailsReducer,
-  newproduct: newProductReducer,
+  newProduct: newProductReducer,
   auth: userAuthReducer,
   user: userReducer,
   forgotPassword: forgotPasswordReducer,

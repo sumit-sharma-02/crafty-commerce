@@ -25,6 +25,7 @@ import {
   OrderDetails,
   Dashboard,
   ProductsList,
+  CreateProduct,
 } from "./components";
 import { loadUser } from "./actions/user";
 import store from "./store";
@@ -71,6 +72,15 @@ function App() {
             element={
               <ProtectedRoute>
                 <ProductsList />
+              </ProtectedRoute>
+            }
+          ></Route>
+          <Route
+            path="/admin/products/create"
+            isAdmin={true}
+            element={
+              <ProtectedRoute>
+                <CreateProduct />
               </ProtectedRoute>
             }
           ></Route>
