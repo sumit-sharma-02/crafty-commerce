@@ -26,6 +26,7 @@ import {
   Dashboard,
   ProductsList,
   CreateProduct,
+  UpdateProduct,
 } from "./components";
 import { loadUser } from "./actions/user";
 import store from "./store";
@@ -81,6 +82,15 @@ function App() {
             element={
               <ProtectedRoute>
                 <CreateProduct />
+              </ProtectedRoute>
+            }
+          ></Route>
+          <Route
+            path="/admin/product/:id"
+            isAdmin={true}
+            element={
+              <ProtectedRoute>
+                <UpdateProduct />
               </ProtectedRoute>
             }
           ></Route>
