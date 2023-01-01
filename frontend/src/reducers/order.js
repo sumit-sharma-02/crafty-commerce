@@ -125,3 +125,59 @@ export const allOrdersReducer = (state = { orders: [] }, action) => {
       return state;
   }
 };
+
+export const orderManipulationReducer = (state = {}, action) => {
+  switch (action.type) {
+    // case productsConstant.DELETE_ORDER_REQUEST:
+    case orderConstants.UPDATE_ORDER_REQUEST:
+      return {
+        ...state,
+        loading: true,
+      };
+
+    // case orderConstants.DELETE_ORDER_SUCCESS:
+    //   return {
+    //     ...state,
+    //     loading: false,
+    //     isDeleted: action.payload,
+    //   };
+
+    case orderConstants.UPDATE_ORDER_SUCCESS:
+      return {
+        ...state,
+        loading: false,
+        isUpdated: action.payload,
+      };
+
+    // case orderConstants.DELETE_ORDER_RESET:
+    //   return {
+    //     ...state,
+    //     isDeleted: false,
+    //     loading: false,
+    //   };
+
+    case orderConstants.UPDATE_ORDER_RESET:
+      return {
+        ...state,
+        isUpdated: false,
+        loading: false,
+      };
+
+    // case orderConstants.DELETE_ORDER_FAIL:
+    case orderConstants.UPDATE_ORDER_FAIL:
+      return {
+        ...state,
+        loading: false,
+        error: action.payload,
+      };
+
+    case orderConstants.CLEAR_ERRORS:
+      return {
+        ...state,
+        error: null,
+      };
+
+    default:
+      return state;
+  }
+};

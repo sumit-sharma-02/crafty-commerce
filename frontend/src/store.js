@@ -23,6 +23,7 @@ import {
   myOrdersReducer,
   orderDetailsReducer,
   allOrdersReducer,
+  orderManipulationReducer,
 } from "./reducers/order";
 
 let initialState = {
@@ -56,8 +57,9 @@ const reducers = combineReducers({
   order: newOrderReducer,
   myOrders: myOrdersReducer,
   orderDetails: orderDetailsReducer,
-  newReview: newReviewReducer,
   allOrders: allOrdersReducer,
+  manipulateOrder: orderManipulationReducer,
+  newReview: newReviewReducer,
 });
 
 const middleware = [thunk];
