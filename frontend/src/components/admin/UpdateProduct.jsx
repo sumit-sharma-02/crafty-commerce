@@ -7,9 +7,11 @@ import {
   getProductDetails,
   clearErrors,
 } from "../../actions/product";
-import productsConstant from "../../constants/product";
+import { productsConstant } from "../../constants/product";
 import { motion } from "framer-motion";
 import { toast } from "react-toastify";
+
+// Icons used
 import {
   MdAttachMoney,
   MdCloudUpload,

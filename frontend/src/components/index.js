@@ -40,3 +40,4 @@ export { default as ProductsList } from "./admin/ProductsList";
 export { default as CreateProduct } from "./admin/CreateProduct";
 export { default as UpdateProduct } from "./admin/UpdateProduct";
 export { default as AllOrders } from "./admin/AllOrders";
+export { default as UpdateOrder } from "./admin/UpdateOrder";
