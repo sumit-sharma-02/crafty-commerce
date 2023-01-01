@@ -3,7 +3,8 @@ import { Dialog, Transition } from "@headlessui/react";
 import { Link, useNavigate } from "react-router-dom";
 import { MetaData, Loader, Sidebar } from "../../components";
 import { useDispatch, useSelector } from "react-redux";
-import { allOrders, clearErrors } from "../../actions/order";
+import { allOrders, clearErrors, deleteOrder } from "../../actions/order";
+import { orderConstants } from "../../constants/order";
 import { toast } from "react-toastify";
 
 // Icons Used
@@ -19,9 +20,9 @@ const AllOrders = () => {
   const { loading, error, totalAmount, orders } = useSelector(
     (state) => state.allOrders
   );
-  // const { error: deleteOrderError, isDeleted } = useSelector(
-  //   (state) => state.manipulateOrder
-  // );
+  const { error: deleteOrderError, isDeleted } = useSelector(
+    (state) => state.manipulateOrder
+  );
 
   const showSuccessToast = (message) => {
     toast.success(message, {
@@ -74,23 +75,6 @@ const AllOrders = () => {
       return (
         <div className="flex text-orange-500">
           <BiTime className="mr-1 h-5 w-5" />
-          {/* <svg
-            stroke="currentColor"
-            className=""
-            fill="none"
-            strokeWidth="0"
-            viewBox="0 0 15 15"
-            height="1em"
-            width="1em"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              fillRule="evenodd"
-              clipRule="evenodd"
-              d="M0.877075 7.49988C0.877075 3.84219 3.84222 0.877045 7.49991 0.877045C11.1576 0.877045 14.1227 3.84219 14.1227 7.49988C14.1227 11.1575 11.1576 14.1227 7.49991 14.1227C3.84222 14.1227 0.877075 11.1575 0.877075 7.49988ZM7.49991 1.82704C4.36689 1.82704 1.82708 4.36686 1.82708 7.49988C1.82708 10.6329 4.36689 13.1727 7.49991 13.1727C10.6329 13.1727 13.1727 10.6329 13.1727 7.49988C13.1727 4.36686 10.6329 1.82704 7.49991 1.82704ZM9.85358 5.14644C10.0488 5.3417 10.0488 5.65829 9.85358 5.85355L8.20713 7.49999L9.85358 9.14644C10.0488 9.3417 10.0488 9.65829 9.85358 9.85355C9.65832 10.0488 9.34173 10.0488 9.14647 9.85355L7.50002 8.2071L5.85358 9.85355C5.65832 10.0488 5.34173 10.0488 5.14647 9.85355C4.95121 9.65829 4.95121 9.3417 5.14647 9.14644L6.79292 7.49999L5.14647 5.85355C4.95121 5.65829 4.95121 5.3417 5.14647 5.14644C5.34173 4.95118 5.65832 4.95118 5.85358 5.14644L7.50002 6.79289L9.14647 5.14644C9.34173 4.95118 9.65832 4.95118 9.85358 5.14644Z"
-              fill="currentColor"
-            ></path>
-          </svg> */}
           <p>{status}</p>
         </div>
       );
@@ -108,7 +92,7 @@ const AllOrders = () => {
   };
 
   const deleteOrderHandler = (orderId) => {
-    //   dispatch(deleteOrder(orderId));
+    dispatch(deleteOrder(orderId));
   };
 
   useEffect(() => {
@@ -119,23 +103,17 @@ const AllOrders = () => {
       dispatch(clearErrors());
     }
 
-    //   if (deleteOrderError) {
-    //     showErrorToast(deleteOrderError);
-    //     dispatch(clearErrors());
-    //   }
+    if (deleteOrderError) {
+      showErrorToast(deleteOrderError);
+      dispatch(clearErrors());
+    }
 
-    //   if (isDeleted) {
-    //     showSuccessToast("Order has been deleted successfully.");
-    //     navigate("/admin/orders/");
-    //     dispatch({ type: productsConstant.DELETE_ORDER_RESET });
-    //   }
-  }, [
-    error,
-    // deleteProductError,
-    dispatch,
-    // isDeleted,
-    // navigate
-  ]);
+    if (isDeleted) {
+      showSuccessToast("Order has been deleted successfully.");
+      navigate("/admin/orders/");
+      dispatch({ type: orderConstants.DELETE_ORDER_RESET });
+    }
+  }, [error, deleteOrderError, dispatch, isDeleted, navigate]);
 
   return (
     <>
