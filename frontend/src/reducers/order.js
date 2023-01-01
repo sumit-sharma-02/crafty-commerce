@@ -128,19 +128,12 @@ export const allOrdersReducer = (state = { orders: [] }, action) => {
 
 export const orderManipulationReducer = (state = {}, action) => {
   switch (action.type) {
-    // case productsConstant.DELETE_ORDER_REQUEST:
     case orderConstants.UPDATE_ORDER_REQUEST:
+    case orderConstants.DELETE_ORDER_REQUEST:
       return {
         ...state,
         loading: true,
       };
-
-    // case orderConstants.DELETE_ORDER_SUCCESS:
-    //   return {
-    //     ...state,
-    //     loading: false,
-    //     isDeleted: action.payload,
-    //   };
 
     case orderConstants.UPDATE_ORDER_SUCCESS:
       return {
@@ -149,12 +142,12 @@ export const orderManipulationReducer = (state = {}, action) => {
         isUpdated: action.payload,
       };
 
-    // case orderConstants.DELETE_ORDER_RESET:
-    //   return {
-    //     ...state,
-    //     isDeleted: false,
-    //     loading: false,
-    //   };
+    case orderConstants.DELETE_ORDER_SUCCESS:
+      return {
+        ...state,
+        loading: false,
+        isDeleted: action.payload,
+      };
 
     case orderConstants.UPDATE_ORDER_RESET:
       return {
@@ -163,8 +156,15 @@ export const orderManipulationReducer = (state = {}, action) => {
         loading: false,
       };
 
-    // case orderConstants.DELETE_ORDER_FAIL:
+    case orderConstants.DELETE_ORDER_RESET:
+      return {
+        ...state,
+        isDeleted: false,
+        loading: false,
+      };
+
     case orderConstants.UPDATE_ORDER_FAIL:
+    case orderConstants.DELETE_ORDER_FAIL:
       return {
         ...state,
         loading: false,

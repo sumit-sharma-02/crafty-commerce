@@ -124,6 +124,27 @@ export const updateOrder = (id, orderData) => async (dispatch) => {
   }
 };
 
+// Delete a Product
+export const deleteOrder = (id) => async (dispatch) => {
+  try {
+    dispatch({
+      type: orderConstants.DELETE_ORDER_REQUEST,
+    });
+
+    const { data } = await axios.delete(`/api/v1/admin/order/${id}`);
+
+    dispatch({
+      type: orderConstants.DELETE_ORDER_SUCCESS,
+      payload: data.success,
+    });
+  } catch (error) {
+    dispatch({
+      type: orderConstants.DELETE_ORDER_FAIL,
+      payload: error.response.data.error,
+    });
+  }
+};
+
 // Clear Errors
 export const clearErrors = () => async (dispatch) => {
   dispatch({
