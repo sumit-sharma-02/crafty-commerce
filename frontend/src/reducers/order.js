@@ -65,7 +65,7 @@ export const myOrdersReducer = (state = { orders: [] }, action) => {
   }
 };
 
-export const orderDetailsReducer = (state = { orders: {} }, action) => {
+export const orderDetailsReducer = (state = { order: {} }, action) => {
   switch (action.type) {
     case orderConstants.ORDER_DETAILS_REQUEST:
       return {
@@ -79,6 +79,37 @@ export const orderDetailsReducer = (state = { orders: {} }, action) => {
       };
 
     case orderConstants.ORDER_DETAILS_FAIL:
+      return {
+        loading: false,
+        error: action.payload,
+      };
+
+    case orderConstants.CLEAR_ERRORS:
+      return {
+        ...state,
+        error: null,
+      };
+
+    default:
+      return state;
+  }
+};
+
+export const allOrdersReducer = (state = { orders: [] }, action) => {
+  switch (action.type) {
+    case orderConstants.ALL_ORDERS_REQUEST:
+      return {
+        loading: true,
+      };
+
+    case orderConstants.ALL_ORDERS_SUCCESS:
+      return {
+        loading: false,
+        order: action.payload.orders,
+        totalAmount: action.payload.totalAmount,
+      };
+
+    case orderConstants.ALL_ORDERS_FAIL:
       return {
         loading: false,
         error: action.payload,

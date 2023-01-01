@@ -72,6 +72,27 @@ export const getOrderDetails = (id) => async (dispatch) => {
   }
 };
 
+// Get All Orders - ADMIN
+export const allOrders = () => async (dispatch) => {
+  try {
+    dispatch({
+      type: orderConstants.ALL_ORDERS_REQUEST,
+    });
+
+    const { data } = await axios.get(`/api/v1/admin/orders`);
+
+    dispatch({
+      type: orderConstants.ALL_ORDERS_SUCCESS,
+      payload: data,
+    });
+  } catch (error) {
+    dispatch({
+      type: orderConstants.ALL_ORDERS_FAIL,
+      payload: error.response.data.error,
+    });
+  }
+};
+
 // Clear Errors
 export const clearErrors = () => async (dispatch) => {
   dispatch({
