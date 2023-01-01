@@ -196,7 +196,7 @@ const Dashboard = () => {
                               <div className="ml-2 flex w-full justify-center">
                                 <div>
                                   <div className="mt-3 text-3xl font-bold leading-8">
-                                    ${totalAmount}
+                                    ${totalAmount && totalAmount.toFixed(2)}
                                   </div>
 
                                   <div className="mt-1 text-base text-gray-600">
