@@ -39,3 +39,4 @@ export { default as Dashboard } from "./admin/Dashboard";
 export { default as ProductsList } from "./admin/ProductsList";
 export { default as CreateProduct } from "./admin/CreateProduct";
 export { default as UpdateProduct } from "./admin/UpdateProduct";
+export { default as AllOrders } from "./admin/AllOrders";

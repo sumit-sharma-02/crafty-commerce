@@ -3,25 +3,25 @@ import { Dialog, Transition } from "@headlessui/react";
 import { Link, useNavigate } from "react-router-dom";
 import { MetaData, Loader, Sidebar } from "../../components";
 import { useDispatch, useSelector } from "react-redux";
-import {
-  getAdminProducts,
-  clearErrors,
-  deleteProduct,
-} from "../../actions/product";
+import { allOrders, clearErrors } from "../../actions/order";
 import { toast } from "react-toastify";
-import productsConstant from "../../constants/product";
 
-const ProductsList = () => {
+// Icons Used
+import { BiTime } from "react-icons/bi";
+
+const AllOrders = () => {
   const [isDeleteWarningOpen, setIsDeleteWarningOpen] = useState(false);
-  let [deletedProductId, setDeletedProductId] = useState("");
+  let [deletedOrderId, setDeletedOrderId] = useState("");
 
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
-  const { loading, error, products } = useSelector((state) => state.products);
-  const { error: deleteProductError, isDeleted } = useSelector(
-    (state) => state.manipulateProduct
+  const { loading, error, totalAmount, orders } = useSelector(
+    (state) => state.allOrders
   );
+  // const { error: deleteOrderError, isDeleted } = useSelector(
+  //   (state) => state.manipulateOrder
+  // );
 
   const showSuccessToast = (message) => {
     toast.success(message, {
@@ -49,51 +49,8 @@ const ProductsList = () => {
     });
   };
 
-  const setStockStatus = (stock) => {
-    if (stock === 0) {
-      return (
-        <div className="flex text-red-500">
-          <svg
-            stroke="currentColor"
-            className="mr-1 h-5 w-5"
-            fill="none"
-            strokeWidth="0"
-            viewBox="0 0 15 15"
-            height="1em"
-            width="1em"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              fillRule="evenodd"
-              clipRule="evenodd"
-              d="M0.877075 7.49988C0.877075 3.84219 3.84222 0.877045 7.49991 0.877045C11.1576 0.877045 14.1227 3.84219 14.1227 7.49988C14.1227 11.1575 11.1576 14.1227 7.49991 14.1227C3.84222 14.1227 0.877075 11.1575 0.877075 7.49988ZM7.49991 1.82704C4.36689 1.82704 1.82708 4.36686 1.82708 7.49988C1.82708 10.6329 4.36689 13.1727 7.49991 13.1727C10.6329 13.1727 13.1727 10.6329 13.1727 7.49988C13.1727 4.36686 10.6329 1.82704 7.49991 1.82704ZM9.85358 5.14644C10.0488 5.3417 10.0488 5.65829 9.85358 5.85355L8.20713 7.49999L9.85358 9.14644C10.0488 9.3417 10.0488 9.65829 9.85358 9.85355C9.65832 10.0488 9.34173 10.0488 9.14647 9.85355L7.50002 8.2071L5.85358 9.85355C5.65832 10.0488 5.34173 10.0488 5.14647 9.85355C4.95121 9.65829 4.95121 9.3417 5.14647 9.14644L6.79292 7.49999L5.14647 5.85355C4.95121 5.65829 4.95121 5.3417 5.14647 5.14644C5.34173 4.95118 5.65832 4.95118 5.85358 5.14644L7.50002 6.79289L9.14647 5.14644C9.34173 4.95118 9.65832 4.95118 9.85358 5.14644Z"
-              fill="currentColor"
-            ></path>
-          </svg>
-          <p>{stock}</p>
-        </div>
-      );
-    } else if (stock > 0 && stock < 10) {
-      return (
-        <div className="flex text-orange-500">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            className="mr-1 h-5 w-5"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth="2"
-              d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
-            />
-          </svg>
-          <p>{stock}</p>
-        </div>
-      );
-    } else {
+  const setOrderStatus = (status) => {
+    if (status === "Delivered") {
       return (
         <div className="flex text-green-500">
           <svg
@@ -110,45 +67,75 @@ const ProductsList = () => {
               d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
             />
           </svg>
-          <p>{stock}</p>
+          <p>{status}</p>
+        </div>
+      );
+    } else {
+      return (
+        <div className="flex text-orange-500">
+          <BiTime className="mr-1 h-5 w-5" />
+          {/* <svg
+            stroke="currentColor"
+            className=""
+            fill="none"
+            strokeWidth="0"
+            viewBox="0 0 15 15"
+            height="1em"
+            width="1em"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              fillRule="evenodd"
+              clipRule="evenodd"
+              d="M0.877075 7.49988C0.877075 3.84219 3.84222 0.877045 7.49991 0.877045C11.1576 0.877045 14.1227 3.84219 14.1227 7.49988C14.1227 11.1575 11.1576 14.1227 7.49991 14.1227C3.84222 14.1227 0.877075 11.1575 0.877075 7.49988ZM7.49991 1.82704C4.36689 1.82704 1.82708 4.36686 1.82708 7.49988C1.82708 10.6329 4.36689 13.1727 7.49991 13.1727C10.6329 13.1727 13.1727 10.6329 13.1727 7.49988C13.1727 4.36686 10.6329 1.82704 7.49991 1.82704ZM9.85358 5.14644C10.0488 5.3417 10.0488 5.65829 9.85358 5.85355L8.20713 7.49999L9.85358 9.14644C10.0488 9.3417 10.0488 9.65829 9.85358 9.85355C9.65832 10.0488 9.34173 10.0488 9.14647 9.85355L7.50002 8.2071L5.85358 9.85355C5.65832 10.0488 5.34173 10.0488 5.14647 9.85355C4.95121 9.65829 4.95121 9.3417 5.14647 9.14644L6.79292 7.49999L5.14647 5.85355C4.95121 5.65829 4.95121 5.3417 5.14647 5.14644C5.34173 4.95118 5.65832 4.95118 5.85358 5.14644L7.50002 6.79289L9.14647 5.14644C9.34173 4.95118 9.65832 4.95118 9.85358 5.14644Z"
+              fill="currentColor"
+            ></path>
+          </svg> */}
+          <p>{status}</p>
         </div>
       );
     }
   };
 
-  const closeDeleteProductWarning = () => {
+  const closeDeleteOrderWarning = () => {
     setIsDeleteWarningOpen(false);
-    deleteProductHandler(deletedProductId);
+    deleteOrderHandler(deletedOrderId);
   };
 
-  const openDeleteProductWarning = (id) => {
+  const openDeleteOrderWarning = (id) => {
     setIsDeleteWarningOpen(true);
-    setDeletedProductId(id);
+    setDeletedOrderId(id);
   };
 
-  const deleteProductHandler = (productId) => {
-    dispatch(deleteProduct(productId));
+  const deleteOrderHandler = (orderId) => {
+    //   dispatch(deleteOrder(orderId));
   };
 
   useEffect(() => {
-    dispatch(getAdminProducts());
+    dispatch(allOrders());
 
     if (error) {
       showErrorToast(error);
       dispatch(clearErrors());
     }
 
-    if (deleteProductError) {
-      showErrorToast(deleteProductError);
-      dispatch(clearErrors());
-    }
+    //   if (deleteOrderError) {
+    //     showErrorToast(deleteOrderError);
+    //     dispatch(clearErrors());
+    //   }
 
-    if (isDeleted) {
-      showSuccessToast("Product has been deleted successfully.");
-      navigate("/admin/products/all");
-      dispatch({ type: productsConstant.DELETE_PRODUCT_RESET });
-    }
-  }, [error, deleteProductError, dispatch, isDeleted, navigate]);
+    //   if (isDeleted) {
+    //     showSuccessToast("Order has been deleted successfully.");
+    //     navigate("/admin/orders/");
+    //     dispatch({ type: productsConstant.DELETE_ORDER_RESET });
+    //   }
+  }, [
+    error,
+    // deleteProductError,
+    dispatch,
+    // isDeleted,
+    // navigate
+  ]);
 
   return (
     <>
@@ -168,7 +155,7 @@ const ProductsList = () => {
                     <div className="col-span-12 mt-8">
                       <div className="intro-y flex h-10 items-center">
                         <h2 className="mr-5 truncate text-3xl font-extrabold">
-                          All Products
+                          All Orders
                         </h2>
                       </div>
                     </div>
@@ -188,28 +175,28 @@ const ProductsList = () => {
                                           <th className="bg-gray-50 px-6 py-3 text-xs font-medium uppercase leading-4 tracking-wider text-gray-500">
                                             <div className="flex items-center justify-center font-bold">
                                               <span className="mr-2">
-                                                PRODUCT ID
+                                                ORDER ID
                                               </span>
                                             </div>
                                           </th>
                                           <th className="bg-gray-50 px-6 py-3 text-xs font-medium uppercase leading-4 tracking-wider text-gray-500">
                                             <div className="flex items-center justify-center font-bold">
                                               <span className="mr-2">
-                                                PRODUCT NAME
+                                                NO. OF ITEMS
                                               </span>
                                             </div>
                                           </th>
                                           <th className="bg-gray-50 px-6 py-3 text-xs font-medium uppercase leading-4 tracking-wider text-gray-500">
                                             <div className="flex items-center justify-center font-bold">
                                               <span className="mr-2">
-                                                PRICE
+                                                AMOUNT
                                               </span>
                                             </div>
                                           </th>
                                           <th className="bg-gray-50 px-6 py-3 text-xs font-medium uppercase leading-4 tracking-wider text-gray-500">
                                             <div className="flex items-center justify-center font-bold">
                                               <span className="mr-2">
-                                                STOCK
+                                                STATUS
                                               </span>
                                             </div>
                                           </th>
@@ -223,29 +210,30 @@ const ProductsList = () => {
                                         </tr>
                                       </thead>
                                       <tbody className="divide-y divide-gray-200 bg-white">
-                                        {products.map((product) => (
-                                          <tr key={product._id}>
+                                        {orders.map((order) => (
+                                          <tr key={order._id}>
                                             <td className="whitespace-no-wrap px-6 py-4 text-xs leading-5">
                                               <p className="uppercase tracking-wide">
-                                                {product._id}
+                                                {order._id}
                                               </p>
                                             </td>
                                             <td className="whitespace-no-wrap px-6 py-4 text-sm leading-5">
-                                              <p>{product.name}</p>
-                                              <p className="text-xs text-gray-400">
-                                                {product.category}
+                                              <p className="text-center">
+                                                {order.orderItems.length}
                                               </p>
                                             </td>
                                             <td className="whitespace-no-wrap px-6 py-4 text-sm leading-5">
-                                              <p>${product.price}</p>
+                                              <p>${totalAmount}</p>
                                             </td>
                                             <td className="whitespace-no-wrap px-6 py-4 text-sm leading-5">
-                                              {setStockStatus(product.stock)}
+                                              {setOrderStatus(
+                                                order.orderStatus
+                                              )}
                                             </td>
                                             <td className="whitespace-no-wrap px-6 py-4 text-sm leading-5">
                                               <div className="flex">
                                                 <Link
-                                                  to={`/admin/product/${product._id}`}
+                                                  to={`/admin/order/${order._id}`}
                                                   className="text-blue-500 outline-none hover:text-blue-600"
                                                 >
                                                   <svg
@@ -265,8 +253,8 @@ const ProductsList = () => {
                                                 </Link>
                                                 <button
                                                   onClick={() =>
-                                                    openDeleteProductWarning(
-                                                      product._id
+                                                    openDeleteOrderWarning(
+                                                      order._id
                                                     )
                                                   }
                                                   className="text-red-500 outline-none hover:text-red-600"
@@ -347,7 +335,7 @@ const ProductsList = () => {
                     </Dialog.Title>
                     <div className="mt-2">
                       <p className="text-sm text-gray-700">
-                        Are you sure you want to delete this product? All of the
+                        Are you sure you want to delete this order? All of the
                         data will be permanently removed. This action cannot be
                         undone.
                       </p>
@@ -357,17 +345,17 @@ const ProductsList = () => {
                       <button
                         type="button"
                         className="inline-flex w-1/3 justify-center rounded-md border border-transparent bg-red-600 
-                        px-4 py-2 text-sm font-medium text-white outline-none transition-colors duration-300
-                        ease-in-out hover:bg-red-700"
-                        onClick={() => closeDeleteProductWarning()}
+                          px-4 py-2 text-sm font-medium text-white outline-none transition-colors duration-300
+                          ease-in-out hover:bg-red-700"
+                        onClick={() => closeDeleteOrderWarning()}
                       >
                         Delete
                       </button>
                       <button
                         type="button"
                         className="inline-flex w-1/3 justify-center rounded-md border border-transparent bg-blue-600 
-                        px-4 py-2 text-sm font-medium text-white outline-none transition-colors duration-300
-                        ease-in-out hover:bg-blue-700"
+                          px-4 py-2 text-sm font-medium text-white outline-none transition-colors duration-300
+                          ease-in-out hover:bg-blue-700"
                         onClick={() => setIsDeleteWarningOpen(false)}
                       >
                         Cancel
@@ -384,4 +372,4 @@ const ProductsList = () => {
   );
 };
 
-export default ProductsList;
+export default AllOrders;
