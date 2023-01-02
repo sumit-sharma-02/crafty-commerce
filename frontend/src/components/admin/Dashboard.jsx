@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { getAdminProducts } from "../../actions/product";
 import { allOrders } from "../../actions/order";
+import { allUsers } from "../../actions/user";
 
 // Icon used
 import { TfiReceipt } from "react-icons/tfi";
@@ -18,6 +19,7 @@ const Dashboard = () => {
   const { orders, totalAmount, loading } = useSelector(
     (state) => state.allOrders
   );
+  const { users } = useSelector((state) => state.allUsers);
 
   let outOfStockProductCount = 0;
   products.forEach((product) => {
@@ -29,6 +31,7 @@ const Dashboard = () => {
   useEffect(() => {
     dispatch(getAdminProducts());
     dispatch(allOrders());
+    dispatch(allUsers());
   }, [dispatch]);
 
   return (
@@ -117,7 +120,7 @@ const Dashboard = () => {
                             <div className="ml-2 w-full flex-1">
                               <div>
                                 <div className="mt-3 text-3xl font-bold leading-8">
-                                  {orders.length}
+                                  {orders && orders.length}
                                 </div>
 
                                 <div className="mt-1 text-base text-gray-600">
@@ -149,7 +152,7 @@ const Dashboard = () => {
                             <div className="ml-2 w-full flex-1">
                               <div>
                                 <div className="mt-3 text-3xl font-bold leading-8">
-                                  45
+                                  {users && users.length}
                                 </div>
 
                                 <div className="mt-1 text-base text-gray-600">
