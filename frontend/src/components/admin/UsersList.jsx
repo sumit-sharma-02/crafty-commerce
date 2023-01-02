@@ -201,7 +201,7 @@ const UsersList = () => {
                                               {setUserRole(user.role)}
                                             </td>
                                             <td className="whitespace-no-wrap px-6 py-4 text-sm leading-5">
-                                              <div className="flex">
+                                              <div className="flex items-center justify-center">
                                                 <Link
                                                   to={`/admin/user/${user._id}`}
                                                   className="text-blue-500 outline-none hover:text-blue-600"

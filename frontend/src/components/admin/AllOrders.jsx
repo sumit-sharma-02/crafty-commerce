@@ -53,7 +53,7 @@ const AllOrders = () => {
   const setOrderStatus = (status) => {
     if (status === "Delivered") {
       return (
-        <div className="flex text-green-500">
+        <div className="flex justify-center text-green-500">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             className="mr-1 h-5 w-5"
@@ -68,14 +68,14 @@ const AllOrders = () => {
               d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
             />
           </svg>
-          <p>{status}</p>
+          <p className="text-center">{status}</p>
         </div>
       );
     } else {
       return (
-        <div className="flex text-orange-500">
+        <div className="flex justify-center text-orange-500">
           <BiTime className="mr-1 h-5 w-5" />
-          <p>{status}</p>
+          <p className="text-center">{status}</p>
         </div>
       );
     }
@@ -201,7 +201,9 @@ const AllOrders = () => {
                                               </p>
                                             </td>
                                             <td className="whitespace-no-wrap px-6 py-4 text-sm leading-5">
-                                              <p>${totalAmount}</p>
+                                              <p className="text-center">
+                                                ${totalAmount}
+                                              </p>
                                             </td>
                                             <td className="whitespace-no-wrap px-6 py-4 text-sm leading-5">
                                               {setOrderStatus(
@@ -209,7 +211,7 @@ const AllOrders = () => {
                                               )}
                                             </td>
                                             <td className="whitespace-no-wrap px-6 py-4 text-sm leading-5">
-                                              <div className="flex">
+                                              <div className="flex items-center justify-center">
                                                 <Link
                                                   to={`/admin/order/${order._id}`}
                                                   className="text-blue-500 outline-none hover:text-blue-600"

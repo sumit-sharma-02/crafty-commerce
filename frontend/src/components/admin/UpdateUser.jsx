@@ -9,6 +9,7 @@ import { toast } from "react-toastify";
 
 // Icons used
 import { RiAdminLine, RiUser3Line } from "react-icons/ri";
+import { MdOutlineMail } from "react-icons/md";
 
 const UpdateUser = () => {
   const [name, setName] = useState("");
@@ -104,13 +105,13 @@ const UpdateUser = () => {
           </div>
         ) : (
           <div className="flex w-full flex-col px-4 pt-2 pb-32 sm:px-10 xl:px-24">
-            <div className="h-full w-full bg-white py-8 md:py-12">
-              <form onSubmit={updateUserHandler}>
+            <div className="h-full w-full bg-white py-8">
+              <form onSubmit={updateUserHandler} className="space-y-6">
                 <div className="mt-5 w-full">
                   <h2 className="mb-1 truncate text-3xl font-extrabold">
                     User Details
                   </h2>
-                  <div className="flex h-max w-full flex-col justify-center pt-2">
+                  <div className="flex h-max w-full flex-col justify-center space-y-6 pt-2">
                     <div className="mt-4">
                       <h4 className="text-gray-500">
                         Name <span className="text-red-500">*</span>
@@ -148,21 +149,8 @@ const UpdateUser = () => {
                         Email <span className="text-red-500">*</span>
                       </h4>
                       <div className=" relative">
-                        <span className=" absolute top-3 left-0">
-                          <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            className="mb-2 h-5 w-5 text-gray-400"
-                            fill="none"
-                            viewBox="0 0 24 24"
-                            stroke="currentColor"
-                          >
-                            <path
-                              strokeLinecap="round"
-                              strokeLinejoin="round"
-                              strokeWidth="2"
-                              d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"
-                            ></path>
-                          </svg>
+                        <span className="absolute top-3 left-0">
+                          <MdOutlineMail className="mb-2 h-5 w-5 text-gray-400" />
                         </span>
                         <input
                           className=" w-full border-b-2 border-gray-300 py-2 pl-6 text-gray-600 placeholder-gray-400 focus:border-blue-300 focus:outline-none"
@@ -263,7 +251,7 @@ const UpdateUser = () => {
                     }}
                     type="submit"
                     disabled={loading ? true : false}
-                    className="mx-auto flex w-max items-center justify-center space-x-2 rounded bg-primary py-2 px-4 
+                    className="flex w-max items-center justify-center space-x-2 rounded bg-primary py-2 px-4 
                     text-center font-semibold uppercase tracking-widest text-white shadow-lg transition-colors
                     duration-300 ease-in-out hover:bg-primaryDarkShade"
                   >

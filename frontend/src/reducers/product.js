@@ -223,6 +223,7 @@ export const productReviewsReducer = (state = { reviews: [] }, action) => {
     case productsConstant.GET_REVIEWS_FAIL:
       return {
         ...state,
+        loading: false,
         error: action.payload,
       };
 

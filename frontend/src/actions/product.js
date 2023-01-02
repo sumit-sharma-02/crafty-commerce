@@ -186,7 +186,7 @@ export const getProductReviews = (id) => async (dispatch) => {
       type: productsConstant.GET_REVIEWS_REQUEST,
     });
 
-    const { data } = await axios.get(`/api/v1/admin/reviews?id=${id}`);
+    const { data } = await axios.get(`/api/v1/reviews?id=${id}`);
 
     dispatch({
       type: productsConstant.GET_REVIEWS_SUCCESS,

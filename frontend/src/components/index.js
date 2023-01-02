@@ -43,3 +43,4 @@ export { default as AllOrders } from "./admin/AllOrders";
 export { default as UpdateOrder } from "./admin/UpdateOrder";
 export { default as UsersList } from "./admin/UsersList";
 export { default as UpdateUser } from "./admin/UpdateUser";
+export { default as Reviews } from "./admin/Reviews";

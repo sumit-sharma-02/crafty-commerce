@@ -243,7 +243,7 @@ const ProductsList = () => {
                                               {setStockStatus(product.stock)}
                                             </td>
                                             <td className="whitespace-no-wrap px-6 py-4 text-sm leading-5">
-                                              <div className="flex">
+                                              <div className="flex items-center justify-center">
                                                 <Link
                                                   to={`/admin/product/${product._id}`}
                                                   className="text-blue-500 outline-none hover:text-blue-600"
