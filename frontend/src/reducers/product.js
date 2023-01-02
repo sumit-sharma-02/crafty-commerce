@@ -205,3 +205,34 @@ export const newReviewReducer = (state = {}, action) => {
       return state;
   }
 };
+
+export const productReviewsReducer = (state = { reviews: [] }, action) => {
+  switch (action.type) {
+    case productsConstant.GET_REVIEWS_REQUEST:
+      return {
+        ...state,
+        loading: true,
+      };
+
+    case productsConstant.GET_REVIEWS_SUCCESS:
+      return {
+        loading: false,
+        reviews: action.payload,
+      };
+
+    case productsConstant.GET_REVIEWS_FAIL:
+      return {
+        ...state,
+        error: action.payload,
+      };
+
+    case productsConstant.CLEAR_ERRORS:
+      return {
+        ...state,
+        error: null,
+      };
+
+    default:
+      return state;
+  }
+};

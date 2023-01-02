@@ -179,6 +179,27 @@ export const newReview = (reviewData) => async (dispatch) => {
   }
 };
 
+// Get Product Reviews
+export const getProductReviews = (id) => async (dispatch) => {
+  try {
+    dispatch({
+      type: productsConstant.GET_REVIEWS_REQUEST,
+    });
+
+    const { data } = await axios.get(`/api/v1/admin/reviews?id=${id}`);
+
+    dispatch({
+      type: productsConstant.GET_REVIEWS_SUCCESS,
+      payload: data.reviews,
+    });
+  } catch (error) {
+    dispatch({
+      type: productsConstant.GET_REVIEWS_FAIL,
+      payload: error.response.data.error,
+    });
+  }
+};
+
 // Clear Errors
 export const clearErrors = () => async (dispatch) => {
   dispatch({

@@ -11,6 +11,7 @@ import {
   newReviewReducer,
   newProductReducer,
   productManipulationReducer,
+  productReviewsReducer,
 } from "./reducers/product";
 import {
   userAuthReducer,
@@ -64,6 +65,7 @@ const reducers = combineReducers({
   newReview: newReviewReducer,
   allUsers: allUsersReducer,
   userDetails: userDetailsReducer,
+  productReviews: productReviewsReducer,
 });
 
 const middleware = [thunk];
