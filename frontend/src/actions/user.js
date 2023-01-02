@@ -220,7 +220,7 @@ export const allUsers = () => async (dispatch) => {
       type: userConstants.ALL_USERS_REQUEST,
     });
 
-    const { data } = await axios.get("/api/v1/users");
+    const { data } = await axios.get("/api/v1/admin/users");
 
     dispatch({
       type: userConstants.ALL_USERS_SUCCESS,
