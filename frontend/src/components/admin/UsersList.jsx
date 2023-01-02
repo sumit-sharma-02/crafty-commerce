@@ -3,7 +3,12 @@ import { Dialog, Transition } from "@headlessui/react";
 import { Link, useNavigate } from "react-router-dom";
 import { MetaData, Loader, Sidebar } from "../../components";
 import { useDispatch, useSelector } from "react-redux";
-import { allUsers, clearErrors } from "../../actions/user";
+import {
+  allUsers,
+  clearErrors,
+  deleteUser,
+  getUserDetails,
+} from "../../actions/user";
 import userConstants from "../../constants/user";
 import { toast } from "react-toastify";
 
@@ -13,14 +18,16 @@ import { RiAdminLine, RiUser3Line } from "react-icons/ri";
 const UsersList = () => {
   const [isDeleteWarningOpen, setIsDeleteWarningOpen] = useState(false);
   let [deletedUserId, setDeletedUserId] = useState("");
+  let [deletedUser, setDeletedUser] = useState("");
 
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
   const { loading, error, users } = useSelector((state) => state.allUsers);
-  //   const { error: deleteUserError, isDeleted } = useSelector(
-  //     (state) => state.manipulateUser
-  //   );
+  const { error: deleteUserError, isDeleted } = useSelector(
+    (state) => state.user
+  );
+  const { user } = useSelector((state) => state.userDetails);
 
   const showSuccessToast = (message) => {
     toast.success(message, {
@@ -66,7 +73,7 @@ const UsersList = () => {
     }
   };
 
-  const closeDeleteProductWarning = () => {
+  const confirmDelete = () => {
     setIsDeleteWarningOpen(false);
     deleteUserHandler(deletedUserId);
   };
@@ -77,7 +84,9 @@ const UsersList = () => {
   };
 
   const deleteUserHandler = (userId) => {
-    // dispatch(deleteUser(userId));
+    dispatch(getUserDetails(userId));
+    setDeletedUser(user && user.name);
+    dispatch(deleteUser(userId));
   };
 
   useEffect(() => {
@@ -88,23 +97,19 @@ const UsersList = () => {
       dispatch(clearErrors());
     }
 
-    // if (deleteUserError) {
-    //   showErrorToast(deleteUserError);
-    //   dispatch(clearErrors());
-    // }
+    if (deleteUserError) {
+      showErrorToast(deleteUserError);
+      dispatch(clearErrors());
+    }
 
-    // if (isDeleted) {
-    //   showSuccessToast("The User has been deleted successfully.");
-    //   navigate("/admin/users");
-    //   dispatch({ type: userConstants.DELETE_PRODUCT_RESET });
-    // }
-  }, [
-    error,
-    // deleteUserError,
-    dispatch,
-    // isDeleted,
-    // navigate
-  ]);
+    if (isDeleted) {
+      showSuccessToast(
+        `The user (${deletedUser}) has been removed successfully.`
+      );
+      dispatch({ type: userConstants.DELETE_USER_RESET });
+      navigate("/admin/users");
+    }
+  }, [error, deleteUserError, dispatch, isDeleted, navigate, deletedUser]);
 
   return (
     <>
@@ -312,7 +317,7 @@ const UsersList = () => {
                         className="inline-flex w-1/3 justify-center rounded-md border border-transparent bg-red-600 
                       px-4 py-2 text-sm font-medium text-white outline-none transition-colors duration-300
                       ease-in-out hover:bg-red-700"
-                        onClick={() => closeDeleteProductWarning()}
+                        onClick={() => confirmDelete()}
                       >
                         Delete
                       </button>

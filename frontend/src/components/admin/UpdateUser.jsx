@@ -80,7 +80,9 @@ const UpdateUser = () => {
     }
 
     if (isUpdated) {
-      showSuccessToast("The User has been updated successfully.");
+      showSuccessToast(
+        `The user (${user && user.name}) details has been updated successfully.`
+      );
       navigate("/admin/users");
       dispatch({ type: userConstants.UPDATE_USER_RESET });
     }
@@ -89,11 +91,11 @@ const UpdateUser = () => {
       showErrorToast(error);
       dispatch(clearErrors());
     }
-  }, [error, dispatch, isUpdated, params, user, navigate, userId]);
+  }, [error, dispatch, isUpdated, params, user, navigate, userId, tempCount]);
 
   return (
     <>
-      <MetaData title="Update Order Status" />
+      <MetaData title="Update User" />
       <div className="relative flex min-h-screen">
         <Sidebar />
         {loading ? (
