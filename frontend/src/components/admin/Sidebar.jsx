@@ -23,7 +23,8 @@ const Sidebar = () => {
   useEffect(() => {
     if (
       pathname.includes("/admin/products/all") ||
-      pathname.includes("/admin/products/create")
+      pathname.includes("/admin/products/create") ||
+      pathname.includes("/admin/product/")
     ) {
       setProductsDropdown(true);
     }
@@ -160,7 +161,8 @@ const Sidebar = () => {
                   <Link
                     className={`inline-flex w-full cursor-pointer items-center text-sm font-semibold 
                     transition-colors duration-300 hover:text-primary ${
-                      pathname.includes("/admin/orders")
+                      pathname.includes("/admin/orders") ||
+                      pathname.includes("/admin/order/")
                         ? "text-primary"
                         : "text-black"
                     }`}
@@ -176,7 +178,8 @@ const Sidebar = () => {
                   <Link
                     className={`inline-flex w-full cursor-pointer items-center text-sm font-semibold 
                     transition-colors duration-300 hover:text-primary ${
-                      pathname.includes("/admin/users")
+                      pathname.includes("/admin/users") ||
+                      pathname.includes("/admin/user/")
                         ? "text-primary"
                         : "text-black"
                     }`}
@@ -190,7 +193,8 @@ const Sidebar = () => {
                   <Link
                     className={`inline-flex w-full cursor-pointer items-center text-sm font-semibold 
                     text-black transition-colors duration-300 hover:text-primary ${
-                      pathname.includes("/admin/reviews")
+                      pathname.includes("/admin/reviews") ||
+                      pathname.includes("/admin/review/")
                         ? "text-primary"
                         : "text-black"
                     }`}
