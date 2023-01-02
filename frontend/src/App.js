@@ -30,6 +30,7 @@ import {
   AllOrders,
   UpdateOrder,
   UsersList,
+  UpdateUser,
 } from "./components";
 import { loadUser } from "./actions/user";
 import store from "./store";
@@ -121,6 +122,15 @@ function App() {
             element={
               <ProtectedRoute>
                 <UsersList />
+              </ProtectedRoute>
+            }
+          ></Route>
+          <Route
+            path="/admin/user/:id"
+            isAdmin={true}
+            element={
+              <ProtectedRoute>
+                <UpdateUser />
               </ProtectedRoute>
             }
           ></Route>
