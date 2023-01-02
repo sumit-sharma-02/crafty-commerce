@@ -234,6 +234,27 @@ export const allUsers = () => async (dispatch) => {
   }
 };
 
+// Delete user - ADMIN
+export const deleteUser = (id) => async (dispatch) => {
+  try {
+    dispatch({
+      type: userConstants.DELETE_USER_REQUEST,
+    });
+
+    const { data } = await axios.delete(`/api/v1/admin/user/${id}`);
+
+    dispatch({
+      type: userConstants.DELETE_USER_SUCCESS,
+      payload: data.success,
+    });
+  } catch (error) {
+    dispatch({
+      type: userConstants.DELETE_USER_FAIL,
+      payload: error.response.data.error,
+    });
+  }
+};
+
 // Update user - ADMIN
 export const updateUser = (id, userData) => async (dispatch) => {
   try {
