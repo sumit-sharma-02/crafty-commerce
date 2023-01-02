@@ -200,6 +200,29 @@ export const getProductReviews = (id) => async (dispatch) => {
   }
 };
 
+// Delete Review
+export const deleteReview = (id, productId) => async (dispatch) => {
+  try {
+    dispatch({
+      type: productsConstant.DELETE_REVIEW_REQUEST,
+    });
+
+    const { data } = await axios.delete(
+      `/api/v1/reviews?id=${id}&productId=${productId}`
+    );
+
+    dispatch({
+      type: productsConstant.DELETE_REVIEW_SUCCESS,
+      payload: data.success,
+    });
+  } catch (error) {
+    dispatch({
+      type: productsConstant.DELETE_REVIEW_FAIL,
+      payload: error.response.data.error,
+    });
+  }
+};
+
 // Clear Errors
 export const clearErrors = () => async (dispatch) => {
   dispatch({

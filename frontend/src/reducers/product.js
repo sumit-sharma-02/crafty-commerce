@@ -237,3 +237,43 @@ export const productReviewsReducer = (state = { reviews: [] }, action) => {
       return state;
   }
 };
+
+export const reviewManipulationReducer = (state = {}, action) => {
+  switch (action.type) {
+    case productsConstant.DELETE_REVIEW_REQUEST:
+      return {
+        ...state,
+        loading: true,
+      };
+
+    case productsConstant.DELETE_REVIEW_SUCCESS:
+      return {
+        ...state,
+        loading: false,
+        isDeleted: action.payload,
+      };
+
+    case productsConstant.DELETE_REVIEW_FAIL:
+      return {
+        ...state,
+        loading: false,
+        error: action.payload,
+      };
+
+    case productsConstant.DELETE_REVIEW_RESET:
+      return {
+        ...state,
+        loading: false,
+        isDeleted: false,
+      };
+
+    case productsConstant.CLEAR_ERRORS:
+      return {
+        ...state,
+        error: null,
+      };
+
+    default:
+      return state;
+  }
+};
