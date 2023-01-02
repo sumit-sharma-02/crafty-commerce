@@ -86,6 +86,7 @@ export const userReducer = (state = {}, action) => {
     case userConstants.UPDATE_USER_RESET:
       return {
         ...state,
+        loading: false,
         isUpdated: false,
       };
 
@@ -168,6 +169,39 @@ export const allUsersReducer = (state = { users: [] }, action) => {
       };
 
     case userConstants.ALL_USERS_FAIL:
+      return {
+        ...state,
+        loading: false,
+        error: action.payload,
+      };
+
+    case userConstants.CLEAR_ERRORS:
+      return {
+        ...state,
+        error: null,
+      };
+
+    default:
+      return state;
+  }
+};
+
+export const userDetailsReducer = (state = { user: {} }, action) => {
+  switch (action.type) {
+    case userConstants.USER_DETAILS_REQUEST:
+      return {
+        ...state,
+        loading: true,
+      };
+
+    case userConstants.USER_DETAILS_SUCCESS:
+      return {
+        ...state,
+        loading: false,
+        user: action.payload,
+      };
+
+    case userConstants.USER_DETAILS_FAIL:
       return {
         ...state,
         loading: false,

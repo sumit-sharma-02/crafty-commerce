@@ -247,7 +247,7 @@ export const updateUser = (id, userData) => async (dispatch) => {
       },
     };
 
-    const { data } = await axios.post(
+    const { data } = await axios.put(
       `/api/v1/admin/user/${id}`,
       userData,
       config
@@ -260,6 +260,27 @@ export const updateUser = (id, userData) => async (dispatch) => {
   } catch (error) {
     dispatch({
       type: userConstants.UPDATE_USER_FAIL,
+      payload: error.response.data.error,
+    });
+  }
+};
+
+// Get user details - ADMIN
+export const getUserDetails = (id) => async (dispatch) => {
+  try {
+    dispatch({
+      type: userConstants.USER_DETAILS_REQUEST,
+    });
+
+    const { data } = await axios.get(`/api/v1/admin/user/${id}`);
+
+    dispatch({
+      type: userConstants.USER_DETAILS_SUCCESS,
+      payload: data.user,
+    });
+  } catch (error) {
+    dispatch({
+      type: userConstants.USER_DETAILS_FAIL,
       payload: error.response.data.error,
     });
   }
