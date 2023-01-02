@@ -3,7 +3,11 @@ import { Dialog, Transition } from "@headlessui/react";
 import { useNavigate } from "react-router-dom";
 import { MetaData, Loader, Sidebar } from "../../components";
 import { useDispatch, useSelector } from "react-redux";
-import { getProductReviews, clearErrors } from "../../actions/product";
+import {
+  getProductReviews,
+  clearErrors,
+  deleteReview,
+} from "../../actions/product";
 import { productsConstant } from "../../constants/product";
 import { motion } from "framer-motion";
 import { toast } from "react-toastify";
@@ -22,6 +26,8 @@ const Reviews = () => {
   const { reviews, loading, error } = useSelector(
     (state) => state.productReviews
   );
+
+  const { isDeleted } = useSelector((state) => state.reviewReducer);
 
   const showSuccessToast = (message) => {
     toast.success(message, {
@@ -122,7 +128,7 @@ const Reviews = () => {
                                     </p>
                                   </td>
                                   <td className="whitespace-no-wrap px-6 py-4 text-sm leading-5">
-                                    {review.name}
+                                    <p className="text-center">{review.name}</p>
                                   </td>
                                   <td className="whitespace-no-wrap px-6 py-4 text-sm leading-5">
                                     <div className="flex items-center justify-center">
@@ -188,31 +194,23 @@ const Reviews = () => {
     setDeletedReviewId(id);
   };
 
-  const deleteReviewHandler = (orderId) => {
-    // dispatch(deleteReview(orderId));
+  const deleteReviewHandler = (reviewId) => {
+    dispatch(deleteReview(reviewId, productId));
   };
 
   useEffect(() => {
-    // if (isDeleted) {
-    //   showSuccessToast(
-    //     `Reviews has been removed successfully.`
-    //   );
-    //   navigate("/admin/reviews");
-    //   dispatch({ type: productsConstant.DELETE_REVIEW_RESET });
-    // }
+    if (isDeleted) {
+      showSuccessToast(`Review has been removed successfully.`);
+      dispatch({ type: productsConstant.DELETE_REVIEW_RESET });
+      navigate("/admin/reviews");
+      dispatch(getProductReviews(productId));
+    }
 
     if (error) {
       showErrorToast(error);
       dispatch(clearErrors());
     }
-  }, [
-    error,
-    dispatch,
-    // isDeleted,
-    productId,
-    reviews,
-    // navigate
-  ]);
+  }, [error, dispatch, isDeleted, productId, reviews, navigate]);
 
   return (
     <>

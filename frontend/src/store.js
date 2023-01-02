@@ -12,6 +12,7 @@ import {
   newProductReducer,
   productManipulationReducer,
   productReviewsReducer,
+  reviewManipulationReducer,
 } from "./reducers/product";
 import {
   userAuthReducer,
@@ -66,6 +67,7 @@ const reducers = combineReducers({
   allUsers: allUsersReducer,
   userDetails: userDetailsReducer,
   productReviews: productReviewsReducer,
+  reviewReducer: reviewManipulationReducer,
 });
 
 const middleware = [thunk];
