@@ -117,7 +117,7 @@ const AllOrders = () => {
 
   return (
     <>
-      <MetaData title="All Products" />
+      <MetaData title="All Orders" />
       <div className="relative flex min-h-screen">
         <Sidebar />
         {loading ? (
