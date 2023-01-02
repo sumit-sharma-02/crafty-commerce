@@ -66,6 +66,7 @@ export const userReducer = (state = {}, action) => {
   switch (action.type) {
     case userConstants.UPDATE_PROFILE_REQUEST:
     case userConstants.UPDATE_PASSWORD_REQUEST:
+    case userConstants.UPDATE_USER_REQUEST:
       return {
         ...state,
         loading: true,
@@ -73,6 +74,7 @@ export const userReducer = (state = {}, action) => {
 
     case userConstants.UPDATE_PROFILE_SUCCESS:
     case userConstants.UPDATE_PASSWORD_SUCCESS:
+    case userConstants.UPDATE_USER_SUCCESS:
       return {
         ...state,
         loading: false,
@@ -81,6 +83,7 @@ export const userReducer = (state = {}, action) => {
 
     case userConstants.UPDATE_PROFILE_RESET:
     case userConstants.UPDATE_PASSWORD_RESET:
+    case userConstants.UPDATE_USER_RESET:
       return {
         ...state,
         isUpdated: false,
@@ -88,6 +91,7 @@ export const userReducer = (state = {}, action) => {
 
     case userConstants.UPDATE_PROFILE_FAIL:
     case userConstants.UPDATE_PASSWORD_FAIL:
+    case userConstants.UPDATE_USER_FAIL:
       return {
         ...state,
         loading: false,

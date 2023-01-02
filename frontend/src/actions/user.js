@@ -234,6 +234,37 @@ export const allUsers = () => async (dispatch) => {
   }
 };
 
+// Update user - ADMIN
+export const updateUser = (id, userData) => async (dispatch) => {
+  try {
+    dispatch({
+      type: userConstants.UPDATE_USER_REQUEST,
+    });
+
+    const config = {
+      headers: {
+        "Content-Type": "application/json",
+      },
+    };
+
+    const { data } = await axios.post(
+      `/api/v1/admin/user/${id}`,
+      userData,
+      config
+    );
+
+    dispatch({
+      type: userConstants.UPDATE_USER_SUCCESS,
+      payload: data.success,
+    });
+  } catch (error) {
+    dispatch({
+      type: userConstants.UPDATE_USER_FAIL,
+      payload: error.response.data.error,
+    });
+  }
+};
+
 // Clear Errors
 export const clearErrors = () => async (dispatch) => {
   dispatch({
