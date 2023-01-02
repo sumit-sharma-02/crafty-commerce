@@ -213,6 +213,27 @@ export const resetPassword = (token, passwords) => async (dispatch) => {
   }
 };
 
+// Get all users - ADMIN
+export const allUsers = () => async (dispatch) => {
+  try {
+    dispatch({
+      type: userConstants.ALL_USERS_REQUEST,
+    });
+
+    const { data } = await axios.get("/api/v1/users");
+
+    dispatch({
+      type: userConstants.ALL_USERS_SUCCESS,
+      payload: data.users,
+    });
+  } catch (error) {
+    dispatch({
+      type: userConstants.ALL_USERS_FAIL,
+      payload: error.response.data.error,
+    });
+  }
+};
+
 // Clear Errors
 export const clearErrors = () => async (dispatch) => {
   dispatch({
