@@ -540,7 +540,7 @@ const Footer = () => {
         </div>
         <div className="pt-4 text-center">
           <img
-            className="mb-4 mr-4 inline-block h-[25px] w-auto md:mr-2"
+            className="mb-3 mr-4 inline-block h-[20px] w-auto md:mr-2"
             src={Rupay}
             alt="Rupay Logo"
           />

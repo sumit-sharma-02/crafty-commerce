@@ -14,9 +14,9 @@ import { TbListDetails } from "react-icons/tb";
 
 // Images used
 import Boot1 from "../../../images/boot1.jpg";
-import Camera1 from "../../../images/camera1.jpg";
-import Shoe1 from "../../../images/shoe1.jpg";
-import Chair1 from "../../../images/chair1.jpg";
+// import Camera1 from "../../../images/camera1.jpg";
+// import Shoe1 from "../../../images/shoe1.jpg";
+// import Chair1 from "../../../images/chair1.jpg";
 import SomethingWentWrong from "../../../images/something_went_wrong-2.png";
 
 const PopularItems = () => {
@@ -26,6 +26,14 @@ const PopularItems = () => {
     false,
     false,
   ]);
+
+  const dispatch = useDispatch();
+  const {
+    loading,
+    error,
+    products,
+    // productsCount
+  } = useSelector((state) => state.products);
 
   const calculateNumOfReviews = (product) => {
     if (product.numOfReviews === 0) {
@@ -47,13 +55,93 @@ const PopularItems = () => {
     }
   };
 
-  const dispatch = useDispatch();
-  const {
-    loading,
-    error,
-    products,
-    // productsCount
-  } = useSelector((state) => state.products);
+  const addDiscount = (min, max, product) => {
+    const discount = Math.floor(Math.random() * (max - min + 1) + min);
+    return (
+      <div
+        key={product._id}
+        className="border-t-[1px] py-2 md:flex xl:items-center"
+      >
+        <div className="relative mr-4 w-full md:w-2/5">
+          <Link
+            to={`/product/${product._id}`}
+            className="h-full w-full cursor-pointer"
+          >
+            <img
+              className="mx-auto"
+              // src={product.images[0].url}
+              src={Boot1}
+              alt=""
+            />
+          </Link>
+          <div
+            className="absolute top-1 right-1 flex h-11 w-11 items-center justify-center bg-red-500 text-center 
+          text-xs text-white before:absolute before:top-0 before:left-0 
+          before:h-11 before:w-11 before:rotate-[30deg] before:bg-red-500 before:content-[''] 
+          after:absolute after:top-0 after:left-0 after:h-11 after:w-11
+          after:rotate-[60deg] after:bg-red-500 after:content-['']"
+          >
+            <span className="absolute z-10 text-[15px] font-semibold">
+              {discount}%
+            </span>
+          </div>
+        </div>
+
+        <div className="py-2">
+          <Link
+            to={`/product/${product._id}`}
+            className="block cursor-pointer overflow-hidden text-ellipsis whitespace-nowrap text-sm font-medium 
+          text-gray-800 hover:text-primary/90 sm:w-52 sm:text-base md:w-52 lg:w-52 xl:w-60"
+          >
+            {product.name}
+          </Link>
+
+          <div className="flex items-center space-x-1 py-1 2xs:flex-col xsm:flex-row ">
+            <div className="rating-outer">
+              <div
+                className="rating-inner"
+                style={{ width: `${(product.ratings / 5) * 100}%` }}
+              ></div>
+            </div>
+            <span className="ml-2 text-xs text-gray-500">
+              {calculateNumOfReviews(product)}
+            </span>
+          </div>
+
+          <div className="flex items-center justify-center xsm:justify-start">
+            <span className="mr-2 text-sm font-bold text-primary sm:text-base md:text-lg">
+              ${parseFloat(product.price).toFixed(2)}
+            </span>
+            <span className="mr-1 text-xs text-gray-500 sm:text-sm md:text-base">
+              <del>
+                $
+                {parseFloat(
+                  product.price + product.price * (discount / 100).toFixed(2)
+                ).toFixed(2)}
+              </del>
+            </span>
+            <span className="hidden text-[10px] text-orange-500 xsm:block sm:text-xs">
+              ({discount}% OFF)
+            </span>
+          </div>
+
+          <div className="mt-2 flex items-center space-x-1 xl:flex">
+            <Link
+              to={`/product/${product._id}`}
+              className="flex items-center whitespace-nowrap rounded bg-black
+            bg-opacity-60 p-2 text-xs font-medium uppercase text-white transition-all duration-300
+            ease-in-out hover:bg-primary"
+            >
+              <span className="mr-1">
+                <TbListDetails className="h-4 w-4" />
+              </span>
+              <span>View Details</span>
+            </Link>
+          </div>
+        </div>
+      </div>
+    );
+  };
 
   const showErrorToast = (message) => {
     toast.error(message, {
@@ -182,85 +270,7 @@ const PopularItems = () => {
               className="grid grid-cols-2 gap-2 sm:gap-6"
             >
               {products &&
-                products.map((product) => (
-                  <div
-                    key={product._id}
-                    className="border-t-[1px] py-2 md:flex xl:items-center"
-                  >
-                    <div className="relative mr-4 w-full md:w-2/5">
-                      <Link
-                        to={`/product/${product._id}`}
-                        className="h-full w-full cursor-pointer"
-                      >
-                        <img
-                          className="mx-auto"
-                          // src={product.images[0].url}
-                          src={Boot1}
-                          alt=""
-                        />
-                      </Link>
-                      <div
-                        className="absolute top-1 right-1 flex h-10 w-10 items-center justify-center 
-                        rounded-full bg-red-500 text-xs text-white"
-                      >
-                        <span>-53%</span>
-                      </div>
-                    </div>
-
-                    <div className="py-2">
-                      <Link
-                        to={`/product/${product._id}`}
-                        className="block cursor-pointer overflow-hidden text-ellipsis whitespace-nowrap text-sm font-medium 
-                        text-gray-800 hover:text-primary/90 sm:w-52 sm:text-base md:w-52 lg:w-52 xl:w-60"
-                      >
-                        {product.name}
-                      </Link>
-
-                      <div className="flex items-center space-x-1 py-1 2xs:flex-col xsm:flex-row ">
-                        <div className="rating-outer">
-                          <div
-                            className="rating-inner"
-                            style={{ width: `${(product.ratings / 5) * 100}%` }}
-                          ></div>
-                        </div>
-                        <span className="ml-2 text-xs text-gray-500">
-                          {calculateNumOfReviews(product)}
-                        </span>
-                      </div>
-
-                      <div className="flex items-center justify-center xsm:justify-start">
-                        <span className="mr-2 text-sm font-bold text-primary sm:text-base md:text-lg">
-                          ${parseFloat(product.price).toFixed(2)}
-                        </span>
-                        <span className="mr-1 text-xs text-gray-500 sm:text-sm md:text-base">
-                          <del>
-                            $
-                            {parseFloat(
-                              product.price + product.price * 0.53
-                            ).toFixed(2)}
-                          </del>
-                        </span>
-                        <span className="hidden text-[10px] text-orange-500 xsm:block sm:text-xs">
-                          (53% OFF)
-                        </span>
-                      </div>
-
-                      <div className="mt-2 flex items-center space-x-1 xl:flex">
-                        <Link
-                          to={`/product/${product._id}`}
-                          className="flex items-center whitespace-nowrap rounded bg-black
-                          bg-opacity-60 p-2 text-xs font-medium uppercase text-white transition-all duration-300
-                          ease-in-out hover:bg-primary"
-                        >
-                          <span className="mr-1">
-                            <TbListDetails className="h-4 w-4" />
-                          </span>
-                          <span>View Details</span>
-                        </Link>
-                      </div>
-                    </div>
-                  </div>
-                ))}
+                products.map((product) => addDiscount(30, 55, product))}
             </motion.div>
           ))}
 
@@ -303,85 +313,7 @@ const PopularItems = () => {
               className="grid grid-cols-2 gap-2 sm:gap-6"
             >
               {products &&
-                products.map((product) => (
-                  <div
-                    key={product._id}
-                    className="border-t-[1px] py-2 md:flex xl:items-center"
-                  >
-                    <div className="relative mr-4 w-full md:w-2/5">
-                      <Link
-                        to={`/product/${product._id}`}
-                        className="h-full w-full cursor-pointer"
-                      >
-                        <img
-                          className="mx-auto"
-                          // src={product.images[0].url}
-                          src={Camera1}
-                          alt=""
-                        />
-                      </Link>
-                      <div
-                        className="absolute top-1 right-1 flex h-10 w-10 items-center justify-center 
-                        rounded-full bg-red-500 text-xs text-white"
-                      >
-                        <span>-53%</span>
-                      </div>
-                    </div>
-
-                    <div className="py-2">
-                      <Link
-                        to={`/product/${product._id}`}
-                        className="block cursor-pointer overflow-hidden text-ellipsis whitespace-nowrap text-sm font-medium 
-                        text-gray-800 hover:text-primary/90 sm:w-52 sm:text-base md:w-52 lg:w-52 xl:w-60"
-                      >
-                        {product.name}
-                      </Link>
-
-                      <div className="flex items-center space-x-1 py-1 2xs:flex-col xsm:flex-row ">
-                        <div className="rating-outer">
-                          <div
-                            className="rating-inner"
-                            style={{ width: `${(product.ratings / 5) * 100}%` }}
-                          ></div>
-                        </div>
-                        <span className="ml-2 text-xs text-gray-500">
-                          {calculateNumOfReviews(product)}
-                        </span>
-                      </div>
-
-                      <div className="flex items-center justify-center xsm:justify-start">
-                        <span className="mr-2 text-sm font-bold text-primary sm:text-base md:text-lg">
-                          ${parseFloat(product.price).toFixed(2)}
-                        </span>
-                        <span className="mr-1 text-xs text-gray-500 sm:text-sm md:text-base">
-                          <del>
-                            $
-                            {parseFloat(
-                              product.price + product.price * 0.53
-                            ).toFixed(2)}
-                          </del>
-                        </span>
-                        <span className="hidden text-[10px] text-orange-500 xsm:block sm:text-xs">
-                          (53% OFF)
-                        </span>
-                      </div>
-
-                      <div className="mt-2 flex items-center space-x-1 xl:flex">
-                        <Link
-                          to={`/product/${product._id}`}
-                          className="flex items-center whitespace-nowrap rounded bg-black
-                          bg-opacity-60 p-2 text-xs font-medium uppercase text-white transition-all duration-300
-                          ease-in-out hover:bg-primary"
-                        >
-                          <span className="mr-1">
-                            <TbListDetails className="h-4 w-4" />
-                          </span>
-                          <span>View Details</span>
-                        </Link>
-                      </div>
-                    </div>
-                  </div>
-                ))}
+                products.map((product) => addDiscount(30, 55, product))}
             </motion.div>
           ))}
 
@@ -424,85 +356,7 @@ const PopularItems = () => {
               className="grid grid-cols-2 gap-2 sm:gap-6"
             >
               {products &&
-                products.map((product) => (
-                  <div
-                    key={product._id}
-                    className="border-t-[1px] py-2 md:flex xl:items-center"
-                  >
-                    <div className="relative mr-4 w-full md:w-2/5">
-                      <Link
-                        to={`/product/${product._id}`}
-                        className="h-full w-full cursor-pointer"
-                      >
-                        <img
-                          className="mx-auto"
-                          // src={product.images[0].url}
-                          src={Shoe1}
-                          alt=""
-                        />
-                      </Link>
-                      <div
-                        className="absolute top-1 right-1 flex h-10 w-10 items-center justify-center 
-                        rounded-full bg-red-500 text-xs text-white"
-                      >
-                        <span>-53%</span>
-                      </div>
-                    </div>
-
-                    <div className="py-2">
-                      <Link
-                        to={`/product/${product._id}`}
-                        className="block cursor-pointer overflow-hidden text-ellipsis whitespace-nowrap text-sm font-medium 
-                        text-gray-800 hover:text-primary/90 sm:w-52 sm:text-base md:w-52 lg:w-52 xl:w-60"
-                      >
-                        {product.name}
-                      </Link>
-
-                      <div className="flex items-center space-x-1 py-1 2xs:flex-col xsm:flex-row ">
-                        <div className="rating-outer">
-                          <div
-                            className="rating-inner"
-                            style={{ width: `${(product.ratings / 5) * 100}%` }}
-                          ></div>
-                        </div>
-                        <span className="ml-2 text-xs text-gray-500">
-                          {calculateNumOfReviews(product)}
-                        </span>
-                      </div>
-
-                      <div className="flex items-center justify-center xsm:justify-start">
-                        <span className="mr-2 text-sm font-bold text-primary sm:text-base md:text-lg">
-                          ${parseFloat(product.price).toFixed(2)}
-                        </span>
-                        <span className="mr-1 text-xs text-gray-500 sm:text-sm md:text-base">
-                          <del>
-                            $
-                            {parseFloat(
-                              product.price + product.price * 0.53
-                            ).toFixed(2)}
-                          </del>
-                        </span>
-                        <span className="hidden text-[10px] text-orange-500 xsm:block sm:text-xs">
-                          (53% OFF)
-                        </span>
-                      </div>
-
-                      <div className="mt-2 flex items-center space-x-1 xl:flex">
-                        <Link
-                          to={`/product/${product._id}`}
-                          className="flex items-center whitespace-nowrap rounded bg-black
-                          bg-opacity-60 p-2 text-xs font-medium uppercase text-white transition-all duration-300
-                          ease-in-out hover:bg-primary"
-                        >
-                          <span className="mr-1">
-                            <TbListDetails className="h-4 w-4" />
-                          </span>
-                          <span>View Details</span>
-                        </Link>
-                      </div>
-                    </div>
-                  </div>
-                ))}
+                products.map((product) => addDiscount(30, 55, product))}
             </motion.div>
           ))}
 
@@ -545,85 +399,7 @@ const PopularItems = () => {
               className="grid grid-cols-2 gap-2 sm:gap-6"
             >
               {products &&
-                products.map((product) => (
-                  <div
-                    key={product._id}
-                    className="border-t-[1px] py-2 md:flex xl:items-center"
-                  >
-                    <div className="relative mr-4 w-full md:w-2/5">
-                      <Link
-                        to={`/product/${product._id}`}
-                        className="h-full w-full cursor-pointer"
-                      >
-                        <img
-                          className="mx-auto"
-                          // src={product.images[0].url}
-                          src={Chair1}
-                          alt=""
-                        />
-                      </Link>
-                      <div
-                        className="absolute top-1 right-1 flex h-10 w-10 items-center justify-center 
-                        rounded-full bg-red-500 text-xs text-white"
-                      >
-                        <span>-53%</span>
-                      </div>
-                    </div>
-
-                    <div className="py-2">
-                      <Link
-                        to={`/product/${product._id}`}
-                        className="block cursor-pointer overflow-hidden text-ellipsis whitespace-nowrap text-sm font-medium 
-                        text-gray-800 hover:text-primary/90 sm:w-52 sm:text-base md:w-52 lg:w-52 xl:w-60"
-                      >
-                        {product.name}
-                      </Link>
-
-                      <div className="flex items-center space-x-1 py-1 2xs:flex-col xsm:flex-row ">
-                        <div className="rating-outer">
-                          <div
-                            className="rating-inner"
-                            style={{ width: `${(product.ratings / 5) * 100}%` }}
-                          ></div>
-                        </div>
-                        <span className="ml-2 text-xs text-gray-500">
-                          {calculateNumOfReviews(product)}
-                        </span>
-                      </div>
-
-                      <div className="flex items-center justify-center xsm:justify-start">
-                        <span className="mr-2 text-sm font-bold text-primary sm:text-base md:text-lg">
-                          ${parseFloat(product.price).toFixed(2)}
-                        </span>
-                        <span className="mr-1 text-xs text-gray-500 sm:text-sm md:text-base">
-                          <del>
-                            $
-                            {parseFloat(
-                              product.price + product.price * 0.53
-                            ).toFixed(2)}
-                          </del>
-                        </span>
-                        <span className="hidden text-[10px] text-orange-500 xsm:block sm:text-xs">
-                          (53% OFF)
-                        </span>
-                      </div>
-
-                      <div className="mt-2 flex items-center space-x-1 xl:flex">
-                        <Link
-                          to={`/product/${product._id}`}
-                          className="flex items-center whitespace-nowrap rounded bg-black
-                          bg-opacity-60 p-2 text-xs font-medium uppercase text-white transition-all duration-300
-                          ease-in-out hover:bg-primary"
-                        >
-                          <span className="mr-1">
-                            <TbListDetails className="h-4 w-4" />
-                          </span>
-                          <span>View Details</span>
-                        </Link>
-                      </div>
-                    </div>
-                  </div>
-                ))}
+                products.map((product) => addDiscount(30, 55, product))}
             </motion.div>
           ))}
 

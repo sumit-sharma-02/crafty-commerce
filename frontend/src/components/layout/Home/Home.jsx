@@ -5,7 +5,6 @@ import {
   PopularProducts,
   Categories,
   LimitedOffers,
-  PopularTags,
   TopScroll,
 } from "../../../components/";
 
@@ -19,8 +18,7 @@ const Home = () => {
       <main>
         <Categories />
         <section className="px-4 pt-10 sm:px-10 xl:px-24">
-          <div className="gap-8 overflow-hidden lg:grid lg:grid-cols-4">
-            <PopularTags />
+          <div className="gap-8 overflow-hidden lg:grid lg:grid-cols-3">
             <PopularProducts />
           </div>
           <div className="pt-10">
