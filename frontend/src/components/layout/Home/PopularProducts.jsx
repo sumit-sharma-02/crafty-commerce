@@ -30,17 +30,17 @@ const PopularItems = () => {
   const calculateNumOfReviews = (product) => {
     if (product.numOfReviews === 0) {
       return (
-        <span className="text-gray-500 xsm:text-xs ml-0">(No Reviews Yet)</span>
+        <span className="ml-0 text-gray-500 xsm:text-xs">(No Reviews Yet)</span>
       );
     } else if (product.numOfReviews === 1) {
       return (
-        <span className="text-gray-500 xsm:text-xs ml-0">
+        <span className="ml-0 text-gray-500 xsm:text-xs">
           ({product.numOfReviews} Review)
         </span>
       );
     } else {
       return (
-        <span className="text-gray-500 xsm:text-xs ml-0">
+        <span className="ml-0 text-gray-500 xsm:text-xs">
           ({product.numOfReviews} Reviews)
         </span>
       );
@@ -77,13 +77,13 @@ const PopularItems = () => {
 
   return (
     <div className=" lg:col-span-3">
-      <div className=" sm:flex items-center justify-between">
-        <div className="cursor-pointer font-bold border-b-2 border-primary inline-block pb-1 sm:ml-0 ml-4">
+      <div className=" items-center justify-between sm:flex">
+        <div className="ml-4 inline-block cursor-pointer border-b-2 border-primary pb-1 font-bold sm:ml-0">
           POPULAR PRODUCTS
         </div>
-        <div className="pt-2 sm:pt-0">
-          <ul className=" text-center sm:space-x-4">
-            <li className="cursor-pointer group inline-block sm:m-0 m-1">
+        <div className="pt-2 text-xs xsm:text-sm sm:pt-0 sm:text-base">
+          <ul className="text-center sm:space-x-4">
+            <li className="group m-1 inline-block cursor-pointer sm:m-0">
               <button
                 className={`hover:text-primary ${
                   popularCategory[0] ? "text-primary" : "text-gray-500"
@@ -99,10 +99,10 @@ const PopularItems = () => {
               <div
                 className={`${
                   popularCategory[0] ? "w-full" : "w-0"
-                } bg-primary duration-300 h-0.5 hover:w-full mx-auto -mb-0.5 mt-1 flex justify-center`}
+                } mx-auto -mb-0.5 mt-1 flex h-0.5 justify-center bg-primary duration-300 hover:w-full`}
               ></div>
             </li>
-            <li className="cursor-pointer group inline-block sm:m-0 m-1">
+            <li className="group m-1 inline-block cursor-pointer sm:m-0">
               <button
                 className={`hover:text-primary ${
                   popularCategory[1] ? "text-primary" : "text-gray-500"
@@ -118,10 +118,10 @@ const PopularItems = () => {
               <div
                 className={`${
                   popularCategory[1] ? "w-full" : "w-0"
-                } bg-primary duration-300 h-0.5 hover:w-full mx-auto -mb-0.5 mt-1 flex justify-center`}
+                } mx-auto -mb-0.5 mt-1 flex h-0.5 justify-center bg-primary duration-300 hover:w-full`}
               ></div>
             </li>
-            <li className="cursor-pointer group inline-block sm:m-0 m-1">
+            <li className="group m-1 inline-block cursor-pointer sm:m-0">
               <button
                 className={`hover:text-primary ${
                   popularCategory[2] ? "text-primary" : "text-gray-500"
@@ -137,10 +137,10 @@ const PopularItems = () => {
               <div
                 className={`${
                   popularCategory[2] ? "w-full" : "w-0"
-                } bg-primary duration-300 h-0.5 hover:w-full mx-auto -mb-0.5 mt-1 flex justify-center`}
+                } mx-auto -mb-0.5 mt-1 flex h-0.5 justify-center bg-primary duration-300 hover:w-full`}
               ></div>
             </li>
-            <li className="cursor-pointer group inline-block sm:m-0 m-1">
+            <li className="group m-1 inline-block cursor-pointer sm:m-0">
               <button
                 className={`hover:text-primary ${
                   popularCategory[3] ? "text-primary" : "text-gray-500"
@@ -156,14 +156,14 @@ const PopularItems = () => {
               <div
                 className={`${
                   popularCategory[3] ? "w-full" : "w-0"
-                } bg-primary duration-300 h-0.5 hover:w-full mx-auto -mb-0.5 mt-1 flex justify-center`}
+                } mx-auto -mb-0.5 mt-1 flex h-0.5 justify-center bg-primary duration-300 hover:w-full`}
               ></div>
             </li>
           </ul>
         </div>
       </div>
 
-      <div className=" border border-gray-200 rounded sm:p-5 p-2">
+      <div className="rounded border border-gray-200 p-2 sm:p-5">
         {/* Best Selling Category */}
         {popularCategory[0] &&
           !error &&
@@ -179,18 +179,18 @@ const PopularItems = () => {
                 bounce: 0.3,
                 duration: 0.4,
               }}
-              className=" grid grid-cols-2 sm:gap-6 gap-2"
+              className="grid grid-cols-2 gap-2 sm:gap-6"
             >
               {products &&
                 products.map((product) => (
                   <div
                     key={product._id}
-                    className="md:flex xl:items-center py-2 border-t-[1px]"
+                    className="border-t-[1px] py-2 md:flex xl:items-center"
                   >
-                    <div className="md:w-2/5 w-full mr-4 relative">
+                    <div className="relative mr-4 w-full md:w-2/5">
                       <Link
                         to={`/product/${product._id}`}
-                        className="w-full h-full cursor-pointer"
+                        className="h-full w-full cursor-pointer"
                       >
                         <img
                           className="mx-auto"
@@ -200,8 +200,8 @@ const PopularItems = () => {
                         />
                       </Link>
                       <div
-                        className="absolute top-1 right-1 text-xs text-white bg-red-500 h-10 w-10 
-                                    flex items-center justify-center rounded-full"
+                        className="absolute top-1 right-1 flex h-10 w-10 items-center justify-center 
+                        rounded-full bg-red-500 text-xs text-white"
                       >
                         <span>-53%</span>
                       </div>
@@ -210,28 +210,29 @@ const PopularItems = () => {
                     <div className="py-2">
                       <Link
                         to={`/product/${product._id}`}
-                        className="sm:w-52 md:w-52 lg:w-52 xl:w-60 block text-gray-800 hover:text-primary/90 cursor-pointer whitespace-nowrap overflow-hidden text-ellipsis"
+                        className="block cursor-pointer overflow-hidden text-ellipsis whitespace-nowrap text-sm font-medium 
+                        text-gray-800 hover:text-primary/90 sm:w-52 sm:text-base md:w-52 lg:w-52 xl:w-60"
                       >
                         {product.name}
                       </Link>
 
-                      <div className="flex items-center xsm:flex-row 2xs:flex-col space-x-1 py-1 ">
+                      <div className="flex items-center space-x-1 py-1 2xs:flex-col xsm:flex-row ">
                         <div className="rating-outer">
                           <div
                             className="rating-inner"
                             style={{ width: `${(product.ratings / 5) * 100}%` }}
                           ></div>
                         </div>
-                        <span className="text-gray-500 xsm:text-xs ml-2">
+                        <span className="ml-2 text-xs text-gray-500">
                           {calculateNumOfReviews(product)}
                         </span>
                       </div>
 
-                      <div className=" flex items-center">
-                        <span className=" text-primary text-lg font-bold mr-2">
+                      <div className="flex items-center justify-center xsm:justify-start">
+                        <span className="mr-2 text-sm font-bold text-primary sm:text-base md:text-lg">
                           ${parseFloat(product.price).toFixed(2)}
                         </span>
-                        <span className=" text-gray-500 xsm:text-xs mr-1">
+                        <span className="mr-1 text-xs text-gray-500 sm:text-sm md:text-base">
                           <del>
                             $
                             {parseFloat(
@@ -239,17 +240,17 @@ const PopularItems = () => {
                             ).toFixed(2)}
                           </del>
                         </span>
-                        <span className=" text-orange-500 xsm:block xsm:text-xs 2xs:hidden">
+                        <span className="hidden text-[10px] text-orange-500 xsm:block sm:text-xs">
                           (53% OFF)
                         </span>
                       </div>
 
-                      <div className="xl:flex flex items-center space-x-1 mt-2">
+                      <div className="mt-2 flex items-center space-x-1 xl:flex">
                         <Link
                           to={`/product/${product._id}`}
-                          className="flex items-center uppercase text-white hover:bg-primary
-                                      bg-black bg-opacity-60 text-xs font-medium p-2 rounded whitespace-nowrap
-                                      transition-all duration-300 ease-in-out"
+                          className="flex items-center whitespace-nowrap rounded bg-black
+                          bg-opacity-60 p-2 text-xs font-medium uppercase text-white transition-all duration-300
+                          ease-in-out hover:bg-primary"
                         >
                           <span className="mr-1">
                             <TbListDetails className="h-4 w-4" />
@@ -279,7 +280,7 @@ const PopularItems = () => {
             <img
               src={SomethingWentWrong}
               alt=""
-              className="w-[35rem] h-auto border-none"
+              className="h-auto w-[35rem] border-none"
             />
           </motion.div>
         )}
@@ -299,18 +300,18 @@ const PopularItems = () => {
                 bounce: 0.3,
                 duration: 0.4,
               }}
-              className=" grid grid-cols-2 sm:gap-6 gap-2"
+              className="grid grid-cols-2 gap-2 sm:gap-6"
             >
               {products &&
                 products.map((product) => (
                   <div
                     key={product._id}
-                    className="md:flex xl:items-center py-2 border-t-[1px]"
+                    className="border-t-[1px] py-2 md:flex xl:items-center"
                   >
-                    <div className="md:w-2/5 w-full mr-4 relative">
+                    <div className="relative mr-4 w-full md:w-2/5">
                       <Link
                         to={`/product/${product._id}`}
-                        className="w-full h-full cursor-pointer"
+                        className="h-full w-full cursor-pointer"
                       >
                         <img
                           className="mx-auto"
@@ -320,8 +321,8 @@ const PopularItems = () => {
                         />
                       </Link>
                       <div
-                        className="absolute top-1 right-1 text-xs text-white bg-red-500 h-10 w-10 
-                                    flex items-center justify-center rounded-full"
+                        className="absolute top-1 right-1 flex h-10 w-10 items-center justify-center 
+                        rounded-full bg-red-500 text-xs text-white"
                       >
                         <span>-53%</span>
                       </div>
@@ -330,29 +331,29 @@ const PopularItems = () => {
                     <div className="py-2">
                       <Link
                         to={`/product/${product._id}`}
-                        className="sm:w-52 md:w-52 lg:w-52 xl:w-60 block text-gray-800 hover:text-primary/90 cursor-pointer whitespace-nowrap overflow-hidden text-ellipsis"
+                        className="block cursor-pointer overflow-hidden text-ellipsis whitespace-nowrap text-sm font-medium 
+                        text-gray-800 hover:text-primary/90 sm:w-52 sm:text-base md:w-52 lg:w-52 xl:w-60"
                       >
                         {product.name}
                       </Link>
 
-                      <div className="flex items-center xsm:flex-row 2xs:flex-col space-x-1 py-1 ">
+                      <div className="flex items-center space-x-1 py-1 2xs:flex-col xsm:flex-row ">
                         <div className="rating-outer">
                           <div
                             className="rating-inner"
                             style={{ width: `${(product.ratings / 5) * 100}%` }}
                           ></div>
                         </div>
-                        <span className="text-gray-500 xsm:text-xs ml-2">
-                          ({product.numOfReviews}{" "}
-                          {product.numOfReviews < 2 ? "Review" : "Reviews"})
+                        <span className="ml-2 text-xs text-gray-500">
+                          {calculateNumOfReviews(product)}
                         </span>
                       </div>
 
-                      <div className=" flex items-center">
-                        <span className=" text-primary text-lg font-bold mr-2">
+                      <div className="flex items-center justify-center xsm:justify-start">
+                        <span className="mr-2 text-sm font-bold text-primary sm:text-base md:text-lg">
                           ${parseFloat(product.price).toFixed(2)}
                         </span>
-                        <span className=" text-gray-500 xsm:text-xs mr-1">
+                        <span className="mr-1 text-xs text-gray-500 sm:text-sm md:text-base">
                           <del>
                             $
                             {parseFloat(
@@ -360,17 +361,17 @@ const PopularItems = () => {
                             ).toFixed(2)}
                           </del>
                         </span>
-                        <span className=" text-orange-500 xsm:block xsm:text-xs 2xs:hidden">
+                        <span className="hidden text-[10px] text-orange-500 xsm:block sm:text-xs">
                           (53% OFF)
                         </span>
                       </div>
 
-                      <div className="xl:flex flex items-center space-x-1 mt-2">
+                      <div className="mt-2 flex items-center space-x-1 xl:flex">
                         <Link
                           to={`/product/${product._id}`}
-                          className="flex items-center uppercase text-white hover:bg-primary
-                                      bg-black bg-opacity-60 text-xs font-medium p-2 rounded whitespace-nowrap
-                                      transition-all duration-300 ease-in-out"
+                          className="flex items-center whitespace-nowrap rounded bg-black
+                          bg-opacity-60 p-2 text-xs font-medium uppercase text-white transition-all duration-300
+                          ease-in-out hover:bg-primary"
                         >
                           <span className="mr-1">
                             <TbListDetails className="h-4 w-4" />
@@ -400,7 +401,7 @@ const PopularItems = () => {
             <img
               src={SomethingWentWrong}
               alt=""
-              className="w-[35rem] h-auto border-none"
+              className="h-auto w-[35rem] border-none"
             />
           </motion.div>
         )}
@@ -420,18 +421,18 @@ const PopularItems = () => {
                 bounce: 0.3,
                 duration: 0.4,
               }}
-              className=" grid grid-cols-2 sm:gap-6 gap-2"
+              className="grid grid-cols-2 gap-2 sm:gap-6"
             >
               {products &&
                 products.map((product) => (
                   <div
                     key={product._id}
-                    className="md:flex xl:items-center py-2 border-t-[1px]"
+                    className="border-t-[1px] py-2 md:flex xl:items-center"
                   >
-                    <div className="md:w-2/5 w-full mr-4 relative">
+                    <div className="relative mr-4 w-full md:w-2/5">
                       <Link
                         to={`/product/${product._id}`}
-                        className="w-full h-full cursor-pointer"
+                        className="h-full w-full cursor-pointer"
                       >
                         <img
                           className="mx-auto"
@@ -441,8 +442,8 @@ const PopularItems = () => {
                         />
                       </Link>
                       <div
-                        className="absolute top-1 right-1 text-xs text-white bg-red-500 h-10 w-10 
-                                    flex items-center justify-center rounded-full"
+                        className="absolute top-1 right-1 flex h-10 w-10 items-center justify-center 
+                        rounded-full bg-red-500 text-xs text-white"
                       >
                         <span>-53%</span>
                       </div>
@@ -451,29 +452,29 @@ const PopularItems = () => {
                     <div className="py-2">
                       <Link
                         to={`/product/${product._id}`}
-                        className="sm:w-52 md:w-52 lg:w-52 xl:w-60 block text-gray-800 hover:text-primary/90 cursor-pointer whitespace-nowrap overflow-hidden text-ellipsis"
+                        className="block cursor-pointer overflow-hidden text-ellipsis whitespace-nowrap text-sm font-medium 
+                        text-gray-800 hover:text-primary/90 sm:w-52 sm:text-base md:w-52 lg:w-52 xl:w-60"
                       >
                         {product.name}
                       </Link>
 
-                      <div className="flex items-center xsm:flex-row 2xs:flex-col space-x-1 py-1 ">
+                      <div className="flex items-center space-x-1 py-1 2xs:flex-col xsm:flex-row ">
                         <div className="rating-outer">
                           <div
                             className="rating-inner"
                             style={{ width: `${(product.ratings / 5) * 100}%` }}
                           ></div>
                         </div>
-                        <span className="text-gray-500 xsm:text-xs ml-2">
-                          ({product.numOfReviews}{" "}
-                          {product.numOfReviews < 2 ? "Review" : "Reviews"})
+                        <span className="ml-2 text-xs text-gray-500">
+                          {calculateNumOfReviews(product)}
                         </span>
                       </div>
 
-                      <div className=" flex items-center">
-                        <span className=" text-primary text-lg font-bold mr-2">
+                      <div className="flex items-center justify-center xsm:justify-start">
+                        <span className="mr-2 text-sm font-bold text-primary sm:text-base md:text-lg">
                           ${parseFloat(product.price).toFixed(2)}
                         </span>
-                        <span className=" text-gray-500 xsm:text-xs mr-1">
+                        <span className="mr-1 text-xs text-gray-500 sm:text-sm md:text-base">
                           <del>
                             $
                             {parseFloat(
@@ -481,17 +482,17 @@ const PopularItems = () => {
                             ).toFixed(2)}
                           </del>
                         </span>
-                        <span className=" text-orange-500 xsm:block xsm:text-xs 2xs:hidden">
+                        <span className="hidden text-[10px] text-orange-500 xsm:block sm:text-xs">
                           (53% OFF)
                         </span>
                       </div>
 
-                      <div className="xl:flex flex items-center space-x-1 mt-2">
+                      <div className="mt-2 flex items-center space-x-1 xl:flex">
                         <Link
                           to={`/product/${product._id}`}
-                          className="flex items-center uppercase text-white hover:bg-primary
-                                      bg-black bg-opacity-60 text-xs font-medium p-2 rounded whitespace-nowrap
-                                      transition-all duration-300 ease-in-out"
+                          className="flex items-center whitespace-nowrap rounded bg-black
+                          bg-opacity-60 p-2 text-xs font-medium uppercase text-white transition-all duration-300
+                          ease-in-out hover:bg-primary"
                         >
                           <span className="mr-1">
                             <TbListDetails className="h-4 w-4" />
@@ -521,7 +522,7 @@ const PopularItems = () => {
             <img
               src={SomethingWentWrong}
               alt=""
-              className="w-[35rem] h-auto border-none"
+              className="h-auto w-[35rem] border-none"
             />
           </motion.div>
         )}
@@ -541,18 +542,18 @@ const PopularItems = () => {
                 bounce: 0.3,
                 duration: 0.4,
               }}
-              className=" grid grid-cols-2 sm:gap-6 gap-2"
+              className="grid grid-cols-2 gap-2 sm:gap-6"
             >
               {products &&
                 products.map((product) => (
                   <div
                     key={product._id}
-                    className="md:flex xl:items-center py-2 border-t-[1px]"
+                    className="border-t-[1px] py-2 md:flex xl:items-center"
                   >
-                    <div className="md:w-2/5 w-full mr-4 relative">
+                    <div className="relative mr-4 w-full md:w-2/5">
                       <Link
                         to={`/product/${product._id}`}
-                        className="w-full h-full cursor-pointer"
+                        className="h-full w-full cursor-pointer"
                       >
                         <img
                           className="mx-auto"
@@ -562,8 +563,8 @@ const PopularItems = () => {
                         />
                       </Link>
                       <div
-                        className="absolute top-1 right-1 text-xs text-white bg-red-500 h-10 w-10 
-                                    flex items-center justify-center rounded-full"
+                        className="absolute top-1 right-1 flex h-10 w-10 items-center justify-center 
+                        rounded-full bg-red-500 text-xs text-white"
                       >
                         <span>-53%</span>
                       </div>
@@ -572,26 +573,29 @@ const PopularItems = () => {
                     <div className="py-2">
                       <Link
                         to={`/product/${product._id}`}
-                        className="sm:w-52 md:w-52 lg:w-52 xl:w-60 block text-gray-800 hover:text-primary/90 cursor-pointer whitespace-nowrap overflow-hidden text-ellipsis"
+                        className="block cursor-pointer overflow-hidden text-ellipsis whitespace-nowrap text-sm font-medium 
+                        text-gray-800 hover:text-primary/90 sm:w-52 sm:text-base md:w-52 lg:w-52 xl:w-60"
                       >
                         {product.name}
                       </Link>
 
-                      <div className="flex items-center xsm:flex-row 2xs:flex-col space-x-1 py-1 ">
+                      <div className="flex items-center space-x-1 py-1 2xs:flex-col xsm:flex-row ">
                         <div className="rating-outer">
                           <div
                             className="rating-inner"
                             style={{ width: `${(product.ratings / 5) * 100}%` }}
                           ></div>
                         </div>
-                        {calculateNumOfReviews(product)}
+                        <span className="ml-2 text-xs text-gray-500">
+                          {calculateNumOfReviews(product)}
+                        </span>
                       </div>
 
-                      <div className=" flex items-center">
-                        <span className=" text-primary text-lg font-bold mr-2">
+                      <div className="flex items-center justify-center xsm:justify-start">
+                        <span className="mr-2 text-sm font-bold text-primary sm:text-base md:text-lg">
                           ${parseFloat(product.price).toFixed(2)}
                         </span>
-                        <span className=" text-gray-500 xsm:text-xs mr-1">
+                        <span className="mr-1 text-xs text-gray-500 sm:text-sm md:text-base">
                           <del>
                             $
                             {parseFloat(
@@ -599,17 +603,17 @@ const PopularItems = () => {
                             ).toFixed(2)}
                           </del>
                         </span>
-                        <span className=" text-orange-500 xsm:block xsm:text-xs 2xs:hidden">
+                        <span className="hidden text-[10px] text-orange-500 xsm:block sm:text-xs">
                           (53% OFF)
                         </span>
                       </div>
 
-                      <div className="xl:flex flex items-center space-x-1 mt-2">
+                      <div className="mt-2 flex items-center space-x-1 xl:flex">
                         <Link
                           to={`/product/${product._id}`}
-                          className="flex items-center uppercase text-white hover:bg-primary
-                                      bg-black bg-opacity-60 text-xs font-medium p-2 rounded whitespace-nowrap
-                                      transition-all duration-300 ease-in-out"
+                          className="flex items-center whitespace-nowrap rounded bg-black
+                          bg-opacity-60 p-2 text-xs font-medium uppercase text-white transition-all duration-300
+                          ease-in-out hover:bg-primary"
                         >
                           <span className="mr-1">
                             <TbListDetails className="h-4 w-4" />
@@ -639,7 +643,7 @@ const PopularItems = () => {
             <img
               src={SomethingWentWrong}
               alt=""
-              className="w-[35rem] h-auto border-none"
+              className="h-auto w-[35rem] border-none"
             />
           </motion.div>
         )}

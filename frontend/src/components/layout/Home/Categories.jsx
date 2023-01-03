@@ -42,13 +42,13 @@ const Categories = () => {
   };
 
   return (
-    <section className="xl:px-24 sm:px-10 px-4 pt-10">
-      <div className="lg:grid lg:grid-cols-5 gap-8 sm:border rounded sm:p-5 relative fakeLoader">
+    <section className="px-4 pt-10 sm:px-10 xl:px-24">
+      <div className="fakeLoader relative gap-8 rounded sm:border sm:p-5 lg:grid lg:grid-cols-5">
         {/* Category Section for Mobiles and Tablets */}
-        <div className="lg:hidden block">
+        <div className="block lg:hidden">
           <ul>
             <motion.li
-              className="mb-6 flex items-center justify-between cursor-pointer w-full border p-2 px-4 shadow rounded-md"
+              className="mb-6 flex w-full cursor-pointer items-center justify-between rounded-md border p-2 px-4 shadow"
               onClick={toggleCategoryDropdown}
             >
               <span>
@@ -70,7 +70,7 @@ const Categories = () => {
                 ) : (
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
-                    className="h-6 w-6 transform duration-300 rotate-180"
+                    className="h-6 w-6 rotate-180 transform duration-300"
                     fill="none"
                     viewBox="0 0 24 24"
                     stroke="currentColor"
@@ -104,26 +104,26 @@ const Categories = () => {
                   duration: 0.5,
                   ease: "easeInOut",
                 }}
-                className="relative overflow-hidden max-h-[371px] ml-1"
+                className="relative ml-1 max-h-[371px] overflow-hidden"
               >
                 <li className="mb-4 ">
                   <Link
-                    className="w-full hover:text-primary flex items-center justify-between text-gray-500 text-sm"
+                    className="flex w-full items-center justify-between text-sm text-gray-500 hover:text-primary"
                     to={"/"}
                   >
                     <span>
-                      <GiClothes className="w-4 h-4 mb-1 inline-block mr-1" />{" "}
+                      <GiClothes className="mb-1 mr-1 inline-block h-4 w-4" />{" "}
                       Clothing
                     </span>
                   </Link>
                 </li>
                 <li className="mb-4">
                   <Link
-                    className="w-full hover:text-primary flex items-center justify-between text-gray-500 text-sm"
+                    className="flex w-full items-center justify-between text-sm text-gray-500 hover:text-primary"
                     to={"/"}
                   >
                     <span>
-                      <CgToolbox className="w-4 h-4 mb-1 inline-block mr-1" />{" "}
+                      <CgToolbox className="mb-1 mr-1 inline-block h-4 w-4" />{" "}
                       Gadgets{" "}
                     </span>
                   </Link>
@@ -131,12 +131,12 @@ const Categories = () => {
 
                 <li className="mb-4">
                   <Link
-                    className="w-full hover:text-primary flex items-center justify-between text-gray-500 text-sm"
+                    className="flex w-full items-center justify-between text-sm text-gray-500 hover:text-primary"
                     to={"/"}
                   >
                     <span>
                       <svg
-                        className="svg-inline--fa fa-desktop fa-w-18 w-4 h-4 mb-1 inline-block mr-1"
+                        className="svg-inline--fa fa-desktop fa-w-18 mb-1 mr-1 inline-block h-4 w-4"
                         role="img"
                         xmlns="http://www.w3.org/2000/svg"
                         viewBox="0 0 576 512"
@@ -153,23 +153,23 @@ const Categories = () => {
 
                 <li className="mb-4">
                   <Link
-                    className="w-full hover:text-primary flex items-center justify-between text-gray-500 text-sm"
+                    className="flex w-full items-center justify-between text-sm text-gray-500 hover:text-primary"
                     to={"/"}
                   >
                     <span>
-                      <FiSmartphone className="w-4 h-4 mb-1 inline-block mr-1" />{" "}
+                      <FiSmartphone className="mb-1 mr-1 inline-block h-4 w-4" />{" "}
                       Smartphones{" "}
                     </span>
                   </Link>
                 </li>
 
-                <li className="mb-4 relative ">
+                <li className="relative mb-4 ">
                   <Link
-                    className="w-full hover:text-primary flex items-center justify-between text-gray-500 text-sm"
+                    className="flex w-full items-center justify-between text-sm text-gray-500 hover:text-primary"
                     to={"/"}
                   >
                     <span>
-                      <MdLaptopMac className="w-4 h-4 mb-1 inline-block mr-1" />{" "}
+                      <MdLaptopMac className="mb-1 mr-1 inline-block h-4 w-4" />{" "}
                       Laptops
                     </span>
                   </Link>
@@ -177,12 +177,12 @@ const Categories = () => {
 
                 <li className="mb-4">
                   <Link
-                    className="w-full hover:text-primary flex items-center justify-between text-gray-500 text-sm"
+                    className="flex w-full items-center justify-between text-sm text-gray-500 hover:text-primary"
                     to={"/"}
                   >
                     <span>
                       <svg
-                        className="svg-inline--fa fa-gitlab fa-w-16 w-4 h-4 mb-1 inline-block mr-1"
+                        className="svg-inline--fa fa-gitlab fa-w-16 mb-1 mr-1 inline-block h-4 w-4"
                         role="img"
                         xmlns="http://www.w3.org/2000/svg"
                         viewBox="0 0 512 512"
@@ -199,12 +199,12 @@ const Categories = () => {
 
                 <li className="mb-4">
                   <Link
-                    className="w-full hover:text-primary flex items-center justify-between text-gray-500 text-sm"
+                    className="flex w-full items-center justify-between text-sm text-gray-500 hover:text-primary"
                     to={"/"}
                   >
                     <span>
                       <svg
-                        className="svg-inline--fa fa-gitlab fa-w-16 w-4 h-4 mb-1 inline-block mr-1"
+                        className="svg-inline--fa fa-gitlab fa-w-16 mb-1 mr-1 inline-block h-4 w-4"
                         role="img"
                         xmlns="http://www.w3.org/2000/svg"
                         viewBox="0 0 512 512"
@@ -221,12 +221,12 @@ const Categories = () => {
 
                 <li className="mb-4">
                   <Link
-                    className="w-full hover:text-primary flex items-center justify-between text-gray-500 text-sm"
+                    className="flex w-full items-center justify-between text-sm text-gray-500 hover:text-primary"
                     to={"/"}
                   >
                     <span>
                       <svg
-                        className="svg-inline--fa fa-desktop fa-w-18 w-3.5 h-3.5 mb-1 inline-block mr-2"
+                        className="svg-inline--fa fa-desktop fa-w-18 mb-1 mr-2 inline-block h-3.5 w-3.5"
                         role="img"
                         xmlns="http://www.w3.org/2000/svg"
                         viewBox="0 0 576 512"
@@ -243,12 +243,12 @@ const Categories = () => {
 
                 <li className="mb-4">
                   <Link
-                    className="w-full hover:text-primary flex items-center justify-between text-gray-500 text-sm"
+                    className="flex w-full items-center justify-between text-sm text-gray-500 hover:text-primary"
                     to={"/"}
                   >
                     <span>
                       <svg
-                        className="svg-inline--fa fa-desktop fa-w-18 w-[15px] h-[15px] mb-1 inline-block mr-2"
+                        className="svg-inline--fa fa-desktop fa-w-18 mb-1 mr-2 inline-block h-[15px] w-[15px]"
                         role="img"
                         xmlns="http://www.w3.org/2000/svg"
                         viewBox="0 0 576 512"
@@ -267,14 +267,14 @@ const Categories = () => {
           </ul>
         </div>
 
-        {/* Laptops */}
+        {/* Category Section for Laptops */}
         <div className="hidden lg:block">
           <ul>
             <li className=" mb-6 flex items-center">
               <span>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  className="h-6 w-6 transform rotate-180"
+                  className="h-6 w-6 rotate-180 transform"
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke="currentColor"
@@ -298,11 +298,11 @@ const Categories = () => {
               onMouseLeave={toggleClothingCategory}
             >
               <Link
-                className="w-full hover:text-primary flex items-center justify-between text-gray-500 text-sm"
+                className="flex w-full items-center justify-between text-sm text-gray-500 hover:text-primary"
                 to={"/"}
               >
                 <span>
-                  <GiClothes className="w-4 h-4 mb-1 inline-block mr-1" />{" "}
+                  <GiClothes className="mb-1 mr-1 inline-block h-4 w-4" />{" "}
                   Clothing
                 </span>
                 <span className="invisible xl:visible">
@@ -339,20 +339,20 @@ const Categories = () => {
                     bounce: 0.3,
                     duration: 0.6,
                   }}
-                  className="hidden xl:grid grid-cols-4 xl:w-auto w-screen absolute left-60 p-6 rounded-md shadow-xl m-20 ml-0 mt-10 top-0 bg-white pr-5 pb-0 border border-gray-100 z-50"
+                  className="absolute left-60 top-0 z-50 m-20 ml-0 mt-10 hidden w-screen grid-cols-4 rounded-md border border-gray-100 bg-white p-6 pr-5 pb-0 shadow-xl xl:grid xl:w-auto"
                 >
                   <div className=" col-span-3">
                     <div className=" grid grid-cols-3 gap-5">
                       <div>
                         <ul>
                           <li className=" border-b ">
-                            <h3 className=" text-sm pb-1 uppercase font-bold">
+                            <h3 className=" pb-1 text-sm font-bold uppercase">
                               Kids Clothings
                             </h3>
                           </li>
                           <li className=" mt-4 mb-3">
                             <Link
-                              className=" hover:text-primary text-sm text-gray-700"
+                              className=" text-sm text-gray-700 hover:text-primary"
                               to={"/"}
                             >
                               T-Shirts
@@ -360,7 +360,7 @@ const Categories = () => {
                           </li>
                           <li className="mb-3">
                             <Link
-                              className=" hover:text-primary text-sm text-gray-700"
+                              className=" text-sm text-gray-700 hover:text-primary"
                               to={"/"}
                             >
                               Shirts
@@ -368,7 +368,7 @@ const Categories = () => {
                           </li>
                           <li className="mb-3">
                             <Link
-                              className=" hover:text-primary text-sm text-gray-700"
+                              className=" text-sm text-gray-700 hover:text-primary"
                               to={"/"}
                             >
                               Shorts
@@ -376,7 +376,7 @@ const Categories = () => {
                           </li>
                           <li className="mb-3">
                             <Link
-                              className=" hover:text-primary text-sm text-gray-700"
+                              className=" text-sm text-gray-700 hover:text-primary"
                               to={"/"}
                             >
                               Jeans
@@ -384,7 +384,7 @@ const Categories = () => {
                           </li>
                           <li className="mb-3">
                             <Link
-                              className=" hover:text-primary text-sm text-gray-700"
+                              className=" text-sm text-gray-700 hover:text-primary"
                               to={"/"}
                             >
                               Trousers
@@ -396,13 +396,13 @@ const Categories = () => {
                       <div>
                         <ul>
                           <li className=" border-b ">
-                            <h3 className=" text-sm pb-1 uppercase font-bold">
+                            <h3 className=" pb-1 text-sm font-bold uppercase">
                               Men’s Clothing{" "}
                             </h3>
                           </li>
                           <li className="mb-3  mt-4">
                             <Link
-                              className=" hover:text-primary text-sm text-gray-700"
+                              className=" text-sm text-gray-700 hover:text-primary"
                               to={"/"}
                             >
                               T-Shirts
@@ -410,7 +410,7 @@ const Categories = () => {
                           </li>
                           <li className="mb-3">
                             <Link
-                              className=" hover:text-primary text-sm text-gray-700"
+                              className=" text-sm text-gray-700 hover:text-primary"
                               to={"/"}
                             >
                               Shirts
@@ -418,7 +418,7 @@ const Categories = () => {
                           </li>
                           <li className="mb-3">
                             <Link
-                              className=" hover:text-primary text-sm text-gray-700"
+                              className=" text-sm text-gray-700 hover:text-primary"
                               to={"/"}
                             >
                               Jackets
@@ -427,7 +427,7 @@ const Categories = () => {
 
                           <li className=" mb-3">
                             <Link
-                              className=" hover:text-primary text-sm text-gray-700"
+                              className=" text-sm text-gray-700 hover:text-primary"
                               to={"/"}
                             >
                               Jeans
@@ -436,7 +436,7 @@ const Categories = () => {
 
                           <li className="mb-3">
                             <Link
-                              className=" hover:text-primary text-sm text-gray-700"
+                              className=" text-sm text-gray-700 hover:text-primary"
                               to={"/"}
                             >
                               Hoodies
@@ -448,13 +448,13 @@ const Categories = () => {
                       <div>
                         <ul>
                           <li className=" border-b ">
-                            <h3 className=" text-sm pb-1 uppercase font-bold">
+                            <h3 className=" pb-1 text-sm font-bold uppercase">
                               Women’s Clothing{" "}
                             </h3>
                           </li>
                           <li className=" mt-4 mb-3">
                             <Link
-                              className=" hover:text-primary text-sm text-gray-700"
+                              className=" text-sm text-gray-700 hover:text-primary"
                               to={"/"}
                             >
                               Sarees
@@ -462,7 +462,7 @@ const Categories = () => {
                           </li>
                           <li className="mb-3">
                             <Link
-                              className=" hover:text-primary text-sm text-gray-700"
+                              className=" text-sm text-gray-700 hover:text-primary"
                               to={"/"}
                             >
                               Kurtas
@@ -470,7 +470,7 @@ const Categories = () => {
                           </li>
                           <li className="mb-3">
                             <Link
-                              className=" hover:text-primary text-sm text-gray-700"
+                              className=" text-sm text-gray-700 hover:text-primary"
                               to={"/"}
                             >
                               Tops
@@ -478,7 +478,7 @@ const Categories = () => {
                           </li>
                           <li className="mb-3">
                             <Link
-                              className=" hover:text-primary text-sm text-gray-700"
+                              className=" text-sm text-gray-700 hover:text-primary"
                               to={"/"}
                             >
                               Leggings
@@ -486,7 +486,7 @@ const Categories = () => {
                           </li>
                           <li className="mb-3">
                             <Link
-                              className=" hover:text-primary text-sm text-gray-700"
+                              className=" text-sm text-gray-700 hover:text-primary"
                               to={"/"}
                             >
                               Sweatshirts
@@ -498,13 +498,13 @@ const Categories = () => {
                       <div>
                         <ul>
                           <li className=" border-b ">
-                            <h3 className=" text-sm pb-1 uppercase font-bold">
+                            <h3 className=" pb-1 text-sm font-bold uppercase">
                               Sports{" "}
                             </h3>
                           </li>
                           <li className="mb-3  mt-4">
                             <Link
-                              className=" hover:text-primary text-sm text-gray-700"
+                              className=" text-sm text-gray-700 hover:text-primary"
                               to={"/"}
                             >
                               Sports Wear
@@ -512,7 +512,7 @@ const Categories = () => {
                           </li>
                           <li className="mb-3">
                             <Link
-                              className=" hover:text-primary text-sm text-gray-700"
+                              className=" text-sm text-gray-700 hover:text-primary"
                               to={"/"}
                             >
                               Track Pants
@@ -520,7 +520,7 @@ const Categories = () => {
                           </li>
                           <li className="mb-3">
                             <Link
-                              className=" hover:text-primary text-sm text-gray-700"
+                              className=" text-sm text-gray-700 hover:text-primary"
                               to={"/"}
                             >
                               Shorts
@@ -529,7 +529,7 @@ const Categories = () => {
 
                           <li className=" mb-3">
                             <Link
-                              className=" hover:text-primary text-sm text-gray-700"
+                              className=" text-sm text-gray-700 hover:text-primary"
                               to={"/"}
                             >
                               Bags
@@ -541,13 +541,13 @@ const Categories = () => {
                       <div>
                         <ul>
                           <li className=" border-b ">
-                            <h3 className=" text-sm pb-1 uppercase font-bold">
+                            <h3 className=" pb-1 text-sm font-bold uppercase">
                               Footwears
                             </h3>
                           </li>
                           <li className=" mt-4 mb-3">
                             <Link
-                              className=" hover:text-primary text-sm text-gray-700"
+                              className=" text-sm text-gray-700 hover:text-primary"
                               to={"/"}
                             >
                               Sneakers
@@ -555,7 +555,7 @@ const Categories = () => {
                           </li>
                           <li className="mb-3">
                             <Link
-                              className=" hover:text-primary text-sm text-gray-700"
+                              className=" text-sm text-gray-700 hover:text-primary"
                               to={"/"}
                             >
                               Formals
@@ -563,7 +563,7 @@ const Categories = () => {
                           </li>
                           <li className="mb-3">
                             <Link
-                              className=" hover:text-primary text-sm text-gray-700"
+                              className=" text-sm text-gray-700 hover:text-primary"
                               to={"/"}
                             >
                               Heels
@@ -571,7 +571,7 @@ const Categories = () => {
                           </li>
                           <li className="mb-3">
                             <Link
-                              className=" hover:text-primary text-sm text-gray-700"
+                              className=" text-sm text-gray-700 hover:text-primary"
                               to={"/"}
                             >
                               Boots
@@ -584,7 +584,7 @@ const Categories = () => {
 
                   <div>
                     <img
-                      className=" hover:opacity-80 duration-500 p-4 pr-2 pt-0"
+                      className=" p-4 pr-2 pt-0 duration-500 hover:opacity-80"
                       src={ClothingCover}
                       alt=""
                     />
@@ -599,11 +599,11 @@ const Categories = () => {
               onMouseLeave={toggleGadgetCategory}
             >
               <Link
-                className="w-full hover:text-primary flex items-center justify-between text-gray-500 text-sm"
+                className="flex w-full items-center justify-between text-sm text-gray-500 hover:text-primary"
                 to={"/"}
               >
                 <span>
-                  <CgToolbox className="w-4 h-4 mb-1 inline-block mr-1" />{" "}
+                  <CgToolbox className="mb-1 mr-1 inline-block h-4 w-4" />{" "}
                   Gadgets{" "}
                 </span>
                 <span className="invisible xl:visible">
@@ -640,18 +640,18 @@ const Categories = () => {
                     bounce: 0.3,
                     duration: 0.6,
                   }}
-                  className="hidden xl:grid grid-cols-3 gap-5 xl:w-auto w-screen absolute left-60 p-6 rounded-md shadow-xl m-20 ml-0 mt-10 top-0 bg-white pr-5 border border-gray-100 z-50"
+                  className="absolute left-60 top-0 z-50 m-20 ml-0 mt-10 hidden w-screen grid-cols-3 gap-5 rounded-md border border-gray-100 bg-white p-6 pr-5 shadow-xl xl:grid xl:w-auto"
                 >
                   <div>
                     <ul>
                       <li className=" border-b ">
-                        <h3 className=" text-sm pb-1 uppercase font-bold">
+                        <h3 className=" pb-1 text-sm font-bold uppercase">
                           Home Gadgets
                         </h3>
                       </li>
                       <li className=" mt-4 mb-3">
                         <Link
-                          className=" hover:text-primary text-sm text-gray-700"
+                          className=" text-sm text-gray-700 hover:text-primary"
                           to={"/"}
                         >
                           Home Theater
@@ -659,7 +659,7 @@ const Categories = () => {
                       </li>
                       <li className="mb-3">
                         <Link
-                          className=" hover:text-primary text-sm text-gray-700"
+                          className=" text-sm text-gray-700 hover:text-primary"
                           to={"/"}
                         >
                           Kitchen
@@ -667,7 +667,7 @@ const Categories = () => {
                       </li>
                       <li className="mb-3">
                         <Link
-                          className=" hover:text-primary text-sm text-gray-700"
+                          className=" text-sm text-gray-700 hover:text-primary"
                           to={"/"}
                         >
                           Cooking
@@ -675,7 +675,7 @@ const Categories = () => {
                       </li>
                       <li className="mb-3">
                         <Link
-                          className=" hover:text-primary text-sm text-gray-700"
+                          className=" text-sm text-gray-700 hover:text-primary"
                           to={"/"}
                         >
                           Drinking
@@ -687,13 +687,13 @@ const Categories = () => {
                   <div>
                     <ul>
                       <li className=" border-b ">
-                        <h3 className=" text-sm pb-1 uppercase font-bold">
+                        <h3 className=" pb-1 text-sm font-bold uppercase">
                           Electronic Gadgets{" "}
                         </h3>
                       </li>
                       <li className="mb-3  mt-4">
                         <Link
-                          className=" hover:text-primary text-sm text-gray-700"
+                          className=" text-sm text-gray-700 hover:text-primary"
                           to={"/"}
                         >
                           Power Generator
@@ -701,7 +701,7 @@ const Categories = () => {
                       </li>
                       <li className="mb-3">
                         <Link
-                          className=" hover:text-primary text-sm text-gray-700"
+                          className=" text-sm text-gray-700 hover:text-primary"
                           to={"/"}
                         >
                           Remote Control
@@ -709,7 +709,7 @@ const Categories = () => {
                       </li>
                       <li className="mb-3">
                         <Link
-                          className=" hover:text-primary text-sm text-gray-700"
+                          className=" text-sm text-gray-700 hover:text-primary"
                           to={"/"}
                         >
                           Audio / Video
@@ -721,13 +721,13 @@ const Categories = () => {
                   <div>
                     <ul>
                       <li className=" border-b ">
-                        <h3 className=" text-sm pb-1 uppercase font-bold">
+                        <h3 className=" pb-1 text-sm font-bold uppercase">
                           Other Gadgets
                         </h3>
                       </li>
                       <li className=" mt-4 mb-3">
                         <Link
-                          className=" hover:text-primary text-sm text-gray-700"
+                          className=" text-sm text-gray-700 hover:text-primary"
                           to={"/"}
                         >
                           Senior / Elders
@@ -735,7 +735,7 @@ const Categories = () => {
                       </li>
                       <li className="mb-3">
                         <Link
-                          className=" hover:text-primary text-sm text-gray-700"
+                          className=" text-sm text-gray-700 hover:text-primary"
                           to={"/"}
                         >
                           Parents
@@ -743,7 +743,7 @@ const Categories = () => {
                       </li>
                       <li className="mb-3">
                         <Link
-                          className=" hover:text-primary text-sm text-gray-700"
+                          className=" text-sm text-gray-700 hover:text-primary"
                           to={"/"}
                         >
                           Pets
@@ -754,7 +754,7 @@ const Categories = () => {
 
                   <div className=" col-span-3">
                     <img
-                      className=" hover:opacity-80 duration-500 w-full"
+                      className=" w-full duration-500 hover:opacity-80"
                       src={GadgetsCover}
                       alt=""
                     />
@@ -765,12 +765,12 @@ const Categories = () => {
 
             <li className="mb-4">
               <Link
-                className="w-full hover:text-primary flex items-center justify-between text-gray-500 text-sm"
+                className="flex w-full items-center justify-between text-sm text-gray-500 hover:text-primary"
                 to={"/"}
               >
                 <span>
                   <svg
-                    className="svg-inline--fa fa-desktop fa-w-18 w-4 h-4 mb-1 inline-block mr-1"
+                    className="svg-inline--fa fa-desktop fa-w-18 mb-1 mr-1 inline-block h-4 w-4"
                     role="img"
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 576 512"
@@ -787,11 +787,11 @@ const Categories = () => {
 
             <li className="mb-4">
               <Link
-                className="w-full hover:text-primary flex items-center justify-between text-gray-500 text-sm"
+                className="flex w-full items-center justify-between text-sm text-gray-500 hover:text-primary"
                 to={"/"}
               >
                 <span>
-                  <FiSmartphone className="w-4 h-4 mb-1 inline-block mr-1" />{" "}
+                  <FiSmartphone className="mb-1 mr-1 inline-block h-4 w-4" />{" "}
                   Smartphones{" "}
                 </span>
               </Link>
@@ -799,24 +799,24 @@ const Categories = () => {
 
             <li className="mb-4">
               <Link
-                className="w-full hover:text-primary flex items-center justify-between text-gray-500 text-sm"
+                className="flex w-full items-center justify-between text-sm text-gray-500 hover:text-primary"
                 to={"/"}
               >
                 <span>
-                  <MdLaptopMac className="w-4 h-4 mb-1 inline-block mr-1" />{" "}
+                  <MdLaptopMac className="mb-1 mr-1 inline-block h-4 w-4" />{" "}
                   Laptops{" "}
                 </span>
               </Link>
             </li>
 
-            <li className="mb-4 relative ">
+            <li className="relative mb-4 ">
               <Link
-                className="w-full hover:text-primary flex items-center justify-between text-gray-500 text-sm"
+                className="flex w-full items-center justify-between text-sm text-gray-500 hover:text-primary"
                 to={"/"}
               >
                 <span>
                   <svg
-                    className="svg-inline--fa fa-gitlab fa-w-16 w-4 h-4 mb-1 inline-block mr-1"
+                    className="svg-inline--fa fa-gitlab fa-w-16 mb-1 mr-1 inline-block h-4 w-4"
                     role="img"
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 512 512"
@@ -833,12 +833,12 @@ const Categories = () => {
 
             <li className="mb-4">
               <Link
-                className="w-full hover:text-primary flex items-center justify-between text-gray-500 text-sm"
+                className="flex w-full items-center justify-between text-sm text-gray-500 hover:text-primary"
                 to={"/"}
               >
                 <span>
                   <svg
-                    className="svg-inline--fa fa-gitlab fa-w-16 w-4 h-4 mb-1 inline-block mr-1"
+                    className="svg-inline--fa fa-gitlab fa-w-16 mb-1 mr-1 inline-block h-4 w-4"
                     role="img"
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 512 512"
@@ -855,12 +855,12 @@ const Categories = () => {
 
             <li className="mb-4">
               <Link
-                className="w-full hover:text-primary flex items-center justify-between text-gray-500 text-sm"
+                className="flex w-full items-center justify-between text-sm text-gray-500 hover:text-primary"
                 to={"/"}
               >
                 <span>
                   <svg
-                    className="svg-inline--fa fa-desktop fa-w-18 w-3.5 h-3.5 mb-1 inline-block mr-2"
+                    className="svg-inline--fa fa-desktop fa-w-18 mb-1 mr-2 inline-block h-3.5 w-3.5"
                     role="img"
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 576 512"
@@ -877,12 +877,12 @@ const Categories = () => {
 
             <li className="mb-4">
               <Link
-                className="w-full hover:text-primary flex items-center justify-between text-gray-500 text-sm"
+                className="flex w-full items-center justify-between text-sm text-gray-500 hover:text-primary"
                 to={"/"}
               >
                 <span>
                   <svg
-                    className="svg-inline--fa fa-desktop fa-w-18 w-[15px] h-[15px] mb-1 inline-block mr-2"
+                    className="svg-inline--fa fa-desktop fa-w-18 mb-1 mr-2 inline-block h-[15px] w-[15px]"
                     role="img"
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 576 512"
@@ -898,15 +898,15 @@ const Categories = () => {
             </li>
 
             <ul>
-              <ul className="relative overflow-hidden transition-all max-h-0 duration-300">
+              <ul className="relative max-h-0 overflow-hidden transition-all duration-300">
                 <li className="mb-3">
                   <Link
-                    className="w-full hover:text-primary flex items-center justify-between text-gray-500 text-sm"
+                    className="flex w-full items-center justify-between text-sm text-gray-500 hover:text-primary"
                     to={"/"}
                   >
                     <span>
                       <svg
-                        className="w-4 h-4 mb-1 inline-block mr-2"
+                        className="mb-1 mr-2 inline-block h-4 w-4"
                         xmlns="http://www.w3.org/2000/svg"
                         viewBox="0 0 576 512"
                       >
@@ -922,12 +922,12 @@ const Categories = () => {
 
                 <li className="mb-3">
                   <Link
-                    className="w-full hover:text-primary flex items-center justify-between text-gray-500 text-sm"
+                    className="flex w-full items-center justify-between text-sm text-gray-500 hover:text-primary"
                     to={"/"}
                   >
                     <span>
                       <svg
-                        className="w-4 h-4 mb-1 inline-block mr-2"
+                        className="mb-1 mr-2 inline-block h-4 w-4"
                         xmlns="http://www.w3.org/2000/svg"
                         viewBox="0 0 576 512"
                       >
@@ -943,12 +943,12 @@ const Categories = () => {
 
                 <li className="mb-3">
                   <Link
-                    className="w-full hover:text-primary flex items-center justify-between text-gray-500 text-sm"
+                    className="flex w-full items-center justify-between text-sm text-gray-500 hover:text-primary"
                     to={"/"}
                   >
                     <span>
                       <svg
-                        className="svg-inline--fa fa-desktop fa-w-18 w-4 h-4 mb-1 inline-block mr-1"
+                        className="svg-inline--fa fa-desktop fa-w-18 mb-1 mr-1 inline-block h-4 w-4"
                         role="img"
                         xmlns="http://www.w3.org/2000/svg"
                         viewBox="0 0 576 512"
@@ -995,11 +995,11 @@ const Categories = () => {
           </Swiper>
         </div>
       </div>
-      <div className=" lg:grid hidden grid-cols-4  divide-x  divide-gray-200 border rounded mt-6 p-4 px-0">
+      <div className=" mt-6 hidden grid-cols-4  divide-x  divide-gray-200 rounded border p-4 px-0 lg:grid">
         <div className=" flex items-center justify-center p-1">
           <span>
             <svg
-              className="svg-inline--fa fa-file-alt fa-w-12 w-8 h-8 mr-4 text-primary"
+              className="svg-inline--fa fa-file-alt fa-w-12 mr-4 h-8 w-8 text-primary"
               role="img"
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 384 512"
@@ -1011,13 +1011,10 @@ const Categories = () => {
             </svg>
           </span>
           <div>
-            <Link
-              to={"/"}
-              className=" uppercase text-gray-500 font-bold hover:text-primary"
-            >
+            <div className="font-bold uppercase text-gray-500">
               FREE DELIVERY
-            </Link>
-            <h5 className="text-gray-400 text-sm">On order over $49.86</h5>
+            </div>
+            <h5 className="text-sm text-gray-400">On order over $49.86</h5>
           </div>
         </div>
 
@@ -1026,7 +1023,7 @@ const Categories = () => {
             <svg
               aria-hidden="true"
               focusable="false"
-              className="svg-inline--fa fa-shield-alt fa-w-16  w-8 h-8 mr-4 text-primary"
+              className="svg-inline--fa fa-shield-alt fa-w-16  mr-4 h-8 w-8 text-primary"
               role="img"
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 512 512"
@@ -1038,20 +1035,17 @@ const Categories = () => {
             </svg>
           </span>
           <div>
-            <Link
-              to={"/"}
-              className=" uppercase text-gray-500 font-bold hover:text-primary"
-            >
+            <div className="font-bold uppercase text-gray-500">
               Order protecttion
-            </Link>
-            <h5 className="text-gray-400 text-sm">Secured information</h5>
+            </div>
+            <h5 className="text-sm text-gray-400">Secured information</h5>
           </div>
         </div>
 
         <div className=" flex items-center justify-center p-1">
           <span>
             <svg
-              className="svg-inline--fa fa-gift fa-w-16 w-8 h-8 mr-4 text-primary"
+              className="svg-inline--fa fa-gift fa-w-16 mr-4 h-8 w-8 text-primary"
               role="img"
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 512 512"
@@ -1063,20 +1057,17 @@ const Categories = () => {
             </svg>
           </span>
           <div>
-            <Link
-              to={"/"}
-              className=" uppercase text-gray-500 font-bold hover:text-primary"
-            >
+            <div className="font-bold uppercase text-gray-500">
               Promotion gift
-            </Link>
-            <h5 className="text-gray-400 text-sm">Special offers!</h5>
+            </div>
+            <h5 className="text-sm text-gray-400">Special offers!</h5>
           </div>
         </div>
 
         <div className=" flex items-center justify-center p-1">
           <span>
             <svg
-              className="svg-inline--fa fa-money-bill-alt fa-w-20 w-10 h-10 mr-4 text-primary"
+              className="svg-inline--fa fa-money-bill-alt fa-w-20 mr-4 h-10 w-10 text-primary"
               role="img"
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 640 512"
@@ -1088,13 +1079,8 @@ const Categories = () => {
             </svg>
           </span>
           <div>
-            <Link
-              to={"/"}
-              className=" uppercase text-gray-500 font-bold hover:text-primary"
-            >
-              Money back
-            </Link>
-            <h5 className="text-gray-400 text-sm">Return over 30 days</h5>
+            <div className="font-bold uppercase text-gray-500">Money back</div>
+            <h5 className="text-sm text-gray-400">Return over 30 days</h5>
           </div>
         </div>
       </div>
