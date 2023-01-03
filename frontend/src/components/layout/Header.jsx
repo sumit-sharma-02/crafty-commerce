@@ -17,6 +17,7 @@ import { MdSpaceDashboard } from "react-icons/md";
 import Logo from "../../images/C_logo.png";
 import LogoText from "../../images/Logo_text.png";
 import Avatar from "../../images/avatar-default-icon.png";
+import WelcomeText from "../../images/Welcome_Text.gif";
 
 const Header = () => {
   const dispatch = useDispatch();
@@ -82,20 +83,24 @@ const Header = () => {
       <header>
         <div className="flex justify-between bg-gray-100 py-2 px-4 sm:px-10 xl:px-24">
           <div className="hidden sm:flex sm:items-center">
-            <p className="text-sm text-gray-600">
-              Welcome to Crafty Commerce!{" "}
+            <div className="flex text-sm">
+              <img
+                className="h-[26px] w-auto"
+                src={WelcomeText}
+                alt="Welcome Text"
+              />
               {!user && !loading && (
-                <>
-                  <Link className="mx-1 text-primary" to={"/login"}>
+                <p className="pt-[3px]">
+                  <Link className="ml-2 mr-1 text-primary" to={"/login"}>
                     Login
                   </Link>
                   <span>or</span>
                   <Link className="ml-1 text-primary" to={"/register"}>
                     Register
                   </Link>
-                </>
+                </p>
               )}
-            </p>
+            </div>
           </div>
 
           <div className="flex w-full items-center justify-between divide-gray-300 text-sm text-gray-600 sm:justify-end md:w-auto">
