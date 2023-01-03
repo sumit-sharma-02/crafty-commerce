@@ -14,7 +14,8 @@ import { TfiReceipt } from "react-icons/tfi";
 import { MdSpaceDashboard } from "react-icons/md";
 
 // Image used
-import Logo from "../../images/logo.png";
+import Logo from "../../images/C_logo.png";
+import LogoText from "../../images/Logo_text.png";
 import Avatar from "../../images/avatar-default-icon.png";
 
 const Header = () => {
@@ -267,8 +268,17 @@ const Header = () => {
 
         <div className="flex w-full items-center justify-between py-6 px-4 sm:px-10 xl:px-24">
           <div className="h-max w-[250px]">
-            <Link to={"/"}>
-              <img src={Logo} alt="Crafty Commerce Logo" />
+            <Link to={"/"} className="flex w-max items-center">
+              <img
+                src={Logo}
+                className="h-12 w-12"
+                alt="Crafty Commerce Logo"
+              />
+              <img
+                src={LogoText}
+                className="h-11 w-auto"
+                alt="Crafty Commerce Logo"
+              />
             </Link>
           </div>
 
@@ -301,7 +311,7 @@ const Header = () => {
           </div>
         </div>
 
-        <div className="h-25 flex items-center justify-between bg-primary px-4 sm:px-10 xl:px-24">
+        <div className="flex items-center justify-between bg-primary px-4 sm:px-10 xl:px-24">
           <div className="h-full">
             <button
               className="inline-block h-full rounded bg-primaryDarkShade p-2 lg:hidden"
@@ -458,23 +468,23 @@ const Header = () => {
               </>
             )}
             <ul className="hidden h-full items-center text-sm font-bold text-white lg:flex">
-              <li className="h-full">
+              <li className="relative">
                 <Link
-                  className="relative p-[11px] after:absolute after:bottom-0 after:left-0 after:h-[4px] 
-                after:w-full after:origin-bottom-right after:scale-x-0 after:bg-secondary after:transition-transform
-                after:duration-200 after:ease-out after:content-[''] hover:after:origin-bottom-left
-                hover:after:scale-x-100"
+                  className="relative p-3 after:absolute after:bottom-0 after:left-0 after:h-[4px] 
+                  after:w-full after:origin-bottom-right after:scale-x-0 after:bg-secondary after:transition-transform
+                  after:duration-200 after:ease-out after:content-[''] hover:after:origin-bottom-left
+                  hover:after:scale-x-100"
                   to={"/"}
                 >
                   HOME
                 </Link>
               </li>
-              <li className=" relative">
+              <li className="relative">
                 <Link
-                  className="relative p-[11px] after:absolute after:bottom-0 after:left-0 after:h-[4px] 
-                after:w-full after:origin-bottom-right after:scale-x-0 after:bg-secondary after:transition-transform
-                after:duration-200 after:ease-out after:content-[''] hover:after:origin-bottom-left
-                hover:after:scale-x-100"
+                  className="relative p-3 after:absolute after:bottom-0 after:left-0 after:h-[4px] 
+                  after:w-full after:origin-bottom-right after:scale-x-0 after:bg-secondary after:transition-transform
+                  after:duration-200 after:ease-out after:content-[''] hover:after:origin-bottom-left
+                  hover:after:scale-x-100"
                   to={"/"}
                 >
                   NEW PRODUCTS
@@ -486,10 +496,10 @@ const Header = () => {
               </li>
               <li className=" relative">
                 <Link
-                  className="relative p-[11px] after:absolute after:bottom-0 after:left-0 after:h-[4px] 
-                after:w-full after:origin-bottom-right after:scale-x-0 after:bg-secondary after:transition-transform
-                after:duration-200 after:ease-out after:content-[''] hover:after:origin-bottom-left
-                hover:after:scale-x-100"
+                  className="relative p-3 after:absolute after:bottom-0 after:left-0 after:h-[4px] 
+                  after:w-full after:origin-bottom-right after:scale-x-0 after:bg-secondary after:transition-transform
+                  after:duration-200 after:ease-out after:content-[''] hover:after:origin-bottom-left
+                  hover:after:scale-x-100"
                   to={"/"}
                 >
                   BEST SALES
@@ -501,10 +511,10 @@ const Header = () => {
               </li>
               <li>
                 <Link
-                  className="relative p-[11px] after:absolute after:bottom-0 after:left-0 after:h-[4px] 
-                after:w-full after:origin-bottom-right after:scale-x-0 after:bg-secondary
-                after:transition-transform after:duration-200 after:ease-out after:content-['']
-                hover:after:origin-bottom-left hover:after:scale-x-100"
+                  className="relative p-3 after:absolute after:bottom-0 after:left-0 after:h-[4px] 
+                  after:w-full after:origin-bottom-right after:scale-x-0 after:bg-secondary
+                  after:transition-transform after:duration-200 after:ease-out after:content-['']
+                  hover:after:origin-bottom-left hover:after:scale-x-100"
                   to={"/products"}
                 >
                   SHOP
@@ -548,19 +558,19 @@ const Header = () => {
                     className={`absolute z-50 w-52 overflow-hidden rounded border bg-white text-sm font-normal text-black shadow`}
                   >
                     <Link
-                      className=" block border-b p-3 px-4 text-sm tracking-widest hover:bg-gray-200"
+                      className="block border-b p-3 px-4 text-sm tracking-widest transition-colors duration-300 ease-in-out hover:bg-gray-200"
                       to={"/"}
                     >
                       Frequently Asked Questions (FAQ)
                     </Link>
                     <Link
-                      className=" block border-b p-3 px-4 text-sm tracking-widest hover:bg-gray-200"
+                      className="block border-b p-3 px-4 text-sm tracking-widest transition-colors duration-300 ease-in-out hover:bg-gray-200"
                       to={"/"}
                     >
                       Terms & conditions
                     </Link>
                     <Link
-                      className=" block p-3 px-4 text-sm tracking-widest hover:bg-gray-200"
+                      className="block p-3 px-4 text-sm tracking-widest transition-colors duration-300 ease-in-out hover:bg-gray-200"
                       to={"/"}
                     >
                       Privacy & policy
@@ -570,10 +580,10 @@ const Header = () => {
               </motion.li>
               <li>
                 <Link
-                  className="relative p-[11px] after:absolute after:bottom-0 after:left-0 after:h-[4px] 
-                after:w-full after:origin-bottom-right after:scale-x-0 after:bg-secondary after:transition-transform
-                after:duration-200 after:ease-out after:content-[''] hover:after:origin-bottom-left
-                hover:after:scale-x-100"
+                  className="relative p-3 after:absolute after:bottom-0 after:left-0 after:h-[4px] 
+                  after:w-full after:origin-bottom-right after:scale-x-0 after:bg-secondary after:transition-transform
+                  after:duration-200 after:ease-out after:content-[''] hover:after:origin-bottom-left
+                  hover:after:scale-x-100"
                   to={"/"}
                 >
                   CONTACT US
@@ -585,7 +595,7 @@ const Header = () => {
           <motion.div className="relative h-full">
             <Link
               to={"/cart"}
-              className="relative flex h-full items-center bg-primaryDarkShade p-2.5 font-bold uppercase text-white lg:justify-center lg:p-5"
+              className="relative flex h-full items-center bg-primaryDarkShade p-2.5 font-bold uppercase text-white lg:justify-center lg:p-[20px]"
             >
               <span className="h-full lg:absolute lg:flex lg:items-center lg:justify-center">
                 <svg
