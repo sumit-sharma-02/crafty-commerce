@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import { CountdownTimer } from "../../../components";
 
 // Icons used
 import {
@@ -14,8 +15,53 @@ import Shirt1 from "../../../images/shirt1.webp";
 import Toy1 from "../../../images/toy1.webp";
 import Banner2 from "../../../images/banner2.webp";
 import Banner3 from "../../../images/banner3.webp";
+import { useRef } from "react";
+
+let currentDate = new Date();
+let countDownDays = 7;
+let countDownTime = currentDate.setDate(currentDate.getDate() + countDownDays);
 
 const LimitedOffers = () => {
+  const [timerDays, setTimerDays] = useState();
+  const [timerHours, setTimerHours] = useState();
+  const [timerMinutes, setTimerMinutes] = useState();
+  const [timerSeconds, setTimerSeconds] = useState();
+
+  let timer = useRef();
+
+  const startTimer = () => {
+    const countDownDate = new Date(countDownTime).getTime();
+
+    timer.current = setInterval(() => {
+      const now = new Date().getTime();
+      const gap = countDownDate - now;
+      const days = Math.floor(gap / (1000 * 60 * 60 * 24));
+      const hours = Math.floor(
+        (gap % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+      );
+      const minutes = Math.floor((gap % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((gap % (1000 * 60)) / 1000);
+
+      if (gap < 0) {
+        //Stop Timer
+        clearInterval(timer.current);
+      } else {
+        //Set Timer
+        setTimerDays(days);
+        setTimerHours(hours);
+        setTimerMinutes(minutes);
+        setTimerSeconds(seconds);
+      }
+    }, 1000);
+  };
+
+  useEffect(() => {
+    startTimer();
+    return () => {
+      clearInterval(timer.current);
+    };
+  });
+
   return (
     <section className="px-4 pt-10 sm:px-10 xl:px-24">
       <div>
@@ -50,8 +96,8 @@ const LimitedOffers = () => {
               Cillum Ham Hock
             </Link>
 
-            <div className=" my-2 flex items-center">
-              <span className=" mr-4 text-2xl font-bold text-primary">
+            <div className="my-2 flex items-center">
+              <span className="mr-4 text-2xl font-bold text-primary">
                 £360.00
               </span>
             </div>
@@ -65,57 +111,20 @@ const LimitedOffers = () => {
               </span>
             </div>
 
-            <div className="flex items-center justify-between xl:-ml-7">
-              <div className=" mr-4 hidden xl:block">
+            <div className="flex flex-col items-start">
+              <div className="mr-4 hidden xl:block">
                 <h4 className="whitespace-nowrap text-2xl font-bold tracking-tighter">
                   Hurry Up!
                 </h4>
                 <h5 className="whitespace-nowrap text-sm"> Offer ends in:</h5>
               </div>
 
-              <div className=" mt-5" id="countdown">
-                <ul className="flex items-center">
-                  <li className=" mr-4 text-center">
-                    <span
-                      className="flex h-10 w-10 items-center justify-center rounded-full bg-gray-200 text-base font-bold text-gray-600"
-                      id="days"
-                    ></span>
-                    <h5 className=" my-2 text-xs uppercase text-gray-400">
-                      days
-                    </h5>
-                  </li>
-
-                  <li className=" mr-4 text-center">
-                    <span
-                      className="flex h-10 w-10 items-center justify-center rounded-full bg-gray-200 text-base font-bold text-gray-600"
-                      id="hours"
-                    ></span>
-                    <h5 className=" my-2 text-xs uppercase text-gray-400">
-                      hours
-                    </h5>
-                  </li>
-
-                  <li className=" mr-4 text-center">
-                    <span
-                      className="flex h-10 w-10 items-center justify-center rounded-full bg-gray-200 text-base font-bold text-gray-600"
-                      id="minutes"
-                    ></span>
-                    <h5 className=" my-2 text-xs uppercase text-gray-400">
-                      minutes
-                    </h5>
-                  </li>
-
-                  <li className=" mr-4 text-center">
-                    <span
-                      className="flex h-10 w-10 items-center justify-center rounded-full bg-gray-200 text-base font-bold text-gray-600"
-                      id="seconds"
-                    ></span>
-                    <h5 className=" my-2 text-xs uppercase text-gray-400">
-                      seconds
-                    </h5>
-                  </li>
-                </ul>
-              </div>
+              <CountdownTimer
+                days={timerDays}
+                hours={timerHours}
+                minutes={timerMinutes}
+                seconds={timerSeconds}
+              />
             </div>
           </div>
         </div>
@@ -177,49 +186,12 @@ const LimitedOffers = () => {
                   <h5 className="text-sm"> Offer ends in:</h5>
                 </div>
 
-                <div className=" mt-5" id="countdown">
-                  <ul className="flex items-center">
-                    <li className=" mr-4 text-center">
-                      <span
-                        className="flex h-12 w-12 items-center justify-center rounded-full bg-gray-200 text-xl font-bold text-gray-600"
-                        id="days1"
-                      ></span>
-                      <h5 className=" my-2 text-xs uppercase text-gray-400">
-                        days
-                      </h5>
-                    </li>
-
-                    <li className=" mr-4 text-center">
-                      <span
-                        className="flex h-12 w-12 items-center justify-center rounded-full bg-gray-200 text-xl font-bold text-gray-600"
-                        id="hours1"
-                      ></span>
-                      <h5 className=" my-2 text-xs uppercase text-gray-400">
-                        hours
-                      </h5>
-                    </li>
-
-                    <li className=" mr-4 text-center">
-                      <span
-                        className="flex h-12 w-12 items-center justify-center rounded-full bg-gray-200 text-xl font-bold text-gray-600"
-                        id="minutes1"
-                      ></span>
-                      <h5 className=" my-2 text-xs uppercase text-gray-400">
-                        minutes
-                      </h5>
-                    </li>
-
-                    <li className=" mr-4 text-center">
-                      <span
-                        className="flex h-12 w-12 items-center justify-center rounded-full bg-gray-200 text-xl font-bold text-gray-600"
-                        id="seconds1"
-                      ></span>
-                      <h5 className=" my-2 text-xs uppercase text-gray-400">
-                        seconds
-                      </h5>
-                    </li>
-                  </ul>
-                </div>
+                <CountdownTimer
+                  days={timerDays}
+                  hours={timerHours}
+                  minutes={timerMinutes}
+                  seconds={timerSeconds}
+                />
               </div>
             </div>
           </div>
@@ -272,50 +244,12 @@ const LimitedOffers = () => {
                   </h4>
                   <h5 className="text-sm"> Offer ends in:</h5>
                 </div>
-
-                <div className=" mt-5" id="countdown">
-                  <ul className="flex items-center">
-                    <li className=" mr-4 text-center">
-                      <span
-                        className="flex h-12 w-12 items-center justify-center rounded-full bg-gray-200 text-xl font-bold text-gray-600"
-                        id="days2"
-                      ></span>
-                      <h5 className=" my-2 text-xs uppercase text-gray-400">
-                        days
-                      </h5>
-                    </li>
-
-                    <li className=" mr-4 text-center">
-                      <span
-                        className="flex h-12 w-12 items-center justify-center rounded-full bg-gray-200 text-xl font-bold text-gray-600"
-                        id="hours2"
-                      ></span>
-                      <h5 className=" my-2 text-xs uppercase text-gray-400">
-                        hours
-                      </h5>
-                    </li>
-
-                    <li className=" mr-4 text-center">
-                      <span
-                        className="flex h-12 w-12 items-center justify-center rounded-full bg-gray-200 text-xl font-bold text-gray-600"
-                        id="minutes2"
-                      ></span>
-                      <h5 className=" my-2 text-xs uppercase text-gray-400">
-                        minutes
-                      </h5>
-                    </li>
-
-                    <li className=" mr-4 text-center">
-                      <span
-                        className="flex h-12 w-12 items-center justify-center rounded-full bg-gray-200 text-xl font-bold text-gray-600"
-                        id="seconds2"
-                      ></span>
-                      <h5 className=" my-2 text-xs uppercase text-gray-400">
-                        seconds
-                      </h5>
-                    </li>
-                  </ul>
-                </div>
+                <CountdownTimer
+                  days={timerDays}
+                  hours={timerHours}
+                  minutes={timerMinutes}
+                  seconds={timerSeconds}
+                />
               </div>
             </div>
           </div>
