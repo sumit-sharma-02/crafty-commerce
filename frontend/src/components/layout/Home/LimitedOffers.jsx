@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { CountdownTimer } from "../../../components";
+import { motion } from "framer-motion";
 
 // Icons used
 import {
@@ -22,6 +23,11 @@ let countDownDays = 7;
 let countDownTime = currentDate.setDate(currentDate.getDate() + countDownDays);
 
 const LimitedOffers = () => {
+  const [limitedProductsHover, setLimitedProductsHover] = useState([
+    false,
+    false,
+    false,
+  ]);
   const [timerDays, setTimerDays] = useState();
   const [timerHours, setTimerHours] = useState();
   const [timerMinutes, setTimerMinutes] = useState();
@@ -71,7 +77,13 @@ const LimitedOffers = () => {
       </div>
       <div className=" rounded border md:grid md:grid-cols-3">
         <div className="border-r-0 border-b border-gray-200 p-5 md:border-r md:border-b-0">
-          <div className=" relative">
+          <div
+            onMouseEnter={() => setLimitedProductsHover([true, false, false])}
+            onMouseLeave={() => setLimitedProductsHover([false, false, false])}
+            onTouchStart={() => setLimitedProductsHover([true, false, false])}
+            onTouchEnd={() => setLimitedProductsHover([false, false, false])}
+            className=" relative"
+          >
             <img className=" mx-auto h-max w-max" src={Shirt1} alt="" />
 
             <div className="absolute top-0 space-y-3">
@@ -82,7 +94,21 @@ const LimitedOffers = () => {
                 ease-in-out hover:bg-primary"
                 >
                   <AiOutlineShoppingCart className="h-4 w-4" />
-                  <span className="ml-2 duration-300">Add to Cart</span>
+                  {limitedProductsHover[0] && (
+                    <motion.span
+                      initial={{ x: -10, opacity: 0 }}
+                      animate={{ x: 0, opacity: 1 }}
+                      exit={{ x: 10, opacity: 0 }}
+                      transition={{
+                        type: "slide",
+                        duration: 0.5,
+                        ease: "easeInOut",
+                      }}
+                      className="ml-2"
+                    >
+                      Add to Cart
+                    </motion.span>
+                  )}
                 </button>
               </div>
             </div>
@@ -132,7 +158,15 @@ const LimitedOffers = () => {
         {/*  */}
         <div className="col-span-2">
           <div className="gap-4 border-b p-5 md:grid md:grid-cols-5">
-            <div className="relative col-span-2">
+            <div
+              onMouseEnter={() => setLimitedProductsHover([false, true, false])}
+              onMouseLeave={() =>
+                setLimitedProductsHover([false, false, false])
+              }
+              onTouchStart={() => setLimitedProductsHover([false, true, false])}
+              onTouchEnd={() => setLimitedProductsHover([false, false, false])}
+              className="relative col-span-2"
+            >
               <img className=" mx-auto h-max w-max" src={Toy1} alt="" />
 
               <div className=" absolute top-4 right-10 flex h-10 w-10 items-center justify-center rounded-full bg-red-500 text-xs text-white">
@@ -147,7 +181,21 @@ const LimitedOffers = () => {
                 ease-in-out hover:bg-primary"
                   >
                     <AiOutlineShoppingCart className="h-4 w-4" />
-                    <span className="ml-2 duration-300">Add to Cart</span>
+                    {limitedProductsHover[1] && (
+                      <motion.span
+                        initial={{ x: -10, opacity: 0 }}
+                        animate={{ x: 0, opacity: 1 }}
+                        exit={{ x: 10, opacity: 0 }}
+                        transition={{
+                          type: "slide",
+                          duration: 0.5,
+                          ease: "easeInOut",
+                        }}
+                        className="ml-2"
+                      >
+                        Add to Cart
+                      </motion.span>
+                    )}
                   </button>
                 </div>
               </div>
@@ -197,7 +245,15 @@ const LimitedOffers = () => {
           </div>
           {/*  */}
           <div className="gap-4 p-5 pb-0 md:grid md:grid-cols-5">
-            <div className="relative col-span-2">
+            <div
+              onMouseEnter={() => setLimitedProductsHover([false, false, true])}
+              onMouseLeave={() =>
+                setLimitedProductsHover([false, false, false])
+              }
+              onTouchStart={() => setLimitedProductsHover([false, false, true])}
+              onTouchEnd={() => setLimitedProductsHover([false, false, false])}
+              className="relative col-span-2"
+            >
               <img className=" mx-auto h-max w-max" src={Clock1} alt="" />
 
               <div className="absolute top-0 space-y-3">
@@ -208,7 +264,21 @@ const LimitedOffers = () => {
                 ease-in-out hover:bg-primary"
                   >
                     <AiOutlineShoppingCart className="h-4 w-4" />
-                    <span className="ml-2 duration-300">Add to Cart</span>
+                    {limitedProductsHover[2] && (
+                      <motion.span
+                        initial={{ x: -10, opacity: 0 }}
+                        animate={{ x: 0, opacity: 1 }}
+                        exit={{ x: 10, opacity: 0 }}
+                        transition={{
+                          type: "slide",
+                          duration: 0.5,
+                          ease: "easeInOut",
+                        }}
+                        className="ml-2"
+                      >
+                        Add to Cart
+                      </motion.span>
+                    )}
                   </button>
                 </div>
               </div>
