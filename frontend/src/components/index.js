@@ -48,3 +48,4 @@ export { default as Reviews } from "./admin/Reviews";
 export { default as CountdownTimer } from "./layout/Home/CountdownTimer";
 export { default as FAQ } from "./support/FAQ";
 export { default as TermsAndCondition } from "./support/TermsAndCondition";
+export { default as PrivacyPolicy } from "./support/PrivacyPolicy";

@@ -34,6 +34,7 @@ import {
   Reviews,
   FAQ,
   TermsAndCondition,
+  PrivacyPolicy,
 } from "./components";
 import { loadUser } from "./actions/user";
 import store from "./store";
@@ -231,8 +232,9 @@ function App() {
           <Route path="/search/:keyword" element={<AllProducts />} />
           <Route path="/product/:id" element={<Product />} />
           <Route path="/cart" element={<Cart />} />
-          <Route path="/about-us/FAQ" element={<FAQ />} />
+          <Route path="/FAQ" element={<FAQ />} />
           <Route path="/terms-and-condition" element={<TermsAndCondition />} />
+          <Route path="/privacy-policy" element={<PrivacyPolicy />} />
         </Routes>
         <Footer />
       </div>

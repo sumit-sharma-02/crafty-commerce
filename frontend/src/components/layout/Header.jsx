@@ -564,7 +564,7 @@ const Header = () => {
                   >
                     <Link
                       className="block border-b p-3 px-4 text-sm tracking-widest transition-colors duration-300 ease-in-out hover:bg-gray-200"
-                      to={"/about-us/FAQ"}
+                      to={"/FAQ"}
                     >
                       Frequently Asked Questions (FAQ)
                     </Link>
