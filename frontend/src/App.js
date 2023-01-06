@@ -32,9 +32,10 @@ import {
   UsersList,
   UpdateUser,
   Reviews,
-  FAQ,
-  TermsAndCondition,
-  PrivacyPolicy,
+  Terms,
+  Privacy,
+  Faq,
+  Contact,
 } from "./components";
 import { loadUser } from "./actions/user";
 import store from "./store";
@@ -232,9 +233,10 @@ function App() {
           <Route path="/search/:keyword" element={<AllProducts />} />
           <Route path="/product/:id" element={<Product />} />
           <Route path="/cart" element={<Cart />} />
-          <Route path="/FAQ" element={<FAQ />} />
-          <Route path="/terms-and-condition" element={<TermsAndCondition />} />
-          <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+          <Route path="/FAQ" element={<Faq />} />
+          <Route path="/terms-and-condition" element={<Terms />} />
+          <Route path="/privacy-policy" element={<Privacy />} />
+          <Route path="/contact-us" element={<Contact />} />
         </Routes>
         <Footer />
       </div>

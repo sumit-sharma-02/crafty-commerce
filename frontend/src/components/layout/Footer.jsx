@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import { toast } from "react-toastify";
 
 // Images used
 import Logo from "../../images/C_Black_Logo.png";
@@ -17,6 +18,46 @@ const Footer = () => {
     false,
     false,
   ]);
+  const [email, setEmail] = useState("");
+
+  const showSuccessToast = (message) => {
+    toast.success(message, {
+      position: "bottom-center",
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "colored",
+    });
+  };
+
+  const showErrorToast = (message) => {
+    toast.error(message, {
+      position: "bottom-center",
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "colored",
+    });
+  };
+
+  function isValidEmail(email) {
+    return /\S+@\S+\.\S+/.test(email);
+  }
+
+  const onSubmitEmail = () => {
+    if (!isValidEmail(email)) {
+      return showErrorToast("Email entered is invalid");
+    }
+    showSuccessToast(
+      `Thank you for signing up for Crafty Commerce Newsletter!`
+    );
+  };
 
   return (
     <footer>
@@ -160,7 +201,7 @@ const Footer = () => {
 
       <div className="hidden border-t py-5 px-4 sm:px-10 md:grid-cols-3 lg:grid xl:gap-4 xl:px-24">
         <div className="col-span-1 flex flex-col items-center">
-          <div className="mb-8">
+          <div className="mb-2">
             <h3 className="text-sm font-bold leading-loose">CONTACT US</h3>
             <div className="h-0.5 w-full bg-primary"></div>
           </div>
@@ -235,7 +276,7 @@ const Footer = () => {
         </div>
 
         <div className="flex flex-col items-center">
-          <div className="mb-8">
+          <div className="mb-2">
             <h3 className="text-sm font-bold leading-loose">
               CUSTOMER SUPPORT
             </h3>
@@ -357,7 +398,7 @@ const Footer = () => {
         </div>
 
         <div className="flex flex-col items-center">
-          <div className="mb-8">
+          <div className="mb-2">
             <h3 className="text-sm font-bold leading-loose">ALL CATEGORIES</h3>
             <div className="h-0.5 w-full bg-primary"></div>
           </div>
@@ -504,9 +545,11 @@ const Footer = () => {
           <input
             className="w-full rounded-l border-2 border-r-0 py-2 px-4 text-sm text-gray-600 outline-none focus:border-b-[3px] focus:border-b-secondary"
             type="email"
+            onChange={(event) => setEmail(event.target.value)}
             placeholder="Your email address"
           />
           <button
+            onClick={() => onSubmitEmail()}
             className="rounded-r bg-primary py-[10px] px-3 text-sm font-bold uppercase tracking-widest text-white
           transition-all duration-300 ease-in-out hover:bg-primaryDarkShade"
           >

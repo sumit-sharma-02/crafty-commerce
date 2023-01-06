@@ -8,7 +8,7 @@ const TermsAndCondition = () => {
       {/* <!--------------Breadcrumb-----------------------> */}
       <div className="flex items-center px-4 pt-6 text-sm font-medium uppercase text-gray-500 sm:px-10 xl:px-24">
         {/* <!--------------> */}
-        <Link className="flex items-center hover:text-yellow-500" to={"/"}>
+        <Link className="flex items-center hover:text-primary" to={"/"}>
           <span>
             <FcAbout className="mr-1 h-4 w-4" />
           </span>

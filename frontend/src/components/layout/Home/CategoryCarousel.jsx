@@ -303,7 +303,7 @@ const CategoryCarousel = () => {
                 <div className="text-center ">
                   {/* <!--Titile--> */}
                   <a
-                    className=" font-medium text-gray-800 hover:text-yellow-500"
+                    className=" font-medium text-gray-800 hover:text-primary"
                     href="catlyn-snake-pilit.html"
                   >
                     Donec et libero nunc quis facilisis odio
@@ -353,7 +353,7 @@ const CategoryCarousel = () => {
                   </div>
                   {/* <!--Price--> */}
                   <div className=" mt-3 flex items-center justify-center">
-                    <span className=" mr-4 text-xl font-bold text-yellow-500">
+                    <span className=" mr-4 text-xl font-bold text-primary">
                       £350.00
                     </span>
                     <span className=" text-gray-500">
@@ -381,7 +381,7 @@ const CategoryCarousel = () => {
                 <div className="text-center ">
                   {/* <!--Titile--> */}
                   <a
-                    className=" font-medium text-gray-800 hover:text-yellow-500"
+                    className=" font-medium text-gray-800 hover:text-primary"
                     href="catlyn-snake-pilit.html"
                   >
                     Donec et libero nunc quis facilisis odio
@@ -431,7 +431,7 @@ const CategoryCarousel = () => {
                   </div>
                   {/* <!--Price--> */}
                   <div className=" mt-3 flex items-center justify-center">
-                    <span className=" mr-4 text-xl font-bold text-yellow-500">
+                    <span className=" mr-4 text-xl font-bold text-primary">
                       £350.00
                     </span>
                     <span className=" text-gray-500">
@@ -459,7 +459,7 @@ const CategoryCarousel = () => {
                 <div className="text-center ">
                   {/* <!--Titile--> */}
                   <a
-                    className=" font-medium text-gray-800 hover:text-yellow-500"
+                    className=" font-medium text-gray-800 hover:text-primary"
                     href="catlyn-snake-pilit.html"
                   >
                     Donec et libero nunc quis facilisis odio
@@ -509,7 +509,7 @@ const CategoryCarousel = () => {
                   </div>
                   {/* <!--Price--> */}
                   <div className=" mt-3 flex items-center justify-center">
-                    <span className=" mr-4 text-xl font-bold text-yellow-500">
+                    <span className=" mr-4 text-xl font-bold text-primary">
                       £350.00
                     </span>
                     <span className=" text-gray-500">
@@ -537,7 +537,7 @@ const CategoryCarousel = () => {
                 <div className="text-center ">
                   {/* <!--Titile--> */}
                   <a
-                    className=" font-medium text-gray-800 hover:text-yellow-500"
+                    className=" font-medium text-gray-800 hover:text-primary"
                     href="catlyn-snake-pilit.html"
                   >
                     Donec et libero nunc quis facilisis odio
@@ -587,7 +587,7 @@ const CategoryCarousel = () => {
                   </div>
                   {/* <!--Price--> */}
                   <div className=" mt-3 flex items-center justify-center">
-                    <span className=" mr-4 text-xl font-bold text-yellow-500">
+                    <span className=" mr-4 text-xl font-bold text-primary">
                       £350.00
                     </span>
                     <span className=" text-gray-500">
