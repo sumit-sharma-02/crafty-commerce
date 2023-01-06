@@ -526,7 +526,7 @@ const Product = () => {
                                 </select>
                               </div> */}
                           {/* -------Color--------- */}
-                          <div className="my-4 text-gray-500">
+                          {/* <div className="my-4 text-gray-500">
                             <label>
                               Color:
                               <small className=" ml-3  text-gray-400">
@@ -534,27 +534,26 @@ const Product = () => {
                               </small>
                             </label>
                             <div className=" pt-3 ">
-                              {/* ----- */}
-                              <button className="mr-2 inline-block h-6 w-6 cursor-pointer border border-white bg-gray-400 ring-1 ring-gray-200"></button>
-                              {/* ----- */}
-                              <button className="mr-2 inline-block h-6 w-6 cursor-pointer border border-white bg-black ring-1 ring-gray-200"></button>
-                              {/* ----- */}
-                              <button className="mr-2 inline-block h-6 w-6 cursor-pointer border border-white bg-white ring-1 ring-gray-200"></button>
-                              {/* ----- */}
-                              <button className="mr-2 inline-block h-6 w-6 cursor-pointer border border-white bg-red-500 ring-1 ring-gray-200"></button>
-                              {/* ----- */}
-                              <button className="mr-2 inline-block h-6 w-6 cursor-pointer border border-white bg-yellow-500 ring-1 ring-gray-200"></button>
-                              {/* ----- */}
-                              <button className="mr-2 inline-block h-6 w-6 cursor-pointer border border-white bg-green-500 ring-1 ring-gray-200"></button>
-                              {/* ----- */}
-                              <button className="mr-2 inline-block h-6 w-6 cursor-pointer border border-white bg-blue-500 ring-1 ring-gray-200"></button>
-                              {/* ----- */}
-                              <button className="mr-2 inline-block h-6 w-6 cursor-pointer border border-white bg-purple-500 ring-1 ring-gray-200"></button>
-                              {/* ----- */}
-                              <button className="mr-2 inline-block h-6 w-6 cursor-pointer border border-white bg-pink-500 ring-1 ring-gray-200"></button>
-                              {/* ----- */}
+                              <button className="mr-2 inline-block h-6 w-6 cursor-pointer border 
+                              border-white bg-gray-400 ring-1 ring-gray-200"></button>
+                              <button className="mr-2 inline-block h-6 w-6 cursor-pointer border 
+                              border-white bg-black ring-1 ring-gray-200"></button>
+                              <button className="mr-2 inline-block h-6 w-6 cursor-pointer border 
+                              border-white bg-white ring-1 ring-gray-200"></button>
+                              <button className="mr-2 inline-block h-6 w-6 cursor-pointer border 
+                              border-white bg-red-500 ring-1 ring-gray-200"></button>
+                              <button className="mr-2 inline-block h-6 w-6 cursor-pointer border 
+                              border-white bg-yellow-500 ring-1 ring-gray-200"></button>
+                              <button className="mr-2 inline-block h-6 w-6 cursor-pointer border 
+                              border-white bg-green-500 ring-1 ring-gray-200"></button>
+                              <button className="mr-2 inline-block h-6 w-6 cursor-pointer border 
+                              border-white bg-blue-500 ring-1 ring-gray-200"></button>
+                              <button className="mr-2 inline-block h-6 w-6 cursor-pointer border 
+                              border-white bg-purple-500 ring-1 ring-gray-200"></button>
+                              <button className="mr-2 inline-block h-6 w-6 cursor-pointer border 
+                              border-white bg-pink-500 ring-1 ring-gray-200"></button>
                             </div>
-                          </div>
+                          </div> */}
                           {/* -------Quantity--------- */}
                           <div className="my-4">
                             <label className="block text-gray-500">

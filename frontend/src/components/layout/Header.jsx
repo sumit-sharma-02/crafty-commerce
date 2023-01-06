@@ -564,19 +564,19 @@ const Header = () => {
                   >
                     <Link
                       className="block border-b p-3 px-4 text-sm tracking-widest transition-colors duration-300 ease-in-out hover:bg-gray-200"
-                      to={"/"}
+                      to={"/about-us/FAQ"}
                     >
                       Frequently Asked Questions (FAQ)
                     </Link>
                     <Link
                       className="block border-b p-3 px-4 text-sm tracking-widest transition-colors duration-300 ease-in-out hover:bg-gray-200"
-                      to={"/"}
+                      to={"/terms-and-condition"}
                     >
                       Terms & conditions
                     </Link>
                     <Link
                       className="block p-3 px-4 text-sm tracking-widest transition-colors duration-300 ease-in-out hover:bg-gray-200"
-                      to={"/"}
+                      to={"/privacy-policy"}
                     >
                       Privacy & policy
                     </Link>

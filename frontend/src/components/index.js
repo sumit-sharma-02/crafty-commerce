@@ -46,3 +46,5 @@ export { default as UsersList } from "./admin/UsersList";
 export { default as UpdateUser } from "./admin/UpdateUser";
 export { default as Reviews } from "./admin/Reviews";
 export { default as CountdownTimer } from "./layout/Home/CountdownTimer";
+export { default as FAQ } from "./support/FAQ";
+export { default as TermsAndCondition } from "./support/TermsAndCondition";
