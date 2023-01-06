@@ -71,7 +71,7 @@ const LimitedOffers = () => {
   return (
     <section className="px-4 pt-10 sm:px-10 xl:px-24">
       <div>
-        <div className=" inline-block border-b-2 border-primary pb-1 font-bold">
+        <div className="inline-block border-b-2 border-primary pb-1 font-bold">
           DEALS OF THE WEEK
         </div>
       </div>
@@ -129,7 +129,7 @@ const LimitedOffers = () => {
             </div>
 
             <div>
-              <span className=" text-sm leading-loose text-gray-500">
+              <span className="text-sm leading-loose text-gray-500 line-clamp-4">
                 Nam tempus turpis at metus scelerisque placerat nulla deumantos
                 sollicitudin felis. Pellentesque diam dolor, elementum et
                 lobortis at, mollis ut risus. Sedcus faucibus cosmo sullamcorper
@@ -218,7 +218,7 @@ const LimitedOffers = () => {
               </div>
 
               <div>
-                <span className=" text-sm leading-loose text-gray-500">
+                <span className="text-sm leading-loose text-gray-500 line-clamp-4">
                   Nam tempus turpis at metus scelerisque placerat nulla
                   deumantos sollicitudin felis. Pellentesque diam dolor,
                   elementum et lobortis at, mollis ut risus. Sedcus faucibus
@@ -299,7 +299,7 @@ const LimitedOffers = () => {
               </div>
 
               <div>
-                <span className=" text-sm leading-loose text-gray-500">
+                <span className="text-sm leading-loose text-gray-500 line-clamp-4">
                   Nam tempus turpis at metus scelerisque placerat nulla
                   deumantos sollicitudin felis. Pellentesque diam dolor,
                   elementum et lobortis at, mollis ut risus. Sedcus faucibus

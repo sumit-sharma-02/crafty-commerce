@@ -11,6 +11,7 @@ import Paypal from "../../images/pay-4.webp";
 import FooterAccordion from "./FooterAccordion";
 
 const Footer = () => {
+  const currentDate = new Date();
   const [isFooterAccordionOpen, setIsFooterAccordionOpen] = useState([
     false,
     false,
@@ -517,7 +518,7 @@ const Footer = () => {
       <div className="items-center justify-center border-t py-4 px-4 text-xs text-gray-500 sm:px-10 sm:text-sm lg:flex lg:justify-between xl:px-24">
         <div className="flex items-center justify-center text-center">
           <p>
-            © 2022 Crafty Commerce Powered by{" "}
+            © {currentDate.getFullYear()} Crafty Commerce Powered by{" "}
             <a
               className=" text-primary"
               href="https://www.educative.io/answers/what-is-mern-stack"

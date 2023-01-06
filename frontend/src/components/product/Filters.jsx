@@ -1,6 +1,5 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { Link } from "react-router-dom";
 import Slider from "rc-slider";
 
 // CSS Imports
@@ -50,10 +49,6 @@ const Filters = (data) => {
           className=" p-4 text-sm text-gray-500"
         >
           {/* ------ */}
-          <div className=" mt-4">
-            <span>No filters applied</span>
-          </div>
-          {/* ------ */}
           <div className=" mt-6">
             {/* ----- */}
             <ul className=" py-4">
@@ -81,7 +76,7 @@ const Filters = (data) => {
             </ul>
           </div>
           {/* ------ */}
-          <div className="mt-8 flex items-start justify-between">
+          <div className="mt-8 mb-6 flex items-start justify-between">
             {/* ----- */}
             <div className=" flex w-max items-start justify-center py-[2px]">
               <span>Ratings: </span>
@@ -101,53 +96,6 @@ const Filters = (data) => {
                 <option value="2">2 &#xf005; & Above</option>
                 <option value="0">1 &#xf005; & Above</option>
               </select>
-            </ul>
-          </div>
-          {/* ------ */}
-          <div className=" mt-6">
-            {/* ----- */}
-            <div className=" flex w-full justify-between">
-              <span>Tags</span>
-            </div>
-            {/* ----- */}
-            <ul className=" py-4">
-              <li className=" mb-3 flex items-center">
-                <input
-                  type="checkbox"
-                  className="roundedfocus:outline-none h-4 w-4 border border-gray-300 text-gray-500"
-                />
-                <Link className=" ml-2 hover:text-primary" to={"/products"}>
-                  123 (1)
-                </Link>
-              </li>
-            </ul>
-          </div>
-          {/* ------ */}
-          <div className=" mt-6">
-            {/* ----- */}
-            <div className=" flex w-full justify-between">
-              <span>Other</span>
-            </div>
-            {/* ----- */}
-            <ul className=" py-4">
-              <li className=" mb-3 flex items-center">
-                <input
-                  type="checkbox"
-                  className="roundedfocus:outline-none h-4 w-4 border border-gray-300 text-gray-500"
-                />
-                <Link className=" ml-2 hover:text-primary" to={"/products"}>
-                  Free Shipping (16)
-                </Link>
-              </li>
-              <li className=" mb-3 flex items-center">
-                <input
-                  type="checkbox"
-                  className="roundedfocus:outline-none h-4 w-4 border border-gray-300 text-gray-500"
-                />
-                <Link className=" ml-2 hover:text-primary" to={"/products"}>
-                  In Stock (18)
-                </Link>
-              </li>
             </ul>
           </div>
         </motion.div>

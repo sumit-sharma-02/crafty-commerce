@@ -6,6 +6,7 @@ import {
   Categories,
   LimitedOffers,
   TopScroll,
+  CategoryCarousel,
 } from "../../../components/";
 
 // Image used
@@ -32,6 +33,7 @@ const Home = () => {
           </div>
         </section>
         <LimitedOffers />
+        <CategoryCarousel />
       </main>
       <TopScroll />
     </Fragment>

@@ -6,6 +6,7 @@ export { default as Categories } from "./layout/Home/Categories";
 export { default as PopularTags } from "./layout/Home/PopularTags";
 export { default as PopularProducts } from "./layout/Home/PopularProducts";
 export { default as LimitedOffers } from "./layout/Home/LimitedOffers";
+export { default as CategoryCarousel } from "./layout/Home/CategoryCarousel";
 export { default as Product } from "./product/Product";
 export { default as AllProducts } from "./product/AllProducts";
 export { default as ProductCategories } from "./product/ProductCategories";

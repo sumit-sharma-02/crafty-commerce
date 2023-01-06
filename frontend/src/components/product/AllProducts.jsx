@@ -18,7 +18,6 @@ import Pagination from "react-js-pagination";
 
 // Icons used
 import { VscChromeClose } from "react-icons/vsc";
-import { AiOutlineShoppingCart } from "react-icons/ai";
 import { MdFirstPage } from "react-icons/md";
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 import { BiLastPage } from "react-icons/bi";
@@ -36,6 +35,7 @@ import { BsChevronDown, BsChevronUp } from "react-icons/bs";
 
 const AllProducts = () => {
   const [filterAccordion, setFilterAccordion] = useState([false, true]);
+  const [viewType, setViewType] = useState([true, false]);
   const [isCategorySideBarOpen, setIsCategorySideBarOpen] = useState(false);
   const [currentPage, setCurrentPage] = useState(1);
   const [price, setPrice] = useState([1, 2000]);
@@ -101,6 +101,41 @@ const AllProducts = () => {
       progress: undefined,
       theme: "colored",
     });
+  };
+
+  const addDiscount = (min, max, product, view) => {
+    const discount = Math.floor(Math.random() * (max - min + 1) + min);
+    if (view === "block") {
+      return (
+        <>
+          <span className="mr-1 text-gray-500 xsm:text-xs">
+            <del>
+              $
+              {parseFloat(
+                product.price + product.price * (discount / 100)
+              ).toFixed(2)}
+            </del>
+          </span>
+          <span className="text-orange-500 2xs:hidden xsm:block xsm:text-xs">
+            ({discount}% OFF)
+          </span>
+        </>
+      );
+    } else {
+      return (
+        <>
+          <span className="mr-1 text-xs text-gray-500">
+            <del>
+              $
+              {parseFloat(
+                product.price + product.price * (discount / 100)
+              ).toFixed(2)}
+            </del>
+          </span>{" "}
+          <span className="text-xs text-orange-500">({discount}% OFF)</span>
+        </>
+      );
+    }
   };
 
   return (
@@ -462,7 +497,12 @@ const AllProducts = () => {
                               <p>View as: </p>
                             </div>
                             {/* ------- */}
-                            <button className="hidden rounded-sm bg-gray-600 p-1 px-3 font-medium text-white duration-300 focus:outline-none hover:bg-primary lg:block">
+                            <button
+                              onClick={() => setViewType([true, false])}
+                              className={`${
+                                viewType[0] ? "bg-primary" : "bg-gray-600"
+                              } hidden rounded-sm p-1 px-3 font-medium text-white duration-300 focus:outline-none hover:bg-primary lg:block`}
+                            >
                               <svg
                                 xmlns="http://www.w3.org/2000/svg"
                                 className="h-6 w-6"
@@ -479,7 +519,12 @@ const AllProducts = () => {
                               </svg>
                             </button>
                             {/* ------- */}
-                            <button className="inline-block rounded-sm bg-gray-600 p-1 px-3 font-medium text-white duration-300 focus:outline-none hover:bg-primary">
+                            <button
+                              onClick={() => setViewType([false, true])}
+                              className={`${
+                                viewType[1] ? "bg-primary" : "bg-gray-600"
+                              } inline-block rounded-sm p-1 px-3 font-medium text-white duration-300 focus:outline-none hover:bg-primary`}
+                            >
                               <svg
                                 xmlns="http://www.w3.org/2000/svg"
                                 className="h-6 w-6"
@@ -504,16 +549,10 @@ const AllProducts = () => {
                             {/* ------- */}
                             <select
                               className="border p-1 px-2 focus:border-gray-500 focus:outline-none"
-                              defaultValue={"featured"}
+                              defaultValue={"alphaasc"}
                             >
-                              <option value="featured">Featured Items</option>
-                              <option value="newest">Newest Items</option>
-                              <option value="bestselling">Best Selling</option>
                               <option value="alphaasc">A to Z</option>
                               <option value="alphadesc">Z to A</option>
-                              <option value="avgcustomerreview">
-                                By Review
-                              </option>
                               <option value="priceasc">Price: Ascending</option>
                               <option value="pricedesc">
                                 Price: Descending
@@ -522,90 +561,132 @@ const AllProducts = () => {
                           </div>
                         </div>
 
-                        {/* --------Grid----------- */}
-                        <div className="grid grid-cols-1 gap-10 py-10 sm:grid-cols-2 lg:grid-cols-3">
-                          {/* ---001--- */}
-                          {products &&
-                            products.map((product) => (
-                              <div
-                                key={product._id}
-                                className="bg-gray-200 bg-opacity-30 pb-4 "
-                              >
-                                {/* ------ */}
-                                <div className="relative">
+                        {/* --------View Block----------- */}
+                        {viewType[0] && (
+                          <div
+                            className={`grid grid-cols-1 gap-10 py-10 sm:grid-cols-2 lg:grid-cols-3`}
+                          >
+                            {products &&
+                              products.map((product) => (
+                                <div
+                                  key={product._id}
+                                  className="bg-gray-200 bg-opacity-30 pb-4 "
+                                >
+                                  {/* ------ */}
+                                  <div className="relative">
+                                    <Link
+                                      to={`/product/${product._id}`}
+                                      className="h-full w-full cursor-pointer transition-opacity duration-300 ease-in-out hover:opacity-90"
+                                    >
+                                      <img
+                                        className=" mx-auto h-full w-full"
+                                        src={Hoodie}
+                                        alt="Hoodie"
+                                      />
+                                    </Link>
+                                  </div>
+                                  {/* ------ */}
+                                  <div className="overflow-hidden overflow-ellipsis whitespace-nowrap text-center ">
+                                    {/* --Titile-- */}
+                                    <Link
+                                      className=" font-medium text-gray-800 hover:text-primary "
+                                      to={`/product/${product._id}`}
+                                    >
+                                      {product.name}
+                                    </Link>
+                                    {/* --Rating-- */}
+                                    <div className=" my-2 flex items-center justify-center space-x-1">
+                                      {/* ---- */}
+                                      <div className="rating-outer">
+                                        <div
+                                          className="rating-inner"
+                                          style={{
+                                            width: `${
+                                              (product.ratings / 5) * 100
+                                            }%`,
+                                          }}
+                                        ></div>
+                                      </div>
+                                      {calculateNumOfReviews(product)}
+                                    </div>
+                                    {/* --Price-- */}
+                                    <div className="mt-3 flex items-center justify-center">
+                                      <span className="mr-2 text-lg font-bold text-primary">
+                                        ${parseFloat(product.price).toFixed(2)}
+                                      </span>
+                                      {addDiscount(30, 55, product, "block")}
+                                    </div>
+                                  </div>
+                                </div>
+                              ))}
+                          </div>
+                        )}
+
+                        {/* --------View Line----------- */}
+                        {viewType[1] && (
+                          <div>
+                            {products &&
+                              products.map((product) => (
+                                <div
+                                  key={product._id}
+                                  className={`gap-4 border-b p-5 md:grid md:grid-cols-5`}
+                                >
+                                  {/* <!------> */}
                                   <Link
                                     to={`/product/${product._id}`}
-                                    className="h-full w-full cursor-pointer"
+                                    className="relative col-span-2 transition-opacity duration-300 ease-in-out hover:opacity-90"
                                   >
                                     <img
-                                      className=" mx-auto h-full w-full"
+                                      className="mx-auto h-full w-full"
                                       src={Hoodie}
                                       alt="Hoodie"
                                     />
                                   </Link>
-                                  {/* --Hidden button---- */}
-                                  <div className="absolute top-0 space-y-3">
-                                    {/* ---- */}
-                                    <div>
-                                      <button className="flex items-center rounded bg-black bg-opacity-60 p-2 text-xs font-medium text-white duration-100 hover:bg-primary">
-                                        <AiOutlineShoppingCart className="h-4 w-4" />
-                                        <span className="ml-2 duration-300">
-                                          Add to Cart
-                                        </span>
-                                      </button>
+                                  {/* <!------> */}
+                                  <div className="col-span-3 py-5 md:py-0">
+                                    {/* <!--Titile--> */}
+                                    <Link
+                                      to={`/product/${product._id}`}
+                                      className="text-xl font-bold text-gray-800 hover:text-primary"
+                                    >
+                                      {product.name}
+                                    </Link>
+                                    {/* --Rating-- */}
+                                    <div className="my-2 flex items-center space-x-1">
+                                      {/* ---- */}
+                                      <div className="rating-outer">
+                                        <div
+                                          className="rating-inner"
+                                          style={{
+                                            width: `${
+                                              (product.ratings / 5) * 100
+                                            }%`,
+                                          }}
+                                        ></div>
+                                      </div>
+                                      {calculateNumOfReviews(product)}
                                     </div>
+                                    {/* <!--Price--> */}
+                                    <div className="my-2 flex items-center">
+                                      <span className="mr-2 text-xl font-bold text-primary">
+                                        ${parseFloat(product.price).toFixed(2)}
+                                      </span>
+                                      {addDiscount(30, 55, product, "line")}
+                                    </div>
+                                    {/* ----Description---- */}
+                                    <p className="text-sm leading-loose text-gray-500 line-clamp-4">
+                                      {product.description}
+                                    </p>
                                   </div>
                                 </div>
-                                {/* ------ */}
-                                <div className="overflow-hidden overflow-ellipsis whitespace-nowrap text-center ">
-                                  {/* --Titile-- */}
-                                  <Link
-                                    className=" font-medium text-gray-800 hover:text-primary "
-                                    to={`/product/${product._id}`}
-                                  >
-                                    {product.name}
-                                  </Link>
-                                  {/* --Rating-- */}
-                                  <div className=" my-2 flex items-center justify-center space-x-1">
-                                    {/* ---- */}
-                                    <div className="rating-outer">
-                                      <div
-                                        className="rating-inner"
-                                        style={{
-                                          width: `${
-                                            (product.ratings / 5) * 100
-                                          }%`,
-                                        }}
-                                      ></div>
-                                    </div>
-                                    {calculateNumOfReviews(product)}
-                                  </div>
-                                  {/* --Price-- */}
-                                  <div className=" mt-3 flex items-center justify-center">
-                                    <span className=" mr-2 text-lg font-bold text-primary">
-                                      ${parseFloat(product.price).toFixed(2)}
-                                    </span>
-                                    <span className=" mr-1 text-gray-500 xsm:text-xs">
-                                      <del>
-                                        $
-                                        {parseFloat(
-                                          product.price + product.price * 0.53
-                                        ).toFixed(2)}
-                                      </del>
-                                    </span>
-                                    <span className=" text-orange-500 2xs:hidden xsm:block xsm:text-xs">
-                                      (53% OFF)
-                                    </span>
-                                  </div>
-                                </div>
-                              </div>
-                            ))}
-                        </div>
+                              ))}
+                          </div>
+                        )}
                       </div>
                       {/* ----Pagination---- */}
                       {resPerPage < productsCount &&
                         filteredProductsCount > resPerPage && (
-                          <div className="my-4 flex w-full items-center justify-center space-x-1">
+                          <div className="my-4 mb-10 flex w-full items-center justify-center space-x-1">
                             <Pagination
                               activePage={currentPage}
                               itemsCountPerPage={resPerPage}

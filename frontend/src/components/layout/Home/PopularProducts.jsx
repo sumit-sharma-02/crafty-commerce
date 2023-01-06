@@ -90,8 +90,8 @@ const PopularItems = () => {
         <div className="py-2">
           <Link
             to={`/product/${product._id}`}
-            className="block cursor-pointer overflow-hidden text-ellipsis whitespace-nowrap text-sm font-medium 
-          text-gray-800 hover:text-primary/90 sm:w-52 sm:text-base md:w-52 lg:w-52 xl:w-60"
+            className="block text-sm font-medium text-gray-800 line-clamp-2 hover:text-primary/90 
+            sm:w-52 sm:text-base md:w-52 lg:w-52 xl:w-60"
           >
             {product.name}
           </Link>
