@@ -23,12 +23,12 @@ const Profile = () => {
         ) : (
           <div
             className="flex h-full w-full items-center justify-center overflow-auto 
-          bg-gradient-to-br from-red-500 via-purple-500 to-blue-500 p-10 py-36 2xs:px-5 md:px-16"
+            bg-gray-100 p-10 py-36 2xs:px-5 md:px-16"
           >
             <MetaData title={"Profile"} />
             <div
-              className="h-full w-full overflow-auto rounded-xl rounded-tr-md
-        rounded-br-md bg-white px-2 py-4 shadow-2xl lg:w-[65%] xl:w-[40%]"
+              className="h-full w-full overflow-auto rounded-2xl border-4 border-gray-400
+              bg-white px-2 py-4 shadow-2xl lg:w-[65%] xl:w-[40%]"
             >
               <div className=" text-center">
                 <h1 className="text-3xl font-extrabold sm:text-4xl">
@@ -48,8 +48,10 @@ const Profile = () => {
                     type="button"
                     whileTap={{ scale: 0.9 }}
                     transition={{ duration: 0.3, ease: "easeInOut" }}
+                    disabled={loading ? true : false}
                     className="mt-2 flex w-max items-center justify-center rounded-lg bg-blue-500 
-                    text-sm font-semibold leading-normal tracking-wide text-white shadow-lg"
+                    text-sm font-semibold leading-normal tracking-wide text-white shadow-lg transition-colors
+                    duration-300 ease-in-out hover:bg-blue-600"
                   >
                     <Link
                       to={"/profile/update"}
@@ -114,11 +116,13 @@ const Profile = () => {
                       type="button"
                       whileTap={{ scale: 0.9 }}
                       transition={{ duration: 0.3, ease: "easeInOut" }}
-                      className="mt-2 flex w-max items-center justify-start rounded-lg bg-primary
-                    text-sm font-semibold leading-normal tracking-wide text-white shadow-lg"
+                      disabled={loading ? true : false}
+                      className="mt-2 flex w-max items-center justify-start rounded-lg bg-primary text-sm 
+                      font-semibold leading-normal tracking-wide text-white shadow-lg transition-colors
+                      duration-300 ease-in-out hover:bg-primaryDarkShade"
                     >
                       <Link
-                        to={"/orders"}
+                        to={"/orders/myOrders"}
                         className="flex items-center justify-center p-2"
                       >
                         <TfiReceipt className="mx-1 h-5 w-5" /> Your Orders
@@ -129,8 +133,10 @@ const Profile = () => {
                       type="button"
                       whileTap={{ scale: 0.9 }}
                       transition={{ duration: 0.3, ease: "easeInOut" }}
-                      className="mt-2 flex w-max items-center justify-start rounded-lg bg-ternary
-                    text-sm font-semibold leading-normal tracking-wide text-white shadow-lg"
+                      disabled={loading ? true : false}
+                      className="mt-2 flex w-max items-center justify-start rounded-lg bg-ternary text-sm 
+                      font-semibold leading-normal tracking-wide text-white shadow-lg transition-colors
+                      duration-300 ease-in-out hover:bg-yellow-600"
                     >
                       <Link
                         to={"/password/update"}

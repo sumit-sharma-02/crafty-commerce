@@ -19,19 +19,6 @@ const Login = () => {
   const location = useLocation();
   const { pathname } = useLocation();
 
-  const showSuccessToast = (message) => {
-    toast.success(message, {
-      position: "bottom-center",
-      autoClose: 5000,
-      hideProgressBar: false,
-      closeOnClick: true,
-      pauseOnHover: true,
-      draggable: true,
-      progress: undefined,
-      theme: "colored",
-    });
-  };
-
   const showErrorToast = (message) => {
     toast.error(message, {
       position: "bottom-center",
@@ -52,9 +39,6 @@ const Login = () => {
   const submitHandler = (event) => {
     event.preventDefault();
     dispatch(login(email, password));
-    if (!error && !loading) {
-      showSuccessToast("You have successfully logged in.");
-    }
   };
 
   useEffect(() => {
@@ -84,13 +68,10 @@ const Login = () => {
         ) : (
           <div
             className="flex h-full w-full items-center justify-center overflow-auto 
-          bg-gradient-to-br from-red-500  via-purple-500 to-blue-500 p-10 py-36"
+          bg-gray-100 p-10 py-36"
           >
             <MetaData title={`Login`} />
-            <div
-              className="rounded-xl rounded-tr-md rounded-br-md
-          bg-white p-5 shadow-2xl md:w-1/2 xl:w-1/3"
-            >
+            <div className="rounded-2xl border-4 border-gray-400 bg-white p-5 shadow-2xl md:w-1/2 xl:w-1/3">
               <div className="text-center">
                 <h1 className="text-4xl font-extrabold">Login</h1>
               </div>
@@ -179,8 +160,9 @@ const Login = () => {
                 >
                   <button
                     type="submit"
-                    className="w-full rounded-full bg-gradient-to-l from-red-500 via-purple-500 to-blue-500 p-2 text-center
-                    font-semibold uppercase tracking-widest text-white "
+                    disabled={loading ? true : false}
+                    className="w-full rounded-lg bg-primary p-2 text-center font-semibold uppercase 
+                    tracking-widest text-white transition-colors duration-300 ease-in-out hover:bg-primaryDarkShade "
                   >
                     login
                   </button>

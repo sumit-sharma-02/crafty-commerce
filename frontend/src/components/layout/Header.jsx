@@ -589,7 +589,7 @@ const Header = () => {
                   after:w-full after:origin-bottom-right after:scale-x-0 after:bg-secondary after:transition-transform
                   after:duration-200 after:ease-out after:content-[''] hover:after:origin-bottom-left
                   hover:after:scale-x-100"
-                  to={"/"}
+                  to={"/contact-us"}
                 >
                   CONTACT US
                 </Link>

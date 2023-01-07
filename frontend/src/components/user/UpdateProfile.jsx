@@ -114,12 +114,12 @@ const UpdateProfile = () => {
         ) : (
           <div
             className="flex h-full w-full items-center justify-center overflow-auto 
-            bg-gradient-to-br from-red-500 via-purple-500 to-blue-500 p-10 py-36"
+            bg-gray-100 p-10 py-36"
           >
             <MetaData title={"Update Profile"} />
             <div
-              className="h-full overflow-auto rounded-xl rounded-tr-md rounded-br-md
-          bg-white px-5 py-2 shadow-2xl md:w-1/2 xl:w-2/5"
+              className="h-full overflow-auto rounded-2xl border-4 border-gray-400
+            bg-white px-5 py-2 shadow-2xl md:w-1/2 xl:w-2/5"
             >
               <div className=" text-center">
                 <h1 className=" text-4xl font-extrabold">Update Profile</h1>
@@ -146,8 +146,9 @@ const UpdateProfile = () => {
                         className="flex w-max cursor-pointer items-center justify-center"
                       >
                         <span
-                          className="flex w-max items-center justify-center rounded-full bg-blue-500 p-2 px-4 py-2 
-                        text-base font-semibold leading-normal tracking-wide text-white shadow-lg"
+                          className="flex w-max items-center justify-center rounded-lg bg-blue-500 px-4 py-2
+                          text-base font-semibold leading-normal tracking-wide text-white shadow-lg transition-colors
+                          duration-300 ease-in-out hover:bg-blue-600"
                         >
                           <BsCameraFill className="mx-2 h-5 w-5" /> Browse Photo
                         </span>
@@ -223,8 +224,9 @@ const UpdateProfile = () => {
                   whileTap={{ scale: 0.9 }}
                   transition={{ duration: 0.3, ease: "easeInOut" }}
                   disabled={loading ? true : false}
-                  className="!mt-8 flex w-full items-center justify-center space-x-2 rounded-full bg-gradient-to-l from-red-500
-                  via-purple-500 to-blue-500 p-2 text-center font-semibold uppercase tracking-widest text-white shadow-lg"
+                  className="mt-8 flex w-full items-center justify-center space-x-2 rounded-lg bg-primary 
+                  p-2 text-center font-semibold uppercase tracking-widest text-white 
+                  shadow-lg transition-colors duration-300 ease-in-out hover:bg-primaryDarkShade"
                 >
                   Update Profile
                 </motion.button>

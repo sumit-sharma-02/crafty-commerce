@@ -145,8 +145,8 @@ const Contact = () => {
           {/* <!------002-------> */}
           <div className="">
             {/* <!----> */}
-            <div className=" mb-8">
-              <h3 className=" inline-block border-b-2 border-primary text-2xl font-bold leading-loose">
+            <div className="mb-8">
+              <h3 className="inline-block border-b-2 border-primary text-2xl font-bold leading-loose">
                 CONTACT US
               </h3>
             </div>

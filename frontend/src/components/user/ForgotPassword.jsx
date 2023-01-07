@@ -66,12 +66,12 @@ const ForgotPassword = () => {
         ) : (
           <div
             className="flex h-full w-full items-center justify-center overflow-auto 
-          bg-gradient-to-br from-red-500 via-purple-500 to-blue-500 p-10 py-36"
+          bg-gray-100 p-10 py-36"
           >
             <MetaData title={"Forgot Password"} />
             <div
-              className="h-full overflow-auto rounded-xl rounded-tr-md rounded-br-md
-        bg-white px-5 py-4 shadow-2xl md:w-1/2 xl:w-2/5"
+              className="h-full overflow-auto rounded-2xl border-4 border-gray-400
+            bg-white px-5 py-4 shadow-2xl md:w-1/2 xl:w-2/5"
             >
               <div className="mb-4 text-center">
                 <h1 className="text-4xl font-extrabold">Forgot Password</h1>
@@ -121,8 +121,9 @@ const ForgotPassword = () => {
                   whileTap={{ scale: 0.9 }}
                   transition={{ duration: 0.3, ease: "easeInOut" }}
                   disabled={loading ? true : false}
-                  className="my-6 flex w-full items-center justify-center space-x-2 rounded-full bg-gradient-to-l
-                from-red-500 via-purple-500 to-blue-500 p-2 text-center font-semibold uppercase tracking-widest text-white shadow-lg"
+                  className="my-6 flex w-full items-center justify-center space-x-2 rounded-lg bg-primary
+                  p-2 text-center font-semibold uppercase tracking-widest text-white shadow-lg 
+                  transition-colors duration-300 ease-in-out hover:bg-primaryDarkShade"
                 >
                   Send Recovery Email
                 </motion.button>
