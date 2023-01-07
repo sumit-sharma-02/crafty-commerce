@@ -3,6 +3,7 @@ import { MetaData, Checkout } from "../../components";
 import { useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { createOrder, clearErrors } from "../../actions/order";
+import { removeItemsFromCart } from "../../actions/cart";
 import { toast } from "react-toastify";
 import { motion } from "framer-motion";
 import {
@@ -132,6 +133,7 @@ const Payment = () => {
           };
           dispatch(createOrder(order));
           navigate("/success");
+          removeCartItems(cartItems);
         } else {
           showErrorToast("Some error occurred while processing your payment.");
         }
@@ -140,6 +142,12 @@ const Payment = () => {
       document.querySelector("#pay_btn").disabled = false;
       showErrorToast(error.response.data.error);
     }
+  };
+
+  const removeCartItems = (cartItems) => {
+    cartItems.forEach((item) => {
+      dispatch(removeItemsFromCart(item.product));
+    });
   };
 
   window.scrollTo({ top: 0, behavior: "smooth" });
