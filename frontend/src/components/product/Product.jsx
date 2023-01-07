@@ -163,7 +163,9 @@ const Product = () => {
     }
   };
 
-  window.scrollTo({ top: 0, behavior: "smooth" });
+  if (quantity === 1) {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }
 
   return (
     <>
@@ -586,8 +588,7 @@ const Product = () => {
                                       product.stock === 0 ? true : false
                                     }
                                     className="block"
-                                    onMouseDown={increaseQty}
-                                    onTouchStart={increaseQty}
+                                    onClick={increaseQty}
                                   >
                                     <svg
                                       xmlns="http://www.w3.org/2000/svg"
@@ -613,8 +614,7 @@ const Product = () => {
                                       product.stock === 0 ? true : false
                                     }
                                     className="block"
-                                    onMouseDown={decreaseQty}
-                                    onTouchStart={increaseQty}
+                                    onClick={decreaseQty}
                                   >
                                     <svg
                                       xmlns="http://www.w3.org/2000/svg"

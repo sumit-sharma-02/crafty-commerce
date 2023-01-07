@@ -234,7 +234,7 @@ function App() {
           <Route path="/search/:keyword" element={<AllProducts />} />
           <Route path="/product/:id" element={<Product />} />
           <Route path="/cart" element={<Cart />} />
-          <Route path="/FAQ" element={<Faq />} />
+          <Route path="/faq" element={<Faq />} />
           <Route path="/terms-and-condition" element={<Terms />} />
           <Route path="/privacy-policy" element={<Privacy />} />
           <Route path="/contact-us" element={<Contact />} />

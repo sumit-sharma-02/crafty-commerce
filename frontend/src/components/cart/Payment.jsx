@@ -279,6 +279,8 @@ const Payment = () => {
           <a
             title="Buy me a beer"
             href="https://www.buymeacoffee.com/sumitsharma02"
+            target="_blank"
+            rel="noopener noreferrer"
             className="block h-16 w-16 transform rounded-full border-4 border-primary bg-primary 
             shadow-2xl transition-all hover:rotate-12 hover:scale-110 hover:border-primaryDarkShade
             hover:bg-primaryDarkShade hover:shadow-lg"

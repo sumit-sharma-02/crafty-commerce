@@ -502,7 +502,7 @@ const AllProducts = () => {
                               onClick={() => setViewType([true, false])}
                               className={`${
                                 viewType[0] ? "bg-primary" : "bg-gray-600"
-                              } hidden rounded-sm p-1 px-3 font-medium text-white duration-300 focus:outline-none hover:bg-primary lg:block`}
+                              } inline-block rounded-sm p-1 px-3 font-medium text-white duration-300 focus:outline-none hover:bg-primary`}
                             >
                               <svg
                                 xmlns="http://www.w3.org/2000/svg"

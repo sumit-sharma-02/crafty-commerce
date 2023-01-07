@@ -368,6 +368,7 @@ const Header = () => {
                         <Link
                           className="flex w-full cursor-pointer border-b border-t py-4 px-10 duration-300 hover:shadow"
                           to={"/"}
+                          onClick={() => setIsSideBarOpen(!isSideBarOpen)}
                         >
                           HOME
                         </Link>
@@ -375,7 +376,8 @@ const Header = () => {
                       <li className="flex h-max w-full">
                         <Link
                           className="relative flex w-full cursor-pointer border-b py-4 px-10 duration-300 hover:tracking-widest hover:shadow"
-                          to={"/"}
+                          to={"/products"}
+                          onClick={() => setIsSideBarOpen(!isSideBarOpen)}
                         >
                           New products
                           <span className="absolute top-3 right-2 z-20 mr-1 rounded bg-purple-700 p-1 px-4 text-xs capitalize text-white hover:text-white">
@@ -387,7 +389,8 @@ const Header = () => {
                       <li className="flex h-max w-full">
                         <Link
                           className="relative flex w-full cursor-pointer border-b py-4 px-10 duration-300 hover:tracking-widest hover:shadow"
-                          to={"/"}
+                          to={"/products"}
+                          onClick={() => setIsSideBarOpen(!isSideBarOpen)}
                         >
                           Best sales
                           <span className="absolute top-3 right-2 z-20 mr-1 rounded bg-ternary p-1 px-5 text-xs capitalize text-white hover:text-white">
@@ -400,6 +403,7 @@ const Header = () => {
                         <Link
                           className="flex w-full cursor-pointer border-b py-4 px-10 duration-300 hover:tracking-widest hover:shadow"
                           to={"/products"}
+                          onClick={() => setIsSideBarOpen(!isSideBarOpen)}
                         >
                           Shop
                         </Link>
@@ -407,7 +411,8 @@ const Header = () => {
                       <li className="flex h-max w-full">
                         <Link
                           className="flex w-full cursor-pointer border-b py-4 px-10 duration-300 hover:tracking-widest hover:shadow"
-                          to={"/"}
+                          to={"/contact-us"}
+                          onClick={() => setIsSideBarOpen(!isSideBarOpen)}
                         >
                           CONTACT
                         </Link>
@@ -415,7 +420,8 @@ const Header = () => {
                       <li className="flex h-max w-full">
                         <Link
                           className="flex w-full cursor-pointer border-b py-4 px-10 duration-300 hover:tracking-widest hover:shadow"
-                          to={"/"}
+                          to={"/faq"}
+                          onClick={() => setIsSideBarOpen(!isSideBarOpen)}
                         >
                           FAQ
                         </Link>
@@ -423,7 +429,8 @@ const Header = () => {
                       <li className="flex h-max w-full">
                         <Link
                           className="flex w-full cursor-pointer border-b py-4 px-10 duration-300 hover:tracking-widest hover:shadow"
-                          to={"/"}
+                          to={"/terms-and-condition"}
+                          onClick={() => setIsSideBarOpen(!isSideBarOpen)}
                         >
                           Terms & condition
                         </Link>
@@ -431,27 +438,34 @@ const Header = () => {
                       <li className="flex h-max w-full">
                         <Link
                           className="flex w-full cursor-pointer border-b py-4 px-10 duration-300 hover:tracking-widest hover:shadow"
-                          to={"/"}
+                          to={"/privacy-policy"}
+                          onClick={() => setIsSideBarOpen(!isSideBarOpen)}
                         >
                           Privacy & policy
                         </Link>
                       </li>
-                      <li className="flex h-max w-full">
-                        <Link
-                          className="flex w-full cursor-pointer border-b py-4 px-10 duration-300 hover:tracking-widest hover:shadow"
-                          to={"/login"}
-                        >
-                          Login
-                        </Link>
-                      </li>
-                      <li className="flex h-max w-full">
-                        <Link
-                          className="flex w-full cursor-pointer border-b py-4 px-10 duration-300 hover:tracking-widest hover:shadow"
-                          to={"/register"}
-                        >
-                          Register
-                        </Link>
-                      </li>
+                      {!user && !loading && (
+                        <>
+                          <li className="flex h-max w-full">
+                            <Link
+                              className="flex w-full cursor-pointer border-b py-4 px-10 duration-300 hover:tracking-widest hover:shadow"
+                              to={"/login"}
+                              onClick={() => setIsSideBarOpen(!isSideBarOpen)}
+                            >
+                              Login
+                            </Link>
+                          </li>
+                          <li className="flex h-max w-full">
+                            <Link
+                              className="flex w-full cursor-pointer border-b py-4 px-10 duration-300 hover:tracking-widest hover:shadow"
+                              to={"/register"}
+                              onClick={() => setIsSideBarOpen(!isSideBarOpen)}
+                            >
+                              Register
+                            </Link>
+                          </li>
+                        </>
+                      )}
                     </ul>
                   </div>
                 </motion.div>
@@ -564,7 +578,7 @@ const Header = () => {
                   >
                     <Link
                       className="block border-b p-3 px-4 text-sm tracking-widest transition-colors duration-300 ease-in-out hover:bg-gray-200"
-                      to={"/FAQ"}
+                      to={"/faq"}
                     >
                       Frequently Asked Questions (FAQ)
                     </Link>

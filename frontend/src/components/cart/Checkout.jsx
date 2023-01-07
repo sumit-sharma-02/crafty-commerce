@@ -2,9 +2,8 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 const Checkout = ({ shipping, confirmOrder, payment }) => {
-  window.scrollTo({ top: 0, behavior: "smooth" });
   return (
-    <div className="clear-both my-5 mx-auto mt-10 flex w-auto justify-center overflow-auto">
+    <div className="clear-both my-5 mx-auto mt-10 hidden w-auto justify-center overflow-auto sm:flex">
       {shipping ? (
         <Link to="/shipping" className="float-right">
           <div

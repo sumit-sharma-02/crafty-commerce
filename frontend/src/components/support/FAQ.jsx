@@ -33,7 +33,7 @@ const Faq = () => {
         </span>
         {/* <!--------------> */}
         <Link
-          to={"/FAQ"}
+          to={"/faq"}
           className="cursor-pointer tracking-widest text-gray-400"
         >
           FAQ
