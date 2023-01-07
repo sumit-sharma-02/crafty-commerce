@@ -5,7 +5,6 @@ import {
   PopularProducts,
   Categories,
   LimitedOffers,
-  TopScroll,
   CategoryCarousel,
 } from "../../../components/";
 
@@ -35,7 +34,6 @@ const Home = () => {
         <LimitedOffers />
         <CategoryCarousel />
       </main>
-      <TopScroll />
     </Fragment>
   );
 };

@@ -3,7 +3,7 @@ import { Disclosure, Transition } from "@headlessui/react";
 import { Link } from "react-router-dom";
 import { FcAbout } from "react-icons/fc";
 
-const FAQ = () => {
+const Faq = () => {
   return (
     <main>
       {/* <!--------------Breadcrumb-----------------------> */}
@@ -230,4 +230,4 @@ const FAQ = () => {
   );
 };
 
-export default FAQ;
+export default Faq;

@@ -490,7 +490,7 @@ const Header = () => {
                   after:w-full after:origin-bottom-right after:scale-x-0 after:bg-secondary after:transition-transform
                   after:duration-200 after:ease-out after:content-[''] hover:after:origin-bottom-left
                   hover:after:scale-x-100"
-                  to={"/"}
+                  to={"/products"}
                 >
                   NEW PRODUCTS
                   <span className=" absolute -top-4 right-0 z-20 rounded bg-purple-700 p-1 px-4 text-xs capitalize">
@@ -505,7 +505,7 @@ const Header = () => {
                   after:w-full after:origin-bottom-right after:scale-x-0 after:bg-secondary after:transition-transform
                   after:duration-200 after:ease-out after:content-[''] hover:after:origin-bottom-left
                   hover:after:scale-x-100"
-                  to={"/"}
+                  to={"/products"}
                 >
                   BEST SALES
                   <span className=" absolute -top-4 right-0 z-20 rounded bg-ternary p-1 px-4 text-xs capitalize ">

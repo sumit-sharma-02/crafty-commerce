@@ -7,7 +7,6 @@ import { Link, useParams } from "react-router-dom";
 import {
   Breadcrumb,
   Loader,
-  TopScroll,
   Filters,
   Error,
   NotFound,
@@ -586,10 +585,10 @@ const AllProducts = () => {
                                     </Link>
                                   </div>
                                   {/* ------ */}
-                                  <div className="overflow-hidden overflow-ellipsis whitespace-nowrap text-center ">
+                                  <div className="text-center">
                                     {/* --Titile-- */}
                                     <Link
-                                      className=" font-medium text-gray-800 hover:text-primary "
+                                      className="px-1 font-medium text-gray-800 line-clamp-2 hover:text-primary"
                                       to={`/product/${product._id}`}
                                     >
                                       {product.name}
@@ -719,7 +718,6 @@ const AllProducts = () => {
           </div>
         </section>
       </main>
-      <TopScroll />
     </>
   );
 };

@@ -36,6 +36,7 @@ import {
   Privacy,
   Faq,
   Contact,
+  TopScroll,
 } from "./components";
 import { loadUser } from "./actions/user";
 import store from "./store";
@@ -238,6 +239,7 @@ function App() {
           <Route path="/privacy-policy" element={<Privacy />} />
           <Route path="/contact-us" element={<Contact />} />
         </Routes>
+        <TopScroll />
         <Footer />
       </div>
     </AnimatePresence>

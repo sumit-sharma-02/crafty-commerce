@@ -7,7 +7,6 @@ import { motion } from "framer-motion";
 import {
   Breadcrumb,
   Loader,
-  TopScroll,
   MetaData,
   ProductCarousel,
   ProductInsights,
@@ -722,7 +721,6 @@ const Product = () => {
           </div>
         </section>
       </main>
-      <TopScroll />
     </>
   );
 };
