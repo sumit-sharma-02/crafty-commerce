@@ -58,6 +58,8 @@ const Login = () => {
     }
   }, [dispatch, isAuthenticated, error, navigate, loading, pathname, location]);
 
+  window.scrollTo({ top: 0, behavior: "smooth" });
+
   return (
     <main>
       <section>

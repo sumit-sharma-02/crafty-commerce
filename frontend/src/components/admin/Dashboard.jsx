@@ -34,6 +34,8 @@ const Dashboard = () => {
     dispatch(allUsers());
   }, [dispatch]);
 
+  window.scrollTo({ top: 0, behavior: "smooth" });
+
   return (
     <>
       <MetaData title="Dashboard" />

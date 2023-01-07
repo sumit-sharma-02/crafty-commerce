@@ -150,6 +150,8 @@ const ProductsList = () => {
     }
   }, [error, deleteProductError, dispatch, isDeleted, navigate]);
 
+  window.scrollTo({ top: 0, behavior: "smooth" });
+
   return (
     <>
       <MetaData title="All Products" />

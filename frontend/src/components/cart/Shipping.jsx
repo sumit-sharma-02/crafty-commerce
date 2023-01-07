@@ -45,6 +45,8 @@ const Shipping = () => {
     navigate("/order/confirm");
   };
 
+  window.scrollTo({ top: 0, behavior: "smooth" });
+
   return (
     <>
       <MetaData title="Shipping Details" />

@@ -118,6 +118,8 @@ const UpdateOrder = () => {
     }
   }, [error, updateOrderError, dispatch, isUpdated, orderId]);
 
+  window.scrollTo({ top: 0, behavior: "smooth" });
+
   return (
     <>
       <MetaData title="Update Order Status" />

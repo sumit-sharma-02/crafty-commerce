@@ -212,6 +212,8 @@ const Reviews = () => {
     }
   }, [error, dispatch, isDeleted, productId, reviews, navigate]);
 
+  window.scrollTo({ top: 0, behavior: "smooth" });
+
   return (
     <>
       <MetaData title="Reviews" />

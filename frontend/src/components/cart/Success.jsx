@@ -4,6 +4,7 @@ import { MetaData } from "../../components";
 import { motion } from "framer-motion";
 
 const Success = () => {
+  window.scrollTo({ top: 0, behavior: "smooth" });
   return (
     <div className="py-32 px-10 md:px-6 xl:px-24 2xl:container 2xl:mx-auto 2xl:px-20">
       <MetaData title="Order Success" />

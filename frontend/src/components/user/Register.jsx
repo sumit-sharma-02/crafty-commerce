@@ -110,6 +110,7 @@ const Register = () => {
       dispatch(clearErrors);
     }
   }, [dispatch, loading, isAuthenticated, error, navigate, pathname]);
+  window.scrollTo({ top: 0, behavior: "smooth" });
 
   return (
     <main>

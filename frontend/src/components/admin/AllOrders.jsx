@@ -17,9 +17,7 @@ const AllOrders = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
-  const { loading, error, totalAmount, orders } = useSelector(
-    (state) => state.allOrders
-  );
+  const { loading, error, orders } = useSelector((state) => state.allOrders);
   const { error: deleteOrderError, isDeleted } = useSelector(
     (state) => state.manipulateOrder
   );
@@ -115,6 +113,8 @@ const AllOrders = () => {
     }
   }, [error, deleteOrderError, dispatch, isDeleted, navigate]);
 
+  window.scrollTo({ top: 0, behavior: "smooth" });
+
   return (
     <>
       <MetaData title="All Orders" />
@@ -202,7 +202,7 @@ const AllOrders = () => {
                                             </td>
                                             <td className="whitespace-no-wrap px-6 py-4 text-sm leading-5">
                                               <p className="text-center">
-                                                ${totalAmount}
+                                                ${order.totalPrice.toFixed(2)}
                                               </p>
                                             </td>
                                             <td className="whitespace-no-wrap px-6 py-4 text-sm leading-5">

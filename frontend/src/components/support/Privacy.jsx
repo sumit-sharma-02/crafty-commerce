@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { FcAbout } from "react-icons/fc";
 
 const PrivacyPolicy = () => {
+  window.scrollTo({ top: 0, behavior: "smooth" });
   return (
     <main>
       {/* <!--------------Breadcrumb-----------------------> */}

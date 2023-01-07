@@ -12,6 +12,7 @@ import {
 import Banner1 from "../../../images/banner1.png";
 
 const Home = () => {
+  window.scrollTo({ top: 0, behavior: "smooth" });
   return (
     <Fragment>
       <MetaData title={`Buy Best Products Online`} />

@@ -3,6 +3,7 @@ import { FcAbout } from "react-icons/fc";
 import { Link } from "react-router-dom";
 
 const TermsAndCondition = () => {
+  window.scrollTo({ top: 0, behavior: "smooth" });
   return (
     <main className="mb-20 sm:mb-40">
       {/* <!--------------Breadcrumb-----------------------> */}

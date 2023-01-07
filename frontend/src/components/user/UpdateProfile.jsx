@@ -104,6 +104,8 @@ const UpdateProfile = () => {
     }
   }, [user, dispatch, error, navigate, isUpdated]);
 
+  window.scrollTo({ top: 0, behavior: "smooth" });
+
   return (
     <main>
       <section>

@@ -77,6 +77,8 @@ const OrdersList = () => {
     return `${day}, ${month} ${year}`;
   };
 
+  window.scrollTo({ top: 0, behavior: "smooth" });
+
   return (
     <>
       <MetaData title="Orders" />

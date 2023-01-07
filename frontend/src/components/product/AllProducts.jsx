@@ -137,6 +137,8 @@ const AllProducts = () => {
     }
   };
 
+  window.scrollTo({ top: 0, behavior: "smooth" });
+
   return (
     <>
       <main>
