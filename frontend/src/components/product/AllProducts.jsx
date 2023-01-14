@@ -26,7 +26,7 @@ import Ad1 from "../../images/ad1.jpg";
 import Ad2 from "../../images/ad2.jpg";
 // import Shirt1 from "../../images/shirt1.jpg";
 // import Shoe2 from "../../images/shoe2.jpg";
-import Hoodie from "../../images/hoodie.webp";
+// import Hoodie from "../../images/hoodie.webp";
 import { BsChevronDown, BsChevronUp } from "react-icons/bs";
 // import Speaker from "../../images/speakers.jpg";
 // import Toy from "../../images/toy1.webp";
@@ -582,7 +582,7 @@ const AllProducts = () => {
                                       <img
                                         className="mx-auto h-full w-full"
                                         src={product.images[0].url}
-                                        alt="Hoodie"
+                                        alt={product.name}
                                       />
                                     </Link>
                                   </div>
@@ -639,8 +639,8 @@ const AllProducts = () => {
                                   >
                                     <img
                                       className="mx-auto h-full w-full"
-                                      src={Hoodie}
-                                      alt="Hoodie"
+                                      src={product.images[0].url}
+                                      alt={product.name}
                                     />
                                   </Link>
                                   {/* <!------> */}

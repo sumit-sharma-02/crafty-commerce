@@ -13,7 +13,7 @@ import "../../../App.css";
 import { TbListDetails } from "react-icons/tb";
 
 // Images used
-import Boot1 from "../../../images/boot1.jpg";
+// import Boot1 from "../../../images/boot1.jpg";
 // import Camera1 from "../../../images/camera1.jpg";
 // import Shoe1 from "../../../images/shoe1.jpg";
 // import Chair1 from "../../../images/chair1.jpg";
@@ -70,12 +70,12 @@ const PopularItems = () => {
             <img
               className="mx-auto"
               // src={product.images[0].url}
-              src={Boot1}
+              src={product.images[0].url}
               alt=""
             />
           </Link>
           <div
-            className="absolute top-1 right-1 flex h-11 w-11 items-center justify-center bg-red-500 text-center 
+            className="absolute top-0 right-0 flex h-11 w-11 items-center justify-center bg-red-500 text-center 
           text-xs text-white before:absolute before:top-0 before:left-0 
           before:h-11 before:w-11 before:rotate-[30deg] before:bg-red-500 before:content-[''] 
           after:absolute after:top-0 after:left-0 after:h-11 after:w-11

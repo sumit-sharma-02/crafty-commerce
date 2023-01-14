@@ -109,7 +109,7 @@ const Categories = () => {
                 <li className="mb-4 ">
                   <Link
                     className="flex w-full items-center justify-between text-sm text-gray-500 hover:text-primary"
-                    to={"/"}
+                    to={"/products/Clothing"}
                   >
                     <span>
                       <GiClothes className="mb-1 mr-1 inline-block h-4 w-4" />{" "}
@@ -120,7 +120,7 @@ const Categories = () => {
                 <li className="mb-4">
                   <Link
                     className="flex w-full items-center justify-between text-sm text-gray-500 hover:text-primary"
-                    to={"/"}
+                    to={"/products/Gadgets"}
                   >
                     <span>
                       <CgToolbox className="mb-1 mr-1 inline-block h-4 w-4" />{" "}
@@ -132,7 +132,7 @@ const Categories = () => {
                 <li className="mb-4">
                   <Link
                     className="flex w-full items-center justify-between text-sm text-gray-500 hover:text-primary"
-                    to={"/"}
+                    to={"/products/Kitchen"}
                   >
                     <span>
                       <svg
@@ -146,7 +146,7 @@ const Categories = () => {
                           d="M207.9 15.2c.8 4.7 16.1 94.5 16.1 128.8 0 52.3-27.8 89.6-68.9 104.6L168 486.7c.7 13.7-10.2 25.3-24 25.3H80c-13.7 0-24.7-11.5-24-25.3l12.9-238.1C27.7 233.6 0 196.2 0 144 0 109.6 15.3 19.9 16.1 15.2 19.3-5.1 61.4-5.4 64 16.3v141.2c1.3 3.4 15.1 3.2 16 0 1.4-25.3 7.9-139.2 8-141.8 3.3-20.8 44.7-20.8 47.9 0 .2 2.7 6.6 116.5 8 141.8.9 3.2 14.8 3.4 16 0V16.3c2.6-21.6 44.8-21.4 48-1.1zm119.2 285.7l-15 185.1c-1.2 14 9.9 26 23.9 26h56c13.3 0 24-10.7 24-24V24c0-13.2-10.7-24-24-24-82.5 0-221.4 178.5-64.9 300.9z"
                         ></path>
                       </svg>{" "}
-                      Kitchen Utensils{" "}
+                      Kitchen{" "}
                     </span>
                   </Link>
                 </li>
@@ -154,7 +154,7 @@ const Categories = () => {
                 <li className="mb-4">
                   <Link
                     className="flex w-full items-center justify-between text-sm text-gray-500 hover:text-primary"
-                    to={"/"}
+                    to={"/products/Smartphones"}
                   >
                     <span>
                       <FiSmartphone className="mb-1 mr-1 inline-block h-4 w-4" />{" "}
@@ -166,7 +166,7 @@ const Categories = () => {
                 <li className="relative mb-4 ">
                   <Link
                     className="flex w-full items-center justify-between text-sm text-gray-500 hover:text-primary"
-                    to={"/"}
+                    to={"/products/Laptops"}
                   >
                     <span>
                       <MdLaptopMac className="mb-1 mr-1 inline-block h-4 w-4" />{" "}
@@ -178,7 +178,7 @@ const Categories = () => {
                 <li className="mb-4">
                   <Link
                     className="flex w-full items-center justify-between text-sm text-gray-500 hover:text-primary"
-                    to={"/"}
+                    to={"/products/watches"}
                   >
                     <span>
                       <svg
@@ -200,7 +200,7 @@ const Categories = () => {
                 <li className="mb-4">
                   <Link
                     className="flex w-full items-center justify-between text-sm text-gray-500 hover:text-primary"
-                    to={"/"}
+                    to={"/products/Accessories"}
                   >
                     <span>
                       <svg
@@ -222,7 +222,7 @@ const Categories = () => {
                 <li className="mb-4">
                   <Link
                     className="flex w-full items-center justify-between text-sm text-gray-500 hover:text-primary"
-                    to={"/"}
+                    to={"/products/Gifts, Sports and Toys"}
                   >
                     <span>
                       <svg
@@ -244,7 +244,7 @@ const Categories = () => {
                 <li className="mb-4">
                   <Link
                     className="flex w-full items-center justify-between text-sm text-gray-500 hover:text-primary"
-                    to={"/"}
+                    to={"/products/Home and Furniture"}
                   >
                     <span>
                       <svg
@@ -299,7 +299,7 @@ const Categories = () => {
             >
               <Link
                 className="flex w-full items-center justify-between text-sm text-gray-500 hover:text-primary"
-                to={"/"}
+                to={"/products/Clothing"}
               >
                 <span>
                   <GiClothes className="mb-1 mr-1 inline-block h-4 w-4" />{" "}
@@ -600,7 +600,7 @@ const Categories = () => {
             >
               <Link
                 className="flex w-full items-center justify-between text-sm text-gray-500 hover:text-primary"
-                to={"/"}
+                to={"/products/Gadgets"}
               >
                 <span>
                   <CgToolbox className="mb-1 mr-1 inline-block h-4 w-4" />{" "}
@@ -766,7 +766,7 @@ const Categories = () => {
             <li className="mb-4">
               <Link
                 className="flex w-full items-center justify-between text-sm text-gray-500 hover:text-primary"
-                to={"/"}
+                to={"/products/Kitchen"}
               >
                 <span>
                   <svg
@@ -780,7 +780,7 @@ const Categories = () => {
                       d="M207.9 15.2c.8 4.7 16.1 94.5 16.1 128.8 0 52.3-27.8 89.6-68.9 104.6L168 486.7c.7 13.7-10.2 25.3-24 25.3H80c-13.7 0-24.7-11.5-24-25.3l12.9-238.1C27.7 233.6 0 196.2 0 144 0 109.6 15.3 19.9 16.1 15.2 19.3-5.1 61.4-5.4 64 16.3v141.2c1.3 3.4 15.1 3.2 16 0 1.4-25.3 7.9-139.2 8-141.8 3.3-20.8 44.7-20.8 47.9 0 .2 2.7 6.6 116.5 8 141.8.9 3.2 14.8 3.4 16 0V16.3c2.6-21.6 44.8-21.4 48-1.1zm119.2 285.7l-15 185.1c-1.2 14 9.9 26 23.9 26h56c13.3 0 24-10.7 24-24V24c0-13.2-10.7-24-24-24-82.5 0-221.4 178.5-64.9 300.9z"
                     ></path>
                   </svg>{" "}
-                  Kitchen Utensils{" "}
+                  Kitchen{" "}
                 </span>
               </Link>
             </li>
@@ -788,7 +788,7 @@ const Categories = () => {
             <li className="mb-4">
               <Link
                 className="flex w-full items-center justify-between text-sm text-gray-500 hover:text-primary"
-                to={"/"}
+                to={"/products/Smartphones"}
               >
                 <span>
                   <FiSmartphone className="mb-1 mr-1 inline-block h-4 w-4" />{" "}
@@ -800,7 +800,7 @@ const Categories = () => {
             <li className="mb-4">
               <Link
                 className="flex w-full items-center justify-between text-sm text-gray-500 hover:text-primary"
-                to={"/"}
+                to={"/products/Laptops"}
               >
                 <span>
                   <MdLaptopMac className="mb-1 mr-1 inline-block h-4 w-4" />{" "}
@@ -812,7 +812,7 @@ const Categories = () => {
             <li className="relative mb-4 ">
               <Link
                 className="flex w-full items-center justify-between text-sm text-gray-500 hover:text-primary"
-                to={"/"}
+                to={"/products/watches"}
               >
                 <span>
                   <svg
@@ -834,7 +834,7 @@ const Categories = () => {
             <li className="mb-4">
               <Link
                 className="flex w-full items-center justify-between text-sm text-gray-500 hover:text-primary"
-                to={"/"}
+                to={"/products/Accessories"}
               >
                 <span>
                   <svg
@@ -856,7 +856,7 @@ const Categories = () => {
             <li className="mb-4">
               <Link
                 className="flex w-full items-center justify-between text-sm text-gray-500 hover:text-primary"
-                to={"/"}
+                to={"/products/Gifts, Sports and Toys"}
               >
                 <span>
                   <svg
@@ -878,7 +878,7 @@ const Categories = () => {
             <li className="mb-4">
               <Link
                 className="flex w-full items-center justify-between text-sm text-gray-500 hover:text-primary"
-                to={"/"}
+                to={"/products/Home and Furniture"}
               >
                 <span>
                   <svg
@@ -896,74 +896,6 @@ const Categories = () => {
                 </span>
               </Link>
             </li>
-
-            <ul>
-              <ul className="relative max-h-0 overflow-hidden transition-all duration-300">
-                <li className="mb-3">
-                  <Link
-                    className="flex w-full items-center justify-between text-sm text-gray-500 hover:text-primary"
-                    to={"/"}
-                  >
-                    <span>
-                      <svg
-                        className="mb-1 mr-2 inline-block h-4 w-4"
-                        xmlns="http://www.w3.org/2000/svg"
-                        viewBox="0 0 576 512"
-                      >
-                        <path
-                          fill="currentColor"
-                          d="M464 0H112c-4 0-7.8 2-10 5.4L2 152.6c-2.9 4.4-2.6 10.2.7 14.2l276 340.8c4.8 5.9 13.8 5.9 18.6 0l276-340.8c3.3-4.1 3.6-9.8.7-14.2L474.1 5.4C471.8 2 468.1 0 464 0zm-19.3 48l63.3 96h-68.4l-51.7-96h56.8zm-202.1 0h90.7l51.7 96H191l51.6-96zm-111.3 0h56.8l-51.7 96H68l63.3-96zm-43 144h51.4L208 352 88.3 192zm102.9 0h193.6L288 435.3 191.2 192zM368 352l68.2-160h51.4L368 352z"
-                        ></path>
-                      </svg>
-                      Category Deals
-                    </span>
-                  </Link>
-                </li>
-
-                <li className="mb-3">
-                  <Link
-                    className="flex w-full items-center justify-between text-sm text-gray-500 hover:text-primary"
-                    to={"/"}
-                  >
-                    <span>
-                      <svg
-                        className="mb-1 mr-2 inline-block h-4 w-4"
-                        xmlns="http://www.w3.org/2000/svg"
-                        viewBox="0 0 576 512"
-                      >
-                        <path
-                          fill="currentColor"
-                          d="M32 448c0 17.7 14.3 32 32 32h160V320H32v128zm256 32h160c17.7 0 32-14.3 32-32V320H288v160zm192-320h-42.1c6.2-12.1 10.1-25.5 10.1-40 0-48.5-39.5-88-88-88-41.6 0-68.5 21.3-103 68.3-34.5-47-61.4-68.3-103-68.3-48.5 0-88 39.5-88 88 0 14.5 3.8 27.9 10.1 40H32c-17.7 0-32 14.3-32 32v80c0 8.8 7.2 16 16 16h480c8.8 0 16-7.2 16-16v-80c0-17.7-14.3-32-32-32zm-326.1 0c-22.1 0-40-17.9-40-40s17.9-40 40-40c19.9 0 34.6 3.3 86.1 80h-86.1zm206.1 0h-86.1c51.4-76.5 65.7-80 86.1-80 22.1 0 40 17.9 40 40s-17.9 40-40 40z"
-                        ></path>
-                      </svg>{" "}
-                      Jewelry
-                    </span>
-                  </Link>
-                </li>
-
-                <li className="mb-3">
-                  <Link
-                    className="flex w-full items-center justify-between text-sm text-gray-500 hover:text-primary"
-                    to={"/"}
-                  >
-                    <span>
-                      <svg
-                        className="svg-inline--fa fa-desktop fa-w-18 mb-1 mr-1 inline-block h-4 w-4"
-                        role="img"
-                        xmlns="http://www.w3.org/2000/svg"
-                        viewBox="0 0 576 512"
-                      >
-                        <path
-                          fill="currentColor"
-                          d="M352 160v-32C352 57.42 294.579 0 224 0 153.42 0 96 57.42 96 128v32H0v272c0 44.183 35.817 80 80 80h288c44.183 0 80-35.817 80-80V160h-96zm-192-32c0-35.29 28.71-64 64-64s64 28.71 64 64v32H160v-32zm160 120c-13.255 0-24-10.745-24-24s10.745-24 24-24 24 10.745 24 24-10.745 24-24 24zm-192 0c-13.255 0-24-10.745-24-24s10.745-24 24-24 24 10.745 24 24-10.745 24-24 24z"
-                        ></path>
-                      </svg>{" "}
-                      Fashion{" "}
-                    </span>
-                  </Link>
-                </li>
-              </ul>
-            </ul>
           </ul>
         </div>
         {/* Carousel */}
@@ -1014,7 +946,7 @@ const Categories = () => {
             <div className="font-bold uppercase text-gray-500">
               FREE DELIVERY
             </div>
-            <h5 className="text-sm text-gray-400">On order over $49.86</h5>
+            <h5 className="text-sm text-gray-400">On order over $25.86</h5>
           </div>
         </div>
 

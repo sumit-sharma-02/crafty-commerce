@@ -30,7 +30,7 @@ const CreateProduct = () => {
     { id: "1c23ddc6-005b-4d46-8a96-5b7af5286a43", category: "Gadgets" },
     {
       id: "54222da7-9af4-46e0-bc3e-2115a4190f3d",
-      category: "Kitchen Utensils",
+      category: "Kitchen",
     },
     { id: "17529896-27b5-4914-955f-46f2ad36cb89", category: "Smartphones" },
     { id: "827a93e7-bf14-466f-b473-43eeddc11c47", category: "Laptops" },
@@ -38,11 +38,11 @@ const CreateProduct = () => {
     { id: "e2a151a4-ba26-4ecf-aa52-f9e33544a9a8", category: "Accessories" },
     {
       id: "e2a151a4-ba26-4ecf-aa52-f9e3354sdfd4",
-      category: "Gifts, Sports & Toys",
+      category: "Gifts, Sports and Toys",
     },
     {
       id: "e2a151a4-ba26-4ecf-aa52-f9e33544a9z2",
-      category: "Home & Furniture",
+      category: "Home and Furniture",
     },
   ];
 

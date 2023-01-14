@@ -442,7 +442,7 @@ const Footer = () => {
                 </Link>
               </li>
               <li className="mb-2 text-gray-600">
-                <Link to={"/products/Kitchen Utensils"}>
+                <Link to={"/products/Kitchen"}>
                   <span className="inline-block">
                     <svg
                       className="svg-inline--fa fa-dot-circle fa-w-16 h-2 w-2"
@@ -456,7 +456,7 @@ const Footer = () => {
                       ></path>
                     </svg>
                   </span>
-                  <span className="ml-2">Kitchen Utensils</span>
+                  <span className="ml-2">Kitchen</span>
                 </Link>
               </li>
               <li className="mb-2 text-gray-600">
