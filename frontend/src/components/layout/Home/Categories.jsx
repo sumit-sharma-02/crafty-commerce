@@ -178,7 +178,7 @@ const Categories = () => {
                 <li className="mb-4">
                   <Link
                     className="flex w-full items-center justify-between text-sm text-gray-500 hover:text-primary"
-                    to={"/products/watches"}
+                    to={"/products/Watches"}
                   >
                     <span>
                       <svg
@@ -812,7 +812,7 @@ const Categories = () => {
             <li className="relative mb-4 ">
               <Link
                 className="flex w-full items-center justify-between text-sm text-gray-500 hover:text-primary"
-                to={"/products/watches"}
+                to={"/products/Watches"}
               >
                 <span>
                   <svg
