@@ -571,7 +571,7 @@ const AllProducts = () => {
                               products.map((product) => (
                                 <div
                                   key={product._id}
-                                  className="bg-gray-200 bg-opacity-30 pb-4 "
+                                  className="flex flex-col justify-evenly bg-gray-200 bg-opacity-30 pb-4"
                                 >
                                   {/* ------ */}
                                   <div className="relative">
