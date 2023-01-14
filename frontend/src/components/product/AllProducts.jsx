@@ -452,7 +452,7 @@ const AllProducts = () => {
                 </div>
               </div>
               {/* ------------ */}
-              <div className=" mt-5 rounded border">
+              <div className=" my-5 rounded border">
                 {/* ------- */}
                 <img
                   className="w-full duration-300 hover:opacity-80"
@@ -580,8 +580,8 @@ const AllProducts = () => {
                                       className="h-full w-full cursor-pointer transition-opacity duration-300 ease-in-out hover:opacity-90"
                                     >
                                       <img
-                                        className=" mx-auto h-full w-full"
-                                        src={Hoodie}
+                                        className="mx-auto h-full w-full"
+                                        src={product.images[0].url}
                                         alt="Hoodie"
                                       />
                                     </Link>
@@ -596,7 +596,7 @@ const AllProducts = () => {
                                       {product.name}
                                     </Link>
                                     {/* --Rating-- */}
-                                    <div className=" my-2 flex items-center justify-center space-x-1">
+                                    <div className="flex items-center justify-center space-x-1">
                                       {/* ---- */}
                                       <div className="rating-outer">
                                         <div
@@ -611,7 +611,7 @@ const AllProducts = () => {
                                       {calculateNumOfReviews(product)}
                                     </div>
                                     {/* --Price-- */}
-                                    <div className="mt-3 flex items-center justify-center">
+                                    <div className="flex items-center justify-center">
                                       <span className="mr-2 text-lg font-bold text-primary">
                                         ${parseFloat(product.price).toFixed(2)}
                                       </span>

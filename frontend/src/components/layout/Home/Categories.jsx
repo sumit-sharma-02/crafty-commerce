@@ -19,22 +19,22 @@ import { BsChevronDown } from "react-icons/bs";
 import { BsChevronUp } from "react-icons/bs";
 
 // Images used
-import GadgetsCover from "../../../images/gadgets-cover.jpg";
-import ClothingCover from "../../../images/clothing-cover.jpg";
+// import GadgetsCover from "../../../images/gadgets-cover.jpg";
+// import ClothingCover from "../../../images/clothing-cover.jpg";
 import CarouselCover1 from "../../../images/carousel-cover-1.webp";
 import CarouselCover2 from "../../../images/carousel-cover-2.webp";
 import CarouselCover3 from "../../../images/carousel-cover-3.webp";
 
 const Categories = () => {
-  const [isGadgetCategoryOpen, setIsGadgetCategoryOpen] = useState(false);
-  const toggleGadgetCategory = () => {
-    setIsGadgetCategoryOpen(!isGadgetCategoryOpen);
-  };
+  // const [isGadgetCategoryOpen, setIsGadgetCategoryOpen] = useState(false);
+  // const toggleGadgetCategory = () => {
+  //   setIsGadgetCategoryOpen(!isGadgetCategoryOpen);
+  // };
 
-  const [isClothingCategoryOpen, setIsClothingCategoryOpen] = useState(false);
-  const toggleClothingCategory = () => {
-    setIsClothingCategoryOpen(!isClothingCategoryOpen);
-  };
+  // const [isClothingCategoryOpen, setIsClothingCategoryOpen] = useState(false);
+  // const toggleClothingCategory = () => {
+  //   setIsClothingCategoryOpen(!isClothingCategoryOpen);
+  // };
 
   const [isCategoryDropdownOpen, setIsCategoryDropdownOpen] = useState(false);
   const toggleCategoryDropdown = () => {
@@ -294,8 +294,8 @@ const Categories = () => {
 
             <motion.li
               className="mb-4"
-              onMouseEnter={toggleClothingCategory}
-              onMouseLeave={toggleClothingCategory}
+              // onMouseEnter={toggleClothingCategory}
+              // onMouseLeave={toggleClothingCategory}
             >
               <Link
                 className="flex w-full items-center justify-between text-sm text-gray-500 hover:text-primary"
@@ -305,7 +305,7 @@ const Categories = () => {
                   <GiClothes className="mb-1 mr-1 inline-block h-4 w-4" />{" "}
                   Clothing
                 </span>
-                <span className="invisible xl:visible">
+                {/* <span className="invisible xl:visible">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     className="h-4 w-4"
@@ -320,10 +320,10 @@ const Categories = () => {
                       d="M9 5l7 7-7 7"
                     ></path>
                   </svg>
-                </span>
+                </span> */}
               </Link>
 
-              {isClothingCategoryOpen && (
+              {/* {isClothingCategoryOpen && (
                 <motion.div
                   initial={{ x: 200, opacity: 0 }}
                   animate={{
@@ -590,13 +590,13 @@ const Categories = () => {
                     />
                   </div>
                 </motion.div>
-              )}
+              )} */}
             </motion.li>
 
             <motion.li
               className="mb-4"
-              onMouseEnter={toggleGadgetCategory}
-              onMouseLeave={toggleGadgetCategory}
+              // onMouseEnter={toggleGadgetCategory}
+              // onMouseLeave={toggleGadgetCategory}
             >
               <Link
                 className="flex w-full items-center justify-between text-sm text-gray-500 hover:text-primary"
@@ -606,7 +606,7 @@ const Categories = () => {
                   <CgToolbox className="mb-1 mr-1 inline-block h-4 w-4" />{" "}
                   Gadgets{" "}
                 </span>
-                <span className="invisible xl:visible">
+                {/* <span className="invisible xl:visible">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     className="h-4 w-4"
@@ -621,10 +621,10 @@ const Categories = () => {
                       d="M9 5l7 7-7 7"
                     ></path>
                   </svg>
-                </span>
+                </span> */}
               </Link>
 
-              {isGadgetCategoryOpen && (
+              {/* {isGadgetCategoryOpen && (
                 <motion.div
                   initial={{ x: 200, opacity: 0 }}
                   animate={{
@@ -760,7 +760,7 @@ const Categories = () => {
                     />
                   </div>
                 </motion.div>
-              )}
+              )} */}
             </motion.li>
 
             <li className="mb-4">

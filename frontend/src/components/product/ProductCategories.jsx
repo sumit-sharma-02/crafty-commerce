@@ -13,9 +13,9 @@ const ProductCategories = (props) => {
       <li className="h-max w-full cursor-pointer hover:bg-gray-100">
         <Link
           className="flex w-full items-center justify-between p-4 text-sm text-gray-500 hover:text-primary"
-          to={"/products/Accessories"}
+          to={"/products/Clothing"}
           onClick={() => {
-            props.setCategory("Accessories");
+            props.setCategory("Clothing");
             props.setCurrentPage(1);
           }}
         >
@@ -27,9 +27,9 @@ const ProductCategories = (props) => {
       <li className="h-max w-full cursor-pointer hover:bg-gray-100">
         <Link
           className="flex w-full items-center justify-between p-4 text-sm text-gray-500 hover:text-primary"
-          to={"/products/Clothes"}
+          to={"/products/Gadgets"}
           onClick={() => {
-            props.setCategory("Clothes");
+            props.setCategory("Gadgets");
             props.setCurrentPage(1);
           }}
         >
@@ -42,9 +42,9 @@ const ProductCategories = (props) => {
       <li className="h-max w-full cursor-pointer hover:bg-gray-100">
         <Link
           className="flex w-full items-center justify-between p-4 text-sm text-gray-500 hover:text-primary"
-          to={"/products/Grocery"}
+          to={"/products/Kitchen Utensils"}
           onClick={() => {
-            props.setCategory("Grocery");
+            props.setCategory("Kitchen Utensils");
             props.setCurrentPage(1);
           }}
         >
@@ -68,9 +68,9 @@ const ProductCategories = (props) => {
       <li className="h-max w-full cursor-pointer hover:bg-gray-100">
         <Link
           className="flex w-full items-center justify-between p-4 text-sm text-gray-500 hover:text-primary"
-          to={"/products/Electronics"}
+          to={"/products/Smartphones"}
           onClick={() => {
-            props.setCategory("Electronics");
+            props.setCategory("Smartphones");
             props.setCurrentPage(1);
           }}
         >
@@ -83,7 +83,7 @@ const ProductCategories = (props) => {
       {/* ---- */}
       <li className="h-max w-full cursor-pointer hover:bg-gray-100">
         {/* -------Linkga menu button----------- */}
-        <div
+        <Link
           className="flex w-full items-center justify-between p-4 text-sm text-gray-500 hover:text-primary"
           to={"/products/Laptops"}
           onClick={() => {
@@ -94,15 +94,15 @@ const ProductCategories = (props) => {
           <span>
             <MdLaptopMac className="mb-1 mr-1 inline-block h-4 w-4" /> Laptops
           </span>
-        </div>
+        </Link>
       </li>
       {/* ---- */}
       <li className="h-max w-full cursor-pointer hover:bg-gray-100">
         <Link
           className="flex w-full items-center justify-between p-4 text-sm text-gray-500 hover:text-primary"
-          to={"/products/Headphones"}
+          to={"/products/Watches"}
           onClick={() => {
-            props.setCategory("Headphones");
+            props.setCategory("Watches");
             props.setCurrentPage(1);
           }}
         >
@@ -126,9 +126,9 @@ const ProductCategories = (props) => {
       <li className="h-max w-full cursor-pointer hover:bg-gray-100">
         <Link
           className="flex w-full items-center justify-between p-4 text-sm text-gray-500 hover:text-primary"
-          to={"/products/Food"}
+          to={"/products/Accessories"}
           onClick={() => {
-            props.setCategory("Food");
+            props.setCategory("Accessories");
             props.setCurrentPage(1);
           }}
         >
@@ -152,9 +152,9 @@ const ProductCategories = (props) => {
       <li className="h-max w-full cursor-pointer hover:bg-gray-100">
         <Link
           className="flex w-full items-center justify-between p-4 text-sm text-gray-500 hover:text-primary"
-          to={"/products/Sports"}
+          to={"/products/Gifts, Sports and Toys"}
           onClick={() => {
-            props.setCategory("Sports");
+            props.setCategory("Gifts, Sports and Toys");
             props.setCurrentPage(1);
           }}
         >
@@ -178,9 +178,9 @@ const ProductCategories = (props) => {
       <li className="h-max w-full cursor-pointer hover:bg-gray-100">
         <Link
           className="flex w-full items-center justify-between p-4 text-sm text-gray-500 hover:text-primary"
-          to={"/products/Home"}
+          to={"/products/Home and Furniture"}
           onClick={() => {
-            props.setCategory("Home");
+            props.setCategory("Home and Furniture");
             props.setCurrentPage(1);
           }}
         >

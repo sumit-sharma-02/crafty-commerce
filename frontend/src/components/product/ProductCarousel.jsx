@@ -10,13 +10,13 @@ import "swiper/css/thumbs";
 import "./ProductCarousel.css";
 
 // Icons used
-import Suitcase1 from "../../images/suitcase1.jpg";
+// import Suitcase1 from "../../images/suitcase1.jpg";
 
 const ProductCarousel = (product) => {
   const [thumbsSwiper, setThumbsSwiper] = useState(null);
 
   return (
-    <div className="flex flex-col">
+    <div className="flex flex-col space-y-2">
       <Swiper
         spaceBetween={10}
         slidesPerView={1}
@@ -26,11 +26,11 @@ const ProductCarousel = (product) => {
           swiper: thumbsSwiper && !thumbsSwiper.destroyed ? thumbsSwiper : null,
         }}
         modules={[FreeMode, Navigation, Thumbs]}
-        className="w-max h-max"
+        className="h-max w-max"
       >
         {product.product.images.map((image) => (
           <SwiperSlide key={image.public_id}>
-            <img src={Suitcase1} alt={product.product.name} />
+            <img src={image.url} alt={product.product.name} />
           </SwiperSlide>
         ))}
       </Swiper>
@@ -45,7 +45,7 @@ const ProductCarousel = (product) => {
       >
         {product.product.images.map((image) => (
           <SwiperSlide key={image.public_id}>
-            <img src={Suitcase1} alt={product.product.name} />
+            <img src={image.url} alt={product.product.name} />
           </SwiperSlide>
         ))}
       </Swiper>

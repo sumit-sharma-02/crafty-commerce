@@ -26,7 +26,7 @@ import Reason1 from "../../images/reasons-1.png";
 import Reason2 from "../../images/reasons-2.png";
 import Reason3 from "../../images/reasons-3.png";
 import Reason4 from "../../images/reasons-4.png";
-import Suitcase1 from "../../images/suitcase1.jpg";
+// import Suitcase1 from "../../images/suitcase1.jpg";
 // import Bag1 from "../../images/bag1.jpg";
 // import Bag2 from "../../images/bag2.jpg";
 // import Shirt1 from "../../images/shirt1.jpg";
@@ -95,7 +95,7 @@ const Product = () => {
         <div>
           {product.images.map((image) => (
             <div key={image.public_id}>
-              <img className="w-full" src={Suitcase1} alt={product.name} />
+              <img className="w-full" src={image.url} alt={product.name} />
             </div>
           ))}
         </div>
@@ -342,7 +342,7 @@ const Product = () => {
                           </div>
                         </div>
                         {/* ------------ */}
-                        <div className=" mt-5 rounded border">
+                        <div className="mt-5 rounded border">
                           {/* ------- */}
                           <img
                             className="w-full duration-300 hover:opacity-80"
@@ -430,7 +430,7 @@ const Product = () => {
                 </div>
               </div>
               {/* ------------ */}
-              <div className=" mt-5 rounded border">
+              <div className=" my-5 rounded border">
                 {/* ------- */}
                 <img
                   className="w-full duration-300 hover:opacity-80"

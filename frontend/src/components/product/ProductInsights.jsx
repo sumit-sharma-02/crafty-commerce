@@ -191,7 +191,7 @@ const ProductInsights = ({ product }) => {
   return (
     <>
       {/* ----002---- */}
-      <div className=" mt-10 divide-y rounded border border-gray-200 lg:col-span-3">
+      <div className="my-10 divide-y rounded border border-gray-200 lg:col-span-3">
         {/* ---button---- */}
         <div className=" bg-gray-100">
           <ul className="items-center gap-2 text-center sm:flex">
@@ -204,13 +204,13 @@ const ProductInsights = ({ product }) => {
                 setProductInsightsOptions([true, false, false]);
               }}
             >
-              <button className=" block py-2 px-6 text-sm font-bold uppercase tracking-widest">
+              <button className=" block py-1 px-2 text-xs font-bold uppercase tracking-widest sm:py-2 sm:px-6 sm:text-sm">
                 Description
               </button>
               <div
                 className={`${
                   productInsightsOptions[0] ? "w-full" : "w-0"
-                } mx-auto -mb-0.5 mt-1 flex h-1 justify-center bg-primary duration-300 hover:w-full`}
+                } mx-auto -mb-0.5 mt-1 flex h-[2px] justify-center bg-primary duration-300 hover:w-full sm:h-1`}
               ></div>
             </li>
             {/* ----- */}
@@ -222,14 +222,14 @@ const ProductInsights = ({ product }) => {
                 setProductInsightsOptions([false, true, false]);
               }}
             >
-              <button className=" block py-2 px-6 text-sm font-bold uppercase tracking-widest">
+              <button className=" block py-1 px-2 text-xs font-bold uppercase tracking-widest sm:py-2 sm:px-6 sm:text-sm">
                 {" "}
                 Show Reviews
               </button>
               <div
                 className={`${
                   productInsightsOptions[1] ? "w-full" : "w-0"
-                } mx-auto -mb-0.5 mt-1 flex h-1 justify-center bg-primary duration-300 hover:w-full`}
+                } mx-auto -mb-0.5 mt-1 flex h-[2px] justify-center bg-primary duration-300 hover:w-full sm:h-1`}
               ></div>
             </li>
             <li
@@ -241,8 +241,8 @@ const ProductInsights = ({ product }) => {
               }}
             >
               <button
-                className="block py-2 px-6 text-sm font-bold uppercase 
-              tracking-widest"
+                className="block py-1 px-2 text-xs font-bold uppercase tracking-widest sm:py-2 sm:px-6 
+              sm:text-sm"
                 onClick={() => {
                   setTimeout(() => {
                     if (user) {
@@ -257,7 +257,7 @@ const ProductInsights = ({ product }) => {
               <div
                 className={`${
                   productInsightsOptions[2] ? "w-full" : "w-0"
-                } mx-auto -mb-0.5 mt-1 flex h-1 justify-center bg-primary duration-300 hover:w-full`}
+                } mx-auto -mb-0.5 mt-1 flex h-[2px] justify-center bg-primary duration-300 hover:w-full sm:h-1`}
               ></div>
             </li>
           </ul>
