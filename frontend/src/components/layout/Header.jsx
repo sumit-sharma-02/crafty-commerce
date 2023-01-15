@@ -276,7 +276,7 @@ const Header = () => {
             <Link to={"/"} className="flex w-max items-center">
               <img
                 src={Logo}
-                className="h-12 w-12"
+                className="h-[3.5rem] w-[3.5rem]"
                 alt="Crafty Commerce Logo"
               />
               <img
@@ -579,18 +579,21 @@ const Header = () => {
                     <Link
                       className="block border-b p-3 px-4 text-sm tracking-widest transition-colors duration-300 ease-in-out hover:bg-gray-200"
                       to={"/faq"}
+                      onClick={toggleAboutUsDropdown}
                     >
                       Frequently Asked Questions (FAQ)
                     </Link>
                     <Link
                       className="block border-b p-3 px-4 text-sm tracking-widest transition-colors duration-300 ease-in-out hover:bg-gray-200"
                       to={"/terms-and-condition"}
+                      onClick={toggleAboutUsDropdown}
                     >
                       Terms & conditions
                     </Link>
                     <Link
                       className="block p-3 px-4 text-sm tracking-widest transition-colors duration-300 ease-in-out hover:bg-gray-200"
                       to={"/privacy-policy"}
+                      onClick={toggleAboutUsDropdown}
                     >
                       Privacy & policy
                     </Link>
