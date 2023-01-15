@@ -1008,5 +1008,206 @@
     "stock": 500,
     "numOfReviews": 12,
     "reviews": []
+  },
+  {
+    "name": "Apple MacBook Pro (16-inch, M1 Pro chip with 10‑core CPU and 16‑core GPU, 32GB RAM, 512GB SSD) - Space Gray Z14V0016E",
+    "price": "2809.90",
+    "description": "The new MacBook Pro delivers game-changing performance for pro users. Choose the powerful M1 Pro to supercharge pro-level workflows while getting amazing battery life. And with an immersive 16-inch Liquid Retina XDR display and an array of pro ports, you can do more than ever with MacBook Pro.",
+    "ratings": 5.0,
+    "images": [
+      {
+        "public_id": "products/Laptops/Apple_2021_MacBook_Pro_16-inch_M1_Pro_chip_with_10_core_CPU_and_16_core_GPU_32GB_RAM_512GB_SSD_i5xhdq",
+        "url": "https://res.cloudinary.com/craftycommerce/image/upload/v1673777308/products/Laptops/Apple_2021_MacBook_Pro_16-inch_M1_Pro_chip_with_10_core_CPU_and_16_core_GPU_32GB_RAM_512GB_SSD_i5xhdq.jpg"
+      },
+      {
+        "public_id": "products/Laptops/Apple_2021_MacBook_Pro_16-inch_M1_Pro_chip_with_10_core_CPU_and_16_core_GPU_32GB_RAM_512GB_SSD_-1_nud48u",
+        "url": "https://res.cloudinary.com/craftycommerce/image/upload/v1673777308/products/Laptops/Apple_2021_MacBook_Pro_16-inch_M1_Pro_chip_with_10_core_CPU_and_16_core_GPU_32GB_RAM_512GB_SSD_-1_nud48u.jpg"
+      },
+      {
+        "public_id": "products/Laptops/Apple_2021_MacBook_Pro_16-inch_M1_Pro_chip_with_10_core_CPU_and_16_core_GPU_32GB_RAM_512GB_SSD_-3_n3vzxj",
+        "url": "https://res.cloudinary.com/craftycommerce/image/upload/v1673777307/products/Laptops/Apple_2021_MacBook_Pro_16-inch_M1_Pro_chip_with_10_core_CPU_and_16_core_GPU_32GB_RAM_512GB_SSD_-3_n3vzxj.jpg"
+      }
+    ],
+    "category": "Laptops",
+    "seller": "Apple Inc.",
+    "stock": 500,
+    "numOfReviews": 12,
+    "reviews": []
+  },
+  {
+    "name": "Apple MacBook Pro 16” with Liquid Retina XDR Display, M1 Max Chip with 10-Core CPU and 32-Core GPU, 64GB Memory, 4TB SSD, Space Gray",
+    "price": "4703.79",
+    "description": "Supercharged for pros.The most powerful MacBook Pro ever is here. With the blazing-fast M1 Max chip - the first Apple silicon designed for pros - you get groundbreaking performance and amazing battery life. Add to that a stunning Liquid Retina XDR display, the best camera and audio ever in a Mac notebook, and all the ports you need. The first notebook of its kind, this MacBook Pro is a beast. Up to 3.7x faster CPU performance Up to 13x faster graphics performance Up to 11x faster machine learning Up to 21 hours battery lifePro to the Max.M1 Max - Scary faster.M1 Max is the most powerful chip ever created for a pro notebook, with 10 CPU cores, up to 32 GPU cores, and a 16-core Neural Engine. It delivers two times faster graphics processing and double the memory bandwidth of M1 Pro. And it has a dedicated media engine for decode and two for encode - with up to two times faster video encoding - and two ProRes accelerators for even higher multistream performance. 10-core CPU 32-core GPU 64GB of unified memory Up to 400GB/s memory bandwidth Support for four external displays Up to 7 streams of 8K ProRes video playbackM1 Max scale the amazing M1 architecture to new heights - and for the first time, they bring a system on a chip (SoC) architecture to a pro notebook. Both have more CPU cores, more GPU cores, and more unified memory than M1.",
+    "ratings": 5.0,
+    "images": [
+      {
+        "public_id": "products/Laptops/Apple_MacBook_Pro_16_with_Liquid_Retina_XDR_Display_M1_Max_Chip_with_10-Core_CPU_and_32-Core_GPU_64GB_Memory_4TB_SSD-1_secsqg",
+        "url": "https://res.cloudinary.com/craftycommerce/image/upload/v1673777307/products/Laptops/Apple_MacBook_Pro_16_with_Liquid_Retina_XDR_Display_M1_Max_Chip_with_10-Core_CPU_and_32-Core_GPU_64GB_Memory_4TB_SSD-1_secsqg.webp"
+      },
+      {
+        "public_id": "products/Laptops/Apple_MacBook_Pro_16_with_Liquid_Retina_XDR_Display_M1_Max_Chip_with_10-Core_CPU_and_32-Core_GPU_64GB_Memory_4TB_SSD-2_fcpvg",
+        "url": "https://res.cloudinary.com/craftycommerce/image/upload/v1673777308/products/Laptops/Apple_MacBook_Pro_16_with_Liquid_Retina_XDR_Display_M1_Max_Chip_with_10-Core_CPU_and_32-Core_GPU_64GB_Memory_4TB_SSD-2_fcpvgl.jpg"
+      },
+      {
+        "public_id": "products/Laptops/Apple_MacBook_Pro_16_with_Liquid_Retina_XDR_Display_M1_Max_Chip_with_10-Core_CPU_and_32-Core_GPU_64GB_Memory_4TB_SSD-3_aev3j",
+        "url": "https://res.cloudinary.com/craftycommerce/image/upload/v1673777308/products/Laptops/Apple_MacBook_Pro_16_with_Liquid_Retina_XDR_Display_M1_Max_Chip_with_10-Core_CPU_and_32-Core_GPU_64GB_Memory_4TB_SSD-3_aev3jb.jpg"
+      }
+    ],
+    "category": "Laptops",
+    "seller": "Apple Inc.",
+    "stock": 4,
+    "numOfReviews": 5,
+    "reviews": []
+  },
+  {
+    "name": "Apple MacBook Air Laptop M1 Chip, 13” Retina Display, Gold with AppleCare+ for MacBook Air",
+    "price": "1168.00",
+    "description": "All-Day Battery Life – Go longer than ever with up to 18 hours of battery life. Powerful Performance – Take on everything from professional-quality editing to action-packed gaming with ease. The Apple M1 chip with an 8-core CPU delivers up to 3.5x faster performance than the previous generation while using way less power. Superfast Memory – 8GB of unified memory makes your entire system speedy and responsive. That way it can support tasks like memory-hogging multitab browsing and opening a huge graphic file quickly and easily. AppleCare+ for Mac extends your coverage to three years from your AppleCare+ purchase date and adds up to two incidents of accidental damage coverage. Each incident of accidental damage coverage is subject to a service fee of $99 for screen damage or external enclosure damage, or $299 for other damage, plus applicable tax Global repair coverage",
+    "ratings": 4.5,
+    "images": [
+      {
+        "public_id": "products/Laptops/Apple_2020_MacBook_Air_Laptop_M1_Chip_13_Retina_Display-1_jznyxg",
+        "url": "https://res.cloudinary.com/craftycommerce/image/upload/v1673777307/products/Laptops/Apple_2020_MacBook_Air_Laptop_M1_Chip_13_Retina_Display-1_jznyxg.jpg"
+      },
+      {
+        "public_id": "products/Laptops/Apple_2020_MacBook_Air_Laptop_M1_Chip_13_Retina_Display-2_jlokks",
+        "url": "https://res.cloudinary.com/craftycommerce/image/upload/v1673777307/products/Laptops/Apple_2020_MacBook_Air_Laptop_M1_Chip_13_Retina_Display-2_jlokks.jpg"
+      },
+      {
+        "public_id": "products/Laptops/Apple_2020_MacBook_Air_Laptop_M1_Chip_13_Retina_Display-3_shubik",
+        "url": "https://res.cloudinary.com/craftycommerce/image/upload/v1673777308/products/Laptops/Apple_2020_MacBook_Air_Laptop_M1_Chip_13_Retina_Display-3_shubik.jpg"
+      }
+    ],
+    "category": "Laptops",
+    "seller": "Apple Inc.",
+    "stock": 500,
+    "numOfReviews": 18,
+    "reviews": []
+  },
+  {
+    "name": "SAMSUNG 15.6” Galaxy Book 2 Pro with Intel ARC Laptop Computer, i7 / 32GB / 1TB, 12th Gen Intel Core Processor, Evo Certified, Lightweight, Graphite",
+    "price": "1799.99",
+    "description": "Meet SAMSUNG Galaxy Book2 Pro, the new way to PC. To take on the world, you need a laptop that’s ready to go the distance, literally. Thinner and lighter than ever, Galaxy Book2 Pro helps you seize the day wherever you are without skimping on power — in fact, it’s packing an ultra-mighty processor. Breeze through your day with effortless Galaxy connectivity — for instance, you can pair Galaxy Book2 Pro with your smartphone and instantly sync files, call and text right from your laptop. It’s super easy. Discover a new world of productivity, versatility and power with Galaxy Book2 Pro, the PC that’s ready to go wherever you go. Do more effortlessly with Galaxy devices that work seamlessly together. Enjoy even more control over your files with Private Share,**** a security feature that lets you set time limits on your shared files — the recipient can’t capture or share your file, and you remain in control with the ability to revoke file access at any time. File security has never been so simple. *Compared to 2021 Galaxy Book Pro model. **Battery life varies significantly with settings, usage, and other factors. Based on results from internal lab tests for local video playback time conducted by Samsung. Test results from a prerelease version of the device under default settings (audio volume and brightness levels) without connection to WiFi or mobile network. ***Compared to 25W or 45W charger. ****Private Share features for both the sender and receiver require Galaxy devices with Windows 10, Android OS 10.0 (Q), and One UI 2.1 or above and the Quick Share app. Requires Wi-Fi and Bluetooth connection.",
+    "ratings": 4.5,
+    "images": [
+      {
+        "public_id": "products/Laptops/SAMSUNG_15.6_Galaxy_Book2_Pro_with_Intel_ARC_Laptop_Computer_ldmxkf",
+        "url": "https://res.cloudinary.com/craftycommerce/image/upload/v1673777308/products/Laptops/SAMSUNG_15.6_Galaxy_Book2_Pro_with_Intel_ARC_Laptop_Computer_ldmxkf.jpg"
+      },
+      {
+        "public_id": "products/Laptops/SAMSUNG_15.6_Galaxy_Book2_Pro_with_Intel_ARC_Laptop_Computer-2_fspdkb",
+        "url": "https://res.cloudinary.com/craftycommerce/image/upload/v1673777309/products/Laptops/SAMSUNG_15.6_Galaxy_Book2_Pro_with_Intel_ARC_Laptop_Computer-2_fspdkb.jpg"
+      }
+    ],
+    "category": "Laptops",
+    "seller": "Samsung Inc.",
+    "stock": 500,
+    "numOfReviews": 23,
+    "reviews": []
+  },
+  {
+    "name": "Lenovo Ideapad 3 Laptop, 15.6” HD Touchscreen, 11th Gen Intel Core i3-1115G4 Processor, 8GB DDR4 RAM, 256GB PCIe NVMe SSD, HDMI, Webcam, Wi-Fi 5, Bluetooth, Windows 11 Home, Almond",
+    "price": "389.49",
+    "description": "Memory is 8GB high-bandwidth RAM to smoothly run multiple applications and browser tabs all at once. Hard Drive is 256GB PCIe Solid State Drive which allows to fast bootup and data transfer. 11th Gen Intel Core i3-1115G4 Dual-Core 3.0GHz Processor (6MB Intel Smart Cache, up to 4.10GHz) Intel UHD Graphics. 2 x USB 3.2 Gen 1 Type-A, 1 x USB 2.0 Type-A, 1 x HDMI, 1 x Combination Audio Jack, 1 x Multi-format SD Media Card Reader, Wireless-AC Wi-Fi 5 + Bluetooth Combo.",
+    "ratings": 4.0,
+    "images": [
+      {
+        "public_id": "products/Laptops/Lenovo_2022_Newest_Ideapad_3_Laptop-1_kezbpe",
+        "url": "https://res.cloudinary.com/craftycommerce/image/upload/v1673777308/products/Laptops/Lenovo_2022_Newest_Ideapad_3_Laptop-1_kezbpe.jpg"
+      },
+      {
+        "public_id": "products/Laptops/Lenovo_2022_Newest_Ideapad_3_Laptop-2_pen3a6",
+        "url": "https://res.cloudinary.com/craftycommerce/image/upload/v1673777309/products/Laptops/Lenovo_2022_Newest_Ideapad_3_Laptop-2_pen3a6.jpg"
+      }
+    ],
+    "category": "Laptops",
+    "seller": "Lenovo Pvt Ltd",
+    "stock": 500,
+    "numOfReviews": 3,
+    "reviews": []
+  },
+  {
+    "name": "Acer Aspire 5 A515-56-347N Slim Laptop - 15.6” Full HD IPS Display - 11th Gen Intel i3-1115G4 Dual Core Processor - 8GB DDR4 - 128GB NVMe SSD - WiFi 6 - Amazon Alexa - Windows 11 Home in S Mode",
+    "price": "360.00",
+    "description": "Powerful Productivity: 11th Generation Intel Core i3-1115G4 Dual Core processor delivers unmatched speed and intelligence, enabling impressive creating, productivity, and gaming experiences. With Turbo Boost Technology, get up to 4.1GHz for your high-demand applications. Connectivity Technology: Wi-Fi, Bluetooth, HDMI. Visibly Stunning: Experience sharp details and crisp colors on the 15.6” Full HD IPS display with 82.58% screen-to-body, 16:9 aspect ratio and narrow bezels. Ergonomic Typing: Ergonomically designed hinge lifts the keyboard for comfortable typing, improved cooling, and a better sound experience. Internal Specifications: 8GB DDR4 on-board memory (1 slot available); 128GB NVMe solid-state drive storage (1 hard drive bay available) to store your files and media. Acer's Purified.Voice technology, features enhanced digital signal processing to cancel out background noise, improve speech accuracy and far-field pickup, which not only makes calls clearer, but makes talking to Alexa easier than before.. Using Alexa on your PC is as easy as asking a question. Just ask and Alexa can check your calendar, create lists, play music, answer questions, read the news and more.. Secure Operating System: Windows 11 Home in S mode comes with advanced security features built right in, like protections against phishing and malicious software so you don't have to think twice when navigating to a new webpage or downloading an app.",
+    "ratings": 4.5,
+    "images": [
+      {
+        "public_id": "products/Laptops/Acer_Aspire_5_A515-56-347N_Slim_Laptop-1_c0cdsz",
+        "url": "https://res.cloudinary.com/craftycommerce/image/upload/v1673777307/products/Laptops/Acer_Aspire_5_A515-56-347N_Slim_Laptop-1_c0cdsz.jpg"
+      },
+      {
+        "public_id": "products/Laptops/Acer_Aspire_5_A515-56-347N_Slim_Laptop-2_fpczp5",
+        "url": "https://res.cloudinary.com/craftycommerce/image/upload/v1673777307/products/Laptops/Acer_Aspire_5_A515-56-347N_Slim_Laptop-2_fpczp5.jpg"
+      }
+    ],
+    "category": "Laptops",
+    "seller": "Acer",
+    "stock": 500,
+    "numOfReviews": 3,
+    "reviews": []
+  },
+  {
+    "name": "Lenovo Ideapad 1i 14” HD Laptop, Intel Celeron N4020 Processor, 4GB RAM, 64GB eMMC Flash Memory, Intel HD Graphics 500, HD Webcam, Stereo Speakers, Cloud Grey, Windows 11S, 128GB USB Card",
+    "price": "199.90",
+    "description": "1366 x 768 resolution boasts impressive color and clarity. Anti-glare Energy-efficient LED screen. Ultra-low-voltage platform. Dual-core, two-way processing provides maximum high-efficiency power to go. Stereo Speakers & 720p HD camera with Built-in microphone. Plenty of high-bandwidth RAM to smoothly run your games as well as multiple programs. Voice control: with Google Assistant voice-recognition support. Wireless-AC + Bluetooth, Cloud Grey. Bonus 32GB SnowBell USB Card.",
+    "ratings": 3.5,
+    "images": [
+      {
+        "public_id": "products/Laptops/2022_Lenovo_Ideapad_1i_14_HD_Laptop_Intel_Celeron_N4020_Processor_w0ealj",
+        "url": "https://res.cloudinary.com/craftycommerce/image/upload/v1673777307/products/Laptops/2022_Lenovo_Ideapad_1i_14_HD_Laptop_Intel_Celeron_N4020_Processor_w0ealj.jpg"
+      },
+      {
+        "public_id": "products/Laptops/2022_Lenovo_Ideapad_1i_14_HD_Laptop_Intel_Celeron_N4020_Processor-1_arwkdb",
+        "url": "https://res.cloudinary.com/craftycommerce/image/upload/v1673777307/products/Laptops/2022_Lenovo_Ideapad_1i_14_HD_Laptop_Intel_Celeron_N4020_Processor-1_arwkdb.jpg"
+      }
+    ],
+    "category": "Laptops",
+    "seller": "Lenovo Pvt Ltd",
+    "stock": 500,
+    "numOfReviews": 7,
+    "reviews": []
+  },
+  {
+    "name": "ASUS Vivobook Go 15 L510 Thin & Light Laptop Computer, 15.6” FHD Display, Intel Celeron N4020 Processor, 4GB RAM, 64GB Storage, Windows 11 Home in S Mode, 1 Year Microsoft 365, Star Black, L510MA-AS02",
+    "price": "225.57",
+    "description": "Fast & Efficient: With an Intel Celeron N4020 processor, 4GB RAM and 64GB of storage, the ASUS Vivobook Go 15 L510 will help you get things done swiftly and efficiently.Up to 8hrs battery life Immersive Visuals: This 15.6 inch laptop features an innovative thin-bezel NanoEdge display that provides more usable onscreen space for immersive viewing. It also enables a larger screen to fit into a smaller chassis, giving you a laptop with a more compact footprint Extremely Portable: This ultra thin laptop is only 3.46Ibs and 0.71 inches thin, meaning it will easily slip into a backpack to be taken anywhere you need to go. Long Battery Life: Take this ASUS laptop with you anywhere without bringing the power adaptor - its long battery life gives you the flexibility to work or play anywhere Designed to be Quiet: the fanless design keeps noise levels down, so you won't be distracted when working on a spreadsheet or watching a movie Easy Sharing: A cleverly designed 180° lay-flat hinge on the ASUS Vivobook Go 15 makes it easy to share content or collaborate with friends ASUS Vivobook Go 15 comes with Wi-Fi 5 (802.11ac) for speeds up to three times faster than 802.11n Windows 11 Home in S mode is a 100% app based version of Windows where applications are verified and tested for quality on the Microsoft store. If you want to install an app that isn't available in the Microsoft Store, you'll need to switch out of S mode for free, which is easy and fast.",
+    "ratings": 4.5,
+    "images": [
+      {
+        "public_id": "products/Laptops/ASUS_Vivobook_Go_15_L510_Thin_Light_Laptop_Computer-1_nyx8fp",
+        "url": "https://res.cloudinary.com/craftycommerce/image/upload/v1673777308/products/Laptops/ASUS_Vivobook_Go_15_L510_Thin_Light_Laptop_Computer-1_nyx8fp.jpg"
+      },
+      {
+        "public_id": "products/Laptops/ASUS_Vivobook_Go_15_L510_Thin_Light_Laptop_Computer-2_epjp1o",
+        "url": "https://res.cloudinary.com/craftycommerce/image/upload/v1673777308/products/Laptops/ASUS_Vivobook_Go_15_L510_Thin_Light_Laptop_Computer-2_epjp1o.jpg"
+      }
+    ],
+    "category": "Laptops",
+    "seller": "ASUS Pvt Ltd",
+    "stock": 5,
+    "numOfReviews": 4,
+    "reviews": []
+  },
+  {
+    "name": "SAMSUNG Chromebook Plus V2, 2-in-1, 4GB RAM, 32GB eMMC, 13MP Camera, Chrome OS, 12.2”, 16:10 Aspect Ratio, Stealth Silver (XE521QAB-K01US)",
+    "price": "275.00",
+    "description": "Get more done anywhere, anytime, with the lightweight 2-in-1 Chromebook Plus. Stay on top of your projects with the built-in pen, dual camera and full Google experience right at your fingertips. And cross more off your list without slowing down with a powerful battery and Intel processor. At just under 3 pounds, The Chromebook Plus is incredibly lightweight-just slip it into your bag and take it anywhere. Plus, it easily folds over into tablet mode so you can quickly switch between typing and writing down ideas.",
+    "ratings": 3.5,
+    "images": [
+      {
+        "public_id": "products/Laptops/SAMSUNG_Chromebook_Plus_V2_2-in-1_4GB_RAM_32GB_eMMC-1_og9vgh",
+        "url": "https://res.cloudinary.com/craftycommerce/image/upload/v1673777309/products/Laptops/SAMSUNG_Chromebook_Plus_V2_2-in-1_4GB_RAM_32GB_eMMC-1_og9vgh.jpg"
+      },
+      {
+        "public_id": "products/Laptops/SAMSUNG_Chromebook_Plus_V2_2-in-1_4GB_RAM_32GB_eMMC-2_dgzqjd",
+        "url": "https://res.cloudinary.com/craftycommerce/image/upload/v1673777309/products/Laptops/SAMSUNG_Chromebook_Plus_V2_2-in-1_4GB_RAM_32GB_eMMC-2_dgzqjd.jpg"
+      }
+    ],
+    "category": "Laptops",
+    "seller": "Samsung Inc.",
+    "stock": 10,
+    "numOfReviews": 23,
+    "reviews": []
   }
 ]
