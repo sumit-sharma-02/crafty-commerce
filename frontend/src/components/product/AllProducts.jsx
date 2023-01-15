@@ -37,7 +37,7 @@ const AllProducts = () => {
   const [viewType, setViewType] = useState([true, false]);
   const [isCategorySideBarOpen, setIsCategorySideBarOpen] = useState(false);
   const [currentPage, setCurrentPage] = useState(1);
-  const [price, setPrice] = useState([1, 2000]);
+  const [price, setPrice] = useState([1, 5000]);
   const [rating, setRating] = useState(0);
 
   const params = useParams();

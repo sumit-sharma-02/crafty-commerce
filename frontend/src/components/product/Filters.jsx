@@ -59,11 +59,11 @@ const Filters = (data) => {
                 <Range
                   marks={{
                     1: `1$`,
-                    2000: `2000$`,
+                    5000: `5000$`,
                   }}
                   min={1}
-                  max={2000}
-                  defaultValue={[1, 2000]}
+                  max={5000}
+                  defaultValue={[1, 5000]}
                   tipFormatter={(value) => `$${value}`}
                   tipProps={{
                     placement: "top",
