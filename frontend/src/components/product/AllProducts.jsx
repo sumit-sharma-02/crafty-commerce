@@ -308,7 +308,6 @@ const AllProducts = () => {
                               {/* -- Category start-- */}
                               <ProductCategories
                                 setCategory={setCategory}
-                                currentPage={currentPage}
                                 setCurrentPage={setCurrentPage}
                               />
                             </motion.div>

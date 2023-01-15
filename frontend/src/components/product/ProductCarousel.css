@@ -1,6 +1,7 @@
 .swiper {
     width: 100%;
     height: max-content !important;
+    user-select: none;
 }
 
 .swiper-button-prev,

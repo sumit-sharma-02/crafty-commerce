@@ -16,7 +16,7 @@ const ProductCategories = (props) => {
           to={"/products/Clothing"}
           onClick={() => {
             props.setCategory("Clothing");
-            props.setCurrentPage(1);
+            props.setCurrentPage && props.setCurrentPage(1);
           }}
         >
           <span>
@@ -30,7 +30,7 @@ const ProductCategories = (props) => {
           to={"/products/Gadgets"}
           onClick={() => {
             props.setCategory("Gadgets");
-            props.setCurrentPage(1);
+            props.setCurrentPage && props.setCurrentPage(1);
           }}
         >
           <span>
@@ -45,7 +45,7 @@ const ProductCategories = (props) => {
           to={"/products/Kitchen"}
           onClick={() => {
             props.setCategory("Kitchen");
-            props.setCurrentPage(1);
+            props.setCurrentPage && props.setCurrentPage(1);
           }}
         >
           <span>
@@ -71,7 +71,7 @@ const ProductCategories = (props) => {
           to={"/products/Smartphones"}
           onClick={() => {
             props.setCategory("Smartphones");
-            props.setCurrentPage(1);
+            props.setCurrentPage && props.setCurrentPage(1);
           }}
         >
           <span>
@@ -88,7 +88,7 @@ const ProductCategories = (props) => {
           to={"/products/Laptops"}
           onClick={() => {
             props.setCategory("Laptops");
-            props.setCurrentPage(1);
+            props.setCurrentPage && props.setCurrentPage(1);
           }}
         >
           <span>
@@ -103,7 +103,7 @@ const ProductCategories = (props) => {
           to={"/products/Watches"}
           onClick={() => {
             props.setCategory("Watches");
-            props.setCurrentPage(1);
+            props.setCurrentPage && props.setCurrentPage(1);
           }}
         >
           <span>
@@ -129,7 +129,7 @@ const ProductCategories = (props) => {
           to={"/products/Accessories"}
           onClick={() => {
             props.setCategory("Accessories");
-            props.setCurrentPage(1);
+            props.setCurrentPage && props.setCurrentPage(1);
           }}
         >
           <span>
@@ -155,7 +155,7 @@ const ProductCategories = (props) => {
           to={"/products/Gifts, Sports and Toys"}
           onClick={() => {
             props.setCategory("Gifts, Sports and Toys");
-            props.setCurrentPage(1);
+            props.setCurrentPage && props.setCurrentPage(1);
           }}
         >
           <span>
@@ -181,7 +181,7 @@ const ProductCategories = (props) => {
           to={"/products/Home and Furniture"}
           onClick={() => {
             props.setCategory("Home and Furniture");
-            props.setCurrentPage(1);
+            props.setCurrentPage && props.setCurrentPage(1);
           }}
         >
           <span>

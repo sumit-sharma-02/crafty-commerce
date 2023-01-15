@@ -310,10 +310,7 @@ const Product = () => {
                               All Categories{" "}
                             </span>
                           </li>
-                          <ProductCategories
-                            category={category}
-                            setCategory={setCategory}
-                          />
+                          <ProductCategories setCategory={setCategory} />
                         </ul>
                         {/* ------------ */}
                         <div className=" mt-5 rounded border">
@@ -398,10 +395,7 @@ const Product = () => {
                   </span>
                 </li>
                 {/* -- Catagory start-- */}
-                <ProductCategories
-                  category={category}
-                  setCategory={setCategory}
-                />
+                <ProductCategories setCategory={setCategory} />
               </ul>
               {/* ------------ */}
               <div className=" mt-5 rounded border">
