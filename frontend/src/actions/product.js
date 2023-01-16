@@ -3,7 +3,7 @@ import productsConstant from "../constants/product";
 
 // Get All Products
 export const getProducts =
-  (keyword = "", currentPage = 1, price = [1, 2000], category, rating = 0) =>
+  (keyword = "", currentPage = 1, price = [1, 5000], category, rating = 0) =>
   async (dispatch) => {
     try {
       dispatch({

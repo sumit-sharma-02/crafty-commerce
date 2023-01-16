@@ -26,6 +26,7 @@ const PopularItems = () => {
     false,
     false,
   ]);
+  const [category, setCategory] = useState("Best Selling");
 
   const dispatch = useDispatch();
   const {
@@ -160,8 +161,8 @@ const PopularItems = () => {
     if (error) {
       return showErrorToast(error);
     }
-    dispatch(getProducts());
-  }, [dispatch, popularCategory, error]);
+    dispatch(getProducts("", 1, [1, 5000], category, 0));
+  }, [dispatch, error, category]);
 
   return (
     <div className=" lg:col-span-3">
@@ -179,6 +180,7 @@ const PopularItems = () => {
                 onClick={() => {
                   if (!popularCategory[0]) {
                     setPopularCategory([true, false, false, false]);
+                    setCategory("Best Selling");
                   }
                 }}
               >
@@ -198,6 +200,7 @@ const PopularItems = () => {
                 onClick={() => {
                   if (!popularCategory[1]) {
                     setPopularCategory([false, true, false, false]);
+                    setCategory("Featured");
                   }
                 }}
               >
@@ -217,6 +220,7 @@ const PopularItems = () => {
                 onClick={() => {
                   if (!popularCategory[2]) {
                     setPopularCategory([false, false, true, false]);
+                    setCategory("New Arrivals");
                   }
                 }}
               >
@@ -236,6 +240,7 @@ const PopularItems = () => {
                 onClick={() => {
                   if (!popularCategory[3]) {
                     setPopularCategory([false, false, false, true]);
+                    setCategory("Top Reviewed");
                   }
                 }}
               >

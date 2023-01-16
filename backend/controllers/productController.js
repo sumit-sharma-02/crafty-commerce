@@ -36,7 +36,7 @@ exports.newProduct = catchAsyncErrors(async (req, res, next) => {
 
 // Get all Products => /api/v1/products?keyword=Shirt
 exports.getProducts = catchAsyncErrors(async (req, res, next) => {
-  const resPerPage = 4;
+  const resPerPage = 9;
   const productsCount = await Product.countDocuments();
   const apiFeatures = new APIFeatures(Product.find(), req.query)
     .search()
