@@ -5,6 +5,7 @@ import { toast } from "react-toastify";
 import { getProducts } from "../../../actions/product";
 import { useDispatch, useSelector } from "react-redux";
 import { Loader } from "../../../components/";
+import popular from "../../../utils/popular.json";
 
 // CSS Imports
 import "../../../App.css";
@@ -26,15 +27,9 @@ const PopularItems = () => {
     false,
     false,
   ]);
-  const [category, setCategory] = useState("Best Selling");
 
   const dispatch = useDispatch();
-  const {
-    loading,
-    error,
-    products,
-    // productsCount
-  } = useSelector((state) => state.products);
+  const { loading, error } = useSelector((state) => state.products);
 
   const calculateNumOfReviews = (product) => {
     if (product.numOfReviews === 0) {
@@ -161,8 +156,8 @@ const PopularItems = () => {
     if (error) {
       return showErrorToast(error);
     }
-    dispatch(getProducts("", 1, [1, 5000], category, 0));
-  }, [dispatch, error, category]);
+    dispatch(getProducts());
+  }, [dispatch, error]);
 
   return (
     <div className=" lg:col-span-3">
@@ -180,7 +175,6 @@ const PopularItems = () => {
                 onClick={() => {
                   if (!popularCategory[0]) {
                     setPopularCategory([true, false, false, false]);
-                    setCategory("Best Selling");
                   }
                 }}
               >
@@ -200,7 +194,6 @@ const PopularItems = () => {
                 onClick={() => {
                   if (!popularCategory[1]) {
                     setPopularCategory([false, true, false, false]);
-                    setCategory("Featured");
                   }
                 }}
               >
@@ -220,7 +213,6 @@ const PopularItems = () => {
                 onClick={() => {
                   if (!popularCategory[2]) {
                     setPopularCategory([false, false, true, false]);
-                    setCategory("New Arrivals");
                   }
                 }}
               >
@@ -240,7 +232,6 @@ const PopularItems = () => {
                 onClick={() => {
                   if (!popularCategory[3]) {
                     setPopularCategory([false, false, false, true]);
-                    setCategory("Top Reviewed");
                   }
                 }}
               >
@@ -274,8 +265,12 @@ const PopularItems = () => {
               }}
               className="grid grid-cols-2 gap-2 sm:gap-6"
             >
-              {products &&
-                products.map((product) => addDiscount(30, 55, product))}
+              {popular &&
+                popular.map(
+                  (product) =>
+                    product.category === "Best Selling" &&
+                    addDiscount(30, 55, product)
+                )}
             </motion.div>
           ))}
 
@@ -317,8 +312,12 @@ const PopularItems = () => {
               }}
               className="grid grid-cols-2 gap-2 sm:gap-6"
             >
-              {products &&
-                products.map((product) => addDiscount(30, 55, product))}
+              {popular &&
+                popular.map(
+                  (product) =>
+                    product.category === "Featured" &&
+                    addDiscount(30, 55, product)
+                )}
             </motion.div>
           ))}
 
@@ -360,8 +359,12 @@ const PopularItems = () => {
               }}
               className="grid grid-cols-2 gap-2 sm:gap-6"
             >
-              {products &&
-                products.map((product) => addDiscount(30, 55, product))}
+              {popular &&
+                popular.map(
+                  (product) =>
+                    product.category === "New Arrivals" &&
+                    addDiscount(30, 55, product)
+                )}
             </motion.div>
           ))}
 
@@ -403,8 +406,12 @@ const PopularItems = () => {
               }}
               className="grid grid-cols-2 gap-2 sm:gap-6"
             >
-              {products &&
-                products.map((product) => addDiscount(30, 55, product))}
+              {popular &&
+                popular.map(
+                  (product) =>
+                    product.category === "Top Reviewed" &&
+                    addDiscount(30, 55, product)
+                )}
             </motion.div>
           ))}
 
