@@ -37,8 +37,20 @@ exports.newProduct = catchAsyncErrors(async (req, res, next) => {
 // Get all Products => /api/v1/products?keyword=Shirt
 exports.getProducts = catchAsyncErrors(async (req, res, next) => {
   const resPerPage = 9;
+  let sortParam = req.query.sort;
+  let sortQuery;
+
+  if (sortParam === "A-Z") {
+    sortQuery = { name: 1 };
+  } else if (sortParam === "Z-A") {
+    sortQuery = { name: -1 };
+  } else if (sortParam === "price[Asc]") {
+    sortQuery = { price: 1 };
+  } else if (sortParam === "price[Dsc]") {
+    sortQuery = { price: -1 };
+  }
   const productsCount = await Product.countDocuments();
-  const apiFeatures = new APIFeatures(Product.find(), req.query)
+  const apiFeatures = new APIFeatures(Product.find().sort(sortQuery), req.query)
     .search()
     .filter();
 

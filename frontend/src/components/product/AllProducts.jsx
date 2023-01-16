@@ -39,6 +39,7 @@ const AllProducts = () => {
   const [currentPage, setCurrentPage] = useState(1);
   const [price, setPrice] = useState([1, 5000]);
   const [rating, setRating] = useState(0);
+  const [sorting, setSorting] = useState("A-Z");
 
   const params = useParams();
   const [category, setCategory] = useState(params.category);
@@ -58,8 +59,10 @@ const AllProducts = () => {
     if (error) {
       return showErrorToast(error);
     }
-    dispatch(getProducts(keyword, currentPage, price, category, rating));
-  }, [dispatch, error, keyword, currentPage, price, category, rating]);
+    dispatch(
+      getProducts(keyword, currentPage, price, category, rating, sorting)
+    );
+  }, [dispatch, error, keyword, currentPage, price, category, rating, sorting]);
 
   const toggleCategorySidebar = () => {
     setIsCategorySideBarOpen(!isCategorySideBarOpen);
@@ -549,12 +552,17 @@ const AllProducts = () => {
                             {/* ------- */}
                             <select
                               className="border p-1 px-2 focus:border-gray-500 focus:outline-none"
-                              defaultValue={"alphaasc"}
+                              value={sorting}
+                              onChange={(event) =>
+                                setSorting(event.target.value)
+                              }
                             >
-                              <option value="alphaasc">A to Z</option>
-                              <option value="alphadesc">Z to A</option>
-                              <option value="priceasc">Price: Ascending</option>
-                              <option value="pricedesc">
+                              <option value="A-Z">A to Z</option>
+                              <option value="Z-A">Z to A</option>
+                              <option value="price[Asc]">
+                                Price: Ascending
+                              </option>
+                              <option value="price[Dsc]">
                                 Price: Descending
                               </option>
                             </select>
