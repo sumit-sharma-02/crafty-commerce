@@ -84,8 +84,8 @@ function Cart() {
               >
                 <div className="flex h-full w-1/3 flex-row items-center justify-center md:w-1/4 md:flex-col md:items-start md:justify-start">
                   <img
-                    src={emptyCart}
-                    alt=""
+                    src={item.image}
+                    alt={item.name}
                     className="ml-5 h-full w-full object-cover object-center md:ml-0"
                   />
                 </div>
@@ -93,7 +93,7 @@ function Cart() {
                   <div className="flex w-full flex-col items-start justify-start md:flex-row md:items-start md:justify-between">
                     <Link
                       to={`/product/${item.product}`}
-                      className="px-5 pt-4 text-sm font-normal tracking-tighter text-gray-800 transition-colors duration-500 hover:text-primary md:pt-0 md:text-base"
+                      className="px-5 pt-4 text-sm font-normal text-gray-800 transition-colors duration-500 hover:text-primary md:pt-0 md:text-base"
                     >
                       {item.name}
                     </Link>

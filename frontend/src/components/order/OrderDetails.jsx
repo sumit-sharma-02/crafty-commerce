@@ -10,7 +10,7 @@ import { toast } from "react-toastify";
 import { FaBoxOpen } from "react-icons/fa";
 
 // Images used
-import emptyOrder from "../../images/emptyOrder.jpg";
+// import emptyOrder from "../../images/emptyOrder.jpg";
 
 const OrderDetails = () => {
   const dispatch = useDispatch();
@@ -191,14 +191,14 @@ const OrderDetails = () => {
                       md:flex-row md:items-center md:justify-center"
                         >
                           <img
-                            src={emptyOrder}
-                            alt=""
+                            src={item.image}
+                            alt={item.name}
                             className="h-full w-full rounded object-cover object-center"
                           />
                         </div>
                         <div className="flex h-full w-full flex-col md:w-3/4 md:pl-3">
                           <div className="flex w-full flex-col items-start justify-start md:flex-row md:items-start md:justify-between">
-                            <div className="px-5 pt-4 pb-2 text-sm font-normal tracking-tighter text-gray-700 md:pb-0 md:pt-0">
+                            <div className="px-5 pt-4 pb-2 text-sm font-normal text-gray-700 md:pb-0 md:pt-0">
                               <span>{item.name}</span>
                             </div>
                             <div className="flex h-full flex-col items-start justify-start px-5 md:mt-0 md:items-end md:px-0">

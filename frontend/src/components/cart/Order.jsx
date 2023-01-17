@@ -52,19 +52,14 @@ const Order = () => {
                    md:flex-row md:items-center md:space-x-6 xl:space-x-8"
                   >
                     <div className="pb-4 md:w-40 md:pb-8">
-                      <img
-                        className=""
-                        // src={item.image}
-                        src="https://i.ibb.co/84qQR4p/Rectangle-10.png"
-                        alt=""
-                      />
+                      <img className="" src={item.image} alt={item.name} />
                     </div>
                     <div className="flex w-full flex-col items-center justify-between space-y-4 pb-8 md:flex-row md:space-y-0">
                       <div className="flex w-full flex-col items-start justify-start space-y-8">
                         <Link
                           to={`/product/${item.product}`}
-                          className="text-base font-semibold leading-6 text-gray-800 transition-colors
-                        duration-300 ease-in-out hover:text-primary xl:text-lg"
+                          className="text-base font-semibold leading-6 text-gray-800 transition-colors duration-300
+                        ease-in-out line-clamp-2 hover:text-primary xl:text-lg"
                         >
                           {item.name}
                         </Link>
@@ -95,7 +90,7 @@ const Order = () => {
                       Subtotal
                     </p>
                     <p className="text-base leading-4 text-gray-600">
-                      ${subTotal}
+                      ${subTotal.toFixed(2)}
                     </p>
                   </div>
                   <div className="flex w-full items-center justify-between">
