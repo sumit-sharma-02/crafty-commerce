@@ -1,22 +1,15 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import { Link } from "react-router-dom";
-import { CountdownTimer } from "../../../components";
+import { CountdownTimer, Loader } from "../../../components";
 import { motion } from "framer-motion";
+import limited from "../../../utils/limited.json";
 
 // Icons used
-import {
-  // AiFillStar,
-  // AiOutlineStar,
-  AiOutlineShoppingCart,
-} from "react-icons/ai";
+import { AiOutlineShoppingCart } from "react-icons/ai";
 
 // Images used
-import Clock1 from "../../../images/clock1.webp";
-import Shirt1 from "../../../images/shirt1.webp";
-import Toy1 from "../../../images/toy1.webp";
 import Banner2 from "../../../images/banner2.webp";
 import Banner3 from "../../../images/banner3.webp";
-import { useRef } from "react";
 
 let currentDate = new Date();
 let countDownDays = 7;
@@ -32,7 +25,6 @@ const LimitedOffers = () => {
   const [timerHours, setTimerHours] = useState();
   const [timerMinutes, setTimerMinutes] = useState();
   const [timerSeconds, setTimerSeconds] = useState();
-
   let timer = useRef();
 
   const startTimer = () => {
@@ -61,12 +53,49 @@ const LimitedOffers = () => {
     }, 1000);
   };
 
+  const addDiscount = (min, max, product) => {
+    const discount = Math.floor(Math.random() * (max - min + 1) + min);
+    return (
+      <>
+        <span className="mr-1 text-gray-500 xsm:text-xs">
+          <del>
+            $
+            {parseFloat(
+              product.price + product.price * (discount / 100)
+            ).toFixed(2)}
+          </del>
+        </span>
+        <span className="text-orange-500 2xs:hidden xsm:block xsm:text-xs">
+          ({discount}% OFF)
+        </span>
+      </>
+    );
+  };
+
+  const calculateNumOfReviews = (product) => {
+    if (product.numOfReviews === 0) {
+      return <span className="text-xs text-gray-500">(No Reviews Yet)</span>;
+    } else if (product.numOfReviews === 1) {
+      return (
+        <span className="text-xs text-gray-500">
+          ({product.numOfReviews} Review)
+        </span>
+      );
+    } else {
+      return (
+        <span className="text-xs text-gray-500">
+          ({product.numOfReviews} Reviews)
+        </span>
+      );
+    }
+  };
+
   useEffect(() => {
     startTimer();
     return () => {
       clearInterval(timer.current);
     };
-  });
+  }, []);
 
   return (
     <section className="px-4 pt-10 sm:px-10 xl:px-24">
@@ -82,16 +111,20 @@ const LimitedOffers = () => {
             onMouseLeave={() => setLimitedProductsHover([false, false, false])}
             onTouchStart={() => setLimitedProductsHover([true, false, false])}
             onTouchEnd={() => setLimitedProductsHover([false, false, false])}
-            className=" relative"
+            className="relative"
           >
-            <img className=" mx-auto h-max w-max" src={Shirt1} alt="" />
+            <img
+              className=" mx-auto h-max w-max"
+              src={limited[0].images[0].url}
+              alt={limited[0].name}
+            />
 
             <div className="absolute top-0 space-y-3">
               <div>
                 <button
                   className="flex items-center rounded bg-black 
-                bg-opacity-60 p-2 text-xs font-medium  text-white transition-all duration-300
-                ease-in-out hover:bg-primary"
+              bg-opacity-60 p-2 text-xs font-medium  text-white transition-all duration-300
+              ease-in-out hover:bg-primary"
                 >
                   <AiOutlineShoppingCart className="h-4 w-4" />
                   {limitedProductsHover[0] && (
@@ -116,24 +149,43 @@ const LimitedOffers = () => {
 
           <div className="p-0 py-5 lg:p-5">
             <Link
-              className=" text-xl font-bold text-gray-800 hover:text-primary"
-              to={"/"}
+              className=" text-xl font-bold text-gray-800 line-clamp-2 hover:text-primary"
+              to={`/product/${limited[0]._id}`}
             >
-              Cillum Ham Hock
+              {limited[0].name}
             </Link>
 
-            <div className="my-2 flex items-center">
-              <span className="mr-4 text-2xl font-bold text-primary">
-                £360.00
+            {/* --Rating-- */}
+            <div className="flex items-center justify-start space-x-1 py-1">
+              {/* ---- */}
+              <div className="rating-outer">
+                <div
+                  className="rating-inner"
+                  style={{
+                    width: `${(limited[0].ratings / 5) * 100}%`,
+                  }}
+                ></div>
+              </div>
+              {calculateNumOfReviews(limited[0])}
+            </div>
+            {/* --Price-- */}
+            <div className="flex items-center justify-start pb-1">
+              <span className="mr-2 text-xl font-bold text-primary">
+                ${parseFloat(limited[0].price).toFixed(2)}
+              </span>
+              <span className="mr-1 text-sm text-gray-500 sm:text-lg">
+                <del>
+                  $
+                  {parseFloat(
+                    limited[0].price + limited[0].price * (34 / 100)
+                  ).toFixed(2)}
+                </del>
               </span>
             </div>
 
-            <div>
+            <div className="pb-1">
               <span className="text-sm leading-loose text-gray-500 line-clamp-4">
-                Nam tempus turpis at metus scelerisque placerat nulla deumantos
-                sollicitudin felis. Pellentesque diam dolor, elementum et
-                lobortis at, mollis ut risus. Sedcus faucibus cosmo sullamcorper
-                mattis...
+                {limited[0].description}
               </span>
             </div>
 
@@ -167,11 +219,11 @@ const LimitedOffers = () => {
               onTouchEnd={() => setLimitedProductsHover([false, false, false])}
               className="relative col-span-2"
             >
-              <img className=" mx-auto h-max w-max" src={Toy1} alt="" />
-
-              <div className=" absolute top-4 right-10 flex h-10 w-10 items-center justify-center rounded-full bg-red-500 text-xs text-white">
-                <span>-27%</span>
-              </div>
+              <img
+                className=" mx-auto h-max w-max"
+                src={limited[1].images[0].url}
+                alt={limited[1].name}
+              />
 
               <div className="absolute top-0 space-y-3">
                 <div>
@@ -202,27 +254,43 @@ const LimitedOffers = () => {
             </div>
             <div className=" col-span-3 py-5 md:py-0">
               <Link
-                className=" text-xl font-bold text-gray-800 hover:text-primary"
-                href="catlyn-snake-pilit.html"
+                className="text-xl font-bold text-gray-800 line-clamp-2 hover:text-primary"
+                to={`/product/${limited[1]._id}`}
               >
-                Denouncing pleasure
+                {limited[1].name}
               </Link>
 
-              <div className=" my-2 flex items-center">
-                <span className=" mr-4 text-2xl font-bold text-primary">
-                  £350.00
+              {/* --Rating-- */}
+              <div className="flex items-center justify-start space-x-1 py-1">
+                {/* ---- */}
+                <div className="rating-outer">
+                  <div
+                    className="rating-inner"
+                    style={{
+                      width: `${(limited[1].ratings / 5) * 100}%`,
+                    }}
+                  ></div>
+                </div>
+                {calculateNumOfReviews(limited[1])}
+              </div>
+              {/* --Price-- */}
+              <div className="flex items-center justify-start pb-1">
+                <span className="mr-2 text-xl font-bold text-primary">
+                  ${parseFloat(limited[1].price).toFixed(2)}
                 </span>
-                <span className=" text-xl text-gray-500">
-                  <del>£450.00</del>
+                <span className="mr-1 text-sm text-gray-500 sm:text-lg">
+                  <del>
+                    $
+                    {parseFloat(
+                      limited[1].price + limited[1].price * (34 / 100)
+                    ).toFixed(2)}
+                  </del>
                 </span>
               </div>
 
               <div>
                 <span className="text-sm leading-loose text-gray-500 line-clamp-4">
-                  Nam tempus turpis at metus scelerisque placerat nulla
-                  deumantos sollicitudin felis. Pellentesque diam dolor,
-                  elementum et lobortis at, mollis ut risus. Sedcus faucibus
-                  cosmo sullamcorper mattis...
+                  {limited[1].description}
                 </span>
               </div>
 
@@ -254,7 +322,11 @@ const LimitedOffers = () => {
               onTouchEnd={() => setLimitedProductsHover([false, false, false])}
               className="relative col-span-2"
             >
-              <img className=" mx-auto h-max w-max" src={Clock1} alt="" />
+              <img
+                className="mx-auto h-max w-max"
+                src={limited[2].images[0].url}
+                alt={limited[2].name}
+              />
 
               <div className="absolute top-0 space-y-3">
                 <div>
@@ -284,26 +356,45 @@ const LimitedOffers = () => {
               </div>
             </div>
 
-            <div className=" col-span-3 py-5 md:py-0">
+            <div className="col-span-3 py-5 md:py-0">
               <Link
-                className=" text-xl font-bold text-gray-800 hover:text-primary"
-                to={"/"}
+                className="text-xl font-bold text-gray-800 line-clamp-2 hover:text-primary"
+                to={`/product/${limited[2]._id}`}
               >
-                Cow pastrami jowl
+                {limited[2].name}
               </Link>
 
-              <div className=" my-2 flex items-center">
-                <span className=" mr-4 text-2xl font-bold text-primary">
-                  £350.00
+              {/* --Rating-- */}
+              <div className="flex items-center justify-start space-x-1 py-1">
+                {/* ---- */}
+                <div className="rating-outer">
+                  <div
+                    className="rating-inner"
+                    style={{
+                      width: `${(limited[2].ratings / 5) * 100}%`,
+                    }}
+                  ></div>
+                </div>
+                {calculateNumOfReviews(limited[2])}
+              </div>
+              {/* --Price-- */}
+              <div className="flex items-center justify-start pb-1">
+                <span className="mr-2 text-xl font-bold text-primary">
+                  ${parseFloat(limited[2].price).toFixed(2)}
+                </span>
+                <span className="mr-1 text-sm text-gray-500 sm:text-lg">
+                  <del>
+                    $
+                    {parseFloat(
+                      limited[2].price + limited[2].price * (34 / 100)
+                    ).toFixed(2)}
+                  </del>
                 </span>
               </div>
 
               <div>
                 <span className="text-sm leading-loose text-gray-500 line-clamp-4">
-                  Nam tempus turpis at metus scelerisque placerat nulla
-                  deumantos sollicitudin felis. Pellentesque diam dolor,
-                  elementum et lobortis at, mollis ut risus. Sedcus faucibus
-                  cosmo sullamcorper mattis...
+                  {limited[2].description}
                 </span>
               </div>
 

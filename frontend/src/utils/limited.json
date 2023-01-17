@@ -1,0 +1,90 @@
+[
+    {
+        "_id": "63c550e5d861ab13dc09b48b",
+        "name": "PAL&SAM Cup & Mug Coffee Warmer for Desk, Electric Beverage & Candle Warmer with Auto Off, Smart Kitchen Gadget for Heating Coffee, Hot Chocolate, Tea, and Milk (Cup Excluded, White)",
+        "price": 23.59,
+        "description": "PERFORM THE BEST TEMP FOR YOUR COFFEE - PAL&SAM beverage warmer is a smart choice to keep your coffee warm on the desk or warm dishes on a dinner table for your guests. To present the best user experience, the PAL&SAM mug warmer presents 6 temperature range from 130°F to 180°F. According to the research provided by the National Coffee Association of the USA - 120°F to 160°F is the ideal range temperature to drink coffee.",
+        "ratings": 5,
+        "images": [
+            {
+                "public_id": "products/Gadgets/PAL_SAM_Cup_Mug_Coffee_Warmer_for_Desk_Electric_Beverage_Candle_Warmer_with_Auto_Off_Smart_Kitchen_Gadget_for_Heating_Coffee_Hot_Chocolate_Tea_and_Milk_Cup_Excluded_White_-1_r8bzcc",
+                "url": "https://res.cloudinary.com/craftycommerce/image/upload/v1673705071/products/Gadgets/PAL_SAM_Cup_Mug_Coffee_Warmer_for_Desk_Electric_Beverage_Candle_Warmer_with_Auto_Off_Smart_Kitchen_Gadget_for_Heating_Coffee_Hot_Chocolate_Tea_and_Milk_Cup_Excluded_White_-1_r8bzcc.jpg",
+                "_id": "63c550e5d861ab13dc09b48c"
+            },
+            {
+                "public_id": "products/Gadgets/PAL_SAM_Cup_Mug_Coffee_Warmer_for_Desk_Electric_Beverage_Candle_Warmer_with_Auto_Off_Smart_Kitchen_Gadget_for_Heating_Coffee_Hot_Chocolate_Tea_and_Milk_Cup_Excluded_White_-2_hebnl2",
+                "url": "https://res.cloudinary.com/craftycommerce/image/upload/v1673705071/products/Gadgets/PAL_SAM_Cup_Mug_Coffee_Warmer_for_Desk_Electric_Beverage_Candle_Warmer_with_Auto_Off_Smart_Kitchen_Gadget_for_Heating_Coffee_Hot_Chocolate_Tea_and_Milk_Cup_Excluded_White_-2_hebnl2.jpg",
+                "_id": "63c550e5d861ab13dc09b48d"
+            }
+        ],
+        "category": "Gadgets",
+        "seller": "Flash Mart",
+        "stock": 210,
+        "numOfReviews": 5,
+        "reviews": [],
+        "createdAt": "2023-01-16T13:28:05.086Z",
+        "__v": 0
+    },
+    {
+        "_id": "63c550e5d861ab13dc09b574",
+        "name": "AROEVE Air Purifiers for Large Room Up to 1095 Sq Ft Coverage with Air Quality Sensors H13",
+        "price": 129.99,
+        "description": "Equip with H13 True HEPA Filter and high-efficiency filter system, our air cleaner can easily filter particles as small as 0.3 microns in the air, such as dust, smoke, pollen, hair, and odor. Turn on the high-efficiency air purifier, it can refresh air per hour for a room as large as 1095 sq ft / 100 m², and you can enjoy a new comfortable air environment every moment of the day in your home and office.",
+        "ratings": 4.6,
+        "images": [
+            {
+                "public_id": "products/Home%20and%20Furniture/AROEVE_Air_Purifiers_for_Large_Room_ogvb1b",
+                "url": "https://res.cloudinary.com/craftycommerce/image/upload/v1673865284/products/Home%20and%20Furniture/AROEVE_Air_Purifiers_for_Large_Room_ogvb1b.jpg",
+                "_id": "63c550e5d861ab13dc09b575"
+            },
+            {
+                "public_id": "products/Home%20and%20Furniture/AROEVE_Air_Purifiers_for_Large_Room-2_nyciiv",
+                "url": "https://res.cloudinary.com/craftycommerce/image/upload/v1673865284/products/Home%20and%20Furniture/AROEVE_Air_Purifiers_for_Large_Room-2_nyciiv.jpg",
+                "_id": "63c550e5d861ab13dc09b576"
+            },
+            {
+                "public_id": "products/Home%20and%20Furniture/AROEVE_Air_Purifiers_for_Large_Room-3_f1iwhq",
+                "url": "https://res.cloudinary.com/craftycommerce/image/upload/v1673865284/products/Home%20and%20Furniture/AROEVE_Air_Purifiers_for_Large_Room-3_f1iwhq.jpg",
+                "_id": "63c550e5d861ab13dc09b577"
+            }
+        ],
+        "category": "Home and Furniture",
+        "seller": "Aroeve Store",
+        "stock": 500,
+        "numOfReviews": 12,
+        "reviews": [],
+        "createdAt": "2023-01-16T13:28:05.126Z",
+        "__v": 0
+    },
+    {
+        "_id": "63c550e5d861ab13dc09b578",
+        "name": "Keepsmile 100ft Led Strip Lights (2 Rolls of 50ft) Bluetooth Smart App Music Sync Color Changing RGB Led Light Strip with Remote and Power Adapter",
+        "price": 15.69,
+        "description": "Stick 100 ft led lights around the ceiling, under the cabinets, under the bed frame, and easily control these 100 ft led light strips using either the Keepsmile app or remote control.",
+        "ratings": 4.5,
+        "images": [
+            {
+                "public_id": "products/Home%20and%20Furniture/Keepsmile_100ft_Led_Strip_Lights_fwv3l7",
+                "url": "https://res.cloudinary.com/craftycommerce/image/upload/v1673865285/products/Home%20and%20Furniture/Keepsmile_100ft_Led_Strip_Lights_fwv3l7.jpg",
+                "_id": "63c550e5d861ab13dc09b579"
+            },
+            {
+                "public_id": "products/Home%20and%20Furniture/Keepsmile_100ft_Led_Strip_Lights-2_hxjegg",
+                "url": "https://res.cloudinary.com/craftycommerce/image/upload/v1673865286/products/Home%20and%20Furniture/Keepsmile_100ft_Led_Strip_Lights-2_hxjegg.jpg",
+                "_id": "63c550e5d861ab13dc09b57a"
+            },
+            {
+                "public_id": "products/Home%20and%20Furniture/Keepsmile_100ft_Led_Strip_Lights-3_ya4t8u",
+                "url": "https://res.cloudinary.com/craftycommerce/image/upload/v1673865286/products/Home%20and%20Furniture/Keepsmile_100ft_Led_Strip_Lights-3_ya4t8u.jpg",
+                "_id": "63c550e5d861ab13dc09b57b"
+            }
+        ],
+        "category": "Home and Furniture",
+        "seller": "Keepsmile",
+        "stock": 500,
+        "numOfReviews": 7,
+        "reviews": [],
+        "createdAt": "2023-01-16T13:28:05.127Z",
+        "__v": 0
+    }
+]
