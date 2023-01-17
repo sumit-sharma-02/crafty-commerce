@@ -214,25 +214,29 @@ export const resetPassword = (token, passwords) => async (dispatch) => {
 };
 
 // Get all users - ADMIN
-export const allUsers = () => async (dispatch) => {
-  try {
-    dispatch({
-      type: userConstants.ALL_USERS_REQUEST,
-    });
+export const allUsers =
+  (usersCurrentPage = 1) =>
+  async (dispatch) => {
+    try {
+      dispatch({
+        type: userConstants.ALL_USERS_REQUEST,
+      });
 
-    const { data } = await axios.get("/api/v1/admin/users");
+      const data = await axios.get(
+        `/api/v1/admin/users?page=${usersCurrentPage}`
+      );
 
-    dispatch({
-      type: userConstants.ALL_USERS_SUCCESS,
-      payload: data.users,
-    });
-  } catch (error) {
-    dispatch({
-      type: userConstants.ALL_USERS_FAIL,
-      payload: error.response.data.error,
-    });
-  }
-};
+      dispatch({
+        type: userConstants.ALL_USERS_SUCCESS,
+        payload: data,
+      });
+    } catch (error) {
+      dispatch({
+        type: userConstants.ALL_USERS_FAIL,
+        payload: error.response.data.error,
+      });
+    }
+  };
 
 // Delete user - ADMIN
 export const deleteUser = (id) => async (dispatch) => {

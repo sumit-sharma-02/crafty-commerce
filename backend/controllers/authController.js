@@ -1,5 +1,6 @@
 const User = require("../models/user");
 const ErrorHandler = require("../utils/errorHandler");
+const APIFeatures = require("../utils/apiFeatures");
 const catchAsyncErrors = require("../middlewares/catchAsyncErrors");
 const sendToken = require("../utils/jwtToken");
 const sendEmail = require("../utils/sendEmail");
@@ -211,10 +212,22 @@ exports.logout = catchAsyncErrors(async (req, res, next) => {
 
 // Get All Users => /api/v1/admin/users
 exports.getAllUsers = catchAsyncErrors(async (req, res, next) => {
-  const users = await User.find();
+  const resPerPage = 5;
+  const usersCount = await User.countDocuments();
+  const apiFeatures = new APIFeatures(User.find(), req.query);
+
+  let users = await apiFeatures.query;
+  let filteredUsersCount = users.length;
+
+  apiFeatures.pagination(resPerPage);
+  users = await apiFeatures.query.clone();
+
   res.status(200).json({
     success: true,
+    resPerPage,
     users,
+    usersCount,
+    filteredUsersCount,
   });
 });
 

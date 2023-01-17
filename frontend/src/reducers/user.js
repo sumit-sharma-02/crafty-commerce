@@ -180,7 +180,10 @@ export const allUsersReducer = (state = { users: [] }, action) => {
       return {
         ...state,
         loading: false,
-        users: action.payload,
+        users: action.payload.data.users,
+        usersCount: action.payload.data.usersCount,
+        resPerPage: action.payload.data.resPerPage,
+        filteredUsersCount: action.payload.data.filteredUsersCount,
       };
 
     case userConstants.ALL_USERS_FAIL:
