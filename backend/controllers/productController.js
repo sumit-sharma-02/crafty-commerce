@@ -71,10 +71,21 @@ exports.getProducts = catchAsyncErrors(async (req, res, next) => {
 
 // Get all Products (Admin) => /api/v1/admin/products
 exports.getAdminProducts = catchAsyncErrors(async (req, res, next) => {
-  const products = await Product.find();
+  const resPerPage = 9;
+  const productsCount = await Product.countDocuments();
+  const apiFeatures = new APIFeatures(Product.find(), req.query);
+
+  let products = await apiFeatures.query;
+  let filteredProductsCount = products.length;
+
+  apiFeatures.pagination(resPerPage);
+  products = await apiFeatures.query.clone();
 
   res.status(200).json({
     success: true,
+    filteredProductsCount,
+    productsCount,
+    resPerPage,
     products,
   });
 });

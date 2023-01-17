@@ -4,6 +4,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { toast } from "react-toastify";
 import { getProducts } from "../../actions/product";
 import { Link, useParams } from "react-router-dom";
+import Pagination from "react-js-pagination";
 import {
   Breadcrumb,
   Loader,
@@ -13,7 +14,6 @@ import {
   MetaData,
   ProductCategories,
 } from "../../components";
-import Pagination from "react-js-pagination";
 
 // Icons used
 import { VscChromeClose } from "react-icons/vsc";

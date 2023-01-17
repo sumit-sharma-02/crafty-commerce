@@ -35,25 +35,29 @@ export const getProducts =
   };
 
 // Get Admin All Products
-export const getAdminProducts = () => async (dispatch) => {
-  try {
-    dispatch({
-      type: productsConstant.ADMIN_PRODUCTS_REQUEST,
-    });
+export const getAdminProducts =
+  (currentPage = 1) =>
+  async (dispatch) => {
+    try {
+      dispatch({
+        type: productsConstant.ADMIN_PRODUCTS_REQUEST,
+      });
 
-    const { data } = await axios.get(`/api/v1/admin/products`);
+      const data = await axios.get(
+        `/api/v1/admin/products?page=${currentPage}`
+      );
 
-    dispatch({
-      type: productsConstant.ADMIN_PRODUCTS_SUCCESS,
-      payload: data.products,
-    });
-  } catch (error) {
-    dispatch({
-      type: productsConstant.ADMIN_PRODUCTS_FAIL,
-      payload: error.response.data.error,
-    });
-  }
-};
+      dispatch({
+        type: productsConstant.ADMIN_PRODUCTS_SUCCESS,
+        payload: data,
+      });
+    } catch (error) {
+      dispatch({
+        type: productsConstant.ADMIN_PRODUCTS_FAIL,
+        payload: error.response.data.error,
+      });
+    }
+  };
 
 // Get Details of a Product
 export const getProductDetails = (id) => async (dispatch) => {

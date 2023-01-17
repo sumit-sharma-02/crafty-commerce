@@ -3,22 +3,37 @@ import { Dialog, Transition } from "@headlessui/react";
 import { Link, useNavigate } from "react-router-dom";
 import { MetaData, Loader, Sidebar } from "../../components";
 import { useDispatch, useSelector } from "react-redux";
+import { toast } from "react-toastify";
+import productsConstant from "../../constants/product";
+import Pagination from "react-js-pagination";
 import {
   getAdminProducts,
   clearErrors,
   deleteProduct,
 } from "../../actions/product";
-import { toast } from "react-toastify";
-import productsConstant from "../../constants/product";
+
+// Icons used
+import { MdFirstPage } from "react-icons/md";
+import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
+import { BiLastPage } from "react-icons/bi";
 
 const ProductsList = () => {
   const [isDeleteWarningOpen, setIsDeleteWarningOpen] = useState(false);
+  const [currentPage, setCurrentPage] = useState(1);
   let [deletedProductId, setDeletedProductId] = useState("");
 
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
-  const { loading, error, products } = useSelector((state) => state.products);
+  const {
+    loading,
+    error,
+    products,
+    productsCount,
+    resPerPage,
+    filteredProductsCount,
+  } = useSelector((state) => state.products);
+
   const { error: deleteProductError, isDeleted } = useSelector(
     (state) => state.manipulateProduct
   );
@@ -47,6 +62,10 @@ const ProductsList = () => {
       progress: undefined,
       theme: "colored",
     });
+  };
+
+  const setCurrentPageNumber = (pageNumber) => {
+    setCurrentPage(pageNumber);
   };
 
   const setStockStatus = (stock) => {
@@ -131,7 +150,7 @@ const ProductsList = () => {
   };
 
   useEffect(() => {
-    dispatch(getAdminProducts());
+    dispatch(getAdminProducts(currentPage));
 
     if (error) {
       showErrorToast(error);
@@ -148,9 +167,7 @@ const ProductsList = () => {
       navigate("/admin/products/all");
       dispatch({ type: productsConstant.DELETE_PRODUCT_RESET });
     }
-  }, [error, deleteProductError, dispatch, isDeleted, navigate]);
-
-  window.scrollTo({ top: 0, behavior: "smooth" });
+  }, [error, deleteProductError, dispatch, isDeleted, navigate, currentPage]);
 
   return (
     <>
@@ -165,9 +182,9 @@ const ProductsList = () => {
           <div className="flex h-full w-full flex-1 flex-col">
             <main>
               <div className="mx-2 my-2 grid rounded-3xl border-4 border-gray-400 bg-gray-100 px-8 pb-10 sm:mx-4 sm:my-4">
-                <div className="grid grid-cols-12 gap-6">
-                  <div className="xxl:col-span-9 col-span-12 grid grid-cols-12 gap-6">
-                    <div className="col-span-12 mt-8">
+                <div className="grid grid-cols-5 gap-6">
+                  <div className="xxl:col-span-2 col-span-5 grid grid-cols-5 gap-6">
+                    <div className="col-span-5 mt-8">
                       <div className="intro-y flex h-10 items-center">
                         <h2 className="mr-5 truncate text-3xl font-extrabold">
                           All Products
@@ -175,7 +192,7 @@ const ProductsList = () => {
                       </div>
                     </div>
 
-                    <div className="col-span-12 mt-5">
+                    <div className="col-span-5 mt-5">
                       <div className="grid grid-cols-1 gap-2 lg:grid-cols-1">
                         <div className="rounded-lg bg-white p-4 shadow-lg">
                           {/* <h1 className="text-base font-bold">Table</h1> */}
@@ -233,7 +250,9 @@ const ProductsList = () => {
                                               </p>
                                             </td>
                                             <td className="whitespace-no-wrap px-6 py-4 text-sm leading-5">
-                                              <p>{product.name}</p>
+                                              <p className="line-clamp-1">
+                                                {product.name}
+                                              </p>
                                               <p className="text-xs text-gray-400">
                                                 {product.category}
                                               </p>
@@ -301,6 +320,37 @@ const ProductsList = () => {
                           </div>
                         </div>
                       </div>
+                    </div>
+
+                    <div className="col-span-5 mt-5">
+                      {/* ----Pagination---- */}
+                      {resPerPage < productsCount &&
+                        filteredProductsCount > resPerPage && (
+                          <div className="my-4 mb-10 flex w-full items-center justify-center space-x-1">
+                            <Pagination
+                              activePage={currentPage}
+                              itemsCountPerPage={resPerPage}
+                              totalItemsCount={filteredProductsCount}
+                              onChange={setCurrentPageNumber}
+                              firstPageText={
+                                <MdFirstPage className="h-5 w-5" />
+                              }
+                              prevPageText={
+                                <IoIosArrowBack className="h-4 w-4" />
+                              }
+                              nextPageText={
+                                <IoIosArrowForward className="h-4 w-4" />
+                              }
+                              lastPageText={<BiLastPage className="h-5 w-5" />}
+                              hideDisabled={true}
+                              innerClass="w-full flex justify-center space-x-1"
+                              itemClass="w-10 h-8 flex justify-center items-center bg-gray-600 border rounded font-medium text-white hover:bg-primary hover:text-white duration-300"
+                              linkClass="w-full h-full flex justify-center items-center"
+                              activeClass="bg-primary"
+                              activeLinkClass="bg-primary text-white border-primary rounded-sm font-medium hover:bg-primaryDarkShade duration-300"
+                            />
+                          </div>
+                        )}
                     </div>
                   </div>
                 </div>
