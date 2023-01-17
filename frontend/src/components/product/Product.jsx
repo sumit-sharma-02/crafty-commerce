@@ -4,6 +4,7 @@ import { clearErrors, getProductDetails } from "../../actions/product";
 import { useParams } from "react-router-dom";
 import { toast } from "react-toastify";
 import { motion } from "framer-motion";
+import { addItemsToCart } from "../../actions/cart";
 import {
   Breadcrumb,
   Loader,
@@ -13,7 +14,6 @@ import {
   Error,
   ProductCategories,
 } from "../../components";
-import { addItemsToCart } from "../../actions/cart";
 
 // Icons used
 import { VscChromeClose } from "react-icons/vsc";
@@ -21,16 +21,10 @@ import { VscChromeClose } from "react-icons/vsc";
 // Images used
 import Ad1 from "../../images/ad1.jpg";
 import Ad2 from "../../images/ad2.jpg";
-// import Boot1 from "../../images/boot1.jpg";
 import Reason1 from "../../images/reasons-1.png";
 import Reason2 from "../../images/reasons-2.png";
 import Reason3 from "../../images/reasons-3.png";
 import Reason4 from "../../images/reasons-4.png";
-// import Suitcase1 from "../../images/suitcase1.jpg";
-// import Bag1 from "../../images/bag1.jpg";
-// import Bag2 from "../../images/bag2.jpg";
-// import Shirt1 from "../../images/shirt1.jpg";
-// import Shoe2 from "../../images/shoe2.jpg";
 import Pay1 from "../../images/pay-1.webp";
 import Pay2 from "../../images/pay-2.webp";
 import Pay4 from "../../images/pay-4.webp";

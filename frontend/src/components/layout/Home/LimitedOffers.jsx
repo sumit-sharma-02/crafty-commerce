@@ -1,7 +1,10 @@
 import React, { useEffect, useState, useRef } from "react";
 import { Link } from "react-router-dom";
-import { CountdownTimer, Loader } from "../../../components";
+import { CountdownTimer } from "../../../components";
 import { motion } from "framer-motion";
+import { useDispatch } from "react-redux";
+import { toast } from "react-toastify";
+import { addItemsToCart } from "../../../actions/cart";
 import limited from "../../../utils/limited.json";
 
 // Icons used
@@ -26,6 +29,21 @@ const LimitedOffers = () => {
   const [timerMinutes, setTimerMinutes] = useState();
   const [timerSeconds, setTimerSeconds] = useState();
   let timer = useRef();
+
+  const dispatch = useDispatch();
+
+  const showSuccessToast = (message) => {
+    toast.success(message, {
+      position: "bottom-center",
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "colored",
+    });
+  };
 
   const startTimer = () => {
     const countDownDate = new Date(countDownTime).getTime();
@@ -53,25 +71,6 @@ const LimitedOffers = () => {
     }, 1000);
   };
 
-  const addDiscount = (min, max, product) => {
-    const discount = Math.floor(Math.random() * (max - min + 1) + min);
-    return (
-      <>
-        <span className="mr-1 text-gray-500 xsm:text-xs">
-          <del>
-            $
-            {parseFloat(
-              product.price + product.price * (discount / 100)
-            ).toFixed(2)}
-          </del>
-        </span>
-        <span className="text-orange-500 2xs:hidden xsm:block xsm:text-xs">
-          ({discount}% OFF)
-        </span>
-      </>
-    );
-  };
-
   const calculateNumOfReviews = (product) => {
     if (product.numOfReviews === 0) {
       return <span className="text-xs text-gray-500">(No Reviews Yet)</span>;
@@ -88,6 +87,11 @@ const LimitedOffers = () => {
         </span>
       );
     }
+  };
+
+  const addToCart = (productId) => {
+    dispatch(addItemsToCart(productId, 1));
+    showSuccessToast("Item added to the cart.");
   };
 
   useEffect(() => {
@@ -138,6 +142,7 @@ const LimitedOffers = () => {
                         ease: "easeInOut",
                       }}
                       className="ml-2"
+                      onClick={() => addToCart(limited[0]._id)}
                     >
                       Add to Cart
                     </motion.span>
@@ -244,6 +249,7 @@ const LimitedOffers = () => {
                           ease: "easeInOut",
                         }}
                         className="ml-2"
+                        onClick={() => addToCart(limited[1]._id)}
                       >
                         Add to Cart
                       </motion.span>
@@ -347,6 +353,7 @@ const LimitedOffers = () => {
                           ease: "easeInOut",
                         }}
                         className="ml-2"
+                        onClick={() => addToCart(limited[2]._id)}
                       >
                         Add to Cart
                       </motion.span>
