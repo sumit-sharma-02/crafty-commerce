@@ -1,6 +1,6 @@
 import React, { useState, Fragment, useEffect } from "react";
 import { Dialog, Combobox, Transition } from "@headlessui/react";
-import { productsConstant } from "../../constants/product";
+import products from "../../utils/products.json";
 
 // Icons used
 import { HiOutlineSearch } from "react-icons/hi";
@@ -24,7 +24,7 @@ const Search = (data) => {
   }, [query, data]);
 
   const filteredProducts = query
-    ? productsConstant.products.filter((product) =>
+    ? products.filter((product) =>
         product.name.toLowerCase().includes(query.toLowerCase())
       )
     : [];
@@ -64,7 +64,7 @@ const Search = (data) => {
           <Combobox
             onChange={(product) => {
               data.setOpenSearchPalette(false);
-              data.navigate(`/product/${product.id}`);
+              data.navigate(`/product/${product._id}`);
               setQuery("");
             }}
             as="div"
@@ -87,7 +87,7 @@ const Search = (data) => {
                 className="max-h-96 overflow-y-auto py-4 text-sm"
               >
                 {filteredProducts.map((product) => (
-                  <Combobox.Option key={product.id} value={product}>
+                  <Combobox.Option key={product._id} value={product}>
                     {({ active }) => (
                       <div
                         className={`cursor-pointer space-x-1 px-4 py-2 ${
@@ -95,7 +95,7 @@ const Search = (data) => {
                         }`}
                       >
                         <span
-                          className={`font-medium ${
+                          className={`font-medium line-clamp-1 ${
                             active ? "text-white" : "text-gray-900"
                           }`}
                         >

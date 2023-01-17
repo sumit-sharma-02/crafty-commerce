@@ -1,0 +1,2662 @@
+[
+  {
+      "_id": "63c550e5d861ab13dc09b456",
+      "name": "Wildcraft - Men White Printed T-shirt",
+      "price": 12.23,
+      "description": "Men white printed T-shirt, has a round neck, and short sleeves",
+      "ratings": 4.5,
+      "images": [
+          {
+              "public_id": "products/Clothing/Wildcraft_-_Men_White_Printed_T-shirt_2_a1roex",
+              "url": "https://res.cloudinary.com/craftycommerce/image/upload/v1673679000/products/Clothing/Wildcraft_-_Men_White_Printed_T-shirt_2_a1roex.png",
+              "_id": "63c550e5d861ab13dc09b457"
+          },
+          {
+              "public_id": "products/Clothing/Wildcraft_-_Men_White_Printed_T-shirt_1_bguhev",
+              "url": "https://res.cloudinary.com/craftycommerce/image/upload/v1673679000/products/Clothing/Wildcraft_-_Men_White_Printed_T-shirt_1_bguhev.png",
+              "_id": "63c550e5d861ab13dc09b458"
+          }
+      ],
+      "category": "Clothing",
+      "seller": "Truenet Commerce",
+      "stock": 50,
+      "numOfReviews": 32,
+      "reviews": [],
+      "createdAt": "2023-01-16T13:28:05.061Z",
+      "__v": 0
+  },
+  {
+      "_id": "63c550e5d861ab13dc09b459",
+      "name": "U.S. Polo Assn. - Men Navy Blue White Placement Striped Pure Cotton Slim Fit T-shirt",
+      "price": 10.34,
+      "description": "Men T-shirt, regular length, V-neck, short, regular sleeves and knitted cotton fabric",
+      "ratings": 4.4,
+      "images": [
+          {
+              "public_id": "products/Clothing/U.S._Polo_Assn._-_Men_Navy_Blue_White_Placement_Striped_Pure_Cotton_Slim_Fit_T-shirt_2_abjqw1",
+              "url": "https://res.cloudinary.com/craftycommerce/image/upload/v1673679039/products/Clothing/U.S._Polo_Assn._-_Men_Navy_Blue_White_Placement_Striped_Pure_Cotton_Slim_Fit_T-shirt_2_abjqw1.png",
+              "_id": "63c550e5d861ab13dc09b45a"
+          },
+          {
+              "public_id": "products/Clothing/U.S._Polo_Assn._-_Men_Navy_Blue_White_Placement_Striped_Pure_Cotton_Slim_Fit_T-shirt_4_t5iacv",
+              "url": "https://res.cloudinary.com/craftycommerce/image/upload/v1673679037/products/Clothing/U.S._Polo_Assn._-_Men_Navy_Blue_White_Placement_Striped_Pure_Cotton_Slim_Fit_T-shirt_4_t5iacv.jpg",
+              "_id": "63c550e5d861ab13dc09b45b"
+          },
+          {
+              "public_id": "products/Clothing/U.S._Polo_Assn._-_Men_Navy_Blue_White_Placement_Striped_Pure_Cotton_Slim_Fit_T-shirt_1_nwzphr",
+              "url": "https://res.cloudinary.com/craftycommerce/image/upload/v1673679038/products/Clothing/U.S._Polo_Assn._-_Men_Navy_Blue_White_Placement_Striped_Pure_Cotton_Slim_Fit_T-shirt_1_nwzphr.png",
+              "_id": "63c550e5d861ab13dc09b45c"
+          },
+          {
+              "public_id": "products/Clothing/U.S._Polo_Assn._-_Men_Navy_Blue_White_Placement_Striped_Pure_Cotton_Slim_Fit_T-shirt_3_bcssd2",
+              "url": "https://res.cloudinary.com/craftycommerce/image/upload/v1673679038/products/Clothing/U.S._Polo_Assn._-_Men_Navy_Blue_White_Placement_Striped_Pure_Cotton_Slim_Fit_T-shirt_3_bcssd2.png",
+              "_id": "63c550e5d861ab13dc09b45d"
+          }
+      ],
+      "category": "Clothing",
+      "seller": "RetailNet",
+      "stock": 50,
+      "numOfReviews": 12,
+      "reviews": [],
+      "createdAt": "2023-01-16T13:28:05.065Z",
+      "__v": 0
+  },
+  {
+      "_id": "63c550e5d861ab13dc09b45e",
+      "name": "Louis Philippe - Men Blue Solid Classic Fit Pure Cotton Formal Shirt",
+      "price": 19.99,
+      "description": "Blue Solid formal shirt, has a spread collar, button placket, 1 patch pocket, long regular sleeves, curved hem",
+      "ratings": 4.7,
+      "images": [
+          {
+              "public_id": "products/Clothing/Louis_Philippe_-_Men_Blue_Solid_Classic_Fit_Pure_Cotton_Formal_Shirt_2_jqlsia",
+              "url": "https://res.cloudinary.com/craftycommerce/image/upload/v1673679084/products/Clothing/Louis_Philippe_-_Men_Blue_Solid_Classic_Fit_Pure_Cotton_Formal_Shirt_2_jqlsia.png",
+              "_id": "63c550e5d861ab13dc09b45f"
+          },
+          {
+              "public_id": "products/Clothing/Louis_Philippe_-_Men_Blue_Solid_Classic_Fit_Pure_Cotton_Formal_Shirt_4_fwvsij",
+              "url": "https://res.cloudinary.com/craftycommerce/image/upload/v1673679084/products/Clothing/Louis_Philippe_-_Men_Blue_Solid_Classic_Fit_Pure_Cotton_Formal_Shirt_4_fwvsij.png",
+              "_id": "63c550e5d861ab13dc09b460"
+          }
+      ],
+      "category": "Clothing",
+      "seller": "RetailNet",
+      "stock": 150,
+      "numOfReviews": 4,
+      "reviews": [],
+      "createdAt": "2023-01-16T13:28:05.070Z",
+      "__v": 0
+  },
+  {
+      "_id": "63c550e5d861ab13dc09b461",
+      "name": "U.S. Polo Assn. Denim Co. - Men Green White Slim Fit Tartan Checked Pure Cotton Casual Shirt",
+      "price": 23.12,
+      "description": "Green White Slim Fit casual shirt ,has a spread collar, button placket, 1 patch pocket, long regular sleeves, curved hem",
+      "ratings": 4.5,
+      "images": [
+          {
+              "public_id": "products/Clothing/U.S._Polo_Assn._Denim_Co._-_U_S_Polo_Assn_Denim_Co_Men_Green_White_Slim_Fit_Tartan_Checked_Pure_Cotton_Casual_Shirt_2_n81b1x",
+              "url": "https://res.cloudinary.com/craftycommerce/image/upload/v1673679103/products/Clothing/U.S._Polo_Assn._Denim_Co._-_U_S_Polo_Assn_Denim_Co_Men_Green_White_Slim_Fit_Tartan_Checked_Pure_Cotton_Casual_Shirt_2_n81b1x.png",
+              "_id": "63c550e5d861ab13dc09b462"
+          },
+          {
+              "public_id": "products/Clothing/U.S._Polo_Assn._Denim_Co._-_U_S_Polo_Assn_Denim_Co_Men_Green_White_Slim_Fit_Tartan_Checked_Pure_Cotton_Casual_Shirt_1_nwodpv",
+              "url": "https://res.cloudinary.com/craftycommerce/image/upload/v1673679103/products/Clothing/U.S._Polo_Assn._Denim_Co._-_U_S_Polo_Assn_Denim_Co_Men_Green_White_Slim_Fit_Tartan_Checked_Pure_Cotton_Casual_Shirt_1_nwodpv.png",
+              "_id": "63c550e5d861ab13dc09b463"
+          }
+      ],
+      "category": "Clothing",
+      "seller": "Truenet Commerce",
+      "stock": 234,
+      "numOfReviews": 12,
+      "reviews": [],
+      "createdAt": "2023-01-16T13:28:05.072Z",
+      "__v": 0
+  },
+  {
+      "_id": "63c550e5d861ab13dc09b464",
+      "name": "Hypernation - Men Black Solid Overcoat",
+      "price": 25.12,
+      "description": "Black solid regular-fit overcoat, has a mock collar, button closures, long sleeves, two pockets with fleece lining",
+      "ratings": 4.8,
+      "images": [
+          {
+              "public_id": "products/Clothing/Hypernation_-_Men_Black_Solid_Overcoat_1_a7xt9i",
+              "url": "https://res.cloudinary.com/craftycommerce/image/upload/v1673679139/products/Clothing/Hypernation_-_Men_Black_Solid_Overcoat_1_a7xt9i.png",
+              "_id": "63c550e5d861ab13dc09b465"
+          },
+          {
+              "public_id": "products/Clothing/Hypernation_-_Men_Black_Solid_Overcoat_2_jlq9du",
+              "url": "https://res.cloudinary.com/craftycommerce/image/upload/v1673679139/products/Clothing/Hypernation_-_Men_Black_Solid_Overcoat_2_jlq9du.png",
+              "_id": "63c550e5d861ab13dc09b466"
+          },
+          {
+              "public_id": "products/Clothing/Hypernation_-_Men_Black_Solid_Overcoat_4_puuwzs",
+              "url": "https://res.cloudinary.com/craftycommerce/image/upload/v1673679139/products/Clothing/Hypernation_-_Men_Black_Solid_Overcoat_4_puuwzs.png",
+              "_id": "63c550e5d861ab13dc09b467"
+          }
+      ],
+      "category": "Clothing",
+      "seller": "Sapphire House Of Fashion PVT LTD",
+      "stock": 123,
+      "numOfReviews": 21,
+      "reviews": [],
+      "createdAt": "2023-01-16T13:28:05.073Z",
+      "__v": 0
+  },
+  {
+      "_id": "63c550e5d861ab13dc09b468",
+      "name": "Bruun & Stengade - Men Brown Textured Woolen Regular Fit Overcoat",
+      "price": 50.23,
+      "description": "Brown textured regular-fit casual overcoat, has a mock collar, button plackets, long sleeves and two pockets",
+      "ratings": 5,
+      "images": [
+          {
+              "public_id": "products/Clothing/Bruun_Stengade_-_Men_Brown_Textured_Woolen_Regular_Fit_Overcoat_1_p2tfps",
+              "url": "https://res.cloudinary.com/craftycommerce/image/upload/v1673679186/products/Clothing/Bruun_Stengade_-_Men_Brown_Textured_Woolen_Regular_Fit_Overcoat_1_p2tfps.png",
+              "_id": "63c550e5d861ab13dc09b469"
+          },
+          {
+              "public_id": "products/Clothing/Bruun_Stengade_-_Men_Brown_Textured_Woolen_Regular_Fit_Overcoat_2_n3pr9b",
+              "url": "https://res.cloudinary.com/craftycommerce/image/upload/v1673679186/products/Clothing/Bruun_Stengade_-_Men_Brown_Textured_Woolen_Regular_Fit_Overcoat_2_n3pr9b.jpg",
+              "_id": "63c550e5d861ab13dc09b46a"
+          },
+          {
+              "public_id": "products/Clothing/Bruun_Stengade_-_Men_Brown_Textured_Woolen_Regular_Fit_Overcoat_4_wlz2iv",
+              "url": "https://res.cloudinary.com/craftycommerce/image/upload/v1673679185/products/Clothing/Bruun_Stengade_-_Men_Brown_Textured_Woolen_Regular_Fit_Overcoat_4_wlz2iv.png",
+              "_id": "63c550e5d861ab13dc09b46b"
+          }
+      ],
+      "category": "Clothing",
+      "seller": "Iconic Fashion Retailing PVT LTD",
+      "stock": 345,
+      "numOfReviews": 33,
+      "reviews": [],
+      "createdAt": "2023-01-16T13:28:05.074Z",
+      "__v": 0
+  },
+  {
+      "_id": "63c550e5d861ab13dc09b46c",
+      "name": "Jompers - Men Green Gold-Toned Woven Design Straight Kurta",
+      "price": 12.23,
+      "description": "Green and Gold-toned woven design straight kurta, has a mandarin collar, long sleeves, straight hem, and side slits",
+      "ratings": 3.9,
+      "images": [
+          {
+              "public_id": "products/Clothing/Jompers_-_Men_Green_Gold-Toned_Woven_Design_Straight_Kurta_2_rb35hi",
+              "url": "https://res.cloudinary.com/craftycommerce/image/upload/v1673679216/products/Clothing/Jompers_-_Men_Green_Gold-Toned_Woven_Design_Straight_Kurta_2_rb35hi.png",
+              "_id": "63c550e5d861ab13dc09b46d"
+          },
+          {
+              "public_id": "products/Clothing/Jompers_-_Men_Green_Gold-Toned_Woven_Design_Straight_Kurta_1_j91u5w",
+              "url": "https://res.cloudinary.com/craftycommerce/image/upload/v1673679217/products/Clothing/Jompers_-_Men_Green_Gold-Toned_Woven_Design_Straight_Kurta_1_j91u5w.png",
+              "_id": "63c550e5d861ab13dc09b46e"
+          }
+      ],
+      "category": "Clothing",
+      "seller": "Indian Needle - SJIT",
+      "stock": 342,
+      "numOfReviews": 23,
+      "reviews": [],
+      "createdAt": "2023-01-16T13:28:05.075Z",
+      "__v": 0
+  },
+  {
+      "_id": "63c550e5d861ab13dc09b46f",
+      "name": "MANQ - Men Green Ethnic Motifs Kurta",
+      "price": 12.12,
+      "description": "Ethnic motifs woven design, Mandarin collar, Long, regular sleeves, Straight shape with regular style, Knee length with straight hem, Machine weave regular chanderi cotton",
+      "ratings": 3.6,
+      "images": [
+          {
+              "public_id": "products/Clothing/MANQ_-_Men_Green_Ethnic_Motifs_Kurta_1_wriahv",
+              "url": "https://res.cloudinary.com/craftycommerce/image/upload/v1673679233/products/Clothing/MANQ_-_Men_Green_Ethnic_Motifs_Kurta_1_wriahv.png",
+              "_id": "63c550e5d861ab13dc09b470"
+          },
+          {
+              "public_id": "products/Clothing/MANQ_-_Men_Green_Ethnic_Motifs_Kurta_1_ustmdp",
+              "url": "https://res.cloudinary.com/craftycommerce/image/upload/v1673679233/products/Clothing/MANQ_-_Men_Green_Ethnic_Motifs_Kurta_1_ustmdp.jpg",
+              "_id": "63c550e5d861ab13dc09b471"
+          },
+          {
+              "public_id": "products/Clothing/MANQ_-_Men_Green_Ethnic_Motifs_Kurta_2_mizmyf",
+              "url": "https://res.cloudinary.com/craftycommerce/image/upload/v1673679233/products/Clothing/MANQ_-_Men_Green_Ethnic_Motifs_Kurta_2_mizmyf.png",
+              "_id": "63c550e5d861ab13dc09b472"
+          }
+      ],
+      "category": "Clothing",
+      "seller": "A.R. Enterprises",
+      "stock": 500,
+      "numOfReviews": 2,
+      "reviews": [],
+      "createdAt": "2023-01-16T13:28:05.075Z",
+      "__v": 0
+  },
+  {
+      "_id": "63c550e5d861ab13dc09b473",
+      "name": "U.S. Polo Assn. Denim Co. - U.S. Polo Assn Denim Co Men Blue Slim Fit Mid-Rise Heavy Fade Jeans",
+      "price": 23.12,
+      "description": "Medium shade, heavy fade blue jeans, Slim fit, mid-rise, Clean look, Non stretchable, 5 pocket",
+      "ratings": 5,
+      "images": [
+          {
+              "public_id": "products/Clothing/U.S._Polo_Assn._Denim_Co._-_U_S_Polo_Assn_Denim_Co_Men_Blue_Slim_Fit_Mid-Rise_Heavy_Fade_Jeans_2_jpu3rm",
+              "url": "https://res.cloudinary.com/craftycommerce/image/upload/v1673679259/products/Clothing/U.S._Polo_Assn._Denim_Co._-_U_S_Polo_Assn_Denim_Co_Men_Blue_Slim_Fit_Mid-Rise_Heavy_Fade_Jeans_2_jpu3rm.png",
+              "_id": "63c550e5d861ab13dc09b474"
+          },
+          {
+              "public_id": "products/Clothing/U.S._Polo_Assn._Denim_Co._-_U_S_Polo_Assn_Denim_Co_Men_Blue_Slim_Fit_Mid-Rise_Heavy_Fade_Jeans_4_q2pwd3",
+              "url": "https://res.cloudinary.com/craftycommerce/image/upload/v1673679259/products/Clothing/U.S._Polo_Assn._Denim_Co._-_U_S_Polo_Assn_Denim_Co_Men_Blue_Slim_Fit_Mid-Rise_Heavy_Fade_Jeans_4_q2pwd3.jpg",
+              "_id": "63c550e5d861ab13dc09b475"
+          }
+      ],
+      "category": "Clothing",
+      "seller": "Supercom Net",
+      "stock": 234,
+      "numOfReviews": 12,
+      "reviews": [],
+      "createdAt": "2023-01-16T13:28:05.076Z",
+      "__v": 0
+  },
+  {
+      "_id": "63c550e5d861ab13dc09b476",
+      "name": "Jack Jones - Men Blue Skinny Fit Heavy Fade Jeans",
+      "price": 16.12,
+      "description": "Coloured shade, heavy fade blue jeans, Skinny fit, mid-rise, Clean look, Non stretchable, 5 pocket",
+      "ratings": 5,
+      "images": [
+          {
+              "public_id": "products/Clothing/Jack_Jones_-_Men_Blue_Skinny_Fit_Heavy_Fade_Jeans_3_xo184y",
+              "url": "https://res.cloudinary.com/craftycommerce/image/upload/v1673679284/products/Clothing/Jack_Jones_-_Men_Blue_Skinny_Fit_Heavy_Fade_Jeans_3_xo184y.png",
+              "_id": "63c550e5d861ab13dc09b477"
+          },
+          {
+              "public_id": "products/Clothing/Jack_Jones_-_Men_Blue_Skinny_Fit_Heavy_Fade_Jeans_2_onaiwq",
+              "url": "https://res.cloudinary.com/craftycommerce/image/upload/v1673679284/products/Clothing/Jack_Jones_-_Men_Blue_Skinny_Fit_Heavy_Fade_Jeans_2_onaiwq.png",
+              "_id": "63c550e5d861ab13dc09b478"
+          }
+      ],
+      "category": "Clothing",
+      "seller": "Kapsom Retails",
+      "stock": 234,
+      "numOfReviews": 12,
+      "reviews": [],
+      "createdAt": "2023-01-16T13:28:05.077Z",
+      "__v": 0
+  },
+  {
+      "_id": "63c550e5d861ab13dc09b479",
+      "name": "Levis - Men 65504 Skinny Fit Heavy Fade Stretchable Jeans",
+      "price": 18.12,
+      "description": "Medium shade, heavy fade jeans, Skinny fit, mid-rise, Clean look, Stretchable, 5 pockets",
+      "ratings": 3.4,
+      "images": [
+          {
+              "public_id": "products/Clothing/Levis_-_Men_65504_Skinny_Fit_Heavy_Fade_Stretchable_Jeans_1_pkidiq",
+              "url": "https://res.cloudinary.com/craftycommerce/image/upload/v1673679269/products/Clothing/Levis_-_Men_65504_Skinny_Fit_Heavy_Fade_Stretchable_Jeans_1_pkidiq.png",
+              "_id": "63c550e5d861ab13dc09b47a"
+          },
+          {
+              "public_id": "products/Clothing/Levis_-_Men_65504_Skinny_Fit_Heavy_Fade_Stretchable_Jeans_1_pkidiq",
+              "url": "https://res.cloudinary.com/craftycommerce/image/upload/v1673679269/products/Clothing/Levis_-_Men_65504_Skinny_Fit_Heavy_Fade_Stretchable_Jeans_1_pkidiq.png",
+              "_id": "63c550e5d861ab13dc09b47b"
+          }
+      ],
+      "category": "Clothing",
+      "seller": "Vision Star",
+      "stock": 234,
+      "numOfReviews": 23,
+      "reviews": [],
+      "createdAt": "2023-01-16T13:28:05.078Z",
+      "__v": 0
+  },
+  {
+      "_id": "63c550e5d861ab13dc09b47c",
+      "name": "U.S. Polo Assn. - Men White Grey Colourblocked Sneakers",
+      "price": 23.12,
+      "description": "A pair of round-toe white & grey sneakers, has regular styling, lace-up detail, Synthetic Leather upper, Cushioned footbed, Textured and patterned outsole",
+      "ratings": 4.4,
+      "images": [
+          {
+              "public_id": "products/Clothing/U.S._Polo_Assn._-_Men_White_Grey_Colourblocked_Sneakers_3_mnsasa",
+              "url": "https://res.cloudinary.com/craftycommerce/image/upload/v1673679319/products/Clothing/U.S._Polo_Assn._-_Men_White_Grey_Colourblocked_Sneakers_3_mnsasa.png",
+              "_id": "63c550e5d861ab13dc09b47d"
+          },
+          {
+              "public_id": "products/Clothing/U.S._Polo_Assn._-_Men_White_Grey_Colourblocked_Sneakers_1_ufvjet",
+              "url": "https://res.cloudinary.com/craftycommerce/image/upload/v1673679319/products/Clothing/U.S._Polo_Assn._-_Men_White_Grey_Colourblocked_Sneakers_1_ufvjet.png",
+              "_id": "63c550e5d861ab13dc09b47e"
+          },
+          {
+              "public_id": "products/Clothing/U.S._Polo_Assn._-_Men_White_Grey_Colourblocked_Sneakers_2_idjokx",
+              "url": "https://res.cloudinary.com/craftycommerce/image/upload/v1673679319/products/Clothing/U.S._Polo_Assn._-_Men_White_Grey_Colourblocked_Sneakers_2_idjokx.png",
+              "_id": "63c550e5d861ab13dc09b47f"
+          }
+      ],
+      "category": "Clothing",
+      "seller": "Supercom Net",
+      "stock": 234,
+      "numOfReviews": 9,
+      "reviews": [],
+      "createdAt": "2023-01-16T13:28:05.080Z",
+      "__v": 0
+  },
+  {
+      "_id": "63c550e5d861ab13dc09b480",
+      "name": "ADIDAS - Unisex White Woven Design Harden Stepback 3 Basketball Shoes",
+      "price": 23.12,
+      "description": "There is no move in modern basketball more lethal than the step back, and no player has weaponised it quite like James Harden. These adidas signature shoes pay homage to his creativity on the hardwood. The Bounce midsole is responsive and makes every step comfortable, whether you're working on your handle or draining shots from distance. Precisely placed eyestays couple with a lace cord and a moulded heel unit to offer a locked-down fee",
+      "ratings": 4.7,
+      "images": [
+          {
+              "public_id": "products/Clothing/ADIDAS_-_Unisex_White_Woven_Design_Harden_Stepback_3_Basketball_Shoes_2_gtli7a",
+              "url": "https://res.cloudinary.com/craftycommerce/image/upload/v1673679331/products/Clothing/ADIDAS_-_Unisex_White_Woven_Design_Harden_Stepback_3_Basketball_Shoes_2_gtli7a.png",
+              "_id": "63c550e5d861ab13dc09b481"
+          },
+          {
+              "public_id": "products/Clothing/ADIDAS_-_Unisex_White_Woven_Design_Harden_Stepback_3_Basketball_Shoes_3_hof6z6",
+              "url": "https://res.cloudinary.com/craftycommerce/image/upload/v1673679331/products/Clothing/ADIDAS_-_Unisex_White_Woven_Design_Harden_Stepback_3_Basketball_Shoes_3_hof6z6.png",
+              "_id": "63c550e5d861ab13dc09b482"
+          },
+          {
+              "public_id": "products/Clothing/ADIDAS_-_Unisex_White_Woven_Design_Harden_Stepback_3_Basketball_Shoes_1_mxkdbu",
+              "url": "https://res.cloudinary.com/craftycommerce/image/upload/v1673679331/products/Clothing/ADIDAS_-_Unisex_White_Woven_Design_Harden_Stepback_3_Basketball_Shoes_1_mxkdbu.png",
+              "_id": "63c550e5d861ab13dc09b483"
+          }
+      ],
+      "category": "Clothing",
+      "seller": "Flashstar Commerce",
+      "stock": 234,
+      "numOfReviews": 9,
+      "reviews": [],
+      "createdAt": "2023-01-16T13:28:05.081Z",
+      "__v": 0
+  },
+  {
+      "_id": "63c550e5d861ab13dc09b484",
+      "name": "Nike - Men Blue KYRIE LOW 5 EP Basketball Shoes",
+      "price": 32.21,
+      "description": "A pair of blue shoes, has regular styling, lace-ups detail. This version is made for outdoor court use with its extra-durable rubber outsole. Lightweight, grid-patterned mesh offers a secure, supportive fit. Padded, contoured collar is higher at the back to fit snugly around the Achilles tendon. Sleek, sculpted midsole has a fast, streamlined look",
+      "ratings": 4.8,
+      "images": [
+          {
+              "public_id": "products/Clothing/Nike_-_Men_Blue_KYRIE_LOW_5_EP_Basketball_Shoes_1_jwpmw6",
+              "url": "https://res.cloudinary.com/craftycommerce/image/upload/v1673679339/products/Clothing/Nike_-_Men_Blue_KYRIE_LOW_5_EP_Basketball_Shoes_1_jwpmw6.png",
+              "_id": "63c550e5d861ab13dc09b485"
+          },
+          {
+              "public_id": "products/Clothing/Nike_-_Men_Blue_KYRIE_LOW_5_EP_Basketball_Shoes_2_qo9qzz",
+              "url": "https://res.cloudinary.com/craftycommerce/image/upload/v1673679339/products/Clothing/Nike_-_Men_Blue_KYRIE_LOW_5_EP_Basketball_Shoes_2_qo9qzz.png",
+              "_id": "63c550e5d861ab13dc09b486"
+          },
+          {
+              "public_id": "products/Clothing/Nike_-_Men_Blue_KYRIE_LOW_5_EP_Basketball_Shoes_1_ycdfaa",
+              "url": "https://res.cloudinary.com/craftycommerce/image/upload/v1673679339/products/Clothing/Nike_-_Men_Blue_KYRIE_LOW_5_EP_Basketball_Shoes_1_ycdfaa.jpg",
+              "_id": "63c550e5d861ab13dc09b487"
+          }
+      ],
+      "category": "Clothing",
+      "seller": "Flash Mart",
+      "stock": 234,
+      "numOfReviews": 9,
+      "reviews": [],
+      "createdAt": "2023-01-16T13:28:05.082Z",
+      "__v": 0
+  },
+  {
+      "_id": "63c550e5d861ab13dc09b488",
+      "name": "APHERMA Massage Gun, Muscle Massage Gun for Athletes Handheld Deep Tissue Massager Tool 30 Speed Levels 10 Heads",
+      "price": 39.99,
+      "description": "Beat soreness, back pain, and stress: For those who don't want muscle soreness to slow them down, our muscle massage gun deeply penetrates to help you cope with everyday stresses and exhausting exercises by reaching those stubborn knots, sore muscles and trigger points.",
+      "ratings": 5,
+      "images": [
+          {
+              "public_id": "products/Gadgets/APHERMA_Massage_Gun_Muscle_Massage_Gun_for_Athletes_Handheld_Deep_Tissue_Massager_Tool_30_Speed_Levels_10_Heads-1_ugclbl",
+              "url": "https://res.cloudinary.com/craftycommerce/image/upload/v1673705070/products/Gadgets/APHERMA_Massage_Gun_Muscle_Massage_Gun_for_Athletes_Handheld_Deep_Tissue_Massager_Tool_30_Speed_Levels_10_Heads-1_ugclbl.jpg",
+              "_id": "63c550e5d861ab13dc09b489"
+          },
+          {
+              "public_id": "products/Gadgets/APHERMA_Massage_Gun_Muscle_Massage_Gun_for_Athletes_Handheld_Deep_Tissue_Massager_Tool_30_Speed_Levels_10_Heads-2_owroj6",
+              "url": "https://res.cloudinary.com/craftycommerce/image/upload/v1673705070/products/Gadgets/APHERMA_Massage_Gun_Muscle_Massage_Gun_for_Athletes_Handheld_Deep_Tissue_Massager_Tool_30_Speed_Levels_10_Heads-2_owroj6.jpg",
+              "_id": "63c550e5d861ab13dc09b48a"
+          }
+      ],
+      "category": "Gadgets",
+      "seller": "Brighton Inc",
+      "stock": 234,
+      "numOfReviews": 4,
+      "reviews": [],
+      "createdAt": "2023-01-16T13:28:05.084Z",
+      "__v": 0
+  },
+  {
+      "_id": "63c550e5d861ab13dc09b48b",
+      "name": "PAL&SAM Cup & Mug Coffee Warmer for Desk, Electric Beverage & Candle Warmer with Auto Off, Smart Kitchen Gadget for Heating Coffee, Hot Chocolate, Tea, and Milk (Cup Excluded, White)",
+      "price": 23.59,
+      "description": "PERFORM THE BEST TEMP FOR YOUR COFFEE - PAL&SAM beverage warmer is a smart choice to keep your coffee warm on the desk or warm dishes on a dinner table for your guests. To present the best user experience, the PAL&SAM mug warmer presents 6 temperature range from 130°F to 180°F. According to the research provided by the National Coffee Association of the USA - 120°F to 160°F is the ideal range temperature to drink coffee.",
+      "ratings": 5,
+      "images": [
+          {
+              "public_id": "products/Gadgets/PAL_SAM_Cup_Mug_Coffee_Warmer_for_Desk_Electric_Beverage_Candle_Warmer_with_Auto_Off_Smart_Kitchen_Gadget_for_Heating_Coffee_Hot_Chocolate_Tea_and_Milk_Cup_Excluded_White_-1_r8bzcc",
+              "url": "https://res.cloudinary.com/craftycommerce/image/upload/v1673705071/products/Gadgets/PAL_SAM_Cup_Mug_Coffee_Warmer_for_Desk_Electric_Beverage_Candle_Warmer_with_Auto_Off_Smart_Kitchen_Gadget_for_Heating_Coffee_Hot_Chocolate_Tea_and_Milk_Cup_Excluded_White_-1_r8bzcc.jpg",
+              "_id": "63c550e5d861ab13dc09b48c"
+          },
+          {
+              "public_id": "products/Gadgets/PAL_SAM_Cup_Mug_Coffee_Warmer_for_Desk_Electric_Beverage_Candle_Warmer_with_Auto_Off_Smart_Kitchen_Gadget_for_Heating_Coffee_Hot_Chocolate_Tea_and_Milk_Cup_Excluded_White_-2_hebnl2",
+              "url": "https://res.cloudinary.com/craftycommerce/image/upload/v1673705071/products/Gadgets/PAL_SAM_Cup_Mug_Coffee_Warmer_for_Desk_Electric_Beverage_Candle_Warmer_with_Auto_Off_Smart_Kitchen_Gadget_for_Heating_Coffee_Hot_Chocolate_Tea_and_Milk_Cup_Excluded_White_-2_hebnl2.jpg",
+              "_id": "63c550e5d861ab13dc09b48d"
+          }
+      ],
+      "category": "Gadgets",
+      "seller": "Flash Mart",
+      "stock": 210,
+      "numOfReviews": 5,
+      "reviews": [],
+      "createdAt": "2023-01-16T13:28:05.086Z",
+      "__v": 0
+  },
+  {
+      "_id": "63c550e5d861ab13dc09b48e",
+      "name": "Sleep Headphones Wireless Bluetooth Headband - Comfy Sleeping Eye Mask Headset, Sport Head Band Earbuds Electronics Tech Gadgets Christmas Stocking Stuffers Birthday Gifts for Women Men Running",
+      "price": 18.99,
+      "description": "Sleep Headphones & Sleep Eye Mask & Sports Headband 3 in 1. WINONLY bluetooth headband allows you to listen to your music without having to wear additional headphones, and protects you from being disturbed by your messy hair and sweat. Built-in microphone to let you won't miss any callings. Perfect for sports running yoga office airplane rest & most activities. Even if no play music, the eye cover is comfortable enough to sleep in any position",
+      "ratings": 0,
+      "images": [
+          {
+              "public_id": "products/Gadgets/Sleep_Headphones_Wireless_Bluetooth_Headband-1_vwie3m",
+              "url": "https://res.cloudinary.com/craftycommerce/image/upload/v1673705072/products/Gadgets/Sleep_Headphones_Wireless_Bluetooth_Headband-1_vwie3m.jpg",
+              "_id": "63c550e5d861ab13dc09b48f"
+          },
+          {
+              "public_id": "products/Gadgets/Sleep_Headphones_Wireless_Bluetooth_Headband-2_hazbyn",
+              "url": "https://res.cloudinary.com/craftycommerce/image/upload/v1673705072/products/Gadgets/Sleep_Headphones_Wireless_Bluetooth_Headband-2_hazbyn.jpg",
+              "_id": "63c550e5d861ab13dc09b490"
+          }
+      ],
+      "category": "Gadgets",
+      "seller": "Xuanr",
+      "stock": 300,
+      "numOfReviews": 0,
+      "reviews": [],
+      "createdAt": "2023-01-16T13:28:05.087Z",
+      "__v": 0
+  },
+  {
+      "_id": "63c550e5d861ab13dc09b491",
+      "name": "JEVSTU Candle Lighter, Electric Lighter USB Rechargeable Lighter, Arc Windproof Flameless Plasma Lighter Long Stick with Rope and Ring, Perfect for Candle BBQ Camping Kitchen Stove, White",
+      "price": 13.99,
+      "description": "The top part of the candle lighter wouldn't get damaged by candle fire, you can just clean it. This usb lighter is very small and portable.Perfect for travel camping, hiking, BBQ grill, candle jars, incense cone, gas stove, fireworks, fireplace, kitchen cooking, and so on.",
+      "ratings": 5,
+      "images": [
+          {
+              "public_id": "products/Gadgets/JEVSTU_Candle_Lighter_Electric_Lighter_USB_Rechargeable_Lighter-2_lawnx8",
+              "url": "https://res.cloudinary.com/craftycommerce/image/upload/v1673705071/products/Gadgets/JEVSTU_Candle_Lighter_Electric_Lighter_USB_Rechargeable_Lighter-2_lawnx8.jpg",
+              "_id": "63c550e5d861ab13dc09b492"
+          },
+          {
+              "public_id": "products/Gadgets/JEVSTU_Candle_Lighter_Electric_Lighter_USB_Rechargeable_Lighter-1_peanwh",
+              "url": "https://res.cloudinary.com/craftycommerce/image/upload/v1673705071/products/Gadgets/JEVSTU_Candle_Lighter_Electric_Lighter_USB_Rechargeable_Lighter-1_peanwh.jpg",
+              "_id": "63c550e5d861ab13dc09b493"
+          }
+      ],
+      "category": "Gadgets",
+      "seller": "Lytown",
+      "stock": 300,
+      "numOfReviews": 10,
+      "reviews": [],
+      "createdAt": "2023-01-16T13:28:05.087Z",
+      "__v": 0
+  },
+  {
+      "_id": "63c550e5d861ab13dc09b494",
+      "name": "Infinity Cube Fidget Toy, Sensory Tool EDC Fidgeting Game for Kids and Adults, Cool Mini Gadget Best for Stress and Anxiety Relief and Kill Time, Unique Idea That is Light on The Fingers and Hands",
+      "price": 6.99,
+      "description": " Fidget like a boss. Playable with one hand. Prime fidgeting toy for little children, teens and adults. Perfect for girls, boys, women and men",
+      "ratings": 4.5,
+      "images": [
+          {
+              "public_id": "products/Gadgets/Infinity_Cube_Fidget_Toy_Sensory_Tool_EDC_Fidgeting_Game_for_Kids_and_Adults-1_gwq9oe",
+              "url": "https://res.cloudinary.com/craftycommerce/image/upload/v1673705070/products/Gadgets/Infinity_Cube_Fidget_Toy_Sensory_Tool_EDC_Fidgeting_Game_for_Kids_and_Adults-1_gwq9oe.jpg",
+              "_id": "63c550e5d861ab13dc09b495"
+          },
+          {
+              "public_id": "products/Gadgets/Infinity_Cube_Fidget_Toy_Sensory_Tool_EDC_Fidgeting_Game_for_Kids_and_Adults-2_oaodes",
+              "url": "https://res.cloudinary.com/craftycommerce/image/upload/v1673705071/products/Gadgets/Infinity_Cube_Fidget_Toy_Sensory_Tool_EDC_Fidgeting_Game_for_Kids_and_Adults-2_oaodes.jpg",
+              "_id": "63c550e5d861ab13dc09b496"
+          }
+      ],
+      "category": "Gadgets",
+      "seller": "Small Fish",
+      "stock": 500,
+      "numOfReviews": 19,
+      "reviews": [],
+      "createdAt": "2023-01-16T13:28:05.088Z",
+      "__v": 0
+  },
+  {
+      "_id": "63c550e5d861ab13dc09b497",
+      "name": "DASH Rapid Egg Cooker: 6 Egg Capacity Electric Egg Cooker for Hard Boiled Eggs, Poached Eggs, Scrambled Eggs, or Omelets with Auto Shut Off Feature - Aqua, 5.5 Inch",
+      "price": 16,
+      "description": "Dash Rapid Egg Cooker is the ORIGINAL (and most trusted) egg cooker on the market, for perfect eggs, your way, EVERY TIME, we guarantee it.",
+      "ratings": 4.8,
+      "images": [
+          {
+              "public_id": "products/Gadgets/DASH_Rapid_Egg_Cooker-1_sp8cbr",
+              "url": "https://res.cloudinary.com/craftycommerce/image/upload/v1673705070/products/Gadgets/DASH_Rapid_Egg_Cooker-1_sp8cbr.jpg",
+              "_id": "63c550e5d861ab13dc09b498"
+          },
+          {
+              "public_id": "products/Gadgets/DASH_Rapid_Egg_Cooker-2_dlwk4l",
+              "url": "https://res.cloudinary.com/craftycommerce/image/upload/v1673705070/products/Gadgets/DASH_Rapid_Egg_Cooker-2_dlwk4l.jpg",
+              "_id": "63c550e5d861ab13dc09b499"
+          }
+      ],
+      "category": "Gadgets",
+      "seller": "Flashstar Commerce",
+      "stock": 300,
+      "numOfReviews": 2,
+      "reviews": [],
+      "createdAt": "2023-01-16T13:28:05.089Z",
+      "__v": 0
+  },
+  {
+      "_id": "63c550e5d861ab13dc09b49a",
+      "name": "MUSICOZY Bluetooth Ear Muffs for Winter Women Men Kids Girls, Ear Warmers Wireless EarMuffs Headphones, Built-in HD Speakers and Microphone with Carry Bag for Biking Running Cool Tech Gadgets Gifts",
+      "price": 19.99,
+      "description": "Our this model of headphone is the latest and unique one in the market! Features latest Bluetooth 5.2 technology and states of the art acoustic components that produce incredible sound quality with deep bass and crystal clear treble. The Bluetooth earmuffs headphones pair with any Bluetooth-enabled smartphone or tablet devices quicker & easier within 33 feet.",
+      "ratings": 4,
+      "images": [
+          {
+              "public_id": "products/Gadgets/MUSICOZY_Bluetooth_Ear_Muffs_for_Winter-1_lnxnjs",
+              "url": "https://res.cloudinary.com/craftycommerce/image/upload/v1673705071/products/Gadgets/MUSICOZY_Bluetooth_Ear_Muffs_for_Winter-1_lnxnjs.jpg",
+              "_id": "63c550e5d861ab13dc09b49b"
+          },
+          {
+              "public_id": "products/Gadgets/MUSICOZY_Bluetooth_Ear_Muffs_for_Winter-2_vqxuuu",
+              "url": "https://res.cloudinary.com/craftycommerce/image/upload/v1673705071/products/Gadgets/MUSICOZY_Bluetooth_Ear_Muffs_for_Winter-2_vqxuuu.jpg",
+              "_id": "63c550e5d861ab13dc09b49c"
+          }
+      ],
+      "category": "Gadgets",
+      "seller": "Xuanr",
+      "stock": 300,
+      "numOfReviews": 6,
+      "reviews": [],
+      "createdAt": "2023-01-16T13:28:05.089Z",
+      "__v": 0
+  },
+  {
+      "_id": "63c550e5d861ab13dc09b49d",
+      "name": "iPhone Charge Lightning Cable + Keychain + Bottle Opener + Aluminum Carabiner,Portable Multifunction Keychain Bottle Opener USB Charging Cord Short Cable for iPhone X/8/7/6S,Gift for Men Women (White)",
+      "price": 8.95,
+      "description": "This is not a power bank, just a charging cable.Having everything you could possibly need on one key chain is clever idea .Small profile conceals surprisingly emergency lightning charger sync cable,So whenever you on the go you'll have a charging cord",
+      "ratings": 4.8,
+      "images": [
+          {
+              "public_id": "products/Gadgets/iPhone_Charge_Lightning_Cable-1_aqxm2a",
+              "url": "https://res.cloudinary.com/craftycommerce/image/upload/v1673705071/products/Gadgets/iPhone_Charge_Lightning_Cable-1_aqxm2a.jpg",
+              "_id": "63c550e5d861ab13dc09b49e"
+          },
+          {
+              "public_id": "products/Gadgets/iPhone_Charge_Lightning_Cable-2_sub7p4",
+              "url": "https://res.cloudinary.com/craftycommerce/image/upload/v1673705071/products/Gadgets/iPhone_Charge_Lightning_Cable-2_sub7p4.jpg",
+              "_id": "63c550e5d861ab13dc09b49f"
+          }
+      ],
+      "category": "Gadgets",
+      "seller": "i-dawn",
+      "stock": 500,
+      "numOfReviews": 10,
+      "reviews": [],
+      "createdAt": "2023-01-16T13:28:05.089Z",
+      "__v": 0
+  },
+  {
+      "_id": "63c550e5d861ab13dc09b4a0",
+      "name": "SHILA Bowl Cozy, Multicolor Set of 5 Microwave-Safe Hot Bowl Holders to Keep Your Hands Cool and Your Food Warm, Polyester & Sponge Heat Resistant Dish Pads for Soup, Rice and Pasta Bowls",
+      "price": 29.97,
+      "description": "Keep your meals warm and your hands cool and smooth! Our colorful cozies offer the perfect bufferzone for your hands to be protected from hot bowls. Our cozies are durable, reusable and can be used frozen and cold desserts too.",
+      "ratings": 4,
+      "images": [
+          {
+              "public_id": "products/Gadgets/SHILA_Bowl_Cozy_Multicolor_Set_of_5_Microwave-Safe_Hot_Bowl_Holders-1_acs61o",
+              "url": "https://res.cloudinary.com/craftycommerce/image/upload/v1673705071/products/Gadgets/SHILA_Bowl_Cozy_Multicolor_Set_of_5_Microwave-Safe_Hot_Bowl_Holders-1_acs61o.jpg",
+              "_id": "63c550e5d861ab13dc09b4a1"
+          },
+          {
+              "public_id": "products/Gadgets/SHILA_Bowl_Cozy_Multicolor_Set_of_5_Microwave-Safe_Hot_Bowl_Holders-2_ti4yqr",
+              "url": "https://res.cloudinary.com/craftycommerce/image/upload/v1673705072/products/Gadgets/SHILA_Bowl_Cozy_Multicolor_Set_of_5_Microwave-Safe_Hot_Bowl_Holders-2_ti4yqr.jpg",
+              "_id": "63c550e5d861ab13dc09b4a2"
+          }
+      ],
+      "category": "Gadgets",
+      "seller": "Jarday",
+      "stock": 300,
+      "numOfReviews": 2,
+      "reviews": [],
+      "createdAt": "2023-01-16T13:28:05.090Z",
+      "__v": 0
+  },
+  {
+      "_id": "63c550e5d861ab13dc09b4a3",
+      "name": "PowerTRC USB 3' Diameter Powered Plasma Ball | USB or (2 X AA) Powered | Science Toy | Electronic Plasma Light Gadget",
+      "price": 24.89,
+      "description": "Electrifying Fun | Surprise your friends and family with this fun gadget. Place it in your car, desk or at home. Observe the colorful lights as it reacts to your touch or sounds. The science here is just shockingly fun!",
+      "ratings": 4,
+      "images": [
+          {
+              "public_id": "products/Gadgets/PowerTRC_USB_3_Diameter_Powered_Plasma_Ball-1_z7k8cq",
+              "url": "https://res.cloudinary.com/craftycommerce/image/upload/v1673705071/products/Gadgets/PowerTRC_USB_3_Diameter_Powered_Plasma_Ball-1_z7k8cq.jpg",
+              "_id": "63c550e5d861ab13dc09b4a4"
+          },
+          {
+              "public_id": "products/Gadgets/PowerTRC_USB_3_Diameter_Powered_Plasma_Ball-2_mb0vo5",
+              "url": "https://res.cloudinary.com/craftycommerce/image/upload/v1673705071/products/Gadgets/PowerTRC_USB_3_Diameter_Powered_Plasma_Ball-2_mb0vo5.jpg",
+              "_id": "63c550e5d861ab13dc09b4a5"
+          }
+      ],
+      "category": "Gadgets",
+      "seller": "Kevin Enterprises",
+      "stock": 300,
+      "numOfReviews": 10,
+      "reviews": [],
+      "createdAt": "2023-01-16T13:28:05.090Z",
+      "__v": 0
+  },
+  {
+      "_id": "63c550e5d861ab13dc09b4a6",
+      "name": "Cryptex Da Vinci Code Mini Cryptex Lock Puzzle Boxes with Hidden Compartments",
+      "price": 29.99,
+      "description": "The Da Vinci Codec is copied from the Da Vinci manuscript in 'The Da Vinci Code'. According to the plot of the story, there is a scroll about the greatest secret of the Priory of Sion and even the whole Christianity hidden in the cryptex. To open the cryptex, you must unlock a five-digit code. There are 5 turntables on the cipher cylinder, and each turntable has 26 letters, which may be as many as 11881376 permutations and combinations of cryptex.",
+      "ratings": 0,
+      "images": [
+          {
+              "public_id": "products/Gadgets/Cryptex_Da_Vinci_Code_Mini_Cryptex_Lock_Puzzle_Boxes_nk0jlk",
+              "url": "https://res.cloudinary.com/craftycommerce/image/upload/v1673705070/products/Gadgets/Cryptex_Da_Vinci_Code_Mini_Cryptex_Lock_Puzzle_Boxes_nk0jlk.jpg",
+              "_id": "63c550e5d861ab13dc09b4a7"
+          }
+      ],
+      "category": "Gadgets",
+      "seller": "Extom Pvt Ltd",
+      "stock": 500,
+      "numOfReviews": 0,
+      "reviews": [],
+      "createdAt": "2023-01-16T13:28:05.090Z",
+      "__v": 0
+  },
+  {
+      "_id": "63c550e5d861ab13dc09b4a8",
+      "name": "Vegetable Chopper, Pro Onion Chopper, Multifunctional 13 in 1 Food Chopper, Kitchen Vegetable Slicer Dicer Cutter,Veggie Chopper With 8 Blades,Carrot and Garlic Chopper With Container",
+      "price": 22.99,
+      "description": "The latest multifunctional vegetable chopper and slicer chop, dice, slice or grate! This vegetable chopper is a practical kitchen tool, the vegetable chopper offers multiple functions in one highly versatile kitchen gadget. The Onion Chopper is made of top quality materials such as high quality stainless steel blades and food grade materials. The vegetable chopper can cut most types of vegetables and fruits.",
+      "ratings": 5,
+      "images": [
+          {
+              "public_id": "products/Kitchen/Vegetable_Chopper_Pro_Onion_Chopper_Multifunctional_13_in_1_Food_Chopper_yuthfh",
+              "url": "https://res.cloudinary.com/craftycommerce/image/upload/v1673710371/products/Kitchen/Vegetable_Chopper_Pro_Onion_Chopper_Multifunctional_13_in_1_Food_Chopper_yuthfh.jpg",
+              "_id": "63c550e5d861ab13dc09b4a9"
+          },
+          {
+              "public_id": "products/Kitchen/Vegetable_Chopper_Pro_Onion_Chopper_Multifunctional_13_in_1_Food_Chopper-2_idnl57",
+              "url": "https://res.cloudinary.com/craftycommerce/image/upload/v1673710371/products/Kitchen/Vegetable_Chopper_Pro_Onion_Chopper_Multifunctional_13_in_1_Food_Chopper-2_idnl57.jpg",
+              "_id": "63c550e5d861ab13dc09b4aa"
+          }
+      ],
+      "category": "Kitchen",
+      "seller": "Fullstar Houseware",
+      "stock": 500,
+      "numOfReviews": 10,
+      "reviews": [],
+      "createdAt": "2023-01-16T13:28:05.091Z",
+      "__v": 0
+  },
+  {
+      "_id": "63c550e5d861ab13dc09b4ab",
+      "name": "Sakugi Dish Drying Rack for Countertop - Rustproof Dish Rack, Space-Saving & Multipurpose Drying Rack for Kitchen Counter with Utensil Holder, Large-Capacity 2-Tier Dish Drying Rack, Black",
+      "price": 39.99,
+      "description": "With a  practical 2-tier design and a size of 16.1*16.5*11 inch, Sakugi dish drainer for kitchen counter enables you to store different types and sizes of kitchenware, such as bowls, dishes, knives, wine glasses, kitchen pots, and frying pans. This 2-tier dish drying rack is perfect for families of 3-4 persons.",
+      "ratings": 4,
+      "images": [
+          {
+              "public_id": "products/Kitchen/Sakugi_Dish_Drying_Rack_for_Countertop_wlfvwt",
+              "url": "https://res.cloudinary.com/craftycommerce/image/upload/v1673710370/products/Kitchen/Sakugi_Dish_Drying_Rack_for_Countertop_wlfvwt.jpg",
+              "_id": "63c550e5d861ab13dc09b4ac"
+          },
+          {
+              "public_id": "products/Kitchen/Sakugi_Dish_Drying_Rack_for_Countertop-1_iihoen",
+              "url": "https://res.cloudinary.com/craftycommerce/image/upload/v1673710370/products/Kitchen/Sakugi_Dish_Drying_Rack_for_Countertop-1_iihoen.jpg",
+              "_id": "63c550e5d861ab13dc09b4ad"
+          }
+      ],
+      "category": "Kitchen",
+      "seller": "Sakugi Ltd",
+      "stock": 500,
+      "numOfReviews": 10,
+      "reviews": [],
+      "createdAt": "2023-01-16T13:28:05.092Z",
+      "__v": 0
+  },
+  {
+      "_id": "63c550e5d861ab13dc09b4ae",
+      "name": "Calmbee Plastic Wrap Dispenser with Cutter and Ziplock Bag organizer, 9 IN 1 Bamboo Foil and Plastic Wrap Organizer for Kitchen Drawer, Ziplock Bag Storage Organizer for Gallon,Quart,Sandwich,Snack",
+      "price": 49.99,
+      "description": "① This sets contains 3 in 1 foil and wrap dispenser with cutter, perfect for Aluminum foil, saran wrap, plastic wrap, cling wrap, wax paper. ② 5 in 1 ziplock bag organizer, compatible with Compatible with Ziploc, Solimo, Hefty, Glad, Up&Up & GreatValue storage, freezer and slider bag of sandwich, quart , snack and gallon. ③Drawer Organizer Storage Box is a elegant design for daily organization for your clips or other little stuff.",
+      "ratings": 4.5,
+      "images": [
+          {
+              "public_id": "products/Kitchen/Calmbee_Plastic_Wrap_Dispenser_with_Cutter_qq7nd6",
+              "url": "https://res.cloudinary.com/craftycommerce/image/upload/v1673710369/products/Kitchen/Calmbee_Plastic_Wrap_Dispenser_with_Cutter_qq7nd6.jpg",
+              "_id": "63c550e5d861ab13dc09b4af"
+          },
+          {
+              "public_id": "products/Kitchen/Calmbee_Plastic_Wrap_Dispenser_with_Cutter-2_tatgg1",
+              "url": "https://res.cloudinary.com/craftycommerce/image/upload/v1673710369/products/Kitchen/Calmbee_Plastic_Wrap_Dispenser_with_Cutter-2_tatgg1.jpg",
+              "_id": "63c550e5d861ab13dc09b4b0"
+          }
+      ],
+      "category": "Kitchen",
+      "seller": "Kumebon",
+      "stock": 500,
+      "numOfReviews": 23,
+      "reviews": [],
+      "createdAt": "2023-01-16T13:28:05.092Z",
+      "__v": 0
+  },
+  {
+      "_id": "63c550e5d861ab13dc09b4b1",
+      "name": "Umite Chef Kitchen Cooking Utensils Set, 33 pcs Non-Stick Silicone Cooking Kitchen Utensils Spatula Set with Holder, Wooden Handle Silicone Kitchen Gadgets Utensil Set (Khaki)",
+      "price": 32.99,
+      "description": "Made of food-grade silicone, BPA-free, can use in any type of food. And it will probably last longer than the other plastic kitchen utensils. This silicone cooking utensils does not react with food or beverages, you don’t have to worry about the health of your families will not retain odors or colors, Before the first use, the original smell will disappear after the silicone soaking in water and exposed it to the air for about 3 hours",
+      "ratings": 4.5,
+      "images": [
+          {
+              "public_id": "products/Kitchen/Umite_Chef_Kitchen_Cooking_Utensils_Set_olkw1p",
+              "url": "https://res.cloudinary.com/craftycommerce/image/upload/v1673710371/products/Kitchen/Umite_Chef_Kitchen_Cooking_Utensils_Set_olkw1p.jpg",
+              "_id": "63c550e5d861ab13dc09b4b2"
+          },
+          {
+              "public_id": "products/Kitchen/Umite_Chef_Kitchen_Cooking_Utensils_Set-2_oti8xr",
+              "url": "https://res.cloudinary.com/craftycommerce/image/upload/v1673710371/products/Kitchen/Umite_Chef_Kitchen_Cooking_Utensils_Set-2_oti8xr.jpg",
+              "_id": "63c550e5d861ab13dc09b4b3"
+          }
+      ],
+      "category": "Kitchen",
+      "seller": "Umitted US",
+      "stock": 500,
+      "numOfReviews": 2,
+      "reviews": [],
+      "createdAt": "2023-01-16T13:28:05.093Z",
+      "__v": 0
+  },
+  {
+      "_id": "63c550e5d861ab13dc09b4b4",
+      "name": "Under Sink Organizer, Bukfen Pull Out Cabinet Organizer 2-Tier Slide Out Sliding Shelf Under Cabinet Storage Multi-Use for Under Kitchen Bathroom Sink Organizers and Storage",
+      "price": 34.99,
+      "description": "Organize the space under your cabinets with this 2-tier under sink storage. This under the sink organizer can solve your under cabinet storage troubles and increase the utilization of limited sink space. With pull out cabinet organizer, you have room for all your stuff, and a slide-out system like this makes it easier to access everything you store under the sink",
+      "ratings": 4,
+      "images": [
+          {
+              "public_id": "products/Kitchen/Under_Sink_Organizer_Bukfen_Pull_Out_Cabinet_Organizer-2_ohobea",
+              "url": "https://res.cloudinary.com/craftycommerce/image/upload/v1673710371/products/Kitchen/Under_Sink_Organizer_Bukfen_Pull_Out_Cabinet_Organizer-2_ohobea.jpg",
+              "_id": "63c550e5d861ab13dc09b4b5"
+          },
+          {
+              "public_id": "products/Kitchen/Under_Sink_Organizer_Bukfen_Pull_Out_Cabinet_Organizer_bqn73q",
+              "url": "https://res.cloudinary.com/craftycommerce/image/upload/v1673710371/products/Kitchen/Under_Sink_Organizer_Bukfen_Pull_Out_Cabinet_Organizer_bqn73q.jpg",
+              "_id": "63c550e5d861ab13dc09b4b6"
+          }
+      ],
+      "category": "Kitchen",
+      "seller": "Hanyuexin",
+      "stock": 500,
+      "numOfReviews": 4,
+      "reviews": [],
+      "createdAt": "2023-01-16T13:28:05.093Z",
+      "__v": 0
+  },
+  {
+      "_id": "63c550e5d861ab13dc09b4b7",
+      "name": "KitchenClouds Kitchen Mat Cushioned Anti Fatigue Kitchen Rug 17.3'x28' Waterproof Non Slip Kitchen Rugs and Mats Standing Desk Mat Comfort Floor Mats for Kitchen House Sink Office (Black)",
+      "price": 19.99,
+      "description": "The kitchen rug is made of high-quality, soft PVC foam which provides a thick cushion to provide support and comfort when standing. Relieves pressure on muscles and joints, and alleviates foot, knee, leg and back discomfort. High-quality material is durable and long-lasting.",
+      "ratings": 4.5,
+      "images": [
+          {
+              "public_id": "products/Kitchen/KitchenClouds_Kitchen_Mat_Cushioned_Anti_Fatigue_Kitchen_Rug_ednoze",
+              "url": "https://res.cloudinary.com/craftycommerce/image/upload/v1673710370/products/Kitchen/KitchenClouds_Kitchen_Mat_Cushioned_Anti_Fatigue_Kitchen_Rug_ednoze.jpg",
+              "_id": "63c550e5d861ab13dc09b4b8"
+          },
+          {
+              "public_id": "products/Kitchen/KitchenClouds_Kitchen_Mat_Cushioned_Anti_Fatigue_Kitchen_Rug-2_sy5z4n",
+              "url": "https://res.cloudinary.com/craftycommerce/image/upload/v1673710370/products/Kitchen/KitchenClouds_Kitchen_Mat_Cushioned_Anti_Fatigue_Kitchen_Rug-2_sy5z4n.jpg",
+              "_id": "63c550e5d861ab13dc09b4b9"
+          }
+      ],
+      "category": "Kitchen",
+      "seller": "Kokihub",
+      "stock": 500,
+      "numOfReviews": 7,
+      "reviews": [],
+      "createdAt": "2023-01-16T13:28:05.093Z",
+      "__v": 0
+  },
+  {
+      "_id": "63c550e5d861ab13dc09b4ba",
+      "name": "JoyFul by JoyJolt 24pc Borosilicate Glass Storage Containers with Lids. 12 Airtight, Freezer Safe Food Storage Containers, Pantry Kitchen Storage Containers, Glass Meal Prep Container for Lunch",
+      "price": 39.95,
+      "description": "Glass Food Storage Containers for Everything! Aside from the obvious fact that JoyFul by JoyJolt glass meal prep containers are healthier for you and your food, you can also go from freezer to oven without breaking, with a variety of shapes and sizes to fit your purpose. What a JoyFul Idea!",
+      "ratings": 5,
+      "images": [
+          {
+              "public_id": "products/Kitchen/JoyFul_by_JoyJolt_24pc_Borosilicate_Glass_Storage_Containers_with_Lids._nugfue",
+              "url": "https://res.cloudinary.com/craftycommerce/image/upload/v1673710369/products/Kitchen/JoyFul_by_JoyJolt_24pc_Borosilicate_Glass_Storage_Containers_with_Lids._nugfue.jpg",
+              "_id": "63c550e5d861ab13dc09b4bb"
+          },
+          {
+              "public_id": "products/Kitchen/JoyFul_by_JoyJolt_24pc_Borosilicate_Glass_Storage_Containers_with_Lids_-_2_ltc2os",
+              "url": "https://res.cloudinary.com/craftycommerce/image/upload/v1673710369/products/Kitchen/JoyFul_by_JoyJolt_24pc_Borosilicate_Glass_Storage_Containers_with_Lids_-_2_ltc2os.jpg",
+              "_id": "63c550e5d861ab13dc09b4bc"
+          }
+      ],
+      "category": "Kitchen",
+      "seller": "C Crest",
+      "stock": 500,
+      "numOfReviews": 10,
+      "reviews": [],
+      "createdAt": "2023-01-16T13:28:05.094Z",
+      "__v": 0
+  },
+  {
+      "_id": "63c550e5d861ab13dc09b4bd",
+      "name": "HOOJO Refrigerator Organizer Bins - 8pcs Clear Plastic Bins For Fridge, Freezer, Kitchen Cabinet, Pantry Organization and Storage, BPA Free Fridge Organizer, 12.5' Long",
+      "price": 23.9,
+      "description": "These sturdy and medium capacity bins are great for creating a clean and organized refrigerator or pantry. Ideal for fruits, meat, milk, salad dressing, drink bottles, canned food, and packaged food ,condiments, jelly and more. So easy to keep clean and contain spills.",
+      "ratings": 5,
+      "images": [
+          {
+              "public_id": "products/Kitchen/HOOJO_Refrigerator_Organizer_Bins_-_8pcs_Clear_Plastic_Bins_For_Fridge_psgm6l",
+              "url": "https://res.cloudinary.com/craftycommerce/image/upload/v1673710369/products/Kitchen/HOOJO_Refrigerator_Organizer_Bins_-_8pcs_Clear_Plastic_Bins_For_Fridge_psgm6l.jpg",
+              "_id": "63c550e5d861ab13dc09b4be"
+          },
+          {
+              "public_id": "products/Kitchen/HOOJO_Refrigerator_Organizer_Bins_-_8pcs_Clear_Plastic_Bins_For_Fridge-2_exu76g",
+              "url": "https://res.cloudinary.com/craftycommerce/image/upload/v1673710369/products/Kitchen/HOOJO_Refrigerator_Organizer_Bins_-_8pcs_Clear_Plastic_Bins_For_Fridge-2_exu76g.jpg",
+              "_id": "63c550e5d861ab13dc09b4bf"
+          }
+      ],
+      "category": "Kitchen",
+      "seller": "Ettori",
+      "stock": 500,
+      "numOfReviews": 12,
+      "reviews": [],
+      "createdAt": "2023-01-16T13:28:05.094Z",
+      "__v": 0
+  },
+  {
+      "_id": "63c550e5d861ab13dc09b4c0",
+      "name": "Seropy Roll Up Dish Drying Rack, Over The Sink Dish Drying Rack Kitchen Rolling Dish Drainer, Foldable Sink Rack Mat Stainless Steel Wire Dish Drying Rack for Kitchen Sink Counter",
+      "price": 9.99,
+      "description": "Made of 304 Stainless Steel with durable construction, the collapsible cutting board over sink is sturdy, rust resistant,non-slip, waterproof; support up to 33lbs, not easy to bend or twist by heavy cookware. A great portable stainless steel rolling rack for apartment essentials and home accessories.",
+      "ratings": 4.5,
+      "images": [
+          {
+              "public_id": "products/Kitchen/Seropy_Roll_Up_Dish_Drying_Rack-2_vaaigu",
+              "url": "https://res.cloudinary.com/craftycommerce/image/upload/v1673710371/products/Kitchen/Seropy_Roll_Up_Dish_Drying_Rack-2_vaaigu.jpg",
+              "_id": "63c550e5d861ab13dc09b4c1"
+          },
+          {
+              "public_id": "products/Kitchen/Seropy_Roll_Up_Dish_Drying_Rack_snp8ut",
+              "url": "https://res.cloudinary.com/craftycommerce/image/upload/v1673710370/products/Kitchen/Seropy_Roll_Up_Dish_Drying_Rack_snp8ut.jpg",
+              "_id": "63c550e5d861ab13dc09b4c2"
+          }
+      ],
+      "category": "Kitchen",
+      "seller": "Suncleanse",
+      "stock": 500,
+      "numOfReviews": 34,
+      "reviews": [],
+      "createdAt": "2023-01-16T13:28:05.094Z",
+      "__v": 0
+  },
+  {
+      "_id": "63c550e5d861ab13dc09b4c3",
+      "name": "Kitchen Utensils Set, Cooking Utensils Set, Non Stick and Heat Resistant Kitchen Gadgets, 24 Pcs Nylon and Stainless Steel Kitchen Utensil Set New Home Essentials, Pots and Pans Kitchen Accessories",
+      "price": 13.99,
+      "description": "Our utensil sets have everything you need for a perfect cooking experience! Kaluns kitchen gadgets and accessories are made of a combination of nylon and stainless steel to ensure no scratching or sticking.",
+      "ratings": 4,
+      "images": [
+          {
+              "public_id": "products/Kitchen/Kitchen_Utensils_Set_Cooking_Utensils_Set_em08hg",
+              "url": "https://res.cloudinary.com/craftycommerce/image/upload/v1673710369/products/Kitchen/Kitchen_Utensils_Set_Cooking_Utensils_Set_em08hg.jpg",
+              "_id": "63c550e5d861ab13dc09b4c4"
+          },
+          {
+              "public_id": "products/Kitchen/Kitchen_Utensils_Set_Cooking_Utensils_Set-2_obhloy",
+              "url": "https://res.cloudinary.com/craftycommerce/image/upload/v1673710370/products/Kitchen/Kitchen_Utensils_Set_Cooking_Utensils_Set-2_obhloy.jpg",
+              "_id": "63c550e5d861ab13dc09b4c5"
+          }
+      ],
+      "category": "Kitchen",
+      "seller": "Baosiman",
+      "stock": 500,
+      "numOfReviews": 34,
+      "reviews": [],
+      "createdAt": "2023-01-16T13:28:05.095Z",
+      "__v": 0
+  },
+  {
+      "_id": "63c550e5d861ab13dc09b4c6",
+      "name": "Nonstick Pots and Pans Set,Black Induction Cookware Sets, 11 Pcs Kitchen Essentials Non Stick Cooking Set with Frying Pans & Saucepans",
+      "price": 99.99,
+      "description": "Create the dishes you love without the frustrations. You'll cook, boil, stir fry, fry eggs, and sauté with minimal effort and minimal oil. The cleanup is quick and easy as well. We make cookware that make your life easier and food taste better.",
+      "ratings": 4.8,
+      "images": [
+          {
+              "public_id": "products/Kitchen/Nonstick_Pots_and_Pans_Set_Black_Induction_Cookware_Sets_iwckdm",
+              "url": "https://res.cloudinary.com/craftycommerce/image/upload/v1673710370/products/Kitchen/Nonstick_Pots_and_Pans_Set_Black_Induction_Cookware_Sets_iwckdm.jpg",
+              "_id": "63c550e5d861ab13dc09b4c7"
+          },
+          {
+              "public_id": "products/Kitchen/Nonstick_Pots_and_Pans_Set_Black_Induction_Cookware_Sets-1_rrvhbs",
+              "url": "https://res.cloudinary.com/craftycommerce/image/upload/v1673710370/products/Kitchen/Nonstick_Pots_and_Pans_Set_Black_Induction_Cookware_Sets-1_rrvhbs.jpg",
+              "_id": "63c550e5d861ab13dc09b4c8"
+          }
+      ],
+      "category": "Kitchen",
+      "seller": "Higeek",
+      "stock": 500,
+      "numOfReviews": 7,
+      "reviews": [],
+      "createdAt": "2023-01-16T13:28:05.095Z",
+      "__v": 0
+  },
+  {
+      "_id": "63c550e5d861ab13dc09b4c9",
+      "name": "ORDORA Pots and Pans Organizer for Cabinet, 8 Tier Pot Rack with 3 DIY Methods, Adjustable Pan Organizer Rack for Cabinet, Pot Organizer for Kitchen Organization & Storage, Pot Lid Organizer",
+      "price": 24.99,
+      "description": "his adjustable pots and pans organizer for cabinet can keep outstanding balance during use; the extended U-turn part provides a better footing for smaller kitchen tools so that you'll have no worries about them sliding off; each divider is fitted with a rubber covering to help hold pans/pots in place and protect them from getting scratched or falling off",
+      "ratings": 4.5,
+      "images": [
+          {
+              "public_id": "products/Kitchen/ORDORA_Pots_and_Pans_Organizer_for_Cabinet_abek6c",
+              "url": "https://res.cloudinary.com/craftycommerce/image/upload/v1673710370/products/Kitchen/ORDORA_Pots_and_Pans_Organizer_for_Cabinet_abek6c.jpg",
+              "_id": "63c550e5d861ab13dc09b4ca"
+          },
+          {
+              "public_id": "products/Kitchen/ORDORA_Pots_and_Pans_Organizer_for_Cabinet-2_hizjfk",
+              "url": "https://res.cloudinary.com/craftycommerce/image/upload/v1673710370/products/Kitchen/ORDORA_Pots_and_Pans_Organizer_for_Cabinet-2_hizjfk.jpg",
+              "_id": "63c550e5d861ab13dc09b4cb"
+          }
+      ],
+      "category": "Kitchen",
+      "seller": "UBae",
+      "stock": 500,
+      "numOfReviews": 23,
+      "reviews": [],
+      "createdAt": "2023-01-16T13:28:05.096Z",
+      "__v": 0
+  },
+  {
+      "_id": "63c550e5d861ab13dc09b4cc",
+      "name": "Sony Xperia 1 IV 512GB",
+      "price": 1398,
+      "description": "4K HDR native 120fps video recording[1] on all rear lenses\n[2] True optical zoom 85-125mm/16mm/24mm lenses w/ 20fps HDR AF/AE\nReal-time Eye AF & object tracking for photo/video (all rear lenses)\nBrightest 6.5” 4K 120Hz HDR OLED 21:9 wide Display[3]\nBuild-in live streaming for videographers[4] and mobile gamers",
+      "ratings": 5,
+      "images": [
+          {
+              "public_id": "products/Smartphones/Sony_Xperia_1_IV_512GB_oojnib",
+              "url": "https://res.cloudinary.com/craftycommerce/image/upload/v1673713985/products/Smartphones/Sony_Xperia_1_IV_512GB_oojnib.jpg",
+              "_id": "63c550e5d861ab13dc09b4cd"
+          }
+      ],
+      "category": "Smartphones",
+      "seller": "Crafty Commerce",
+      "stock": 500,
+      "numOfReviews": 6,
+      "reviews": [],
+      "createdAt": "2023-01-16T13:28:05.096Z",
+      "__v": 0
+  },
+  {
+      "_id": "63c550e5d861ab13dc09b4ce",
+      "name": "OnePlus 10 Pro | 5G Android Smartphone | 8GB+128GB | Triple Camera co-Developed with Hasselblad | Volcanic Black",
+      "price": 599.99,
+      "description": "Powerful triple camera System, co-developed with Hasselblad | Featuring a primary 48MP Sony IMX sensor, the 10 Pro captures stunning natural colors & can shoot up to 8k video.",
+      "ratings": 4.5,
+      "images": [
+          {
+              "public_id": "products/Smartphones/OnePlus_10_Pro_5G_Android_Smartphone_8GB_128GB_sqr4y5",
+              "url": "https://res.cloudinary.com/craftycommerce/image/upload/v1673713984/products/Smartphones/OnePlus_10_Pro_5G_Android_Smartphone_8GB_128GB_sqr4y5.jpg",
+              "_id": "63c550e5d861ab13dc09b4cf"
+          },
+          {
+              "public_id": "products/Smartphones/OnePlus_10_Pro_5G_Android_Smartphone_8GB_128GB_-2_uim2lv",
+              "url": "https://res.cloudinary.com/craftycommerce/image/upload/v1673713983/products/Smartphones/OnePlus_10_Pro_5G_Android_Smartphone_8GB_128GB_-2_uim2lv.jpg",
+              "_id": "63c550e5d861ab13dc09b4d0"
+          }
+      ],
+      "category": "Smartphones",
+      "seller": "Crafty Commerce",
+      "stock": 500,
+      "numOfReviews": 3,
+      "reviews": [],
+      "createdAt": "2023-01-16T13:28:05.097Z",
+      "__v": 0
+  },
+  {
+      "_id": "63c550e5d861ab13dc09b4d1",
+      "name": "SAMSUNG Galaxy S22 Ultra (256GB)",
+      "price": 1099.99,
+      "description": "8K SUPER STEADY VIDEO: Shoot videos that rival how epic your life is with stunning 8K recording, the highest recording resolution available on a smartphone; Video captured is effortlessly smooth, thanks to Auto Focus Video Stabilization on Galaxy S22 Ultra",
+      "ratings": 4.8,
+      "images": [
+          {
+              "public_id": "products/Smartphones/SAMSUNG_Galaxy_S22_Ultra_vnirky",
+              "url": "https://res.cloudinary.com/craftycommerce/image/upload/v1673713984/products/Smartphones/SAMSUNG_Galaxy_S22_Ultra_vnirky.jpg",
+              "_id": "63c550e5d861ab13dc09b4d2"
+          },
+          {
+              "public_id": "products/Smartphones/SAMSUNG_Galaxy_S22_Ultra-2_ey0nie",
+              "url": "https://res.cloudinary.com/craftycommerce/image/upload/v1673713984/products/Smartphones/SAMSUNG_Galaxy_S22_Ultra-2_ey0nie.jpg",
+              "_id": "63c550e5d861ab13dc09b4d3"
+          },
+          {
+              "public_id": "products/Smartphones/SAMSUNG_Galaxy_S22_Ultra-3_vtgc0l",
+              "url": "https://res.cloudinary.com/craftycommerce/image/upload/v1673713984/products/Smartphones/SAMSUNG_Galaxy_S22_Ultra-3_vtgc0l.jpg",
+              "_id": "63c550e5d861ab13dc09b4d4"
+          }
+      ],
+      "category": "Smartphones",
+      "seller": "Crafty Commerce",
+      "stock": 500,
+      "numOfReviews": 8,
+      "reviews": [],
+      "createdAt": "2023-01-16T13:28:05.098Z",
+      "__v": 0
+  },
+  {
+      "_id": "63c550e5d861ab13dc09b4d5",
+      "name": "SAMSUNG Galaxy Z Fold 4 (512GB), S Pen Compatible, Phantom Black",
+      "price": 1919.99,
+      "description": "Free up your hands with Flex Mode on the Galaxy Z Fold4; This smartphone stands on its own so you can take notes during a conference call or follow along with instructional videos in real time",
+      "ratings": 4.5,
+      "images": [
+          {
+              "public_id": "products/Smartphones/SAMSUNG_Galaxy_Z_Fold_4_c1zvky",
+              "url": "https://res.cloudinary.com/craftycommerce/image/upload/v1673713984/products/Smartphones/SAMSUNG_Galaxy_Z_Fold_4_c1zvky.jpg",
+              "_id": "63c550e5d861ab13dc09b4d6"
+          },
+          {
+              "public_id": "products/Smartphones/SAMSUNG_Galaxy_Z_Fold_4-2_x4imia",
+              "url": "https://res.cloudinary.com/craftycommerce/image/upload/v1673713984/products/Smartphones/SAMSUNG_Galaxy_Z_Fold_4-2_x4imia.jpg",
+              "_id": "63c550e5d861ab13dc09b4d7"
+          },
+          {
+              "public_id": "products/Smartphones/SAMSUNG_Galaxy_Z_Fold_4-3_extfop",
+              "url": "https://res.cloudinary.com/craftycommerce/image/upload/v1673713985/products/Smartphones/SAMSUNG_Galaxy_Z_Fold_4-3_extfop.jpg",
+              "_id": "63c550e5d861ab13dc09b4d8"
+          }
+      ],
+      "category": "Smartphones",
+      "seller": "Crafty Commerce",
+      "stock": 500,
+      "numOfReviews": 23,
+      "reviews": [],
+      "createdAt": "2023-01-16T13:28:05.099Z",
+      "__v": 0
+  },
+  {
+      "_id": "63c550e5d861ab13dc09b4d9",
+      "name": "Google Pixel 6 5G (256GB) - Sorta Seafoam",
+      "price": 646.08,
+      "description": "The powerful Google Tensor processor is the first processor designed by Google and made for Pixel; it keeps your phone fast, your games rich, and your personal info safe.",
+      "ratings": 5,
+      "images": [
+          {
+              "public_id": "products/Smartphones/Google_Pixel_6_5G_hduzjp",
+              "url": "https://res.cloudinary.com/craftycommerce/image/upload/v1673713983/products/Smartphones/Google_Pixel_6_5G_hduzjp.jpg",
+              "_id": "63c550e5d861ab13dc09b4da"
+          },
+          {
+              "public_id": "products/Smartphones/Google_Pixel_6_5G-2_pijqvc",
+              "url": "https://res.cloudinary.com/craftycommerce/image/upload/v1673713983/products/Smartphones/Google_Pixel_6_5G-2_pijqvc.jpg",
+              "_id": "63c550e5d861ab13dc09b4db"
+          },
+          {
+              "public_id": "products/Smartphones/Google_Pixel_6_5G-3_hn2asl",
+              "url": "https://res.cloudinary.com/craftycommerce/image/upload/v1673713983/products/Smartphones/Google_Pixel_6_5G-3_hn2asl.jpg",
+              "_id": "63c550e5d861ab13dc09b4dc"
+          }
+      ],
+      "category": "Smartphones",
+      "seller": "Crafty Commerce",
+      "stock": 500,
+      "numOfReviews": 32,
+      "reviews": [],
+      "createdAt": "2023-01-16T13:28:05.100Z",
+      "__v": 0
+  },
+  {
+      "_id": "63c550e5d861ab13dc09b4dd",
+      "name": "APPLE iPhone 14 Pro Max (Gold, 512 GB)",
+      "price": 1399,
+      "description": "Equipped with impressive features and decent specifications, the Apple iPhone 14 Pro Max 512 GB 6 GB is a perfect choice. The phone offers a slip-free grip as it is light in weight and is easy to carry. This stylish handset from Apple comes with a 6.7 inches (17.02 cm) display that has a resolution of 2796 x 1290 Pixels offering immersive and comfortable viewing. The camera specifications of the mobile are really impressive and remarkable that let you capture high-resolution images and videos. On the rear, the mobile comes with a Single camera setup, which has 48 MP + 12 MP + 12 MP cameras. Features on the rear camera setup include Digital Zoom, Auto Flash, Face detection, Touch to focus. On the front, the mobile features a 12 MP camera for clicking beautiful selfies and making video calls.",
+      "ratings": 4.5,
+      "images": [
+          {
+              "public_id": "products/Smartphones/APPLE_iPhone_14_Pro_Max_Gold_512_GB_niugjw",
+              "url": "https://res.cloudinary.com/craftycommerce/image/upload/v1673713983/products/Smartphones/APPLE_iPhone_14_Pro_Max_Gold_512_GB_niugjw.webp",
+              "_id": "63c550e5d861ab13dc09b4de"
+          },
+          {
+              "public_id": "products/Smartphones/APPLE_iPhone_14_Pro_Max_Gold_512_GB_-1_lbq14i",
+              "url": "https://res.cloudinary.com/craftycommerce/image/upload/v1673713983/products/Smartphones/APPLE_iPhone_14_Pro_Max_Gold_512_GB_-1_lbq14i.webp",
+              "_id": "63c550e5d861ab13dc09b4df"
+          },
+          {
+              "public_id": "products/Smartphones/APPLE_iPhone_14_Pro_Max_Gold_512_GB_-3_wp38tm",
+              "url": "https://res.cloudinary.com/craftycommerce/image/upload/v1673713983/products/Smartphones/APPLE_iPhone_14_Pro_Max_Gold_512_GB_-3_wp38tm.webp",
+              "_id": "63c550e5d861ab13dc09b4e0"
+          }
+      ],
+      "category": "Smartphones",
+      "seller": "Crafty Commerce",
+      "stock": 500,
+      "numOfReviews": 25,
+      "reviews": [],
+      "createdAt": "2023-01-16T13:28:05.101Z",
+      "__v": 0
+  },
+  {
+      "_id": "63c550e5d861ab13dc09b4e1",
+      "name": "APPLE iPhone 14 Pro (Silver, 1 TB)",
+      "price": 1599,
+      "description": "The Apple iPhone 14 Pro Max 1TB is a powerful device that is loaded with some of the best modern features. Starting from the screen, it has a True Tone display with ProMotion technology that keeps viewers engaged. In the optics department, it comes with a Sapphire crystal lens cover for the camera. The brand has also incorporated some other advanced features in other departments, like FaceID, Crash Detection, Emergency SOS via satellite, Apple Pay, etc.",
+      "ratings": 0,
+      "images": [
+          {
+              "public_id": "products/Smartphones/APPLE_iPhone_14_Pro_Silver_1_TB_rjegdq",
+              "url": "https://res.cloudinary.com/craftycommerce/image/upload/v1673713982/products/Smartphones/APPLE_iPhone_14_Pro_Silver_1_TB_rjegdq.webp",
+              "_id": "63c550e5d861ab13dc09b4e2"
+          },
+          {
+              "public_id": "products/Smartphones/APPLE_iPhone_14_Pro_Silver_1_TB_-2_himict",
+              "url": "https://res.cloudinary.com/craftycommerce/image/upload/v1673713982/products/Smartphones/APPLE_iPhone_14_Pro_Silver_1_TB_-2_himict.webp",
+              "_id": "63c550e5d861ab13dc09b4e3"
+          },
+          {
+              "public_id": "products/Smartphones/APPLE_iPhone_14_Pro_Silver_1_TB_-3_gxyo0f",
+              "url": "https://res.cloudinary.com/craftycommerce/image/upload/v1673713983/products/Smartphones/APPLE_iPhone_14_Pro_Silver_1_TB_-3_gxyo0f.webp",
+              "_id": "63c550e5d861ab13dc09b4e4"
+          }
+      ],
+      "category": "Smartphones",
+      "seller": "Crafty Commerce",
+      "stock": 0,
+      "numOfReviews": 0,
+      "reviews": [],
+      "createdAt": "2023-01-16T13:28:05.101Z",
+      "__v": 0
+  },
+  {
+      "_id": "63c550e5d861ab13dc09b4e5",
+      "name": "REDMI Note 12 Pro+ 5G (Arctic White, 256 GB) (12 GB RAM)",
+      "price": 299.99,
+      "description": "Xiaomi Redmi Note 12 Pro 5G presents a perfect blend of power and consistency. A 5000mAh battery enables users to continue with their operations for prolonged hours whereas its 256GB internal storage can be used to save plenty of apps and files. The brand has also provided a fingerprint sensor on the side, making it more convenient to use.",
+      "ratings": 4,
+      "images": [
+          {
+              "public_id": "products/Smartphones/REDMI_Note_12_Pro_5G_Arctic_White_256_GB_12_GB_RAM_cbwbpo",
+              "url": "https://res.cloudinary.com/craftycommerce/image/upload/v1673713984/products/Smartphones/REDMI_Note_12_Pro_5G_Arctic_White_256_GB_12_GB_RAM_cbwbpo.webp",
+              "_id": "63c550e5d861ab13dc09b4e6"
+          },
+          {
+              "public_id": "products/Smartphones/REDMI_Note_12_Pro_5G_Arctic_White_256_GB_12_GB_RAM_-2_jo6ati",
+              "url": "https://res.cloudinary.com/craftycommerce/image/upload/v1673713984/products/Smartphones/REDMI_Note_12_Pro_5G_Arctic_White_256_GB_12_GB_RAM_-2_jo6ati.webp",
+              "_id": "63c550e5d861ab13dc09b4e7"
+          }
+      ],
+      "category": "Smartphones",
+      "seller": "Crafty Commerce",
+      "stock": 500,
+      "numOfReviews": 12,
+      "reviews": [],
+      "createdAt": "2023-01-16T13:28:05.102Z",
+      "__v": 0
+  },
+  {
+      "_id": "63c550e5d861ab13dc09b4e8",
+      "name": "OPPO Reno8 5G (Shimmer Gold, 128 GB) (8 GB RAM)",
+      "price": 299.9,
+      "description": "The OPPO Reno8 5G promises an exclusive outer layout backed by a thoroughly organised specification sheet to get going. While an AMOLED type front screen loaded within takes are of the entertainment part, on the other hand, an 8GB RAM teamed with VOOC Charging enabled battery promises adequate performance.",
+      "ratings": 4.5,
+      "images": [
+          {
+              "public_id": "products/Smartphones/OPPO_Reno8_5G_Shimmer_Gold_128_GB_8_GB_RAM_ibrxeq",
+              "url": "https://res.cloudinary.com/craftycommerce/image/upload/v1673713984/products/Smartphones/OPPO_Reno8_5G_Shimmer_Gold_128_GB_8_GB_RAM_ibrxeq.webp",
+              "_id": "63c550e5d861ab13dc09b4e9"
+          },
+          {
+              "public_id": "products/Smartphones/OPPO_Reno8_5G_Shimmer_Gold_128_GB_8_GB_RAM_-1_dg7uet",
+              "url": "https://res.cloudinary.com/craftycommerce/image/upload/v1673713984/products/Smartphones/OPPO_Reno8_5G_Shimmer_Gold_128_GB_8_GB_RAM_-1_dg7uet.webp",
+              "_id": "63c550e5d861ab13dc09b4ea"
+          }
+      ],
+      "category": "Smartphones",
+      "seller": "Crafty Commerce",
+      "stock": 500,
+      "numOfReviews": 12,
+      "reviews": [],
+      "createdAt": "2023-01-16T13:28:05.102Z",
+      "__v": 0
+  },
+  {
+      "_id": "63c550e5d861ab13dc09b4eb",
+      "name": "Apple MacBook Pro (16-inch, M1 Pro chip with 10‑core CPU and 16‑core GPU, 32GB RAM, 512GB SSD) - Space Gray Z14V0016E",
+      "price": 2809.9,
+      "description": "The new MacBook Pro delivers game-changing performance for pro users. Choose the powerful M1 Pro to supercharge pro-level workflows while getting amazing battery life. And with an immersive 16-inch Liquid Retina XDR display and an array of pro ports, you can do more than ever with MacBook Pro.",
+      "ratings": 5,
+      "images": [
+          {
+              "public_id": "products/Laptops/Apple_2021_MacBook_Pro_16-inch_M1_Pro_chip_with_10_core_CPU_and_16_core_GPU_32GB_RAM_512GB_SSD_i5xhdq",
+              "url": "https://res.cloudinary.com/craftycommerce/image/upload/v1673777308/products/Laptops/Apple_2021_MacBook_Pro_16-inch_M1_Pro_chip_with_10_core_CPU_and_16_core_GPU_32GB_RAM_512GB_SSD_i5xhdq.jpg",
+              "_id": "63c550e5d861ab13dc09b4ec"
+          },
+          {
+              "public_id": "products/Laptops/Apple_2021_MacBook_Pro_16-inch_M1_Pro_chip_with_10_core_CPU_and_16_core_GPU_32GB_RAM_512GB_SSD_-1_nud48u",
+              "url": "https://res.cloudinary.com/craftycommerce/image/upload/v1673777308/products/Laptops/Apple_2021_MacBook_Pro_16-inch_M1_Pro_chip_with_10_core_CPU_and_16_core_GPU_32GB_RAM_512GB_SSD_-1_nud48u.jpg",
+              "_id": "63c550e5d861ab13dc09b4ed"
+          },
+          {
+              "public_id": "products/Laptops/Apple_2021_MacBook_Pro_16-inch_M1_Pro_chip_with_10_core_CPU_and_16_core_GPU_32GB_RAM_512GB_SSD_-3_n3vzxj",
+              "url": "https://res.cloudinary.com/craftycommerce/image/upload/v1673777307/products/Laptops/Apple_2021_MacBook_Pro_16-inch_M1_Pro_chip_with_10_core_CPU_and_16_core_GPU_32GB_RAM_512GB_SSD_-3_n3vzxj.jpg",
+              "_id": "63c550e5d861ab13dc09b4ee"
+          }
+      ],
+      "category": "Laptops",
+      "seller": "Apple Inc.",
+      "stock": 500,
+      "numOfReviews": 12,
+      "reviews": [],
+      "createdAt": "2023-01-16T13:28:05.103Z",
+      "__v": 0
+  },
+  {
+      "_id": "63c550e5d861ab13dc09b4ef",
+      "name": "Apple MacBook Pro 16” with Liquid Retina XDR Display, M1 Max Chip with 10-Core CPU and 32-Core GPU, 64GB Memory, 4TB SSD, Space Gray",
+      "price": 4703.79,
+      "description": "Supercharged for pros.The most powerful MacBook Pro ever is here. With the blazing-fast M1 Max chip - the first Apple silicon designed for pros - you get groundbreaking performance and amazing battery life. Add to that a stunning Liquid Retina XDR display, the best camera and audio ever in a Mac notebook, and all the ports you need. The first notebook of its kind, this MacBook Pro is a beast. Up to 3.7x faster CPU performance Up to 13x faster graphics performance Up to 11x faster machine learning Up to 21 hours battery lifePro to the Max.M1 Max - Scary faster.M1 Max is the most powerful chip ever created for a pro notebook, with 10 CPU cores, up to 32 GPU cores, and a 16-core Neural Engine. It delivers two times faster graphics processing and double the memory bandwidth of M1 Pro. And it has a dedicated media engine for decode and two for encode - with up to two times faster video encoding - and two ProRes accelerators for even higher multistream performance. 10-core CPU 32-core GPU 64GB of unified memory Up to 400GB/s memory bandwidth Support for four external displays Up to 7 streams of 8K ProRes video playbackM1 Max scale the amazing M1 architecture to new heights - and for the first time, they bring a system on a chip (SoC) architecture to a pro notebook. Both have more CPU cores, more GPU cores, and more unified memory than M1.",
+      "ratings": 5,
+      "images": [
+          {
+              "public_id": "products/Laptops/Apple_MacBook_Pro_16_with_Liquid_Retina_XDR_Display_M1_Max_Chip_with_10-Core_CPU_and_32-Core_GPU_64GB_Memory_4TB_SSD-1_secsqg",
+              "url": "https://res.cloudinary.com/craftycommerce/image/upload/v1673777307/products/Laptops/Apple_MacBook_Pro_16_with_Liquid_Retina_XDR_Display_M1_Max_Chip_with_10-Core_CPU_and_32-Core_GPU_64GB_Memory_4TB_SSD-1_secsqg.webp",
+              "_id": "63c550e5d861ab13dc09b4f0"
+          },
+          {
+              "public_id": "products/Laptops/Apple_MacBook_Pro_16_with_Liquid_Retina_XDR_Display_M1_Max_Chip_with_10-Core_CPU_and_32-Core_GPU_64GB_Memory_4TB_SSD-2_fcpvg",
+              "url": "https://res.cloudinary.com/craftycommerce/image/upload/v1673777308/products/Laptops/Apple_MacBook_Pro_16_with_Liquid_Retina_XDR_Display_M1_Max_Chip_with_10-Core_CPU_and_32-Core_GPU_64GB_Memory_4TB_SSD-2_fcpvgl.jpg",
+              "_id": "63c550e5d861ab13dc09b4f1"
+          },
+          {
+              "public_id": "products/Laptops/Apple_MacBook_Pro_16_with_Liquid_Retina_XDR_Display_M1_Max_Chip_with_10-Core_CPU_and_32-Core_GPU_64GB_Memory_4TB_SSD-3_aev3j",
+              "url": "https://res.cloudinary.com/craftycommerce/image/upload/v1673777308/products/Laptops/Apple_MacBook_Pro_16_with_Liquid_Retina_XDR_Display_M1_Max_Chip_with_10-Core_CPU_and_32-Core_GPU_64GB_Memory_4TB_SSD-3_aev3jb.jpg",
+              "_id": "63c550e5d861ab13dc09b4f2"
+          }
+      ],
+      "category": "Laptops",
+      "seller": "Apple Inc.",
+      "stock": 4,
+      "numOfReviews": 5,
+      "reviews": [],
+      "createdAt": "2023-01-16T13:28:05.103Z",
+      "__v": 0
+  },
+  {
+      "_id": "63c550e5d861ab13dc09b4f3",
+      "name": "Apple MacBook Air Laptop M1 Chip, 13” Retina Display, Gold with AppleCare+ for MacBook Air",
+      "price": 1168,
+      "description": "All-Day Battery Life – Go longer than ever with up to 18 hours of battery life. Powerful Performance – Take on everything from professional-quality editing to action-packed gaming with ease. The Apple M1 chip with an 8-core CPU delivers up to 3.5x faster performance than the previous generation while using way less power. Superfast Memory – 8GB of unified memory makes your entire system speedy and responsive. That way it can support tasks like memory-hogging multitab browsing and opening a huge graphic file quickly and easily. AppleCare+ for Mac extends your coverage to three years from your AppleCare+ purchase date and adds up to two incidents of accidental damage coverage. Each incident of accidental damage coverage is subject to a service fee of $99 for screen damage or external enclosure damage, or $299 for other damage, plus applicable tax Global repair coverage",
+      "ratings": 4.5,
+      "images": [
+          {
+              "public_id": "products/Laptops/Apple_2020_MacBook_Air_Laptop_M1_Chip_13_Retina_Display-1_jznyxg",
+              "url": "https://res.cloudinary.com/craftycommerce/image/upload/v1673777307/products/Laptops/Apple_2020_MacBook_Air_Laptop_M1_Chip_13_Retina_Display-1_jznyxg.jpg",
+              "_id": "63c550e5d861ab13dc09b4f4"
+          },
+          {
+              "public_id": "products/Laptops/Apple_2020_MacBook_Air_Laptop_M1_Chip_13_Retina_Display-2_jlokks",
+              "url": "https://res.cloudinary.com/craftycommerce/image/upload/v1673777307/products/Laptops/Apple_2020_MacBook_Air_Laptop_M1_Chip_13_Retina_Display-2_jlokks.jpg",
+              "_id": "63c550e5d861ab13dc09b4f5"
+          },
+          {
+              "public_id": "products/Laptops/Apple_2020_MacBook_Air_Laptop_M1_Chip_13_Retina_Display-3_shubik",
+              "url": "https://res.cloudinary.com/craftycommerce/image/upload/v1673777308/products/Laptops/Apple_2020_MacBook_Air_Laptop_M1_Chip_13_Retina_Display-3_shubik.jpg",
+              "_id": "63c550e5d861ab13dc09b4f6"
+          }
+      ],
+      "category": "Laptops",
+      "seller": "Apple Inc.",
+      "stock": 500,
+      "numOfReviews": 18,
+      "reviews": [],
+      "createdAt": "2023-01-16T13:28:05.104Z",
+      "__v": 0
+  },
+  {
+      "_id": "63c550e5d861ab13dc09b4f7",
+      "name": "SAMSUNG 15.6” Galaxy Book 2 Pro with Intel ARC Laptop Computer, i7 / 32GB / 1TB, 12th Gen Intel Core Processor, Evo Certified, Lightweight, Graphite",
+      "price": 1799.99,
+      "description": "Meet SAMSUNG Galaxy Book2 Pro, the new way to PC. To take on the world, you need a laptop that’s ready to go the distance, literally. Thinner and lighter than ever, Galaxy Book2 Pro helps you seize the day wherever you are without skimping on power — in fact, it’s packing an ultra-mighty processor. Breeze through your day with effortless Galaxy connectivity — for instance, you can pair Galaxy Book2 Pro with your smartphone and instantly sync files, call and text right from your laptop. It’s super easy. Discover a new world of productivity, versatility and power with Galaxy Book2 Pro, the PC that’s ready to go wherever you go. Do more effortlessly with Galaxy devices that work seamlessly together. Enjoy even more control over your files with Private Share,**** a security feature that lets you set time limits on your shared files — the recipient can’t capture or share your file, and you remain in control with the ability to revoke file access at any time. File security has never been so simple. *Compared to 2021 Galaxy Book Pro model. **Battery life varies significantly with settings, usage, and other factors. Based on results from internal lab tests for local video playback time conducted by Samsung. Test results from a prerelease version of the device under default settings (audio volume and brightness levels) without connection to WiFi or mobile network. ***Compared to 25W or 45W charger. ****Private Share features for both the sender and receiver require Galaxy devices with Windows 10, Android OS 10.0 (Q), and One UI 2.1 or above and the Quick Share app. Requires Wi-Fi and Bluetooth connection.",
+      "ratings": 4.5,
+      "images": [
+          {
+              "public_id": "products/Laptops/SAMSUNG_15.6_Galaxy_Book2_Pro_with_Intel_ARC_Laptop_Computer_ldmxkf",
+              "url": "https://res.cloudinary.com/craftycommerce/image/upload/v1673777308/products/Laptops/SAMSUNG_15.6_Galaxy_Book2_Pro_with_Intel_ARC_Laptop_Computer_ldmxkf.jpg",
+              "_id": "63c550e5d861ab13dc09b4f8"
+          },
+          {
+              "public_id": "products/Laptops/SAMSUNG_15.6_Galaxy_Book2_Pro_with_Intel_ARC_Laptop_Computer-2_fspdkb",
+              "url": "https://res.cloudinary.com/craftycommerce/image/upload/v1673777309/products/Laptops/SAMSUNG_15.6_Galaxy_Book2_Pro_with_Intel_ARC_Laptop_Computer-2_fspdkb.jpg",
+              "_id": "63c550e5d861ab13dc09b4f9"
+          }
+      ],
+      "category": "Laptops",
+      "seller": "Samsung Inc.",
+      "stock": 500,
+      "numOfReviews": 23,
+      "reviews": [],
+      "createdAt": "2023-01-16T13:28:05.104Z",
+      "__v": 0
+  },
+  {
+      "_id": "63c550e5d861ab13dc09b4fa",
+      "name": "Lenovo Ideapad 3 Laptop, 15.6” HD Touchscreen, 11th Gen Intel Core i3-1115G4 Processor, 8GB DDR4 RAM, 256GB PCIe NVMe SSD, HDMI, Webcam, Wi-Fi 5, Bluetooth, Windows 11 Home, Almond",
+      "price": 389.49,
+      "description": "Memory is 8GB high-bandwidth RAM to smoothly run multiple applications and browser tabs all at once. Hard Drive is 256GB PCIe Solid State Drive which allows to fast bootup and data transfer. 11th Gen Intel Core i3-1115G4 Dual-Core 3.0GHz Processor (6MB Intel Smart Cache, up to 4.10GHz) Intel UHD Graphics. 2 x USB 3.2 Gen 1 Type-A, 1 x USB 2.0 Type-A, 1 x HDMI, 1 x Combination Audio Jack, 1 x Multi-format SD Media Card Reader, Wireless-AC Wi-Fi 5 + Bluetooth Combo.",
+      "ratings": 4,
+      "images": [
+          {
+              "public_id": "products/Laptops/Lenovo_2022_Newest_Ideapad_3_Laptop-1_kezbpe",
+              "url": "https://res.cloudinary.com/craftycommerce/image/upload/v1673777308/products/Laptops/Lenovo_2022_Newest_Ideapad_3_Laptop-1_kezbpe.jpg",
+              "_id": "63c550e5d861ab13dc09b4fb"
+          },
+          {
+              "public_id": "products/Laptops/Lenovo_2022_Newest_Ideapad_3_Laptop-2_pen3a6",
+              "url": "https://res.cloudinary.com/craftycommerce/image/upload/v1673777309/products/Laptops/Lenovo_2022_Newest_Ideapad_3_Laptop-2_pen3a6.jpg",
+              "_id": "63c550e5d861ab13dc09b4fc"
+          }
+      ],
+      "category": "Laptops",
+      "seller": "Lenovo Pvt Ltd",
+      "stock": 500,
+      "numOfReviews": 3,
+      "reviews": [],
+      "createdAt": "2023-01-16T13:28:05.104Z",
+      "__v": 0
+  },
+  {
+      "_id": "63c550e5d861ab13dc09b4fd",
+      "name": "Acer Aspire 5 A515-56-347N Slim Laptop - 15.6” Full HD IPS Display - 11th Gen Intel i3-1115G4 Dual Core Processor - 8GB DDR4 - 128GB NVMe SSD - WiFi 6 - Amazon Alexa - Windows 11 Home in S Mode",
+      "price": 360,
+      "description": "Powerful Productivity: 11th Generation Intel Core i3-1115G4 Dual Core processor delivers unmatched speed and intelligence, enabling impressive creating, productivity, and gaming experiences. With Turbo Boost Technology, get up to 4.1GHz for your high-demand applications. Connectivity Technology: Wi-Fi, Bluetooth, HDMI. Visibly Stunning: Experience sharp details and crisp colors on the 15.6” Full HD IPS display with 82.58% screen-to-body, 16:9 aspect ratio and narrow bezels. Ergonomic Typing: Ergonomically designed hinge lifts the keyboard for comfortable typing, improved cooling, and a better sound experience. Internal Specifications: 8GB DDR4 on-board memory (1 slot available); 128GB NVMe solid-state drive storage (1 hard drive bay available) to store your files and media. Acer's Purified.Voice technology, features enhanced digital signal processing to cancel out background noise, improve speech accuracy and far-field pickup, which not only makes calls clearer, but makes talking to Alexa easier than before.. Using Alexa on your PC is as easy as asking a question. Just ask and Alexa can check your calendar, create lists, play music, answer questions, read the news and more.. Secure Operating System: Windows 11 Home in S mode comes with advanced security features built right in, like protections against phishing and malicious software so you don't have to think twice when navigating to a new webpage or downloading an app.",
+      "ratings": 4.5,
+      "images": [
+          {
+              "public_id": "products/Laptops/Acer_Aspire_5_A515-56-347N_Slim_Laptop-1_c0cdsz",
+              "url": "https://res.cloudinary.com/craftycommerce/image/upload/v1673777307/products/Laptops/Acer_Aspire_5_A515-56-347N_Slim_Laptop-1_c0cdsz.jpg",
+              "_id": "63c550e5d861ab13dc09b4fe"
+          },
+          {
+              "public_id": "products/Laptops/Acer_Aspire_5_A515-56-347N_Slim_Laptop-2_fpczp5",
+              "url": "https://res.cloudinary.com/craftycommerce/image/upload/v1673777307/products/Laptops/Acer_Aspire_5_A515-56-347N_Slim_Laptop-2_fpczp5.jpg",
+              "_id": "63c550e5d861ab13dc09b4ff"
+          }
+      ],
+      "category": "Laptops",
+      "seller": "Acer",
+      "stock": 500,
+      "numOfReviews": 3,
+      "reviews": [],
+      "createdAt": "2023-01-16T13:28:05.105Z",
+      "__v": 0
+  },
+  {
+      "_id": "63c550e5d861ab13dc09b500",
+      "name": "Lenovo Ideapad 1i 14” HD Laptop, Intel Celeron N4020 Processor, 4GB RAM, 64GB eMMC Flash Memory, Intel HD Graphics 500, HD Webcam, Stereo Speakers, Cloud Grey, Windows 11S, 128GB USB Card",
+      "price": 199.9,
+      "description": "1366 x 768 resolution boasts impressive color and clarity. Anti-glare Energy-efficient LED screen. Ultra-low-voltage platform. Dual-core, two-way processing provides maximum high-efficiency power to go. Stereo Speakers & 720p HD camera with Built-in microphone. Plenty of high-bandwidth RAM to smoothly run your games as well as multiple programs. Voice control: with Google Assistant voice-recognition support. Wireless-AC + Bluetooth, Cloud Grey. Bonus 32GB SnowBell USB Card.",
+      "ratings": 3.5,
+      "images": [
+          {
+              "public_id": "products/Laptops/2022_Lenovo_Ideapad_1i_14_HD_Laptop_Intel_Celeron_N4020_Processor_w0ealj",
+              "url": "https://res.cloudinary.com/craftycommerce/image/upload/v1673777307/products/Laptops/2022_Lenovo_Ideapad_1i_14_HD_Laptop_Intel_Celeron_N4020_Processor_w0ealj.jpg",
+              "_id": "63c550e5d861ab13dc09b501"
+          },
+          {
+              "public_id": "products/Laptops/2022_Lenovo_Ideapad_1i_14_HD_Laptop_Intel_Celeron_N4020_Processor-1_arwkdb",
+              "url": "https://res.cloudinary.com/craftycommerce/image/upload/v1673777307/products/Laptops/2022_Lenovo_Ideapad_1i_14_HD_Laptop_Intel_Celeron_N4020_Processor-1_arwkdb.jpg",
+              "_id": "63c550e5d861ab13dc09b502"
+          }
+      ],
+      "category": "Laptops",
+      "seller": "Lenovo Pvt Ltd",
+      "stock": 500,
+      "numOfReviews": 7,
+      "reviews": [],
+      "createdAt": "2023-01-16T13:28:05.105Z",
+      "__v": 0
+  },
+  {
+      "_id": "63c550e5d861ab13dc09b503",
+      "name": "ASUS Vivobook Go 15 L510 Thin & Light Laptop Computer, 15.6” FHD Display, Intel Celeron N4020 Processor, 4GB RAM, 64GB Storage, Windows 11 Home in S Mode, 1 Year Microsoft 365, Star Black, L510MA-AS02",
+      "price": 225.57,
+      "description": "Fast & Efficient: With an Intel Celeron N4020 processor, 4GB RAM and 64GB of storage, the ASUS Vivobook Go 15 L510 will help you get things done swiftly and efficiently.Up to 8hrs battery life Immersive Visuals: This 15.6 inch laptop features an innovative thin-bezel NanoEdge display that provides more usable onscreen space for immersive viewing. It also enables a larger screen to fit into a smaller chassis, giving you a laptop with a more compact footprint Extremely Portable: This ultra thin laptop is only 3.46Ibs and 0.71 inches thin, meaning it will easily slip into a backpack to be taken anywhere you need to go. Long Battery Life: Take this ASUS laptop with you anywhere without bringing the power adaptor - its long battery life gives you the flexibility to work or play anywhere Designed to be Quiet: the fanless design keeps noise levels down, so you won't be distracted when working on a spreadsheet or watching a movie Easy Sharing: A cleverly designed 180° lay-flat hinge on the ASUS Vivobook Go 15 makes it easy to share content or collaborate with friends ASUS Vivobook Go 15 comes with Wi-Fi 5 (802.11ac) for speeds up to three times faster than 802.11n Windows 11 Home in S mode is a 100% app based version of Windows where applications are verified and tested for quality on the Microsoft store. If you want to install an app that isn't available in the Microsoft Store, you'll need to switch out of S mode for free, which is easy and fast.",
+      "ratings": 4.5,
+      "images": [
+          {
+              "public_id": "products/Laptops/ASUS_Vivobook_Go_15_L510_Thin_Light_Laptop_Computer-1_nyx8fp",
+              "url": "https://res.cloudinary.com/craftycommerce/image/upload/v1673777308/products/Laptops/ASUS_Vivobook_Go_15_L510_Thin_Light_Laptop_Computer-1_nyx8fp.jpg",
+              "_id": "63c550e5d861ab13dc09b504"
+          },
+          {
+              "public_id": "products/Laptops/ASUS_Vivobook_Go_15_L510_Thin_Light_Laptop_Computer-2_epjp1o",
+              "url": "https://res.cloudinary.com/craftycommerce/image/upload/v1673777308/products/Laptops/ASUS_Vivobook_Go_15_L510_Thin_Light_Laptop_Computer-2_epjp1o.jpg",
+              "_id": "63c550e5d861ab13dc09b505"
+          }
+      ],
+      "category": "Laptops",
+      "seller": "ASUS Pvt Ltd",
+      "stock": 5,
+      "numOfReviews": 4,
+      "reviews": [],
+      "createdAt": "2023-01-16T13:28:05.106Z",
+      "__v": 0
+  },
+  {
+      "_id": "63c550e5d861ab13dc09b506",
+      "name": "SAMSUNG Chromebook Plus V2, 2-in-1, 4GB RAM, 32GB eMMC, 13MP Camera, Chrome OS, 12.2”, 16:10 Aspect Ratio, Stealth Silver (XE521QAB-K01US)",
+      "price": 275,
+      "description": "Get more done anywhere, anytime, with the lightweight 2-in-1 Chromebook Plus. Stay on top of your projects with the built-in pen, dual camera and full Google experience right at your fingertips. And cross more off your list without slowing down with a powerful battery and Intel processor. At just under 3 pounds, The Chromebook Plus is incredibly lightweight-just slip it into your bag and take it anywhere. Plus, it easily folds over into tablet mode so you can quickly switch between typing and writing down ideas.",
+      "ratings": 3.5,
+      "images": [
+          {
+              "public_id": "products/Laptops/SAMSUNG_Chromebook_Plus_V2_2-in-1_4GB_RAM_32GB_eMMC-1_og9vgh",
+              "url": "https://res.cloudinary.com/craftycommerce/image/upload/v1673777309/products/Laptops/SAMSUNG_Chromebook_Plus_V2_2-in-1_4GB_RAM_32GB_eMMC-1_og9vgh.jpg",
+              "_id": "63c550e5d861ab13dc09b507"
+          },
+          {
+              "public_id": "products/Laptops/SAMSUNG_Chromebook_Plus_V2_2-in-1_4GB_RAM_32GB_eMMC-2_dgzqjd",
+              "url": "https://res.cloudinary.com/craftycommerce/image/upload/v1673777309/products/Laptops/SAMSUNG_Chromebook_Plus_V2_2-in-1_4GB_RAM_32GB_eMMC-2_dgzqjd.jpg",
+              "_id": "63c550e5d861ab13dc09b508"
+          }
+      ],
+      "category": "Laptops",
+      "seller": "Samsung Inc.",
+      "stock": 10,
+      "numOfReviews": 23,
+      "reviews": [],
+      "createdAt": "2023-01-16T13:28:05.106Z",
+      "__v": 0
+  },
+  {
+      "_id": "63c550e5d861ab13dc09b509",
+      "name": "Apple Watch Series 8 GPS + Cellular 45mm Midnight Aluminium Case with Midnight Sport Band - M/L with AppleCare+ (2 Years)",
+      "price": 578,
+      "description": "Your essential companion for a healthy life is now even more powerful. Advanced sensors provide insights to help you better understand your health. New safety features can get you help when you need it. The bright, Always-On Retina display is easy to read, even when your wrist is down. Send a text, make a call, and stream music without your iPhone, even while traveling internationally. Use Family Setup to manage Apple Watch for family members who don’t have an iPhone. Available in a range of sizes and materials, with dozens of bands to choose from and watch faces with complications tailored to whatever you’re into.",
+      "ratings": 5,
+      "images": [
+          {
+              "public_id": "products/Watches/Apple_Watch_Series_8_GPS_Cellular_45mm_rp655g",
+              "url": "https://res.cloudinary.com/craftycommerce/image/upload/v1673783359/products/Watches/Apple_Watch_Series_8_GPS_Cellular_45mm_rp655g.jpg",
+              "_id": "63c550e5d861ab13dc09b50a"
+          },
+          {
+              "public_id": "products/Watches/Apple_Watch_Series_8_GPS_Cellular_45mm_-_1_g4n5r7",
+              "url": "https://res.cloudinary.com/craftycommerce/image/upload/v1673783359/products/Watches/Apple_Watch_Series_8_GPS_Cellular_45mm_-_1_g4n5r7.jpg",
+              "_id": "63c550e5d861ab13dc09b50b"
+          },
+          {
+              "public_id": "products/Watches/Apple_Watch_Series_8_GPS_Cellular_45mm_-_3_k5vgdj",
+              "url": "https://res.cloudinary.com/craftycommerce/image/upload/v1673783359/products/Watches/Apple_Watch_Series_8_GPS_Cellular_45mm_-_3_k5vgdj.jpg",
+              "_id": "63c550e5d861ab13dc09b50c"
+          }
+      ],
+      "category": "Watches",
+      "seller": "Apple Inc.",
+      "stock": 500,
+      "numOfReviews": 12,
+      "reviews": [],
+      "createdAt": "2023-01-16T13:28:05.106Z",
+      "__v": 0
+  },
+  {
+      "_id": "63c550e5d861ab13dc09b50d",
+      "name": "SAMSUNG Galaxy Watch 4 40mm Smartwatch with ECG Monitor Tracker for Health, Fitness, Running, Sleep Cycles, GPS Fall Detection, Bluetooth, SM-R860NZDAXAA, Pink Gold",
+      "price": 168.69,
+      "description": "Galaxy Watch4 is the first smartwatch to off body composition data right on your wrist, On your own schedule, now you can get readings on body fat, skeletal muscle, body water, basal metabolic rate, and Body Mass Index. Wake up feeling refreshed and recharged with advanced sleep tracking; When you go to bed, your Galaxy Watch4 sleep tracker starts monitoring your sleep and SpO2 levels continuously.",
+      "ratings": 5,
+      "images": [
+          {
+              "public_id": "products/Watches/SAMSUNG_Galaxy_Watch_4_40mm_Smartwatch_rxzamq",
+              "url": "https://res.cloudinary.com/craftycommerce/image/upload/v1673783360/products/Watches/SAMSUNG_Galaxy_Watch_4_40mm_Smartwatch_rxzamq.jpg",
+              "_id": "63c550e5d861ab13dc09b50e"
+          },
+          {
+              "public_id": "products/Watches/SAMSUNG_Galaxy_Watch_4_40mm_Smartwatch-2_h7snaj",
+              "url": "https://res.cloudinary.com/craftycommerce/image/upload/v1673783360/products/Watches/SAMSUNG_Galaxy_Watch_4_40mm_Smartwatch-2_h7snaj.jpg",
+              "_id": "63c550e5d861ab13dc09b50f"
+          },
+          {
+              "public_id": "products/Watches/SAMSUNG_Galaxy_Watch_4_40mm_Smartwatch-3_ygizkk",
+              "url": "https://res.cloudinary.com/craftycommerce/image/upload/v1673783360/products/Watches/SAMSUNG_Galaxy_Watch_4_40mm_Smartwatch-3_ygizkk.jpg",
+              "_id": "63c550e5d861ab13dc09b510"
+          }
+      ],
+      "category": "Watches",
+      "seller": "Samsung Inc.",
+      "stock": 500,
+      "numOfReviews": 4,
+      "reviews": [],
+      "createdAt": "2023-01-16T13:28:05.107Z",
+      "__v": 0
+  },
+  {
+      "_id": "63c550e5d861ab13dc09b511",
+      "name": "Amazfit Bip 3 Pro Smart Watch for Android iPhone, 4 Satellite Positioning Systems, 1.69” Color Display, 14-Day Battery Life, 60+ Sports Modes, Blood Oxygen Heart Rate Monitor, Water-Resistant(Black)",
+      "price": 69.99,
+      "description": "Immerse yourself in the 1.69” super-large and colorful HD display, and see all your incoming text and calls in awesome, expansive quality. Express more of yourself with 50 plus watch faces and editable watch faces & widgets - or customize with your own photos..Water resistance depth:50 meters.Supported Application:Blood Oxygen Measurement,Heart Rate Monitor,Multisport Tracker,GPS,Social Media. Connectivity technology:Bluetooth. Wireless comm standard:Bluetooth",
+      "ratings": 5,
+      "images": [
+          {
+              "public_id": "products/Watches/Amazfit_Bip_3_Pro_Smart_Watch_xszvsd",
+              "url": "https://res.cloudinary.com/craftycommerce/image/upload/v1673783359/products/Watches/Amazfit_Bip_3_Pro_Smart_Watch_xszvsd.jpg",
+              "_id": "63c550e5d861ab13dc09b512"
+          },
+          {
+              "public_id": "products/Watches/Amazfit_Bip_3_Pro_Smart_Watch-2_dqon9f",
+              "url": "https://res.cloudinary.com/craftycommerce/image/upload/v1673783359/products/Watches/Amazfit_Bip_3_Pro_Smart_Watch-2_dqon9f.jpg",
+              "_id": "63c550e5d861ab13dc09b513"
+          }
+      ],
+      "category": "Watches",
+      "seller": "Amazfit Pvt Ltd",
+      "stock": 500,
+      "numOfReviews": 21,
+      "reviews": [],
+      "createdAt": "2023-01-16T13:28:05.107Z",
+      "__v": 0
+  },
+  {
+      "_id": "63c550e5d861ab13dc09b514",
+      "name": "Apple Watch Series 7 [GPS 45mm] Smart Watch w/ Green Aluminum Case with Clover Sport Band. Fitness Tracker, Blood Oxygen & ECG Apps, Always-On Retina Display, Water Resistant AppleCare",
+      "price": 344.14,
+      "description": "The most advanced Apple Watch features powerful health innovations like sensors and apps to measure your blood oxygen and take an ECG. The larger, Always-On Retina display makes it easier to use and read. The most durable Apple Watch. Charges faster so you can get going quicker. Available in a range of sizes and materials, with dozens of bands to choose from. Change up your look by switching your band or by customizing your watch face in millions of ways.",
+      "ratings": 4.5,
+      "images": [
+          {
+              "public_id": "products/Watches/Apple_Watch_Series_7_GPS_45mm_xeyw0q",
+              "url": "https://res.cloudinary.com/craftycommerce/image/upload/v1673783359/products/Watches/Apple_Watch_Series_7_GPS_45mm_xeyw0q.jpg",
+              "_id": "63c550e5d861ab13dc09b515"
+          },
+          {
+              "public_id": "products/Watches/Apple_Watch_Series_7_GPS_45mm_-_2_rzfafz",
+              "url": "https://res.cloudinary.com/craftycommerce/image/upload/v1673783359/products/Watches/Apple_Watch_Series_7_GPS_45mm_-_2_rzfafz.jpg",
+              "_id": "63c550e5d861ab13dc09b516"
+          },
+          {
+              "public_id": "products/Watches/Apple_Watch_Series_7_GPS_45mm_-_3_lmcr29",
+              "url": "https://res.cloudinary.com/craftycommerce/image/upload/v1673783359/products/Watches/Apple_Watch_Series_7_GPS_45mm_-_3_lmcr29.jpg",
+              "_id": "63c550e5d861ab13dc09b517"
+          }
+      ],
+      "category": "Watches",
+      "seller": "Apple Inc.",
+      "stock": 500,
+      "numOfReviews": 11,
+      "reviews": [],
+      "createdAt": "2023-01-16T13:28:05.108Z",
+      "__v": 0
+  },
+  {
+      "_id": "63c550e5d861ab13dc09b518",
+      "name": "SAMSUNG Galaxy Watch 4 Bluetooth & GPS Smartwatch, 40mm - Black",
+      "price": 168.5,
+      "description": "Do More Right From Your Wrist: Galaxy Watch4 works as an extension of your phone so you can talk, stream, and text from your wrist on the go. Google on Your Wrist: Tap into the power and convenience of select Google services and apps; Pay for coffee, get directions to the park, use Google Assistant or Bixby, and stream from YouTube Music. Timeless Design, Elevated Style: Show of your style with a luxurious and timeless watch design that’s great for any occasion; Personalize your look even more with a range of stylish watch faces and bands.",
+      "ratings": 4.5,
+      "images": [
+          {
+              "public_id": "products/Watches/SAMSUNG_Galaxy_Watch_4_d800cf",
+              "url": "https://res.cloudinary.com/craftycommerce/image/upload/v1673783360/products/Watches/SAMSUNG_Galaxy_Watch_4_d800cf.jpg",
+              "_id": "63c550e5d861ab13dc09b519"
+          }
+      ],
+      "category": "Watches",
+      "seller": "Samsung Inc.",
+      "stock": 500,
+      "numOfReviews": 9,
+      "reviews": [],
+      "createdAt": "2023-01-16T13:28:05.108Z",
+      "__v": 0
+  },
+  {
+      "_id": "63c550e5d861ab13dc09b51a",
+      "name": "Smart Watch, Newest 1.85” TFT HD Display Smart Watch with Receive & Dial, Smart Watch for Android Phones with Pedometer, Fitness Tracker, Heart Rate, SMS Reminder, Android Smart Watch for Women Men",
+      "price": 49.99,
+      "description": "After connecting to Bluetooth, you can directly dial the phone number on the watch to answer the call, and you can synchronize the address book and call records. Thanks to the built-in microphone and speaker, you can answer/make/reject calls (and also play music) on the spot from your wrist, allowing you to exercise hands-free and smarter than any other watch in its class. Can receive SMS and APP messages (Note: cannot reply to messages).",
+      "ratings": 4,
+      "images": [
+          {
+              "public_id": "products/Watches/Smart_Watch_Newest_1.85_TFT_HD_Display_Smart_Watch_hpp1sc",
+              "url": "https://res.cloudinary.com/craftycommerce/image/upload/v1673783361/products/Watches/Smart_Watch_Newest_1.85_TFT_HD_Display_Smart_Watch_hpp1sc.jpg",
+              "_id": "63c550e5d861ab13dc09b51b"
+          },
+          {
+              "public_id": "products/Watches/Smart_Watch_Newest_1.85_TFT_HD_Display_Smart_Watch_-_2_gqb2rv",
+              "url": "https://res.cloudinary.com/craftycommerce/image/upload/v1673783360/products/Watches/Smart_Watch_Newest_1.85_TFT_HD_Display_Smart_Watch_-_2_gqb2rv.jpg",
+              "_id": "63c550e5d861ab13dc09b51c"
+          },
+          {
+              "public_id": "products/Watches/Smart_Watch_Newest_1.85_TFT_HD_Display_Smart_Watch_-_3_dgkowd",
+              "url": "https://res.cloudinary.com/craftycommerce/image/upload/v1673783360/products/Watches/Smart_Watch_Newest_1.85_TFT_HD_Display_Smart_Watch_-_3_dgkowd.jpg",
+              "_id": "63c550e5d861ab13dc09b51d"
+          }
+      ],
+      "category": "Watches",
+      "seller": "Smart Watch Co.",
+      "stock": 500,
+      "numOfReviews": 24,
+      "reviews": [],
+      "createdAt": "2023-01-16T13:28:05.109Z",
+      "__v": 0
+  },
+  {
+      "_id": "63c550e5d861ab13dc09b51e",
+      "name": "Apple Watch Series 6 (GPS, 40mm) - (Product) RED - Aluminum Case with (Product) RED﻿ - Sport Band",
+      "price": 339.98,
+      "description": "GPS model lets you take calls and reply to texts from your wrist. Measure your blood oxygen with an all-new sensor and app. Check your heart rhythm with the ECG app. The Always-On Retina display is 2.5x brighter outdoors when your wrist is down. S6 SiP is up to 20% faster than Series 5. 5GHz Wi-Fi and U1 Ultra Wideband chip.",
+      "ratings": 4.5,
+      "images": [
+          {
+              "public_id": "products/Watches/Apple_Watch_Series_6_iuyzd9",
+              "url": "https://res.cloudinary.com/craftycommerce/image/upload/v1673783359/products/Watches/Apple_Watch_Series_6_iuyzd9.jpg",
+              "_id": "63c550e5d861ab13dc09b51f"
+          },
+          {
+              "public_id": "products/Watches/Apple_Watch_Series_6_-_2_vtqmup",
+              "url": "https://res.cloudinary.com/craftycommerce/image/upload/v1673783359/products/Watches/Apple_Watch_Series_6_-_2_vtqmup.jpg",
+              "_id": "63c550e5d861ab13dc09b520"
+          },
+          {
+              "public_id": "products/Watches/Apple_Watch_Series_6_-_3_tv1nmq",
+              "url": "https://res.cloudinary.com/craftycommerce/image/upload/v1673783359/products/Watches/Apple_Watch_Series_6_-_3_tv1nmq.jpg",
+              "_id": "63c550e5d861ab13dc09b521"
+          }
+      ],
+      "category": "Watches",
+      "seller": "Apple Inc.",
+      "stock": 500,
+      "numOfReviews": 15,
+      "reviews": [],
+      "createdAt": "2023-01-16T13:28:05.109Z",
+      "__v": 0
+  },
+  {
+      "_id": "63c550e5d861ab13dc09b522",
+      "name": "SAMSUNG Galaxy Watch 5 + Buds 2 Bundle, 40mm LTE Smartwatch w/ Body, Health, Fitness, Sleep Tracker, Purple Band and True Wireless Bluetooth Earbuds w/ Noise Cancelling, Ambient Sound, Graphite",
+      "price": 120.23,
+      "description": "Enjoy phone-like capabilities but leave your phone behind; All you need is your Galaxy Watch5 with LTE Connectivity; Make or take calls, track workouts, send texts and pull up a playlist anywhere, anytime, without your phone or Wi-Fi. Manage your overall sleep quality with an advanced sleep tracker that detects and analyzes sleep stages while you rest; Plus, Advanced Sleep Coaching helps you develop better sleep habits by analyzing your sleep patterns*.",
+      "ratings": 4.5,
+      "images": [
+          {
+              "public_id": "products/Watches/SAMSUNG_Galaxy_Watch_5_Buds_2_Bundle_t7yonq",
+              "url": "https://res.cloudinary.com/craftycommerce/image/upload/v1673783360/products/Watches/SAMSUNG_Galaxy_Watch_5_Buds_2_Bundle_t7yonq.jpg",
+              "_id": "63c550e5d861ab13dc09b523"
+          }
+      ],
+      "category": "Watches",
+      "seller": "Samsung Inc.",
+      "stock": 500,
+      "numOfReviews": 12,
+      "reviews": [],
+      "createdAt": "2023-01-16T13:28:05.109Z",
+      "__v": 0
+  },
+  {
+      "_id": "63c550e5d861ab13dc09b524",
+      "name": "Popglory Smart Watch Call Receive/Dial, 1.85'' Smartwatch with AI Voice Control, Blood Pressure/SpO2/Heart Rate Monitor, Fitness Tracker Watch with 2 Straps for Men & Women iOS & Android Phones",
+      "price": 36.79,
+      "description": "Answering/Making Call & AI Voice Assistant: The watch has a built-in speaker that supports answering or making calls and playing music. You can turn off the phone ringing and media audio in the watch settings. The upgraded P66 smart watch is equipped with an AI voice assistant. Click 'Voice Assistant' on the watch, then you can voice control the phone to make calls, search information, play music/videos and enter any app. 1.85” HD Color Display & 2 straps: 1.85” full-touch HD color screen presents smooth visual effects. It is more fashionable with a simple and elegant stainless steel strap. The width of the strap is 22mm. One more replacement silicone strap is included in the package, with different color to change the mood. You can choose hundreds of HD watch faces in the app and also can customize the dial to show your own style.",
+      "ratings": 4,
+      "images": [
+          {
+              "public_id": "products/Watches/Popglory_Smart_Watch_Call_Receive_Dial_1.85_Smartwatch_cy0cag",
+              "url": "https://res.cloudinary.com/craftycommerce/image/upload/v1673783360/products/Watches/Popglory_Smart_Watch_Call_Receive_Dial_1.85_Smartwatch_cy0cag.jpg",
+              "_id": "63c550e5d861ab13dc09b525"
+          },
+          {
+              "public_id": "products/Watches/Popglory_Smart_Watch_Call_Receive_Dial_1.85_Smartwatch_-_2_b5ccry",
+              "url": "https://res.cloudinary.com/craftycommerce/image/upload/v1673783359/products/Watches/Popglory_Smart_Watch_Call_Receive_Dial_1.85_Smartwatch_-_2_b5ccry.jpg",
+              "_id": "63c550e5d861ab13dc09b526"
+          },
+          {
+              "public_id": "products/Watches/Popglory_Smart_Watch_Call_Receive_Dial_1.85_Smartwatch_-_3_dqsuh7",
+              "url": "https://res.cloudinary.com/craftycommerce/image/upload/v1673783360/products/Watches/Popglory_Smart_Watch_Call_Receive_Dial_1.85_Smartwatch_-_3_dqsuh7.jpg",
+              "_id": "63c550e5d861ab13dc09b527"
+          }
+      ],
+      "category": "Watches",
+      "seller": "Popglory Inc.",
+      "stock": 500,
+      "numOfReviews": 17,
+      "reviews": [],
+      "createdAt": "2023-01-16T13:28:05.110Z",
+      "__v": 0
+  },
+  {
+      "_id": "63c550e5d861ab13dc09b528",
+      "name": "Headphone Stand with USB Charger COZOO Under Desk Headset Holder Mount with 3 Port USB Charging Station and iWatch Stand Smart Watch Charging Dock Dual Earphone Hanger Hook,UL Tested",
+      "price": 19.99,
+      "description": "All in One Design：Under-desk headphone stand + 3 USB charging hub(4A/20W). Under-Stand：Keeps your headphones out of sight & easy to reach and Can hold two sets of headphones. 3 Port Smart USB Charger：Detects your device automatically to deliver its fastest possible charge speed up to 2.4 amps per port or 4 amps overall. Safe Guard：Fire-resistant and hardened plastic outer shell for durability, build-in premium circuitry and microchip ensure device safety,UL Tested.",
+      "ratings": 4.5,
+      "images": [
+          {
+              "public_id": "products/Accessories/Headphone_Stand_with_USB_Charger_COZOO_Under_Desk_Headset_pldpft",
+              "url": "https://res.cloudinary.com/craftycommerce/image/upload/v1673790575/products/Accessories/Headphone_Stand_with_USB_Charger_COZOO_Under_Desk_Headset_pldpft.jpg",
+              "_id": "63c550e5d861ab13dc09b529"
+          },
+          {
+              "public_id": "products/Accessories/Headphone_Stand_with_USB_Charger_COZOO_Under_Desk_Headset-1_cozeda",
+              "url": "https://res.cloudinary.com/craftycommerce/image/upload/v1673790575/products/Accessories/Headphone_Stand_with_USB_Charger_COZOO_Under_Desk_Headset-1_cozeda.jpg",
+              "_id": "63c550e5d861ab13dc09b52a"
+          },
+          {
+              "public_id": "products/Accessories/Headphone_Stand_with_USB_Charger_COZOO_Under_Desk_Headset-2_woktiz",
+              "url": "https://res.cloudinary.com/craftycommerce/image/upload/v1673790576/products/Accessories/Headphone_Stand_with_USB_Charger_COZOO_Under_Desk_Headset-2_woktiz.jpg",
+              "_id": "63c550e5d861ab13dc09b52b"
+          }
+      ],
+      "category": "Accessories",
+      "seller": "Kafri",
+      "stock": 500,
+      "numOfReviews": 5,
+      "reviews": [],
+      "createdAt": "2023-01-16T13:28:05.110Z",
+      "__v": 0
+  },
+  {
+      "_id": "63c550e5d861ab13dc09b52c",
+      "name": "Hat Clip for Travel, Hat Clip for Travel on Bag, PU Leather Hat Clip, Multifunctional Duckbill Hat Clip,Outdoor Hat Companion",
+      "price": 7.99,
+      "description": "Material: Hat clip is made of PU leather and alloy clasp, which is durable and not easy to break. Clip a sunhat on your bag, looks both relaxed and fashionable, leading the trend. Applications Widely: with the help of our travel hat clip, you can keep your hat, mask, headbands, gloves, and any other items easily lost attach to your handbag, backpack, luggage, suitcase, or coat, preventing things from getting lost, free your hands, ideal for hiking or travels. Hat Clip for Travel on Bag/Luggage: Small and light, easy storage, specially designed for travel and outdoor activities, for examples, fishing, hiking and camping. It is convenient to store and remove the hat, while reducing the risk of losing it; easy storage will make your travel more worry-free, making it an ideal accessory for travel, you can use it with confidence.",
+      "ratings": 4,
+      "images": [
+          {
+              "public_id": "products/Accessories/Hat_Clip_for_Travel_Hat_Clip_for_Travel_on_Bag-2_fbhger",
+              "url": "https://res.cloudinary.com/craftycommerce/image/upload/v1673790576/products/Accessories/Hat_Clip_for_Travel_Hat_Clip_for_Travel_on_Bag-2_fbhger.jpg",
+              "_id": "63c550e5d861ab13dc09b52d"
+          },
+          {
+              "public_id": "products/Accessories/Hat_Clip_for_Travel_Hat_Clip_for_Travel_on_Bag_oehqz3",
+              "url": "https://res.cloudinary.com/craftycommerce/image/upload/v1673790576/products/Accessories/Hat_Clip_for_Travel_Hat_Clip_for_Travel_on_Bag_oehqz3.jpg",
+              "_id": "63c550e5d861ab13dc09b52e"
+          },
+          {
+              "public_id": "products/Accessories/Hat_Clip_for_Travel_Hat_Clip_for_Travel_on_Bag-3_ykzdme",
+              "url": "https://res.cloudinary.com/craftycommerce/image/upload/v1673790576/products/Accessories/Hat_Clip_for_Travel_Hat_Clip_for_Travel_on_Bag-3_ykzdme.jpg",
+              "_id": "63c550e5d861ab13dc09b52f"
+          }
+      ],
+      "category": "Accessories",
+      "seller": "Yujunkeman",
+      "stock": 500,
+      "numOfReviews": 4,
+      "reviews": [],
+      "createdAt": "2023-01-16T13:28:05.110Z",
+      "__v": 0
+  },
+  {
+      "_id": "63c550e5d861ab13dc09b530",
+      "name": "Rightline Gear Mid-Size Short Truck Bed Tent, 5 Foot - Tall Bed",
+      "price": 140.38,
+      "description": "Camping Tent For Truck Bed: This tailgate tent makes it simple to stay dry and sleep comfortably off the ground inside your vehicle; Perfect for weekend warriors and seasoned professionals, this pickup truck tent turns any spot into a cozy campsite. Intuitive Features: The perfect tent for truck bed camping, our off-the-ground tent includes 2 gear pockets for small personal items, an overhead lantern hook, glow-in-the-dark zipper pulls, and a sky view vent. Quality Construction: Water-resistant outdoor tent features a floorless design, color-coded poles and pole pockets, tape-sealed seams, and protective heavy-duty straps and plastic buckles that won't damage your vehicle’s finish. Sleeps 2: Must-have truck camping accessories, our floorless truck tents for camping sleep 2 adults; Tent, rainfly, and stuff sack with sewn-in setup guide are included",
+      "ratings": 4.5,
+      "images": [
+          {
+              "public_id": "products/Accessories/Rightline_Gear_Mid-Size_Short_Truck_Bed_Tent_5_Foot_-_Tall_Bed_jvc5em",
+              "url": "https://res.cloudinary.com/craftycommerce/image/upload/v1673790576/products/Accessories/Rightline_Gear_Mid-Size_Short_Truck_Bed_Tent_5_Foot_-_Tall_Bed_jvc5em.jpg",
+              "_id": "63c550e5d861ab13dc09b531"
+          },
+          {
+              "public_id": "products/Accessories/Rightline_Gear_Mid-Size_Short_Truck_Bed_Tent_5_Foot_-_Tall_Bed_-2_yggmjo",
+              "url": "https://res.cloudinary.com/craftycommerce/image/upload/v1673790576/products/Accessories/Rightline_Gear_Mid-Size_Short_Truck_Bed_Tent_5_Foot_-_Tall_Bed_-2_yggmjo.jpg",
+              "_id": "63c550e5d861ab13dc09b532"
+          }
+      ],
+      "category": "Accessories",
+      "seller": "Rightline Gear",
+      "stock": 500,
+      "numOfReviews": 50,
+      "reviews": [],
+      "createdAt": "2023-01-16T13:28:05.111Z",
+      "__v": 0
+  },
+  {
+      "_id": "63c550e5d861ab13dc09b533",
+      "name": "Rubbermaid Reveal Cordless Battery Power Scrubber, Gray/Red, Multi-Purpose Scrub Brush Cleaner for Grout/Tile/Bathroom/Shower/Bathtub, Water Resistant, Lightweight, Ergonomic Grip",
+      "price": 17.38,
+      "description": "The Rubbermaid Reveal Power Scrubber adds power to your cleaning routine. With an oscillating head that scrubs 60 times per second, the scrubber is perfect for cleaning the bathroom, kitchen or any other hard-to-reach places. The assembly is water resistant so you can depend on the tool even if it gets wet. The switch gives you the ability to switch between a pulse or continuous setting. The Power Scrubber has an ergonomic grip and rubberized molding for comfortable cleaning and delivers 6 Volts of power.",
+      "ratings": 4,
+      "images": [
+          {
+              "public_id": "products/Accessories/Rubbermaid_Reveal_Cordless_Battery_Power_Scrubber_lasfbp",
+              "url": "https://res.cloudinary.com/craftycommerce/image/upload/v1673790576/products/Accessories/Rubbermaid_Reveal_Cordless_Battery_Power_Scrubber_lasfbp.jpg",
+              "_id": "63c550e5d861ab13dc09b534"
+          },
+          {
+              "public_id": "products/Accessories/Rubbermaid_Reveal_Cordless_Battery_Power_Scrubber-2_idecec",
+              "url": "https://res.cloudinary.com/craftycommerce/image/upload/v1673790576/products/Accessories/Rubbermaid_Reveal_Cordless_Battery_Power_Scrubber-2_idecec.jpg",
+              "_id": "63c550e5d861ab13dc09b535"
+          },
+          {
+              "public_id": "products/Accessories/Rubbermaid_Reveal_Cordless_Battery_Power_Scrubber-3_pak4xc",
+              "url": "https://res.cloudinary.com/craftycommerce/image/upload/v1673790576/products/Accessories/Rubbermaid_Reveal_Cordless_Battery_Power_Scrubber-3_pak4xc.jpg",
+              "_id": "63c550e5d861ab13dc09b536"
+          }
+      ],
+      "category": "Accessories",
+      "seller": "Rubbermaid Store",
+      "stock": 5,
+      "numOfReviews": 3,
+      "reviews": [],
+      "createdAt": "2023-01-16T13:28:05.111Z",
+      "__v": 0
+  },
+  {
+      "_id": "63c550e5d861ab13dc09b537",
+      "name": "SINGARO Car Cup Coaster, 4PCS Universal Non-Slip Cup Holders Embedded in Ornaments Coaster, Car Interior Accessories, Black",
+      "price": 5.99,
+      "description": "High quality: Made of high-quality pvc soft glue, the material is soft, flexible, durable, not easy to deform, feels thick, waterproof and dustproof, and keeps your cup slot clean and tidy. Personalization: The car coaster adopts groove pattern design, with beautiful shape and various colors and styles, which can add color to your car. Compatibility: Product size is 2.77 inches. Not only can it be placed in a car cup holder to reduce noise from the cup holder sliding while driving, but it can also be placed at home or in the office. Before buying, you can measure whether it will fit the model, this will avoid the problem of inconsistent size Easy to clean: When the coaster has stains and residual dirt after use, it can be used after washing with water and drying.",
+      "ratings": 4.5,
+      "images": [
+          {
+              "public_id": "products/Accessories/SINGARO_Car_Cup_Coaster_snvfjx",
+              "url": "https://res.cloudinary.com/craftycommerce/image/upload/v1673790577/products/Accessories/SINGARO_Car_Cup_Coaster_snvfjx.jpg",
+              "_id": "63c550e5d861ab13dc09b538"
+          },
+          {
+              "public_id": "products/Accessories/SINGARO_Car_Cup_Coaster-2_lp6p4i",
+              "url": "https://res.cloudinary.com/craftycommerce/image/upload/v1673790577/products/Accessories/SINGARO_Car_Cup_Coaster-2_lp6p4i.jpg",
+              "_id": "63c550e5d861ab13dc09b539"
+          },
+          {
+              "public_id": "products/Accessories/SINGARO_Car_Cup_Coaster-3_hi5kv9",
+              "url": "https://res.cloudinary.com/craftycommerce/image/upload/v1673790577/products/Accessories/SINGARO_Car_Cup_Coaster-3_hi5kv9.jpg",
+              "_id": "63c550e5d861ab13dc09b53a"
+          }
+      ],
+      "category": "Accessories",
+      "seller": "Senose",
+      "stock": 100,
+      "numOfReviews": 6,
+      "reviews": [],
+      "createdAt": "2023-01-16T13:28:05.112Z",
+      "__v": 0
+  },
+  {
+      "_id": "63c550e5d861ab13dc09b53b",
+      "name": "Wood Phone Docking Station, Gifts for Father, Nightstand Organizer, Husband Birthday Gifts, Phone Docking Station for Men Wood Nightstand Organizer (Brown)",
+      "price": 36.99,
+      "description": "Wood Phone Docking Station: Our wood phone docking station are made of high -quality white wax wood, which is sturdy and durable. Surface is smooth and polished, surface of the varnish can ensure high -quality durability and beautiful appearance, and perfectly present the retro style. Nightstand Organizer: It can easily accommodate and store your electronic equipment and other items, stand has plenty of room to place it all in one spot, neat and beautiful. nightstand organizer use can place your watch, mobile phone, headset, keys, wallets, etc.",
+      "ratings": 4.5,
+      "images": [
+          {
+              "public_id": "products/Accessories/Wood_Phone_Docking_Station_xy7ltv",
+              "url": "https://res.cloudinary.com/craftycommerce/image/upload/v1673790577/products/Accessories/Wood_Phone_Docking_Station_xy7ltv.jpg",
+              "_id": "63c550e5d861ab13dc09b53c"
+          },
+          {
+              "public_id": "products/Accessories/Wood_Phone_Docking_Station-2_q9xems",
+              "url": "https://res.cloudinary.com/craftycommerce/image/upload/v1673790577/products/Accessories/Wood_Phone_Docking_Station-2_q9xems.jpg",
+              "_id": "63c550e5d861ab13dc09b53d"
+          }
+      ],
+      "category": "Accessories",
+      "seller": "JSMKJ",
+      "stock": 500,
+      "numOfReviews": 3,
+      "reviews": [],
+      "createdAt": "2023-01-16T13:28:05.112Z",
+      "__v": 0
+  },
+  {
+      "_id": "63c550e5d861ab13dc09b53e",
+      "name": "Amiss Car Carbon Fiber Anti-Skid Steering Wheel Cover, Segmented Steering Wheel Protector, Butterfly Steering Wheel Cover, Universal 99% Car Wheel Cover Protector, Car Interior Accessories (Red)",
+      "price": 13.99,
+      "description": "High Quality: Carbon fiber material, the new segmented steering wheel, the perfect fit can better protect the steering wheel, hide existing wear and keep your steering wheel looking new. Increased Safety: Sweatproof and anti-skidding, stable, heat resistant, it provides excellent grip for the steering wheel, your steering wheel from sunburn, scratch, wear out and dirty.",
+      "ratings": 4.6,
+      "images": [
+          {
+              "public_id": "products/Accessories/Amiss_Car_Carbon_Fiber_Anti-Skid_Steering_Wheel_Cover_wbi2ug",
+              "url": "https://res.cloudinary.com/craftycommerce/image/upload/v1673790575/products/Accessories/Amiss_Car_Carbon_Fiber_Anti-Skid_Steering_Wheel_Cover_wbi2ug.jpg",
+              "_id": "63c550e5d861ab13dc09b53f"
+          },
+          {
+              "public_id": "products/Accessories/Amiss_Car_Carbon_Fiber_Anti-Skid_Steering_Wheel_Cover-2_neubmr",
+              "url": "https://res.cloudinary.com/craftycommerce/image/upload/v1673790575/products/Accessories/Amiss_Car_Carbon_Fiber_Anti-Skid_Steering_Wheel_Cover-2_neubmr.jpg",
+              "_id": "63c550e5d861ab13dc09b540"
+          }
+      ],
+      "category": "Accessories",
+      "seller": "Amiss-CPH/W1",
+      "stock": 200,
+      "numOfReviews": 15,
+      "reviews": [],
+      "createdAt": "2023-01-16T13:28:05.112Z",
+      "__v": 0
+  },
+  {
+      "_id": "63c550e5d861ab13dc09b541",
+      "name": "Cleaning Gel for Car, Auto Detailing Slime Mud, Putty Cleaner Dust Removal, Vehicle Interior Soft Glue Cleaning Tools Kit, Car Accessories for Cleaning Air Vents, Keyboard, PC, Laptops (Pink)",
+      "price": 5.99,
+      "description": "This car cleaning gel is perfect for cleaning narrow and hard-to-clean crevices in your car, such as cleaning car vents, gears, dashboards, and even the smallest nooks and crannies. It picks up dust, debris, crumbs and pet hair very easily. You don't have to spend a lot of time and effort to get a clean car interior.",
+      "ratings": 4,
+      "images": [
+          {
+              "public_id": "products/Accessories/Cleaning_Gel_for_Car_uwgylb",
+              "url": "https://res.cloudinary.com/craftycommerce/image/upload/v1673790575/products/Accessories/Cleaning_Gel_for_Car_uwgylb.jpg",
+              "_id": "63c550e5d861ab13dc09b542"
+          },
+          {
+              "public_id": "products/Accessories/Cleaning_Gel_for_Car-2_axusxp",
+              "url": "https://res.cloudinary.com/craftycommerce/image/upload/v1673790575/products/Accessories/Cleaning_Gel_for_Car-2_axusxp.jpg",
+              "_id": "63c550e5d861ab13dc09b543"
+          }
+      ],
+      "category": "Accessories",
+      "seller": "Moly Magnolia-Cleaning",
+      "stock": 500,
+      "numOfReviews": 8,
+      "reviews": [],
+      "createdAt": "2023-01-16T13:28:05.113Z",
+      "__v": 0
+  },
+  {
+      "_id": "63c550e5d861ab13dc09b544",
+      "name": "Nilight ZH016 12 Inch 72W Spot Combo Bar 2PCS 4 Inch 18W Flood LED Fog Lights with Off Road Wiring Harness- 2 Leads, 2 Years Warranty, White",
+      "price": 34.84,
+      "description": "BRIGHTER BEYOND EXPECTATION: High-quality LED chips, super bright and powerful white light to let you see the forward dark road clearly. EXCELLENT LIGHTING EFFECT: 72W-Combination of spot and flood beam, further irradiation distance and wide range of light for broad view area. ADJUSTABLE MOUNTING BRACKET: The light bar can be adjusted to about 45 degrees, which makes changing direction of light beam easier. TWO AVAILABLE LEADS: With 2 sets of light output connectors for dual lighting fixtures less than 180W, the connection is more stable",
+      "ratings": 5,
+      "images": [
+          {
+              "public_id": "products/Accessories/Nilight_ZH016_12_Inch_72W_zdna1l",
+              "url": "https://res.cloudinary.com/craftycommerce/image/upload/v1673790576/products/Accessories/Nilight_ZH016_12_Inch_72W_zdna1l.jpg",
+              "_id": "63c550e5d861ab13dc09b545"
+          },
+          {
+              "public_id": "products/Accessories/Nilight_ZH016_12_Inch_72W-2_prn4v6",
+              "url": "https://res.cloudinary.com/craftycommerce/image/upload/v1673790576/products/Accessories/Nilight_ZH016_12_Inch_72W-2_prn4v6.jpg",
+              "_id": "63c550e5d861ab13dc09b546"
+          }
+      ],
+      "category": "Accessories",
+      "seller": "Nilight Store",
+      "stock": 500,
+      "numOfReviews": 12,
+      "reviews": [],
+      "createdAt": "2023-01-16T13:28:05.116Z",
+      "__v": 0
+  },
+  {
+      "_id": "63c550e5d861ab13dc09b547",
+      "name": "Car Cup Holder Phone Mount, 2 in 1 Universal Cell Phone Mount for Car, Adjustable Long Gooseneck Phone Holder 360° Strong Cup Holder for Car, Compatible with All 4.7''-8.2'' Smartphone Pad Devices",
+      "price": 26.99,
+      "description": "The car cup phone holder could hold your handing cup and also hold the phone or pad. The bottom of the cup holder is designed with an adjustable tripod, which can be very stable for any prototype. Rational use of interior space, don't get caught in vents or glass to block your view.",
+      "ratings": 4.7,
+      "images": [
+          {
+              "public_id": "products/Accessories/Car_Cup_Holder_Phone_Mount_tzlpdh",
+              "url": "https://res.cloudinary.com/craftycommerce/image/upload/v1673790575/products/Accessories/Car_Cup_Holder_Phone_Mount_tzlpdh.jpg",
+              "_id": "63c550e5d861ab13dc09b548"
+          },
+          {
+              "public_id": "products/Accessories/Car_Cup_Holder_Phone_Mount-2_qyw9u1",
+              "url": "https://res.cloudinary.com/craftycommerce/image/upload/v1673790575/products/Accessories/Car_Cup_Holder_Phone_Mount-2_qyw9u1.jpg",
+              "_id": "63c550e5d861ab13dc09b549"
+          },
+          {
+              "public_id": "products/Accessories/Car_Cup_Holder_Phone_Mount-3_fwwwsb",
+              "url": "https://res.cloudinary.com/craftycommerce/image/upload/v1673790575/products/Accessories/Car_Cup_Holder_Phone_Mount-3_fwwwsb.jpg",
+              "_id": "63c550e5d861ab13dc09b54a"
+          }
+      ],
+      "category": "Accessories",
+      "seller": "Lopnord",
+      "stock": 5,
+      "numOfReviews": 2,
+      "reviews": [],
+      "createdAt": "2023-01-16T13:28:05.116Z",
+      "__v": 0
+  },
+  {
+      "_id": "63c550e5d861ab13dc09b54b",
+      "name": "Fidget Pen, Decompression Magnetic Fidget Toy Pen, Magnet Pen Fidget Toy Relieve Pressure Novel Toy Gift for Kids or Friends!",
+      "price": 23.99,
+      "description": "The magnetic pen is made of high-quality metal with smooth touch feelings, odorless and non-toxic, strong magnetic performance, durable and long-lasting. A perfect decompression toy for kids, teachers, students, engineers, doctors, lawyers, designers, and other brain-workers.",
+      "ratings": 4.5,
+      "images": [
+          {
+              "public_id": "products/Gifts%2C%20Sports%20and%20Toys/Fidget_Pen_Decompression_Magnetic_Fidget_Toy_Pen_aajmfu",
+              "url": "https://res.cloudinary.com/craftycommerce/image/upload/v1673806239/products/Gifts%2C%20Sports%20and%20Toys/Fidget_Pen_Decompression_Magnetic_Fidget_Toy_Pen_aajmfu.jpg",
+              "_id": "63c550e5d861ab13dc09b54c"
+          },
+          {
+              "public_id": "products/Gifts%2C%20Sports%20and%20Toys/Fidget_Pen_Decompression_Magnetic_Fidget_Toy_Pen-1_tlztiq",
+              "url": "https://res.cloudinary.com/craftycommerce/image/upload/v1673806238/products/Gifts%2C%20Sports%20and%20Toys/Fidget_Pen_Decompression_Magnetic_Fidget_Toy_Pen-1_tlztiq.jpg",
+              "_id": "63c550e5d861ab13dc09b54d"
+          },
+          {
+              "public_id": "products/Gifts%2C%20Sports%20and%20Toys/Fidget_Pen_Decompression_Magnetic_Fidget_Toy_Pen-2_eznuvi",
+              "url": "https://res.cloudinary.com/craftycommerce/image/upload/v1673806239/products/Gifts%2C%20Sports%20and%20Toys/Fidget_Pen_Decompression_Magnetic_Fidget_Toy_Pen-2_eznuvi.jpg",
+              "_id": "63c550e5d861ab13dc09b54e"
+          }
+      ],
+      "category": "Gifts, Sports and Toys",
+      "seller": "QaQ",
+      "stock": 100,
+      "numOfReviews": 4,
+      "reviews": [],
+      "createdAt": "2023-01-16T13:28:05.117Z",
+      "__v": 0
+  },
+  {
+      "_id": "63c550e5d861ab13dc09b54f",
+      "name": "Wesfuner 3 Pack Airplane Launcher Toys,Foam Airplane Glider, 2 Flight Mode Glider Plane, Kids Flying Toy",
+      "price": 19.99,
+      "description": "The Better Quality Launcher and Warranty - The launchers have improved on snaps and elastic connecting strips by manufacturer，they will be more durable by our tests. It owns higher strength on snaps and elastic connecting strips so that you can enjoy it because of better quality on launcher. At the same time, if the airplane toys have the quality problem, the warranty guarantee will be provided within one month.",
+      "ratings": 4.6,
+      "images": [
+          {
+              "public_id": "products/Gifts%2C%20Sports%20and%20Toys/Wesfuner_3_Pack_Airplane_Launcher_Toys_xcqjyx",
+              "url": "https://res.cloudinary.com/craftycommerce/image/upload/v1673806240/products/Gifts%2C%20Sports%20and%20Toys/Wesfuner_3_Pack_Airplane_Launcher_Toys_xcqjyx.jpg",
+              "_id": "63c550e5d861ab13dc09b550"
+          },
+          {
+              "public_id": "products/Gifts%2C%20Sports%20and%20Toys/Wesfuner_3_Pack_Airplane_Launcher_Toys-2_mshoji",
+              "url": "https://res.cloudinary.com/craftycommerce/image/upload/v1673806240/products/Gifts%2C%20Sports%20and%20Toys/Wesfuner_3_Pack_Airplane_Launcher_Toys-2_mshoji.jpg",
+              "_id": "63c550e5d861ab13dc09b551"
+          },
+          {
+              "public_id": "products/Gifts%2C%20Sports%20and%20Toys/Wesfuner_3_Pack_Airplane_Launcher_Toys-3_nsuk4c",
+              "url": "https://res.cloudinary.com/craftycommerce/image/upload/v1673806240/products/Gifts%2C%20Sports%20and%20Toys/Wesfuner_3_Pack_Airplane_Launcher_Toys-3_nsuk4c.jpg",
+              "_id": "63c550e5d861ab13dc09b552"
+          }
+      ],
+      "category": "Gifts, Sports and Toys",
+      "seller": "Wesfuner",
+      "stock": 200,
+      "numOfReviews": 14,
+      "reviews": [],
+      "createdAt": "2023-01-16T13:28:05.121Z",
+      "__v": 0
+  },
+  {
+      "_id": "63c550e5d861ab13dc09b553",
+      "name": "Nicmore Kids Toys Car",
+      "price": 23.69,
+      "description": "5 in 1 construction truck toys set, including a Big Construction truck, a Small Excavator / Crane / Mixer Trucks / Dumper. The reduced version of the construction truck can better stimulate children's curiosity and give them a happy world. Toys for 2 year old boy. The ideal gifts for birthdays, parties, Christmas and any festival. Sand toys for toddlers 2-4.",
+      "ratings": 4.7,
+      "images": [
+          {
+              "public_id": "products/Gifts%2C%20Sports%20and%20Toys/Nicmore_Kids_Toys_Car_ow5y0z",
+              "url": "https://res.cloudinary.com/craftycommerce/image/upload/v1673806239/products/Gifts%2C%20Sports%20and%20Toys/Nicmore_Kids_Toys_Car_ow5y0z.jpg",
+              "_id": "63c550e5d861ab13dc09b554"
+          },
+          {
+              "public_id": "products/Gifts%2C%20Sports%20and%20Toys/Nicmore_Kids_Toys_Car-2_wufldk",
+              "url": "https://res.cloudinary.com/craftycommerce/image/upload/v1673806239/products/Gifts%2C%20Sports%20and%20Toys/Nicmore_Kids_Toys_Car-2_wufldk.jpg",
+              "_id": "63c550e5d861ab13dc09b555"
+          },
+          {
+              "public_id": "products/Gifts%2C%20Sports%20and%20Toys/Nicmore_Kids_Toys_Car-2_wufldk",
+              "url": "https://res.cloudinary.com/craftycommerce/image/upload/v1673806239/products/Gifts%2C%20Sports%20and%20Toys/Nicmore_Kids_Toys_Car-2_wufldk.jpg",
+              "_id": "63c550e5d861ab13dc09b556"
+          }
+      ],
+      "category": "Gifts, Sports and Toys",
+      "seller": "Nicmore",
+      "stock": 200,
+      "numOfReviews": 23,
+      "reviews": [],
+      "createdAt": "2023-01-16T13:28:05.122Z",
+      "__v": 0
+  },
+  {
+      "_id": "63c550e5d861ab13dc09b557",
+      "name": "Water Beads Sensory Toys for Kids - 6 Pack Emotion Educational Learning Toys for Toddlers",
+      "price": 23.99,
+      "description": "Newest Expression Sensory Toys - These 2022 upgraded expression sensory fidget toys for toddlers have 6 different emotions; smiling, surprised, in love, angry, aggrieved, and crying are great for relieving stress and anxiety. Develop the sense of touch and fine motor skills through tactile learning.",
+      "ratings": 4.5,
+      "images": [
+          {
+              "public_id": "products/Gifts%2C%20Sports%20and%20Toys/Water_Beads_Sensory_Toys_for_Kids_-_2_h2gdnq",
+              "url": "https://res.cloudinary.com/craftycommerce/image/upload/v1673806240/products/Gifts%2C%20Sports%20and%20Toys/Water_Beads_Sensory_Toys_for_Kids_-_2_h2gdnq.jpg",
+              "_id": "63c550e5d861ab13dc09b558"
+          },
+          {
+              "public_id": "products/Gifts%2C%20Sports%20and%20Toys/Water_Beads_Sensory_Toys_for_Kids_kqlbeg",
+              "url": "https://res.cloudinary.com/craftycommerce/image/upload/v1673806240/products/Gifts%2C%20Sports%20and%20Toys/Water_Beads_Sensory_Toys_for_Kids_kqlbeg.jpg",
+              "_id": "63c550e5d861ab13dc09b559"
+          },
+          {
+              "public_id": "products/Gifts%2C%20Sports%20and%20Toys/Water_Beads_Sensory_Toys_for_Kids_-_1_fze9yp",
+              "url": "https://res.cloudinary.com/craftycommerce/image/upload/v1673806240/products/Gifts%2C%20Sports%20and%20Toys/Water_Beads_Sensory_Toys_for_Kids_-_1_fze9yp.jpg",
+              "_id": "63c550e5d861ab13dc09b55a"
+          }
+      ],
+      "category": "Gifts, Sports and Toys",
+      "seller": "Richtim",
+      "stock": 200,
+      "numOfReviews": 12,
+      "reviews": [],
+      "createdAt": "2023-01-16T13:28:05.122Z",
+      "__v": 0
+  },
+  {
+      "_id": "63c550e5d861ab13dc09b55b",
+      "name": "Butter Slime Kit for Girls 10-12, FunKidz ICE Cream Fluffy Slime Making Kit",
+      "price": 29.98,
+      "description": "Simple following the instructions, make unique girl slime decorated with charms. There are over 100 different styles you can create.",
+      "ratings": 4,
+      "images": [
+          {
+              "public_id": "products/Gifts%2C%20Sports%20and%20Toys/Butter_Slime_Kit_svch92",
+              "url": "https://res.cloudinary.com/craftycommerce/image/upload/v1673806239/products/Gifts%2C%20Sports%20and%20Toys/Butter_Slime_Kit_svch92.jpg",
+              "_id": "63c550e5d861ab13dc09b55c"
+          },
+          {
+              "public_id": "products/Gifts%2C%20Sports%20and%20Toys/Butter_Slime_Kit_-_1_eesazy",
+              "url": "https://res.cloudinary.com/craftycommerce/image/upload/v1673806238/products/Gifts%2C%20Sports%20and%20Toys/Butter_Slime_Kit_-_1_eesazy.jpg",
+              "_id": "63c550e5d861ab13dc09b55d"
+          }
+      ],
+      "category": "Gifts, Sports and Toys",
+      "seller": "AplusToys",
+      "stock": 200,
+      "numOfReviews": 3,
+      "reviews": [],
+      "createdAt": "2023-01-16T13:28:05.123Z",
+      "__v": 0
+  },
+  {
+      "_id": "63c550e5d861ab13dc09b55e",
+      "name": "ALLCELE Girls Robot Toys, Rechargeable RC Robots for Kids",
+      "price": 30.99,
+      "description": "This cute and funny robot is design in 2 part. The upper part is a cute robot with a pair of LED eyes and the gesture can be adjusted.The bottom part is a pair of tank tracks. Besides, we adopt a exquisite packaging for this robot. It will be a great birthday or Christmas gift for your kids. Robot Size:4.9*3.4*4.7 inches.",
+      "ratings": 4.5,
+      "images": [
+          {
+              "public_id": "products/Gifts%2C%20Sports%20and%20Toys/ALLCELE_Girls_Robot_Toys_Rechargeable_RC_Robots_for_Kids_jbqvcz",
+              "url": "https://res.cloudinary.com/craftycommerce/image/upload/v1673806238/products/Gifts%2C%20Sports%20and%20Toys/ALLCELE_Girls_Robot_Toys_Rechargeable_RC_Robots_for_Kids_jbqvcz.webp",
+              "_id": "63c550e5d861ab13dc09b55f"
+          },
+          {
+              "public_id": "products/Gifts%2C%20Sports%20and%20Toys/ALLCELE_Girls_Robot_Toys_Rechargeable_RC_Robots_for_Kids_-_3_tozycy",
+              "url": "https://res.cloudinary.com/craftycommerce/image/upload/v1673806238/products/Gifts%2C%20Sports%20and%20Toys/ALLCELE_Girls_Robot_Toys_Rechargeable_RC_Robots_for_Kids_-_3_tozycy.jpg",
+              "_id": "63c550e5d861ab13dc09b560"
+          },
+          {
+              "public_id": "products/Gifts%2C%20Sports%20and%20Toys/ALLCELE_Girls_Robot_Toys_Rechargeable_RC_Robots_for_Kids_-2_ixxwjn",
+              "url": "https://res.cloudinary.com/craftycommerce/image/upload/v1673806238/products/Gifts%2C%20Sports%20and%20Toys/ALLCELE_Girls_Robot_Toys_Rechargeable_RC_Robots_for_Kids_-2_ixxwjn.jpg",
+              "_id": "63c550e5d861ab13dc09b561"
+          }
+      ],
+      "category": "Gifts, Sports and Toys",
+      "seller": "Allcele",
+      "stock": 150,
+      "numOfReviews": 14,
+      "reviews": [],
+      "createdAt": "2023-01-16T13:28:05.123Z",
+      "__v": 0
+  },
+  {
+      "_id": "63c550e5d861ab13dc09b562",
+      "name": "Barbie Doll Cutie Reveal Deer Plush Snowflake Sparkle Doll",
+      "price": 18.99,
+      "description": "With 10 surprises in 1 package, the Snowflake Sparkle Series of Barbie Cutie Reveal dolls deliver the cutest unboxing experience with plush winter animal friends, fashions, surprises and transforming fun (each sold separately, subject to availability).",
+      "ratings": 4.6,
+      "images": [
+          {
+              "public_id": "products/Gifts%2C%20Sports%20and%20Toys/Barbie_Doll_Cutie_Reveal_Deer_Plush_Snowflake_Sparkle_Doll_g3sybq",
+              "url": "https://res.cloudinary.com/craftycommerce/image/upload/v1673806238/products/Gifts%2C%20Sports%20and%20Toys/Barbie_Doll_Cutie_Reveal_Deer_Plush_Snowflake_Sparkle_Doll_g3sybq.jpg",
+              "_id": "63c550e5d861ab13dc09b563"
+          },
+          {
+              "public_id": "products/Gifts%2C%20Sports%20and%20Toys/Barbie_Doll_Cutie_Reveal_Deer_Plush_Snowflake_Sparkle_Doll_-_2_lwrnto",
+              "url": "https://res.cloudinary.com/craftycommerce/image/upload/v1673806238/products/Gifts%2C%20Sports%20and%20Toys/Barbie_Doll_Cutie_Reveal_Deer_Plush_Snowflake_Sparkle_Doll_-_2_lwrnto.jpg",
+              "_id": "63c550e5d861ab13dc09b564"
+          }
+      ],
+      "category": "Gifts, Sports and Toys",
+      "seller": "Mattel",
+      "stock": 100,
+      "numOfReviews": 4,
+      "reviews": [],
+      "createdAt": "2023-01-16T13:28:05.124Z",
+      "__v": 0
+  },
+  {
+      "_id": "63c550e5d861ab13dc09b565",
+      "name": "Lizzbey Kids Phone Toddler Toys",
+      "price": 45.99,
+      "description": "Upgraded to touchscreen Dual Camera configuration,allowing your child to capture HD images in all directions to enjoy the fun of taking photos.More than a Camera,can still listen to their favorite music as MP3 player.With the Tinycam, you'll never be short of entertainment!",
+      "ratings": 4.5,
+      "images": [
+          {
+              "public_id": "products/Gifts%2C%20Sports%20and%20Toys/Lizzbey_Kids_Phone_Toddler_Toys_nxzyzs",
+              "url": "https://res.cloudinary.com/craftycommerce/image/upload/v1673806239/products/Gifts%2C%20Sports%20and%20Toys/Lizzbey_Kids_Phone_Toddler_Toys_nxzyzs.jpg",
+              "_id": "63c550e5d861ab13dc09b566"
+          },
+          {
+              "public_id": "products/Gifts%2C%20Sports%20and%20Toys/Lizzbey_Kids_Phone_Toddler_Toys_-_2_ij2unt",
+              "url": "https://res.cloudinary.com/craftycommerce/image/upload/v1673806239/products/Gifts%2C%20Sports%20and%20Toys/Lizzbey_Kids_Phone_Toddler_Toys_-_2_ij2unt.jpg",
+              "_id": "63c550e5d861ab13dc09b567"
+          }
+      ],
+      "category": "Gifts, Sports and Toys",
+      "seller": "Lizzbey",
+      "stock": 500,
+      "numOfReviews": 2,
+      "reviews": [],
+      "createdAt": "2023-01-16T13:28:05.124Z",
+      "__v": 0
+  },
+  {
+      "_id": "63c550e5d861ab13dc09b568",
+      "name": "NERF Nerfoop -- The Classic Mini Foam Basketball and Hoop",
+      "price": 8.99,
+      "description": "Shoot hoops with the Nerf Nerfoop a favorite Nerf sports toy for kids for almost 50 years. It includes a mini Nerf foam basketball and a hoop with a backboard.",
+      "ratings": 4.7,
+      "images": [
+          {
+              "public_id": "products/Gifts%2C%20Sports%20and%20Toys/NERF_Nerfoop_--_The_Classic_Mini_Foam_Basketball_ecueny",
+              "url": "https://res.cloudinary.com/craftycommerce/image/upload/v1673806239/products/Gifts%2C%20Sports%20and%20Toys/NERF_Nerfoop_--_The_Classic_Mini_Foam_Basketball_ecueny.jpg",
+              "_id": "63c550e5d861ab13dc09b569"
+          },
+          {
+              "public_id": "products/Gifts%2C%20Sports%20and%20Toys/NERF_Nerfoop_--_The_Classic_Mini_Foam_Basketball_-_2_czgjo4",
+              "url": "https://res.cloudinary.com/craftycommerce/image/upload/v1673806239/products/Gifts%2C%20Sports%20and%20Toys/NERF_Nerfoop_--_The_Classic_Mini_Foam_Basketball_-_2_czgjo4.jpg",
+              "_id": "63c550e5d861ab13dc09b56a"
+          },
+          {
+              "public_id": "products/Gifts%2C%20Sports%20and%20Toys/NERF_Nerfoop_--_The_Classic_Mini_Foam_Basketball_-_3_blydzd",
+              "url": "https://res.cloudinary.com/craftycommerce/image/upload/v1673806239/products/Gifts%2C%20Sports%20and%20Toys/NERF_Nerfoop_--_The_Classic_Mini_Foam_Basketball_-_3_blydzd.jpg",
+              "_id": "63c550e5d861ab13dc09b56b"
+          }
+      ],
+      "category": "Gifts, Sports and Toys",
+      "seller": "Nerf",
+      "stock": 500,
+      "numOfReviews": 12,
+      "reviews": [],
+      "createdAt": "2023-01-16T13:28:05.124Z",
+      "__v": 0
+  },
+  {
+      "_id": "63c550e5d861ab13dc09b56c",
+      "name": "YJ Fake Flowers with Vase, Silk Roses Artificial Flowers in Vase, Faux Flower Arrangement with Vase Suitable for Home Office Decoration, Dining Table Centerpiece(White)",
+      "price": 29.99,
+      "description": "Flower arrangement with vase include white roses, artificial eucalyptus flowers fake plants and matching one grass vase. The glass vase with heart-shaped and spherical pendants and hemp rope. Please put fake flowers bouquet in it when you get the product. Fake flowers with vase suitable for table centerpieces for dining room, coffee table decor, farmhouse decor, table decorations for living room.",
+      "ratings": 4.4,
+      "images": [
+          {
+              "public_id": "products/Home%20and%20Furniture/YJ_Fake_Flowers_with_Vase_qheixn",
+              "url": "https://res.cloudinary.com/craftycommerce/image/upload/v1673865288/products/Home%20and%20Furniture/YJ_Fake_Flowers_with_Vase_qheixn.jpg",
+              "_id": "63c550e5d861ab13dc09b56d"
+          },
+          {
+              "public_id": "products/Home%20and%20Furniture/YJ_Fake_Flowers_with_Vase-3_bbx6vs",
+              "url": "https://res.cloudinary.com/craftycommerce/image/upload/v1673865287/products/Home%20and%20Furniture/YJ_Fake_Flowers_with_Vase-3_bbx6vs.jpg",
+              "_id": "63c550e5d861ab13dc09b56e"
+          },
+          {
+              "public_id": "products/Home%20and%20Furniture/YJ_Fake_Flowers_with_Vase-2_hmwqbx",
+              "url": "https://res.cloudinary.com/craftycommerce/image/upload/v1673865287/products/Home%20and%20Furniture/YJ_Fake_Flowers_with_Vase-2_hmwqbx.jpg",
+              "_id": "63c550e5d861ab13dc09b56f"
+          }
+      ],
+      "category": "Home and Furniture",
+      "seller": "Leshy Flowers",
+      "stock": 500,
+      "numOfReviews": 5,
+      "reviews": [],
+      "createdAt": "2023-01-16T13:28:05.125Z",
+      "__v": 0
+  },
+  {
+      "_id": "63c550e5d861ab13dc09b570",
+      "name": "Interchangeable Seasonal Welcome Sign Front Door Decoration",
+      "price": 19.99,
+      "description": "Our welcome sign have a history of twelve years, with skilled craftsmanship, durable products, and a variety of colors and texts to choose from. This round of welcome sign is made of high-quality wooden materials, and high-quality hot-melt glue is used to stick artificial green plants and decorations on the board. Our products give people a beautiful enjoyment.",
+      "ratings": 4.5,
+      "images": [
+          {
+              "public_id": "products/Home%20and%20Furniture/Interchangeable_Seasonal_Welcome_Sign_Front_Door_Decoration_uy1t9g",
+              "url": "https://res.cloudinary.com/craftycommerce/image/upload/v1673865286/products/Home%20and%20Furniture/Interchangeable_Seasonal_Welcome_Sign_Front_Door_Decoration_uy1t9g.jpg",
+              "_id": "63c550e5d861ab13dc09b571"
+          },
+          {
+              "public_id": "products/Home%20and%20Furniture/Interchangeable_Seasonal_Welcome_Sign_Front_Door_Decoration-2_ggqdwl",
+              "url": "https://res.cloudinary.com/craftycommerce/image/upload/v1673865285/products/Home%20and%20Furniture/Interchangeable_Seasonal_Welcome_Sign_Front_Door_Decoration-2_ggqdwl.jpg",
+              "_id": "63c550e5d861ab13dc09b572"
+          },
+          {
+              "public_id": "products/Home%20and%20Furniture/Interchangeable_Seasonal_Welcome_Sign_Front_Door_Decoration-3_hi9qhr",
+              "url": "https://res.cloudinary.com/craftycommerce/image/upload/v1673865286/products/Home%20and%20Furniture/Interchangeable_Seasonal_Welcome_Sign_Front_Door_Decoration-3_hi9qhr.jpg",
+              "_id": "63c550e5d861ab13dc09b573"
+          }
+      ],
+      "category": "Home and Furniture",
+      "seller": "Rosecraft",
+      "stock": 200,
+      "numOfReviews": 9,
+      "reviews": [],
+      "createdAt": "2023-01-16T13:28:05.126Z",
+      "__v": 0
+  },
+  {
+      "_id": "63c550e5d861ab13dc09b574",
+      "name": "AROEVE Air Purifiers for Large Room Up to 1095 Sq Ft Coverage with Air Quality Sensors H13",
+      "price": 129.99,
+      "description": "Equip with H13 True HEPA Filter and high-efficiency filter system, our air cleaner can easily filter particles as small as 0.3 microns in the air, such as dust, smoke, pollen, hair, and odor. Turn on the high-efficiency air purifier, it can refresh air per hour for a room as large as 1095 sq ft / 100 m², and you can enjoy a new comfortable air environment every moment of the day in your home and office.",
+      "ratings": 4.6,
+      "images": [
+          {
+              "public_id": "products/Home%20and%20Furniture/AROEVE_Air_Purifiers_for_Large_Room_ogvb1b",
+              "url": "https://res.cloudinary.com/craftycommerce/image/upload/v1673865284/products/Home%20and%20Furniture/AROEVE_Air_Purifiers_for_Large_Room_ogvb1b.jpg",
+              "_id": "63c550e5d861ab13dc09b575"
+          },
+          {
+              "public_id": "products/Home%20and%20Furniture/AROEVE_Air_Purifiers_for_Large_Room-2_nyciiv",
+              "url": "https://res.cloudinary.com/craftycommerce/image/upload/v1673865284/products/Home%20and%20Furniture/AROEVE_Air_Purifiers_for_Large_Room-2_nyciiv.jpg",
+              "_id": "63c550e5d861ab13dc09b576"
+          },
+          {
+              "public_id": "products/Home%20and%20Furniture/AROEVE_Air_Purifiers_for_Large_Room-3_f1iwhq",
+              "url": "https://res.cloudinary.com/craftycommerce/image/upload/v1673865284/products/Home%20and%20Furniture/AROEVE_Air_Purifiers_for_Large_Room-3_f1iwhq.jpg",
+              "_id": "63c550e5d861ab13dc09b577"
+          }
+      ],
+      "category": "Home and Furniture",
+      "seller": "Aroeve Store",
+      "stock": 500,
+      "numOfReviews": 12,
+      "reviews": [],
+      "createdAt": "2023-01-16T13:28:05.126Z",
+      "__v": 0
+  },
+  {
+      "_id": "63c550e5d861ab13dc09b578",
+      "name": "Keepsmile 100ft Led Strip Lights (2 Rolls of 50ft) Bluetooth Smart App Music Sync Color Changing RGB Led Light Strip with Remote and Power Adapter",
+      "price": 15.69,
+      "description": "Stick 100 ft led lights around the ceiling, under the cabinets, under the bed frame, and easily control these 100 ft led light strips using either the Keepsmile app or remote control.",
+      "ratings": 4.5,
+      "images": [
+          {
+              "public_id": "products/Home%20and%20Furniture/Keepsmile_100ft_Led_Strip_Lights_fwv3l7",
+              "url": "https://res.cloudinary.com/craftycommerce/image/upload/v1673865285/products/Home%20and%20Furniture/Keepsmile_100ft_Led_Strip_Lights_fwv3l7.jpg",
+              "_id": "63c550e5d861ab13dc09b579"
+          },
+          {
+              "public_id": "products/Home%20and%20Furniture/Keepsmile_100ft_Led_Strip_Lights-2_hxjegg",
+              "url": "https://res.cloudinary.com/craftycommerce/image/upload/v1673865286/products/Home%20and%20Furniture/Keepsmile_100ft_Led_Strip_Lights-2_hxjegg.jpg",
+              "_id": "63c550e5d861ab13dc09b57a"
+          },
+          {
+              "public_id": "products/Home%20and%20Furniture/Keepsmile_100ft_Led_Strip_Lights-3_ya4t8u",
+              "url": "https://res.cloudinary.com/craftycommerce/image/upload/v1673865286/products/Home%20and%20Furniture/Keepsmile_100ft_Led_Strip_Lights-3_ya4t8u.jpg",
+              "_id": "63c550e5d861ab13dc09b57b"
+          }
+      ],
+      "category": "Home and Furniture",
+      "seller": "Keepsmile",
+      "stock": 500,
+      "numOfReviews": 7,
+      "reviews": [],
+      "createdAt": "2023-01-16T13:28:05.127Z",
+      "__v": 0
+  },
+  {
+      "_id": "63c550e5d861ab13dc09b57c",
+      "name": "Fancy Homi 2 Packs Boho Decorative Throw Pillow Covers 18x18 Inch for Living Room Couch Bed Sofa",
+      "price": 14.99,
+      "description": "Fancy Homi is the professional home decor manufacturer. Our team of designers and in-house sewing team work closely to ensure high quality and long-lasting products. We believe that home is an integral component to a quality of life we all strive for, and the foundation for everything else we do everywhere else. That way, you can easily brighten up your home with our unique pillow covers.",
+      "ratings": 4.4,
+      "images": [
+          {
+              "public_id": "products/Home%20and%20Furniture/Fancy_Homi_2_Packs_Boho_Decorative_lnokpx",
+              "url": "https://res.cloudinary.com/craftycommerce/image/upload/v1673865285/products/Home%20and%20Furniture/Fancy_Homi_2_Packs_Boho_Decorative_lnokpx.jpg",
+              "_id": "63c550e5d861ab13dc09b57d"
+          },
+          {
+              "public_id": "products/Home%20and%20Furniture/Fancy_Homi_2_Packs_Boho_Decorative-2_psm7pn",
+              "url": "https://res.cloudinary.com/craftycommerce/image/upload/v1673865285/products/Home%20and%20Furniture/Fancy_Homi_2_Packs_Boho_Decorative-2_psm7pn.jpg",
+              "_id": "63c550e5d861ab13dc09b57e"
+          },
+          {
+              "public_id": "products/Home%20and%20Furniture/Fancy_Homi_2_Packs_Boho_Decorative-3_hxwdyz",
+              "url": "https://res.cloudinary.com/craftycommerce/image/upload/v1673865285/products/Home%20and%20Furniture/Fancy_Homi_2_Packs_Boho_Decorative-3_hxwdyz.jpg",
+              "_id": "63c550e5d861ab13dc09b57f"
+          }
+      ],
+      "category": "Home and Furniture",
+      "seller": "Wlnui",
+      "stock": 500,
+      "numOfReviews": 5,
+      "reviews": [],
+      "createdAt": "2023-01-16T13:28:05.127Z",
+      "__v": 0
+  },
+  {
+      "_id": "63c550e5d861ab13dc09b580",
+      "name": "Doeean Home Wall Decor Letter Signs Acrylic Mirror Wall Stickers Wall Decorations for Living Room Bedroom Home Decor Wall Decals (Silver, 47.2 X 15.7)",
+      "price": 21.99,
+      "description": " These mirror tiles can be combined as the stencil include, you could also adjust the direction to create a different design, you also could use one of them with other wall decoration to express what you think. Only four pcs but have endless possibilities.",
+      "ratings": 4,
+      "images": [
+          {
+              "public_id": "products/Home%20and%20Furniture/Doeean_Home_Wall_Decor_Letter_Signs_rpelnh",
+              "url": "https://res.cloudinary.com/craftycommerce/image/upload/v1673865285/products/Home%20and%20Furniture/Doeean_Home_Wall_Decor_Letter_Signs_rpelnh.jpg",
+              "_id": "63c550e5d861ab13dc09b581"
+          },
+          {
+              "public_id": "products/Home%20and%20Furniture/Doeean_Home_Wall_Decor_Letter_Signs-2_oute4j",
+              "url": "https://res.cloudinary.com/craftycommerce/image/upload/v1673865285/products/Home%20and%20Furniture/Doeean_Home_Wall_Decor_Letter_Signs-2_oute4j.jpg",
+              "_id": "63c550e5d861ab13dc09b582"
+          },
+          {
+              "public_id": "products/Home%20and%20Furniture/Doeean_Home_Wall_Decor_Letter_Signs-3_miijop",
+              "url": "https://res.cloudinary.com/craftycommerce/image/upload/v1673865285/products/Home%20and%20Furniture/Doeean_Home_Wall_Decor_Letter_Signs-3_miijop.jpg",
+              "_id": "63c550e5d861ab13dc09b583"
+          }
+      ],
+      "category": "Home and Furniture",
+      "seller": "Dooean",
+      "stock": 300,
+      "numOfReviews": 10,
+      "reviews": [],
+      "createdAt": "2023-01-16T13:28:05.128Z",
+      "__v": 0
+  },
+  {
+      "_id": "63c550e5d861ab13dc09b584",
+      "name": "Christopher Knight Home Emmie Mid-Century Modern 7-Piece Extended Sectional Sofa, Navy Blue / Dark Brown",
+      "price": 1011.01,
+      "description": "Add some Mid Century flare to your living room with this 7 piece sectional sofa. With the flexibility of separate pieces, you can create almost any Shape, letting you design your Furniture to fit your living room, instead of the other Way around. With button Tufted Back Cushions which Rest Upon extra plus Seat Cushions, this couch is sure to have you relaxing in the lap of luxury whenever you are at home.",
+      "ratings": 4.5,
+      "images": [
+          {
+              "public_id": "products/Home%20and%20Furniture/Christopher_Knight_Home_Emmie_l4xfjo",
+              "url": "https://res.cloudinary.com/craftycommerce/image/upload/v1673865284/products/Home%20and%20Furniture/Christopher_Knight_Home_Emmie_l4xfjo.jpg",
+              "_id": "63c550e5d861ab13dc09b585"
+          },
+          {
+              "public_id": "products/Home%20and%20Furniture/Christopher_Knight_Home_Emmie-2_mhy67e",
+              "url": "https://res.cloudinary.com/craftycommerce/image/upload/v1673865285/products/Home%20and%20Furniture/Christopher_Knight_Home_Emmie-2_mhy67e.jpg",
+              "_id": "63c550e5d861ab13dc09b586"
+          }
+      ],
+      "category": "Home and Furniture",
+      "seller": "Christopher Knight Home Store",
+      "stock": 400,
+      "numOfReviews": 14,
+      "reviews": [],
+      "createdAt": "2023-01-16T13:28:05.128Z",
+      "__v": 0
+  },
+  {
+      "_id": "63c550e5d861ab13dc09b587",
+      "name": "Roundhill Furniture Tuchico Contemporary Fabric Accent Chair, Gray",
+      "price": 152.09,
+      "description": "With soft foam, a solid wood leg, everything about this barrel-backed chair cries 'well-crafted elegance.' Perfect for a foyer, office, or accent piece, you can offer this chair to your guests with confidence. Comfortable, yet formal, this chair offers a smooth look of comfort and professionalism.",
+      "ratings": 4.6,
+      "images": [
+          {
+              "public_id": "products/Home%20and%20Furniture/Roundhill_Furniture_Tuchico_Contemporary_Fabric_Accent_Chair_socqth",
+              "url": "https://res.cloudinary.com/craftycommerce/image/upload/v1673865287/products/Home%20and%20Furniture/Roundhill_Furniture_Tuchico_Contemporary_Fabric_Accent_Chair_socqth.jpg",
+              "_id": "63c550e5d861ab13dc09b588"
+          },
+          {
+              "public_id": "products/Home%20and%20Furniture/Roundhill_Furniture_Tuchico_Contemporary_Fabric_Accent_Chair-1_uv657o",
+              "url": "https://res.cloudinary.com/craftycommerce/image/upload/v1673865287/products/Home%20and%20Furniture/Roundhill_Furniture_Tuchico_Contemporary_Fabric_Accent_Chair-1_uv657o.jpg",
+              "_id": "63c550e5d861ab13dc09b589"
+          },
+          {
+              "public_id": "products/Home%20and%20Furniture/Roundhill_Furniture_Tuchico_Contemporary_Fabric_Accent_Chair-2_e6ahyz",
+              "url": "https://res.cloudinary.com/craftycommerce/image/upload/v1673865287/products/Home%20and%20Furniture/Roundhill_Furniture_Tuchico_Contemporary_Fabric_Accent_Chair-2_e6ahyz.jpg",
+              "_id": "63c550e5d861ab13dc09b58a"
+          }
+      ],
+      "category": "Home and Furniture",
+      "seller": "Roundhill Furniture",
+      "stock": 5,
+      "numOfReviews": 2,
+      "reviews": [],
+      "createdAt": "2023-01-16T13:28:05.129Z",
+      "__v": 0
+  },
+  {
+      "_id": "63c550e5d861ab13dc09b58b",
+      "name": "ALASDO Storage Ottoman Folding Rectangle Cube Coffee Table Multipurpose Foot Rest Short Children Sofa Stool Leather Ottomans Bench Foot Rest for Bedroom Living Room",
+      "price": 25.99,
+      "description": "When you come home, sit on the sofa, read a book or TV or play with your mobile phone, ottoman will provide support for your tired feet, allowing you to relax your body to the fullest. You can put ottoman anywhere you like it's a stool, it's a storage box, it's a footstool.",
+      "ratings": 4,
+      "images": [
+          {
+              "public_id": "products/Home%20and%20Furniture/ALASDO_Storage_Ottoman_Folding_Rectangle_Cube_Coffee_Table_pmlqvp",
+              "url": "https://res.cloudinary.com/craftycommerce/image/upload/v1673865284/products/Home%20and%20Furniture/ALASDO_Storage_Ottoman_Folding_Rectangle_Cube_Coffee_Table_pmlqvp.jpg",
+              "_id": "63c550e5d861ab13dc09b58c"
+          },
+          {
+              "public_id": "products/Home%20and%20Furniture/ALASDO_Storage_Ottoman_Folding_Rectangle_Cube_Coffee_Table-2_ppstda",
+              "url": "https://res.cloudinary.com/craftycommerce/image/upload/v1673865284/products/Home%20and%20Furniture/ALASDO_Storage_Ottoman_Folding_Rectangle_Cube_Coffee_Table-2_ppstda.jpg",
+              "_id": "63c550e5d861ab13dc09b58d"
+          }
+      ],
+      "category": "Home and Furniture",
+      "seller": "Alasdo",
+      "stock": 125,
+      "numOfReviews": 6,
+      "reviews": [],
+      "createdAt": "2023-01-16T13:28:05.129Z",
+      "__v": 0
+  },
+  {
+      "_id": "63c550e5d861ab13dc09b58e",
+      "name": "VLSRKA Nightstand with LED Lights and Wireless Charging Station, Modern Bedside Table with 2 Drawers and Open Storage,End Side Table with Lock,Smart Night Stand for Bedroom, 24 Colors RGB Lights,Black",
+      "price": 125.99,
+      "description": "Our led nightstand comes with smart controls. You need to short touch to open PIR ( lamp on ). It can auto-turn on the light when people approach the nightstand in 1-2 meters. It will turn off the light automatically when you far away the side table after 30 seconds.",
+      "ratings": 4.5,
+      "images": [
+          {
+              "public_id": "products/Home%20and%20Furniture/VLSRKA_Nightstand_with_LED_Lights_and_Wireless_Charging_Station_yjixat",
+              "url": "https://res.cloudinary.com/craftycommerce/image/upload/v1673865287/products/Home%20and%20Furniture/VLSRKA_Nightstand_with_LED_Lights_and_Wireless_Charging_Station_yjixat.jpg",
+              "_id": "63c550e5d861ab13dc09b58f"
+          },
+          {
+              "public_id": "products/Home%20and%20Furniture/VLSRKA_Nightstand_with_LED_Lights_and_Wireless_Charging_Station-3_pn9lrb",
+              "url": "https://res.cloudinary.com/craftycommerce/image/upload/v1673865287/products/Home%20and%20Furniture/VLSRKA_Nightstand_with_LED_Lights_and_Wireless_Charging_Station-3_pn9lrb.jpg",
+              "_id": "63c550e5d861ab13dc09b590"
+          },
+          {
+              "public_id": "products/Home%20and%20Furniture/VLSRKA_Nightstand_with_LED_Lights_and_Wireless_Charging_Station-2_t6sogk",
+              "url": "https://res.cloudinary.com/craftycommerce/image/upload/v1673865287/products/Home%20and%20Furniture/VLSRKA_Nightstand_with_LED_Lights_and_Wireless_Charging_Station-2_t6sogk.jpg",
+              "_id": "63c550e5d861ab13dc09b591"
+          }
+      ],
+      "category": "Home and Furniture",
+      "seller": "Vlsrka Store",
+      "stock": 350,
+      "numOfReviews": 15,
+      "reviews": [],
+      "createdAt": "2023-01-16T13:28:05.129Z",
+      "__v": 0
+  },
+  {
+      "_id": "63c550e5d861ab13dc09b592",
+      "name": "Panana 5-Drawer Chest with 1 Door, Wooden Chest of Drawers Storage Dresser Cabinet with Wheels",
+      "price": 115.99,
+      "description": "These Chests Of Drawers Look Excellent And Would Fit Perfectly In To Any Contemporary Style Interior. It Is Not Only For Bedroom Use But Can Be Used Anywhere You Need To Store Clothes, Toys And Other Everyday Objects In Your Home Or Office.",
+      "ratings": 4.7,
+      "images": [
+          {
+              "public_id": "products/Home%20and%20Furniture/Panana_5-Drawer_Chest_with_1_Door_d9g8jw",
+              "url": "https://res.cloudinary.com/craftycommerce/image/upload/v1673865286/products/Home%20and%20Furniture/Panana_5-Drawer_Chest_with_1_Door_d9g8jw.jpg",
+              "_id": "63c550e5d861ab13dc09b593"
+          },
+          {
+              "public_id": "products/Home%20and%20Furniture/Panana_5-Drawer_Chest_with_1_Door-2_vjuz3i",
+              "url": "https://res.cloudinary.com/craftycommerce/image/upload/v1673865286/products/Home%20and%20Furniture/Panana_5-Drawer_Chest_with_1_Door-2_vjuz3i.jpg",
+              "_id": "63c550e5d861ab13dc09b594"
+          }
+      ],
+      "category": "Home and Furniture",
+      "seller": "Panana",
+      "stock": 5,
+      "numOfReviews": 3,
+      "reviews": [],
+      "createdAt": "2023-01-16T13:28:05.131Z",
+      "__v": 0
+  },
+  {
+      "_id": "63c550e5d861ab13dc09b595",
+      "name": "Laverntard Modern 360 Swivel Barstools Bar Height Set of 2,Velvet Bar Stool Counter Height Bar Chairs Adjustable Height Barstool with Back& Footrest for Home Bar Kitchen Island Chair Makeup Room,Beige",
+      "price": 138.99,
+      "description": "Laverntard bar chair made of velvet fabric matches with scientific frame design and stainless steel frame support make the bar chair have a strong load-bearing capacity. Tufted velvet barstools comes with 5 colors: grey bar stool, blue bar stools, pink bar stool, green bar stool, beige barstools bring a sense of luxury to your home and is easy to match any mid century modern decor.",
+      "ratings": 4.5,
+      "images": [
+          {
+              "public_id": "products/Home%20and%20Furniture/Laverntard_Modern_360_Swivel_jrtbsl",
+              "url": "https://res.cloudinary.com/craftycommerce/image/upload/v1673865286/products/Home%20and%20Furniture/Laverntard_Modern_360_Swivel_jrtbsl.jpg",
+              "_id": "63c550e5d861ab13dc09b596"
+          },
+          {
+              "public_id": "products/Home%20and%20Furniture/Laverntard_Modern_360_Swivel-2_qyvuyo",
+              "url": "https://res.cloudinary.com/craftycommerce/image/upload/v1673865286/products/Home%20and%20Furniture/Laverntard_Modern_360_Swivel-2_qyvuyo.jpg",
+              "_id": "63c550e5d861ab13dc09b597"
+          },
+          {
+              "public_id": "products/Home%20and%20Furniture/Laverntard_Modern_360_Swivel-3_febpal",
+              "url": "https://res.cloudinary.com/craftycommerce/image/upload/v1673865286/products/Home%20and%20Furniture/Laverntard_Modern_360_Swivel-3_febpal.jpg",
+              "_id": "63c550e5d861ab13dc09b598"
+          }
+      ],
+      "category": "Home and Furniture",
+      "seller": "Laverntard",
+      "stock": 350,
+      "numOfReviews": 15,
+      "reviews": [],
+      "createdAt": "2023-01-16T13:28:05.132Z",
+      "__v": 0
+  }
+]

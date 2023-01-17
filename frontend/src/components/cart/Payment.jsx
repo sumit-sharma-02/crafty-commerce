@@ -6,6 +6,7 @@ import { createOrder, clearErrors } from "../../actions/order";
 import { removeItemsFromCart } from "../../actions/cart";
 import { toast } from "react-toastify";
 import { motion } from "framer-motion";
+import axios from "axios";
 import {
   useStripe,
   useElements,
@@ -13,7 +14,6 @@ import {
   CardExpiryElement,
   CardCvcElement,
 } from "@stripe/react-stripe-js";
-import axios from "axios";
 
 // Icons used
 import { BsFillCreditCardFill } from "react-icons/bs";
@@ -26,9 +26,6 @@ const options = {
       color: "#4b5563",
       "::placeholder": {
         color: "#9ca3af",
-      },
-      invalid: {
-        color: "#FF0000",
       },
     },
   },
@@ -88,6 +85,7 @@ const Payment = () => {
     description: "Crafty Commerce Store Payment",
     customerDetails: shippingInfo,
   };
+
   const submitHandler = async (event) => {
     event.preventDefault();
     document.querySelector("#pay_btn").disabled = true;
@@ -253,24 +251,22 @@ const Payment = () => {
               />
             </div>
           </div>
-          <div>
-            <motion.button
-              onClick={submitHandler}
-              id="pay_btn"
-              whileTap={{ scale: 0.9 }}
-              transition={{ duration: 0.3, ease: "easeInOut" }}
-              className="mx-auto flex w-full max-w-xs items-center justify-center rounded bg-primary
+          <motion.button
+            onClick={submitHandler}
+            id="pay_btn"
+            whileTap={{ scale: 0.9 }}
+            transition={{ duration: 0.3, ease: "easeInOut" }}
+            className="mx-auto flex w-full max-w-xs items-center justify-center rounded bg-primary
               px-3 py-3 font-bold text-white transition-colors duration-300 ease-in-out hover:bg-primaryDarkShade"
-            >
-              <span className="mr-1 w-auto">
-                <RiSecurePaymentLine className="h-6 w-6" />
-              </span>{" "}
-              Pay{" "}
-              {shippingInfo && shippingInfo.country.toLowerCase() === "india"
-                ? ` - ₹${orderInfo && (orderInfo.total * 82.76).toFixed(2)}`
-                : ` - $${orderInfo && orderInfo.total}`}
-            </motion.button>
-          </div>
+          >
+            <span className="mr-1 w-auto">
+              <RiSecurePaymentLine className="h-6 w-6" />
+            </span>{" "}
+            Pay{" "}
+            {shippingInfo && shippingInfo.country.toLowerCase() === "india"
+              ? ` - ₹${orderInfo && (orderInfo.total * 82.76).toFixed(2)}`
+              : ` - $${orderInfo && orderInfo.total}`}
+          </motion.button>
         </div>
       </div>
 
@@ -286,7 +282,7 @@ const Payment = () => {
             hover:bg-primaryDarkShade hover:shadow-lg"
           >
             <img
-              alt=""
+              alt="buymeabeer label"
               className="h-full w-full rounded-full object-cover object-center"
               src="https://i.pinimg.com/originals/60/fd/e8/60fde811b6be57094e0abc69d9c2622a.jpg"
             />
