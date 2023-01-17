@@ -10,10 +10,6 @@ import limited from "../../../utils/limited.json";
 // Icons used
 import { AiOutlineShoppingCart } from "react-icons/ai";
 
-// Images used
-import Banner2 from "../../../images/banner2.webp";
-import Banner3 from "../../../images/banner3.webp";
-
 let currentDate = new Date();
 let countDownDays = 7;
 let countDownTime = currentDate.setDate(currentDate.getDate() + countDownDays);
@@ -423,26 +419,14 @@ const LimitedOffers = () => {
           </div>
         </div>
       </div>
-      <div className="mb-10 gap-8 pt-10 md:grid md:grid-cols-2">
-        <div className="mb-6 md:mb-0">
-          <Link to={"/"}>
-            <img
-              className="w-full duration-300 hover:opacity-80"
-              src={Banner2}
-              alt=""
-            />
-          </Link>
-        </div>
-
-        <div>
-          <Link to={"/"}>
-            <img
-              className="w-full duration-300 hover:opacity-80"
-              src={Banner3}
-              alt=""
-            />
-          </Link>
-        </div>
+      <div className="mb-5 flex w-full pt-5 md:mb-10 md:pt-10">
+        <Link to={"/products/Home and Furniture"}>
+          <img
+            className="w-full duration-300 hover:opacity-80"
+            src="https://res.cloudinary.com/craftycommerce/image/upload/v1673961569/Banners/Banner-2_yhoqvk.jpg"
+            alt="furniture sale banner"
+          />
+        </Link>
       </div>
     </section>
   );

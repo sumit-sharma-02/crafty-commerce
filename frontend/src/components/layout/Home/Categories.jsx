@@ -18,13 +18,6 @@ import { FiSmartphone } from "react-icons/fi";
 import { BsChevronDown } from "react-icons/bs";
 import { BsChevronUp } from "react-icons/bs";
 
-// Images used
-// import GadgetsCover from "../../../images/gadgets-cover.jpg";
-// import ClothingCover from "../../../images/clothing-cover.jpg";
-import CarouselCover1 from "../../../images/carousel-cover-1.webp";
-import CarouselCover2 from "../../../images/carousel-cover-2.webp";
-import CarouselCover3 from "../../../images/carousel-cover-3.webp";
-
 const Categories = () => {
   // const [isGadgetCategoryOpen, setIsGadgetCategoryOpen] = useState(false);
   // const toggleGadgetCategory = () => {
@@ -916,13 +909,42 @@ const Categories = () => {
             className="mySwiper"
           >
             <SwiperSlide>
-              <img src={CarouselCover1} alt="" />
+              <Link
+                to={"/products"}
+                className="h-[400px] w-full rounded-[4px] transition-opacity duration-200 hover:opacity-90"
+              >
+                <img
+                  className="h-full w-auto rounded-[4px]"
+                  style={{ objectFit: "cover" }}
+                  src="https://res.cloudinary.com/craftycommerce/image/upload/v1673964891/Banners/sale-banner_ltdagb.png"
+                  alt="mega sale banner"
+                />
+              </Link>
             </SwiperSlide>
             <SwiperSlide>
-              <img src={CarouselCover2} alt="" />
+              <Link
+                to={"/product/63c550e5d861ab13dc09b4dd"}
+                className="h-[400px] w-full rounded-[4px] bg-black transition-opacity duration-200 hover:opacity-90"
+              >
+                <img
+                  className="h-full w-auto object-contain"
+                  src="https://res.cloudinary.com/craftycommerce/image/upload/v1673963132/Banners/iphone-banner_rgjgms.png"
+                  alt="iphone banner"
+                />
+              </Link>
             </SwiperSlide>
             <SwiperSlide>
-              <img src={CarouselCover3} alt="" />
+              <Link
+                to={"/products/Laptops"}
+                className="h-[400px] w-full rounded-[4px] transition-opacity duration-200 hover:opacity-90"
+              >
+                <img
+                  className="h-full w-auto rounded-[4px]"
+                  style={{ objectFit: "cover" }}
+                  src="https://res.cloudinary.com/craftycommerce/image/upload/v1673964133/Banners/laptop-banner_mlqgv8.png"
+                  alt="laptop banner"
+                />
+              </Link>
             </SwiperSlide>
           </Swiper>
         </div>

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { clearErrors, getProductDetails } from "../../actions/product";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import { toast } from "react-toastify";
 import { motion } from "framer-motion";
 import { addItemsToCart } from "../../actions/cart";
@@ -19,8 +19,6 @@ import {
 import { VscChromeClose } from "react-icons/vsc";
 
 // Images used
-import Ad1 from "../../images/ad1.jpg";
-import Ad2 from "../../images/ad2.jpg";
 import Reason1 from "../../images/reasons-1.png";
 import Reason2 from "../../images/reasons-2.png";
 import Reason3 from "../../images/reasons-3.png";
@@ -307,39 +305,35 @@ const Product = () => {
                           <ProductCategories setCategory={setCategory} />
                         </ul>
                         {/* ------------ */}
-                        <div className=" mt-5 rounded border">
-                          {/* ---- */}
-                          <div className=" flex items-center rounded bg-gray-200 bg-opacity-80 p-3 font-bold">
-                            <span>CUSTOM CMS BLOCK</span>
-                          </div>
-                          {/* ---- */}
-                          <div className=" p-4">
-                            {/* ------- */}
-                            <img
-                              className="w-full duration-300 hover:opacity-80"
-                              src={Ad1}
-                              alt=""
-                            />
-                            {/* ------- */}
-                            <p className=" py-6 text-sm text-gray-500">
-                              Custom CMS block displayed at the left sidebar on
-                              the Catalog Page. Put your own content here: text,
-                              html, images, media... whatever you like.
-                            </p>
-                            {/* -------- */}
-                            <button className=" rounded bg-gray-800 p-3 px-7 text-sm font-medium text-white duration-300 hover:bg-opacity-80">
-                              Read More
-                            </button>
-                          </div>
-                        </div>
-                        {/* ------------ */}
                         <div className="mt-5 rounded border">
                           {/* ------- */}
-                          <img
-                            className="w-full duration-300 hover:opacity-80"
-                            src={Ad2}
-                            alt=""
-                          />
+                          <Link
+                            to={"/products/Gifts, Sports and Toys"}
+                            className="w-full"
+                            onClick={() =>
+                              setCategory("Gifts, Sports and Toys")
+                            }
+                          >
+                            <img
+                              className="w-full duration-300 hover:opacity-80"
+                              src="https://res.cloudinary.com/craftycommerce/image/upload/v1673966165/Banners/toy-banner_xailoa.png"
+                              alt="toy banner"
+                            />
+                          </Link>
+                        </div>
+                        <div className="my-5 rounded border">
+                          {/* ------- */}
+                          <Link
+                            onClick={() => setCategory("Smartphones")}
+                            to={"/products/Smartphones"}
+                            className="w-full"
+                          >
+                            <img
+                              className="w-full duration-300 hover:opacity-80"
+                              src="https://res.cloudinary.com/craftycommerce/image/upload/v1673966698/Banners/smartphone-banner_uzf6nl.png"
+                              alt="smartphones banner"
+                            />
+                          </Link>
                         </div>
                       </div>
                     </motion.div>
@@ -392,39 +386,33 @@ const Product = () => {
                 <ProductCategories setCategory={setCategory} />
               </ul>
               {/* ------------ */}
-              <div className=" mt-5 rounded border">
-                {/* ---- */}
-                <div className=" flex items-center rounded bg-gray-200 bg-opacity-80 p-3 font-bold">
-                  <span>CUSTOM CMS BLOCK</span>
-                </div>
-                {/* ---- */}
-                <div className=" p-4">
-                  {/* ------- */}
+              <div className="mt-5 rounded border">
+                {/* ------- */}
+                <Link
+                  to={"/products/Gifts, Sports and Toys"}
+                  className="w-full"
+                  onClick={() => setCategory("Gifts, Sports and Toys")}
+                >
                   <img
                     className="w-full duration-300 hover:opacity-80"
-                    src={Ad1}
-                    alt=""
+                    src="https://res.cloudinary.com/craftycommerce/image/upload/v1673966165/Banners/toy-banner_xailoa.png"
+                    alt="toy banner"
                   />
-                  {/* ------- */}
-                  <p className=" py-6 text-sm text-gray-500">
-                    Custom CMS block displayed at the left sidebar on the
-                    Catalog Page. Put your own content here: text, html, images,
-                    media... whatever you like.
-                  </p>
-                  {/* -------- */}
-                  <button className=" rounded bg-gray-800 p-3 px-7 text-sm font-medium text-white duration-300 hover:bg-opacity-80">
-                    Read More
-                  </button>
-                </div>
+                </Link>
               </div>
-              {/* ------------ */}
-              <div className=" my-5 rounded border">
+              <div className="my-5 rounded border">
                 {/* ------- */}
-                <img
-                  className="w-full duration-300 hover:opacity-80"
-                  src={Ad2}
-                  alt=""
-                />
+                <Link
+                  onClick={() => setCategory("Smartphones")}
+                  to={"/products/Smartphones"}
+                  className="w-full"
+                >
+                  <img
+                    className="w-full duration-300 hover:opacity-80"
+                    src="https://res.cloudinary.com/craftycommerce/image/upload/v1673966698/Banners/smartphone-banner_uzf6nl.png"
+                    alt="smartphones banner"
+                  />
+                </Link>
               </div>
             </div>
 

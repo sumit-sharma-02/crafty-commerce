@@ -9,9 +9,6 @@ import "swiper/css/navigation";
 import "swiper/css/thumbs";
 import "./ProductCarousel.css";
 
-// Icons used
-// import Suitcase1 from "../../images/suitcase1.jpg";
-
 const ProductCarousel = (product) => {
   const [thumbsSwiper, setThumbsSwiper] = useState(null);
 

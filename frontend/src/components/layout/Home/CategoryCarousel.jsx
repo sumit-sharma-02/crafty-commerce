@@ -4,6 +4,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { getProducts } from "../../../actions/product";
 import { Link } from "react-router-dom";
 import { toast } from "react-toastify";
+import Loader from "../Loader";
 
 // CSS Imports
 import "swiper/css";
@@ -11,13 +12,11 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 
 // Images used
-import Banner4 from "../../../images/banner4.webp";
 import Quality1 from "../../../images/b2.png";
 import Quality2 from "../../../images/b3.webp";
 import Quality3 from "../../../images/b4.webp";
 import Quality4 from "../../../images/b5.webp";
 import Quality5 from "../../../images/b6.webp";
-// import demo from "../../../images/hoodie.webp";
 
 // Icons used
 import { GiLoincloth } from "react-icons/gi";
@@ -25,9 +24,7 @@ import { IoPhonePortraitOutline } from "react-icons/io5";
 import { IoLaptopOutline } from "react-icons/io5";
 import { AiOutlineHome } from "react-icons/ai";
 import { CgAppleWatch } from "react-icons/cg";
-// import { MdOutlineSportsHandball } from "react-icons/md";
 import { TbToolsKitchen2 } from "react-icons/tb";
-import Loader from "../Loader";
 
 const CategoryCarousel = () => {
   const [categorySelect, setCategorySelect] = useState([
@@ -476,13 +473,13 @@ const CategoryCarousel = () => {
         </div>
         {/* <!----------> */}
         <div className="py-10">
-          <div>
+          <Link to={"/products/Kitchen"}>
             <img
               className="w-full duration-300 hover:opacity-80"
-              src={Banner4}
-              alt="banner4.webp"
+              src="https://res.cloudinary.com/craftycommerce/image/upload/v1673961569/Banners/Banner-3_d87jzz.jpg"
+              alt="kitchen items sale banner"
             />
-          </div>
+          </Link>
         </div>
       </div>
     </section>

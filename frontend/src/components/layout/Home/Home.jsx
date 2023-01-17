@@ -8,11 +8,7 @@ import {
   CategoryCarousel,
 } from "../../../components/";
 
-// Image used
-import Banner1 from "../../../images/banner1.png";
-
 const Home = () => {
-  // window.scrollTo({ top: 0, behavior: "smooth" });
   return (
     <Fragment>
       <MetaData title={`Buy Best Products Online`} />
@@ -23,11 +19,11 @@ const Home = () => {
             <PopularProducts />
           </div>
           <div className="pt-10">
-            <Link to={"/"}>
+            <Link to={"/products/Clothing"}>
               <img
                 className="w-full duration-200 hover:opacity-90"
-                src={Banner1}
-                alt=""
+                src="https://res.cloudinary.com/craftycommerce/image/upload/v1673961569/Banners/Banner-1_wu38ky.jpg"
+                alt="clothing banner"
               />
             </Link>
           </div>

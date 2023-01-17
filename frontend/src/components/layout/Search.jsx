@@ -1,10 +1,9 @@
 import React, { useState, Fragment, useEffect } from "react";
 import { Dialog, Combobox, Transition } from "@headlessui/react";
+import { productsConstant } from "../../constants/product";
 
 // Icons used
 import { HiOutlineSearch } from "react-icons/hi";
-
-import { productsConstant } from "../../constants/product";
 
 const Search = (data) => {
   // const [isOpen, setIsOpen] = useState(data.openSearch);

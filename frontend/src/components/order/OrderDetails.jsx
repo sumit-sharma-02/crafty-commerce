@@ -9,9 +9,6 @@ import { toast } from "react-toastify";
 // Icons used
 import { FaBoxOpen } from "react-icons/fa";
 
-// Images used
-// import emptyOrder from "../../images/emptyOrder.jpg";
-
 const OrderDetails = () => {
   const dispatch = useDispatch();
   const params = useParams();
