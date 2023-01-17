@@ -105,8 +105,11 @@ export const allOrdersReducer = (state = { orders: [] }, action) => {
     case orderConstants.ALL_ORDERS_SUCCESS:
       return {
         loading: false,
-        orders: action.payload.orders,
-        totalAmount: action.payload.totalAmount,
+        orders: action.payload.data.orders,
+        ordersCount: action.payload.data.ordersCount,
+        resPerPage: action.payload.data.resPerPage,
+        filteredOrdersCount: action.payload.data.filteredOrdersCount,
+        totalAmount: action.payload.data.totalAmount,
       };
 
     case orderConstants.ALL_ORDERS_FAIL:

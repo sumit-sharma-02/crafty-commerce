@@ -73,25 +73,29 @@ export const getOrderDetails = (id) => async (dispatch) => {
 };
 
 // Get All Orders - ADMIN
-export const allOrders = () => async (dispatch) => {
-  try {
-    dispatch({
-      type: orderConstants.ALL_ORDERS_REQUEST,
-    });
+export const allOrders =
+  (ordersCurrentPage = 1) =>
+  async (dispatch) => {
+    try {
+      dispatch({
+        type: orderConstants.ALL_ORDERS_REQUEST,
+      });
 
-    const { data } = await axios.get(`/api/v1/admin/orders`);
+      const data = await axios.get(
+        `/api/v1/admin/orders?page=${ordersCurrentPage}`
+      );
 
-    dispatch({
-      type: orderConstants.ALL_ORDERS_SUCCESS,
-      payload: data,
-    });
-  } catch (error) {
-    dispatch({
-      type: orderConstants.ALL_ORDERS_FAIL,
-      payload: error.response.data.error,
-    });
-  }
-};
+      dispatch({
+        type: orderConstants.ALL_ORDERS_SUCCESS,
+        payload: data,
+      });
+    } catch (error) {
+      dispatch({
+        type: orderConstants.ALL_ORDERS_FAIL,
+        payload: error.response.data.error,
+      });
+    }
+  };
 
 // Update a Order - ADMIN
 export const updateOrder = (id, orderData) => async (dispatch) => {

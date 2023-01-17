@@ -8,16 +8,27 @@ import { orderConstants } from "../../constants/order";
 import { toast } from "react-toastify";
 
 // Icons Used
-import { BiTime } from "react-icons/bi";
+import { BiLastPage, BiTime } from "react-icons/bi";
+import Pagination from "react-js-pagination";
+import { MdFirstPage } from "react-icons/md";
+import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 
 const AllOrders = () => {
   const [isDeleteWarningOpen, setIsDeleteWarningOpen] = useState(false);
   let [deletedOrderId, setDeletedOrderId] = useState("");
+  const [currentPage, setCurrentPage] = useState(1);
 
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
-  const { loading, error, orders } = useSelector((state) => state.allOrders);
+  const {
+    loading,
+    orders,
+    ordersCount,
+    resPerPage,
+    filteredOrdersCount,
+    error,
+  } = useSelector((state) => state.allOrders);
   const { error: deleteOrderError, isDeleted } = useSelector(
     (state) => state.manipulateOrder
   );
@@ -93,6 +104,10 @@ const AllOrders = () => {
     dispatch(deleteOrder(orderId));
   };
 
+  const setCurrentPageNumber = (pageNumber) => {
+    setCurrentPage(pageNumber);
+  };
+
   useEffect(() => {
     dispatch(allOrders());
 
@@ -128,9 +143,9 @@ const AllOrders = () => {
           <div className="flex h-full w-full flex-1 flex-col">
             <main>
               <div className="mx-2 my-2 grid rounded-3xl border-4 border-gray-400 bg-gray-100 px-8 pb-10 sm:mx-4 sm:my-4">
-                <div className="grid grid-cols-12 gap-6">
-                  <div className="xxl:col-span-9 col-span-12 grid grid-cols-12 gap-6">
-                    <div className="col-span-12 mt-8">
+                <div className="grid grid-cols-5 gap-6">
+                  <div className="xxl:col-span-2 col-span-5 grid grid-cols-5 gap-6">
+                    <div className="col-span-5 mt-8">
                       <div className="intro-y flex h-10 items-center">
                         <h2 className="mr-5 truncate text-3xl font-extrabold">
                           All Orders
@@ -138,7 +153,7 @@ const AllOrders = () => {
                       </div>
                     </div>
 
-                    <div className="col-span-12 mt-5">
+                    <div className="col-span-5 mt-5">
                       <div className="grid grid-cols-1 gap-2 lg:grid-cols-1">
                         <div className="rounded-lg bg-white p-4 shadow-lg">
                           {/* <h1 className="text-base font-bold">Table</h1> */}
@@ -267,6 +282,37 @@ const AllOrders = () => {
                           </div>
                         </div>
                       </div>
+                    </div>
+
+                    <div className="col-span-5 mt-5">
+                      {/* ----Pagination---- */}
+                      {resPerPage < ordersCount &&
+                        filteredOrdersCount > resPerPage && (
+                          <div className="my-4 mb-10 flex w-full items-center justify-center space-x-1">
+                            <Pagination
+                              activePage={currentPage}
+                              itemsCountPerPage={resPerPage}
+                              totalItemsCount={filteredOrdersCount}
+                              onChange={setCurrentPageNumber}
+                              firstPageText={
+                                <MdFirstPage className="h-5 w-5" />
+                              }
+                              prevPageText={
+                                <IoIosArrowBack className="h-4 w-4" />
+                              }
+                              nextPageText={
+                                <IoIosArrowForward className="h-4 w-4" />
+                              }
+                              lastPageText={<BiLastPage className="h-5 w-5" />}
+                              hideDisabled={true}
+                              innerClass="w-full flex justify-center space-x-1"
+                              itemClass="w-10 h-8 flex justify-center items-center bg-gray-600 border rounded font-medium text-white hover:bg-primary hover:text-white duration-300"
+                              linkClass="w-full h-full flex justify-center items-center"
+                              activeClass="bg-primary"
+                              activeLinkClass="bg-primary text-white border-primary rounded-sm font-medium hover:bg-primaryDarkShade duration-300"
+                            />
+                          </div>
+                        )}
                     </div>
                   </div>
                 </div>

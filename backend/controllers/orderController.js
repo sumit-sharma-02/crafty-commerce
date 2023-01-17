@@ -80,7 +80,16 @@ exports.getMyOrders = catchAsyncErrors(async (req, res, next) => {
 
 // Get All Orders => /api/v1/admin/orders
 exports.getAllOrders = catchAsyncErrors(async (req, res, next) => {
-  const orders = await Order.find();
+  const resPerPage = 5;
+  const ordersCount = await Order.countDocuments();
+  const apiFeatures = new APIFeatures(Order.find(), req.query);
+
+  let orders = await apiFeatures.query;
+  let filteredOrdersCount = orders.length;
+
+  apiFeatures.pagination(resPerPage);
+  orders = await apiFeatures.query.clone();
+
   let totalAmount = 0;
   orders.forEach((order) => {
     totalAmount += order.totalPrice;
@@ -88,6 +97,9 @@ exports.getAllOrders = catchAsyncErrors(async (req, res, next) => {
 
   res.status(200).json({
     success: true,
+    resPerPage,
+    ordersCount,
+    filteredOrdersCount,
     totalAmount,
     orders,
   });
