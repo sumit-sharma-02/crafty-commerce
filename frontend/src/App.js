@@ -38,6 +38,7 @@ import {
   Contact,
   TopScroll,
   Page404,
+  OutOfStock,
 } from "./components";
 import { loadUser } from "./actions/user";
 import store from "./store";
@@ -84,6 +85,15 @@ function App() {
             element={
               <ProtectedRoute>
                 <ProductsList />
+              </ProtectedRoute>
+            }
+          ></Route>
+          <Route
+            path="/admin/products/outofstock"
+            isAdmin={true}
+            element={
+              <ProtectedRoute>
+                <OutOfStock />
               </ProtectedRoute>
             }
           ></Route>

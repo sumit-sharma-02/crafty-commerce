@@ -5,6 +5,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { getAdminProducts } from "../../actions/product";
 import { allOrders } from "../../actions/order";
 import { allUsers } from "../../actions/user";
+import allProducts from "../../utils/products.json";
 
 // Icon used
 import { TfiReceipt } from "react-icons/tfi";
@@ -22,7 +23,7 @@ const Dashboard = () => {
   const { users } = useSelector((state) => state.allUsers);
 
   let outOfStockProductCount = 0;
-  products.forEach((product) => {
+  allProducts.forEach((product) => {
     if (product.stock === 0) {
       outOfStockProductCount += 1;
     }
@@ -164,13 +165,24 @@ const Dashboard = () => {
                             </div>
                           </div>
                         </Link>
-                        <div className="intro-y  col-span-12 transform rounded-lg bg-white shadow-xl transition duration-300 hover:scale-105 sm:col-span-6 xl:col-span-3">
+                        <Link
+                          to={"/admin/products/outofstock"}
+                          className="intro-y  col-span-12 transform rounded-lg bg-white shadow-xl transition duration-300 hover:scale-105 sm:col-span-6 xl:col-span-3"
+                        >
                           <div className="p-5">
                             <div className="flex justify-between">
                               <BsGraphDown
                                 strokeWidth={0.8}
                                 className="h-6 w-6 text-red-400"
                               />
+                              <div className="flex h-6 items-center rounded-full bg-pink-400 px-2 text-xs font-medium text-pink-800">
+                                <span className="flex items-center">
+                                  View Details
+                                </span>
+                                <span className="pt-[3px]">
+                                  <FiChevronRight />
+                                </span>
+                              </div>
                             </div>
                             <div className="ml-2 w-full flex-1">
                               <div>
@@ -183,7 +195,7 @@ const Dashboard = () => {
                               </div>
                             </div>
                           </div>
-                        </div>
+                        </Link>
                       </div>
                     </div>
 
