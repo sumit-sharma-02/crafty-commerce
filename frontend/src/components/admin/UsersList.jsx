@@ -121,8 +121,6 @@ const UsersList = () => {
     }
   }, [error, deleteUserError, dispatch, isDeleted, navigate, deletedUser]);
 
-  window.scrollTo({ top: 0, behavior: "smooth" });
-
   return (
     <>
       <MetaData title="All Users" />

@@ -128,8 +128,6 @@ const AllOrders = () => {
     }
   }, [error, deleteOrderError, dispatch, isDeleted, navigate]);
 
-  window.scrollTo({ top: 0, behavior: "smooth" });
-
   return (
     <>
       <MetaData title="All Orders" />

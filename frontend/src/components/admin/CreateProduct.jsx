@@ -140,8 +140,6 @@ const CreateProduct = () => {
     }
   }, [error, dispatch, success, navigate]);
 
-  window.scrollTo({ top: 0, behavior: "smooth" });
-
   return (
     <>
       <MetaData title="Create New Product" />

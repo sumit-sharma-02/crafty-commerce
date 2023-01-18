@@ -56,7 +56,7 @@ exports.getMyOrders = catchAsyncErrors(async (req, res, next) => {
   const orders = await Order.find({ user: req.user.id });
   const ordersCount = await Order.countDocuments();
   const apiFeatures = new APIFeatures(
-    Order.find({ user: req.user.id }),
+    Order.find({ user: req.user.id }).sort({ createdAt: -1 }),
     req.query
   ).filter();
 
@@ -82,7 +82,10 @@ exports.getMyOrders = catchAsyncErrors(async (req, res, next) => {
 exports.getAllOrders = catchAsyncErrors(async (req, res, next) => {
   const resPerPage = 5;
   const ordersCount = await Order.countDocuments();
-  const apiFeatures = new APIFeatures(Order.find(), req.query);
+  const apiFeatures = new APIFeatures(
+    Order.find().sort({ createdAt: -1 }),
+    req.query
+  );
 
   let orders = await apiFeatures.query;
   let filteredOrdersCount = orders.length;

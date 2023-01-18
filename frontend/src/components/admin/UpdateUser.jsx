@@ -94,8 +94,6 @@ const UpdateUser = () => {
     }
   }, [error, dispatch, isUpdated, params, user, navigate, userId, tempCount]);
 
-  window.scrollTo({ top: 0, behavior: "smooth" });
-
   return (
     <>
       <MetaData title="Update User" />

@@ -118,8 +118,6 @@ const UpdateOrder = () => {
     }
   }, [error, updateOrderError, dispatch, isUpdated, orderId]);
 
-  window.scrollTo({ top: 0, behavior: "smooth" });
-
   return (
     <>
       <MetaData title="Update Order Status" />
@@ -250,7 +248,7 @@ const UpdateOrder = () => {
                     <select
                       onChange={(event) => setStatus(event.target.value)}
                       value={status}
-                      className={`ml-4 w-max rounded-lg border-2 border-gray-300 py-1 pl-2 text-base text-gray-600 
+                      className={`ml-4 w-max rounded-lg border-2 border-gray-300 py-1 pl-2 text-sm text-gray-600 
                   placeholder-gray-400 invalid:border-red-500 focus:border-blue-300 focus:outline-none`}
                     >
                       <option

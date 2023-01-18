@@ -197,8 +197,6 @@ const CreateProduct = () => {
     tempCount,
   ]);
 
-  window.scrollTo({ top: 0, behavior: "smooth" });
-
   return (
     <>
       <MetaData title="Update Product" />

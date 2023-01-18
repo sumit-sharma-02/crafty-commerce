@@ -26,8 +26,8 @@ const Page404 = () => {
         />
         <div className="mt-2 flex flex-col items-center justify-center font-['Arvo']">
           <div className="text-5xl font-bold">404</div>
-          <h3 className="h2">Look like you're lost</h3>
-          <p>the page you are looking for not avaible!</p>
+          <h3 className="h2">Look like you're lost.</h3>
+          <p>The page you are looking for is not available!</p>
           <Link
             to={"/"}
             className="my-[20px] inline-block rounded bg-primary py-[10px] px-[20px] 
