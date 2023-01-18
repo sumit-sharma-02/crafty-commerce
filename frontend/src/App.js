@@ -37,6 +37,7 @@ import {
   Faq,
   Contact,
   TopScroll,
+  Page404,
 } from "./components";
 import { loadUser } from "./actions/user";
 import store from "./store";
@@ -238,6 +239,7 @@ function App() {
           <Route path="/terms-and-condition" element={<Terms />} />
           <Route path="/privacy-policy" element={<Privacy />} />
           <Route path="/contact-us" element={<Contact />} />
+          <Route path="*" element={<Page404 />} />
         </Routes>
         <TopScroll />
         <Footer />

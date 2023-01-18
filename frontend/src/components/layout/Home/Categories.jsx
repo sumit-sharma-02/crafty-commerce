@@ -941,7 +941,7 @@ const Categories = () => {
                 <img
                   className="h-full w-auto rounded-[4px]"
                   style={{ objectFit: "cover" }}
-                  src="https://res.cloudinary.com/craftycommerce/image/upload/v1673964133/Banners/laptop-banner_mlqgv8.png"
+                  src="https://res.cloudinary.com/craftycommerce/image/upload/v1674059263/Banners/laptop-banner_i49ns1.png"
                   alt="laptop banner"
                 />
               </Link>

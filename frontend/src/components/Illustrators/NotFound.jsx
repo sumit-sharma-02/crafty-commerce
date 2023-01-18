@@ -22,7 +22,7 @@ const NotFound = (error) => {
       >
         <img
           src={NotFoundError}
-          alt=""
+          alt="product not found"
           className="h-auto w-[35rem] border-none"
         />
         <span className="flex w-full items-center justify-center font-semibold text-gray-500 xsm:text-base lg:text-lg">

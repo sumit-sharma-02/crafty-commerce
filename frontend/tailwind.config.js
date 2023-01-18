@@ -2,6 +2,9 @@
 module.exports = {
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
+    fontFamily: {
+      arvo: ["Arvo", "sans-serif"],
+    },
     extend: {
       backgroundImage: {
         "gradient-google": `linear-gradient(180deg, rgb(50, 107, 200), rgb(52, 168, 83), rgb(102, 75, 0), rgb(210, 87, 75))`,

@@ -50,3 +50,4 @@ export { default as Faq } from "./support/Faq";
 export { default as Terms } from "./support/Terms";
 export { default as Privacy } from "./support/Privacy";
 export { default as Contact } from "./support/Contact";
+export { default as Page404 } from "./Illustrators/Page404";
