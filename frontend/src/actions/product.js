@@ -16,9 +16,9 @@ export const getProducts =
       dispatch({
         type: productsConstant.ALL_PRODUCTS_REQUEST,
       });
-      let path = `/api/v1/products?sort=${sorting}&keyword=${keyword}&page=${currentPage}&price[lte]=${price[1]}&price[gte]=${price[0]}&ratings[gte]=${rating}`;
+      let path = `https://crafty-commerce-api.vercel.app/api/v1/products?sort=${sorting}&keyword=${keyword}&page=${currentPage}&price[lte]=${price[1]}&price[gte]=${price[0]}&ratings[gte]=${rating}`;
       if (category) {
-        path = `/api/v1/products?sort=${sorting}&keyword=${keyword}&page=${currentPage}&price[lte]=${price[1]}&price[gte]=${price[0]}&category=${category}&ratings[gte]=${rating}`;
+        path = `https://crafty-commerce-api.vercel.app/api/v1/products?sort=${sorting}&keyword=${keyword}&page=${currentPage}&price[lte]=${price[1]}&price[gte]=${price[0]}&category=${category}&ratings[gte]=${rating}`;
       }
 
       const data = await axios.get(path);
@@ -44,7 +44,7 @@ export const getAdminProducts =
       });
 
       const data = await axios.get(
-        `/api/v1/admin/products?page=${currentPage}`
+        `https://crafty-commerce-api.vercel.app/api/v1/admin/products?page=${currentPage}`
       );
 
       dispatch({
@@ -66,7 +66,9 @@ export const getProductDetails = (id) => async (dispatch) => {
       type: productsConstant.PRODUCT_DETAILS_REQUEST,
     });
 
-    const { data } = await axios.get(`/api/v1/product/${id}`);
+    const { data } = await axios.get(
+      `https://crafty-commerce-api.vercel.app/api/v1/product/${id}`
+    );
 
     dispatch({
       type: productsConstant.PRODUCT_DETAILS_SUCCESS,
@@ -94,7 +96,7 @@ export const newProduct = (productData) => async (dispatch) => {
     };
 
     const { data } = await axios.post(
-      "/api/v1/admin/product/new",
+      "https://crafty-commerce-api.vercel.app/api/v1/admin/product/new",
       productData,
       config
     );
@@ -125,7 +127,7 @@ export const updateProduct = (id, productData) => async (dispatch) => {
     };
 
     const { data } = await axios.put(
-      `/api/v1/admin/product/${id}`,
+      `https://crafty-commerce-api.vercel.app/api/v1/admin/product/${id}`,
       productData,
       config
     );
@@ -149,7 +151,9 @@ export const deleteProduct = (id) => async (dispatch) => {
       type: productsConstant.DELETE_PRODUCT_REQUEST,
     });
 
-    const { data } = await axios.delete(`/api/v1/admin/product/${id}`);
+    const { data } = await axios.delete(
+      `https://crafty-commerce-api.vercel.app/api/v1/admin/product/${id}`
+    );
 
     dispatch({
       type: productsConstant.DELETE_PRODUCT_SUCCESS,
@@ -176,7 +180,11 @@ export const newReview = (reviewData) => async (dispatch) => {
       },
     };
 
-    const { data } = await axios.put(`/api/v1/review`, reviewData, config);
+    const { data } = await axios.put(
+      `https://crafty-commerce-api.vercel.app/api/v1/review`,
+      reviewData,
+      config
+    );
 
     dispatch({
       type: productsConstant.NEW_REVIEW_SUCCESS,
@@ -197,7 +205,9 @@ export const getProductReviews = (id) => async (dispatch) => {
       type: productsConstant.GET_REVIEWS_REQUEST,
     });
 
-    const { data } = await axios.get(`/api/v1/reviews?id=${id}`);
+    const { data } = await axios.get(
+      `https://crafty-commerce-api.vercel.app/api/v1/reviews?id=${id}`
+    );
 
     dispatch({
       type: productsConstant.GET_REVIEWS_SUCCESS,
@@ -219,7 +229,7 @@ export const deleteReview = (id, productId) => async (dispatch) => {
     });
 
     const { data } = await axios.delete(
-      `/api/v1/reviews?id=${id}&productId=${productId}`
+      `https://crafty-commerce-api.vercel.app/api/v1/reviews?id=${id}&productId=${productId}`
     );
 
     dispatch({

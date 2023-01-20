@@ -12,7 +12,11 @@ export const createOrder = (order) => async (dispatch, getState) => {
       },
     };
 
-    const { data } = await axios.post("/api/v1/order/new", order, config);
+    const { data } = await axios.post(
+      "https://crafty-commerce-api.vercel.app/api/v1/order/new",
+      order,
+      config
+    );
 
     dispatch({
       type: orderConstants.CREATE_ORDER_SUCCESS,
@@ -36,7 +40,7 @@ export const myOrders =
       });
 
       const data = await axios.get(
-        `/api/v1/orders/myOrders?page=${ordersCurrentPage}`
+        `https://crafty-commerce-api.vercel.app/api/v1/orders/myOrders?page=${ordersCurrentPage}`
       );
 
       dispatch({
@@ -58,7 +62,9 @@ export const getOrderDetails = (id) => async (dispatch) => {
       type: orderConstants.ORDER_DETAILS_REQUEST,
     });
 
-    const { data } = await axios.get(`/api/v1/order/${id}`);
+    const { data } = await axios.get(
+      `https://crafty-commerce-api.vercel.app/api/v1/order/${id}`
+    );
 
     dispatch({
       type: orderConstants.ORDER_DETAILS_SUCCESS,
@@ -82,7 +88,7 @@ export const allOrders =
       });
 
       const data = await axios.get(
-        `/api/v1/admin/orders?page=${ordersCurrentPage}`
+        `https://crafty-commerce-api.vercel.app/api/v1/admin/orders?page=${ordersCurrentPage}`
       );
 
       dispatch({
@@ -111,7 +117,7 @@ export const updateOrder = (id, orderData) => async (dispatch) => {
     };
 
     const { data } = await axios.put(
-      `/api/v1/admin/order/${id}`,
+      `https://crafty-commerce-api.vercel.app/api/v1/admin/order/${id}`,
       orderData,
       config
     );
@@ -135,7 +141,9 @@ export const deleteOrder = (id) => async (dispatch) => {
       type: orderConstants.DELETE_ORDER_REQUEST,
     });
 
-    const { data } = await axios.delete(`/api/v1/admin/order/${id}`);
+    const { data } = await axios.delete(
+      `https://crafty-commerce-api.vercel.app/api/v1/admin/order/${id}`
+    );
 
     dispatch({
       type: orderConstants.DELETE_ORDER_SUCCESS,

@@ -15,7 +15,7 @@ export const login = (email, password) => async (dispatch) => {
     };
 
     const { data } = await axios.post(
-      "/api/v1/login",
+      "https://crafty-commerce-api.vercel.app/api/v1/login",
       { email, password },
       config
     );
@@ -45,7 +45,11 @@ export const register = (userData) => async (dispatch) => {
       },
     };
 
-    const { data } = await axios.post("/api/v1/register", userData, config);
+    const { data } = await axios.post(
+      "https://crafty-commerce-api.vercel.app/api/v1/register",
+      userData,
+      config
+    );
 
     dispatch({
       type: userConstants.REGISTER_USER_SUCCESS,
@@ -66,7 +70,9 @@ export const loadUser = () => async (dispatch) => {
       type: userConstants.LOAD_USER_REQUEST,
     });
 
-    const { data } = await axios.get("/api/v1/profile");
+    const { data } = await axios.get(
+      "https://crafty-commerce-api.vercel.app/api/v1/profile"
+    );
 
     dispatch({
       type: userConstants.LOAD_USER_SUCCESS,
@@ -83,7 +89,7 @@ export const loadUser = () => async (dispatch) => {
 //Logout user
 export const logout = () => async (dispatch) => {
   try {
-    await axios.get("/api/v1/logout");
+    await axios.get("https://crafty-commerce-api.vercel.app/api/v1/logout");
     dispatch({ type: userConstants.LOGOUT_SUCCESS });
   } catch (error) {
     dispatch({
@@ -107,7 +113,7 @@ export const updateProfile = (userData) => async (dispatch) => {
     };
 
     const { data } = await axios.put(
-      "/api/v1/profile/update",
+      "https://crafty-commerce-api.vercel.app/api/v1/profile/update",
       userData,
       config
     );
@@ -138,7 +144,7 @@ export const updatePassword = (passwords) => async (dispatch) => {
     };
 
     const { data } = await axios.put(
-      "/api/v1/password/update",
+      "https://crafty-commerce-api.vercel.app/api/v1/password/update",
       passwords,
       config
     );
@@ -168,7 +174,11 @@ export const forgotPassword = (email) => async (dispatch) => {
       },
     };
 
-    const { data } = await axios.post("/api/v1/password/forgot", email, config);
+    const { data } = await axios.post(
+      "https://crafty-commerce-api.vercel.app/api/v1/password/forgot",
+      email,
+      config
+    );
 
     dispatch({
       type: userConstants.FORGOT_PASSWORD_SUCCESS,
@@ -196,7 +206,7 @@ export const resetPassword = (token, passwords) => async (dispatch) => {
     };
 
     const { data } = await axios.put(
-      `/api/v1/password/reset/${token}`,
+      `https://crafty-commerce-api.vercel.app/api/v1/password/reset/${token}`,
       passwords,
       config
     );
@@ -223,7 +233,7 @@ export const allUsers =
       });
 
       const data = await axios.get(
-        `/api/v1/admin/users?page=${usersCurrentPage}`
+        `https://crafty-commerce-api.vercel.app/api/v1/admin/users?page=${usersCurrentPage}`
       );
 
       dispatch({
@@ -245,7 +255,9 @@ export const deleteUser = (id) => async (dispatch) => {
       type: userConstants.DELETE_USER_REQUEST,
     });
 
-    const { data } = await axios.delete(`/api/v1/admin/user/${id}`);
+    const { data } = await axios.delete(
+      `https://crafty-commerce-api.vercel.app/api/v1/admin/user/${id}`
+    );
 
     dispatch({
       type: userConstants.DELETE_USER_SUCCESS,
@@ -273,7 +285,7 @@ export const updateUser = (id, userData) => async (dispatch) => {
     };
 
     const { data } = await axios.put(
-      `/api/v1/admin/user/${id}`,
+      `https://crafty-commerce-api.vercel.app/api/v1/admin/user/${id}`,
       userData,
       config
     );
@@ -297,7 +309,9 @@ export const getUserDetails = (id) => async (dispatch) => {
       type: userConstants.USER_DETAILS_REQUEST,
     });
 
-    const { data } = await axios.get(`/api/v1/admin/user/${id}`);
+    const { data } = await axios.get(
+      `https://crafty-commerce-api.vercel.app/api/v1/admin/user/${id}`
+    );
 
     dispatch({
       type: userConstants.USER_DETAILS_SUCCESS,
