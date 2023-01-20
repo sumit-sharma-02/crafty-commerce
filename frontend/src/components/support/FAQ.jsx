@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import { FcAbout } from "react-icons/fc";
 
 const Faq = () => {
-  window.scrollTo({ top: 0, behavior: "smooth" });
+  // window.scrollTo({ top: 0, behavior: "smooth" });
   return (
     <main>
       {/* <!--------------Breadcrumb-----------------------> */}
