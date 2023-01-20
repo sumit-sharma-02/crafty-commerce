@@ -2,9 +2,9 @@
     "version": 2,
     "name": "crafty-commerce-backend",
     "builds": [
-      { "src": "./backend/server.js", "use": "@vercel/node" }
+      { "src": "/backend/server.js", "use": "@vercel/node" }
     ],
     "routes": [
-        { "src": "/(.*)", "dest": "./backend/server.js"}
+        { "src": "/backend/(.*)", "dest": "/"}
       ]
   }
