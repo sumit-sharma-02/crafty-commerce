@@ -110,7 +110,7 @@ const Register = () => {
       dispatch(clearErrors);
     }
   }, [dispatch, loading, isAuthenticated, error, navigate, pathname]);
-  window.scrollTo({ top: 0, behavior: "smooth" });
+  // window.scrollTo({ top: 0, behavior: "smooth" });
 
   return (
     <main>
@@ -331,7 +331,7 @@ const Register = () => {
                     I agree to all Crafty Commerce's
                     <Link
                       className="mx-1 text-xs font-semibold text-blue-500 underline"
-                      to={"/"}
+                      to={"/terms-and-condition"}
                     >
                       Terms and Conditions
                     </Link>
