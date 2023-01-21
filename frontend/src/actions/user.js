@@ -14,6 +14,7 @@ export const login = (email, password) => async (dispatch) => {
         "Content-Type": "application/json",
         "Access-Control-Allow-Origin": "https://crafty-commerce.vercel.app",
       },
+      withCredentials: true,
     };
 
     const { data } = await axios.post(
