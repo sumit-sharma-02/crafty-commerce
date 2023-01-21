@@ -21,6 +21,15 @@ function Cart() {
     dispatch(removeItemsFromCart(id));
   };
 
+  // Calculate Order Price
+  const subTotal = cartItems.reduce(
+    (acc, item) => acc + item.price * item.quantity,
+    0
+  );
+  const shippingPrice = subTotal > 100 ? 0 : 10;
+  const tax = Number((0.01 * subTotal).toFixed(2));
+  const totalPrice = (subTotal + shippingPrice + tax).toFixed(2);
+
   const increaseQty = (id, quantity, stock) => {
     const newQty = quantity + 1;
     if (newQty > stock) {
@@ -212,39 +221,27 @@ function Cart() {
                     Subtotal
                   </p>
                   <p className="text-base leading-none text-gray-800">
-                    $
-                    {cartItems
-                      .reduce(
-                        (acc, item) => acc + item.quantity * item.price,
-                        0
-                      )
-                      .toFixed(2)}
+                    ${subTotal}
                   </p>
                 </div>
                 <div className="flex items-center justify-between pt-5">
                   <p className="text-base leading-none text-gray-800">
                     Shipping
                   </p>
-                  <p className="text-base leading-none text-gray-800">$10</p>
+                  <p className="text-base leading-none text-gray-800">
+                    ${shippingPrice}
+                  </p>
                 </div>
                 <div className="flex items-center justify-between pt-5">
                   <p className="text-base leading-none text-gray-800">Tax</p>
-                  <p className="text-base leading-none text-gray-800">$5</p>
+                  <p className="text-base leading-none text-gray-800">${tax}</p>
                 </div>
               </div>
               <div className="mt-5">
                 <div className="flex items-center justify-between pb-6 pt-20 lg:pt-5">
                   <p className="text-2xl leading-normal text-gray-800">Total</p>
                   <p className="text-right text-2xl font-bold leading-normal text-primary">
-                    $
-                    {(
-                      cartItems.reduce(
-                        (acc, item) => acc + item.quantity * item.price,
-                        0
-                      ) +
-                      10 +
-                      5
-                    ).toFixed(2)}
+                    ${totalPrice}
                   </p>
                 </div>
                 <button
