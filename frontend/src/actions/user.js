@@ -13,6 +13,7 @@ export const login = (email, password) => async (dispatch) => {
         "Content-Type": "application/json",
         "Access-Control-Allow-Origin": "*",
       },
+      withCredentials: true,
     };
 
     const { data } = await axios.post(
@@ -45,6 +46,7 @@ export const register = (userData) => async (dispatch) => {
         "Content-Type": "multipart/form-data",
         "Access-Control-Allow-Origin": "*",
       },
+      withCredentials: true,
     };
 
     const { data } = await axios.post(
@@ -76,6 +78,7 @@ export const loadUser = () => async (dispatch) => {
       headers: {
         "Access-Control-Allow-Origin": "*",
       },
+      withCredentials: true,
     };
 
     const { data } = await axios.get(
@@ -102,6 +105,7 @@ export const logout = () => async (dispatch) => {
       headers: {
         "Access-Control-Allow-Origin": "*",
       },
+      withCredentials: true,
     };
     await axios.get(
       "https://crafty-commerce-api.vercel.app/api/v1/logout",
@@ -128,6 +132,7 @@ export const updateProfile = (userData) => async (dispatch) => {
         "Content-Type": "multipart/form-data",
         "Access-Control-Allow-Origin": "*",
       },
+      withCredentials: true,
     };
 
     const { data } = await axios.put(
@@ -160,6 +165,7 @@ export const updatePassword = (passwords) => async (dispatch) => {
         "Content-Type": "application/json",
         "Access-Control-Allow-Origin": "*",
       },
+      withCredentials: true,
     };
 
     const { data } = await axios.put(
@@ -192,6 +198,7 @@ export const forgotPassword = (email) => async (dispatch) => {
         "Content-Type": "application/json",
         "Access-Control-Allow-Origin": "*",
       },
+      withCredentials: true,
     };
 
     const { data } = await axios.post(
@@ -224,6 +231,7 @@ export const resetPassword = (token, passwords) => async (dispatch) => {
         "Content-Type": "application/json",
         "Access-Control-Allow-Origin": "*",
       },
+      withCredentials: true,
     };
 
     const { data } = await axios.put(
@@ -257,6 +265,7 @@ export const allUsers =
         headers: {
           "Access-Control-Allow-Origin": "*",
         },
+        withCredentials: true,
       };
 
       const data = await axios.get(
@@ -287,6 +296,7 @@ export const deleteUser = (id) => async (dispatch) => {
       headers: {
         "Access-Control-Allow-Origin": "*",
       },
+      withCredentials: true,
     };
 
     const { data } = await axios.delete(
@@ -318,6 +328,7 @@ export const updateUser = (id, userData) => async (dispatch) => {
         "Content-Type": "application/json",
         "Access-Control-Allow-Origin": "*",
       },
+      withCredentials: true,
     };
 
     const { data } = await axios.put(
@@ -349,6 +360,7 @@ export const getUserDetails = (id) => async (dispatch) => {
       headers: {
         "Access-Control-Allow-Origin": "*",
       },
+      withCredentials: true,
     };
 
     const { data } = await axios.get(

@@ -9,10 +9,16 @@ export const createOrder = (order) => async (dispatch, getState) => {
     const config = {
       headers: {
         "Content-Type": "application/json",
+        "Access-Control-Allow-Origin": "*",
       },
+      withCredentials: true,
     };
 
-    const { data } = await axios.post("/api/v1/order/new", order, config);
+    const { data } = await axios.post(
+      "https://crafty-commerce-api.vercel.app/api/v1/order/new",
+      order,
+      config
+    );
 
     dispatch({
       type: orderConstants.CREATE_ORDER_SUCCESS,
@@ -35,8 +41,16 @@ export const myOrders =
         type: orderConstants.MY_ORDERS_REQUEST,
       });
 
+      const config = {
+        headers: {
+          "Access-Control-Allow-Origin": "*",
+        },
+        withCredentials: true,
+      };
+
       const data = await axios.get(
-        `https://crafty-commerce-api.vercel.app/api/v1/orders/myOrders?page=${ordersCurrentPage}`
+        `https://crafty-commerce-api.vercel.app/api/v1/orders/myOrders?page=${ordersCurrentPage}`,
+        config
       );
 
       dispatch({
@@ -58,7 +72,17 @@ export const getOrderDetails = (id) => async (dispatch) => {
       type: orderConstants.ORDER_DETAILS_REQUEST,
     });
 
-    const { data } = await axios.get(`/api/v1/order/${id}`);
+    const config = {
+      headers: {
+        "Access-Control-Allow-Origin": "*",
+      },
+      withCredentials: true,
+    };
+
+    const { data } = await axios.get(
+      `https://crafty-commerce-api.vercel.app/api/v1/order/${id}`,
+      config
+    );
 
     dispatch({
       type: orderConstants.ORDER_DETAILS_SUCCESS,
@@ -81,8 +105,16 @@ export const allOrders =
         type: orderConstants.ALL_ORDERS_REQUEST,
       });
 
+      const config = {
+        headers: {
+          "Access-Control-Allow-Origin": "*",
+        },
+        withCredentials: true,
+      };
+
       const data = await axios.get(
-        `https://crafty-commerce-api.vercel.app/api/v1/admin/orders?page=${ordersCurrentPage}`
+        `https://crafty-commerce-api.vercel.app/api/v1/admin/orders?page=${ordersCurrentPage}`,
+        config
       );
 
       dispatch({
@@ -108,6 +140,7 @@ export const updateOrder = (id, orderData) => async (dispatch) => {
       headers: {
         "Content-Type": "application/json",
       },
+      withCredentials: true,
     };
 
     const { data } = await axios.put(
@@ -135,7 +168,14 @@ export const deleteOrder = (id) => async (dispatch) => {
       type: orderConstants.DELETE_ORDER_REQUEST,
     });
 
-    const { data } = await axios.delete(`/api/v1/admin/order/${id}`);
+    const config = {
+      headers: {
+        "Access-Control-Allow-Origin": "*",
+      },
+      withCredentials: true,
+    };
+
+    const { data } = await axios.delete(`/api/v1/admin/order/${id}`, config);
 
     dispatch({
       type: orderConstants.DELETE_ORDER_SUCCESS,

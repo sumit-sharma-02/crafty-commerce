@@ -25,6 +25,7 @@ export const getProducts =
         headers: {
           "Access-Control-Allow-Origin": "*",
         },
+        withCredentials: true,
       };
 
       const data = await axios.get(path, config);
@@ -53,6 +54,7 @@ export const getAdminProducts =
         headers: {
           "Access-Control-Allow-Origin": "*",
         },
+        withCredentials: true,
       };
 
       const data = await axios.get(
@@ -79,7 +81,17 @@ export const getProductDetails = (id) => async (dispatch) => {
       type: productsConstant.PRODUCT_DETAILS_REQUEST,
     });
 
-    const { data } = await axios.get(`/api/v1/product/${id}`);
+    const config = {
+      headers: {
+        "Access-Control-Allow-Origin": "*",
+      },
+      withCredentials: true,
+    };
+
+    const { data } = await axios.get(
+      `https://crafty-commerce-api.vercel.app/api/v1/product/${id}`,
+      config
+    );
 
     dispatch({
       type: productsConstant.PRODUCT_DETAILS_SUCCESS,
@@ -104,10 +116,11 @@ export const newProduct = (productData) => async (dispatch) => {
       headers: {
         "Content-Type": "application/json",
       },
+      withCredentials: true,
     };
 
     const { data } = await axios.post(
-      "/api/v1/admin/product/new",
+      "https://crafty-commerce-api.vercel.app/api/v1/admin/product/new",
       productData,
       config
     );
@@ -135,10 +148,11 @@ export const updateProduct = (id, productData) => async (dispatch) => {
       headers: {
         "Content-Type": "application/json",
       },
+      withCredentials: true,
     };
 
     const { data } = await axios.put(
-      `/api/v1/admin/product/${id}`,
+      `https://crafty-commerce-api.vercel.app/api/v1/admin/product/${id}`,
       productData,
       config
     );
@@ -162,7 +176,17 @@ export const deleteProduct = (id) => async (dispatch) => {
       type: productsConstant.DELETE_PRODUCT_REQUEST,
     });
 
-    const { data } = await axios.delete(`/api/v1/admin/product/${id}`);
+    const config = {
+      headers: {
+        "Access-Control-Allow-Origin": "*",
+      },
+      withCredentials: true,
+    };
+
+    const { data } = await axios.delete(
+      `https://crafty-commerce-api.vercel.app/api/v1/admin/product/${id}`,
+      config
+    );
 
     dispatch({
       type: productsConstant.DELETE_PRODUCT_SUCCESS,
@@ -187,9 +211,14 @@ export const newReview = (reviewData) => async (dispatch) => {
       headers: {
         "Content-Type": "application/json",
       },
+      withCredentials: true,
     };
 
-    const { data } = await axios.put(`/api/v1/review`, reviewData, config);
+    const { data } = await axios.put(
+      `https://crafty-commerce-api.vercel.app/api/v1/review`,
+      reviewData,
+      config
+    );
 
     dispatch({
       type: productsConstant.NEW_REVIEW_SUCCESS,
@@ -210,7 +239,17 @@ export const getProductReviews = (id) => async (dispatch) => {
       type: productsConstant.GET_REVIEWS_REQUEST,
     });
 
-    const { data } = await axios.get(`/api/v1/reviews?id=${id}`);
+    const config = {
+      headers: {
+        "Access-Control-Allow-Origin": "*",
+      },
+      withCredentials: true,
+    };
+
+    const { data } = await axios.get(
+      `https://crafty-commerce-api.vercel.app/api/v1/reviews?id=${id}`,
+      config
+    );
 
     dispatch({
       type: productsConstant.GET_REVIEWS_SUCCESS,
@@ -231,8 +270,16 @@ export const deleteReview = (id, productId) => async (dispatch) => {
       type: productsConstant.DELETE_REVIEW_REQUEST,
     });
 
+    const config = {
+      headers: {
+        "Access-Control-Allow-Origin": "*",
+      },
+      withCredentials: true,
+    };
+
     const { data } = await axios.delete(
-      `/api/v1/reviews?id=${id}&productId=${productId}`
+      `https://crafty-commerce-api.vercel.app/api/v1/reviews?id=${id}&productId=${productId}`,
+      config
     );
 
     dispatch({
