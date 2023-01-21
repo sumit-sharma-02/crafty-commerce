@@ -195,8 +195,12 @@ exports.updateUserProfile = catchAsyncErrors(async (req, res, next) => {
 
 //Logout user => /api/v1/logout
 exports.logout = catchAsyncErrors(async (req, res, next) => {
-  res.clearCookie("token");
-  res.status(200).json({
+  // Option for cookie
+  const options = {
+    expires: new Date(Date.now()),
+    httpOnly: true,
+  };
+  res.status(200).cookie("token", null, options).json({
     success: true,
     message: "Logged Out successfully",
   });
