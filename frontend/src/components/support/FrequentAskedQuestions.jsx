@@ -3,7 +3,7 @@ import { Disclosure, Transition } from "@headlessui/react";
 import { Link } from "react-router-dom";
 import { FcAbout } from "react-icons/fc";
 
-const Faq = () => {
+const FrequentAskedQuestions = () => {
   // window.scrollTo({ top: 0, behavior: "smooth" });
   return (
     <main>
@@ -231,4 +231,4 @@ const Faq = () => {
   );
 };
 
-export default Faq;
+export default FrequentAskedQuestions;
