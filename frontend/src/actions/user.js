@@ -95,9 +95,6 @@ export const loadUser = () => async (dispatch) => {
 export const logout = () => async (dispatch) => {
   try {
     const config = {
-      headers: {
-        "Access-Control-Allow-Origin": "https://crafty-commerce.vercel.app",
-      },
       withCredentials: true,
     };
     await axios.get(`${server}/logout`, config);
