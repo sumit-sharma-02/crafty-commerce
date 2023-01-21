@@ -15,7 +15,7 @@ const Order = () => {
     (acc, item) => acc + item.price * item.quantity,
     0
   );
-  const shippingPrice = subTotal > 200 ? 0 : 25;
+  const shippingPrice = subTotal > 100 ? 0 : 10;
   const tax = Number((0.01 * subTotal).toFixed(2));
   const total = (subTotal + shippingPrice + tax).toFixed(2);
 
@@ -104,7 +104,7 @@ const Order = () => {
                         </span>{" "}
                         <span className="text-base text-gray-500 line-through">
                           {" "}
-                          $25.00
+                          $10.00
                         </span>
                       </p>
                     ) : (
