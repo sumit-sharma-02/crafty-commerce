@@ -55,7 +55,6 @@ export const getAdminProducts =
         headers: {
           "Access-Control-Allow-Origin": "https://crafty-commerce.vercel.app",
         },
-        withCredentials: true,
       };
 
       const data = await axios.get(
