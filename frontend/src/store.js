@@ -81,3 +81,5 @@ const store = configureStore(
 );
 
 export default store;
+
+export const server = "https://crafty-commerce-api.vercel.app/api/v1";

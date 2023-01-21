@@ -14,9 +14,6 @@ if (process.env.NODE_ENV !== "PRODUCTION")
   require("dotenv").config({ path: "backend/config/config.env" });
 // dotenv.config({ path: 'backend/config/config.env' })
 
-app.use(
-  cors({ credentials: true, origin: ["https://crafty-commerce.vercel.app"] })
-);
 app.use(express.json({ limit: "50mb" }));
 app.use(bodyParser.json({ limit: "50mb" }));
 app.use(
@@ -27,6 +24,13 @@ app.use(
   })
 );
 app.use(cookieParser());
+app.use(
+  cors({
+    origin: process.env.FRONTEND_URL,
+    credentials: true,
+    methods: ["GET", "POST", "PUT", "DELETE"],
+  })
+);
 app.use(fileUpload());
 // app.use(cors({ credentials: true, origin: "http://http://localhost:3000" }));
 

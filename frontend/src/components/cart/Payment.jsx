@@ -18,6 +18,7 @@ import {
 // Icons used
 import { BsFillCreditCardFill } from "react-icons/bs";
 import { RiSecurePaymentLine } from "react-icons/ri";
+import { server } from "../../store";
 
 const options = {
   style: {
@@ -94,11 +95,13 @@ const Payment = () => {
       const config = {
         headers: {
           "Content-Type": "application/json",
+          "Access-Control-Allow-Origin": "https://crafty-commerce.vercel.app",
         },
+        withCredentials: true,
       };
 
       response = await axios.post(
-        "/api/v1/payment/process",
+        `${server}/payment/process`,
         paymentData,
         config
       );

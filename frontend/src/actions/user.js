@@ -1,5 +1,6 @@
 import axios from "axios";
 import userConstants from "../constants/user";
+import { server } from "../store";
 
 // Login
 export const login = (email, password) => async (dispatch) => {
@@ -11,13 +12,13 @@ export const login = (email, password) => async (dispatch) => {
     const config = {
       headers: {
         "Content-Type": "application/json",
-        "Access-Control-Allow-Origin": "*",
+        "Access-Control-Allow-Origin": "https://crafty-commerce.vercel.app",
       },
       withCredentials: true,
     };
 
     const { data } = await axios.post(
-      "https://crafty-commerce-api.vercel.app/api/v1/login",
+      `${server}/login`,
       { email, password },
       config
     );
@@ -44,16 +45,12 @@ export const register = (userData) => async (dispatch) => {
     const config = {
       headers: {
         "Content-Type": "multipart/form-data",
-        "Access-Control-Allow-Origin": "*",
+        "Access-Control-Allow-Origin": "https://crafty-commerce.vercel.app",
       },
       withCredentials: true,
     };
 
-    const { data } = await axios.post(
-      "https://crafty-commerce-api.vercel.app/api/v1/register",
-      userData,
-      config
-    );
+    const { data } = await axios.post(`${server}/register`, userData, config);
 
     dispatch({
       type: userConstants.REGISTER_USER_SUCCESS,
@@ -76,15 +73,12 @@ export const loadUser = () => async (dispatch) => {
 
     const config = {
       headers: {
-        "Access-Control-Allow-Origin": "*",
+        "Access-Control-Allow-Origin": "https://crafty-commerce.vercel.app",
       },
       withCredentials: true,
     };
 
-    const { data } = await axios.get(
-      "https://crafty-commerce-api.vercel.app/api/v1/profile",
-      config
-    );
+    const { data } = await axios.get(`${server}/profile`, config);
 
     dispatch({
       type: userConstants.LOAD_USER_SUCCESS,
@@ -102,15 +96,9 @@ export const loadUser = () => async (dispatch) => {
 export const logout = () => async (dispatch) => {
   try {
     const config = {
-      headers: {
-        "Access-Control-Allow-Origin": "*",
-      },
       withCredentials: true,
     };
-    await axios.get(
-      "https://crafty-commerce-api.vercel.app/api/v1/logout",
-      config
-    );
+    await axios.get(`${server}/logout`, config);
     dispatch({ type: userConstants.LOGOUT_SUCCESS });
   } catch (error) {
     dispatch({
@@ -130,13 +118,13 @@ export const updateProfile = (userData) => async (dispatch) => {
     const config = {
       headers: {
         "Content-Type": "multipart/form-data",
-        "Access-Control-Allow-Origin": "*",
+        "Access-Control-Allow-Origin": "https://crafty-commerce.vercel.app",
       },
       withCredentials: true,
     };
 
     const { data } = await axios.put(
-      "https://crafty-commerce-api.vercel.app/api/v1/profile/update",
+      `${server}/profile/update`,
       userData,
       config
     );
@@ -163,13 +151,13 @@ export const updatePassword = (passwords) => async (dispatch) => {
     const config = {
       headers: {
         "Content-Type": "application/json",
-        "Access-Control-Allow-Origin": "*",
+        "Access-Control-Allow-Origin": "https://crafty-commerce.vercel.app",
       },
       withCredentials: true,
     };
 
     const { data } = await axios.put(
-      "https://crafty-commerce-api.vercel.app/api/v1/password/update",
+      `${server}/password/update`,
       passwords,
       config
     );
@@ -196,13 +184,13 @@ export const forgotPassword = (email) => async (dispatch) => {
     const config = {
       headers: {
         "Content-Type": "application/json",
-        "Access-Control-Allow-Origin": "*",
+        "Access-Control-Allow-Origin": "https://crafty-commerce.vercel.app",
       },
       withCredentials: true,
     };
 
     const { data } = await axios.post(
-      "https://crafty-commerce-api.vercel.app/api/v1/password/forgot",
+      `${server}/password/forgot`,
       email,
       config
     );
@@ -229,13 +217,13 @@ export const resetPassword = (token, passwords) => async (dispatch) => {
     const config = {
       headers: {
         "Content-Type": "application/json",
-        "Access-Control-Allow-Origin": "*",
+        "Access-Control-Allow-Origin": "https://crafty-commerce.vercel.app",
       },
       withCredentials: true,
     };
 
     const { data } = await axios.put(
-      `https://crafty-commerce-api.vercel.app/api/v1/password/reset/${token}`,
+      `${server}/password/reset/${token}`,
       passwords,
       config
     );
@@ -263,13 +251,13 @@ export const allUsers =
 
       const config = {
         headers: {
-          "Access-Control-Allow-Origin": "*",
+          "Access-Control-Allow-Origin": "https://crafty-commerce.vercel.app",
         },
         withCredentials: true,
       };
 
       const data = await axios.get(
-        `https://crafty-commerce-api.vercel.app/api/v1/admin/users?page=${usersCurrentPage}`,
+        `${server}/admin/users?page=${usersCurrentPage}`,
         config
       );
 
@@ -294,15 +282,12 @@ export const deleteUser = (id) => async (dispatch) => {
 
     const config = {
       headers: {
-        "Access-Control-Allow-Origin": "*",
+        "Access-Control-Allow-Origin": "https://crafty-commerce.vercel.app",
       },
       withCredentials: true,
     };
 
-    const { data } = await axios.delete(
-      `https://crafty-commerce-api.vercel.app/api/v1/admin/user/${id}`,
-      config
-    );
+    const { data } = await axios.delete(`${server}/admin/user/${id}`, config);
 
     dispatch({
       type: userConstants.DELETE_USER_SUCCESS,
@@ -326,13 +311,13 @@ export const updateUser = (id, userData) => async (dispatch) => {
     const config = {
       headers: {
         "Content-Type": "application/json",
-        "Access-Control-Allow-Origin": "*",
+        "Access-Control-Allow-Origin": "https://crafty-commerce.vercel.app",
       },
       withCredentials: true,
     };
 
     const { data } = await axios.put(
-      `https://crafty-commerce-api.vercel.app/api/v1/admin/user/${id}`,
+      `${server}/admin/user/${id}`,
       userData,
       config
     );
@@ -358,15 +343,12 @@ export const getUserDetails = (id) => async (dispatch) => {
 
     const config = {
       headers: {
-        "Access-Control-Allow-Origin": "*",
+        "Access-Control-Allow-Origin": "https://crafty-commerce.vercel.app",
       },
       withCredentials: true,
     };
 
-    const { data } = await axios.get(
-      `https://crafty-commerce-api.vercel.app/api/v1/admin/user/${id}`,
-      config
-    );
+    const { data } = await axios.get(`${server}/admin/user/${id}`, config);
 
     dispatch({
       type: userConstants.USER_DETAILS_SUCCESS,

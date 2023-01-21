@@ -1,15 +1,16 @@
 import axios from "axios";
 import { cartConstants } from "../constants/cart";
+import { server } from "../store";
 
 export const addItemsToCart = (id, quantity) => async (dispatch, getState) => {
   const config = {
     headers: {
-      "Access-Control-Allow-Origin": "*",
+      "Access-Control-Allow-Origin": "https://crafty-commerce.vercel.app",
     },
     withCredentials: true,
   };
 
-  const { data } = await axios.get(`/api/v1/product/${id}`, config);
+  const { data } = await axios.get(`${server}/product/${id}`, config);
 
   dispatch({
     type: cartConstants.ADD_TO_CART,

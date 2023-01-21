@@ -1,5 +1,6 @@
 import axios from "axios";
 import productsConstant from "../constants/product";
+import { server } from "../store";
 
 // Get All Products
 export const getProducts =
@@ -16,14 +17,14 @@ export const getProducts =
       dispatch({
         type: productsConstant.ALL_PRODUCTS_REQUEST,
       });
-      let path = `https://crafty-commerce-api.vercel.app/api/v1/products?sort=${sorting}&keyword=${keyword}&page=${currentPage}&price[lte]=${price[1]}&price[gte]=${price[0]}&ratings[gte]=${rating}`;
+      let path = `${server}/products?sort=${sorting}&keyword=${keyword}&page=${currentPage}&price[lte]=${price[1]}&price[gte]=${price[0]}&ratings[gte]=${rating}`;
       if (category) {
-        path = `https://crafty-commerce-api.vercel.app/api/v1/products?sort=${sorting}&keyword=${keyword}&page=${currentPage}&price[lte]=${price[1]}&price[gte]=${price[0]}&category=${category}&ratings[gte]=${rating}`;
+        path = `${server}/products?sort=${sorting}&keyword=${keyword}&page=${currentPage}&price[lte]=${price[1]}&price[gte]=${price[0]}&category=${category}&ratings[gte]=${rating}`;
       }
 
       const config = {
         headers: {
-          "Access-Control-Allow-Origin": "*",
+          "Access-Control-Allow-Origin": "https://crafty-commerce.vercel.app",
         },
         withCredentials: true,
       };
@@ -52,13 +53,13 @@ export const getAdminProducts =
 
       const config = {
         headers: {
-          "Access-Control-Allow-Origin": "*",
+          "Access-Control-Allow-Origin": "https://crafty-commerce.vercel.app",
         },
         withCredentials: true,
       };
 
       const data = await axios.get(
-        `https://crafty-commerce-api.vercel.app/api/v1/admin/products?page=${currentPage}`,
+        `${server}/admin/products?page=${currentPage}`,
         config
       );
 
@@ -83,15 +84,12 @@ export const getProductDetails = (id) => async (dispatch) => {
 
     const config = {
       headers: {
-        "Access-Control-Allow-Origin": "*",
+        "Access-Control-Allow-Origin": "https://crafty-commerce.vercel.app",
       },
       withCredentials: true,
     };
 
-    const { data } = await axios.get(
-      `https://crafty-commerce-api.vercel.app/api/v1/product/${id}`,
-      config
-    );
+    const { data } = await axios.get(`${server}/product/${id}`, config);
 
     dispatch({
       type: productsConstant.PRODUCT_DETAILS_SUCCESS,
@@ -120,7 +118,7 @@ export const newProduct = (productData) => async (dispatch) => {
     };
 
     const { data } = await axios.post(
-      "https://crafty-commerce-api.vercel.app/api/v1/admin/product/new",
+      `${server}/admin/product/new`,
       productData,
       config
     );
@@ -152,7 +150,7 @@ export const updateProduct = (id, productData) => async (dispatch) => {
     };
 
     const { data } = await axios.put(
-      `https://crafty-commerce-api.vercel.app/api/v1/admin/product/${id}`,
+      `${server}/admin/product/${id}`,
       productData,
       config
     );
@@ -178,13 +176,13 @@ export const deleteProduct = (id) => async (dispatch) => {
 
     const config = {
       headers: {
-        "Access-Control-Allow-Origin": "*",
+        "Access-Control-Allow-Origin": "https://crafty-commerce.vercel.app",
       },
       withCredentials: true,
     };
 
     const { data } = await axios.delete(
-      `https://crafty-commerce-api.vercel.app/api/v1/admin/product/${id}`,
+      `${server}/admin/product/${id}`,
       config
     );
 
@@ -214,11 +212,7 @@ export const newReview = (reviewData) => async (dispatch) => {
       withCredentials: true,
     };
 
-    const { data } = await axios.put(
-      `https://crafty-commerce-api.vercel.app/api/v1/review`,
-      reviewData,
-      config
-    );
+    const { data } = await axios.put(`${server}/review`, reviewData, config);
 
     dispatch({
       type: productsConstant.NEW_REVIEW_SUCCESS,
@@ -241,15 +235,12 @@ export const getProductReviews = (id) => async (dispatch) => {
 
     const config = {
       headers: {
-        "Access-Control-Allow-Origin": "*",
+        "Access-Control-Allow-Origin": "https://crafty-commerce.vercel.app",
       },
       withCredentials: true,
     };
 
-    const { data } = await axios.get(
-      `https://crafty-commerce-api.vercel.app/api/v1/reviews?id=${id}`,
-      config
-    );
+    const { data } = await axios.get(`${server}/reviews?id=${id}`, config);
 
     dispatch({
       type: productsConstant.GET_REVIEWS_SUCCESS,
@@ -272,13 +263,13 @@ export const deleteReview = (id, productId) => async (dispatch) => {
 
     const config = {
       headers: {
-        "Access-Control-Allow-Origin": "*",
+        "Access-Control-Allow-Origin": "https://crafty-commerce.vercel.app",
       },
       withCredentials: true,
     };
 
     const { data } = await axios.delete(
-      `https://crafty-commerce-api.vercel.app/api/v1/reviews?id=${id}&productId=${productId}`,
+      `${server}/reviews?id=${id}&productId=${productId}`,
       config
     );
 

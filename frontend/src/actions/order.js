@@ -1,5 +1,6 @@
 import axios from "axios";
 import { orderConstants } from "../constants/order";
+import { server } from "../store";
 
 export const createOrder = (order) => async (dispatch, getState) => {
   try {
@@ -9,16 +10,12 @@ export const createOrder = (order) => async (dispatch, getState) => {
     const config = {
       headers: {
         "Content-Type": "application/json",
-        "Access-Control-Allow-Origin": "*",
+        "Access-Control-Allow-Origin": "https://crafty-commerce.vercel.app",
       },
       withCredentials: true,
     };
 
-    const { data } = await axios.post(
-      "https://crafty-commerce-api.vercel.app/api/v1/order/new",
-      order,
-      config
-    );
+    const { data } = await axios.post(`${server}/order/new`, order, config);
 
     dispatch({
       type: orderConstants.CREATE_ORDER_SUCCESS,
@@ -43,13 +40,13 @@ export const myOrders =
 
       const config = {
         headers: {
-          "Access-Control-Allow-Origin": "*",
+          "Access-Control-Allow-Origin": "https://crafty-commerce.vercel.app",
         },
         withCredentials: true,
       };
 
       const data = await axios.get(
-        `https://crafty-commerce-api.vercel.app/api/v1/orders/myOrders?page=${ordersCurrentPage}`,
+        `${server}/orders/myOrders?page=${ordersCurrentPage}`,
         config
       );
 
@@ -74,15 +71,12 @@ export const getOrderDetails = (id) => async (dispatch) => {
 
     const config = {
       headers: {
-        "Access-Control-Allow-Origin": "*",
+        "Access-Control-Allow-Origin": "https://crafty-commerce.vercel.app",
       },
       withCredentials: true,
     };
 
-    const { data } = await axios.get(
-      `https://crafty-commerce-api.vercel.app/api/v1/order/${id}`,
-      config
-    );
+    const { data } = await axios.get(`${server}/order/${id}`, config);
 
     dispatch({
       type: orderConstants.ORDER_DETAILS_SUCCESS,
@@ -107,13 +101,13 @@ export const allOrders =
 
       const config = {
         headers: {
-          "Access-Control-Allow-Origin": "*",
+          "Access-Control-Allow-Origin": "https://crafty-commerce.vercel.app",
         },
         withCredentials: true,
       };
 
       const data = await axios.get(
-        `https://crafty-commerce-api.vercel.app/api/v1/admin/orders?page=${ordersCurrentPage}`,
+        `${server}/admin/orders?page=${ordersCurrentPage}`,
         config
       );
 
@@ -144,7 +138,7 @@ export const updateOrder = (id, orderData) => async (dispatch) => {
     };
 
     const { data } = await axios.put(
-      `/api/v1/admin/order/${id}`,
+      `${server}/admin/order/${id}`,
       orderData,
       config
     );
@@ -170,12 +164,12 @@ export const deleteOrder = (id) => async (dispatch) => {
 
     const config = {
       headers: {
-        "Access-Control-Allow-Origin": "*",
+        "Access-Control-Allow-Origin": "https://crafty-commerce.vercel.app",
       },
       withCredentials: true,
     };
 
-    const { data } = await axios.delete(`/api/v1/admin/order/${id}`, config);
+    const { data } = await axios.delete(`${server}/admin/order/${id}`, config);
 
     dispatch({
       type: orderConstants.DELETE_ORDER_SUCCESS,

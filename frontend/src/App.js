@@ -41,7 +41,7 @@ import {
   OutOfStock,
 } from "./components";
 import { loadUser } from "./actions/user";
-import store from "./store";
+import store, { server } from "./store";
 import { Elements } from "@stripe/react-stripe-js";
 import { loadStripe } from "@stripe/stripe-js";
 
@@ -54,7 +54,12 @@ function App() {
   useEffect(() => {
     store.dispatch(loadUser());
     async function getStripeApiKey() {
-      const { data } = await axios.get("/api/v1/stripe");
+      const { data } = await axios.get(`${server}/stripe`, {
+        headers: {
+          "Access-Control-Allow-Origin": "https://crafty-commerce.vercel.app",
+        },
+        withCredentials: true,
+      });
       setStripeApiKey(data.stripeApiKey);
     }
     getStripeApiKey();
