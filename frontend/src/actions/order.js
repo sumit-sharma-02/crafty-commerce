@@ -7,6 +7,8 @@ export const createOrder = (order) => async (dispatch, getState) => {
       type: orderConstants.CREATE_ORDER_REQUEST,
     });
     const config = {
+      withCredentials: true,
+      credentials: "include",
       headers: {
         "Content-Type": "application/json",
       },
@@ -40,7 +42,8 @@ export const myOrders =
       });
 
       const data = await axios.get(
-        `https://crafty-commerce-api.vercel.app/api/v1/orders/myOrders?page=${ordersCurrentPage}`
+        `https://crafty-commerce-api.vercel.app/api/v1/orders/myOrders?page=${ordersCurrentPage}`,
+        { withCredentials: true, credentials: "include" }
       );
 
       dispatch({
@@ -63,7 +66,8 @@ export const getOrderDetails = (id) => async (dispatch) => {
     });
 
     const { data } = await axios.get(
-      `https://crafty-commerce-api.vercel.app/api/v1/order/${id}`
+      `https://crafty-commerce-api.vercel.app/api/v1/order/${id}`,
+      { withCredentials: true, credentials: "include" }
     );
 
     dispatch({
@@ -88,7 +92,8 @@ export const allOrders =
       });
 
       const data = await axios.get(
-        `https://crafty-commerce-api.vercel.app/api/v1/admin/orders?page=${ordersCurrentPage}`
+        `https://crafty-commerce-api.vercel.app/api/v1/admin/orders?page=${ordersCurrentPage}`,
+        { withCredentials: true, credentials: "include" }
       );
 
       dispatch({
@@ -111,6 +116,8 @@ export const updateOrder = (id, orderData) => async (dispatch) => {
     });
 
     const config = {
+      withCredentials: true,
+      credentials: "include",
       headers: {
         "Content-Type": "application/json",
       },
@@ -142,7 +149,8 @@ export const deleteOrder = (id) => async (dispatch) => {
     });
 
     const { data } = await axios.delete(
-      `https://crafty-commerce-api.vercel.app/api/v1/admin/order/${id}`
+      `https://crafty-commerce-api.vercel.app/api/v1/admin/order/${id}`,
+      { withCredentials: true, credentials: "include" }
     );
 
     dispatch({

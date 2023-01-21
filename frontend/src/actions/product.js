@@ -21,7 +21,10 @@ export const getProducts =
         path = `https://crafty-commerce-api.vercel.app/api/v1/products?sort=${sorting}&keyword=${keyword}&page=${currentPage}&price[lte]=${price[1]}&price[gte]=${price[0]}&category=${category}&ratings[gte]=${rating}`;
       }
 
-      const data = await axios.get(path);
+      const data = await axios.get(path, {
+        withCredentials: true,
+        credentials: "include",
+      });
       dispatch({
         type: productsConstant.ALL_PRODUCTS_SUCCESS,
         payload: data,
@@ -44,7 +47,8 @@ export const getAdminProducts =
       });
 
       const data = await axios.get(
-        `https://crafty-commerce-api.vercel.app/api/v1/admin/products?page=${currentPage}`
+        `https://crafty-commerce-api.vercel.app/api/v1/admin/products?page=${currentPage}`,
+        { withCredentials: true, credentials: "include" }
       );
 
       dispatch({
@@ -67,7 +71,8 @@ export const getProductDetails = (id) => async (dispatch) => {
     });
 
     const { data } = await axios.get(
-      `https://crafty-commerce-api.vercel.app/api/v1/product/${id}`
+      `https://crafty-commerce-api.vercel.app/api/v1/product/${id}`,
+      { withCredentials: true, credentials: "include" }
     );
 
     dispatch({
@@ -90,6 +95,8 @@ export const newProduct = (productData) => async (dispatch) => {
     });
 
     const config = {
+      withCredentials: true,
+      credentials: "include",
       headers: {
         "Content-Type": "application/json",
       },
@@ -121,6 +128,8 @@ export const updateProduct = (id, productData) => async (dispatch) => {
     });
 
     const config = {
+      withCredentials: true,
+      credentials: "include",
       headers: {
         "Content-Type": "application/json",
       },
@@ -152,7 +161,8 @@ export const deleteProduct = (id) => async (dispatch) => {
     });
 
     const { data } = await axios.delete(
-      `https://crafty-commerce-api.vercel.app/api/v1/admin/product/${id}`
+      `https://crafty-commerce-api.vercel.app/api/v1/admin/product/${id}`,
+      { withCredentials: true, credentials: "include" }
     );
 
     dispatch({
@@ -175,6 +185,8 @@ export const newReview = (reviewData) => async (dispatch) => {
     });
 
     const config = {
+      withCredentials: true,
+      credentials: "include",
       headers: {
         "Content-Type": "application/json",
       },
@@ -206,7 +218,8 @@ export const getProductReviews = (id) => async (dispatch) => {
     });
 
     const { data } = await axios.get(
-      `https://crafty-commerce-api.vercel.app/api/v1/reviews?id=${id}`
+      `https://crafty-commerce-api.vercel.app/api/v1/reviews?id=${id}`,
+      { withCredentials: true, credentials: "include" }
     );
 
     dispatch({
@@ -229,7 +242,8 @@ export const deleteReview = (id, productId) => async (dispatch) => {
     });
 
     const { data } = await axios.delete(
-      `https://crafty-commerce-api.vercel.app/api/v1/reviews?id=${id}&productId=${productId}`
+      `https://crafty-commerce-api.vercel.app/api/v1/reviews?id=${id}&productId=${productId}`,
+      { withCredentials: true, credentials: "include" }
     );
 
     dispatch({

@@ -3,7 +3,8 @@ import { cartConstants } from "../constants/cart";
 
 export const addItemsToCart = (id, quantity) => async (dispatch, getState) => {
   const { data } = await axios.get(
-    `https://crafty-commerce-api.vercel.app/api/v1/product/${id}`
+    `https://crafty-commerce-api.vercel.app/api/v1/product/${id}`,
+    { withCredentials: true, credentials: "include" }
   );
   dispatch({
     type: cartConstants.ADD_TO_CART,

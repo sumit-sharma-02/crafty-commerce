@@ -7,6 +7,10 @@ const fileUpload = require("express-fileupload");
 const dotenv = require("dotenv");
 const path = require("path");
 const cors = require("cors");
+const corsOptions = {
+  origin: true, //included origin as true
+  credentials: true, //included credentials as true
+};
 
 const errorMiddleware = require("./middlewares/errors");
 
@@ -26,7 +30,7 @@ app.use(
 );
 app.use(cookieParser());
 app.use(fileUpload());
-app.use(cors());
+app.use(cors(corsOptions));
 
 // Import all the routes here...
 const products = require("./routes/product");

@@ -9,6 +9,8 @@ export const login = (email, password) => async (dispatch) => {
     });
 
     const config = {
+      withCredentials: true,
+      credentials: "include",
       headers: {
         "Content-Type": "application/json",
       },
@@ -40,6 +42,8 @@ export const register = (userData) => async (dispatch) => {
     });
 
     const config = {
+      withCredentials: true,
+      credentials: "include",
       headers: {
         "Content-Type": "multipart/form-data",
       },
@@ -71,7 +75,8 @@ export const loadUser = () => async (dispatch) => {
     });
 
     const { data } = await axios.get(
-      "https://crafty-commerce-api.vercel.app/api/v1/profile"
+      "https://crafty-commerce-api.vercel.app/api/v1/profile",
+      { withCredentials: true, credentials: "include" }
     );
 
     dispatch({
@@ -89,7 +94,10 @@ export const loadUser = () => async (dispatch) => {
 //Logout user
 export const logout = () => async (dispatch) => {
   try {
-    await axios.get("https://crafty-commerce-api.vercel.app/api/v1/logout");
+    await axios.get("https://crafty-commerce-api.vercel.app/api/v1/logout", {
+      withCredentials: true,
+      credentials: "include",
+    });
     dispatch({ type: userConstants.LOGOUT_SUCCESS });
   } catch (error) {
     dispatch({
@@ -107,6 +115,8 @@ export const updateProfile = (userData) => async (dispatch) => {
     });
 
     const config = {
+      withCredentials: true,
+      credentials: "include",
       headers: {
         "Content-Type": "multipart/form-data",
       },
@@ -138,6 +148,8 @@ export const updatePassword = (passwords) => async (dispatch) => {
     });
 
     const config = {
+      withCredentials: true,
+      credentials: "include",
       headers: {
         "Content-Type": "application/json",
       },
@@ -169,6 +181,8 @@ export const forgotPassword = (email) => async (dispatch) => {
     });
 
     const config = {
+      withCredentials: true,
+      credentials: "include",
       headers: {
         "Content-Type": "application/json",
       },
@@ -200,6 +214,8 @@ export const resetPassword = (token, passwords) => async (dispatch) => {
     });
 
     const config = {
+      withCredentials: true,
+      credentials: "include",
       headers: {
         "Content-Type": "application/json",
       },
@@ -233,7 +249,8 @@ export const allUsers =
       });
 
       const data = await axios.get(
-        `https://crafty-commerce-api.vercel.app/api/v1/admin/users?page=${usersCurrentPage}`
+        `https://crafty-commerce-api.vercel.app/api/v1/admin/users?page=${usersCurrentPage}`,
+        { withCredentials: true, credentials: "include" }
       );
 
       dispatch({
@@ -256,7 +273,8 @@ export const deleteUser = (id) => async (dispatch) => {
     });
 
     const { data } = await axios.delete(
-      `https://crafty-commerce-api.vercel.app/api/v1/admin/user/${id}`
+      `https://crafty-commerce-api.vercel.app/api/v1/admin/user/${id}`,
+      { withCredentials: true, credentials: "include" }
     );
 
     dispatch({
@@ -279,6 +297,8 @@ export const updateUser = (id, userData) => async (dispatch) => {
     });
 
     const config = {
+      withCredentials: true,
+      credentials: "include",
       headers: {
         "Content-Type": "application/json",
       },
@@ -310,7 +330,8 @@ export const getUserDetails = (id) => async (dispatch) => {
     });
 
     const { data } = await axios.get(
-      `https://crafty-commerce-api.vercel.app/api/v1/admin/user/${id}`
+      `https://crafty-commerce-api.vercel.app/api/v1/admin/user/${id}`,
+      { withCredentials: true, credentials: "include" }
     );
 
     dispatch({
