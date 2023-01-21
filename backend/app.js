@@ -6,12 +6,7 @@ const bodyParser = require("body-parser");
 const fileUpload = require("express-fileupload");
 const dotenv = require("dotenv");
 const path = require("path");
-const cors = require("cors");
-const corsOptions = {
-  origin: true, //included origin as true
-  credentials: true, //included credentials as true
-};
-
+// const cors = require("cors");
 const errorMiddleware = require("./middlewares/errors");
 
 // Setting up config file
@@ -30,7 +25,10 @@ app.use(
 );
 app.use(cookieParser());
 app.use(fileUpload());
-app.use(cors(corsOptions));
+// app.use(
+//   cors({ credentials: true, origin: "https://crafty-commerce.vercel.app" })
+// );
+// app.use(cors({ credentials: true, origin: "http://http://localhost:3000" }));
 
 // Import all the routes here...
 const products = require("./routes/product");

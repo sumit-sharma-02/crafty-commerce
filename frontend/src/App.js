@@ -54,9 +54,7 @@ function App() {
   useEffect(() => {
     store.dispatch(loadUser());
     async function getStripeApiKey() {
-      const { data } = await axios.get(
-        "https://crafty-commerce-api.vercel.app/api/v1/stripe"
-      );
+      const { data } = await axios.get("/api/v1/stripe");
       setStripeApiKey(data.stripeApiKey);
     }
     getStripeApiKey();

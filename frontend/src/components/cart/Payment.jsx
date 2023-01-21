@@ -98,7 +98,7 @@ const Payment = () => {
       };
 
       response = await axios.post(
-        "https://crafty-commerce-api.vercel.app/api/v1/payment/process",
+        "/api/v1/payment/process",
         paymentData,
         config
       );
