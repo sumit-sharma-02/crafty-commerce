@@ -90,13 +90,13 @@ exports.getAllOrders = catchAsyncErrors(async (req, res, next) => {
   let orders = await apiFeatures.query;
   let filteredOrdersCount = orders.length;
 
-  apiFeatures.pagination(resPerPage);
-  orders = await apiFeatures.query.clone();
-
   let totalAmount = 0;
   orders.forEach((order) => {
     totalAmount += order.totalPrice;
   });
+
+  apiFeatures.pagination(resPerPage);
+  orders = await apiFeatures.query.clone();
 
   res.status(200).json({
     success: true,

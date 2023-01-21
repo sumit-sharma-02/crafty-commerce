@@ -16,11 +16,11 @@ import { GiReceiveMoney } from "react-icons/gi";
 const Dashboard = () => {
   const dispatch = useDispatch();
 
-  const { products } = useSelector((state) => state.products);
-  const { orders, totalAmount, loading } = useSelector(
+  const { productsCount } = useSelector((state) => state.products);
+  const { ordersCount, totalAmount, loading } = useSelector(
     (state) => state.allOrders
   );
-  const { users } = useSelector((state) => state.allUsers);
+  const { usersCount } = useSelector((state) => state.allUsers);
 
   let outOfStockProductCount = 0;
   allProducts.forEach((product) => {
@@ -89,7 +89,7 @@ const Dashboard = () => {
                             <div className="ml-2 w-full flex-1">
                               <div>
                                 <div className="mt-3 text-3xl font-bold leading-8">
-                                  {products && products.length}
+                                  {productsCount}
                                 </div>
 
                                 <div className="mt-1 text-base text-gray-600">
@@ -121,7 +121,7 @@ const Dashboard = () => {
                             <div className="ml-2 w-full flex-1">
                               <div>
                                 <div className="mt-3 text-3xl font-bold leading-8">
-                                  {orders && orders.length}
+                                  {ordersCount}
                                 </div>
 
                                 <div className="mt-1 text-base text-gray-600">
@@ -153,7 +153,7 @@ const Dashboard = () => {
                             <div className="ml-2 w-full flex-1">
                               <div>
                                 <div className="mt-3 text-3xl font-bold leading-8">
-                                  {users && users.length}
+                                  {usersCount}
                                 </div>
 
                                 <div className="mt-1 text-base text-gray-600">
