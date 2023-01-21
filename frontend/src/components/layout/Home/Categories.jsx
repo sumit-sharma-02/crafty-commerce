@@ -911,12 +911,11 @@ const Categories = () => {
             <SwiperSlide>
               <Link
                 to={"/products"}
-                className="h-[400px] w-full rounded-[4px] transition-opacity duration-200 hover:opacity-90"
+                className="h-auto w-full rounded-[4px] transition-opacity duration-200 hover:opacity-90"
               >
                 <img
-                  className="h-full w-auto rounded-[4px]"
-                  style={{ objectFit: "cover" }}
-                  src="https://res.cloudinary.com/craftycommerce/image/upload/v1673964891/Banners/sale-banner_ltdagb.png"
+                  className="cover h-full w-auto rounded-[4px]"
+                  src="https://res.cloudinary.com/craftycommerce/image/upload/v1674316286/Banners/sale-banner-2_ideq4g.png"
                   alt="mega sale banner"
                 />
               </Link>
@@ -924,11 +923,11 @@ const Categories = () => {
             <SwiperSlide>
               <Link
                 to={"/product/63c550e5d861ab13dc09b4dd"}
-                className="h-[400px] w-full rounded-[4px] bg-black transition-opacity duration-200 hover:opacity-90"
+                className="h-auto w-full rounded-[4px] bg-black transition-opacity duration-200 hover:opacity-90"
               >
                 <img
-                  className="h-full w-auto object-contain"
-                  src="https://res.cloudinary.com/craftycommerce/image/upload/v1673963132/Banners/iphone-banner_rgjgms.png"
+                  className="cover cover h-full w-auto rounded-[4px]"
+                  src="https://res.cloudinary.com/craftycommerce/image/upload/v1674316233/Banners/iphone-banner-2_bbl0qt.png"
                   alt="iphone banner"
                 />
               </Link>
@@ -936,11 +935,10 @@ const Categories = () => {
             <SwiperSlide>
               <Link
                 to={"/products/Laptops"}
-                className="h-[400px] w-full rounded-[4px] transition-opacity duration-200 hover:opacity-90"
+                className="h-auto w-full rounded-[4px] transition-opacity duration-200 hover:opacity-90"
               >
                 <img
-                  className="h-full w-auto rounded-[4px]"
-                  style={{ objectFit: "cover" }}
+                  className="cover h-full w-auto rounded-[4px]"
                   src="https://res.cloudinary.com/craftycommerce/image/upload/v1674059263/Banners/laptop-banner_i49ns1.png"
                   alt="laptop banner"
                 />
