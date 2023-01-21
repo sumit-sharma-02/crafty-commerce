@@ -20,10 +20,15 @@
     <a href="https://github.com/sumit-sharma-02/crafty-commerce/issues">Report Bug</a>   &#10023;
     <a href="#Contact">Author</a>&#10023;
   </p>
+  
+  <h3 align="center"><a href="https://crafty-commerce.vercel.app/"><strong>« Try the demo here »</strong></a></h3>
 
 <p align="center"> 
     Crafty Commerce is a full stack e-commerce web application that allows you to purchase different categories of product online. You can apply filters accordingly and find your favourite products in crafty commerce. You can pay with debit/credit cards and in just few click your product will be delivered.
 </p>
+
+![crafty-commerce-poster](https://user-images.githubusercontent.com/52236473/213875454-41544c01-9a6c-4dcb-b02d-a8dfd1f72344.png)
+<br />
 
 ## Pages
 - Admin Dashboard
