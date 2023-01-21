@@ -16,9 +16,9 @@ export const getProducts =
       dispatch({
         type: productsConstant.ALL_PRODUCTS_REQUEST,
       });
-      let path = `/api/v1/products?sort=${sorting}&keyword=${keyword}&page=${currentPage}&price[lte]=${price[1]}&price[gte]=${price[0]}&ratings[gte]=${rating}`;
+      let path = `https://crafty-commerce-api.vercel.app/api/v1/products?sort=${sorting}&keyword=${keyword}&page=${currentPage}&price[lte]=${price[1]}&price[gte]=${price[0]}&ratings[gte]=${rating}`;
       if (category) {
-        path = `/api/v1/products?sort=${sorting}&keyword=${keyword}&page=${currentPage}&price[lte]=${price[1]}&price[gte]=${price[0]}&category=${category}&ratings[gte]=${rating}`;
+        path = `https://crafty-commerce-api.vercel.app/api/v1/products?sort=${sorting}&keyword=${keyword}&page=${currentPage}&price[lte]=${price[1]}&price[gte]=${price[0]}&category=${category}&ratings[gte]=${rating}`;
       }
 
       const data = await axios.get(path);
@@ -44,7 +44,7 @@ export const getAdminProducts =
       });
 
       const data = await axios.get(
-        `/api/v1/admin/products?page=${currentPage}`
+        `https://crafty-commerce-api.vercel.app/api/v1/admin/products?page=${currentPage}`
       );
 
       dispatch({

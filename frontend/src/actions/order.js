@@ -36,7 +36,7 @@ export const myOrders =
       });
 
       const data = await axios.get(
-        `/api/v1/orders/myOrders?page=${ordersCurrentPage}`
+        `https://crafty-commerce-api.vercel.app/api/v1/orders/myOrders?page=${ordersCurrentPage}`
       );
 
       dispatch({
@@ -82,7 +82,7 @@ export const allOrders =
       });
 
       const data = await axios.get(
-        `/api/v1/admin/orders?page=${ordersCurrentPage}`
+        `https://crafty-commerce-api.vercel.app/api/v1/admin/orders?page=${ordersCurrentPage}`
       );
 
       dispatch({

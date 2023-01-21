@@ -6,7 +6,7 @@ const bodyParser = require("body-parser");
 const fileUpload = require("express-fileupload");
 const dotenv = require("dotenv");
 const path = require("path");
-// const cors = require("cors");
+const cors = require("cors");
 const errorMiddleware = require("./middlewares/errors");
 
 // Setting up config file
@@ -14,6 +14,9 @@ if (process.env.NODE_ENV !== "PRODUCTION")
   require("dotenv").config({ path: "backend/config/config.env" });
 // dotenv.config({ path: 'backend/config/config.env' })
 
+app.use(
+  cors({ credentials: true, origin: ["https://crafty-commerce.vercel.app"] })
+);
 app.use(express.json({ limit: "50mb" }));
 app.use(bodyParser.json({ limit: "50mb" }));
 app.use(
@@ -25,9 +28,6 @@ app.use(
 );
 app.use(cookieParser());
 app.use(fileUpload());
-// app.use(
-//   cors({ credentials: true, origin: "https://crafty-commerce.vercel.app" })
-// );
 // app.use(cors({ credentials: true, origin: "http://http://localhost:3000" }));
 
 // Import all the routes here...
