@@ -199,11 +199,16 @@ exports.logout = catchAsyncErrors(async (req, res, next) => {
   const options = {
     expires: new Date(Date.now()),
     httpOnly: true,
+    secure: true,
+    sameSite: "none",
   };
+
   res.status(200).cookie("token", null, options).json({
     success: true,
     message: "Logged Out successfully",
   });
+
+  req.clearCookie("token");
 });
 
 // ---------------------------Admin Routes-----------------------------
