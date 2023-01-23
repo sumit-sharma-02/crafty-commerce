@@ -16,6 +16,7 @@
 
 <p align="center"> 
     <br />&#10023;
+    <a href="https://www.linkedin.com/posts/sumitsharma002_react-nodejs-expressjs-activity-7022685966184132608-SgFD?utm_source=share&utm_medium=member_desktop">Demo Video</a>   &#10023;
     <a href="#Quick-Start">Quick Start</a>   &#10023;    
     <a href="https://github.com/sumit-sharma-02/crafty-commerce/issues">Report Bug</a>   &#10023;
     <a href="#Contact">Author</a>&#10023;
