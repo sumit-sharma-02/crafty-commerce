@@ -122,7 +122,7 @@ Add your config variables values in the config.env file in backend/config folder
 
 ### Seed Database
 
-Use the following commeand to put some dummy products in that database.
+Use the following command to put some dummy products in that database.
 Run it in the root folder.
 
 ```
